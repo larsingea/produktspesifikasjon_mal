@@ -1,0 +1,245 @@
+{
+  "identification": {
+    "id": "8252baea-5bad-428b-8f18-fe236fa4ced6",
+    "title": "Dyrkbar jord",
+    "abstract": "Dyrkbar jord er i år (2025) revidert gjennom bruk av flere datakilder og nye metoder, og det nye datsettet ble gjort tilgjengelig via Geonorge den 16. september. Det er nå lagt inn flere nye tematiske egenskaper i datasettet, og det er gjort en teknisk rydding som innebærer nye objekter og ny geometri. Gå til produktsiden for å lese mer om det reviderte datasettet.\n\nDatasettet Dyrkbar jord er et landsdekkende data-sett som viser arealer som per i dag ikke er fulldyrka jord, men som ut fra agronomiske perspektiv kan dyrkes opp, og som holder kravene til klima og jordkvalitet for plantedyrking. Dyrkbar jord kan være registrert på arealtypene Overflatedyrka jord, Innmarksbeite, Skog, Åpen fastmark og Myr, slik disse er klassifisert i AR5.\n\nDatasettet er et automatisk avledet produkt som produseres årlig.",
+    "purpose": "Dyrkbar jord viser areal som har lovmessig vern i Jordlova. Dyrkbar jord er et Geovekst-produkt og en del av det offentlige kart- grunnlaget (DOK). Datasettet bør brukes ved arealplanlegging, behandling av konsesjonssaker. Det kan også i ulike andre analyser. \n\nAreal som er registrert som dyrkbar jord kan være underlagt restriksjoner mot nydyrking i samsvar med ulike lover og forskrifter. For å finne hvilke areal som er reelt tilgjengelig for oppdyrking, er det fra sommer 2025 mulig å filtrere på de nye egenskapene som er lagt inn i datasettet, og eventuelt holde det opp mot andre relevante kilder og datasett.",
+    "language": "nor",
+    "keywords": [
+      "Arealtype",
+      "Arealressurs",
+      "Jordbruk",
+      "Dyrkbar",
+      "Fulldyrka",
+      "Overflatedyrka",
+      "Innmarksbeite",
+      "Landbruk",
+      "Jord",
+      "Jordvern",
+      "Norge fastland",
+      "Arealdekke",
+      "geodataloven",
+      "Det offentlige kartgrunnlaget",
+      "Norge digitalt",
+      "modellbaserteVegprosjekter",
+      "fellesDatakatalog",
+      "Landskap"
+    ],
+    "topicCategories": [
+      "Landbruk og havbruk"
+    ],
+    "dates": {
+      "creation": "2025-09-12",
+      "publication": "2025-09-12",
+      "revision": "2025-09-12",
+      "metadata": "2025-12-03"
+    },
+    "responsibleParties": [
+      {
+        "name": "Tove Vaaje-Kolstad",
+        "organization": "Norsk institutt for bioøkonomi",
+        "email": "gisdrift@nibio.no",
+        "role": "owner"
+      },
+      {
+        "name": "Christina Sogge",
+        "organization": "Norsk institutt for bioøkonomi",
+        "email": "gisdrift@nibio.no",
+        "role": "resourceProvider"
+      },
+      {
+        "name": "Ingvild Nystuen",
+        "organization": "Norsk institutt for bioøkonomi",
+        "email": "gisdrift@nibio.no",
+        "role": "publisher"
+      }
+    ],
+    "organizationLogoUrl": "https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg",
+    "supplementalInformation": "Dyrkbar jord produseres årlig med utgangspunkt i dyrkbar jord i det historiske datasettet DMK fra 2008.  Datasettet er et avledet produkt som sammenstilles basert på utvalgsregler og geografisk fletting (overlay) av flere datasett. \nFra FKB-AR5 brukes arealtype og grunnforhold for å legge til eller fjerne areal, samt tilpasse figur-avgrensingene.  SSB-arealbruk brukes for fjerne nedbygd areal. Fra Naturvernområder (Mdir) hentes informasjon om nasjonalparker og naturreservat. I tillegg brukes informasjon fra ravinekart fra Statsforvalteren i Østfold, Buskerud, Oslo og Akershus samt modellert ravinekart fra NIBIO for å definere dyrkbar jord som ligger i raviner som planeringsjord."
+  },
+  "scope": {
+    "level": "dataset",
+    "extent": {
+      "spatial": {
+        "spatialScope": "National"
+      },
+      "temporal": {
+        "interval": [
+          [
+            "2025-09-12",
+            "2025-09-12"
+          ]
+        ]
+      }
+    },
+    "legalConstraints": {
+      "useLimitation": "Tilgang for Geovekst- og Norge digitalt-parter. Nedlasting krever lisens og GeoiD.",
+      "accessConstraints": "Norge digitalt begrenset",
+      "useConstraints": "Lisens",
+      "license": "Norge digitalt-lisens",
+      "licenseUrl": "https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/",
+      "securityConstraints": "Ugradert"
+    }
+  },
+  "dataContent": {
+    "usage": "Datasettet Dyrkbar jord skal brukes ved arealplanlegging og behandling av konsesjonssaker. Dyrkbar jord har samme lovmessig vern som dyrka jord i jordlova.  I tillegg til kan datasettet Dyrkbar jord brukes blant annet ved regionale analyser av potensial for nydyrking og arrondering av fulldyrka jord."
+  },
+  "referenceSystems": {
+    "spatialReferenceSystems": [
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      }
+    ],
+    "spatialRepresentationType": "Vektor"
+  },
+  "dataQuality": {
+    "scope": {
+      "level": "dataset"
+    },
+    "qualityElements": [
+      {
+        "name": "SOSI-produktspesifikasjon: Dyrkbar jord",
+        "measure": "Dataene er i henhold til produktspesifikasjonen"
+      },
+      {
+        "name": "Sosi applikasjonsskjema",
+        "measure": "SOSI-filer er i henhold til applikasjonsskjema"
+      },
+      {
+        "name": "Sosi applikasjonsskjema",
+        "measure": "GML-filer er i henhold til applikasjonsskjema"
+      },
+      {
+        "name": "Prosentvis dekning i forhold til datasettets utstrekning",
+        "measure": "Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning",
+        "result": "6,9"
+      },
+      {
+        "name": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measure": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "100"
+      },
+      {
+        "name": "FAIR",
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 100%"
+      },
+      {
+        "name": "Coverage",
+        "result": "Prosentvis dekning i forhold til datasettets utstrekning: 6,9%"
+      }
+    ],
+    "lineage": {
+      "statement": "Dyrkbar jord produseres årlig med utgangspunkt i dyrkbar jord i det historiske datasettet DMK fra 2008.  Datasettet er et avledet produkt som sammenstilles basert på utvalgsregler og geografisk fletting (overlay) av flere datasett. \nFra FKB-AR5 brukes arealtype og grunnforhold for å legge til eller fjerne areal, samt tilpasse figur-avgrensingene.  SSB-arealbruk brukes for fjerne nedbygd areal. Fra Naturvernområder (Mdir) hentes informasjon om nasjonalparker og naturreservat. I tillegg brukes informasjon fra ravinekart fra Statsforvalteren i Østfold, Buskerud, Oslo og Akershus samt modellert ravinekart fra NIBIO for å definere dyrkbar jord som ligger i raviner som planeringsjord."
+    }
+  },
+  "maintenance": {
+    "maintenanceFrequency": "Årlig",
+    "maintenanceNote": "Datasettet Dyrkbar jord skal brukes ved arealplanlegging og behandling av konsesjonssaker. Dyrkbar jord har samme lovmessig vern som dyrka jord i jordlova.  I tillegg til kan datasettet Dyrkbar jord brukes blant annet ved regionale analyser av potensial for nydyrking og arrondering av fulldyrka jord.",
+    "status": "Kontinuerlig oppdatert"
+  },
+  "portrayal": {
+    "legendDescriptionUrl": "https://register.geonorge.no/register/versjoner/tegneregler/norsk-institutt-for-biookonomi/dyrkbar-jord"
+  },
+  "delivery": {
+    "distributions": [
+      {
+        "format": {
+          "format": "GEONORGE:DOWNLOAD"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Geonorge nedlastning",
+        "format": {
+          "format": "Geonorge nedlastning"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Dyrkbar jord - WMS",
+        "format": {
+          "format": "png, jpg, gif"
+        },
+        "access": {
+          "href": "https://wms.nibio.no/cgi-bin/dyrkbarjord_2?service=wms&request=getcapabilities",
+          "protocol": "WMS-tjeneste",
+          "license": "Tilgangsbegrensede data"
+        },
+        "notes": "Tjeneste"
+      }
+    ]
+  },
+  "metadata": {
+    "standard": "ISO19115",
+    "standardVersion": "2003",
+    "metadataDate": "2025-12-03",
+    "language": "nor",
+    "pointOfContact": {
+      "organization": "Norsk institutt for bioøkonomi",
+      "email": "gisdrift@nibio.no",
+      "role": "resourceProvider"
+    },
+    "identifiers": [
+      {
+        "authority": "geonorge",
+        "code": "8252baea-5bad-428b-8f18-fe236fa4ced6"
+      }
+    ],
+    "metadataUrl": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=8252baea-5bad-428b-8f18-fe236fa4ced6"
+  },
+  "links": [
+    {
+      "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=8252baea-5bad-428b-8f18-fe236fa4ced6",
+      "rel": "describedby",
+      "type": "application/xml",
+      "title": "Metadata (ISO 19139)"
+    },
+    {
+      "href": "https://nibio.no/tema/jord/arealressurser/dyrkbar-jord?",
+      "rel": "about",
+      "type": "text/html",
+      "title": "Produktside"
+    },
+    {
+      "href": "https://nedlasting.geonorge.no/api/capabilities/",
+      "rel": "enclosure",
+      "type": "text/html",
+      "title": "Nedlasting"
+    },
+    {
+      "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.nibio.no/cgi-bin/dyrkbarjord_2",
+      "rel": "service",
+      "type": "text/html",
+      "title": "Tjeneste"
+    },
+    {
+      "href": "https://wms.nibio.no/cgi-bin/dyrkbarjord_2?service=wms&request=getcapabilities",
+      "rel": "service",
+      "type": "application/xml",
+      "title": "Tjeneste-distribusjon"
+    }
+  ]
+}
