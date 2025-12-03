@@ -1,0 +1,46 @@
+@startuml
+title Dyrkbar jord - Objekttyper
+
+skinparam class {
+  AttributeIconSize 0
+}
+
+package "Objekttyper" {
+
+  abstract class DyrkbarJord_Fellesegenskaper <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + informasjon [1] : CharacterString
+    + kopidata [0..1] : Kopidata
+  }
+
+  class ArealressursFlate <<featureType>> {
+    + område [1] : GM_Surface
+    + dyrkbarJord [1] : DyrkbarJord
+    + fulldyrka2008 [1] : Fulldyrka2008
+    + myrTorv [1] : MyrTorv
+    + planeringsjord [1] : Planeringsjord
+    + verneform [1] : Verneform
+    + årsversjon [1] : Integer
+  }
+
+  class ArealressursGrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Identifikasjon {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+  }
+
+  class Kopidata {
+    + kopidato [1] : Date
+    + områdeId [1] : Integer
+    + originalDatavert [1] : CharacterString
+  }
+}
+
+  DyrkbarJord_Fellesegenskaper <|-- ArealressursFlate
+  ArealressursFlate --> ArealressursGrense : avgrensesAvArealressursGrense [0..*]
+  ArealressursGrense --> ArealressursFlate
+
+@enduml
