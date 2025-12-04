@@ -1,0 +1,230 @@
+{
+  "identification": {
+    "id": "e46767e4-c6d9-49a6-93e8-716da0922fd7",
+    "title": "Havnedata",
+    "abstract": "Havnedata er detaljert geografisk informasjon om havner, kaier og tilhørende objekter som er en del av infrastrukturen på en kai eller i en havn. Tilhørende objekttyper som inngår i standarden er havneanlegg, kaifront, vannuttak, tilkoblingspunkt for strøm, beredskapsutstyr, sensorer, avfallspunkt, kraner, slipp, fender, fortøyningsinnretninger, tømmestasjon, gjerder m.fl. \n\nReguleringer i form av lovverk, regler, restriksjoner eller annet som er relatert til havn og har en geografisk avgrensning som kan kartfestes, inngår også i standarden. \n\nSpesifikasjonen er laget med tanke på forvaltning i en sentral database bygd på NGIS-forvaltningsplattformen etter samme forvaltningskonsept som SFKB.",
+    "purpose": "Havnedata-standarden er utviklet fordi det var et behov for å få tak i oppdatert, standardisert og tilgjengelig informasjon om havner og havnefasiliteter.",
+    "language": "nor",
+    "keywords": [
+      "Havnedata",
+      "Havneområde",
+      "Havn",
+      "WMS",
+      "Kyst",
+      "Kai",
+      "transport",
+      "Norge",
+      "Transportnett",
+      "Kyst og fiskeri",
+      "Samferdsel",
+      "Kaifront",
+      "Beredskapspunkt",
+      "HavneområdeGrense",
+      "Fortøyningsinnretning",
+      "Kran",
+      "Havnegjerde",
+      "Avfallspunkt",
+      "Havnesensor",
+      "Lastbegrensningsområde",
+      "tillattFortøyningsvinkelGrunnriss",
+      "tillattFortøyningsvinkelOppriss",
+      "kainavn",
+      "portFaciilityNrIMO",
+      "kontaktinformasjonPFSO",
+      "kontakttype",
+      "drivstofftype",
+      "fendertype",
+      "avfallsplan",
+      "beholdertype",
+      "havneident",
+      "UNLOCODE",
+      "vektbegrensning",
+      "bruksklasse",
+      "kaidekke"
+    ],
+    "topicCategories": [
+      "Kyst og sjø"
+    ],
+    "dates": {
+      "creation": "2021-03-02",
+      "publication": "2021-03-02",
+      "revision": "2025-11-25",
+      "metadata": "2025-12-04"
+    },
+    "responsibleParties": [
+      {
+        "organization": "Kartverket",
+        "email": "kundesenter@kartverket.no",
+        "role": "owner"
+      },
+      {
+        "organization": "Kartverket",
+        "email": "kundesenter@kartverket.no",
+        "role": "pointOfContact"
+      },
+      {
+        "name": "Sigbjørn Wik",
+        "organization": "Kartverket",
+        "email": "kundesenter@kartverket.no",
+        "role": "publisher"
+      }
+    ],
+    "organizationLogoUrl": "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png"
+  },
+  "scope": {
+    "level": "dataset",
+    "extent": {
+      "spatial": {
+        "spatialScope": "National"
+      },
+      "temporal": {
+        "interval": [
+          [
+            "2021-03-02",
+            "2025-11-25"
+          ]
+        ]
+      }
+    },
+    "legalConstraints": {
+      "accessConstraints": "Norge digitalt begrenset",
+      "useConstraints": "Lisens",
+      "license": "Creative Commons BY-NC 4.0 (CC BY-NC 4.0)",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/"
+    }
+  },
+  "dataContent": {
+    "usage": "Aktører som har behov for tilgang til detaljert informasjon om havner:\n- Havnemyndigheter og andre brukere av havnen.\n- Ansatte i havn (personell som jobber med vedlikehold, oppsyn, trafikk- utbyggings- eller eiendomsavdeling, havneinspektør).\n- Maritim næring: navigatører, skipsredere, los, nødetater.\n- Kommune og fylkeskommune.\n- Offentlige etater: Kystverket, Miljødirektoratet, Sjøfartsdirektoratet, Forsvaret, Statsforvalteren m.fl.\n- Andre beslutningstakere\n\nHavnedata gir nøyaktig og detaljert geografisk informasjon om havner. Havnedata danner et kunnskapsgrunnlag for effektiv havnedrift og for å ta gode beslutninger. Datasettet kan også benyttes til beslutningssøtte, planlegging og forvaltning, som underlag for ulike temakart eller til forskning og analyse. \n\nEksempler på bruksområder for havnedata: \n- Inngå som et element i digitale verktøy til planlegging og effektivisering av havners drift, f.eks. kaibestilling.\n- Fortøyningsplanlegging: kartskisse med kai-utforming, tilgjengelige ressurser på kai, og begrensninger for fartøyets størrelse. \n- Forvaltningsmessig saksbehandling i kommuner og statlige etater.\n- Analyse og presentasjon i et integrert informasjonssystem (GIS-system).\n- Produksjon av kart og avledede produkter. \n- Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud."
+  },
+  "referenceSystems": {
+    "spatialReferenceSystems": [
+      {
+        "code": "EPSG:5972",
+        "name": "EUREF89 UTM sone 32, 2d + NN2000"
+      },
+      {
+        "code": "EPSG:5973",
+        "name": "EUREF89 UTM sone 33, 2d + NN2000"
+      },
+      {
+        "code": "EPSG:5975",
+        "name": "EUREF89 UTM sone 35, 2d + NN2000"
+      },
+      {
+        "code": "EPSG:5972",
+        "name": "EUREF89 UTM sone 32, 2d + NN2000"
+      }
+    ],
+    "spatialRepresentationType": "Vektor"
+  },
+  "dataQuality": {
+    "scope": {
+      "level": "dataset"
+    },
+    "qualityElements": [
+      {
+        "name": "SOSI produktspesifikasjon: Havnedata",
+        "measure": "Dataene er ikke vurdert iht produktspesifikasjonen"
+      },
+      {
+        "name": "Sosi applikasjonsskjema",
+        "measure": "SOSI-filer er ikke vurdert i henhold til applikasjonsskjema"
+      },
+      {
+        "name": "Sosi applikasjonsskjema",
+        "measure": "GML-filer er ikke vurdert i henhold til applikasjonsskjema"
+      },
+      {
+        "name": "Produktspesifikasjon: Registreringsinstruks",
+        "measure": "Dataene er ikke vurdert iht produktspesifikasjonen"
+      }
+    ]
+  },
+  "maintenance": {
+    "maintenanceFrequency": "Ukjent",
+    "maintenanceNote": "Aktører som har behov for tilgang til detaljert informasjon om havner:\n- Havnemyndigheter og andre brukere av havnen.\n- Ansatte i havn (personell som jobber med vedlikehold, oppsyn, trafikk- utbyggings- eller eiendomsavdeling, havneinspektør).\n- Maritim næring: navigatører, skipsredere, los, nødetater.\n- Kommune og fylkeskommune.\n- Offentlige etater: Kystverket, Miljødirektoratet, Sjøfartsdirektoratet, Forsvaret, Statsforvalteren m.fl.\n- Andre beslutningstakere\n\nHavnedata gir nøyaktig og detaljert geografisk informasjon om havner. Havnedata danner et kunnskapsgrunnlag for effektiv havnedrift og for å ta gode beslutninger. Datasettet kan også benyttes til beslutningssøtte, planlegging og forvaltning, som underlag for ulike temakart eller til forskning og analyse. \n\nEksempler på bruksområder for havnedata: \n- Inngå som et element i digitale verktøy til planlegging og effektivisering av havners drift, f.eks. kaibestilling.\n- Fortøyningsplanlegging: kartskisse med kai-utforming, tilgjengelige ressurser på kai, og begrensninger for fartøyets størrelse. \n- Forvaltningsmessig saksbehandling i kommuner og statlige etater.\n- Analyse og presentasjon i et integrert informasjonssystem (GIS-system).\n- Produksjon av kart og avledede produkter. \n- Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud.",
+    "status": "Kontinuerlig oppdatert"
+  },
+  "portrayal": {
+    "legendDescriptionUrl": "https://register.geonorge.no/register/versjoner/tegneregler/kartverket/havnedata"
+  },
+  "delivery": {
+    "distributions": [
+      {
+        "format": {
+          "format": "GEONORGE:DOWNLOAD"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Geonorge nedlastning",
+        "format": {
+          "format": "Geonorge nedlastning"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Havnedata WMS",
+        "format": {
+          "format": "WMS"
+        },
+        "access": {
+          "href": "https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities",
+          "protocol": "WMS-tjeneste",
+          "license": "Åpne data"
+        },
+        "notes": "Tjeneste"
+      }
+    ]
+  },
+  "metadata": {
+    "standard": "ISO19115",
+    "standardVersion": "2003",
+    "metadataDate": "2025-12-04",
+    "language": "nor",
+    "pointOfContact": {
+      "organization": "Kartverket",
+      "email": "kundesenter@kartverket.no",
+      "role": "pointOfContact"
+    },
+    "identifiers": [
+      {
+        "authority": "geonorge",
+        "code": "e46767e4-c6d9-49a6-93e8-716da0922fd7"
+      }
+    ],
+    "metadataUrl": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=e46767e4-c6d9-49a6-93e8-716da0922fd7"
+  },
+  "links": [
+    {
+      "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=e46767e4-c6d9-49a6-93e8-716da0922fd7",
+      "rel": "describedby",
+      "type": "application/xml",
+      "title": "Metadata (ISO 19139)"
+    },
+    {
+      "href": "https://nedlasting.geonorge.no/api/capabilities/",
+      "rel": "enclosure",
+      "type": "text/html",
+      "title": "Nedlasting"
+    },
+    {
+      "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.geonorge.no/skwms1/wms.havnedata",
+      "rel": "service",
+      "type": "text/html",
+      "title": "Tjeneste"
+    },
+    {
+      "href": "https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities",
+      "rel": "service",
+      "type": "application/xml",
+      "title": "Tjeneste-distribusjon"
+    }
+  ]
+}

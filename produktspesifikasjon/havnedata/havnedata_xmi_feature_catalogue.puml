@@ -1,0 +1,379 @@
+@startuml
+title Havnedata - Objekttyper
+
+skinparam class {
+  AttributeIconSize 0
+}
+
+package "Objekttyper" {
+
+  class Toalett <<featureType>> {
+    + posisjon [1] : Punkt
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+  }
+
+  class Havnesensor <<featureType>> {
+    + posisjon [1] : Punkt
+    + sensortype [0..1] : Sensortype
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + objektLøpenummer [0..1] : CharacterString
+  }
+
+  class Havnegjerde <<featureType>> {
+    + senterlinje [1] : Kurve
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + periode [0..*] : Periode
+  }
+
+  class VAuttak <<featureType>> {
+    + posisjon [1] : Punkt
+    + VAuttakstype [1] : VAuttakstype
+    + kapasitet [0..1] : Integer
+    + tilkoblingsdimensjon [0..1] : CharacterString
+    + høydereferanse [1] : Høydereferanse
+    + kumnummer [0..1] : Integer
+    + status [0..1] : Status
+    + tilgangstype [0..*] : Tilgangstype
+  }
+
+  class Fender <<featureType>> {
+    + posisjon [0..1] : Punkt
+    + fendertype [1] : Fendertype
+    + fenderspesifikasjon [0..1] : CharacterString
+    + høydeSjøkartnull [1] : Real
+    + høydereferanse [1] : Høydereferanse
+    + fenderorientering [1] : Fenderorientering
+    + status [0..1] : Status
+    + fendergruppering [0..1] : Kurve
+    + antall [0..1] : Integer
+  }
+
+  class "Forvaltningsområde" as Forvaltningsomr_de <<featureType>> {
+    + område [1] : Flate
+    + forvaltesAv [0..1] : CharacterString
+    + posisjon [0..1] : Punkt
+  }
+
+  class Kran <<featureType>> {
+    + posisjon [1] : Punkt
+    + krantype [1] : Krantype
+    + maksbelastning [0..1] : Integer
+    + rekkevidde [0..1] : Integer
+    + maksbelastningRekkevidde [0..1] : Integer
+    + høydereferanse [1] : Høydereferanse
+    + kranspesifikasjon [0..1] : CharacterString
+    + status [0..1] : Status
+    + mobilitet [1] : Boolean
+    + energikilde [0..*] : Energikilde
+  }
+
+  class "Lastbegrensningsområde" as Lastbegrensningsomr_de <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + vektbegrensning [0..1] : Real
+    + akseltrykk [0..1] : Real
+    + minsteAvstandPunktlast [0..1] : Real
+    + lastreferanse [0..1] : CharacterString
+    + bruksklassetype [0..1] : Bruksklassetype
+    + punktlast [0..1] : Real
+    + kaidekketype [0..1] : Kaidekketype
+    + lastId [0..1] : CharacterString
+  }
+
+  class "Tømmestasjon" as T_mmestasjon <<featureType>> {
+    + høydereferanse [1] : Høydereferanse
+    + kapasitet [0..1] : Integer
+    + kumnummer [0..1] : Integer
+    + posisjon [1] : Punkt
+    + status [0..1] : Status
+    + tilkoblingsdimensjon [0..1] : CharacterString
+    + avløpstype [1..*] : Avløpstype
+    + mobilitet [1] : Boolean
+    + tilgangstype [0..*] : Tilgangstype
+  }
+
+  class Kaifront <<featureType>> {
+    + senterlinje [1] : Kurve
+    + kaitype [1..*] : Kaitype
+    + lengde [1] : Real
+    + høydereferanse [1] : Høydereferanse
+    + kaifronttype [1] : Kaifronttype
+    + høydeSjøkartnull [1] : Real
+    + status [0..1] : Status
+  }
+
+  class "Kaiområde" as Kaiomr_de <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + kaitype [0..1] : Kaitype
+    + kaidekketype [0..1] : Kaidekketype
+  }
+
+  abstract class HavneanleggId <<featureType>> {
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+  }
+
+  class "Fortøyningsinnretning" as Fort_yningsinnretning <<featureType>> {
+    + posisjon [1] : Punkt
+    + fortøyningstype [1] : Fortøyningstype
+    + maksbelastning [0..1] : Integer
+    + spesifikasjon [0..1] : CharacterString
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + høydeSjøkartnull [1] : Real
+    + sertifiseringsdato [0..1] : Date
+    + tillattFortøyningsvinkelGrunnriss [0..1] : CharacterString
+    + tillattFortøyningsvinkelOppriss [0..1] : CharacterString
+  }
+
+  class "Havneområde" as Havneomr_de <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + forvaltesAv [0..1] : CharacterString
+  }
+
+  class HavnegjerdeInngang <<featureType>> {
+    + avsperringstype [1] : Avsperringstype
+    + åpningstype [0..1] : Åpningstype
+  }
+
+  class Kamera <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class Avfallspunkt <<featureType>> {
+    + posisjon [1] : Punkt
+    + avfallstype [0..*] : Avfallstype
+    + avfallsplan [0..1] : CharacterString
+    + tilgangstype [0..*] : Tilgangstype
+    + beholdertype [0..1] : Beholdertype
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + mobilitet [1] : Boolean
+  }
+
+  class "Tørrdokk" as T_rrdokk <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + maksFartøyBredde [0..1] : Real
+    + maksFartøyLengde [0..1] : Integer
+    + maksFartøyDyptgående [0..1] : Real
+    + løftekapasitet [0..1] : Integer
+    + navn [0..1] : CharacterString
+    + status [0..1] : Status
+    + høydereferanse [1] : Høydereferanse
+  }
+
+  class Beredskapspunkt <<featureType>> {
+    + posisjon [1] : Punkt
+    + beredskapstype [1..*] : Beredskapstype
+    + spesifikasjon [0..1] : CharacterString
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+  }
+
+  class Drivstofftilkobling <<featureType>> {
+    + posisjon [1] : Punkt
+    + drivstofftype [1..*] : Drivstofftype
+    + kapasitet [0..1] : Integer
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + mobilitet [1] : Boolean
+    + tilgangstype [0..*] : Tilgangstype
+  }
+
+  class Havneanlegg <<featureType>> {
+    + område [1] : Flate
+    + eier [0..1] : CharacterString
+    + eierskap [1..*] : Eierskap
+    + forvaltesAv [0..1] : CharacterString
+    + ISPSHavneanlegg [0..1] : ISPSHavneanlegg
+    + posisjon [0..1] : Punkt
+  }
+
+  class Slipp <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + kaidekketype [0..1] : Kaidekketype
+    + navn [0..1] : CharacterString
+    + spesifikasjon [0..1] : CharacterString
+    + høydereferanse [1] : Høydereferanse
+    + høydeSjøkartnull [1] : Real
+    + maksLengdeFartøy [0..1] : Real
+    + status [0..1] : Status
+    + tilgangstype [0..*] : Tilgangstype
+    + slippKapasitet [0..1] : Integer
+    + maksBreddeFartøy [0..1] : Real
+    + maksDyptgåendeFartøy [0..1] : Real
+    + kranKapasitet [0..1] : Integer
+  }
+
+  class Flytedokk <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + maksFartøyBredde [0..1] : Real
+    + maksFartøyLengde [0..1] : Integer
+    + maksFartøyDyptgående [0..1] : Real
+    + løftekapasitet [0..1] : Integer
+    + navn [0..1] : CharacterString
+    + status [0..1] : Status
+    + høydereferanse [1] : Høydereferanse
+  }
+
+  class ELkobling <<featureType>> {
+    + posisjon [1] : Punkt
+    + ELanleggstype [1..*] : ELanleggstype
+    + rekkeviddeLadeanlegg [0..1] : Integer
+    + tilgangstype [0..*] : Tilgangstype
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + ELkoblinger [0..*] : ELkoblingEgenskaper
+  }
+
+  abstract class KaiId <<featureType>> {
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+  }
+
+  abstract class HavnId <<featureType>> {
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+  }
+
+  abstract class ObjektId <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+  }
+
+  abstract class "FellesegenskaperPåkrevd" as FellesegenskaperP_krevd <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
+  }
+
+  abstract class FellesegenskaperOpsjonell <<featureType>> {
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+  }
+
+  class Tilgangstype <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class FartsrestriksjonerGrense <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class "ForbudsområdeGrense" as Forbudsomr_deGrense <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Fartsrestriksjoner <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + forskriftNavn [1] : CharacterString
+    + gjelderForFartøytype [1..*] : Fartøytype
+    + hastighet [1] : Integer
+    + lovhjemmel [0..1] : CharacterString
+    + periodeGyldigFra [0..1] : Date
+    + periodeGyldigTil [0..1] : Date
+    + fastsattAv [0..1] : CharacterString
+    + forskriftLenke [0..1] : CharacterString
+    + gjelderFor [0..1] : CharacterString
+  }
+
+  class "Forbudsområde" as Forbudsomr_de <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + fastsattAv [0..1] : CharacterString
+    + forskriftLenke [0..1] : CharacterString
+    + forskriftNavn [0..1] : CharacterString
+    + gjelderFor [0..1] : CharacterString
+    + gjelderForFartøytype [1..*] : Fartøytype
+    + lovhjemmel [0..1] : CharacterString
+    + periodeGyldigFra [0..1] : Date
+    + periodeGyldigTil [0..1] : Date
+    + forbudstype [1..*] : Forbudstype
+  }
+
+  class Periode {
+    + mndFra [1] : Måned
+    + mndTil [1] : Måned
+  }
+
+  class ISPSHavneanlegg {
+    + portFacilityNrIMO [1] : CharacterString
+    + sikringstype [0..1] : Sikringstype
+    + statusGodkjenning [0..1] : CharacterString
+    + sikkerhetsbarriere [0..1] : Boolean
+    + kontaktinformasjonPFSO [0..1] : CharacterString
+  }
+
+  class ELkoblingEgenskaper {
+    + effekt [0..1] : Integer
+    + frekvens [0..1] : Frekvens
+    + spenning [0..1] : Spenning
+    + sikringstørrelse [0..1] : Integer
+    + kontaktId [0..1] : CharacterString
+    + faser [0..1] : CharacterString
+  }
+
+  class Identifikasjon {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+
+  class Posisjonskvalitet {
+    + datafangstmetode [1] : Datafangstmetode
+    + nøyaktighet [1] : Integer
+    + synbarhet [0..1] : Synbarhet
+    + datafangstmetodeHøyde [0..1] : Datafangstmetode
+    + nøyaktighetHøyde [0..1] : Integer
+  }
+}
+
+  ObjektId <|-- Toalett
+  HavnId <|-- Havnesensor
+  HavneanleggId <|-- Havnegjerde
+  ObjektId <|-- VAuttak
+  ObjektId <|-- Fender
+  HavnId <|-- Forvaltningsomr_de
+  ObjektId <|-- Kran
+  KaiId <|-- Lastbegrensningsomr_de
+  ObjektId <|-- T_mmestasjon
+  ObjektId <|-- Kaifront
+  KaiId <|-- Kaiomr_de
+  HavnId <|-- HavneanleggId
+  ObjektId <|-- Fort_yningsinnretning
+  HavnId <|-- Havneomr_de
+  Havnegjerde <|-- HavnegjerdeInngang
+  Havnesensor <|-- Kamera
+  ObjektId <|-- Avfallspunkt
+  HavneanleggId <|-- T_rrdokk
+  ObjektId <|-- Beredskapspunkt
+  ObjektId <|-- Drivstofftilkobling
+  HavneanleggId <|-- Havneanlegg
+  KaiId <|-- Slipp
+  HavneanleggId <|-- Flytedokk
+  ObjektId <|-- ELkobling
+  HavneanleggId <|-- KaiId
+  FellesegenskaperOpsjonell <|-- HavnId
+  KaiId <|-- ObjektId
+  FellesegenskaperP_krevd <|-- FellesegenskaperOpsjonell
+  FellesegenskaperP_krevd <|-- FartsrestriksjonerGrense
+  FartsrestriksjonerGrense --> Fartsrestriksjoner
+  FellesegenskaperP_krevd <|-- Forbudsomr_deGrense
+  Forbudsomr_deGrense --> Forbudsomr_de
+  FellesegenskaperOpsjonell <|-- Fartsrestriksjoner
+  Fartsrestriksjoner --> FartsrestriksjonerGrense : avgrensning [0..*]
+  FellesegenskaperOpsjonell <|-- Forbudsomr_de
+  Forbudsomr_de --> Forbudsomr_deGrense : avgrensning [0..*]
+
+@enduml
