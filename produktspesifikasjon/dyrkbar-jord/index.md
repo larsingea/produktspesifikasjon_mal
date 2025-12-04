@@ -660,7 +660,7 @@ Fra FKB-AR5 brukes arealtype og grunnforhold for å legge til eller fjerne areal
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-03
+**Metadatadato**: 2025-12-04
 
 **språk**: nor
 
