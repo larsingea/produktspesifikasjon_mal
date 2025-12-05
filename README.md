@@ -18,13 +18,13 @@ Eksempel på config.yaml:
 > ogc_feature_api: (URL til endepunkt for OGC API Fetures Collection)  
 > output_directory: (katalog hvor du ønsker at produktspesifikasjonen(e) dine skal skrives til)  
 > product_slug: (underkatalog hvor du ønsker gjeldende produktspesifikasjon skal skrives til)  
-> updated: (Datao produktspesifikasjonen er gyldig fra - "YYYY-MM-DD")  
+> updated: (Dato produktspesifikasjonen er gyldig fra - "YYYY-MM-DD")  
 > xmi_url: (URL til UML-modell i SOSI modellergister - https://sosi.geonorge.no/!/#SOSI/view/head/SOSI%20Del%203/)  
 
 **NB!** "ogc_feature_api" og "xmi_url" er ikke påkrevd, men da etableres det ingen beskrivelse av datamodellen i produktspesifikasjonen
   
-Datamodeller fra SOSI modellregistr finnes under SOSI Del 3:
-https://sosi.geonorge.no/svn/SOSI/SOSI Del 3
+Datamodeller fra SOSI modellregister finnes under SOSI Del 3:
+[SOSI Modellregister Del 3] (https://sosi.geonorge.no/svn/SOSI/SOSI Del 3)
 
 Metadata-uuid finnes på Geonorge:
 https://kartkatalog.geonorge.no
