@@ -19,7 +19,7 @@ Eksempel på config.yaml:
 > output_directory: (katalog hvor du ønsker at produktspesifikasjonen(e) dine skal skrives til)  
 > product_slug: (underkatalog hvor du ønsker gjeldende produktspesifikasjon skal skrives til)  
 > updated: (Dato produktspesifikasjonen er gyldig fra - "YYYY-MM-DD")  
-> xmi_url: ( [URL til UML-modell i SOSI modellergister](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3)  )
+> xmi_url: ( URL til UML-modell i SOSI modellergister - "https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/FKB/FKB AR5.xml")
 
 **NB!** "ogc_feature_api" og "xmi_url" er ikke påkrevd, men da etableres det ingen beskrivelse av datamodellen i produktspesifikasjonen
   
