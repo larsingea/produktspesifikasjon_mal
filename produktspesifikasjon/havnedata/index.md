@@ -172,6 +172,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -196,6 +200,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -258,6 +266,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Sensortype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/sensortype">https://register.geonorge.no/sosi-kodelister/havnedata/sensortype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -283,6 +295,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -307,6 +323,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -393,6 +413,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -417,6 +441,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -554,6 +582,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>VAuttakstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/va-uttakstype">https://register.geonorge.no/sosi-kodelister/havnedata/va-uttakstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -629,6 +661,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -679,6 +715,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Status</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -703,6 +743,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
     </tr>
   </tbody>
 </table>
@@ -764,6 +808,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Fendertype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fendertype">https://register.geonorge.no/sosi-kodelister/havnedata/fendertype</a></td>
     </tr>
   </tbody>
 </table>
@@ -840,6 +888,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -865,6 +917,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Fenderorientering</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fenderorientering">https://register.geonorge.no/sosi-kodelister/havnedata/fenderorientering</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -889,6 +945,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -1086,6 +1146,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Krantype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/krantype">https://register.geonorge.no/sosi-kodelister/havnedata/krantype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1186,6 +1250,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1236,6 +1304,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Status</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1285,6 +1357,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Energikilde</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/energikilde">https://register.geonorge.no/sosi-kodelister/havnedata/energikilde</a></td>
     </tr>
   </tbody>
 </table>
@@ -1471,6 +1547,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Bruksklassetype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/bruksklassetype">https://register.geonorge.no/sosi-kodelister/havnedata/bruksklassetype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1520,6 +1600,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Kaidekketype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype">https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype</a></td>
     </tr>
   </tbody>
 </table>
@@ -1581,6 +1665,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
     </tr>
   </tbody>
 </table>
@@ -1682,6 +1770,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Status</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1732,6 +1824,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Avløpstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/avlopstype">https://register.geonorge.no/sosi-kodelister/havnedata/avlopstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1781,6 +1877,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
     </tr>
   </tbody>
 </table>
@@ -1842,6 +1942,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Kaitype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaitype">https://register.geonorge.no/sosi-kodelister/havnedata/kaitype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1892,6 +1996,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -1916,6 +2024,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Kaifronttype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaifronttype">https://register.geonorge.no/sosi-kodelister/havnedata/kaifronttype</a></td>
     </tr>
   </tbody>
 </table>
@@ -1966,6 +2078,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -2052,6 +2168,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Kaitype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaitype">https://register.geonorge.no/sosi-kodelister/havnedata/kaitype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -2076,6 +2196,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Kaidekketype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype">https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype</a></td>
     </tr>
   </tbody>
 </table>
@@ -2224,6 +2348,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Fortøyningstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fortoyningstype">https://register.geonorge.no/sosi-kodelister/havnedata/fortoyningstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -2299,6 +2427,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -2323,6 +2455,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -2545,6 +2681,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Avsperringstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/avsperringstype">https://register.geonorge.no/sosi-kodelister/havnedata/avsperringstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -2569,6 +2709,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Åpningstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/apningstype">https://register.geonorge.no/sosi-kodelister/havnedata/apningstype</a></td>
     </tr>
   </tbody>
 </table>
@@ -2644,6 +2788,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Avfallstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/avfallstype">https://register.geonorge.no/sosi-kodelister/havnedata/avfallstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -2694,6 +2842,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Tilgangstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -2718,6 +2870,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Beholdertype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/beholdertype">https://register.geonorge.no/sosi-kodelister/havnedata/beholdertype</a></td>
     </tr>
   </tbody>
 </table>
@@ -2744,6 +2900,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -2768,6 +2928,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -3004,6 +3168,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Status</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -3028,6 +3196,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
     </tr>
   </tbody>
 </table>
@@ -3090,6 +3262,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Beredskapstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/beredskapstype">https://register.geonorge.no/sosi-kodelister/havnedata/beredskapstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -3140,6 +3316,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -3164,6 +3344,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -3226,6 +3410,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Drivstofftype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/drivstofftype">https://register.geonorge.no/sosi-kodelister/havnedata/drivstofftype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -3276,6 +3464,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -3300,6 +3492,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -3350,6 +3546,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
     </tr>
   </tbody>
 </table>
@@ -3435,6 +3635,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Eierskap</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/eierskap">https://register.geonorge.no/sosi-kodelister/havnedata/eierskap</a></td>
     </tr>
   </tbody>
 </table>
@@ -3721,6 +3925,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Kaidekketype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype">https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -3795,6 +4003,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
     </tr>
   </tbody>
 </table>
@@ -3871,6 +4083,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Status</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -3895,6 +4111,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
     </tr>
   </tbody>
 </table>
@@ -4206,6 +4426,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Status</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -4230,6 +4454,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
     </tr>
   </tbody>
 </table>
@@ -4292,6 +4520,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>ELanleggstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/el-anleggstype">https://register.geonorge.no/sosi-kodelister/havnedata/el-anleggstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -4342,6 +4574,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Tilgangstype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -4367,6 +4603,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Høydereferanse</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -4391,6 +4631,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
     </tr>
   </tbody>
 </table>
@@ -4936,6 +5180,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Datafangstmetode</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode">https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -4986,6 +5234,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Synbarhet</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/synbarhet">https://register.geonorge.no/sosi-kodelister/havnedata/synbarhet</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -5010,6 +5262,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Datafangstmetode</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode">https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode</a></td>
     </tr>
   </tbody>
 </table>
@@ -5310,6 +5566,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Fartøytype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype">https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype</a></td>
     </tr>
   </tbody>
 </table>
@@ -5674,6 +5934,10 @@ Egenskaper
       <th scope="row">Type:</th>
       <td>Fartøytype</td>
     </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype">https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -5773,6 +6037,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Forbudstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/forbudstype">https://register.geonorge.no/sosi-kodelister/havnedata/forbudstype</a></td>
     </tr>
   </tbody>
 </table>
