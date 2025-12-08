@@ -1,0 +1,246 @@
+{
+  "identification": {
+    "id": "041f1e6e-bdbc-4091-b48f-8a5990f3cc5b",
+    "title": "Administrative enheter kommuner",
+    "abstract": "Datasettet viser kommuneinndelinga i landet med de mest nøyaktige grensene som er registrert digitalt og som er samlet i ett datasett. Datasettet har referansedato 1.7.2025, og er oppdatert med overføring av et areal mellom Sel og Vågå ved Liaskarven - Rudihøe, i tillegg til ei retting av kommunegrensa mellom Stavanger og Sola ved Liapynten.\n \nFlatene inneholder egenskaper som forteller om offisielle kommunenumre. De offisielle norske, samiske og kvenske navnene for kommunene er hentet fra SSR. I tillegg finnes informasjon om samiske forvaltningsområder.\n\nGeodataene er fra nasjonal inndelingsbase, som er en del av matrikkelen. Ved overgang til ny forvaltningsløsning, ble det også gjort endringer i UML-modellen.",
+    "purpose": "Framstille den offisielle kommuneinndelingen.",
+    "language": "nor",
+    "keywords": [
+      "Kommune",
+      "Administrativ inndeling",
+      "Administrative grenser",
+      "Kommunegrenser",
+      "Fylkesgrenser",
+      "Riksgrense",
+      "ABAS",
+      "Norge fastland",
+      "Administrative enheter",
+      "Det offentlige kartgrunnlaget",
+      "Inspire",
+      "geodataloven",
+      "Norge digitalt",
+      "beredskapsbase",
+      "dataNorgeNo",
+      "fellesDatakatalog",
+      "Basis geodata",
+      "Norge"
+    ],
+    "topicCategories": [
+      "Administrative grenser"
+    ],
+    "dates": {
+      "creation": "2006-07-01",
+      "publication": "2006-07-01",
+      "revision": "2025-07-04",
+      "metadata": "2025-12-08"
+    },
+    "responsibleParties": [
+      {
+        "name": "Liv Mari Nesje",
+        "organization": "Kartverket",
+        "email": "post@kartverket.no",
+        "role": "owner"
+      },
+      {
+        "name": "Liv Mari Nesje",
+        "organization": "Kartverket",
+        "email": "post@kartverket.no",
+        "role": "pointOfContact"
+      },
+      {
+        "organization": "Kartverket",
+        "email": "post@kartverket.no",
+        "role": "publisher"
+      }
+    ],
+    "organizationLogoUrl": "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png",
+    "supplementalInformation": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning."
+  },
+  "scope": {
+    "level": "dataset",
+    "extent": {
+      "spatial": {
+        "spatialScope": "National"
+      },
+      "temporal": {
+        "interval": [
+          [
+            "2006-07-01",
+            "2025-07-04"
+          ]
+        ]
+      }
+    },
+    "legalConstraints": {
+      "useLimitation": "Ingen begrensninger på bruk er oppgitt. Se forøvrig lisens.",
+      "accessConstraints": "Åpne data",
+      "useConstraints": "Lisens",
+      "license": "Creative Commons BY 4.0 (CC BY 4.0)",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "securityConstraints": "Ugradert"
+    }
+  },
+  "dataContent": {
+    "usage": "Forvaltningsmessig saksbehandling. Analyse og presentasjon i et GIS-system. Presentasjon av statistikk og analyser. Produksjon av kart og avledede produkter. Saksbehandling på lokalt og regionalt plan etter plan- og bygningsloven."
+  },
+  "referenceSystems": {
+    "spatialReferenceSystems": [
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:3035",
+        "name": "EUREF89 / ETRS89-LAEA Europe"
+      },
+      {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      }
+    ],
+    "spatialRepresentationType": "Vektor"
+  },
+  "dataQuality": {
+    "scope": {
+      "level": "dataset"
+    },
+    "qualityElements": [
+      {
+        "name": "COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
+        "measure": "Dataene er i henhold til produktspesifikasjonen"
+      },
+      {
+        "name": "SOSI produktspesifikasjon: Administrative enheter Norge",
+        "measure": "Dataene er i henhold til produktspesifikasjonen"
+      },
+      {
+        "name": "Sosi applikasjonsskjema",
+        "measure": "SOSI-filer er i henhold til applikasjonsskjema"
+      },
+      {
+        "name": "Sosi applikasjonsskjema",
+        "measure": "GML-filer er i henhold til applikasjonsskjema"
+      },
+      {
+        "name": "Prosentvis dekning i forhold til datasettets utstrekning",
+        "measure": "Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning",
+        "result": "100"
+      },
+      {
+        "name": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measure": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "96"
+      },
+      {
+        "name": "FAIR",
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 96%"
+      },
+      {
+        "name": "Coverage",
+        "result": "Prosentvis dekning i forhold til datasettets utstrekning: 100%"
+      }
+    ],
+    "lineage": {
+      "statement": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning."
+    }
+  },
+  "maintenance": {
+    "maintenanceFrequency": "Etter behov",
+    "maintenanceNote": "Forvaltningsmessig saksbehandling. Analyse og presentasjon i et GIS-system. Presentasjon av statistikk og analyser. Produksjon av kart og avledede produkter. Saksbehandling på lokalt og regionalt plan etter plan- og bygningsloven.",
+    "status": "Kontinuerlig oppdatert"
+  },
+  "portrayal": {
+    "legendDescriptionUrl": "https://register.geonorge.no/tegneregler/administrative-enheter-norge"
+  },
+  "delivery": {
+    "distributions": [
+      {
+        "format": {
+          "format": "GEONORGE:DOWNLOAD"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Geonorge nedlastning",
+        "format": {
+          "format": "Geonorge nedlastning"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Administrative enheter WMS",
+        "format": {
+          "format": "png"
+        },
+        "access": {
+          "href": "https://wms.geonorge.no/skwms1/wms.adm_enheter2?service=wms&request=GetCapabilities",
+          "protocol": "WMS-tjeneste",
+          "license": "Åpne data"
+        },
+        "notes": "Tjeneste"
+      }
+    ]
+  },
+  "metadata": {
+    "standard": "ISO19115",
+    "standardVersion": "2003",
+    "metadataDate": "2025-12-08",
+    "language": "nor",
+    "pointOfContact": {
+      "organization": "Kartverket",
+      "email": "post@kartverket.no",
+      "role": "pointOfContact"
+    },
+    "identifiers": [
+      {
+        "authority": "geonorge",
+        "code": "041f1e6e-bdbc-4091-b48f-8a5990f3cc5b"
+      }
+    ],
+    "metadataUrl": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=041f1e6e-bdbc-4091-b48f-8a5990f3cc5b"
+  },
+  "links": [
+    {
+      "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=041f1e6e-bdbc-4091-b48f-8a5990f3cc5b",
+      "rel": "describedby",
+      "type": "application/xml",
+      "title": "Metadata (ISO 19139)"
+    },
+    {
+      "href": "https://nedlasting.geonorge.no/api/capabilities/",
+      "rel": "enclosure",
+      "type": "text/html",
+      "title": "Nedlasting"
+    },
+    {
+      "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.geonorge.no/skwms1/wms.adm_enheter2",
+      "rel": "service",
+      "type": "text/html",
+      "title": "Tjeneste"
+    },
+    {
+      "href": "https://wms.geonorge.no/skwms1/wms.adm_enheter2?service=wms&request=GetCapabilities",
+      "rel": "service",
+      "type": "application/xml",
+      "title": "Tjeneste-distribusjon"
+    }
+  ]
+}
