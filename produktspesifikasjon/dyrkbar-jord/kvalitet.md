@@ -1,10 +1,12 @@
-## Spesifikasjonsomfang: Hele datasettet  
+### Spesifikasjonsomfang: Hele datasettet  
 Datasettet Dyrkbar jord fremstilles ved hjelp av ulike datasett med ulik nøyaktighet og
 detaljeringsgrad. FKB-AR5 har egen produktspesifikasjon og tilhørende beskrivelse av kvalitet.
 Datasettene SSB-arealbruk og Naturvernområder har også det. Ravinekartene er ikke-publiserte
 kart avledet fra nasjonal digital høydemodell Høydedata.no.  
+
 ### Fullstendighet  
 Dyrkbar jord dekker hele Norges hovedland (fastland og øyer) under tregrensa.
+
 ### Egenskapsnøyaktighet  
 Klassifikasjonssystemene for DMK og AR5 beskriver landets arealressurser i henhold til et sett av
 faste kriterier som gjelder hele kartleggingsområdet uavhengig av regionale forskjeller i
@@ -14,6 +16,7 @@ gjennom feltarbeid eller tolking av ortofoto.
 For egenskapene Fulldyrka i 2008, Myr eller torv, Planeringsjord og Verneform arves
 egenskapsnøyaktigheten fra datagrunnlaget. Feil i koding i datagrunnlaget vil gi feil i koding i
 Dyrkbar jord.  
+
 ### Stedfestingsnøyaktighet  
 Det generelle kravet til stedfestingsnøyaktighet for grenser mellom arealfigurer i AR5 er 2 meter
 (standardavvik for tverravvik ved på kurver). Stedfestingsnøyaktigheten påvirkes av synbarhet i
