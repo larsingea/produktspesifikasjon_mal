@@ -32,7 +32,7 @@
       "creation": "2025-09-12",
       "publication": "2025-09-12",
       "revision": "2025-09-12",
-      "metadata": "2025-12-05"
+      "metadata": "2025-12-07"
     },
     "responsibleParties": [
       {
@@ -87,15 +87,23 @@
   "referenceSystems": {
     "spatialReferenceSystems": [
       {
+        "code": "EPSG:25832",
         "name": "EUREF89 UTM sone 32, 2d"
       },
       {
+        "code": "EPSG:25833",
         "name": "EUREF89 UTM sone 33, 2d"
       },
       {
+        "code": "EPSG:25835",
         "name": "EUREF89 UTM sone 35, 2d"
       },
       {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      },
+      {
+        "code": "EPSG:25832",
         "name": "EUREF89 UTM sone 32, 2d"
       }
     ],
@@ -187,7 +195,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2025-12-05",
+    "metadataDate": "2025-12-07",
     "language": "nor",
     "pointOfContact": {
       "organization": "Norsk institutt for bioøkonomi",

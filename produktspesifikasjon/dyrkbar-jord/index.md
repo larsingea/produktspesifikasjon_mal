@@ -563,13 +563,20 @@ ArealressursFlate
 
 **Romlige referansesystemer**:
 
-- **navn**: EUREF89 UTM sone 32, 2d
+- **kode**: EPSG:25832
+  **navn**: EUREF89 UTM sone 32, 2d
 
-- **navn**: EUREF89 UTM sone 33, 2d
+- **kode**: EPSG:25833
+  **navn**: EUREF89 UTM sone 33, 2d
 
-- **navn**: EUREF89 UTM sone 35, 2d
+- **kode**: EPSG:25835
+  **navn**: EUREF89 UTM sone 35, 2d
 
-- **navn**: EUREF89 UTM sone 32, 2d
+- **kode**: EPSG:4258
+  **navn**: EUREF 89 Geografisk (ETRS 89) 2d
+
+- **kode**: EPSG:25832
+  **navn**: EUREF89 UTM sone 32, 2d
 
 **Romlig representasjonstype**: Vektor
 
@@ -684,7 +691,7 @@ Fra FKB-AR5 brukes arealtype og grunnforhold for å legge til eller fjerne areal
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-05
+**Metadatadato**: 2025-12-07
 
 **språk**: nor
 
