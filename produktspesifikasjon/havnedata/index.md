@@ -48,7 +48,7 @@ Havnedata
 
 ### Referansedato
 
-2025-11-25
+2025-12-05
 
 ### Ansvarlig organisasjon
 
@@ -85,7 +85,7 @@ Havnedata-standarden er utviklet fordi det var et behov for å få tak i oppdate
 **Utstrekning**:
 
 - **romlig**: - **romlig omfang**: National
-- **tidsmessig**: - **intervall**: - 2021-03-02, 2025-11-25
+- **tidsmessig**: - **intervall**: - 2021-03-02, 2025-12-05
 
 **Juridiske begrensninger**:
 
@@ -5891,7 +5891,7 @@ Eksempler på bruksområder for havnedata:
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-05
+**Metadatadato**: 2025-12-07
 
 **språk**: nor
 
