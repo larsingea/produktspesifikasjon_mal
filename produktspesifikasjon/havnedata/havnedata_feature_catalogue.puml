@@ -1,0 +1,832 @@
+@startuml
+title Havnedata - Objekttyper
+
+skinparam class {
+  AttributeIconSize 0
+}
+
+package "Objekttyper" {
+
+  class "administrativthavneområde" as administrativthavneomr_de <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + administreresAv [0..1] : CharacterString
+
+    ..Geometri..
+    + område [0..1] : GM_Surface
+    + posisjon [0..1] : GM_Point
+  }
+
+  administrativthavneomr_de *-- administrativthavneomr_de_identifikasjon : identifikasjon [0..1]
+  administrativthavneomr_de *-- administrativthavneomr_de_kvalitet : kvalitet [0..1]
+
+  class administrativthavneomr_de_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class administrativthavneomr_de_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class avfallspunkt <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + avfallstype [0..*] : Sequence
+    + beholdertype [0..1] : CharacterString
+    + datoTilgjengeligFra [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + leveringsprosedyre [0..1] : CharacterString
+    + mobil [0..1] : Boolean
+    + datoTilgjengeligTil [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + tilgangstype [0..*] : Sequence
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  avfallspunkt *-- avfallspunkt_identifikasjon : identifikasjon [0..1]
+  avfallspunkt *-- avfallspunkt_kvalitet : kvalitet [0..1]
+
+  class avfallspunkt_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class avfallspunkt_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class beredskapspunkt <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + beredskapstype [0..*] : Sequence
+    + spesifikasjon [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + status [0..1] : CharacterString
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  beredskapspunkt *-- beredskapspunkt_identifikasjon : identifikasjon [0..1]
+  beredskapspunkt *-- beredskapspunkt_kvalitet : kvalitet [0..1]
+
+  class beredskapspunkt_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class beredskapspunkt_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class drivstofftilkobling <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + datoTilgjengeligFra [0..1] : CharacterString
+    + drivstofftype [0..*] : Sequence
+    + høydereferanse [0..1] : CharacterString
+    + kapasitet [0..1] : Integer
+    + mobil [0..1] : Boolean
+    + datoTilgjengeligTil [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + tilgangstype [0..*] : Sequence
+    + bunkringsanleggtype [0..1] : CharacterString
+    + kontaktnavn [0..1] : CharacterString
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  drivstofftilkobling *-- drivstofftilkobling_identifikasjon : identifikasjon [0..1]
+  drivstofftilkobling *-- drivstofftilkobling_kvalitet : kvalitet [0..1]
+
+  class drivstofftilkobling_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class drivstofftilkobling_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class elkobling <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + datoTilgjengeligFra [0..1] : CharacterString
+    + datoTilgjengeligTil [0..1] : CharacterString
+    + ElAnleggstype [0..*] : Sequence
+    + ElKoblinger [0..1] : Object
+    + høydereferanse [0..1] : CharacterString
+    + høydeOverSjøkartnull [0..1] : Real
+    + rekkeviddeKabel [0..1] : Integer
+    + status [0..1] : CharacterString
+    + tilgangstype [0..*] : Sequence
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  elkobling *-- elkobling_identifikasjon : identifikasjon [0..1]
+  elkobling *-- elkobling_kvalitet : kvalitet [0..1]
+  elkobling *-- elkobling_ElKoblinger : ElKoblinger [0..1]
+
+  class elkobling_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class elkobling_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class elkobling_ElKoblinger {
+    + ElKoblinger.effekt [0..*] : Sequence
+    + ElKoblinger.frekvens [0..*] : Sequence
+    + ElKoblinger.spenning [0..*] : Sequence
+    + ElKoblinger.sikringstørrelse [0..*] : Sequence
+    + ElKoblinger.kontaktId [0..*] : Sequence
+    + ElKoblinger.faser [0..*] : Sequence
+  }
+
+  class fartsrestriksjoner <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + datoGyldigFra [0..1] : CharacterString
+    + datoGyldigTil [0..1] : CharacterString
+    + fastsattAv [0..1] : CharacterString
+    + forskriftLenke [0..1] : CharacterString
+    + gjelderFor [0..1] : CharacterString
+    + gjelderForFartøytype [0..*] : Sequence
+    + lovhjemmel [0..1] : CharacterString
+    + forskriftNavn [0..1] : CharacterString
+    + hastighet [0..1] : Integer
+
+    ..Geometri..
+    + område [0..1] : GM_Surface
+    + posisjon [0..1] : GM_Point
+  }
+
+  fartsrestriksjoner *-- fartsrestriksjoner_identifikasjon : identifikasjon [0..1]
+  fartsrestriksjoner *-- fartsrestriksjoner_kvalitet : kvalitet [0..1]
+
+  class fartsrestriksjoner_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class fartsrestriksjoner_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class fartsrestriksjonergrense <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+
+    ..Geometri..
+    + grense [0..1] : GM_Curve
+  }
+
+  fartsrestriksjonergrense *-- fartsrestriksjonergrense_identifikasjon : identifikasjon [0..1]
+  fartsrestriksjonergrense *-- fartsrestriksjonergrense_kvalitet : kvalitet [0..1]
+
+  class fartsrestriksjonergrense_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class fartsrestriksjonergrense_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class fender <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + fendertype [0..1] : CharacterString
+    + spesifikasjon [0..1] : CharacterString
+    + høydeOverSjøkartnull [0..1] : Real
+    + høydereferanse [0..1] : CharacterString
+    + fenderorientering [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + antall [0..1] : Integer
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+    + senterlinje [0..1] : GM_Curve
+  }
+
+  fender *-- fender_identifikasjon : identifikasjon [0..1]
+  fender *-- fender_kvalitet : kvalitet [0..1]
+
+  class fender_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class fender_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class flytedokk <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : Integer
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + maksFartøyBredde [0..1] : Real
+    + maksFartøyLengde [0..1] : Integer
+    + maksFartøyDyptgående [0..1] : Real
+    + løftekapasitet [0..1] : Integer
+    + navn [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+
+    ..Geometri..
+    + område [0..1] : GM_Surface
+    + posisjon [0..1] : GM_Point
+  }
+
+  flytedokk *-- flytedokk_identifikasjon : identifikasjon [0..1]
+  flytedokk *-- flytedokk_kvalitet : kvalitet [0..1]
+
+  class flytedokk_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class flytedokk_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class "forbudsområde" as forbudsomr_de <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + datoGyldigFra [0..1] : CharacterString
+    + datoGyldigTil [0..1] : CharacterString
+    + fastsattAv [0..1] : CharacterString
+    + forskriftLenke [0..1] : CharacterString
+    + gjelderFor [0..1] : CharacterString
+    + gjelderForFartøytype [0..*] : Sequence
+    + lovhjemmel [0..1] : CharacterString
+    + forskriftNavn [0..1] : CharacterString
+    + forbudstype [0..*] : Sequence
+
+    ..Geometri..
+    + område [0..1] : GM_Surface
+    + posisjon [0..1] : GM_Point
+  }
+
+  forbudsomr_de *-- forbudsomr_de_identifikasjon : identifikasjon [0..1]
+  forbudsomr_de *-- forbudsomr_de_kvalitet : kvalitet [0..1]
+
+  class forbudsomr_de_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class forbudsomr_de_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class "forbudsområdegrense" as forbudsomr_degrense <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+
+    ..Geometri..
+    + grense [0..1] : GM_Curve
+  }
+
+  forbudsomr_degrense *-- forbudsomr_degrense_identifikasjon : identifikasjon [0..1]
+  forbudsomr_degrense *-- forbudsomr_degrense_kvalitet : kvalitet [0..1]
+
+  class forbudsomr_degrense_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class forbudsomr_degrense_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class "fortøyningsinnretning" as fort_yningsinnretning <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + fortøyningstype [0..1] : CharacterString
+    + maksbelastning [0..1] : Integer
+    + spesifikasjon [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + høydeOverSjøkartnull [0..1] : Real
+    + sertifiseringsdato [0..1] : Date
+    + tillattFortøyningsvinkelGrunnriss [0..1] : CharacterString
+    + tillattFortøyningsvinkelOppriss [0..1] : CharacterString
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  fort_yningsinnretning *-- fort_yningsinnretning_identifikasjon : identifikasjon [0..1]
+  fort_yningsinnretning *-- fort_yningsinnretning_kvalitet : kvalitet [0..1]
+
+  class fort_yningsinnretning_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class fort_yningsinnretning_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class "havneområde" as havneomr_de <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + forvaltesAv [0..1] : CharacterString
+
+    ..Geometri..
+    + område [0..1] : GM_Surface
+    + posisjon [0..1] : GM_Point
+  }
+
+  havneomr_de *-- havneomr_de_identifikasjon : identifikasjon [0..1]
+  havneomr_de *-- havneomr_de_kvalitet : kvalitet [0..1]
+
+  class havneomr_de_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class havneomr_de_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class havnesensor <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + sensortype [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + eier [0..1] : CharacterString
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  havnesensor *-- havnesensor_identifikasjon : identifikasjon [0..1]
+  havnesensor *-- havnesensor_kvalitet : kvalitet [0..1]
+
+  class havnesensor_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class havnesensor_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class kaifront <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + kaitype [0..*] : Sequence
+    + lengde [0..1] : Real
+    + høydereferanse [0..1] : CharacterString
+    + kaifronttype [0..1] : CharacterString
+    + høydeOverSjøkartnull [0..1] : Real
+    + status [0..1] : CharacterString
+
+    ..Geometri..
+    + senterlinje [0..1] : GM_Curve
+  }
+
+  kaifront *-- kaifront_identifikasjon : identifikasjon [0..1]
+  kaifront *-- kaifront_kvalitet : kvalitet [0..1]
+
+  class kaifront_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class kaifront_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class "kaiområde" as kaiomr_de <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + kaitype [0..1] : CharacterString
+    + kaidekketype [0..1] : CharacterString
+    + bildeLink [0..1] : CharacterString
+
+    ..Geometri..
+    + område [0..1] : GM_Surface
+    + posisjon [0..1] : GM_Point
+  }
+
+  kaiomr_de *-- kaiomr_de_identifikasjon : identifikasjon [0..1]
+  kaiomr_de *-- kaiomr_de_kvalitet : kvalitet [0..1]
+
+  class kaiomr_de_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class kaiomr_de_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class "kaiområdegrense" as kaiomr_degrense <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+
+    ..Geometri..
+    + grense [0..1] : GM_Curve
+  }
+
+  kaiomr_degrense *-- kaiomr_degrense_identifikasjon : identifikasjon [0..1]
+  kaiomr_degrense *-- kaiomr_degrense_kvalitet : kvalitet [0..1]
+
+  class kaiomr_degrense_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class kaiomr_degrense_kvalitet {
+    + kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class kran <<featureType>> {
+    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + krantype [0..1] : CharacterString
+    + maksbelastning [0..1] : Integer
+    + rekkevidde [0..1] : Integer
+    + maksbelastningRekkevidde [0..1] : Integer
+    + høydereferanse [0..1] : CharacterString
+    + spesifikasjon [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + mobil [0..1] : Boolean
+    + energikilde [0..*] : Sequence
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  kran *-- kran_identifikasjon : identifikasjon [0..1]
+  kran_identifikasjon *-- kran_identifikasjon_identifikasjon : identifikasjon [0..1]
+  kran *-- kran_kvalitet : kvalitet [0..1]
+  kran_kvalitet *-- kran_kvalitet_kvalitet : kvalitet [0..1]
+
+  class kran_identifikasjon {
+    + identifikasjon.identifikasjon [0..1] : Object
+  }
+
+  class kran_identifikasjon_identifikasjon {
+    + identifikasjon.identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class kran_kvalitet {
+    + kvalitet.kvalitet [0..1] : Object
+  }
+
+  class kran_kvalitet_kvalitet {
+    + kvalitet.kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class lastelosseutstyr <<featureType>> {
+    + geometry [1] : feature
+  }
+
+  class slipp <<featureType>> {
+    + geometry [1] : feature
+  }
+
+  class toalett <<featureType>> {
+    + geometry [1] : feature
+  }
+
+  class vauttak <<featureType>> {
+    + geometry [1] : feature
+  }
+
+  class object {
+    + lokalId [0..1] : CharacterString
+    + navnerom [0..1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+}
+
+@enduml
