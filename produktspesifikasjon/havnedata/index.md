@@ -5891,7 +5891,7 @@ Eksempler på bruksområder for havnedata:
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-07
+**Metadatadato**: 2025-12-08
 
 **språk**: nor
 
