@@ -1,0 +1,91 @@
+@startuml
+title Administrative enheter kommuner - Objekttyper
+
+skinparam class {
+  AttributeIconSize 0
+}
+
+package "Objekttyper" {
+
+  class Fylker <<featureType>> {
+    + objid [0..1] : Integer
+    + objtype [0..1] : CharacterString
+    + lokalid [0..1] : CharacterString
+    + navnerom [0..1] : CharacterString
+    + versjonid [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + gyldigfra [0..1] : Date
+    + gyldigtil [0..1] : Date
+    + datafangstdato [0..1] : DateTime
+    + datauttaksdato [0..1] : DateTime
+    + opphav [0..1] : CharacterString
+    + fylkesnummer [0..1] : CharacterString
+    + fylkesnavn [0..1] : CharacterString
+    + samiskforvaltningsomrade [0..1] : Boolean
+
+    ..Geometri..
+    + geometry [1] : GM_Object
+  }
+
+  class Fylkesgrenser <<featureType>> {
+    + objid [0..1] : Integer
+    + objtype [0..1] : CharacterString
+    + lokalid [0..1] : CharacterString
+    + navnerom [0..1] : CharacterString
+    + versjonid [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + gyldigfra [0..1] : Date
+    + gyldigtil [0..1] : Date
+    + datafangstdato [0..1] : DateTime
+    + malemetode [0..1] : CharacterString
+    + noyaktighet [0..1] : Integer
+    + datauttaksdato [0..1] : DateTime
+    + opphav [0..1] : CharacterString
+    + avgrensningstype [0..1] : CharacterString
+
+    ..Geometri..
+    + geometry [1] : GM_Object
+  }
+
+  class Kommuner <<featureType>> {
+    + objid [0..1] : Integer
+    + objtype [0..1] : CharacterString
+    + lokalid [0..1] : CharacterString
+    + navnerom [0..1] : CharacterString
+    + versjonid [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + gyldigfra [0..1] : Date
+    + gyldigtil [0..1] : Date
+    + datafangstdato [0..1] : DateTime
+    + datauttaksdato [0..1] : DateTime
+    + opphav [0..1] : CharacterString
+    + kommunenummer [0..1] : CharacterString
+    + kommunenavn [0..1] : CharacterString
+    + samiskforvaltningsomrade [0..1] : Boolean
+
+    ..Geometri..
+    + geometry [1] : GM_Object
+  }
+
+  class Kommunegrenser <<featureType>> {
+    + objid [0..1] : Integer
+    + objtype [0..1] : CharacterString
+    + lokalid [0..1] : CharacterString
+    + navnerom [0..1] : CharacterString
+    + versjonid [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + gyldigfra [0..1] : Date
+    + gyldigtil [0..1] : Date
+    + datafangstdato [0..1] : DateTime
+    + malemetode [0..1] : CharacterString
+    + noyaktighet [0..1] : Integer
+    + datauttaksdato [0..1] : DateTime
+    + opphav [0..1] : CharacterString
+    + avgrensningstype [0..1] : CharacterString
+
+    ..Geometri..
+    + geometry [1] : GM_Object
+  }
+}
+
+@enduml
