@@ -1,6 +1,6 @@
 metadataId: 041f1e6e-bdbc-4091-b48f-8a5990f3cc5b
 ogc_feature_api: https://kos-pygeoapi.atkv3-dev.kartverket.cloud/collections
-output_directory: produktspesifikasjoner
+output_directory: produktspesifikasjon
 product_slug: administrative_enheter
 updated: 2025-12-08
 xmi_url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/AdministrativeEnheterNorge-4.2.xml
