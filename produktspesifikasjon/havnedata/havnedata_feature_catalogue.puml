@@ -808,18 +808,244 @@ package "Objekttyper" {
 
   class lastelosseutstyr <<featureType>> {
     + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + utstyrstype [0..*] : Sequence
+    + bruksområde [0..*] : Sequence
+    + mobil [0..1] : Boolean
+    + spesifikasjon [0..1] : CharacterString
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  lastelosseutstyr *-- lastelosseutstyr_identifikasjon : identifikasjon [0..1]
+  lastelosseutstyr_identifikasjon *-- lastelosseutstyr_identifikasjon_identifikasjon : identifikasjon [0..1]
+  lastelosseutstyr *-- lastelosseutstyr_kvalitet : kvalitet [0..1]
+  lastelosseutstyr_kvalitet *-- lastelosseutstyr_kvalitet_kvalitet : kvalitet [0..1]
+
+  class lastelosseutstyr_identifikasjon {
+    + identifikasjon.identifikasjon [0..1] : Object
+  }
+
+  class lastelosseutstyr_identifikasjon_identifikasjon {
+    + identifikasjon.identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class lastelosseutstyr_kvalitet {
+    + kvalitet.kvalitet [0..1] : Object
+  }
+
+  class lastelosseutstyr_kvalitet_kvalitet {
+    + kvalitet.kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighetHøyde [0..1] : Integer
   }
 
   class slipp <<featureType>> {
     + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + kaidekketype [0..1] : CharacterString
+    + navn [0..1] : CharacterString
+    + spesifikasjon [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + høydeOverSjøkartnull [0..1] : Real
+    + maksLengdeFartøy [0..1] : Real
+    + status [0..1] : CharacterString
+    + tilgangstype [0..*] : Sequence
+    + slippKapasitet [0..1] : Integer
+    + maksBreddeFartøy [0..1] : Real
+    + maksDyptgåendeFartøy [0..1] : Real
+    + kranKapasitet [0..1] : Integer
+
+    ..Geometri..
+    + område [0..1] : GM_Surface
+    + posisjon [0..1] : GM_Point
+  }
+
+  slipp *-- slipp_identifikasjon : identifikasjon [0..1]
+  slipp_identifikasjon *-- slipp_identifikasjon_identifikasjon : identifikasjon [0..1]
+  slipp *-- slipp_kvalitet : kvalitet [0..1]
+  slipp_kvalitet *-- slipp_kvalitet_kvalitet : kvalitet [0..1]
+
+  class slipp_identifikasjon {
+    + identifikasjon.identifikasjon [0..1] : Object
+  }
+
+  class slipp_identifikasjon_identifikasjon {
+    + identifikasjon.identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class slipp_kvalitet {
+    + kvalitet.kvalitet [0..1] : Object
+  }
+
+  class slipp_kvalitet_kvalitet {
+    + kvalitet.kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighetHøyde [0..1] : Integer
   }
 
   class toalett <<featureType>> {
     + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + datoTilgjengeligFra [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + datoTilgjengeligTil [0..1] : CharacterString
+    + status [0..1] : CharacterString
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  toalett *-- toalett_identifikasjon : identifikasjon [0..1]
+  toalett_identifikasjon *-- toalett_identifikasjon_identifikasjon : identifikasjon [0..1]
+  toalett *-- toalett_kvalitet : kvalitet [0..1]
+  toalett_kvalitet *-- toalett_kvalitet_kvalitet : kvalitet [0..1]
+
+  class toalett_identifikasjon {
+    + identifikasjon.identifikasjon [0..1] : Object
+  }
+
+  class toalett_identifikasjon_identifikasjon {
+    + identifikasjon.identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class toalett_kvalitet {
+    + kvalitet.kvalitet [0..1] : Object
+  }
+
+  class toalett_kvalitet_kvalitet {
+    + kvalitet.kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighetHøyde [0..1] : Integer
   }
 
   class vauttak <<featureType>> {
     + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : Object
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + datoTilgjengeligFra [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + kapasitet [0..1] : Integer
+    + kumnummer [0..1] : Integer
+    + datoTilgjengeligTil [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + tilgangstype [0..*] : Sequence
+    + tilkoblingsdimensjon [0..1] : CharacterString
+    + VAuttakstype [0..1] : CharacterString
+
+    ..Geometri..
+    + posisjon [0..1] : GM_Point
+  }
+
+  vauttak *-- vauttak_identifikasjon : identifikasjon [0..1]
+  vauttak_identifikasjon *-- vauttak_identifikasjon_identifikasjon : identifikasjon [0..1]
+  vauttak *-- vauttak_kvalitet : kvalitet [0..1]
+  vauttak_kvalitet *-- vauttak_kvalitet_kvalitet : kvalitet [0..1]
+
+  class vauttak_identifikasjon {
+    + identifikasjon.identifikasjon [0..1] : Object
+  }
+
+  class vauttak_identifikasjon_identifikasjon {
+    + identifikasjon.identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class vauttak_kvalitet {
+    + kvalitet.kvalitet [0..1] : Object
+  }
+
+  class vauttak_kvalitet_kvalitet {
+    + kvalitet.kvalitet.datafangstmetode [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighet [0..1] : Integer
+    + kvalitet.kvalitet.synbarhet [0..1] : CharacterString
+    + kvalitet.kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
+    + kvalitet.kvalitet.nøyaktighetHøyde [0..1] : Integer
   }
 
   class object {
