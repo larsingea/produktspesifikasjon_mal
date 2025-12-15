@@ -1,0 +1,205 @@
+{
+  "identification": {
+    "id": "28c28e3a-d88f-4a34-8c60-5efe6d56a44d",
+    "title": "Nasjonalt grunnkart for arealanalyse (Testversjon 2)",
+    "abstract": "Nasjonalt grunnkart for arealanalyse er tilgjengelig som Testversjon 2. Grunnkartet er utviklet i samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet, og er ment som et felles datagrunnlag for ulike typer arealanalyser.\n\n- - -\nOppdateringer og feilretting! \n\nNye filer ble publisert 30. juni (ca. klokka 1500). Det er rettet opp i topologifeil, men det gjenstår noen feil i enkelte kommuner og fylker i enkelte projeksjoner og formater. De berørte kommunene og fylkene gjengitt med fylkes- og kommunenummer er:  \n\nUTM GML: 46, 50, 55, 56, 1806,1815, 4642, 4644\n\nUTM FGDB: 18, 40, 46, 50, 55, 56\n\nGeografisk (ETRS89) GML: 33, 42, 46, 50, 55, 56, 4642, 4644, 5056\n\nGeografisk (ETRS89) FGDB: 40, 50, 55, 56, 5060\n\nDisse filene vil dessverre ikke bli rettet før årsversjonen publiseres. Feilen som har oppstått kan føre til utfordringer ved geometrisk prosessering. De fleste GIS-programmer har funksjonalitet for å reparere slike topologifeil, og brukere som ønsker å ta datasettet i bruk før en fullstendig rettet versjon er tilgjengelig, oppfordres til å benytte disse verktøyene. Vi beklager ulempen!\n\n- - -\n\n\nDatasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK), som viser arealressurs- og arealbruksdata, og innebærer ingen nykartlegging.  Kildedata som er brukt i denne versjonen var oppdatert per 01.01.2024. I tillegg til arealressurs- og arealbruksdata er det lagt inn økosysteminformasjon i henhold til Eurostats klassifikasjonssystem. Grunnkartet kan kobles med andre datakilder, som for eksempel arealplaner, og benyttes som grunnlag for ulike typer arealanalyser og arealregnskap. Les mer om datainnhold og metode under Prosesshistorie.\n\n\nLes mer om metode og bruk av Grunnkartet i rapporten \"Grunnkart for bruk i arealregnskap\" \n(https://nva.sikt.no/registration/0198cc4a4330-a725fa2a-c82a-416f-9ec6-bbdc641c5f0d )\n\nAlle endringer som er implementert i Testversjon 2 er samlet i rapporten (https://nva.sikt.no/registration/0198cc46a84c-90fffa7e-4ab3-430c-a381-9ccb58f4b371)\n\nAlle tilbakemeldinger til Testversjon 2 er samlet i rapporten, Nasjonalt grunnkart for arealanalyse, Testversjon 2 - Tilbakemeldinger og vurderinger. (https://www.kartverket.no/globalassets/forskning-og-utvikling/rapporter/nasjonalt-grunnkart-for-arealanalyse-testversjon-2-tilbakemeldinger-og-vurderinger.pdf)\n\nAlle tilbakemeldinger til Testversjon 1 er samlet i rapporten, Grunnkart for bruk i arealregnskap - Tilbakemeldinger, vurderinger og anbefalinger \n(https://www.kartverket.no/globalassets/forskning-og-utvikling/rapporter/rapport-grunnkart-for-bruk-i-arealregnskap-tilbakemeldinger-vurderinger-og-anbefalinger-2.pdf).",
+    "purpose": "Nasjonalt grunnkart for arealanalyse er en sammenstilling av grunnleggende datasett som danner basis for ulike typer arealregnskap. Formålet er å tilrettelegge data for kommunal og regional forvaltning, slik at blant annet kostnadskrevende dobbeltarbeid unngås. Et felles kartgrunnlag gjør det også enklere å sammenligne arealregnskap på tvers av sektorer. Dette gir kommuner og fylker, sammen med rådgivende firmaer, mulighet til å fokusere på å tilrettelegge supplerende temadata for å lage sektorspesifikke regnskap.",
+    "language": "nor",
+    "keywords": [
+      "Grunnkart",
+      "Arealregnskap",
+      "Arealstatistikk",
+      "Økosystemtyper",
+      "Arealanalyse",
+      "Testversjon 2",
+      "ØkologiskGrunnkart"
+    ],
+    "dates": {
+      "creation": "2024-02-13",
+      "publication": "2024-02-13",
+      "revision": "2025-06-30",
+      "metadata": "2025-12-15"
+    },
+    "responsibleParties": [
+      {
+        "name": "Miljødirektoratet og SSB - post@miljodir.no",
+        "organization": "Statistisk sentralbyrå",
+        "email": "margrete.steinnes@ssb.no",
+        "role": "owner"
+      },
+      {
+        "name": "Kontakt Kartverket",
+        "organization": "Norsk institutt for bioøkonomi",
+        "email": "post@kartverket.no",
+        "role": "pointOfContact"
+      },
+      {
+        "name": "NIBIO",
+        "organization": "Norsk institutt for bioøkonomi",
+        "email": "gisdrift@nibio.no",
+        "role": "publisher"
+      }
+    ],
+    "organizationLogoUrl": "https://register.geonorge.no/data/organizations/971526920_SSB_liten.png",
+    "supplementalInformation": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nVi vil veldig gjerne høre hva du mener om Testversjon 2 av Grunnkartet - send oss gjerne en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: margrete.steinnes@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: ellen.arneberg@miljodir.no"
+  },
+  "scope": {
+    "level": "dataset",
+    "extent": {
+      "temporal": {
+        "interval": [
+          [
+            "2024-02-13",
+            "2025-06-30"
+          ]
+        ]
+      }
+    },
+    "legalConstraints": {
+      "accessConstraints": "Norge digitalt begrenset",
+      "useConstraints": "Lisens",
+      "license": "No conditions apply to access and use",
+      "licenseUrl": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"
+    }
+  },
+  "dataContent": {
+    "usage": "Grunnkartet kan testes som grunnlag for etablering av arealregnskap, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. \n\nKommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene, som gir oversikt over relevante datakilder og metoder. Når en endelig årsversjon av Grunnkartet er klart til drift, vil det kunne supplere og delvis erstatte datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere."
+  },
+  "referenceSystems": {
+    "spatialReferenceSystems": [
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      }
+    ],
+    "spatialRepresentationType": "Vektor"
+  },
+  "dataQuality": {
+    "scope": {
+      "level": "dataset"
+    },
+    "qualityElements": [
+      {
+        "name": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measure": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "81"
+      },
+      {
+        "name": "FAIR",
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 81%"
+      }
+    ],
+    "lineage": {
+      "statement": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nVi vil veldig gjerne høre hva du mener om Testversjon 2 av Grunnkartet - send oss gjerne en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: margrete.steinnes@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: ellen.arneberg@miljodir.no"
+    }
+  },
+  "maintenance": {
+    "maintenanceFrequency": "Årlig",
+    "maintenanceNote": "Grunnkartet kan testes som grunnlag for etablering av arealregnskap, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. \n\nKommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene, som gir oversikt over relevante datakilder og metoder. Når en endelig årsversjon av Grunnkartet er klart til drift, vil det kunne supplere og delvis erstatte datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.",
+    "status": "Under arbeid"
+  },
+  "portrayal": {
+    "legendDescriptionUrl": "https://register.geonorge.no/tegneregler/grunnkart-for-arealregnskap-testversjon-2"
+  },
+  "delivery": {
+    "distributions": [
+      {
+        "format": {
+          "format": "GEONORGE:DOWNLOAD"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Geonorge nedlastning",
+        "format": {
+          "format": "Geonorge nedlastning"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Nasjonalt grunnkart for arealanalyse (Testversjon 2) WMS",
+        "format": {
+          "format": "OGC WMS"
+        },
+        "access": {
+          "href": "https://wms.nibio.no/cgi-bin/arealregnskap_grunnkart?service=WMS&request=GetCapabilities",
+          "protocol": "WMS-tjeneste",
+          "license": "Åpne data"
+        },
+        "notes": "Tjeneste"
+      }
+    ]
+  },
+  "metadata": {
+    "standard": "ISO19115",
+    "standardVersion": "2003",
+    "metadataDate": "2025-12-15",
+    "language": "nor",
+    "pointOfContact": {
+      "organization": "Norsk institutt for bioøkonomi",
+      "email": "post@kartverket.no",
+      "role": "pointOfContact"
+    },
+    "identifiers": [
+      {
+        "authority": "geonorge",
+        "code": "28c28e3a-d88f-4a34-8c60-5efe6d56a44d"
+      }
+    ],
+    "metadataUrl": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=28c28e3a-d88f-4a34-8c60-5efe6d56a44d"
+  },
+  "links": [
+    {
+      "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=28c28e3a-d88f-4a34-8c60-5efe6d56a44d",
+      "rel": "describedby",
+      "type": "application/xml",
+      "title": "Metadata (ISO 19139)"
+    },
+    {
+      "href": "https://nibio.brage.unit.no/nibio-xmlui/handle/11250/3120510",
+      "rel": "about",
+      "type": "text/html",
+      "title": "Produktside"
+    },
+    {
+      "href": "https://nedlasting.geonorge.no/api/capabilities/",
+      "rel": "enclosure",
+      "type": "text/html",
+      "title": "Nedlasting"
+    },
+    {
+      "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.nibio.no/cgi-bin/arealregnskap_grunnkart",
+      "rel": "service",
+      "type": "text/html",
+      "title": "Tjeneste"
+    },
+    {
+      "href": "https://wms.nibio.no/cgi-bin/arealregnskap_grunnkart?service=WMS&request=GetCapabilities",
+      "rel": "service",
+      "type": "application/xml",
+      "title": "Tjeneste-distribusjon"
+    }
+  ]
+}
