@@ -1,0 +1,197 @@
+[
+  {
+    "name": "GrunnkartFlate",
+    "description": "En flate i Grunnkartet som representerer et sammenhengende areal med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon om kildedata, brukt som grunnlag for arealanalyser og -regnskap.",
+    "attributes": [
+      {
+        "name": "arealdekkeNiva1",
+        "type": "ArealdekkeNiva1",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1"
+        }
+      },
+      {
+        "name": "arealdekkeNiva2",
+        "type": "ArealdekkeNiva2",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2"
+        }
+      },
+      {
+        "name": "arealdekkeKode",
+        "type": "ArealdekkeKode",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode"
+        }
+      },
+      {
+        "name": "grunnforhold",
+        "type": "Grunnforhold",
+        "cardinality": "1"
+      },
+      {
+        "name": "grunnforholdKode",
+        "type": "GrunnforholdKode",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode"
+        }
+      },
+      {
+        "name": "skogbonitet",
+        "type": "Skogbonitet",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet"
+        }
+      },
+      {
+        "name": "skogbonitetKode",
+        "type": "SkogbonitetKode",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode"
+        }
+      },
+      {
+        "name": "arealbrukLandHovedklasse",
+        "type": "ArealbrukLandHovedklasse",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse"
+        }
+      },
+      {
+        "name": "arealbrukLandUnderklasse",
+        "type": "ArealbrukLandUnderklasse",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse"
+        }
+      },
+      {
+        "name": "areabrukLandKode",
+        "type": "ArealbrukLandKode",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode"
+        }
+      },
+      {
+        "name": "arealbrukHav",
+        "type": "ArealbrukHav",
+        "cardinality": "1"
+      },
+      {
+        "name": "arealbrukHavKode",
+        "type": "ArealbrukHavKode",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode"
+        }
+      },
+      {
+        "name": "okosystemtypeNiva1",
+        "type": "OkosystemtypeNiva1",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1"
+        }
+      },
+      {
+        "name": "okosystemtypeNiva2",
+        "type": "OkosystemtypeNiva2",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2"
+        }
+      },
+      {
+        "name": "okosystemtypeNiva3",
+        "type": "OkosystemtypeNiva3",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3"
+        }
+      },
+      {
+        "name": "okosystemtypeKode",
+        "type": "OkosystemtypeKode",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode"
+        }
+      },
+      {
+        "name": "grunnkartKilde",
+        "type": "GrunnkartKilde",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde"
+        }
+      },
+      {
+        "name": "arealbrukKilde",
+        "type": "ArealbrukKilde",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde"
+        }
+      },
+      {
+        "name": "kommunenummer",
+        "type": "Kommunenummer",
+        "cardinality": "1",
+        "valueDomain": {
+          "codeList": "https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer"
+        }
+      },
+      {
+        "name": "identifikasjon",
+        "type": "Identifikasjon",
+        "description": "unik identifikasjon av et objekt",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "CharacterString",
+            "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
+            "cardinality": "1"
+          },
+          {
+            "name": "navnerom",
+            "type": "CharacterString",
+            "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
+            "cardinality": "1"
+          },
+          {
+            "name": "versjonId",
+            "type": "CharacterString",
+            "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans)",
+            "cardinality": "0..1"
+          }
+        ]
+      },
+      {
+        "name": "oppdateringsdato",
+        "type": "DateTime",
+        "description": "tidspunkt for siste endring på objektet\n\nMerknad:\nOppdateringsdato kan være forskjellig fra datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    },
+    "geometry": {
+      "name": "område",
+      "type": "GM_MultiSurface",
+      "ogcRole": "primary-geometry",
+      "description": "den geografiske avgrensingen av Grunnkartflaten"
+    }
+  }
+]
