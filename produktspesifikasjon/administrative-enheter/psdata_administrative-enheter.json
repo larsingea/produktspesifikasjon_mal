@@ -2,7 +2,7 @@
   "identification": {
     "id": "041f1e6e-bdbc-4091-b48f-8a5990f3cc5b",
     "title": "Administrative enheter kommuner",
-    "abstract": "Datasettet viser kommuneinndelinga i landet med de mest nøyaktige grensene som er registrert digitalt og som er samlet i ett datasett. Datasettet har referansedato 1.7.2025, og er oppdatert med overføring av et areal mellom Sel og Vågå ved Liaskarven - Rudihøe, i tillegg til ei retting av kommunegrensa mellom Stavanger og Sola ved Liapynten.\n \nFlatene inneholder egenskaper som forteller om offisielle kommunenumre. De offisielle norske, samiske og kvenske navnene for kommunene er hentet fra SSR. I tillegg finnes informasjon om samiske forvaltningsområder.\n\nGeodataene er fra nasjonal inndelingsbase, som er en del av matrikkelen. Ved overgang til ny forvaltningsløsning, ble det også gjort endringer i UML-modellen.",
+    "abstract": "Datasettet viser kommuneinndelinga i landet med de mest nøyaktige grensene som er registrert digitalt og som er samlet i ett datasett. Datasettet har referansedato 1.1.2026, og er oppdatert med overføring av to arealer mellom Indre Østfold og Nordre Follo ved Slemmestadveien, og et areal mellom Indre Østfold og Vestby ved Laaskenveien. Det er i tillegg oppdatert med en del mindre kvalitetshevinger, som følge av jordskiftesaker og klarlegging av eksisterende grense på kommune-/fylkesgrenser.\n \nFlatene inneholder egenskaper som forteller om offisielle kommunenumre. De offisielle norske, samiske og kvenske navnene for kommunene er hentet fra SSR. I tillegg finnes informasjon om samiske forvaltningsområder.\n\nGeodataene er fra nasjonal inndelingsbase, som er en del av matrikkelen. Ved overgang til ny forvaltningsløsning, ble det også gjort endringer i UML-modellen.",
     "purpose": "Framstille den offisielle kommuneinndelingen.",
     "language": "nor",
     "keywords": [
@@ -31,8 +31,8 @@
     "dates": {
       "creation": "2006-07-01",
       "publication": "2006-07-01",
-      "revision": "2025-07-04",
-      "metadata": "2025-12-08"
+      "revision": "2025-12-10",
+      "metadata": "2025-12-15"
     },
     "responsibleParties": [
       {
@@ -66,7 +66,7 @@
         "interval": [
           [
             "2006-07-01",
-            "2025-07-04"
+            "2025-12-10"
           ]
         ]
       }
@@ -202,7 +202,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2025-12-08",
+    "metadataDate": "2025-12-15",
     "language": "nor",
     "pointOfContact": {
       "organization": "Kartverket",
