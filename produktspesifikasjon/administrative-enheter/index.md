@@ -167,7 +167,7 @@ Framstille den offisielle kommuneinndelingen.
 **Beskrivelse**: Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.
 
 ## Datafangst
-
+Datasettet er basert på administrativ datafangst gjennom stortingsvdetak angående sammenslåing eller oppsplitting av kommuner og  gjennom innmelding av grensejusteringer fra kommunene.
 
 
 ## Datavedlikehold
