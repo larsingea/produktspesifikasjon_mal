@@ -4,7 +4,8 @@
 Repository for å lage produktspesifikasjoner i henhold til forenklet produksjonsløype.  
 Produktspesifikasjonen vil ikke tilfredsstille standarden "SOSI produktspesifikasjoner – Krav og godkjenning" men vil være i henhold til den nyeste internasjonale standard for produktspesifikasjoner (ISO19131:2022).  
 Produktspesifikasjonen vil også tilfredsstille krav fra "Det offentlige kartgrunnlaget".  
-Merk at andre DOK-krav, som valideringsfiler ikke produseres ved hjelp av denne metoden.
+Merk at andre DOK-krav, som valideringsfiler ikke produseres ved hjelp av denne metoden.  
+Produktspesifikasjonsdokumenter vil bli publisert på: https://larsingea.github.io/produktspesifikasjon_mal/  
 
 Forutsetninger for etablering av produktspesifikasjon i denne produksjonsløya:
 1. Det må finnes gode metadata i Geonorge
