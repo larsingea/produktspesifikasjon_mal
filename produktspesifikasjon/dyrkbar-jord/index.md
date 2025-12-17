@@ -698,7 +698,7 @@ Fra og med 2025 er datasettet revidert gjennom bruk av flere datakilder og nye m
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-15
+**Metadatadato**: 2025-12-16
 
 **språk**: nor
 
