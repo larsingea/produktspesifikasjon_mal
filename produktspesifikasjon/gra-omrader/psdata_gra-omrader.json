@@ -1,0 +1,173 @@
+{
+  "identification": {
+    "id": "c5f09d79-1546-495c-8b36-91efd4008bd7",
+    "title": "Kart over grå arealer -Versjon 1",
+    "abstract": "Kart over grå arealet -Versjon 1 er utviklet i samarbeidet mellom Miljødirektoratet, Kartverket, NIBIO og SSB.\n\nKartet er landsdekkende og viser grå arealer i henhold til Kommunal- og distriktsdepartementet sin definisjon;\n«Arealer som allerede er tatt i bruk eller sterkt påvirket av menneskelig bygge- og anleggsaktivitet, inkludert bebyggelse, konstruksjoner, permanente overflater og tilhørende arealer.»",
+    "purpose": "Verktøy for planlegging \nKartet skal kunne brukes som et verktøy for planlegging og bidra til å redusere nedbygging av natur - og jordbruksarealer, ved å synliggjøre allerede opparbeidede arealer.\n\nKartet er nå tilgjengelig og skal testes om det gir ønsket kunnskapsgrunnlag.",
+    "language": "nor",
+    "keywords": [
+      "Natur"
+    ],
+    "dates": {
+      "creation": "2025-11-24",
+      "publication": "2025-11-24",
+      "revision": "2025-11-24",
+      "metadata": "2025-12-16"
+    },
+    "responsibleParties": [
+      {
+        "name": "Ellen Arneberg",
+        "organization": "Miljødirektoratet",
+        "email": "ellen.arneberg@miljodir.no",
+        "role": "owner"
+      },
+      {
+        "name": "Bernt Audun Strømsli",
+        "organization": "Kartverket",
+        "email": "bernt.audun.stromsli@kartverket.no",
+        "role": "pointOfContact"
+      },
+      {
+        "organization": "Norsk institutt for bioøkonomi",
+        "email": "gisdrift@nibio.no",
+        "role": "publisher"
+      }
+    ],
+    "organizationLogoUrl": "https://register.geonorge.no/data/organizations/999601391_miljodirektoratet_liten.png"
+  },
+  "scope": {
+    "level": "dataset",
+    "extent": {
+      "spatial": {
+        "spatialScope": "National"
+      },
+      "temporal": {
+        "interval": [
+          [
+            "2025-11-24",
+            "2025-11-24"
+          ]
+        ]
+      }
+    },
+    "legalConstraints": {
+      "accessConstraints": "Norge digitalt begrenset",
+      "useConstraints": "Lisens",
+      "license": "No conditions apply to access and use",
+      "licenseUrl": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"
+    }
+  },
+  "dataContent": {
+    "usage": "Lett tilgjengelige oversikter over grå arealer i Norge vil være et viktig kunnskapsgrunnlag for å kunne realisere en mer arealgjerrig arealpolitikk gjennom fortetting og transformasjon, før nye utbyggingsområder tas i bruk."
+  },
+  "referenceSystems": {
+    "spatialReferenceSystems": [
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      }
+    ],
+    "spatialRepresentationType": "Vektor"
+  },
+  "dataQuality": {
+    "scope": {
+      "level": "dataset"
+    },
+    "qualityElements": [
+      {
+        "name": "Prosentvis dekning i forhold til datasettets utstrekning",
+        "measure": "Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning",
+        "result": "100"
+      },
+      {
+        "name": "Coverage",
+        "result": "Prosentvis dekning i forhold til datasettets utstrekning: 100%"
+      }
+    ]
+  },
+  "maintenance": {
+    "maintenanceFrequency": "Ikke planlagt",
+    "maintenanceNote": "Lett tilgjengelige oversikter over grå arealer i Norge vil være et viktig kunnskapsgrunnlag for å kunne realisere en mer arealgjerrig arealpolitikk gjennom fortetting og transformasjon, før nye utbyggingsområder tas i bruk.",
+    "status": "Under arbeid"
+  },
+  "portrayal": {
+    "legendDescriptionUrl": "https://register.geonorge.no/tegneregler/kart-over-grå-arealer"
+  },
+  "delivery": {
+    "distributions": [
+      {
+        "format": {
+          "format": "GEONORGE:DOWNLOAD"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Geonorge nedlastning",
+        "format": {
+          "format": "Geonorge nedlastning"
+        },
+        "access": {
+          "href": "https://nedlasting.geonorge.no/api/capabilities/",
+          "protocol": "GEONORGE:DOWNLOAD"
+        }
+      },
+      {
+        "title": "Kart over grå arealer WMS (Testversjon 1)",
+        "format": {
+          "format": "[{}]"
+        },
+        "access": {
+          "href": "https://wms.nibio.no/cgi-bin/graastruktur?service=wms&request=GetCapabilities",
+          "protocol": "WMS-tjeneste",
+          "license": "Åpne data"
+        },
+        "notes": "Tjeneste"
+      }
+    ]
+  },
+  "metadata": {
+    "standard": "ISO19115",
+    "standardVersion": "2003",
+    "metadataDate": "2025-12-16",
+    "language": "nor",
+    "pointOfContact": {
+      "organization": "Kartverket",
+      "email": "bernt.audun.stromsli@kartverket.no",
+      "role": "pointOfContact"
+    },
+    "identifiers": [
+      {
+        "authority": "geonorge",
+        "code": "c5f09d79-1546-495c-8b36-91efd4008bd7"
+      }
+    ],
+    "metadataUrl": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=c5f09d79-1546-495c-8b36-91efd4008bd7"
+  },
+  "links": [
+    {
+      "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=c5f09d79-1546-495c-8b36-91efd4008bd7",
+      "rel": "describedby",
+      "type": "application/xml",
+      "title": "Metadata (ISO 19139)"
+    },
+    {
+      "href": "https://nedlasting.geonorge.no/api/capabilities/",
+      "rel": "enclosure",
+      "type": "text/html",
+      "title": "Nedlasting"
+    },
+    {
+      "href": "https://wms.nibio.no/cgi-bin/graastruktur?service=wms&request=GetCapabilities",
+      "rel": "alternate",
+      "type": "WMS-tjeneste",
+      "title": "Kart over grå arealer WMS (Testversjon 1)"
+    }
+  ]
+}
