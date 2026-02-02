@@ -208,8 +208,7 @@ Egenskaper
 
 et sammenhengende areal som er tilordnet de samme egenskapsverdiene i henhold til et arealressursklassifikasjonssystem<br />-- Definition --<br />a continuous area which has been assigned the same attribute values in accordance with an area resource classification system
 
-Geometri:
-- type: GM_Surface
+Geometri:<br />Type: GM_Surface
 
 Egenskaper
 
@@ -416,8 +415,7 @@ ArealressursGrense – rolle: avgrensesAvArealressursGrense – kardinalitet: 0.
 
 avgrensing for en eller to arealressursflater<br />-- Definition --<br />delimitation for one or two area resource surfaces
 
-Geometri:
-- type: GM_Curve
+Geometri:<br />Type: GM_Curve
 
 Egenskaper
 
