@@ -7,30 +7,6 @@ logo: "https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg
 
 # Produktspesifikasjon: Dyrkbar jord
 
-## Innledning, historikk og endringslogg
-
-
-### Innledning
-
-
-### Historikk
-
-
-### Endringslogg
-
-
-### Normative referanser
-
-
-## Definisjoner og forkortelser
-
-
-### Definisjoner
-
-
-### Forkortelser
-
-
 ## Generelt om spesifikasjonen
 
 
@@ -104,7 +80,7 @@ Areal som er registrert som dyrkbar jord kan være underlagt restriksjoner mot n
 
 ### Datamodell
 
-![Dyrkbar-jord xmi feature catalogue](dyrkbar-jord_xmi_feature_catalogue.png)
+<a href="dyrkbar-jord_xmi_feature_catalogue.png" title="Klikk for stor visning"><img src="dyrkbar-jord_xmi_feature_catalogue.png" alt="Dyrkbar-jord xmi feature catalogue" style="max-width: 100%; height: auto;" /></a>
 
 #### DyrkbarJord_Fellesegenskaper (abstrakt)
 
@@ -316,8 +292,7 @@ Egenskaper
 
 et sammenhengende areal som er tilordnet de samme egenskapsverdiene i henhold til et arealressursklassifikasjonssystem<br />-- Definition --<br />a continuous area which has been assigned the same attribute values in accordance with an area resource classification system
 
-Geometri:
-- type: GM_Surface
+Geometri:<br />Type: GM_Surface
 
 Egenskaper
 
@@ -524,8 +499,7 @@ ArealressursGrense – rolle: avgrensesAvArealressursGrense – kardinalitet: 0.
 
 avgrensing for en eller to arealressursflater<br />-- Definition --<br />delimitation for one or two area resource surfaces
 
-Geometri:
-- type: GM_Curve
+Geometri:<br />Type: GM_Curve
 
 Egenskaper
 
@@ -617,7 +591,7 @@ Datasettet dyrkbar jord produseres årlig basert på siste årsversjon av AR5 og
 versjoner av SSBarealbruk, Verneområder og ravinekart. For DMK som er et historisk datasett
 **Nivå**: dataset
 
-- **navn**: SOSI-produktspesifikasjon: Dyrkbar jord
+- **navn**: SOSI produktspesifikasjon: Dyrkbar jord
   **Måleparameter**: Dataene er i henhold til produktspesifikasjonen
 
 - **navn**: Sosi applikasjonsskjema
@@ -664,7 +638,7 @@ Fra og med 2025 er datasettet revidert gjennom bruk av flere datakilder og nye m
 ## Presentasjon
 
 **Tegnforklaring**:
-<https://register.geonorge.no/register/versjoner/tegneregler/norsk-institutt-for-biookonomi/dyrkbar-jord>
+<https://register.geonorge.no/tegneregler/dyrkbar-jord>
 
 ## Leveranse
 
@@ -698,7 +672,7 @@ Fra og med 2025 er datasettet revidert gjennom bruk av flere datakilder og nye m
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-16
+**Metadatadato**: 2026-02-02
 
 **språk**: nor
 

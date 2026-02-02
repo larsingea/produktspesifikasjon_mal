@@ -32,7 +32,7 @@
       "creation": "2025-09-12",
       "publication": "2025-09-12",
       "revision": "2025-09-12",
-      "metadata": "2025-12-16"
+      "metadata": "2026-02-02"
     },
     "responsibleParties": [
       {
@@ -115,7 +115,7 @@
     },
     "qualityElements": [
       {
-        "name": "SOSI-produktspesifikasjon: Dyrkbar jord",
+        "name": "SOSI produktspesifikasjon: Dyrkbar jord",
         "measure": "Dataene er i henhold til produktspesifikasjonen"
       },
       {
@@ -155,7 +155,7 @@
     "status": "Kontinuerlig oppdatert"
   },
   "portrayal": {
-    "legendDescriptionUrl": "https://register.geonorge.no/register/versjoner/tegneregler/norsk-institutt-for-biookonomi/dyrkbar-jord"
+    "legendDescriptionUrl": "https://register.geonorge.no/tegneregler/dyrkbar-jord"
   },
   "delivery": {
     "distributions": [
@@ -195,7 +195,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2025-12-16",
+    "metadataDate": "2026-02-02",
     "language": "nor",
     "pointOfContact": {
       "organization": "Norsk institutt for bioøkonomi",
