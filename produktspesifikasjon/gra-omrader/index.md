@@ -7,30 +7,6 @@ logo: "https://register.geonorge.no/data/organizations/999601391_miljodirektorat
 
 # Produktspesifikasjon: Kart over grå arealer -Versjon 1
 
-## Innledning, historikk og endringslogg
-
-
-### Innledning
-
-
-### Historikk
-
-
-### Endringslogg
-
-
-### Normative referanser
-
-
-## Definisjoner og forkortelser
-
-
-### Definisjoner
-
-
-### Forkortelser
-
-
 ## Generelt om spesifikasjonen
 
 
@@ -48,7 +24,7 @@ Kart over grå arealer -Versjon 1
 
 ### Referansedato
 
-2025-11-24
+2025-12-15
 
 ### Ansvarlig organisasjon
 
@@ -60,11 +36,7 @@ nor
 
 ### Hovedtema
 
-Natur
-
-### Temakategori
-
-
+Det offentlige kartgrunnlaget, geodataloven, arealplanerPBL, Natur
 
 ### Sammendrag
 
@@ -72,6 +44,12 @@ Kart over grå arealet -Versjon 1 er utviklet i samarbeidet mellom Miljødirekto
 
 Kartet er landsdekkende og viser grå arealer i henhold til Kommunal- og distriktsdepartementet sin definisjon;
 «Arealer som allerede er tatt i bruk eller sterkt påvirket av menneskelig bygge- og anleggsaktivitet, inkludert bebyggelse, konstruksjoner, permanente overflater og tilhørende arealer.»
+
+Rapport kan leses her
+<https://dokument.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-sluttrapport/1/kart-over-gr%C3%A5-arealer-sluttrapport.pdf>
+
+Oversikt over arealklasser som er med i kartet kan leses her
+<https://dokument.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-utvalg-fra-grunnkartet/1/kart-over-gr%C3%A5-arealer-utvalg-fra-grunnkartet.pdf>
 
 ### Formål
 
@@ -87,7 +65,7 @@ Kartet er nå tilgjengelig og skal testes om det gir ønsket kunnskapsgrunnlag.
 **Utstrekning**:
 
 - **romlig**: - **romlig omfang**: National
-- **tidsmessig**: - **intervall**: - 2025-11-24, 2025-11-24
+- **tidsmessig**: - **intervall**: - 2025-11-24, 2025-12-15
 
 **Juridiske begrensninger**:
 
@@ -102,14 +80,13 @@ Kartet er nå tilgjengelig og skal testes om det gir ønsket kunnskapsgrunnlag.
 
 ### Datamodell
 
-![Gra-omrader xmi feature catalogue](gra-omrader_xmi_feature_catalogue.png)
+<a href="gra-omrader_xmi_feature_catalogue.png" title="Klikk for stor visning"><img src="gra-omrader_xmi_feature_catalogue.png" alt="Gra-omrader xmi feature catalogue" style="max-width: 100%; height: auto;" /></a>
 
 #### GrunnkartFlate
 
 En flate i Grunnkartet som representerer et sammenhengende areal med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon om kildedata, brukt som grunnlag for arealanalyser og -regnskap.
 
-Geometri:
-- type: GM_MultiSurface
+Geometri:<br />Type: GM_MultiSurface
 
 Egenskaper
 
@@ -913,12 +890,15 @@ Egenskaper
   **Måleparameter**: Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning
   **Resultat**: 100
 
+- **navn**: Prosentvis oppfyllelse av FAIR-prinsipper
+  **Måleparameter**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
+  **Resultat**: 80
+
+- **navn**: FAIR
+  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 80%
+
 - **navn**: Coverage
   **Resultat**: Prosentvis dekning i forhold til datasettets utstrekning: 100%
-
-
-
-## Datafangst
 
 
 
@@ -967,7 +947,7 @@ Egenskaper
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-16
+**Metadatadato**: 2026-02-02
 
 **språk**: nor
 
