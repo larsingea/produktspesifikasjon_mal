@@ -2,8 +2,7 @@
 
 En flate i Grunnkartet som representerer et sammenhengende areal med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon om kildedata, brukt som grunnlag for arealanalyser og -regnskap.
 
-Geometri:
-- type: GM_MultiSurface
+Geometri:<br />Type: GM_MultiSurface
 
 Egenskaper
 
