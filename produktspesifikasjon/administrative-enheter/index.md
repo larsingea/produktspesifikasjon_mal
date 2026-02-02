@@ -7,30 +7,6 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 
 # Produktspesifikasjon: Administrative enheter kommuner
 
-## Innledning, historikk og endringslogg
-
-
-### Innledning
-
-
-### Historikk
-
-
-### Endringslogg
-
-
-### Normative referanser
-
-
-## Definisjoner og forkortelser
-
-
-### Definisjoner
-
-
-### Forkortelser
-
-
 ## Generelt om spesifikasjonen
 
 
@@ -100,16 +76,6 @@ Framstille den offisielle kommuneinndelingen.
 
 **Bruk**: Forvaltningsmessig saksbehandling. Analyse og presentasjon i et GIS-system. Presentasjon av statistikk og analyser. Produksjon av kart og avledede produkter. Saksbehandling på lokalt og regionalt plan etter plan- og bygningsloven.
 
-### Datamodell
-
-
-
-
-
-
-
-
-
 ## Referansesystem
 
 **Romlige referansesystemer**:
@@ -156,10 +122,10 @@ Framstille den offisielle kommuneinndelingen.
 
 - **navn**: Prosentvis oppfyllelse av FAIR-prinsipper
   **Måleparameter**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
-  **Resultat**: 96
+  **Resultat**: 97
 
 - **navn**: FAIR
-  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 96%
+  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 97%
 
 - **navn**: Coverage
   **Resultat**: Prosentvis dekning i forhold til datasettets utstrekning: 100%
@@ -215,7 +181,7 @@ Datasettet er basert på administrativ datafangst gjennom stortingsvdetak angåe
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-17
+**Metadatadato**: 2026-02-02
 
 **språk**: nor
 

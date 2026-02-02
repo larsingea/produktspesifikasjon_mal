@@ -32,7 +32,7 @@
       "creation": "2006-07-01",
       "publication": "2006-07-01",
       "revision": "2025-12-10",
-      "metadata": "2025-12-17"
+      "metadata": "2026-02-02"
     },
     "responsibleParties": [
       {
@@ -141,11 +141,11 @@
       {
         "name": "Prosentvis oppfyllelse av FAIR-prinsipper",
         "measure": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
-        "result": "96"
+        "result": "97"
       },
       {
         "name": "FAIR",
-        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 96%"
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 97%"
       },
       {
         "name": "Coverage",
@@ -202,7 +202,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2025-12-17",
+    "metadataDate": "2026-02-02",
     "language": "nor",
     "pointOfContact": {
       "organization": "Kartverket",
