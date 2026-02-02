@@ -1,14 +1,30 @@
 @startuml
 title Havnedata - Objekttyper
 
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
 skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
   AttributeIconSize 0
 }
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
 
 package "Objekttyper" {
 
   class "administrativthavneområde" as administrativthavneomr_de <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -23,8 +39,7 @@ package "Objekttyper" {
     + administreresAv [0..1] : CharacterString
 
     ..Geometri..
-    + område [0..1] : GM_Surface
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Surface
   }
 
   administrativthavneomr_de *-- administrativthavneomr_de_identifikasjon : identifikasjon [0..1]
@@ -45,7 +60,6 @@ package "Objekttyper" {
   }
 
   class avfallspunkt <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -76,7 +90,7 @@ package "Objekttyper" {
     + tilgangstype [0..*] : Sequence
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   avfallspunkt *-- avfallspunkt_identifikasjon : identifikasjon [0..1]
@@ -97,7 +111,6 @@ package "Objekttyper" {
   }
 
   class beredskapspunkt <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -123,7 +136,7 @@ package "Objekttyper" {
     + status [0..1] : CharacterString
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   beredskapspunkt *-- beredskapspunkt_identifikasjon : identifikasjon [0..1]
@@ -144,7 +157,6 @@ package "Objekttyper" {
   }
 
   class drivstofftilkobling <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -176,7 +188,7 @@ package "Objekttyper" {
     + kontaktnavn [0..1] : CharacterString
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   drivstofftilkobling *-- drivstofftilkobling_identifikasjon : identifikasjon [0..1]
@@ -197,7 +209,6 @@ package "Objekttyper" {
   }
 
   class elkobling <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -228,7 +239,7 @@ package "Objekttyper" {
     + tilgangstype [0..*] : Sequence
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   elkobling *-- elkobling_identifikasjon : identifikasjon [0..1]
@@ -259,7 +270,6 @@ package "Objekttyper" {
   }
 
   class fartsrestriksjoner <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -278,8 +288,7 @@ package "Objekttyper" {
     + hastighet [0..1] : Integer
 
     ..Geometri..
-    + område [0..1] : GM_Surface
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Surface
   }
 
   fartsrestriksjoner *-- fartsrestriksjoner_identifikasjon : identifikasjon [0..1]
@@ -300,14 +309,13 @@ package "Objekttyper" {
   }
 
   class fartsrestriksjonergrense <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
     + kvalitet [0..1] : Object
 
     ..Geometri..
-    + grense [0..1] : GM_Curve
+    + geometry [1] : GM_Curve
   }
 
   fartsrestriksjonergrense *-- fartsrestriksjonergrense_identifikasjon : identifikasjon [0..1]
@@ -328,7 +336,6 @@ package "Objekttyper" {
   }
 
   class fender <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -357,8 +364,7 @@ package "Objekttyper" {
     + antall [0..1] : Integer
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
-    + senterlinje [0..1] : GM_Curve
+    + geometry [1] : GM_Point
   }
 
   fender *-- fender_identifikasjon : identifikasjon [0..1]
@@ -379,7 +385,6 @@ package "Objekttyper" {
   }
 
   class flytedokk <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : Integer
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -403,8 +408,7 @@ package "Objekttyper" {
     + høydereferanse [0..1] : CharacterString
 
     ..Geometri..
-    + område [0..1] : GM_Surface
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Surface
   }
 
   flytedokk *-- flytedokk_identifikasjon : identifikasjon [0..1]
@@ -425,7 +429,6 @@ package "Objekttyper" {
   }
 
   class "forbudsområde" as forbudsomr_de <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -444,8 +447,7 @@ package "Objekttyper" {
     + forbudstype [0..*] : Sequence
 
     ..Geometri..
-    + område [0..1] : GM_Surface
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Surface
   }
 
   forbudsomr_de *-- forbudsomr_de_identifikasjon : identifikasjon [0..1]
@@ -466,14 +468,13 @@ package "Objekttyper" {
   }
 
   class "forbudsområdegrense" as forbudsomr_degrense <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
     + kvalitet [0..1] : Object
 
     ..Geometri..
-    + grense [0..1] : GM_Curve
+    + geometry [1] : GM_Curve
   }
 
   forbudsomr_degrense *-- forbudsomr_degrense_identifikasjon : identifikasjon [0..1]
@@ -494,7 +495,6 @@ package "Objekttyper" {
   }
 
   class "fortøyningsinnretning" as fort_yningsinnretning <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -525,7 +525,7 @@ package "Objekttyper" {
     + tillattFortøyningsvinkelOppriss [0..1] : CharacterString
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   fort_yningsinnretning *-- fort_yningsinnretning_identifikasjon : identifikasjon [0..1]
@@ -546,7 +546,6 @@ package "Objekttyper" {
   }
 
   class "havneområde" as havneomr_de <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -561,8 +560,7 @@ package "Objekttyper" {
     + forvaltesAv [0..1] : CharacterString
 
     ..Geometri..
-    + område [0..1] : GM_Surface
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Surface
   }
 
   havneomr_de *-- havneomr_de_identifikasjon : identifikasjon [0..1]
@@ -583,7 +581,6 @@ package "Objekttyper" {
   }
 
   class havnesensor <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -602,7 +599,7 @@ package "Objekttyper" {
     + eier [0..1] : CharacterString
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   havnesensor *-- havnesensor_identifikasjon : identifikasjon [0..1]
@@ -623,7 +620,6 @@ package "Objekttyper" {
   }
 
   class kaifront <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -651,7 +647,7 @@ package "Objekttyper" {
     + status [0..1] : CharacterString
 
     ..Geometri..
-    + senterlinje [0..1] : GM_Curve
+    + geometry [1] : GM_Curve
   }
 
   kaifront *-- kaifront_identifikasjon : identifikasjon [0..1]
@@ -672,7 +668,6 @@ package "Objekttyper" {
   }
 
   class "kaiområde" as kaiomr_de <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -695,8 +690,7 @@ package "Objekttyper" {
     + bildeLink [0..1] : CharacterString
 
     ..Geometri..
-    + område [0..1] : GM_Surface
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Surface
   }
 
   kaiomr_de *-- kaiomr_de_identifikasjon : identifikasjon [0..1]
@@ -717,14 +711,13 @@ package "Objekttyper" {
   }
 
   class "kaiområdegrense" as kaiomr_degrense <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
     + kvalitet [0..1] : Object
 
     ..Geometri..
-    + grense [0..1] : GM_Curve
+    + geometry [1] : GM_Curve
   }
 
   kaiomr_degrense *-- kaiomr_degrense_identifikasjon : identifikasjon [0..1]
@@ -745,7 +738,6 @@ package "Objekttyper" {
   }
 
   class kran <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -776,7 +768,7 @@ package "Objekttyper" {
     + energikilde [0..*] : Sequence
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   kran *-- kran_identifikasjon : identifikasjon [0..1]
@@ -807,7 +799,6 @@ package "Objekttyper" {
   }
 
   class lastelosseutstyr <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -835,7 +826,7 @@ package "Objekttyper" {
     + spesifikasjon [0..1] : CharacterString
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   lastelosseutstyr *-- lastelosseutstyr_identifikasjon : identifikasjon [0..1]
@@ -866,7 +857,6 @@ package "Objekttyper" {
   }
 
   class slipp <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -898,8 +888,7 @@ package "Objekttyper" {
     + kranKapasitet [0..1] : Integer
 
     ..Geometri..
-    + område [0..1] : GM_Surface
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Surface
   }
 
   slipp *-- slipp_identifikasjon : identifikasjon [0..1]
@@ -930,7 +919,6 @@ package "Objekttyper" {
   }
 
   class toalett <<featureType>> {
-    + geometry [1] : feature
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : Object
     + datafangstdato [0..1] : Date
@@ -956,7 +944,7 @@ package "Objekttyper" {
     + status [0..1] : CharacterString
 
     ..Geometri..
-    + posisjon [0..1] : GM_Point
+    + geometry [1] : GM_Point
   }
 
   toalett *-- toalett_identifikasjon : identifikasjon [0..1]
@@ -988,64 +976,6 @@ package "Objekttyper" {
 
   class vauttak <<featureType>> {
     + geometry [1] : feature
-    + lokalid [0..1] : CharacterString
-    + identifikasjon [0..1] : Object
-    + datafangstdato [0..1] : Date
-    + kvalitet [0..1] : Object
-    + informasjon [0..1] : CharacterString
-    + link [0..1] : CharacterString
-    + oppdateringsdato [0..1] : DateTime
-    + GLN [0..1] : Integer
-    + havnNavn [0..1] : CharacterString
-    + MRN [0..1] : CharacterString
-    + UNLOCODE [0..1] : CharacterString
-    + ISPS [0..1] : Boolean
-    + havneanleggNavn [0..1] : CharacterString
-    + havneanleggId [0..1] : CharacterString
-    + kaiId [0..1] : CharacterString
-    + kainavn [0..1] : CharacterString
-    + kaiIdIntern [0..1] : CharacterString
-    + objektIdIntern [0..1] : CharacterString
-    + objektLøpenummer [0..1] : CharacterString
-    + datoTilgjengeligFra [0..1] : CharacterString
-    + høydereferanse [0..1] : CharacterString
-    + kapasitet [0..1] : Integer
-    + kumnummer [0..1] : Integer
-    + datoTilgjengeligTil [0..1] : CharacterString
-    + status [0..1] : CharacterString
-    + tilgangstype [0..*] : Sequence
-    + tilkoblingsdimensjon [0..1] : CharacterString
-    + VAuttakstype [0..1] : CharacterString
-
-    ..Geometri..
-    + posisjon [0..1] : GM_Point
-  }
-
-  vauttak *-- vauttak_identifikasjon : identifikasjon [0..1]
-  vauttak_identifikasjon *-- vauttak_identifikasjon_identifikasjon : identifikasjon [0..1]
-  vauttak *-- vauttak_kvalitet : kvalitet [0..1]
-  vauttak_kvalitet *-- vauttak_kvalitet_kvalitet : kvalitet [0..1]
-
-  class vauttak_identifikasjon {
-    + identifikasjon.identifikasjon [0..1] : Object
-  }
-
-  class vauttak_identifikasjon_identifikasjon {
-    + identifikasjon.identifikasjon.lokalId [0..1] : CharacterString
-    + identifikasjon.identifikasjon.navnerom [0..1] : CharacterString
-    + identifikasjon.identifikasjon.versjonId [0..1] : CharacterString
-  }
-
-  class vauttak_kvalitet {
-    + kvalitet.kvalitet [0..1] : Object
-  }
-
-  class vauttak_kvalitet_kvalitet {
-    + kvalitet.kvalitet.datafangstmetode [0..1] : CharacterString
-    + kvalitet.kvalitet.nøyaktighet [0..1] : Integer
-    + kvalitet.kvalitet.synbarhet [0..1] : CharacterString
-    + kvalitet.kvalitet.datafangstmetodeHøyde [0..1] : CharacterString
-    + kvalitet.kvalitet.nøyaktighetHøyde [0..1] : Integer
   }
 
   class object {

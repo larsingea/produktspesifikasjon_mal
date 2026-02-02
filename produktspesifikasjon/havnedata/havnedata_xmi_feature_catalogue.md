@@ -244,8 +244,7 @@ HavnId
 
 Gjerde eller annen barriere. Følger ofte Havnesikkerhetsområde, men brukes ikke som avgrensning. Havnesikkerhetsområde avgrenses av HavnesikkerhetsområdeGrense.<br />Havnegjerde vil også ofte være kartlagt i FKB-BygnAnlegg som AnnetGjerde, mur e.l. I så fall bør disse objektene ha sammenfallende geometri.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -891,8 +890,7 @@ ObjektId
 
 Areal som viser utstrekningen på det område en kommune eller en kommunal/interkommunal havneadministrasjonen har ansvaret for. Dette området er ofte sammenfallende med kommunens sjøområde, som er det område hvor kommunen har planmyndighet etter plan- og bygningsloven med unntak av hoved- og biled (Hoved- og biled forvaltes av Kystverket).
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -1253,8 +1251,7 @@ ObjektId
 
 Område i havnen eller på kai som har begrensinger for hva det tåler av belastning.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -1773,8 +1770,7 @@ ObjektId
 
 Kaifront er den ytterste delen av kaien, som avgrenser sjøen fra land, hvor fartøy kan ligge fortøyd langs.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -1974,8 +1970,7 @@ ObjektId
 
 Kaiområde er området direkte innenfor kaifronten som tilhører den samme kaien.<br />Kaiområde avgrenses av KaiområdeGrense. Kaifront brukes ikke som avgrensning til kaiområde, men ligger som et eget objekt.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -2451,8 +2446,7 @@ ObjektId
 
 Havn er et avgrenset område som inneholder kai/kaier tilknyttet land- og sjøarealer som er tilrettelagt for overføring av gods, personer eller lignende mellom land og sjø.<br />Havneområde kjennetegnes ved at de har en UNLOCODE tilknyttet seg, og innenfor området må det være minst én kai og én kaifront.<br />Havneområdet kan inneholde mange havneanlegg, mange kaier og andre objekter.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -2849,8 +2843,7 @@ ObjektId
 
 Et basseng stort nok til at skip kan seile ut og inn. Bunnen ligger lavere enn havnivået og innløpet kan lukkes med porter. Vann kan pumpes ut, slik skip kan stå tørt, for vedlikehold og reperasjon.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -3442,8 +3435,7 @@ ObjektId
 
 Med havneanlegg menes arealer, bygninger, innretninger og annen infrastruktur som brukes i havnevirksomhet eller havneformål. Herunder: kaier, terminalbygninger, laste-, losse- og omlastningsinnretninger og lager- og administrasjonsbygninger.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -3731,8 +3723,7 @@ HavneanleggId
 
 Skinnegående bane eller et forseggjort opptrekk som fartøy kan hales opp ved landsetting, fra flytende posisjon og opp på tørt land. Skråplanet går vanligvis ut og ned i vannet.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -4107,8 +4098,7 @@ KaiId
 
 En flytedokk eller våtdokk er en flytende plattform for å heve skip opp av sjøen når det skal gjøres vedlikehold eller reperasjoner av skip.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -5272,8 +5262,7 @@ Egenskaper
 
 Avgrensning av Fartsrestriksjoner.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -5310,8 +5299,7 @@ Fartsrestriksjoner
 
 Avgrensning av forbudsområde.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -5348,8 +5336,7 @@ Forbudsområde
 
 Område som har restriksjoner knyttet til ferdsel og fart for fartøyer som ferdes på sjøen.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -5640,8 +5627,7 @@ FartsrestriksjonerGrense – rolle: avgrensning – kardinalitet: 0..*
 
 Område som er omfattet av forbud, som f.eks. ferdselsforbud for vannscooter.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
