@@ -7,30 +7,6 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 
 # Produktspesifikasjon: Havnedata
 
-## Innledning, historikk og endringslogg
-
-
-### Innledning
-
-
-### Historikk
-
-
-### Endringslogg
-
-
-### Normative referanser
-
-
-## Definisjoner og forkortelser
-
-
-### Definisjoner
-
-
-### Forkortelser
-
-
 ## Generelt om spesifikasjonen
 
 
@@ -48,7 +24,7 @@ Havnedata
 
 ### Referansedato
 
-2025-12-05
+2026-01-24
 
 ### Ansvarlig organisasjon
 
@@ -85,7 +61,7 @@ Havnedata-standarden er utviklet fordi det var et behov for å få tak i oppdate
 **Utstrekning**:
 
 - **romlig**: - **romlig omfang**: National
-- **tidsmessig**: - **intervall**: - 2021-03-02, 2025-12-05
+- **tidsmessig**: - **intervall**: - 2021-03-02, 2026-01-24
 
 **Juridiske begrensninger**:
 
@@ -117,7 +93,7 @@ Eksempler på bruksområder for havnedata:
 
 ### Datamodell
 
-![Havnedata xmi feature catalogue](havnedata_xmi_feature_catalogue.png)
+<a href="havnedata_xmi_feature_catalogue.png" title="Klikk for stor visning"><img src="havnedata_xmi_feature_catalogue.png" alt="Havnedata xmi feature catalogue" style="max-width: 100%; height: auto;" /></a>
 
 #### Toalett
 
@@ -365,8 +341,7 @@ HavnId
 
 Gjerde eller annen barriere. Følger ofte Havnesikkerhetsområde, men brukes ikke som avgrensning. Havnesikkerhetsområde avgrenses av HavnesikkerhetsområdeGrense.<br />Havnegjerde vil også ofte være kartlagt i FKB-BygnAnlegg som AnnetGjerde, mur e.l. I så fall bør disse objektene ha sammenfallende geometri.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -1012,8 +987,7 @@ ObjektId
 
 Areal som viser utstrekningen på det område en kommune eller en kommunal/interkommunal havneadministrasjonen har ansvaret for. Dette området er ofte sammenfallende med kommunens sjøområde, som er det område hvor kommunen har planmyndighet etter plan- og bygningsloven med unntak av hoved- og biled (Hoved- og biled forvaltes av Kystverket).
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -1374,8 +1348,7 @@ ObjektId
 
 Område i havnen eller på kai som har begrensinger for hva det tåler av belastning.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -1894,8 +1867,7 @@ ObjektId
 
 Kaifront er den ytterste delen av kaien, som avgrenser sjøen fra land, hvor fartøy kan ligge fortøyd langs.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -2095,8 +2067,7 @@ ObjektId
 
 Kaiområde er området direkte innenfor kaifronten som tilhører den samme kaien.<br />Kaiområde avgrenses av KaiområdeGrense. Kaifront brukes ikke som avgrensning til kaiområde, men ligger som et eget objekt.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -2572,8 +2543,7 @@ ObjektId
 
 Havn er et avgrenset område som inneholder kai/kaier tilknyttet land- og sjøarealer som er tilrettelagt for overføring av gods, personer eller lignende mellom land og sjø.<br />Havneområde kjennetegnes ved at de har en UNLOCODE tilknyttet seg, og innenfor området må det være minst én kai og én kaifront.<br />Havneområdet kan inneholde mange havneanlegg, mange kaier og andre objekter.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -2970,8 +2940,7 @@ ObjektId
 
 Et basseng stort nok til at skip kan seile ut og inn. Bunnen ligger lavere enn havnivået og innløpet kan lukkes med porter. Vann kan pumpes ut, slik skip kan stå tørt, for vedlikehold og reperasjon.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -3563,8 +3532,7 @@ ObjektId
 
 Med havneanlegg menes arealer, bygninger, innretninger og annen infrastruktur som brukes i havnevirksomhet eller havneformål. Herunder: kaier, terminalbygninger, laste-, losse- og omlastningsinnretninger og lager- og administrasjonsbygninger.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -3852,8 +3820,7 @@ HavneanleggId
 
 Skinnegående bane eller et forseggjort opptrekk som fartøy kan hales opp ved landsetting, fra flytende posisjon og opp på tørt land. Skråplanet går vanligvis ut og ned i vannet.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -4228,8 +4195,7 @@ KaiId
 
 En flytedokk eller våtdokk er en flytende plattform for å heve skip opp av sjøen når det skal gjøres vedlikehold eller reperasjoner av skip.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -5393,8 +5359,7 @@ Egenskaper
 
 Avgrensning av Fartsrestriksjoner.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -5431,8 +5396,7 @@ Fartsrestriksjoner
 
 Avgrensning av forbudsområde.
 
-Geometri:
-- type: Kurve
+Geometri:<br />Type: Kurve
 
 Egenskaper
 
@@ -5469,8 +5433,7 @@ Forbudsområde
 
 Område som har restriksjoner knyttet til ferdsel og fart for fartøyer som ferdes på sjøen.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -5761,8 +5724,7 @@ FartsrestriksjonerGrense – rolle: avgrensning – kardinalitet: 0..*
 
 Område som er omfattet av forbud, som f.eks. ferdselsforbud for vannscooter.
 
-Geometri:
-- type: Flate
+Geometri:<br />Type: Flate
 
 Egenskaper
 
@@ -6053,19 +6015,13 @@ FellesegenskaperOpsjonell
 **Assosiasjoner**
 ForbudsområdeGrense – rolle: avgrensning – kardinalitet: 0..*
 
-![Havnedata feature catalogue](havnedata_feature_catalogue.png)
+<a href="havnedata_feature_catalogue.png" title="Klikk for stor visning"><img src="havnedata_feature_catalogue.png" alt="Havnedata feature catalogue" style="max-width: 100%; height: auto;" /></a>
 
 #### administrativthavneområde
 
 Geografisk område som en havneadministrasjon eller en kommune har ansvaret for. Er ofte sammenfallende med kommunens sjøområde, med unntak av hoved- og biled.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -6081,15 +6037,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-polygon</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -6598,42 +6550,11 @@ Egenskaper
   </tbody>
 </table>
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Opsjonelt representasjonspunkt for området.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
 #### avfallspunkt
 
 Sted for å kaste avfall.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -6649,15 +6570,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -7570,13 +7487,7 @@ Egenskaper
 
 Punkt på kaia der det er plassert utstyr for beredskap/sikkerhet.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -7592,15 +7503,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -8388,13 +8295,7 @@ Egenskaper
 
 Tilkoblingspunkt for drivstoff på kaia.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -8410,15 +8311,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -9356,13 +9253,7 @@ Egenskaper
 
 Tilkoblingspunkt for strøm på kaia.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -9378,15 +9269,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -10445,13 +10332,7 @@ Egenskaper
 
 Område som har restriksjoner knyttet til ferdsel og fart for fartøyer som ferdes på sjøen.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -10467,15 +10348,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-polygon</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -11084,42 +10961,11 @@ Egenskaper
   </tbody>
 </table>
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Opsjonelt representasjonspunkt for området.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
 #### fartsrestriksjonergrense
 
 Avgrensning av Fartsrestriksjoner.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-linestring<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -11135,15 +10981,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-linestring</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -11456,13 +11298,7 @@ Egenskaper
 
 Beskytter/demper for bevegelse mellom båt og kai. Monteres ofte fast på kaikanten.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -11478,15 +11314,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -12328,31 +12160,6 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>senterlinje</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Forløp som følger overgang mellom ulike fenomener.<br />Brukes ved gruppering av fendere. Geometrien skal følge kaifront der hvor det er mange like fendere. Antall fendere oppgis i antall-felt, og avstand spesifiseres i informasjonsfeltet.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
       <td><strong>antall</strong></td>
     </tr>
     <tr>
@@ -12374,12 +12181,7 @@ Egenskaper
 
 Flytende plattform for å heve skip opp av sjøen når det skal gjøres vedlikehold eller reperasjoner av skip. Kalles også våtdokk.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
+Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs
 
 Egenskaper
 
@@ -12395,15 +12197,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-polygon</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -12970,31 +12768,6 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Opsjonelt representasjonspunkt for området.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
       <td><strong>maksFartøyBredde</strong></td>
     </tr>
     <tr>
@@ -13166,13 +12939,7 @@ Egenskaper
 
 Område som er omfattet av forbud, som f.eks. ferdselsforbud for vannscooter.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -13188,15 +12955,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-polygon</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -13805,42 +13568,11 @@ Egenskaper
   </tbody>
 </table>
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Opsjonelt representasjonspunkt for området.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
 #### forbudsområdegrense
 
 Avgrensning av forbudsområde.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-linestring<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -13856,15 +13588,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-linestring</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -14177,13 +13905,7 @@ Egenskaper
 
 Fortøyningsinnretning som tilhører kaia.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -14199,15 +13921,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -15120,13 +14838,7 @@ Egenskaper
 
 Avgrenset geografisk område som inneholder kai/kaier tilknyttet land- og sjøarealer som er tilrettelagt for overføring av gods, personer eller lignende mellom land og sjø, eller et område tilpasset mottak og fortøyning av fartøy i næringsvirksomhet, offentlig tjeneste, fiskefartøy eller fritidsfartøy. Havner er ofte beskyttet fra vær og vind, av naturgitte landskapsformasjoner eller menneskeskapte anlegg som molo eller bølgebryter.<br /><br />Havneområde har vanligvis en UNLOCODE-kode tilknyttet seg, og innenfor området må det være minst én kai og én kaifront. Havneområdet kan inneholde havneanlegg, kaier og andre objekter.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -15142,15 +14854,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-polygon</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -15642,31 +15350,6 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Opsjonelt representasjonspunkt.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
       <td><strong>forvaltesAv</strong></td>
     </tr>
     <tr>
@@ -15688,13 +15371,7 @@ Egenskaper
 
 Innretning som måler, samler inn data eller registrerer annet i tilknytning til havnen.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -15710,15 +15387,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -16331,13 +16004,7 @@ Egenskaper
 
 Ytterste delen av kaien, som avgrenser sjøen fra land, hvor fartøy kan ligge fortøyd langs.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-linestring<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -16353,15 +16020,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-linestring</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -17199,13 +16862,7 @@ Egenskaper
 
 Område direkte innenfor kaifronten som tilhører den samme kaien. En kai er en konstruksjon, vanligvis parallell med kystkonturen eller fra land og ut i sjøen, hvor fartøy kan legge til eller fortøye.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -17221,15 +16878,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-polygon</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -17871,31 +17524,6 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Opsjonelt representasjonspunkt for området.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
       <td><strong>kaitype</strong></td>
     </tr>
     <tr>
@@ -17967,13 +17595,7 @@ Egenskaper
 
 Avgrensning av kaiområde.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-linestring<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -17989,15 +17611,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-linestring</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -18310,13 +17928,7 @@ Egenskaper
 
 Innretning for å løfte eller flytte tunge gjenstander, og hører til på kaien/havnen.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -18332,15 +17944,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -19295,13 +18903,7 @@ Egenskaper
 
 Utstyr som er en del av den faste infrastrukturen i havnen, og brukes til lasting eller lossing.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -19317,15 +18919,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -20205,13 +19803,7 @@ Egenskaper
 
 Skinnegående bane eller et forseggjort opptrekk som fartøy kan hales opp ved landsetting, fra flytende posisjon og opp på tørt land. Skråplanet går vanligvis ut og ned i vannet.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -20227,15 +19819,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-polygon</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -20919,31 +20507,6 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Opsjonelt representasjonspunkt for området.<br /><br />Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
       <td><strong>kaidekketype</strong></td>
     </tr>
     <tr>
@@ -21240,13 +20803,7 @@ Egenskaper
 
 Offentlig toalett.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -21262,15 +20819,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
+      <td>geometry-point</td>
     </tr>
     <tr>
       <th scope="row">OGC-rolle:</th>
@@ -22100,13 +21653,7 @@ Egenskaper
 
 Tilkoblingspunkt for vann på kaia.
 
-Geometri:
-- itemType: feature
-- storageCrs:
-  - <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a>
-- crs:
-  - #/crs
-  - <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
+Geometri:<br />Elementtype: feature<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973"><http://www.opengis.net/def/crs/EPSG/0/5973></a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h"><http://www.opengis.net/def/crs/OGC/0/CRS84h></a>
 
 Egenskaper
 
@@ -22122,961 +21669,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Geometri:<br />- itemType: feature<br />- storageCrs:<br />- <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />- crs:<br />- #/crs<br />- <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>Elementtype: feature</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-any</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>lokalid</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>lokalid</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>id</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.lokalId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifikator innenfor navnerommet. For NGIS benyttes UUID.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.navnerom</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navnerom som unikt identifiserer datakilden til et objekt. I form av en URI.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.versjonId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Identifikasjon av en spesiell versjon av et geografisk objekt (instans).</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datafangstdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato når objektet siste gang ble registrert/observert/målt i terrenget.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date (string)</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-instant</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.datafangstmetode</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode for datafangst.<br />Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.nøyaktighet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Punktstandardavviket i grunnriss for punkter samt tverravvik for linjer.<br /><br />Merknad:<br />Oppgitt i cm</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.synbarhet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor godt den kartlagte detalj var synbar ved kartleggingen.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.datafangstmetodeHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode brukt for høyderegistrering av posisjon.<br />Det er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.nøyaktighetHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Nøyaktighet for høyden i cm.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>informasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Generell opplysning.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>link</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Link i form av URL eller annet til mer informasjon om objektet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>oppdateringsdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato for siste endring på objektetdataene.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date-time (string)</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>GLN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Global location number. Globalt nummersystem for identifikasjon av juridiske enheter og fysiske lokasjoner, forvaltet av GS1.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havnNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Stedsnavn på havnen som har blitt tildelt en UNLOCODE. Navnet må samsvare med UNLOCODE.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>MRN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Marine Resource Name. Nummereringssystem for unik identifikasjon av maritime ressurser på global basis.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>UNLOCODE</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Lokaliseringskode fra UNLOCODE-systemet som identifiserer et havneområde. Koden består av 5 bokstaver: de to første bokstavene angir landskode, mens de tre siste identifiserer havnen. Eks: NOSVG (Stavanger).<br />Se liste med lovlige kodeverdier her: <a href="https://service.unece.org/trade/locode/no.htm">https://service.unece.org/trade/locode/no.htm</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>ISPS</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Boolsk verdi som angir om havneanlegget er et ISPS Havneanlegg.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havneanleggNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navn på havneanlegg. Navn bør stemme overens med SafeSeaNet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havneanleggId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifisering av det enkelte havneanlegg.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kaiId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifisering av den enkelte kai.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kainavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navn på kaien. Det samme kainavnet brukes på alle kaifronter og kaiområder som regnes å tilhøre samme kai. Navn bør stemme overens med SafeSeaNet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kaiIdIntern</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Havnens interne egendefinerte nummering av kaier.<br />Nummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>objektIdIntern</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Havnens interne egendefinerte nummering av objekter.<br />Nummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>objektLøpenummer</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unikt løpenummer for identifisering av det enkelte objekt på kaien.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datoTilgjengeligFra</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato objektet er tilgjengelig fra. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>høydereferanse</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor på objektet koordinatregistreringen er utført.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kapasitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Kapasitet til fylling av vann angitt i antall m3/time.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kumnummer</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>ID-merking av kummer. Kan tas fra havnas eget merkesystem eller kommunens SID-nr.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datoTilgjengeligTil</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato objektet er tilgjengelig til. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>status</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Objektets tilstand.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>tilgangstype</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hva slags bruker som har tilgang til objektet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..*</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>array</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>tilkoblingsdimensjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Størrelse/dimensjon på rørene som skal kobles sammen.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>VAuttakstype</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Type vanntilkobling som kan gjøres.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
+      <td>geometry</td>
     </tr>
   </tbody>
 </table>
@@ -23114,10 +21711,6 @@ Egenskaper
 
 - **navn**: Produktspesifikasjon: Registreringsinstruks
   **Måleparameter**: Dataene er ikke vurdert iht produktspesifikasjonen
-
-
-
-## Datafangst
 
 
 
@@ -23183,7 +21776,7 @@ Eksempler på bruksområder for havnedata:
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2025-12-16
+**Metadatadato**: 2026-02-02
 
 **språk**: nor
 
