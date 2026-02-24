@@ -4,10 +4,18 @@
     "description": "En flate i Grunnkartet som representerer et sammenhengende areal med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon om kildedata, brukt som grunnlag for arealanalyser og -regnskap.",
     "attributes": [
       {
+        "name": "område",
+        "type": "GM_MultiSurface",
+        "description": "den geografiske avgrensingen av Grunnkartflaten",
+        "cardinality": "1"
+      },
+      {
         "name": "arealdekkeNiva1",
         "type": "ArealdekkeNiva1",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Viser hovedklasser for arealressurser med vekt på produksjonsgrunnlaget for jord- og skogbruk, som jordbruksareal, skog, vann og bebygd areal",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1"
         }
       },
@@ -16,6 +24,8 @@
         "type": "ArealdekkeNiva2",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Gir en mer detaljert inndeling av arealressursene innenfor hovedklassene, for eksempel fulldyrka jord, myr eller åpen fastmark",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2"
         }
       },
@@ -24,19 +34,28 @@
         "type": "ArealdekkeKode",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Standardisert tallkode for arealdekke på begge nivåer",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode"
         }
       },
       {
         "name": "grunnforhold",
         "type": "Grunnforhold",
-        "cardinality": "1"
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Grunnforhold gir informasjon om tjukkelse, type og utbredelse av jorddekket i alle områder under skoggrensen",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold"
+        }
       },
       {
         "name": "grunnforholdKode",
         "type": "GrunnforholdKode",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Standardisert tallkode for grunnforhold",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode"
         }
       },
@@ -45,6 +64,8 @@
         "type": "Skogbonitet",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Et mål på arealets evne til å produsere trevirke, basert på trærnes høydevekst, alder, vegetasjonstype og forekomst av spesielle plantearter",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet"
         }
       },
@@ -53,6 +74,8 @@
         "type": "SkogbonitetKode",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Standardisert tallkode for skogbonitet",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode"
         }
       },
@@ -61,6 +84,8 @@
         "type": "ArealbrukLandHovedklasse",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et overordnet nivå.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse"
         }
       },
@@ -69,6 +94,8 @@
         "type": "ArealbrukLandUnderklasse",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et detaljert nivå.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse"
         }
       },
@@ -77,19 +104,28 @@
         "type": "ArealbrukLandKode",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Standardisert tallkode for arealbruk på land for begge nivåer.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode"
         }
       },
       {
         "name": "arealbrukHav",
         "type": "ArealbrukHav",
-        "cardinality": "1"
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Klassifisering av stedbundet arealbruk i havområder.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav"
+        }
       },
       {
         "name": "arealbrukHavKode",
         "type": "ArealbrukHavKode",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Standardisert tallkode for arealbruk i hav.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode"
         }
       },
@@ -98,6 +134,8 @@
         "type": "OkosystemtypeNiva1",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Økosystemklasse nivå 1 har 12 klasser, og deler kartet inn i hovedøkosystemer etter europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1"
         }
       },
@@ -106,6 +144,8 @@
         "type": "OkosystemtypeNiva2",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Økosystemklasse nivå 2 gir en videre inndeling av de 12 klassene i nivå 1. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2"
         }
       },
@@ -114,6 +154,8 @@
         "type": "OkosystemtypeNiva3",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Økosystemklasse nivå 3 gir en videre inndeling av økosystemklasse 1 og 2. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3"
         }
       },
@@ -122,6 +164,8 @@
         "type": "OkosystemtypeKode",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Standardisert tallkode for økosystemtyper på alle tre nivåer",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode"
         }
       },
@@ -130,6 +174,8 @@
         "type": "GrunnkartKilde",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Spesifiserer kilden for avgrensningen av grunnkart-flaten",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde"
         }
       },
@@ -138,6 +184,8 @@
         "type": "ArealbrukKilde",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Spesifiserer kilden for arealbruksinformasjonen.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde"
         }
       },
@@ -161,6 +209,8 @@
         "type": "Kommunenummer",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste\n\nMerknad: Det presiseres at kommune alltid skal ha 4 siffer, dvs. eventuelt med ledende null. Kommune benyttes for kopling mot en rekke andre registre som også benytter 4 siffer.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer"
         }
       },
@@ -227,12 +277,6 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "GM_MultiSurface",
-      "ogcRole": "primary-geometry",
-      "description": "den geografiske avgrensingen av Grunnkartflaten"
     }
   }
 ]
