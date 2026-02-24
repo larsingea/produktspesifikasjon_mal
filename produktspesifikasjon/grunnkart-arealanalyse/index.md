@@ -1,11 +1,11 @@
 ---
-title: "Nasjonalt grunnkart for arealanalyse (Testversjon 2)"
+title: "Nasjonalt grunnkart for arealanalyse - Årsversjon 2025"
 updated: "2025-12-16"
 organization: "Statistisk sentralbyrå"
 logo: "https://register.geonorge.no/data/organizations/971526920_SSB_liten.png"
 ---
 
-# Produktspesifikasjon: Nasjonalt grunnkart for arealanalyse (Testversjon 2)
+# Produktspesifikasjon: Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
 
 ## Generelt om spesifikasjonen
 
@@ -16,7 +16,7 @@ logo: "https://register.geonorge.no/data/organizations/971526920_SSB_liten.png"
 
 #### Fullstendig navn
 
-Nasjonalt grunnkart for arealanalyse (Testversjon 2)
+Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
 
 #### Versjon
 
@@ -24,7 +24,7 @@ Nasjonalt grunnkart for arealanalyse (Testversjon 2)
 
 ### Referansedato
 
-2025-06-30
+2026-02-16
 
 ### Ansvarlig organisasjon
 
@@ -36,34 +36,21 @@ nor
 
 ### Hovedtema
 
-Grunnkart, Arealregnskap, Arealstatistikk, Økosystemtyper, Arealanalyse, Testversjon 2, ØkologiskGrunnkart, Det offentlige kartgrunnlaget, geodataloven, arealplanerPBL, Plan
+Grunnkart, Arealregnskap, Arealstatistikk, Økosystemtyper, Arealanalyse, ØkologiskGrunnkart, Det offentlige kartgrunnlaget, geodataloven, arealplanerPBL, Plan
 
 ### Sammendrag
 
-Nasjonalt grunnkart for arealanalyse er tilgjengelig som Testversjon 2. 
+Nasjonalt grunnkart for arealanalyse er tilgjengelig som **årsversjon 2025**. 
+Nå er GML- og Geopackage filer av årsversjon 2025 tilgjengelig for nedlasting. FGDB vil legges ut fortløpende når disse er klare.
 
 **Dersom du ønsker å se på Årsversjon 2025 av Grunnkartet, er den nye WMS-tjenesten tilgjengelig.** Mer informasjon om WMS-tjenesten finner du på <https://kartkatalog.geonorge.no/Metadata/c7dc425b-60cd-42f7-a84e-202c7d7b912a>. 
 
-- - -
-**Oppdateringer og feilretting!** 
-
-Nye filer ble publisert 30. juni (ca. klokka 1500). Det er rettet opp i topologifeil, men det gjenstår noen feil i enkelte kommuner og fylker i enkelte projeksjoner og formater. De berørte kommunene og fylkene gjengitt med fylkes- og kommunenummer er:  
-
-* UTM GML: 46, 50, 55, 56, 1806,1815, 4642, 4644
-
-- UTM FGDB: 18, 40, 46, 50, 55, 56
-
-+ Geografisk (ETRS89) GML: 33, 42, 46, 50, 55, 56, 4642, 4644, 5056
-
-- Geografisk (ETRS89) FGDB: 40, 50, 55, 56, 5060
-
-Disse filene vil dessverre ikke bli rettet før årsversjonen publiseres. Feilen som har oppstått kan føre til utfordringer ved geometrisk prosessering. De fleste GIS-programmer har funksjonalitet for å reparere slike topologifeil, og brukere som ønsker å ta datasettet i bruk før en fullstendig rettet versjon er tilgjengelig, oppfordres til å benytte disse verktøyene. Vi beklager ulempen!
 
 - - -
 
 Grunnkartet er utviklet i samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet, og er ment som et felles datagrunnlag for ulike typer arealanalyser.
 
-Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK), som viser arealressurs- og arealbruksdata, og innebærer ingen nykartlegging.  Kildedata som er brukt i denne versjonen var oppdatert per 01.01.2024. I tillegg til arealressurs- og arealbruksdata er det lagt inn økosysteminformasjon i henhold til Eurostats klassifikasjonssystem. Grunnkartet kan kobles med andre datakilder, som for eksempel arealplaner, og benyttes som grunnlag for ulike typer arealanalyser og arealregnskap. Les mer om datainnhold og metode under Prosesshistorie.
+Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK), som viser arealressurs- og arealbruksdata, og innebærer ingen nykartlegging.  Kildedata som er brukt i denne versjonen var oppdatert per 01.01.2025. I tillegg til arealressurs- og arealbruksdata er det lagt inn økosysteminformasjon i henhold til Eurostats klassifikasjonssystem. Grunnkartet kan kobles med andre datakilder, som for eksempel arealplaner, og benyttes som grunnlag for ulike typer arealanalyser og arealregnskap. Les mer om datainnhold og metode under Prosesshistorie.
 
 
 **Rapporter**
@@ -89,7 +76,7 @@ Nasjonalt grunnkart for arealanalyse er en sammenstilling av grunnleggende datas
 
 **Utstrekning**:
 
-- **tidsmessig**: - **intervall**: - 2024-02-13, 2025-06-30
+- **tidsmessig**: - **intervall**: - 2024-02-13, 2026-02-16
 
 **Juridiske begrensninger**:
 
@@ -101,9 +88,9 @@ Nasjonalt grunnkart for arealanalyse er en sammenstilling av grunnleggende datas
 ## Innhold og struktur
 
 **Bruk**:
-Grunnkartet kan testes som grunnlag for etablering av arealregnskap, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. 
+Grunnkartet kan brukes som grunnlag for etablering av arealanalyse, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. 
 
-Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Når en endelig årsversjon av Grunnkartet er klart til drift, vil det kunne supplere og delvis erstatte datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.
+Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Årsversjonen 2025 av Grunnkartet supplerer og delvis erstatter datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.
 
 ### Datamodell
 
@@ -112,8 +99,6 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 #### GrunnkartFlate
 
 En flate i Grunnkartet som representerer et sammenhengende areal med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon om kildedata, brukt som grunnlag for arealanalyser og -regnskap.
-
-Geometri:<br />Type: GM_MultiSurface
 
 Egenskaper
 
@@ -125,15 +110,19 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>geometry</strong></td>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>den geografiske avgrensingen av Grunnkartflaten</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>GM_MultiSurface</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
+      <td>GM_Surface</td>
     </tr>
   </tbody>
 </table>
@@ -230,6 +219,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>Grunnforhold</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold</a></td>
     </tr>
   </tbody>
 </table>
@@ -367,7 +360,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>areabrukLandKode</strong></td>
+      <td><strong>arealbrukLandKode</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -401,6 +394,10 @@ Egenskaper
     <tr>
       <th scope="row">Type:</th>
       <td>ArealbrukHav</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav</a></td>
     </tr>
   </tbody>
 </table>
@@ -450,7 +447,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1</a></td>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1</a></td>
     </tr>
   </tbody>
 </table>
@@ -475,7 +472,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2</a></td>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2</a></td>
     </tr>
   </tbody>
 </table>
@@ -500,7 +497,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3</a></td>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3</a></td>
     </tr>
   </tbody>
 </table>
@@ -721,7 +718,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
@@ -729,6 +726,449 @@ Egenskaper
     </tr>
   </tbody>
 </table>
+
+### Kodelister
+
+#### «CodeList» ArealdekkeNiva1
+
+**Definisjon:** Viser hovedklasser for arealressurser med vekt på produksjonsgrunnlaget for jord- og skogbruk, som jordbruksareal, skog, vann og bebygd areal
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealdekkeNiva2
+
+**Definisjon:** Gir en mer detaljert inndeling av arealressursene innenfor hovedklassene, for eksempel fulldyrka jord, myr eller åpen fastmark
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealdekkeKode
+
+**Definisjon:** Standardisert tallkode for arealdekke på begge nivåer
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Grunnforhold
+
+**Definisjon:** Grunnforhold gir informasjon om tjukkelse, type og utbredelse av jorddekket i alle områder under skoggrensen
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» GrunnforholdKode
+
+**Definisjon:** Standardisert tallkode for grunnforhold
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Skogbonitet
+
+**Definisjon:** Et mål på arealets evne til å produsere trevirke, basert på trærnes høydevekst, alder, vegetasjonstype og forekomst av spesielle plantearter
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» SkogbonitetKode
+
+**Definisjon:** Standardisert tallkode for skogbonitet
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealbrukLandHovedklasse
+
+**Definisjon:** Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et overordnet nivå.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealbrukLandUnderklasse
+
+**Definisjon:** Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et detaljert nivå.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealbrukLandKode
+
+**Definisjon:** Standardisert tallkode for arealbruk på land for begge nivåer.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealbrukHav
+
+**Definisjon:** Klassifisering av stedbundet arealbruk i havområder.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealbrukHavKode
+
+**Definisjon:** Standardisert tallkode for arealbruk i hav.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» OkosystemtypeNiva1
+
+**Definisjon:** Økosystemklasse nivå 1 har 12 klasser, og deler kartet inn i hovedøkosystemer etter europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» OkosystemtypeNiva2
+
+**Definisjon:** Økosystemklasse nivå 2 gir en videre inndeling av de 12 klassene i nivå 1. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» OkosystemtypeNiva3
+
+**Definisjon:** Økosystemklasse nivå 3 gir en videre inndeling av økosystemklasse 1 og 2. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» OkosystemtypeKode
+
+**Definisjon:** Standardisert tallkode for økosystemtyper på alle tre nivåer
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» GrunnkartKilde
+
+**Definisjon:** Spesifiserer kilden for avgrensningen av grunnkart-flaten
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ArealbrukKilde
+
+**Definisjon:** Spesifiserer kilden for arealbruksinformasjonen.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Kommunenummer
+
+**Definisjon:** nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste
+
+Merknad: Det presiseres at kommune alltid skal ha 4 siffer, dvs. eventuelt med ledende null. Kommune benyttes for kopling mot en rekke andre registre som også benytter 4 siffer.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer">https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 
@@ -761,24 +1201,24 @@ Egenskaper
 
 - **navn**: Prosentvis oppfyllelse av FAIR-prinsipper
   **Måleparameter**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
-  **Resultat**: 83
+  **Resultat**: 85
 
 - **navn**: FAIR
-  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 83%
+  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 85%
 
 **Beskrivelse**:
 Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.
 
-Vi vil veldig gjerne høre hva du mener om Testversjon 2 av Grunnkartet - send oss gjerne en e-post. 
+Hvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. 
 Alle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. 
 
 For generelle spørsmål og spørsmål til metode: gisdrift@nibio.no
 
-For spørsmål knyttet til Arealbruk: margrete.steinnes@ssb.no
+For spørsmål knyttet til Arealbruk: mailto: GISressurssenter@ssb.no
 
 For spørsmål knyttet til Arealdekke: gisdrift@nibio.no
 
-For spørsmål knyttet til Økosystemtype: ellen.arneberg@miljodir.no
+For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 ## Datafangst
 Arbeidet med Nasjonalt grunnkart for arealanalyse startet i 2023 som et samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet. Arbeidet med å etablere Grunnkartet tok utgangspunkt i metoder og datagrunnlag som allerede benyttes i arbeidet med den offentlige arealbruks- og arealressursstatistikken. Dette grunnlaget er ytterligere beriket ved å tilføre data fra andre offentlige kartdatabaser og registre, samt tilføre datasettet en økosystemkoding.
@@ -807,16 +1247,50 @@ Eurostats økosystemklassifikasjon er beskrevet i NIBIO rapport 9 (143) 2023 «H
 **Vedlikeholdsfrekvens**: Årlig
 
 **Vedlikeholdsnotat**:
-Grunnkartet kan testes som grunnlag for etablering av arealregnskap, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. 
+Grunnkartet kan brukes som grunnlag for etablering av arealanalyse, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. 
 
-Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Når en endelig årsversjon av Grunnkartet er klart til drift, vil det kunne supplere og delvis erstatte datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.
+Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Årsversjonen 2025 av Grunnkartet supplerer og delvis erstatter datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.
 
 **Status**: Under arbeid
+
+**dataAcquisitionAndProcessing**:
+
+- **processStep**:
+  - **description**:
+    Arbeidet med Nasjonalt grunnkart for arealanalyse startet i 2023 som et samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet. Arbeidet med å etablere Grunnkartet tok utgangspunkt i metoder og datagrunnlag som allerede benyttes i arbeidet med den offentlige arealbruks- og arealressursstatistikken. Dette grunnlaget er ytterligere beriket ved å tilføre data fra andre offentlige kartdatabaser og registre, samt tilføre datasettet en økosystemkoding. 
+
+    *Testversjon 1* av Grunnkartet ble publisert i februar 2024. Våren 2024 ble det gjennomført brukerdialog gjennom møter med utvalgte brukere og spørreskjemaer. Tilbakemeldingene pekte på behov for retting av topologifeil, tematiske avklaringer og bedre brukerveiledning. 
+
+    Testversjon 1 inneholdt følgende egenskaper: Arealdekke, Arealbruk, Økosystemklasse, Grøntandel, Areal og Kommunenummer.
+
+    *Testversjon 2* ble publisert 1. april 2025, og inkluderte forbedringer basert på tilbakemeldingene etter Testversjon 1. I arbeidet med Testversjon 2 har fokuset vært å lage et mer ryddig, enklere og mer intuitivt kart. Det er blant annet arbeidet med tematiske problemstillinger rundt nomenklaturen for arealdekke og arealbruk, og det er foretatt en mer systematisk topologi- og geometrirydding. I tillegg er det inkludert arealbruk i hav.
+
+    Testversjon 2 inneholdt følgende egenskaper: Arealdekke, Arealbruk, Økosystemklasse, Areal, Kommunenummer, Kilde, Treslag, Grunnforhold og Arealbruk i hav (stedfast og ikke-stedfast).
+
+    Det er gjennomført brukerinvolvering mot Testversjon 2 våren 2025. Innspill og endringer i Åsversjon 2025 er dokumentert i egne rapporter.
+
+    *Årsversjon 2025* ble publisert som WMS-tjeneste 22. desember 2025. Årsversjon 2025 er dokumentert i rapporten ”Nasjonalt grunnkart for arealanalyse – Årsversjon 2025”. Videre vil datasettet dokumenteres i form av en standard produktspesifikasjon i løpet av første halvdel av 2026.
+
+    Årsversjon 2025 inneholder følgende egenskaper: ArealdekkeNiva1, ArealdekkeNiva2, ArealbrukLandHovedklasse, ArealbrukLandUnderklasse, ArealbrukHav, ØkosystemtypeNiva1, ØkosystemtypeNiva2, ØkosystemtypeNiva3, Kommunenummer, GrunnkartKilde, ArealbrukKilde, Skogbonitet, Grunnforhold samt ArealdekkeKode, GrunnforholdKode, SkogbonitetKode, ArealbrukLandKode, ArealbrukHavKode og OkosystemtypeKode.
+
+    - - - 
+    Tematiske detaljer
+
+    **Arealdekke** baseres på klassifikasjonen av arealressurs i FKB-AR5, med tilleggsinformasjon om skog og snaumark. Temaet er delt inn i fire temalag; ArealdekkeNiva1, ArealdekkeNiva2,  Skogbonitet og Grunnforhold. Kodingen skal være gjenkjennbar for brukere som kjenner AR5-typologien, men med noen avvik og endringer. 
+
+    **Arealbruksklassifikasjonen** baseres på SSB-arealbruk, slik den er tilgjengelig på Geonorge. En grov inndeling av arealbruken på land er gitt i ArealbrukLandHovedklasse, mens en mer fininndelt klassifisering finnes i ArealbrukLandUnderklasse.  Kildedata for hvert polygon er inkludert, noe som kan gi bedre innsikt i datakvalitet og gjør det enklere å spore og rette feil. Arealbruk er gitt for bebygde og opparbeida arealer, men for ubebygde områder vil disse kolonnene være blanke.
+
+    **Arealbruk i hav** viser installasjoner, og annen klart stedbundet aktivitet.
+
+    **Økosystemklassifikasjonen** følger, så langt det er mulig, Eurostats anbefalte klassifikasjon (3 nivåer). I bebygde områder følges den til nivå 3 så langt det har latt seg gjøre. Miljødirektoratet, med bistand fra NINA, har tilordnet Eurostat-klasser til kombinasjoner av arealdekke, arealbruk, treslag, grunnforhold, bonitet og kysttilhørighet. Som hovedregel overstyrer arealbruk arealdekke ved konflikt.
+
+    Eurostats økosystemklassifikasjon er beskrevet i [NIBIO rapport 9 (143) 2023 Hovedøkosystemkart for Norge](https://hdl.handle.net/11250/3106442)
+    - - -
 
 ## Presentasjon
 
 **Tegnforklaring**:
-<https://register.geonorge.no/tegneregler/grunnkart-for-arealregnskap-testversjon-2>
+<https://register.geonorge.no/tegneregler/nasjonalt-grunnkart-for-arealanalyse-årsversjon-2025>
 
 ## Leveranse
 
@@ -850,13 +1324,13 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2026-02-02
+**Metadatadato**: 2026-02-24
 
 **språk**: nor
 
 **Kontaktpunkt**:
 
-- **organisasjon**: Norsk institutt for bioøkonomi
+- **organisasjon**: Kartverket
 - **epost**: post@kartverket.no
 - **rolle**: pointOfContact
 

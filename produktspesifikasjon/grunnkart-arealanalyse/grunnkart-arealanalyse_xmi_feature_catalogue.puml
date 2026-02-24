@@ -1,5 +1,5 @@
 @startuml
-title Nasjonalt grunnkart for arealanalyse (Testversjon 2) - Objekttyper
+title Nasjonalt grunnkart for arealanalyse - Årsversjon 2025 - Objekttyper
 
 skinparam backgroundColor #F5F5F5
 skinparam shadowing false
@@ -25,7 +25,7 @@ skinparam stereotypeCFontColor #2D201A
 package "Objekttyper" {
 
   class GrunnkartFlate <<featureType>> {
-    + område [1] : GM_MultiSurface
+    + område [1] : GM_Surface
     + arealdekkeNiva1 [1] : ArealdekkeNiva1
     + arealdekkeNiva2 [1] : ArealdekkeNiva2
     + arealdekkeKode [1] : ArealdekkeKode
@@ -35,7 +35,7 @@ package "Objekttyper" {
     + skogbonitetKode [1] : SkogbonitetKode
     + arealbrukLandHovedklasse [1] : ArealbrukLandHovedklasse
     + arealbrukLandUnderklasse [1] : ArealbrukLandUnderklasse
-    + areabrukLandKode [1] : ArealbrukLandKode
+    + arealbrukLandKode [1] : ArealbrukLandKode
     + arealbrukHav [1] : ArealbrukHav
     + arealbrukHavKode [1] : ArealbrukHavKode
     + okosystemtypeNiva1 [1] : OkosystemtypeNiva1
@@ -46,7 +46,7 @@ package "Objekttyper" {
     + arealbrukKilde [1] : ArealbrukKilde
     + kommunenummer [1] : Kommunenummer
     + identifikasjon [1] : Identifikasjon
-    + oppdateringsdato [1] : Date
+    + oppdateringsdato [0..1] : Date
   }
 
   class Identifikasjon {
