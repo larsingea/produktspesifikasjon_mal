@@ -25,16 +25,17 @@ skinparam stereotypeCFontColor #2D201A
 package "Objekttyper" {
 
   abstract class DyrkbarJord_Fellesegenskaper <<featureType>> {
-    + identifikasjon [1] : Identifikasjon
-    + informasjon [1] : CharacterString
-    + kopidata [0..1] : Kopidata
+    ' Ingen attributter
   }
 
   class ArealressursFlate <<featureType>> {
-    + område [1] : GM_Surface
+    + identifikasjon [1] : Identifikasjon
+    + informasjon [1] : CharacterString
+    + kopidata [0..1] : Kopidata
     + dyrkbarJord [1] : DyrkbarJord
     + fulldyrka2008 [1] : Fulldyrka2008
     + myrTorv [1] : MyrTorv
+    + område [1] : GM_Surface
     + planeringsjord [1] : Planeringsjord
     + verneform [1] : Verneform
     + årsversjon [1] : Integer
@@ -58,6 +59,5 @@ package "Objekttyper" {
 
   DyrkbarJord_Fellesegenskaper <|-- ArealressursFlate
   ArealressursFlate --> ArealressursGrense : avgrensesAvArealressursGrense [0..*]
-  ArealressursGrense --> ArealressursFlate
 
 @enduml
