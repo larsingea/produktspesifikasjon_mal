@@ -1,5 +1,5 @@
 {
-  "identification": {
+  "identificationSection": {
     "id": "c5f09d79-1546-495c-8b36-91efd4008bd7",
     "title": "Kart over grå arealer -Versjon 1",
     "abstract": "Kart over grå arealet -Versjon 1 er utviklet i samarbeidet mellom Miljødirektoratet, Kartverket, NIBIO og SSB.\n\nKartet er landsdekkende og viser grå arealer i henhold til Kommunal- og distriktsdepartementet sin definisjon;\n«Arealer som allerede er tatt i bruk eller sterkt påvirket av menneskelig bygge- og anleggsaktivitet, inkludert bebyggelse, konstruksjoner, permanente overflater og tilhørende arealer.»\n\nRapport kan leses her\nhttps://dokument.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-sluttrapport/1/kart-over-gr%C3%A5-arealer-sluttrapport.pdf\n\nOversikt over arealklasser som er med i kartet kan leses her\nhttps://dokument.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-utvalg-fra-grunnkartet/1/kart-over-gr%C3%A5-arealer-utvalg-fra-grunnkartet.pdf",
@@ -15,7 +15,7 @@
       "creation": "2025-11-24",
       "publication": "2025-11-24",
       "revision": "2025-12-15",
-      "metadata": "2026-02-02"
+      "metadata": "2026-02-24"
     },
     "responsibleParties": [
       {
@@ -89,11 +89,11 @@
       {
         "name": "Prosentvis oppfyllelse av FAIR-prinsipper",
         "measure": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
-        "result": "80"
+        "result": "81"
       },
       {
         "name": "FAIR",
-        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 80%"
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 81%"
       },
       {
         "name": "Coverage",
@@ -101,10 +101,10 @@
       }
     ]
   },
-  "maintenance": {
-    "maintenanceFrequency": "Ikke planlagt",
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Ikke planlagt",
     "maintenanceNote": "Lett tilgjengelige oversikter over grå arealer i Norge vil være et viktig kunnskapsgrunnlag for å kunne realisere en mer arealgjerrig arealpolitikk gjennom fortetting og transformasjon, før nye utbyggingsområder tas i bruk.",
-    "status": "Under arbeid"
+    "maintenanceAndUpdateStatement": "Under arbeid"
   },
   "portrayal": {
     "legendDescriptionUrl": "https://register.geonorge.no/tegneregler/kart-over-grå-arealer"
@@ -147,7 +147,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2026-02-02",
+    "metadataDate": "2026-02-24",
     "language": "nor",
     "pointOfContact": {
       "organization": "Kartverket",
