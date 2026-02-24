@@ -25,27 +25,50 @@ skinparam stereotypeCFontColor #2D201A
 package "Objekttyper" {
 
   class Toalett <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + høydereferanse [1] : Høydereferanse
     + status [0..1] : Status
   }
 
   class Havnesensor <<featureType>> {
-    + posisjon [1] : Punkt
-    + sensortype [0..1] : Sensortype
-    + høydereferanse [1] : Høydereferanse
-    + status [0..1] : Status
-    + objektLøpenummer [0..1] : CharacterString
+    ' Ingen attributter
   }
 
   class Havnegjerde <<featureType>> {
-    + senterlinje [1] : Kurve
-    + høydereferanse [1] : Høydereferanse
-    + status [0..1] : Status
-    + periode [0..*] : Periode
+    ' Ingen attributter
   }
 
   class VAuttak <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + VAuttakstype [1] : VAuttakstype
     + kapasitet [0..1] : Integer
@@ -57,6 +80,21 @@ package "Objekttyper" {
   }
 
   class Fender <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [0..1] : Punkt
     + fendertype [1] : Fendertype
     + fenderspesifikasjon [0..1] : CharacterString
@@ -69,12 +107,35 @@ package "Objekttyper" {
   }
 
   class "Forvaltningsområde" as Forvaltningsomr_de <<featureType>> {
-    + område [1] : Flate
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + forvaltesAv [0..1] : CharacterString
+    + område [1] : Flate
     + posisjon [0..1] : Punkt
   }
 
   class Kran <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + krantype [1] : Krantype
     + maksbelastning [0..1] : Integer
@@ -88,6 +149,20 @@ package "Objekttyper" {
   }
 
   class "Lastbegrensningsområde" as Lastbegrensningsomr_de <<featureType>> {
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + vektbegrensning [0..1] : Real
@@ -101,6 +176,21 @@ package "Objekttyper" {
   }
 
   class "Tømmestasjon" as T_mmestasjon <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + høydereferanse [1] : Høydereferanse
     + kapasitet [0..1] : Integer
     + kumnummer [0..1] : Integer
@@ -113,16 +203,45 @@ package "Objekttyper" {
   }
 
   class Kaifront <<featureType>> {
-    + senterlinje [1] : Kurve
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + kaitype [1..*] : Kaitype
     + lengde [1] : Real
     + høydereferanse [1] : Høydereferanse
     + kaifronttype [1] : Kaifronttype
     + høydeSjøkartnull [1] : Real
+    + senterlinje [1] : Kurve
     + status [0..1] : Status
   }
 
   class "Kaiområde" as Kaiomr_de <<featureType>> {
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + kaitype [0..1] : Kaitype
@@ -130,12 +249,25 @@ package "Objekttyper" {
   }
 
   abstract class HavneanleggId <<featureType>> {
-    + ISPS [0..1] : Boolean
-    + havneanleggNavn [0..1] : CharacterString
-    + havneanleggId [0..1] : CharacterString
+    ' Ingen attributter
   }
 
   class "Fortøyningsinnretning" as Fort_yningsinnretning <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + fortøyningstype [1] : Fortøyningstype
     + maksbelastning [0..1] : Integer
@@ -149,21 +281,71 @@ package "Objekttyper" {
   }
 
   class "Havneområde" as Havneomr_de <<featureType>> {
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + forvaltesAv [0..1] : CharacterString
   }
 
   class HavnegjerdeInngang <<featureType>> {
+    + senterlinje [1] : Kurve
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + periode [0..*] : Periode
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + avsperringstype [1] : Avsperringstype
     + åpningstype [0..1] : Åpningstype
   }
 
   class Kamera <<featureType>> {
-    ' Ingen attributter
+    + posisjon [1] : Punkt
+    + sensortype [0..1] : Sensortype
+    + høydereferanse [1] : Høydereferanse
+    + status [0..1] : Status
+    + objektLøpenummer [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
   }
 
   class Avfallspunkt <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + avfallstype [0..*] : Avfallstype
     + avfallsplan [0..1] : CharacterString
@@ -175,6 +357,17 @@ package "Objekttyper" {
   }
 
   class "Tørrdokk" as T_rrdokk <<featureType>> {
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + maksFartøyBredde [0..1] : Real
@@ -187,6 +380,21 @@ package "Objekttyper" {
   }
 
   class Beredskapspunkt <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + beredskapstype [1..*] : Beredskapstype
     + spesifikasjon [0..1] : CharacterString
@@ -195,6 +403,21 @@ package "Objekttyper" {
   }
 
   class Drivstofftilkobling <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + drivstofftype [1..*] : Drivstofftype
     + kapasitet [0..1] : Integer
@@ -205,15 +428,40 @@ package "Objekttyper" {
   }
 
   class Havneanlegg <<featureType>> {
-    + område [1] : Flate
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + eier [0..1] : CharacterString
     + eierskap [1..*] : Eierskap
     + forvaltesAv [0..1] : CharacterString
     + ISPSHavneanlegg [0..1] : ISPSHavneanlegg
+    + område [1] : Flate
     + posisjon [0..1] : Punkt
   }
 
   class Slipp <<featureType>> {
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + kaidekketype [0..1] : Kaidekketype
@@ -231,6 +479,17 @@ package "Objekttyper" {
   }
 
   class Flytedokk <<featureType>> {
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + maksFartøyBredde [0..1] : Real
@@ -243,6 +502,21 @@ package "Objekttyper" {
   }
 
   class ELkobling <<featureType>> {
+    + objektLøpenummer [1] : CharacterString
+    + kaiId [1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + havn [1] : CharacterString
+    + UNLOCODE [1] : CharacterString
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : Punkt
     + ELanleggstype [1..*] : ELanleggstype
     + rekkeviddeLadeanlegg [0..1] : Integer
@@ -253,30 +527,23 @@ package "Objekttyper" {
   }
 
   abstract class KaiId <<featureType>> {
-    + kaiId [1] : CharacterString
-    + kainavn [0..1] : CharacterString
-    + kaiIdIntern [0..1] : CharacterString
+    ' Ingen attributter
   }
 
   abstract class HavnId <<featureType>> {
-    + havn [1] : CharacterString
-    + UNLOCODE [1] : CharacterString
+    ' Ingen attributter
   }
 
   abstract class ObjektId <<featureType>> {
-    + objektLøpenummer [1] : CharacterString
+    ' Ingen attributter
   }
 
   abstract class "FellesegenskaperPåkrevd" as FellesegenskaperP_krevd <<featureType>> {
-    + identifikasjon [1] : Identifikasjon
-    + datafangstdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
+    ' Ingen attributter
   }
 
   abstract class FellesegenskaperOpsjonell <<featureType>> {
-    + informasjon [0..1] : CharacterString
-    + link [0..1] : CharacterString
-    + oppdateringsdato [0..1] : Date
+    ' Ingen attributter
   }
 
   class Tilgangstype <<featureType>> {
@@ -284,14 +551,26 @@ package "Objekttyper" {
   }
 
   class FartsrestriksjonerGrense <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : Kurve
   }
 
   class "ForbudsområdeGrense" as Forbudsomr_deGrense <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : Kurve
   }
 
   class Fartsrestriksjoner <<featureType>> {
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + forskriftNavn [1] : CharacterString
@@ -306,6 +585,12 @@ package "Objekttyper" {
   }
 
   class "Forbudsområde" as Forbudsomr_de <<featureType>> {
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + datafangstdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
     + område [1] : Flate
     + posisjon [0..1] : Punkt
     + fastsattAv [0..1] : CharacterString
@@ -385,9 +670,7 @@ package "Objekttyper" {
   KaiId <|-- ObjektId
   FellesegenskaperP_krevd <|-- FellesegenskaperOpsjonell
   FellesegenskaperP_krevd <|-- FartsrestriksjonerGrense
-  FartsrestriksjonerGrense --> Fartsrestriksjoner
   FellesegenskaperP_krevd <|-- Forbudsomr_deGrense
-  Forbudsomr_deGrense --> Forbudsomr_de
   FellesegenskaperOpsjonell <|-- Fartsrestriksjoner
   Fartsrestriksjoner --> FartsrestriksjonerGrense : avgrensning [0..*]
   FellesegenskaperOpsjonell <|-- Forbudsomr_de

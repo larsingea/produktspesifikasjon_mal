@@ -1,5 +1,5 @@
 {
-  "identification": {
+  "identificationSection": {
     "id": "e46767e4-c6d9-49a6-93e8-716da0922fd7",
     "title": "Havnedata",
     "abstract": "Havnedata er detaljert geografisk informasjon om havner, kaier og tilhørende objekter som er en del av infrastrukturen på en kai eller i en havn. Tilhørende objekttyper som inngår i standarden er havneanlegg, kaifront, vannuttak, tilkoblingspunkt for strøm, beredskapsutstyr, sensorer, avfallspunkt, kraner, slipp, fender, fortøyningsinnretninger, tømmestasjon, gjerder m.fl. \n\nReguleringer i form av lovverk, regler, restriksjoner eller annet som er relatert til havn og har en geografisk avgrensning som kan kartfestes, inngår også i standarden. \n\nSpesifikasjonen er laget med tanke på forvaltning i en sentral database bygd på NGIS-forvaltningsplattformen etter samme forvaltningskonsept som SFKB.",
@@ -48,8 +48,8 @@
     "dates": {
       "creation": "2021-03-02",
       "publication": "2021-03-02",
-      "revision": "2026-01-24",
-      "metadata": "2026-02-02"
+      "revision": "2026-02-17",
+      "metadata": "2026-02-24"
     },
     "responsibleParties": [
       {
@@ -81,7 +81,7 @@
         "interval": [
           [
             "2021-03-02",
-            "2026-01-24"
+            "2026-02-17"
           ]
         ]
       }
@@ -140,10 +140,10 @@
       }
     ]
   },
-  "maintenance": {
-    "maintenanceFrequency": "Ukjent",
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Ukjent",
     "maintenanceNote": "Aktører som har behov for tilgang til detaljert informasjon om havner:\n- Havnemyndigheter og andre brukere av havnen.\n- Ansatte i havn (personell som jobber med vedlikehold, oppsyn, trafikk- utbyggings- eller eiendomsavdeling, havneinspektør).\n- Maritim næring: navigatører, skipsredere, los, nødetater.\n- Kommune og fylkeskommune.\n- Offentlige etater: Kystverket, Miljødirektoratet, Sjøfartsdirektoratet, Forsvaret, Statsforvalteren m.fl.\n- Andre beslutningstakere\n\nHavnedata gir nøyaktig og detaljert geografisk informasjon om havner. Havnedata danner et kunnskapsgrunnlag for effektiv havnedrift og for å ta gode beslutninger. Datasettet kan også benyttes til beslutningssøtte, planlegging og forvaltning, som underlag for ulike temakart eller til forskning og analyse. \n\nEksempler på bruksområder for havnedata: \n- Inngå som et element i digitale verktøy til planlegging og effektivisering av havners drift, f.eks. kaibestilling.\n- Fortøyningsplanlegging: kartskisse med kai-utforming, tilgjengelige ressurser på kai, og begrensninger for fartøyets størrelse. \n- Forvaltningsmessig saksbehandling i kommuner og statlige etater.\n- Analyse og presentasjon i et integrert informasjonssystem (GIS-system).\n- Produksjon av kart og avledede produkter. \n- Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud.",
-    "status": "Kontinuerlig oppdatert"
+    "maintenanceAndUpdateStatement": "Kontinuerlig oppdatert"
   },
   "portrayal": {
     "legendDescriptionUrl": "https://register.geonorge.no/register/versjoner/tegneregler/kartverket/havnedata"
@@ -186,7 +186,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2026-02-02",
+    "metadataDate": "2026-02-24",
     "language": "nor",
     "pointOfContact": {
       "organization": "Kartverket",

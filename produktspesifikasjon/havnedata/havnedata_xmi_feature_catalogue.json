@@ -15,6 +15,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -24,6 +26,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       }
@@ -52,6 +56,8 @@
         "description": "Type sensor.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Type sensor.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/sensortype"
         }
       },
@@ -61,6 +67,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -70,6 +78,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -93,11 +103,19 @@
     "description": "Gjerde eller annen barriere. Følger ofte Havnesikkerhetsområde, men brukes ikke som avgrensning. Havnesikkerhetsområde avgrenses av HavnesikkerhetsområdeGrense.\nHavnegjerde vil også ofte være kartlagt i FKB-BygnAnlegg som AnnetGjerde, mur e.l. I så fall bør disse objektene ha sammenfallende geometri.",
     "attributes": [
       {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "Forløp som følger overgang mellom ulike fenomener.",
+        "cardinality": "1"
+      },
+      {
         "name": "høydereferanse",
         "type": "Høydereferanse",
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -107,6 +125,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -120,13 +140,23 @@
             "name": "mndFra",
             "type": "Måned",
             "description": "Måned fra.",
-            "cardinality": "1"
+            "cardinality": "1",
+            "valueDomain": {
+              "definition": "Kodeliste over årets måneder.",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/maned"
+            }
           },
           {
             "name": "mndTil",
             "type": "Måned",
             "description": "Måned til.",
-            "cardinality": "1"
+            "cardinality": "1",
+            "valueDomain": {
+              "definition": "Kodeliste over årets måneder.",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/maned"
+            }
           }
         ]
       }
@@ -137,12 +167,6 @@
         "HavneanleggId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "senterlinje",
-      "type": "Kurve",
-      "ogcRole": "primary-geometry",
-      "description": "Forløp som følger overgang mellom ulike fenomener."
     }
   },
   {
@@ -161,6 +185,8 @@
         "description": "Beskrivelse av hva slags uttakstype som kan gjøres.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Type vanntilkobling som kan gjøres.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/va-uttakstype"
         }
       },
@@ -182,6 +208,8 @@
         "description": "Høydereferanse",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -197,6 +225,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -234,6 +264,8 @@
         "description": "Fendertype",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av ulike fendertyper.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/fendertype"
         }
       },
@@ -255,6 +287,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -264,6 +298,8 @@
         "description": "Retning/orientering på fenderen.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angir orientering til fender.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/fenderorientering"
         }
       },
@@ -273,6 +309,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -308,6 +346,12 @@
         "cardinality": "0..1"
       },
       {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning.",
+        "cardinality": "1"
+      },
+      {
         "name": "posisjon",
         "type": "Punkt",
         "description": "Opsjonelt representasjonspunkt for området.",
@@ -320,12 +364,6 @@
         "HavnId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning."
     }
   },
   {
@@ -344,6 +382,8 @@
         "description": "Krantype.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angir hvilken type kran.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/krantype"
         }
       },
@@ -371,6 +411,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -386,6 +428,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -401,6 +445,8 @@
         "description": "Kodeliste for å spesifisere energikilden til kranen.",
         "cardinality": "0..*",
         "valueDomain": {
+          "definition": "Kodeliste for å spesifisere energikilden til et objekt, f.eks. kran.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/energikilde"
         }
       }
@@ -417,6 +463,12 @@
     "name": "Lastbegrensningsområde",
     "description": "Område i havnen eller på kai som har begrensinger for hva det tåler av belastning.",
     "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "Område",
+        "cardinality": "1"
+      },
       {
         "name": "posisjon",
         "type": "Punkt",
@@ -453,6 +505,8 @@
         "description": "Bruksklasse",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Kodelisten angir bruksklasse på kai. Bruksklassetype er kodeliste for egenskap bruksklasse på objekttype Lastbegrensningsområde. Bruksklassen forkortes Bk og etterfølges av et tall. Den angir største tillatte aksellast, last fra akselkombinasjoner og totalvekt avhengig av avstanden mellom akslene. Som beskrevet i \"Forskrift om bruk av kjøretøy\" og Statens vegvesen sin håndbok R412.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/bruksklassetype"
         }
       },
@@ -468,6 +522,8 @@
         "description": "Kaidekke",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angivelse av ulike typer dekke på kai.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype"
         }
       },
@@ -484,12 +540,6 @@
         "KaiId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Område"
     }
   },
   {
@@ -502,6 +552,8 @@
         "description": "Høydereferanse",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -529,6 +581,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -544,6 +598,8 @@
         "description": "Beskrivelse av hva slags tømming/avløpstype som er tilgjengelig.",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Angir hvilken type væske som kan tømmes.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/avlopstype"
         }
       },
@@ -581,6 +637,8 @@
         "description": "Type kai",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Angivelse av ulik bruk av kai.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/kaitype"
         }
       },
@@ -596,6 +654,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -605,6 +665,8 @@
         "description": "Beskriver type konstruksjon kaifronten har mot sjøen.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Ulike typer kaifronter. Beskriver kaifronten sin konstruksjon mot sjøen.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/kaifronttype"
         }
       },
@@ -615,11 +677,19 @@
         "cardinality": "1"
       },
       {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "Forløp som følger overgang mellom ulike fenomener.",
+        "cardinality": "1"
+      },
+      {
         "name": "status",
         "type": "Status",
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       }
@@ -630,18 +700,18 @@
         "ObjektId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "senterlinje",
-      "type": "Kurve",
-      "ogcRole": "primary-geometry",
-      "description": "Forløp som følger overgang mellom ulike fenomener."
     }
   },
   {
     "name": "Kaiområde",
     "description": "Kaiområde er området direkte innenfor kaifronten som tilhører den samme kaien.\nKaiområde avgrenses av KaiområdeGrense. Kaifront brukes ikke som avgrensning til kaiområde, men ligger som et eget objekt.",
     "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "Område",
+        "cardinality": "1"
+      },
       {
         "name": "posisjon",
         "type": "Punkt",
@@ -654,6 +724,8 @@
         "description": "Angivelse av kaitype.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angivelse av ulik bruk av kai.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/kaitype"
         }
       },
@@ -663,6 +735,8 @@
         "description": "Beskrivelse av materialbruk på dekke av kaia (betong, asfalt, tre e.l.)",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angivelse av ulike typer dekke på kai.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype"
         }
       }
@@ -673,12 +747,6 @@
         "KaiId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Område"
     }
   },
   {
@@ -728,6 +796,8 @@
         "description": "Fortøyningstype",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Type fortøyningsinnretning.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/fortoyningstype"
         }
       },
@@ -749,6 +819,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -758,6 +830,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -799,6 +873,12 @@
     "description": "Havn er et avgrenset område som inneholder kai/kaier tilknyttet land- og sjøarealer som er tilrettelagt for overføring av gods, personer eller lignende mellom land og sjø.\nHavneområde kjennetegnes ved at de har en UNLOCODE tilknyttet seg, og innenfor området må det være minst én kai og én kaifront.\nHavneområdet kan inneholde mange havneanlegg, mange kaier og andre objekter.",
     "attributes": [
       {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning",
+        "cardinality": "1"
+      },
+      {
         "name": "posisjon",
         "type": "Punkt",
         "description": "Opsjonelt representasjonspunkt.",
@@ -817,12 +897,6 @@
         "HavnId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning"
     }
   },
   {
@@ -835,6 +909,8 @@
         "description": "Kodeliste for å angi type avsperring for inngangen.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Type avsperring for HavnegjerdeInngang.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/avsperringstype"
         }
       },
@@ -844,6 +920,8 @@
         "description": "Kodeliste for å spesifisere åpningsmekanisme av port, bom eller annet som avsperrer havnesikkerhetsområde.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Beskriver åpningsmekanisme av port, bom eller annen avsperringstype for HavnegjerdeInngang.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/apningstype"
         }
       }
@@ -884,6 +962,8 @@
         "description": "Avfallstype",
         "cardinality": "0..*",
         "valueDomain": {
+          "definition": "Angir type avfall.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/avfallstype"
         }
       },
@@ -908,6 +988,8 @@
         "description": "Beholdertype",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir type avfallsbeholder.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/beholdertype"
         }
       },
@@ -917,6 +999,8 @@
         "description": "Høydereferanse til kartobjektet",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -926,6 +1010,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -948,6 +1034,12 @@
     "name": "Tørrdokk",
     "description": "Et basseng stort nok til at skip kan seile ut og inn. Bunnen ligger lavere enn havnivået og innløpet kan lukkes med porter. Vann kan pumpes ut, slik skip kan stå tørt, for vedlikehold og reperasjon.",
     "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning.",
+        "cardinality": "1"
+      },
       {
         "name": "posisjon",
         "type": "Punkt",
@@ -990,6 +1082,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -999,6 +1093,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       }
@@ -1009,12 +1105,6 @@
         "HavneanleggId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning."
     }
   },
   {
@@ -1033,6 +1123,8 @@
         "description": "Beredskapstype",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Angir type beredskap eller beredskapsutstyr.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/beredskapstype"
         }
       },
@@ -1048,6 +1140,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -1057,6 +1151,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       }
@@ -1085,6 +1181,8 @@
         "description": "Type drivstoff.",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Angir hvilke typer drivstoff som kan fylles.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/drivstofftype"
         }
       },
@@ -1100,6 +1198,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -1109,6 +1209,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -1152,6 +1254,8 @@
         "description": "Felt for å angi type eierskap.",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Angir type eierskap.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/eierskap"
         }
       },
@@ -1177,7 +1281,12 @@
             "name": "sikringstype",
             "type": "Sikringstype",
             "description": "Beskriver sikring/tilgang til havnesikkerhetsområdet.",
-            "cardinality": "0..1"
+            "cardinality": "0..1",
+            "valueDomain": {
+              "definition": "Angir sikring til havneobjekt.",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/sikringstype"
+            }
           },
           {
             "name": "statusGodkjenning",
@@ -1200,6 +1309,12 @@
         ]
       },
       {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning.",
+        "cardinality": "1"
+      },
+      {
         "name": "posisjon",
         "type": "Punkt",
         "description": "Opsjonelt representasjonspunkt for området.",
@@ -1212,18 +1327,18 @@
         "HavneanleggId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning."
     }
   },
   {
     "name": "Slipp",
     "description": "Skinnegående bane eller et forseggjort opptrekk som fartøy kan hales opp ved landsetting, fra flytende posisjon og opp på tørt land. Skråplanet går vanligvis ut og ned i vannet.",
     "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning.",
+        "cardinality": "1"
+      },
       {
         "name": "posisjon",
         "type": "Punkt",
@@ -1236,6 +1351,8 @@
         "description": "Beskrivelse av materialebruk på dekket av slippen.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angivelse av ulike typer dekke på kai.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype"
         }
       },
@@ -1257,6 +1374,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -1278,6 +1397,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -1321,18 +1442,18 @@
         "KaiId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning."
     }
   },
   {
     "name": "Flytedokk",
     "description": "En flytedokk eller våtdokk er en flytende plattform for å heve skip opp av sjøen når det skal gjøres vedlikehold eller reperasjoner av skip.",
     "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning.",
+        "cardinality": "1"
+      },
       {
         "name": "posisjon",
         "type": "Punkt",
@@ -1375,6 +1496,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -1384,6 +1507,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       }
@@ -1394,12 +1519,6 @@
         "HavneanleggId"
       ],
       "associations": []
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning."
     }
   },
   {
@@ -1418,6 +1537,8 @@
         "description": "Beskrivelse av hva slags type strømtilkobling som kan gjøres.",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Type EL-anlegg/strømanlegg.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/el-anleggstype"
         }
       },
@@ -1442,6 +1563,8 @@
         "description": "Høydereferanse til kartobjektet.",
         "cardinality": "1",
         "valueDomain": {
+          "definition": "Angivelse av hvor på objektet koordinatregistreringen er utført.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse"
         }
       },
@@ -1451,6 +1574,8 @@
         "description": "Beskriver status til et objekt.",
         "cardinality": "0..1",
         "valueDomain": {
+          "definition": "Angir status til havneobjekt.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/status"
         }
       },
@@ -1470,13 +1595,23 @@
             "name": "frekvens",
             "type": "Frekvens",
             "description": "Hvor mange ganger en elektrisk spenning veksler i løpet av ett sekund. Måles i Hz.",
-            "cardinality": "0..1"
+            "cardinality": "0..1",
+            "valueDomain": {
+              "definition": "Angir frekvensen for EL-koblingen, som er hvor mange ganger en elektrisk spenning veksler i løpet av ett sekund. Måles i Hz.",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/frekvens"
+            }
           },
           {
             "name": "spenning",
             "type": "Spenning",
             "description": "Volt. Elektrisk spenning.",
-            "cardinality": "0..1"
+            "cardinality": "0..1",
+            "valueDomain": {
+              "definition": "Kodeliste for å angi den eletriske spenningen. Måleenhet i volt.",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/spenning"
+            }
           },
           {
             "name": "sikringstørrelse",
@@ -1630,6 +1765,8 @@
             "description": "Metode for datafangst.\nEgenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.",
             "cardinality": "1",
             "valueDomain": {
+              "definition": "Metode for datafangst. Datafangstmetoden beskriver hvordan selve vektordataene er posisjonert fra et datagrunnlag (observasjoner med landmålingsutstyr, fotogrammetrisk stereomodell, digital terrengmodell etc.) og ikke prosessen med å innhente det bakenforliggende datagrunnlaget.",
+              "asDictionary": "true",
               "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode"
             }
           },
@@ -1645,6 +1782,8 @@
             "description": "Hvor godt den kartlagte detalj var synbar ved kartleggingen.",
             "cardinality": "0..1",
             "valueDomain": {
+              "definition": "hvor godt den kartlagte detalj var synbar ved kartleggingen",
+              "asDictionary": "true",
               "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/synbarhet"
             }
           },
@@ -1654,6 +1793,8 @@
             "description": "Metode brukt for høyderegistrering av posisjon.\nDet er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.",
             "cardinality": "0..1",
             "valueDomain": {
+              "definition": "Metode for datafangst. Datafangstmetoden beskriver hvordan selve vektordataene er posisjonert fra et datagrunnlag (observasjoner med landmålingsutstyr, fotogrammetrisk stereomodell, digital terrengmodell etc.) og ikke prosessen med å innhente det bakenforliggende datagrunnlaget.",
+              "asDictionary": "true",
               "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode"
             }
           },
@@ -1716,51 +1857,51 @@
   {
     "name": "FartsrestriksjonerGrense",
     "description": "Avgrensning av Fartsrestriksjoner.",
-    "attributes": [],
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "Forløp som følger overgang mellom ulike fenomener.",
+        "cardinality": "1"
+      }
+    ],
     "abstract": false,
     "relationships": {
       "inheritance": [
         "FellesegenskaperPåkrevd"
       ],
-      "associations": [
-        {
-          "target": "Fartsrestriksjoner"
-        }
-      ]
-    },
-    "geometry": {
-      "name": "grense",
-      "type": "Kurve",
-      "ogcRole": "primary-geometry",
-      "description": "Forløp som følger overgang mellom ulike fenomener."
+      "associations": []
     }
   },
   {
     "name": "ForbudsområdeGrense",
     "description": "Avgrensning av forbudsområde.",
-    "attributes": [],
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "Forløp som følger overgang mellom ulike fenomener.",
+        "cardinality": "1"
+      }
+    ],
     "abstract": false,
     "relationships": {
       "inheritance": [
         "FellesegenskaperPåkrevd"
       ],
-      "associations": [
-        {
-          "target": "Forbudsområde"
-        }
-      ]
-    },
-    "geometry": {
-      "name": "grense",
-      "type": "Kurve",
-      "ogcRole": "primary-geometry",
-      "description": "Forløp som følger overgang mellom ulike fenomener."
+      "associations": []
     }
   },
   {
     "name": "Fartsrestriksjoner",
     "description": "Område som har restriksjoner knyttet til ferdsel og fart for fartøyer som ferdes på sjøen.",
     "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning.",
+        "cardinality": "1"
+      },
       {
         "name": "posisjon",
         "type": "Punkt",
@@ -1779,6 +1920,8 @@
         "description": "Kodeliste som spesifiserer hvilken type fartøy som er omfattet av forskriften.",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Kodeliste for å spesifisere hvilket type fartøy en regulering eller restriksjon omfatter.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype"
         }
       },
@@ -1837,18 +1980,18 @@
           "cardinality": "0..*"
         }
       ]
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning."
     }
   },
   {
     "name": "Forbudsområde",
     "description": "Område som er omfattet av forbud, som f.eks. ferdselsforbud for vannscooter.",
     "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "Polygon som viser geografisk utstrekning.",
+        "cardinality": "1"
+      },
       {
         "name": "posisjon",
         "type": "Punkt",
@@ -1885,6 +2028,8 @@
         "description": "Kodeliste som spesifiserer hvilken type fartøy som er omfattet av forbudet.",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Kodeliste for å spesifisere hvilket type fartøy en regulering eller restriksjon omfatter.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype"
         }
       },
@@ -1912,6 +2057,8 @@
         "description": "Angir hvilket type forbud som gjelder for området.",
         "cardinality": "1..*",
         "valueDomain": {
+          "definition": "Kodeliste for å angi forbudstype for forbudsområde.",
+          "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/havnedata/forbudstype"
         }
       }
@@ -1928,12 +2075,6 @@
           "cardinality": "0..*"
         }
       ]
-    },
-    "geometry": {
-      "name": "område",
-      "type": "Flate",
-      "ogcRole": "primary-geometry",
-      "description": "Polygon som viser geografisk utstrekning."
     }
   }
 ]
