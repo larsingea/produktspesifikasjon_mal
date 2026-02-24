@@ -77,7 +77,8 @@
               "value": "Dyrkbar Jord",
               "label": "Areal som egner seg for oppdyrking til fulldyrka jord."
             }
-          ]
+          ],
+          "definition": "Informasjon om dyrkbar jord på overflatedyrka jord, Innmarksbeite, Skog, Åpen fastmark og Myr\n-- Definition - -\nInformation concerning arable land on surface cultivated land, infield pasturelands, unforested land, and in marshes and forests"
         }
       },
       {
@@ -95,7 +96,8 @@
               "value": "Ikke fulldyrka",
               "label": "Arealtilstand er ikke endret etter 2008 ved ajourhold av AR5."
             }
-          ]
+          ],
+          "definition": "Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger"
         }
       },
       {
@@ -117,8 +119,15 @@
               "value": "Torvmark dyrkbar torvmark",
               "label": "Dyrkbar jord på areal med grunnforhold organiske jordlag i AR5 men som ikke er registrert som myr i AR5"
             }
-          ]
+          ],
+          "definition": "Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5"
         }
+      },
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "description": "objektets utstrekning\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
       },
       {
         "name": "planeringsjord",
@@ -139,7 +148,8 @@
               "value": "Modellert",
               "label": "Dyrkbar jord på areal som historisk er kartlagt som planeringsjord og som ligger i modellerte ravineområder"
             }
-          ]
+          ],
+          "definition": "Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte ravineområder. Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering"
         }
       },
       {
@@ -161,7 +171,8 @@
               "value": "Verneform naturreservat",
               "label": "Dyrkbar jord i naturreservat"
             }
-          ]
+          ],
+          "definition": "Informasjon om arealet ligger i en nasjonalpark eller et naturreservat"
         }
       },
       {
@@ -183,32 +194,23 @@
           "cardinality": "0..*"
         }
       ]
-    },
-    "geometry": {
-      "name": "område",
-      "type": "GM_Surface",
-      "ogcRole": "primary-geometry",
-      "description": "objektets utstrekning\n-- Definition --\narea over which an object extends"
     }
   },
   {
     "name": "ArealressursGrense",
     "description": "avgrensing for en eller to arealressursflater\n-- Definition --\ndelimitation for one or two area resource surfaces",
-    "attributes": [],
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "GM_Curve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
     "abstract": false,
     "relationships": {
       "inheritance": [],
-      "associations": [
-        {
-          "target": "ArealressursFlate"
-        }
-      ]
-    },
-    "geometry": {
-      "name": "grense",
-      "type": "GM_Curve",
-      "ogcRole": "primary-geometry",
-      "description": "forløp som følger overgang mellom ulike fenomener\n-- Definition --\ncourse follwing the transition between different real world phenomena"
+      "associations": []
     }
   }
 ]

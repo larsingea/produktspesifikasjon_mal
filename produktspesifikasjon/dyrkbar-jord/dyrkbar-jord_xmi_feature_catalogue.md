@@ -208,30 +208,7 @@ Egenskaper
 
 et sammenhengende areal som er tilordnet de samme egenskapsverdiene i henhold til et arealressursklassifikasjonssystem<br />-- Definition --<br />a continuous area which has been assigned the same attribute values in accordance with an area resource classification system
 
-Geometri:<br />Type: GM_Surface
-
 Egenskaper
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>geometry</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>GM_Surface</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
-    </tr>
-  </tbody>
-</table>
 
 <table class="feature-attribute-table">
   <colgroup>
@@ -316,6 +293,31 @@ Egenskaper
     <tr>
       <th scope="row">Tillatte verdier:</th>
       <td>- Mineraljord dyrkbar mineraljord – Dyrkbar jord på areal som hverken er registrert med grunnforhold organiske jordlag eller myr i AR5<br />- Myr dyrkbar myr – Dyrkbar jord på areal som er registrert som myr i AR5<br />- Torvmark dyrkbar torvmark – Dyrkbar jord på areal med grunnforhold organiske jordlag i AR5 men som ikke er registrert som myr i AR5</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>objektets utstrekning<br />-- Definition --<br />area over which an object extends</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>GM_Surface</td>
     </tr>
   </tbody>
 </table>
@@ -415,8 +417,6 @@ ArealressursGrense – rolle: avgrensesAvArealressursGrense – kardinalitet: 0.
 
 avgrensing for en eller to arealressursflater<br />-- Definition --<br />delimitation for one or two area resource surfaces
 
-Geometri:<br />Type: GM_Curve
-
 Egenskaper
 
 <table class="feature-attribute-table">
@@ -427,20 +427,173 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>geometry</strong></td>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>forløp som følger overgang mellom ulike fenomener<br />-- Definition --<br />course follwing the transition between different real world phenomena</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
       <td>GM_Curve</td>
     </tr>
+  </tbody>
+</table>
+
+### Kodelister
+
+#### «Enumeration» DyrkbarJord
+
+**Definisjon:** Informasjon om dyrkbar jord på overflatedyrka jord, Innmarksbeite, Skog, Åpen fastmark og Myr
+-- Definition - -
+Information concerning arable land on surface cultivated land, infield pasturelands, unforested land, and in marshes and forests
+
+Koder
+
+<table class="code-list-table">
+  <thead>
     <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
+      <th>Kodenavn:</th>
+      <th>Definisjon:</th>
+      <th>Kodeverdi:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dyrkbar Jord</td>
+      <td>Areal som egner seg for oppdyrking til fulldyrka jord.</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
 
-Relasjoner
+#### «Enumeration» Fulldyrka2008
 
-**Assosiasjoner**
-ArealressursFlate
+**Definisjon:** Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger
+
+Koder
+
+<table class="code-list-table">
+  <thead>
+    <tr>
+      <th>Kodenavn:</th>
+      <th>Definisjon:</th>
+      <th>Kodeverdi:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fulldyrka 2008</td>
+      <td>Arealtilstand er endret etter 2008 som følge av ajourhold av AR5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Ikke fulldyrka</td>
+      <td>Arealtilstand er ikke endret etter 2008 ved ajourhold av AR5.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «Enumeration» MyrTorv
+
+**Definisjon:** Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5
+
+Koder
+
+<table class="code-list-table">
+  <thead>
+    <tr>
+      <th>Kodenavn:</th>
+      <th>Definisjon:</th>
+      <th>Kodeverdi:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mineraljord dyrkbar mineraljord</td>
+      <td>Dyrkbar jord på areal som hverken er registrert med grunnforhold organiske jordlag eller myr i AR5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Myr dyrkbar myr</td>
+      <td>Dyrkbar jord på areal som er registrert som myr i AR5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Torvmark dyrkbar torvmark</td>
+      <td>Dyrkbar jord på areal med grunnforhold organiske jordlag i AR5 men som ikke er registrert som myr i AR5</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «Enumeration» Planeringsjord
+
+**Definisjon:** Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte ravineområder. Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering
+
+Koder
+
+<table class="code-list-table">
+  <thead>
+    <tr>
+      <th>Kodenavn:</th>
+      <th>Definisjon:</th>
+      <th>Kodeverdi:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ikke planeringsjord</td>
+      <td>Areal som ikke er ansett som planeringsjord</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Kartlagt</td>
+      <td>Dyrkbar jord på areal som historisk er kartlagt som planeringsjord og som ligger i kartlagte ravineområder</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Modellert</td>
+      <td>Dyrkbar jord på areal som historisk er kartlagt som planeringsjord og som ligger i modellerte ravineområder</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «Enumeration» Verneform
+
+**Definisjon:** Informasjon om arealet ligger i en nasjonalpark eller et naturreservat
+
+Koder
+
+<table class="code-list-table">
+  <thead>
+    <tr>
+      <th>Kodenavn:</th>
+      <th>Definisjon:</th>
+      <th>Kodeverdi:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ikke relevant</td>
+      <td>Det er ikke kartlagt Nasjonalpark eller Naturreservat på lokaliteten.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Verneform nasjonalpark</td>
+      <td>Dyrkbar jord i nasjonalpark</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Verneform naturreservat</td>
+      <td>Dyrkbar jord i naturreservat</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

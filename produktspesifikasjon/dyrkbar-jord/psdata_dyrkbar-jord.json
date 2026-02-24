@@ -1,5 +1,5 @@
 {
-  "identification": {
+  "identificationSection": {
     "id": "8252baea-5bad-428b-8f18-fe236fa4ced6",
     "title": "Dyrkbar jord",
     "abstract": "Dyrkbar jord er i år (2025) revidert gjennom bruk av flere datakilder og nye metoder, og det nye datsettet ble gjort tilgjengelig via Geonorge den 16. september. Det er nå lagt inn flere nye tematiske egenskaper i datasettet, og det er gjort en teknisk rydding som innebærer nye objekter og ny geometri. Gå til produktsiden for å lese mer om det reviderte datasettet.\n\nDatasettet Dyrkbar jord er et landsdekkende data-sett som viser arealer som per i dag ikke er fulldyrka jord, men som ut fra agronomiske perspektiv kan dyrkes opp, og som holder kravene til klima og jordkvalitet for plantedyrking. Dyrkbar jord kan være registrert på arealtypene Overflatedyrka jord, Innmarksbeite, Skog, Åpen fastmark og Myr, slik disse er klassifisert i AR5.\n\nDatasettet er et automatisk avledet produkt som produseres årlig.",
@@ -32,7 +32,7 @@
       "creation": "2025-09-12",
       "publication": "2025-09-12",
       "revision": "2025-09-12",
-      "metadata": "2026-02-02"
+      "metadata": "2026-02-24"
     },
     "responsibleParties": [
       {
@@ -149,10 +149,17 @@
       "statement": "Dyrkbar jord produseres årlig med utgangspunkt i dyrkbar jord i det historiske datasettet DMK fra 2008.  Datasettet er et avledet produkt som sammenstilles basert på utvalgsregler og geografisk fletting (overlay) av flere datasett. \nFra FKB-AR5 brukes arealtype og grunnforhold for å legge til eller fjerne areal, samt tilpasse figur-avgrensingene.  SSB-arealbruk brukes for fjerne nedbygd areal. Fra Naturvernområder (Mdir) hentes informasjon om nasjonalparker og naturreservat. I tillegg brukes informasjon fra ravinekart fra Statsforvalteren i Østfold, Buskerud, Oslo og Akershus samt modellert ravinekart fra NIBIO for å definere dyrkbar jord som ligger i raviner som planeringsjord."
     }
   },
-  "maintenance": {
-    "maintenanceFrequency": "Årlig",
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Årlig",
     "maintenanceNote": "Datasettet Dyrkbar jord skal brukes ved arealplanlegging og behandling av konsesjonssaker. Dyrkbar jord har samme lovmessig vern som dyrka jord i jordlova.  I tillegg til kan datasettet Dyrkbar jord brukes blant annet ved regionale analyser av potensial for nydyrking og arrondering av fulldyrka jord.",
-    "status": "Kontinuerlig oppdatert"
+    "maintenanceAndUpdateStatement": "Kontinuerlig oppdatert",
+    "dataAcquisitionAndProcessing": {
+      "processStep": [
+        {
+          "description": "Dagens kart over dyrka og dyrkbar jord vart laga på grunnlag av ei landsdekkande feltkartlegging mellom 1960 og 1990. Kartet over den dyrka jorda har vorte oppdatert årleg heilt sidan den gong, men rutinane for oppdatering av kartet Dyrkbar jord har ikkje vore like gode. I 2025 har NIBIO gjort ein grundig gjennomgang og tilpassa kartet betre både til gjeldande lovverk og til andre kartlag.\nDyrkbar jord oppdateres maskinelt med informasjonen fra årsversjoner av arealressurskart (FKB-AR5) hvert år. Fra og med 2025 er datasettet revidert gjennom bruk av flere datakilder og nye metoder."
+        }
+      ]
+    }
   },
   "portrayal": {
     "legendDescriptionUrl": "https://register.geonorge.no/tegneregler/dyrkbar-jord"
@@ -195,7 +202,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2026-02-02",
+    "metadataDate": "2026-02-24",
     "language": "nor",
     "pointOfContact": {
       "organization": "Norsk institutt for bioøkonomi",
