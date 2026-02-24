@@ -4047,13 +4047,250 @@
     "description": "Tilkoblingspunkt for vann på kaia.",
     "geometry": {
       "itemType": "feature",
-      "type": "feature",
+      "type": "geometry-point",
       "crs": [
         "#/crs",
         "http://www.opengis.net/def/crs/OGC/0/CRS84h"
       ],
-      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/5973"
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/5973",
+      "format": "geometry-point",
+      "ogcRole": "primary-geometry"
     },
-    "attributes": []
+    "attributes": [
+      {
+        "name": "lokalid",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "lokalid",
+        "ogcRole": "id"
+      },
+      {
+        "name": "identifikasjon",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "identifikasjon",
+            "type": "object",
+            "cardinality": "0..1",
+            "attributes": [
+              {
+                "name": "lokalId",
+                "type": "string",
+                "cardinality": "0..1",
+                "description": "Unik identifikator innenfor navnerommet. For NGIS benyttes UUID."
+              },
+              {
+                "name": "navnerom",
+                "type": "string",
+                "cardinality": "0..1",
+                "description": "Navnerom som unikt identifiserer datakilden til et objekt. I form av en URI."
+              },
+              {
+                "name": "versjonId",
+                "type": "string",
+                "cardinality": "0..1",
+                "description": "Identifikasjon av en spesiell versjon av et geografisk objekt (instans)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "datafangstdato",
+        "type": "date (string)",
+        "cardinality": "0..1",
+        "description": "Dato når objektet siste gang ble registrert/observert/målt i terrenget.",
+        "ogcRole": "primary-instant"
+      },
+      {
+        "name": "kvalitet",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "kvalitet",
+            "type": "object",
+            "cardinality": "0..1",
+            "attributes": [
+              {
+                "name": "datafangstmetode",
+                "type": "string",
+                "cardinality": "0..1",
+                "description": "Metode for datafangst. \r\nEgenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde."
+              },
+              {
+                "name": "nøyaktighet",
+                "type": "integer",
+                "cardinality": "0..1",
+                "description": "Punktstandardavviket i grunnriss for punkter samt tverravvik for linjer.\r\n\r\nMerknad:\r\nOppgitt i cm"
+              },
+              {
+                "name": "synbarhet",
+                "type": "string",
+                "cardinality": "0..1",
+                "description": "Hvor godt den kartlagte detalj var synbar ved kartleggingen."
+              },
+              {
+                "name": "datafangstmetodeHøyde",
+                "type": "string",
+                "cardinality": "0..1",
+                "description": "Metode brukt for høyderegistrering av posisjon. \r\nDet er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss."
+              },
+              {
+                "name": "nøyaktighetHøyde",
+                "type": "integer",
+                "cardinality": "0..1",
+                "description": "Nøyaktighet for høyden i cm."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "informasjon",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Generell opplysning."
+      },
+      {
+        "name": "link",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Link i form av URL eller annet til mer informasjon om objektet."
+      },
+      {
+        "name": "oppdateringsdato",
+        "type": "date-time (string)",
+        "cardinality": "0..1",
+        "description": "Dato for siste endring på objektetdataene."
+      },
+      {
+        "name": "GLN",
+        "type": "integer",
+        "cardinality": "0..1",
+        "description": "Global location number. Globalt nummersystem for identifikasjon av juridiske enheter og fysiske lokasjoner, forvaltet av GS1."
+      },
+      {
+        "name": "havnNavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Stedsnavn på havnen som har blitt tildelt en UNLOCODE. Navnet må samsvare med UNLOCODE."
+      },
+      {
+        "name": "MRN",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Marine Resource Name. Nummereringssystem for unik identifikasjon av maritime ressurser på global basis."
+      },
+      {
+        "name": "UNLOCODE",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Lokaliseringskode fra UNLOCODE-systemet som identifiserer et havneområde. Koden består av 5 bokstaver: de to første bokstavene angir landskode, mens de tre siste identifiserer havnen. Eks: NOSVG (Stavanger). \r\nSe liste med lovlige kodeverdier her: https://service.unece.org/trade/locode/no.htm"
+      },
+      {
+        "name": "ISPS",
+        "type": "boolean",
+        "cardinality": "0..1",
+        "description": "Boolsk verdi som angir om havneanlegget er et ISPS Havneanlegg."
+      },
+      {
+        "name": "havneanleggNavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Navn på havneanlegg. Navn bør stemme overens med SafeSeaNet."
+      },
+      {
+        "name": "havneanleggId",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Unik identifisering av det enkelte havneanlegg."
+      },
+      {
+        "name": "kaiId",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Unik identifisering av den enkelte kai."
+      },
+      {
+        "name": "kainavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Navn på kaien. Det samme kainavnet brukes på alle kaifronter og kaiområder som regnes å tilhøre samme kai. Navn bør stemme overens med SafeSeaNet."
+      },
+      {
+        "name": "kaiIdIntern",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Havnens interne egendefinerte nummering av kaier. \r\nNummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon."
+      },
+      {
+        "name": "objektIdIntern",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Havnens interne egendefinerte nummering av objekter. \r\nNummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon."
+      },
+      {
+        "name": "objektLøpenummer",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Unikt løpenummer for identifisering av det enkelte objekt på kaien."
+      },
+      {
+        "name": "datoTilgjengeligFra",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Dato objektet er tilgjengelig fra. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig."
+      },
+      {
+        "name": "høydereferanse",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Hvor på objektet koordinatregistreringen er utført."
+      },
+      {
+        "name": "kapasitet",
+        "type": "integer",
+        "cardinality": "0..1",
+        "description": "Kapasitet til fylling av vann angitt i antall m3/time."
+      },
+      {
+        "name": "kumnummer",
+        "type": "integer",
+        "cardinality": "0..1",
+        "description": "ID-merking av kummer. Kan tas fra havnas eget merkesystem eller kommunens SID-nr."
+      },
+      {
+        "name": "datoTilgjengeligTil",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Dato objektet er tilgjengelig til. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig."
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Objektets tilstand."
+      },
+      {
+        "name": "tilgangstype",
+        "type": "array",
+        "cardinality": "0..*",
+        "description": "Hva slags bruker som har tilgang til objektet."
+      },
+      {
+        "name": "tilkoblingsdimensjon",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Størrelse/dimensjon på rørene som skal kobles sammen."
+      },
+      {
+        "name": "VAuttakstype",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Type vanntilkobling som kan gjøres."
+      }
+    ]
   }
 ]
