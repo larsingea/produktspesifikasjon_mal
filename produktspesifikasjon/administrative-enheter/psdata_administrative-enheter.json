@@ -1,5 +1,5 @@
 {
-  "identification": {
+  "identificationSection": {
     "id": "041f1e6e-bdbc-4091-b48f-8a5990f3cc5b",
     "title": "Administrative enheter kommuner",
     "abstract": "Datasettet viser kommuneinndelinga i landet med de mest nøyaktige grensene som er registrert digitalt og som er samlet i ett datasett. Datasettet har referansedato 1.1.2026, og er oppdatert med overføring av to arealer mellom Indre Østfold og Nordre Follo ved Slemmestadveien, og et areal mellom Indre Østfold og Vestby ved Laaskenveien. Det er i tillegg oppdatert med en del mindre kvalitetshevinger, som følge av jordskiftesaker og klarlegging av eksisterende grense på kommune-/fylkesgrenser.\n \nFlatene inneholder egenskaper som forteller om offisielle kommunenumre. De offisielle norske, samiske og kvenske navnene for kommunene er hentet fra SSR. I tillegg finnes informasjon om samiske forvaltningsområder.\n\nGeodataene er fra nasjonal inndelingsbase, som er en del av matrikkelen. Ved overgang til ny forvaltningsløsning, ble det også gjort endringer i UML-modellen.",
@@ -32,7 +32,7 @@
       "creation": "2006-07-01",
       "publication": "2006-07-01",
       "revision": "2025-12-10",
-      "metadata": "2026-02-02"
+      "metadata": "2026-02-24"
     },
     "responsibleParties": [
       {
@@ -156,10 +156,10 @@
       "statement": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning."
     }
   },
-  "maintenance": {
-    "maintenanceFrequency": "Etter behov",
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Etter behov",
     "maintenanceNote": "Forvaltningsmessig saksbehandling. Analyse og presentasjon i et GIS-system. Presentasjon av statistikk og analyser. Produksjon av kart og avledede produkter. Saksbehandling på lokalt og regionalt plan etter plan- og bygningsloven.",
-    "status": "Kontinuerlig oppdatert"
+    "maintenanceAndUpdateStatement": "Kontinuerlig oppdatert"
   },
   "portrayal": {
     "legendDescriptionUrl": "https://register.geonorge.no/tegneregler/administrative-enheter-norge"
@@ -202,7 +202,7 @@
   "metadata": {
     "standard": "ISO19115",
     "standardVersion": "2003",
-    "metadataDate": "2026-02-02",
+    "metadataDate": "2026-02-24",
     "language": "nor",
     "pointOfContact": {
       "organization": "Kartverket",

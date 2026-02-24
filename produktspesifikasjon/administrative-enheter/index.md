@@ -181,7 +181,7 @@ Datasettet er basert på administrativ datafangst gjennom stortingsvdetak angåe
 
 **Standardversjon**: 2003
 
-**Metadatadato**: 2026-02-02
+**Metadatadato**: 2026-02-24
 
 **språk**: nor
 
