@@ -10,7 +10,7 @@ scopes:
   - name: OGC API Features - strømme-API
     url: https://ogcapitest.ngu.no/rest/services/marinlandskap/collections
     generator: ogc_feature_api
-    description: Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i hebhold til en enklere datamodell enn nedlastbare filleveranser. 
+    description: Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i henhold til en enklere datamodell enn nedlastbare filleveranser. 
 #include_only_features:
 #  - Uttak
 #
