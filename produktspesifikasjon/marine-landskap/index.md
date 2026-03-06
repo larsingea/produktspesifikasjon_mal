@@ -102,11 +102,18 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
   - **Nivå**: dataset
   - **Utstrekning**: - **Beskrivelse**: National
   - **Nivåbeskrivelse**:
-    #### Filleveranse
-    Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+ 
+- **Omfang**:
 
-    #### OGC API Features - strømme-API
-    Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i hebhold til en enklere datamodell enn nedlastbare filleveranser.
+  - **Identifikasjon**: Filleveranse
+  - **Nivå**: datasett
+  - **Nivåbeskrivelse**: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+
+- **Omfang**:
+
+  - **Identifikasjon**: OGC API Features - strømme-API
+  - **Nivå**: tjeneste
+  - **Nivåbeskrivelse**: Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i hebhold til en enklere datamodell enn nedlastbare filleveranser.
 
 ## Innhold og struktur
 
