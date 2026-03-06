@@ -1,0 +1,26 @@
+metadataId: a7cb6545-b8ae-411b-b4e8-4808863dfa74
+output_directory: produktspesifikasjon
+product_slug: sedimentasjonsrater_havbunn
+updated: 2025-03-05
+# 
+# ogc_feature_api: https://ogcapitest.kartverket.no/rest/services/havnedata3_0/collections
+# xmi_url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Havnedata_testing.xml
+#include_only_features:
+#  - Uttak
+#
+#scopes: 
+#- name: Filleveranser
+#  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Havnedata_testing.xml
+#  generator: xmi
+#  description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
+#- name: Innsynstjeneste (API)
+#  url: https://ogcapitest.kartverket.no/rest/services/havnedata3_0/collections
+#  generator: ogc_feature_api
+#  description: Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
+#   - name: bergrettigheter
+#     url: https://dirmin.no/kart/server/wfs3/
+#     generator: ogc_feature_api  
+#     description: Tjeneste for innsyn i bergrettigheter.
+#     include_only_features:
+#       - Undersoekelsesrett
+#       - Utvinningsrett
