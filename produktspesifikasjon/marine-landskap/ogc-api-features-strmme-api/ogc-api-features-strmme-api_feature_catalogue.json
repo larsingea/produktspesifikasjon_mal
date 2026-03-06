@@ -1,0 +1,506 @@
+[
+  {
+    "name": "3.1) Dataavgrensning (marine landskap) - tilpasset datamodell",
+    "description": "Generell avgrensningslinje, f.eks. mellom datasett med ulik kvalitet, innhold eller detaljering. Dette datasettet kan også leveres som GML.",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-linestring",
+      "crs": [
+        "#/crs",
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/4258",
+      "format": "geometry-linestring",
+      "ogcRole": "primary-geometry"
+    },
+    "attributes": [
+      {
+        "name": "lokalid",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Dataavgrensning-ID",
+        "ogcRole": "id"
+      },
+      {
+        "name": "identifikasjon",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "lokalid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "lokalId"
+          },
+          {
+            "name": "navnerom",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "navnerom"
+          },
+          {
+            "name": "versjonid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "versjonid"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3.2) Dataavgrensning (marine landskap) - flat datastruktur",
+    "description": "Generell avgrensningslinje, f.eks. mellom datasett med ulik kvalitet, innhold eller detaljering. Dette datasettet er tilpasset import i generelle GIS-verktøy.",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-linestring",
+      "crs": [
+        "#/crs",
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/4258",
+      "format": "geometry-linestring",
+      "ogcRole": "primary-geometry"
+    },
+    "attributes": [
+      {
+        "name": "lokalid",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Dataavgrensning-ID",
+        "ogcRole": "id"
+      },
+      {
+        "name": "identifikasjon",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "lokalid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "lokalId"
+          },
+          {
+            "name": "navnerom",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "navnerom"
+          },
+          {
+            "name": "versjonid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "versjonid"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "1.1) Marine landskap, flate - tilpasset datamodell",
+    "description": "Datasettet viser en inndeling av havområdene i ulike marine landskap, definert som større geografiske områder med enhetlig visuelt preg. Klassifiseringen er basert på lavoppløselige batymetridata. Detaljnivået på datasettet tilsier bruk i kartmålestokk 1:100 000 - 1:2 000 000. Dette datasettet kan også leveres som GML.\n",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-polygon",
+      "crs": [
+        "#/crs",
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/4258",
+      "format": "geometry-polygon",
+      "ogcRole": "primary-geometry"
+    },
+    "attributes": [
+      {
+        "name": "lokalid",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Marine landskap flate-id",
+        "ogcRole": "id"
+      },
+      {
+        "name": "identifikasjon",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "lokalid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "lokalId"
+          },
+          {
+            "name": "navnerom",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "navnerom"
+          },
+          {
+            "name": "versjonid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "versjonid"
+          }
+        ]
+      },
+      {
+        "name": "datauttaksdato",
+        "type": "date (string)",
+        "cardinality": "0..1",
+        "description": "Data-uttaksdato",
+        "ogcRole": "primary-instant"
+      },
+      {
+        "name": "forstedigitaliseringsdato",
+        "type": "date (string)",
+        "cardinality": "0..1",
+        "description": "Første digitaliseringsdato"
+      },
+      {
+        "name": "landskaptype",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Landskapstype"
+      },
+      {
+        "name": "landskaptypenavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Landskapstypenavn"
+      },
+      {
+        "name": "egnetmalestokk",
+        "type": "integer",
+        "cardinality": "0..1",
+        "description": "Egnet målestokk"
+      }
+    ]
+  },
+  {
+    "name": "1.2) Marine landskap, flate - flat datastruktur",
+    "description": "Datasettet viser en inndeling av havområdene i ulike marine landskap, definert som større geografiske områder med enhetlig visuelt preg. Klassifiseringen er basert på lavoppløselige batymetridata. Detaljnivået på datasettet tilsier bruk i kartmålestokk 1:100 000 - 1:2 000 000. Dette datasettet er tilpasset import i generelle GIS-verktøy.",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-polygon",
+      "crs": [
+        "#/crs",
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/4258",
+      "format": "geometry-polygon",
+      "ogcRole": "primary-geometry"
+    },
+    "attributes": [
+      {
+        "name": "lokalid",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Marine landskap flate-id",
+        "ogcRole": "id"
+      },
+      {
+        "name": "identifikasjon",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "lokalid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "lokalId"
+          },
+          {
+            "name": "navnerom",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "navnerom"
+          },
+          {
+            "name": "versjonid",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "versjonid"
+          }
+        ]
+      },
+      {
+        "name": "datauttaksdato",
+        "type": "date (string)",
+        "cardinality": "0..1",
+        "description": "Data-uttaksdato",
+        "ogcRole": "primary-instant"
+      },
+      {
+        "name": "forstedigitaliseringsdato",
+        "type": "date (string)",
+        "cardinality": "0..1",
+        "description": "Første digitaliseringsdato"
+      },
+      {
+        "name": "landskaptype",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Landskapstype"
+      },
+      {
+        "name": "landskaptypenavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Landskapstypenavn"
+      },
+      {
+        "name": "egnetmalestokk",
+        "type": "integer",
+        "cardinality": "0..1",
+        "description": "Egnet målestokk"
+      }
+    ]
+  },
+  {
+    "name": "2.1) Marine landskap, grense - tilpasset datamodell",
+    "description": "Datasettet viser grenselinjene for inndeling av havområdene i ulike marine landskap, definert som større geografiske områder med enhetlig visuelt preg. Klassifiseringen er basert på lavoppløselige batymetridata. Detaljnivået på datasettet tilsier bruk i kartmålestokk 1:100 000 - 1:2 000 000. Dette datasettet kan også leveres som GML.\n",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-polygon",
+      "crs": [
+        "#/crs",
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/4258",
+      "format": "geometry-polygon",
+      "ogcRole": "primary-geometry"
+    },
+    "attributes": [
+      {
+        "name": "lokalid",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Marine landskap grense-id",
+        "ogcRole": "id"
+      },
+      {
+        "name": "datauttaksdato",
+        "type": "date-time (string)",
+        "cardinality": "0..1",
+        "description": "Data-uttaksdato",
+        "ogcRole": "primary-instant"
+      },
+      {
+        "name": "forstedigitaliseringsdato",
+        "type": "date-time (string)",
+        "cardinality": "0..1",
+        "description": "Første digitaliseringsdato"
+      },
+      {
+        "name": "kvalitet",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "malemetode",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "Målemetode"
+          },
+          {
+            "name": "malemetodenavn",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "Målemetodenavn"
+          },
+          {
+            "name": "noyaktighet",
+            "type": "integer",
+            "cardinality": "0..1",
+            "description": "Nøyaktighet"
+          }
+        ]
+      },
+      {
+        "name": "medium",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Medium"
+      },
+      {
+        "name": "mediumnavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Mediumnavn"
+      },
+      {
+        "name": "opphav",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Opphav"
+      },
+      {
+        "name": "geolpavisningstype",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Geologisk påvisningstype"
+      },
+      {
+        "name": "geolpavisningstypenavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Geologisk påvisningstypenavn"
+      },
+      {
+        "name": "temakvalitet",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Temakvalitet"
+      },
+      {
+        "name": "identifikasjon",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "lokalId"
+          },
+          {
+            "name": "navnerom",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "navnerom"
+          },
+          {
+            "name": "versjonId",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "versjonid"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2.2) Marine landskap, grense - flat datastruktur",
+    "description": "Datasettet viser grenselinjene for inndeling av havområdene i ulike marine landskap, definert som større geografiske områder med enhetlig visuelt preg. Klassifiseringen er basert på lavoppløselige batymetridata. Detaljnivået på datasettet tilsier bruk i kartmålestokk 1:100 000 - 1:2 000 000. Dette datasettet er tilpasset import i generelle GIS-verktøy.\n",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-polygon",
+      "crs": [
+        "#/crs",
+        "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/4258",
+      "format": "geometry-polygon",
+      "ogcRole": "primary-geometry"
+    },
+    "attributes": [
+      {
+        "name": "lokalid",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Marine landskap grense-id",
+        "ogcRole": "id"
+      },
+      {
+        "name": "datauttaksdato",
+        "type": "date-time (string)",
+        "cardinality": "0..1",
+        "description": "Data-uttaksdato",
+        "ogcRole": "primary-instant"
+      },
+      {
+        "name": "forstedigitaliseringsdato",
+        "type": "date-time (string)",
+        "cardinality": "0..1",
+        "description": "Første digitaliseringsdato"
+      },
+      {
+        "name": "kvalitet",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "malemetode",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "Målemetode"
+          },
+          {
+            "name": "malemetodenavn",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "Målemetodenavn"
+          },
+          {
+            "name": "noyaktighet",
+            "type": "integer",
+            "cardinality": "0..1",
+            "description": "Nøyaktighet"
+          }
+        ]
+      },
+      {
+        "name": "medium",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Medium"
+      },
+      {
+        "name": "mediumnavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Mediumnavn"
+      },
+      {
+        "name": "opphav",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Opphav"
+      },
+      {
+        "name": "geolpavisningstype",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Geologisk påvisningstype"
+      },
+      {
+        "name": "geolpavisningstypenavn",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Geologisk påvisningstypenavn"
+      },
+      {
+        "name": "temakvalitet",
+        "type": "string",
+        "cardinality": "0..1",
+        "description": "Temakvalitet"
+      },
+      {
+        "name": "identifikasjon",
+        "type": "object",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "lokalId"
+          },
+          {
+            "name": "navnerom",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "navnerom"
+          },
+          {
+            "name": "versjonId",
+            "type": "string",
+            "cardinality": "0..1",
+            "description": "versjonid"
+          }
+        ]
+      }
+    ]
+  }
+]

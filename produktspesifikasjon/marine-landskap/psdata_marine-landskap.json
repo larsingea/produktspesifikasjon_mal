@@ -1,0 +1,410 @@
+{
+  "title": "Marine landformer",
+  "date": {
+    "creation": "2007-08-15",
+    "revision": "2012-04-28"
+  },
+  "language": "nor",
+  "contact": {
+    "individualName": "Daniel Wiberg",
+    "organizationName": "Norges geologiske undersøkelse",
+    "logo": "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png",
+    "electronicMailAddress": "Daniel.Wiberg@ngu.no",
+    "role": "owner"
+  },
+  "identificationSection": {
+    "title": "Marine landformer",
+    "abstract": "Datasettet viser en rekke landskapsformer på havbunnen på norsk kontinentalsokkel og i fjordene. Landformer kan være dannet under påvirkning av is (morenerygger, isfjellpløyemerker osv), ved utglidninger a sedimenter (skredformer), formet av bunnstrømmer (sandbølger) osv. Tolkningen er basert å detaljerte dybdedata og sedimentdata.",
+    "purpose": {
+      "summary": "Kunnskap om landformer på havbunnen gir oss forståelse av prosessene i det marine miljø, både de som formet havbunnen under og rett etter istiden, og de som påvirker havbunnen i dag.",
+      "useCase": {
+        "name": "Bruksområde",
+        "summary": "Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, sårbarhetsanalyser, habitatskartlegging, i forbindelse med installasjoner på sjøbunnen osv."
+      }
+    },
+    "topicCategory": [
+      "Geovitenskapelig informasjon"
+    ],
+    "spatialRepresentationType": "Vektor",
+    "spatialResolution": {
+      "equivalentScale": "100000"
+    },
+    "supplementalInformation": "Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedimentdata.",
+    "uniqueId": "5e8d9286-4d94-4e95-8546-2ef4b891c007",
+    "keyword": [
+      "landformer",
+      "landform",
+      "terrengform",
+      "terreng",
+      "morfologi",
+      "dybde",
+      "ekkolodd",
+      "geologi",
+      "habitat",
+      "hav",
+      "havbunn",
+      "kartlegging",
+      "løsmasser",
+      "marin",
+      "maringeologi",
+      "natur",
+      "naturtype",
+      "prosesser",
+      "undervanns",
+      "sediment",
+      "sjøbunn",
+      "ras",
+      "skred",
+      "kanal",
+      "morene",
+      "morenerygg",
+      "sandbølge",
+      "gjel",
+      "isfjellpløyemerke",
+      "marine",
+      "landskap",
+      "Norge",
+      "Barentshavet",
+      "Norskehavet",
+      "Rijpfjorden",
+      "Kongsfjorden",
+      "Trondheimsfjorden",
+      "Drammensfjorden",
+      "Havområder",
+      "Inspire",
+      "Norge digitalt",
+      "geodataloven",
+      "Mareano",
+      "ØkologiskGrunnkart",
+      "MarineGrunnkart",
+      "modellbaserteVegprosjekter",
+      "fellesDatakatalog",
+      "NGU"
+    ],
+    "restriction": {
+      "resourceConstraints": {
+        "useLimitations": "Detaljnivået på datasettet tilsier bruk innenfor kartmålestokken: 1:50.000 - 1:250.000."
+      },
+      "legalConstraints": {
+        "accessConstraints": "Åpne data",
+        "useConstraints": "Lisens",
+        "license": "Norsk lisens for offentlige data (NLOD)",
+        "licenseUrl": "http://data.norge.no/nlod/no/1.0"
+      }
+    },
+    "contact": [
+      {
+        "individualName": "Daniel Wiberg",
+        "organizationName": "Norges geologiske undersøkelse",
+        "electronicMailAddress": "Daniel.Wiberg@ngu.no",
+        "role": "owner"
+      },
+      {
+        "individualName": "Janne Grete Wesche",
+        "organizationName": "Norges geologiske undersøkelse",
+        "electronicMailAddress": "Janne.Wesche@ngu.no",
+        "role": "pointOfContact"
+      },
+      {
+        "individualName": "Aave Lepland",
+        "organizationName": "Norges geologiske undersøkelse",
+        "electronicMailAddress": "Aave.Lepland@ngu.no",
+        "role": "publisher"
+      }
+    ],
+    "maintenance": "Etter behov",
+    "extent": {
+      "geographicElement": {
+        "westBoundLongitude": "-6.7",
+        "eastBoundLongitude": "32.0",
+        "southBoundLatitude": "57.0",
+        "northBoundLatitude": "82.0"
+      },
+      "temporalElement": {
+        "timePeriod": {
+          "beginPosition": "2007-08-15",
+          "endPosition": "2012-04-28"
+        }
+      }
+    },
+    "date": {
+      "creation": "2007-08-15",
+      "publication": "2007-08-15",
+      "revision": "2012-04-28"
+    },
+    "language": "nor"
+  },
+  "scopeSection": [
+    {
+      "specificationScope": {
+        "scopeIdentification": "hele datasettet",
+        "level": "dataset",
+        "extent": {
+          "description": "National"
+        },
+        "levelDescription": "#### Filleveranse\nFiler levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.\n\n#### OGC API Features - strømme-API\nTjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i hebhold til en enklere datamodell enn nedlastbare filleveranser."
+      }
+    }
+  ],
+  "dataContentAndStructureSection": {
+    "narrativeDescription": "Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, sårbarhetsanalyser, habitatskartlegging, i forbindelse med installasjoner på sjøbunnen osv."
+  },
+  "referenceSystemSection": {
+    "spatialReferenceSystem": [
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:32632",
+        "name": "WGS84 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:32633",
+        "name": "WGS84 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:32635",
+        "name": "WGS84 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:4326",
+        "name": "WGS84 Geografisk"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      }
+    ]
+  },
+  "dataQualitySection": {
+    "scope": {
+      "level": "dataset"
+    },
+    "report": [
+      {
+        "nameOfMeasure": "COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
+        "measureDescription": "Datasettet er i henhold til nasjonal produktspesifikasjon",
+        "descriptiveResult": "Datasettet er i henhold til nasjonal produktspesifikasjon"
+      },
+      {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "91"
+      },
+      {
+        "nameOfMeasure": "Prosentvis dekning i forhold til datasettets utstrekning",
+        "measureDescription": "Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning",
+        "result": "50"
+      },
+      {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "91"
+      },
+      {
+        "nameOfMeasure": "FAIR",
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 91%"
+      },
+      {
+        "nameOfMeasure": "Coverage",
+        "result": "Prosentvis dekning i forhold til datasettets utstrekning: 50%"
+      }
+    ],
+    "resourceLineage": {
+      "statement": "Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedimentdata."
+    }
+  },
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Etter behov",
+    "maintenanceAndUpdateStatement": "Kontinuerlig oppdatert"
+  },
+  "dataCaptureAndProductionSection": {
+    "DataAcquisitionAndProcessing": {
+      "processStep": [
+        {
+          "description": "Datasettet er tolket og digitalisert av NGU, men grunnlaget for tolkninger er data fra Norges geologiske undersøkelse (NGU), Statens kartverk sjødivisjonen (SKS), Havforskningsinstituttet (HI), Forsvarets Forskningsinstitutt (FFI). Datatemaet Marine landformer er basert på kornstørrelsesdata, tolkning av video og prøver av sjøbunnen, tolkning av digitale reflektivitetsdata, samt tolkning av digitale seismiske data. Detaljerte vanndypsdata har inngått som støtte i tolkningen. Dataene er digitalisert og tilrettelagt vha. ArcGIS verktøy. Metodikken er beskrevet i egenskapsfeltene Målemetode og Geopåvisningtype."
+        }
+      ]
+    }
+  },
+  "portrayal": {
+    "name": "Tegneregler",
+    "linkage": "https://register.geonorge.no/register/versjoner/tegneregler/norges-geologiske-undersøkelse/marine-landformer"
+  },
+  "deliverySection": [
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, landsfiler, kommunevis",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "https://nedlasting.ngu.no/api/atom/0f7c4324-e50d-4b68-b2b8-d10dcfaa05f7",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "FGDB"
+          },
+          {
+            "formatName": "Shape"
+          },
+          {
+            "formatName": "SOSI"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, landsfiler, kommunevis",
+          "deliveryMediumName": "Egen nedlastningsside",
+          "deliveryService": {
+            "serviceEndpoint": "http://geo.ngu.no/download/order?dataset=710",
+            "serviceProperty": {
+              "type": "Egen nedlastningsside",
+              "value": "WWW:DOWNLOAD-1.0-http--download"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "FGDB"
+          },
+          {
+            "formatName": "Shape"
+          },
+          {
+            "formatName": "SOSI"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, landsfiler, kommunevis",
+          "deliveryMediumName": "WMS-tjeneste",
+          "deliveryService": {
+            "serviceEndpoint": "https://geo.ngu.no/mapserver/MarinTerrengWMS2?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0",
+            "serviceProperty": {
+              "type": "WMS-tjeneste",
+              "value": "OGC:WMS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Marine landformer WMS",
+          "deliveryService": {
+            "serviceEndpoint": "https://geo.ngu.no/mapserver/MarinTerrengWMS2?request=GetCapabilities&service=WMS&version=1.3.0",
+            "serviceProperty": {
+              "type": "Marine landformer WMS",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "image/png",
+            "version": "1"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Marine landformer",
+          "deliveryService": {
+            "serviceEndpoint": "https://geo.ngu.no/mapserver/MarinTerrengWMS2?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0",
+            "serviceProperty": {
+              "type": "Marine landformer",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "[{}]"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
+    }
+  ],
+  "metadataSection": {
+    "metadataStandard": "ISO19115",
+    "metadataStandardVersion": "2003",
+    "metadataDate": "2025-03-04",
+    "language": "nor",
+    "contact": {
+      "organizationName": "Norges geologiske undersøkelse",
+      "individualName": "Janne Grete Wesche",
+      "logo": "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png",
+      "electronicMailAddress": "Janne.Wesche@ngu.no",
+      "role": "pointOfContact"
+    },
+    "metadataIdentifier": {
+      "authority": "Geonorge",
+      "code": "5e8d9286-4d94-4e95-8546-2ef4b891c007",
+      "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/5e8d9286-4d94-4e95-8546-2ef4b891c007"
+    },
+    "links": [
+      {
+        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=5e8d9286-4d94-4e95-8546-2ef4b891c007",
+        "rel": "describedby",
+        "type": "application/xml",
+        "title": "Metadata (ISO 19139)"
+      },
+      {
+        "href": "http://www.mareano.no/tema/marine-landformer",
+        "rel": "about",
+        "type": "text/html",
+        "title": "Produktside"
+      },
+      {
+        "href": "http://geo.ngu.no/download/order?dataset=710",
+        "rel": "enclosure",
+        "type": "text/html",
+        "title": "Nedlasting"
+      },
+      {
+        "href": "https://geo.ngu.no/mapserver/MarinTerrengWMS2?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0",
+        "rel": "alternate",
+        "type": "text/html",
+        "title": "Kartvisning"
+      },
+      {
+        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://geo.ngu.no/mapserver/MarinTerrengWMS2",
+        "rel": "service",
+        "type": "text/html",
+        "title": "Tjeneste"
+      },
+      {
+        "href": "https://geo.ngu.no/mapserver/MarinTerrengWMS2?request=GetCapabilities&service=WMS&version=1.3.0",
+        "rel": "service",
+        "type": "application/xml",
+        "title": "Tjeneste-distribusjon"
+      }
+    ]
+  }
+}
