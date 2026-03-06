@@ -1,0 +1,76 @@
+@startuml
+title Marine landformer - Filleveranse - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class MarinLandskapsgrense <<featureType>> {
+    + geolPavisningstype [1] : GeolPavisningstype
+    + geolPavisningstypeNavn [1] : CharacterString
+    + temakvalitet [1] : TemaKvalitet
+    + datauttaksdato [1] : Date
+    + førsteDigitaliseringsdato [1] : Date
+    + oppdateringsdato [0..1] : Date
+    + kvalitet [1] : Posisjonskvalitet
+    + medium [1] : Medium
+    + mediumNavn [1] : CharacterString
+    + opphav [1] : CharacterString
+    + grense [1] : Kurve
+    + identifikasjon [0..1] : Identifikasjon
+  }
+
+  class MarinLandskap <<featureType>> {
+    + område [1] : Flate
+    + landskapType [1] : LandskapType
+    + landskapTypeNavn [1] : CharacterString
+    + egnetMålestokk [0..1] : Integer
+  }
+
+  abstract class FellesegenskaperLosmasse <<featureType>> {
+    ' Ingen attributter
+  }
+
+  abstract class LosmasseGrense <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class Identifikasjon {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+    + versjonId [1] : CharacterString
+  }
+
+  class Posisjonskvalitet {
+    + målemetode [1] : Målemetode
+    + målemetodeNavn [1] : CharacterString
+    + nøyaktighet [0..1] : Integer
+  }
+}
+
+  LosmasseGrense <|-- MarinLandskapsgrense
+  FellesegenskaperFlater <|-- MarinLandskap
+  MarinLandskap --> Dataavgrensning : avgrensning [0..*]
+  MarinLandskap --> MarinLandskapsgrense : avgrensning [0..*]
+  FellesegenskaperLosmasse <|-- LosmasseGrense
+
+@enduml

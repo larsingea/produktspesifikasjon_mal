@@ -1,0 +1,172 @@
+@startuml
+title Marine landformer - OGC API Features - strømme-API - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class "3.1) Dataavgrensning (marine landskap) - tilpasset datamodell" as 3_1__Dataavgrensning__marine_landskap____tilpasset_datamodell <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+
+    ..Geometri..
+    + geometry [1] : GM_Curve
+  }
+
+  3_1__Dataavgrensning__marine_landskap____tilpasset_datamodell *-- 3_1__Dataavgrensning__marine_landskap____tilpasset_datamodell_identifikasjon : identifikasjon [0..1]
+
+  class "3_1__Dataavgrensning__marine_landskap____tilpasset_datamodell_identifikasjon" as 3_1__Dataavgrensning__marine_landskap____tilpasset_datamodell_identifikasjon {
+    + identifikasjon.lokalid [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonid [0..1] : CharacterString
+  }
+
+  class "3.2) Dataavgrensning (marine landskap) - flat datastruktur" as 3_2__Dataavgrensning__marine_landskap____flat_datastruktur <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+
+    ..Geometri..
+    + geometry [1] : GM_Curve
+  }
+
+  3_2__Dataavgrensning__marine_landskap____flat_datastruktur *-- 3_2__Dataavgrensning__marine_landskap____flat_datastruktur_identifikasjon : identifikasjon [0..1]
+
+  class "3_2__Dataavgrensning__marine_landskap____flat_datastruktur_identifikasjon" as 3_2__Dataavgrensning__marine_landskap____flat_datastruktur_identifikasjon {
+    + identifikasjon.lokalid [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonid [0..1] : CharacterString
+  }
+
+  class "1.1) Marine landskap, flate - tilpasset datamodell" as 1_1__Marine_landskap__flate___tilpasset_datamodell <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datauttaksdato [0..1] : Date
+    + forstedigitaliseringsdato [0..1] : Date
+    + landskaptype [0..1] : CharacterString
+    + landskaptypenavn [0..1] : CharacterString
+    + egnetmalestokk [0..1] : Integer
+
+    ..Geometri..
+    + geometry [1] : GM_Surface
+  }
+
+  1_1__Marine_landskap__flate___tilpasset_datamodell *-- 1_1__Marine_landskap__flate___tilpasset_datamodell_identifikasjon : identifikasjon [0..1]
+
+  class "1_1__Marine_landskap__flate___tilpasset_datamodell_identifikasjon" as 1_1__Marine_landskap__flate___tilpasset_datamodell_identifikasjon {
+    + identifikasjon.lokalid [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonid [0..1] : CharacterString
+  }
+
+  class "1.2) Marine landskap, flate - flat datastruktur" as 1_2__Marine_landskap__flate___flat_datastruktur <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+    + datauttaksdato [0..1] : Date
+    + forstedigitaliseringsdato [0..1] : Date
+    + landskaptype [0..1] : CharacterString
+    + landskaptypenavn [0..1] : CharacterString
+    + egnetmalestokk [0..1] : Integer
+
+    ..Geometri..
+    + geometry [1] : GM_Surface
+  }
+
+  1_2__Marine_landskap__flate___flat_datastruktur *-- 1_2__Marine_landskap__flate___flat_datastruktur_identifikasjon : identifikasjon [0..1]
+
+  class "1_2__Marine_landskap__flate___flat_datastruktur_identifikasjon" as 1_2__Marine_landskap__flate___flat_datastruktur_identifikasjon {
+    + identifikasjon.lokalid [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonid [0..1] : CharacterString
+  }
+
+  class "2.1) Marine landskap, grense - tilpasset datamodell" as 2_1__Marine_landskap__grense___tilpasset_datamodell <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + datauttaksdato [0..1] : DateTime
+    + forstedigitaliseringsdato [0..1] : DateTime
+    + kvalitet [0..1] : Object
+    + medium [0..1] : CharacterString
+    + mediumnavn [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + geolpavisningstype [0..1] : CharacterString
+    + geolpavisningstypenavn [0..1] : CharacterString
+    + temakvalitet [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+
+    ..Geometri..
+    + geometry [1] : GM_Surface
+  }
+
+  2_1__Marine_landskap__grense___tilpasset_datamodell *-- 2_1__Marine_landskap__grense___tilpasset_datamodell_kvalitet : kvalitet [0..1]
+  2_1__Marine_landskap__grense___tilpasset_datamodell *-- 2_1__Marine_landskap__grense___tilpasset_datamodell_identifikasjon : identifikasjon [0..1]
+
+  class "2_1__Marine_landskap__grense___tilpasset_datamodell_kvalitet" as 2_1__Marine_landskap__grense___tilpasset_datamodell_kvalitet {
+    + kvalitet.malemetode [0..1] : CharacterString
+    + kvalitet.malemetodenavn [0..1] : CharacterString
+    + kvalitet.noyaktighet [0..1] : Integer
+  }
+
+  class "2_1__Marine_landskap__grense___tilpasset_datamodell_identifikasjon" as 2_1__Marine_landskap__grense___tilpasset_datamodell_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class "2.2) Marine landskap, grense - flat datastruktur" as 2_2__Marine_landskap__grense___flat_datastruktur <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + datauttaksdato [0..1] : DateTime
+    + forstedigitaliseringsdato [0..1] : DateTime
+    + kvalitet [0..1] : Object
+    + medium [0..1] : CharacterString
+    + mediumnavn [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + geolpavisningstype [0..1] : CharacterString
+    + geolpavisningstypenavn [0..1] : CharacterString
+    + temakvalitet [0..1] : CharacterString
+    + identifikasjon [0..1] : Object
+
+    ..Geometri..
+    + geometry [1] : GM_Surface
+  }
+
+  2_2__Marine_landskap__grense___flat_datastruktur *-- 2_2__Marine_landskap__grense___flat_datastruktur_kvalitet : kvalitet [0..1]
+  2_2__Marine_landskap__grense___flat_datastruktur *-- 2_2__Marine_landskap__grense___flat_datastruktur_identifikasjon : identifikasjon [0..1]
+
+  class "2_2__Marine_landskap__grense___flat_datastruktur_kvalitet" as 2_2__Marine_landskap__grense___flat_datastruktur_kvalitet {
+    + kvalitet.malemetode [0..1] : CharacterString
+    + kvalitet.malemetodenavn [0..1] : CharacterString
+    + kvalitet.noyaktighet [0..1] : Integer
+  }
+
+  class "2_2__Marine_landskap__grense___flat_datastruktur_identifikasjon" as 2_2__Marine_landskap__grense___flat_datastruktur_identifikasjon {
+    + identifikasjon.lokalId [0..1] : CharacterString
+    + identifikasjon.navnerom [0..1] : CharacterString
+    + identifikasjon.versjonId [0..1] : CharacterString
+  }
+
+  class object {
+    + lokalid [0..1] : CharacterString
+    + navnerom [0..1] : CharacterString
+    + versjonid [0..1] : CharacterString
+  }
+}
+
+@enduml
