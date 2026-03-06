@@ -1,0 +1,32 @@
+metadataId: 5e8d9286-4d94-4e95-8546-2ef4b891c007
+output_directory: produktspesifikasjon
+product_slug: marine_landskap
+updated: 2026-03-06
+scopes: 
+  - name: Filleveranse
+    url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/NGU/MarineLandskap-1.0.xml
+    generator: xmi
+    description: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+  - name: OGC API Features - strømme-API
+    url: https://ogcapitest.ngu.no/rest/services/marinlandskap/collections
+    generator: ogc_feature_api
+    description: Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i hebhold til en enklere datamodell enn nedlastbare filleveranser. 
+#include_only_features:
+#  - Uttak
+#
+# scopes: 
+#   - name: datafangst
+#     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Kommunal- og moderniseringsdepartementet/Arealplan/Arealplan 5.0/PlanleggingIgangsatt.xml
+#     generator: xmi
+#     description: Datamodellen brukes for å legge ved gml filer for planområdet som brukes i tjenesten for varsel om planoppstart.
+#   - name: innsynstjeneste
+#     url: https://ogcapitest.ngu.no/rest/services/marinlandskap/collections
+#     generator: ogc_feature_api
+#     description: Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
+#   - name: bergrettigheter
+#     url: https://dirmin.no/kart/server/wfs3/
+#     generator: ogc_feature_api  
+#     description: Tjeneste for innsyn i bergrettigheter.
+#     include_only_features:
+#       - Undersoekelsesrett
+#       - Utvinningsrett
