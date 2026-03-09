@@ -142,7 +142,7 @@
         "extent": {
           "description": "National"
         },
-        "levelDescription": "#### Filleveranse\nFiler levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.\n\n#### OGC API Features - strømme-API\nTjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i hebhold til en enklere datamodell enn nedlastbare filleveranser."
+        "levelDescription": "#### Filleveranse\nFiler levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.\n\n#### OGC API Features - strømme-API\nTjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i henhold til en enklere datamodell enn nedlastbare filleveranser."
       }
     }
   ],
