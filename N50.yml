@@ -28,7 +28,7 @@ updated: 2025-01-01
    - name: Stedsnavn
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Stedsnavn.xml
      generator: xmi 
-     description: 
+     description: Mangler beskrivelse på Stedsnavn
      
 #     include_only_features:
 #       - Undersoekelsesrett
