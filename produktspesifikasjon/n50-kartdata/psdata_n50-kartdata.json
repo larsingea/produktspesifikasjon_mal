@@ -125,7 +125,7 @@
         "extent": {
           "description": "National"
         },
-        "levelDescription": "#### Arealdekke\nArealdekke inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.\n\n#### Bygninger og anlegg\nBygninger og anlegg inneholder utelukkende menneskeskapte objekter.\n\n#### Høyde\nH�yde inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme\n\n#### Samferdsel\nSamferdsel inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer\n\n#### Stedsnavn"
+        "levelDescription": "#### Arealdekke\nArealdekke inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.\n\n#### Bygninger og anlegg\nBygninger og anlegg inneholder utelukkende menneskeskapte objekter.\n\n#### Høyde\nH�yde inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme\n\n#### Samferdsel\nSamferdsel inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer\n\n#### Stedsnavn\nMangler beskrivelse på Stedsnavn"
       }
     }
   ],
