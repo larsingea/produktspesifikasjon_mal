@@ -1,6 +1,6 @@
-metadataId: 041f1e6e-bdbc-4091-b48f-8a5990f3cc5b
+metadataId: ea192681-d039-42ec-b1bc-f3ce04c189ac
 output_directory: produktspesifikasjon
-product_slug: admenheter
+product_slug: N50 Kartdata
 updated: 2025-01-01
 # 
 #ogc_feature_api: https://kos-pygeoapi.atkv3-dev.kartverket.cloud/collections
@@ -8,19 +8,28 @@ updated: 2025-01-01
 #include_only_features:
 #  - Uttak
 #
-# scopes: 
-#   - name: datafangst
-#     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Kommunal- og moderniseringsdepartementet/Arealplan/Arealplan 5.0/PlanleggingIgangsatt.xml
-#     generator: xmi
-#     description: Datamodellen brukes for å legge ved gml filer for planområdet som brukes i tjenesten for varsel om planoppstart.
-#   - name: innsynstjeneste
-#     url: https://plandata.ft.dibk.no/services/planleggingigangsatt/collections
-#     generator: ogc_feature_api
-#     description: Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
-#   - name: bergrettigheter
-#     url: https://dirmin.no/kart/server/wfs3/
-#     generator: ogc_feature_api  
-#     description: Tjeneste for innsyn i bergrettigheter.
+ scopes: 
+   - name: Arealdekke
+     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Arealdekke.xml
+     generator: xmi
+     description: Arealdekke inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.
+   - name: Bygninger og anlegg
+     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Bygninger og anlegg.xml
+     generator: xmi
+     description: Bygninger og anlegg inneholder utelukkende menneskeskapte objekter.
+   - name: Høyde
+     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Høyde.xml
+     generator: xmi 
+     description: H�yde inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
+   - name: Samferdsel
+     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Samferdsel.xml
+     generator: xmi 
+     description: Samferdsel inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
+   - name: Stedsnavn
+     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Stedsnavn.xml
+     generator: xmi 
+     description: 
+     
 #     include_only_features:
 #       - Undersoekelsesrett
 #       - Utvinningsrett
