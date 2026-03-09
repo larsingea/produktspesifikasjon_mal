@@ -24,7 +24,7 @@ Havnedata
 
 ### Referansedato
 
-2026-03-02
+2026-03-07
 
 ### Ansvarlig organisasjon
 
@@ -95,7 +95,7 @@ Vektor
 
 - **Tidsperiode**:
   - **Fra**: 2021-03-02
-  - **Til**: 2026-03-02
+  - **Til**: 2026-03-07
 
 ### Begrensninger
 
@@ -301,7 +301,7 @@ Eksempler på bruksområder for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-05
+**Metadatadato**: 2026-03-09
 
 **språk**: nor
 
