@@ -111,6 +111,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
     Samferdsel inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
 
     #### Stedsnavn
+    Mangler beskrivelse på Stedsnavn
 
 ## Innhold og struktur
 
