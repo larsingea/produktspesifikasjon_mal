@@ -379,7 +379,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-09
+**Metadatadato**: 2026-03-10
 
 **språk**: nor
 
