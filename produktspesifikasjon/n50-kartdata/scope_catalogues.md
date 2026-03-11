@@ -1,3 +1,13 @@
+### Datamodell - Datamodell for kartdata
+
+
+
+[Objektkatalog - Datamodell for kartdata](datamodell-for-kartdata/objektkatalog.html)
+
+
+
+<a href="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" alt="Datamodell Datamodell for kartdata" style="max-width: 100%; height: auto;" /></a>
+
 ### Datamodell - Arealdekke
 
 
@@ -18,15 +28,15 @@
 
 <a href="bygninger-og-anlegg/bygninger-og-anlegg_feature_catalogue.png" title="Klikk for stor visning"><img src="bygninger-og-anlegg/bygninger-og-anlegg_feature_catalogue.png" alt="Datamodell Bygninger og anlegg" style="max-width: 100%; height: auto;" /></a>
 
-### Datamodell - Høyde
+### Datamodell - Hoyde
 
 
 
-[Objektkatalog - Høyde](hyde/objektkatalog.html)
+[Objektkatalog - Hoyde](hoyde/objektkatalog.html)
 
 
 
-<a href="hyde/hyde_feature_catalogue.png" title="Klikk for stor visning"><img src="hyde/hyde_feature_catalogue.png" alt="Datamodell Høyde" style="max-width: 100%; height: auto;" /></a>
+<a href="hoyde/hoyde_feature_catalogue.png" title="Klikk for stor visning"><img src="hoyde/hoyde_feature_catalogue.png" alt="Datamodell Hoyde" style="max-width: 100%; height: auto;" /></a>
 
 ### Datamodell - Samferdsel
 
