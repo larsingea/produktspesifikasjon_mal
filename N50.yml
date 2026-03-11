@@ -9,26 +9,30 @@ updated: 2025-01-01
 #  - Uttak
 #
  scopes: 
+   - name: Datamodell for kartdata
+     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50Kartdata20230401.xml
+     generator: xmi
+     description: Viser full modell for N50 kartdata
    - name: Arealdekke
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Arealdekke.xml
      generator: xmi
-     description: Arealdekke inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.
+     description: Temaet: "Arealdekke" inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.
    - name: Bygninger og anlegg
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Bygninger og anlegg.xml
      generator: xmi
-     description: Bygninger og anlegg inneholder utelukkende menneskeskapte objekter.
+     description: Temaet: "Bygninger og anlegg" inneholder utelukkende menneskeskapte objekter.
    - name: Høyde
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Høyde.xml
      generator: xmi 
-     description: H�yde inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
+     description: Temaet: "Høyde" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
    - name: Samferdsel
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Samferdsel.xml
      generator: xmi 
-     description: Samferdsel inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
+     description: Temaet: "Samferdsel" inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
    - name: Stedsnavn
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Stedsnavn.xml
      generator: xmi 
-     description: Mangler beskrivelse på Stedsnavn
+     description: Temaet: "Stedsnavn" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl.
      
 #     include_only_features:
 #       - Undersoekelsesrett
