@@ -98,24 +98,37 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
   - **Nivå**: dataset
   - **Utstrekning**: - **Beskrivelse**: National
   - **Nivåbeskrivelse**:
+    #### Datamodell for kartdata
+    Viser full modell for N50 kartdata
+
     #### Arealdekke
-    Arealdekke inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.
+    Temaet: "Arealdekke" inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.
 
     #### Bygninger og anlegg
-    Bygninger og anlegg inneholder utelukkende menneskeskapte objekter.
+    Temaet: "Bygninger og anlegg" inneholder utelukkende menneskeskapte objekter.
 
-    #### Høyde
-    H�yde inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
+    #### Hoyde
+    Temaet: "Høyde" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
 
     #### Samferdsel
-    Samferdsel inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
+    Temaet: "Samferdsel" inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
 
     #### Stedsnavn
-    Mangler beskrivelse på Stedsnavn
+    Temaet: "Stedsnavn" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl.
 
 ## Innhold og struktur
 
 **Beskrivelse**: Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, turkart/fritidskart, interaktive kart, som datagrunnlag for kartløsninger på internett og i analysesammenheng.
+
+### Datamodell - Datamodell for kartdata
+
+
+
+[Objektkatalog - Datamodell for kartdata](datamodell-for-kartdata/objektkatalog.html)
+
+
+
+<a href="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" alt="Datamodell Datamodell for kartdata" style="max-width: 100%; height: auto;" /></a>
 
 ### Datamodell - Arealdekke
 
@@ -137,15 +150,15 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
 
 <a href="bygninger-og-anlegg/bygninger-og-anlegg_feature_catalogue.png" title="Klikk for stor visning"><img src="bygninger-og-anlegg/bygninger-og-anlegg_feature_catalogue.png" alt="Datamodell Bygninger og anlegg" style="max-width: 100%; height: auto;" /></a>
 
-### Datamodell - Høyde
+### Datamodell - Hoyde
 
 
 
-[Objektkatalog - Høyde](hyde/objektkatalog.html)
+[Objektkatalog - Hoyde](hoyde/objektkatalog.html)
 
 
 
-<a href="hyde/hyde_feature_catalogue.png" title="Klikk for stor visning"><img src="hyde/hyde_feature_catalogue.png" alt="Datamodell Høyde" style="max-width: 100%; height: auto;" /></a>
+<a href="hoyde/hoyde_feature_catalogue.png" title="Klikk for stor visning"><img src="hoyde/hoyde_feature_catalogue.png" alt="Datamodell Hoyde" style="max-width: 100%; height: auto;" /></a>
 
 ### Datamodell - Samferdsel
 
