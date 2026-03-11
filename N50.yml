@@ -21,7 +21,7 @@ updated: 2025-01-01
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Bygninger og anlegg.xml
      generator: xmi
      description: Temaet: "Bygninger og anlegg" inneholder utelukkende menneskeskapte objekter.
-   - name: Høyde
+   - name: Hoyde
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Høyde.xml
      generator: xmi 
      description: Temaet: "Høyde" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
