@@ -1,0 +1,10 @@
+metadataId: dbae9aae-10e7-4b75-8d67-7f0e8828f3d8
+output_directory: produktspesifikasjon
+product_slug: Beredskap
+updated: 2026-03-11
+scopes: 
+  - name: Datamodell for hendelser
+    url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/DSB/Geografiske hendelser.xml
+    generator: xmi
+    description: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+  
