@@ -1,0 +1,9 @@
+metadataId: 28c28e3a-d88f-4a34-8c60-5efe6d56a44d
+output_directory: produktspesifikasjon
+product_slug: marine_landskap
+updated: 2026-03-06
+scopes: 
+  - name: Filleveranse
+    url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/NasjonaltGrunnkartForArealanalyse-20260101.xml
+    generator: xmi
+    description: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
