@@ -423,7 +423,7 @@ Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Ra
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-11
+**Metadatadato**: 2026-03-12
 
 **språk**: nor
 
