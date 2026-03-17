@@ -1,0 +1,53 @@
+@startuml
+title Bopliktsområder - Filleveranser - full modell - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class "Bopliktsområde" as Bopliktsomr_de <<featureType>> {
+    + bopliktsomrade [1] : GM_MultiSurface
+    + forskriftsreferanse [1] : CharacterString
+    + ikrafttredelse [1] : Date
+    + opphevelse [0..1] : Date
+    + kommunenavn [1] : CharacterString
+    + kommunenummer [1] : Kommunenummer
+    + delAvKommunen [1] : Boolean
+    + usikker [1] : Boolean
+    + malemetode [1] : Målemetode
+    + bebygdEiendom [1] : Boolean
+    + ikkeHelarsboligUnderOppforing [1] : Boolean
+    + ubebygdTomt [1] : Boolean
+    + unntakFraSlektskapsunntak [1] : Boolean
+    + andreAvgrensninger [0..1] : CharacterString
+    + identifikasjon [1] : Identifikasjon
+    + oppdateringsdato [1] : Date
+  }
+
+  class Identifikasjon {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+}
+
+@enduml
