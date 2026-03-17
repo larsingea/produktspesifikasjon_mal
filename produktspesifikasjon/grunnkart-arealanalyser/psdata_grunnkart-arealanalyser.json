@@ -26,7 +26,7 @@
     "spatialResolution": {
       "equivalentScale": "1:500 - 1:50000"
     },
-    "supplementalInformation": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nHvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: mailto: GISressurssenter@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: post@miljodir.no",
+    "supplementalInformation": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nHvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: post@miljodir.no",
     "uniqueId": "28c28e3a-d88f-4a34-8c60-5efe6d56a44d",
     "keyword": [
       "Grunnkart",
@@ -146,15 +146,15 @@
       {
         "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
         "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
-        "result": "86"
+        "result": "93"
       },
       {
         "nameOfMeasure": "FAIR",
-        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 86%"
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 93%"
       }
     ],
     "resourceLineage": {
-      "statement": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nHvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: mailto: GISressurssenter@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: post@miljodir.no"
+      "statement": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nHvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: post@miljodir.no"
     }
   },
   "maintenanceSection": {
@@ -207,7 +207,7 @@
           "unitsOfDelivery": "kommunevis",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
-            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealregnskap_AtomFeedFGDB.xml",
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedFGDB.xml",
             "serviceProperty": {
               "type": "Atom Feed",
               "value": "W3C:AtomFeed"
@@ -217,26 +217,6 @@
         "deliveryFormat": [
           {
             "formatName": "FGDB"
-          }
-        ]
-      }
-    },
-    {
-      "delivery": {
-        "deliveryMedium": {
-          "unitsOfDelivery": "kommunevis",
-          "deliveryMediumName": "Atom Feed",
-          "deliveryService": {
-            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealregnskap_AtomFeedGML.xml",
-            "serviceProperty": {
-              "type": "Atom Feed",
-              "value": "W3C:AtomFeed"
-            }
-          }
-        },
-        "deliveryFormat": [
-          {
-            "formatName": "GML"
           }
         ]
       }
@@ -306,7 +286,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-12",
+    "metadataDate": "2026-03-17",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",

@@ -108,7 +108,7 @@ Alle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller 
 
 For generelle spørsmål og spørsmål til metode: gisdrift@nibio.no
 
-For spørsmål knyttet til Arealbruk: mailto: GISressurssenter@ssb.no
+For spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no
 
 For spørsmål knyttet til Arealdekke: gisdrift@nibio.no
 
@@ -184,10 +184,10 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 - **Kvalitetsmål**: Prosentvis oppfyllelse av FAIR-prinsipper
   **Målebeskrivelse**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
-  **Resultat**: 86
+  **Resultat**: 93
 
 - **Kvalitetsmål**: FAIR
-  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 86%
+  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 93%
 
 **Beskrivelse**:
 Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.
@@ -197,7 +197,7 @@ Alle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller 
 
 For generelle spørsmål og spørsmål til metode: gisdrift@nibio.no
 
-For spørsmål knyttet til Arealbruk: mailto: GISressurssenter@ssb.no
+For spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no
 
 For spørsmål knyttet til Arealdekke: gisdrift@nibio.no
 
@@ -277,23 +277,11 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
     - **unitsOfDelivery**: kommunevis
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealregnskap_AtomFeedFGDB.xml>
+      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedFGDB.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
   - **Leveranseformat**: - **Formatnavn**: FGDB
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **unitsOfDelivery**: kommunevis
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealregnskap_AtomFeedGML.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GML
 
 - **Leveranse**:
 
@@ -339,7 +327,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-12
+**Metadatadato**: 2026-03-17
 
 **språk**: nor
 
