@@ -1,7 +1,7 @@
 {
   "title": "N50 Kartdata",
   "date": {
-    "revision": "2026-03-06"
+    "revision": "2026-03-13"
   },
   "language": "nor",
   "contact": {
@@ -107,13 +107,13 @@
       },
       "temporalElement": {
         "timePeriod": {
-          "beginPosition": "2026-03-06",
-          "endPosition": "2026-03-06"
+          "beginPosition": "2026-03-13",
+          "endPosition": "2026-03-13"
         }
       }
     },
     "date": {
-      "revision": "2026-03-06"
+      "revision": "2026-03-13"
     },
     "language": "nor"
   },
@@ -436,7 +436,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-12",
+    "metadataDate": "2026-03-17",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",

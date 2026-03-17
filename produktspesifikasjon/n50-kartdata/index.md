@@ -20,7 +20,7 @@ N50 Kartdata
 
 ### Referansedato
 
-2026-03-06
+2026-03-13
 
 ### Ansvarlig organisasjon
 
@@ -66,8 +66,8 @@ Vektor
 **Tidsmessig utstrekning**:
 
 - **Tidsperiode**:
-  - **Fra**: 2026-03-06
-  - **Til**: 2026-03-06
+  - **Fra**: 2026-03-13
+  - **Til**: 2026-03-13
 
 ### Tilleggsinformasjon
 
@@ -392,7 +392,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-12
+**Metadatadato**: 2026-03-17
 
 **språk**: nor
 
