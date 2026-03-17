@@ -9,7 +9,7 @@ updated: 2025-03-17
 #  - Uttak
 #
 scopes: 
-- name: Filleveranser
+- name: Filleveranser - full modell
   url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Landbruksdirektoratet/Bopliktsområder_20260101.xml
   generator: xmi
   description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
