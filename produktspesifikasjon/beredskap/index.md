@@ -24,7 +24,7 @@ Tilfluktsrom - Offentlige
 
 ### Referansedato
 
-2026-03-12
+2026-03-17
 
 ### Ansvarlig organisasjon
 
@@ -67,7 +67,7 @@ Vektor
 
 - **Tidsperiode**:
   - **Fra**: 2019-09-09
-  - **Til**: 2026-03-12
+  - **Til**: 2026-03-17
 
 ### Begrensninger
 
@@ -243,7 +243,7 @@ Vektor
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-12
+**Metadatadato**: 2026-03-17
 
 **språk**: nor
 
