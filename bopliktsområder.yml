@@ -1,0 +1,26 @@
+metadataId: 49415185-d99f-4546-b976-18cfbf167827
+output_directory: produktspesifikasjon
+product_slug: bopliktsområder
+updated: 2025-03-17
+# 
+# ogc_feature_api: https://ogcapitest.kartverket.no/rest/services/havnedata3_0/collections
+# xmi_url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Havnedata_testing.xml
+#include_only_features:
+#  - Uttak
+#
+scopes: 
+- name: Filleveranser
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Landbruksdirektoratet/Bopliktsområder_20260101.xml
+  generator: xmi
+  description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
+#- name: Innsynstjeneste (API)
+#  url: https://ogcapitest.kartverket.no/rest/services/havnedata3_0/collections
+#  generator: ogc_feature_api
+#  description: Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
+#   - name: bergrettigheter
+#     url: https://dirmin.no/kart/server/wfs3/
+#     generator: ogc_feature_api  
+#     description: Tjeneste for innsyn i bergrettigheter.
+#     include_only_features:
+#       - Undersoekelsesrett
+#       - Utvinningsrett
