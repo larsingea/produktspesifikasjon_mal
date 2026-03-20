@@ -7,63 +7,13 @@ logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
 
 # Produktspesifikasjon: Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
 
-## Generelt om spesifikasjonen
+*Datasettet gir en oversikt over sedimentasjonsrater i de øverste ti centimeterne av havbunnsedimenter i Nordsjøen og Skagerrak. Resultatene er kvantitative og er estimert med romlige modelleringsmetoder. Usikkerheten i de estimerte sedimentasjonsratene presenteres også.*
 
+**Nøkkelord:** hav, sjø, marin, sediment, løsmasse, avsetning, sedimentasjon, rate, prediksjon, modellering, geokjemi, Holocen, organisk, karbon, Nordsjøen, Skagerrak, Havområder, Mareano, fellesDatakatalog, Natur, Geologi
 
-### Unik identifisering
+**Emnekategorier:** Geovitenskapelig informasjon
 
-a7cb6545-b8ae-411b-b4e8-4808863dfa74
-
-#### Fullstendig navn
-
-Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
-
-### Referansedato
-
-2023-05-16
-
-### Ansvarlig organisasjon
-
-Norges geologiske undersøkelse
-
-### Språk
-
-nor
-
-### Hovedtema
-
-hav, sjø, marin, sediment, løsmasse, avsetning, sedimentasjon, rate, prediksjon, modellering, geokjemi, Holocen, organisk, karbon, Nordsjøen, Skagerrak, Havområder, Mareano, fellesDatakatalog, Natur, Geologi
-
-### Temakategori
-
-Geovitenskapelig informasjon
-
-### Sammendrag
-
-Datasettet gir en oversikt over sedimentasjonsrater i de øverste ti centimeterne av havbunnsedimenter i Nordsjøen og Skagerrak. Resultatene er kvantitative og er estimert med romlige modelleringsmetoder. Usikkerheten i de estimerte sedimentasjonsratene presenteres også.
-
-### Formål
-
-Formålet med kartet er å vise romlig variasjon i sedimentasjonsratene i havbunnsedimenter i Nordsjøen og Skagerrak. Sedimentasjonsrater angir avsetningshastigheten til sedimenter på havbunnen. Målenheten er centimeter per år. Sedimentasjonen i Nordsjøen og Skagerrak er hovedsakelig avgrenset til dype områder med lav påvirkning av bunnstrømmer og bølger. Usikkerheten viser hvor usikre modellestimatene er. Usikkerhet måles i samme enhet som den estimerte parameteren.
-
-### Bruksområde
-
-Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, habitatskartlegging, sårbarhetsanalyser, konsekvensutredninger i forbindelse med installasjoner på sjøbunnen osv.
-
-### Romlig representasjonstype
-
-Rasterbilde/digital terrengmodell
-
-### Romlig oppløsning
-
-**Avstand**:
-
-- **Måleenhet**: meter
-- **Verdi**: 500.0
-
-### Utstrekning
-
-**Geografisk utstrekning**:
+**Geografisk utstrekning:** **Geografisk utstrekning**:
 
 - **Vest**: -4.5
 - **Øst**: 12.0
@@ -76,13 +26,26 @@ Rasterbilde/digital terrengmodell
   - **Fra**: 2023-05-16
   - **Til**: 2023-05-16
 
-### Tilleggsinformasjon
+## Om spesifikasjonen
 
-Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Rasterdata, 500m-oppløsning.
 
-### Begrensninger
+**Unik identifikator:** a7cb6545-b8ae-411b-b4e8-4808863dfa74\
+**Fullstendig navn:** Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak\
+**Versjon:** \
+**Opprettet dato:** \
+**Endret dato:** 2023-05-16\
+**Språk:** nor\
+**Kontaktinformasjon:** Norges geologiske undersøkelse
 
-**Ressursbegrensninger**:
+## Om produktet Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
+
+
+**Romlig representasjonstype:** Rasterbilde/digital terrengmodell\
+**Romlig oppløsning:** **Avstand**:
+
+- **Måleenhet**: meter
+- **Verdi**: 500.0\
+**Begrensninger:** **Ressursbegrensninger**:
 
 - **Bruksbegrensninger**: Detaljnivået på de ulike data tilsier bruk innenfor kartmålestokken: 1:200 000 til 1:5 000 000
 
@@ -95,16 +58,25 @@ Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Ra
 
 **Sikkerhetsbegrensninger**:
 
-- **Klassifisering**: Ugradert
+- **Klassifisering**: Ugradert\
+**Kontaktinformasjon:** Norges geologiske undersøkelse
 
-## Spesifikasjonsomfang
+### Formål
+
+Formålet med kartet er å vise romlig variasjon i sedimentasjonsratene i havbunnsedimenter i Nordsjøen og Skagerrak. Sedimentasjonsrater angir avsetningshastigheten til sedimenter på havbunnen. Målenheten er centimeter per år. Sedimentasjonen i Nordsjøen og Skagerrak er hovedsakelig avgrenset til dype områder med lav påvirkning av bunnstrømmer og bølger. Usikkerheten viser hvor usikre modellestimatene er. Usikkerhet måles i samme enhet som den estimerte parameteren.
+
+### Bruksområde
+
+Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, habitatskartlegging, sårbarhetsanalyser, konsekvensutredninger i forbindelse med installasjoner på sjøbunnen osv.
+
+## Omfang
 
 - **Omfang**:
 
   - **Identifikasjon**: hele datasettet
   - **Nivå**: dataset
 
-## Innhold og struktur
+## Datainnhold og struktur
 
 **Beskrivelse**: Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, habitatskartlegging, sårbarhetsanalyser, konsekvensutredninger i forbindelse med installasjoner på sjøbunnen osv.
 
@@ -118,7 +90,7 @@ Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Ra
 - **kode**: EPSG:32633
   **navn**: WGS84 UTM sone 33, 2d
 
-## Kvalitet
+## Datakvalitet
 
 **Nivå**: dataset
 
@@ -138,13 +110,13 @@ Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Ra
 
 **Beskrivelse**: Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Rasterdata, 500m-oppløsning.
 
-## Datafangst
+## Datafangst og produksjon
 
 **Datainnsamling og prosessering**:
 
 - **Prosesstrinn**: - **Beskrivelse**: Sedimentasjonsrater og tilsvarende usikkerhet i estimater er predikert med maskinlæring. Resultatene er kvantitative og er estimert med romlige modelleringsmetoder. Det er brukt ulike datakilder, blant annet fra MAREANO, EMODnet, Bio-ORACLE og vitenskapelige publikasjoner.
 
-## Datavedlikehold
+## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Ikke planlagt
 
@@ -423,7 +395,7 @@ Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Ra
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-17
+**Metadatadato**: 2026-03-20
 
 **språk**: nor
 
@@ -472,3 +444,7 @@ Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Ra
   **relasjon**: service
   **type**: application/xml
   **tittel**: Tjeneste-distribusjon
+
+## Tilleggsinformasjon
+
+Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Rasterdata, 500m-oppløsning.
