@@ -2,7 +2,7 @@
   "title": "Nasjonalt grunnkart for arealanalyse - Årsversjon 2025",
   "date": {
     "creation": "2024-02-13",
-    "revision": "2026-03-05"
+    "revision": "2026-03-19"
   },
   "language": "nor",
   "contact": {
@@ -14,7 +14,7 @@
   },
   "identificationSection": {
     "title": "Nasjonalt grunnkart for arealanalyse - Årsversjon 2025",
-    "abstract": "Nasjonalt grunnkart for arealanalyse er tilgjengelig som **årsversjon 2025**. \nNå er GML, FGDB og Geopackage filer av årsversjon 2025 tilgjengelig for nedlasting. \n\n**Dersom du ønsker å se på Årsversjon 2025 av Grunnkartet, er den nye WMS-tjenesten tilgjengelig.** Mer informasjon om WMS-tjenesten finner du på https://kartkatalog.geonorge.no/Metadata/c7dc425b-60cd-42f7-a84e-202c7d7b912a. \n\n\n- - -\n\nGrunnkartet er utviklet i samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet, og er ment som et felles datagrunnlag for ulike typer arealanalyser.\n\nDatasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK), som viser arealressurs- og arealbruksdata, og innebærer ingen nykartlegging.  Kildedata som er brukt i denne versjonen var oppdatert per 01.01.2025. I tillegg til arealressurs- og arealbruksdata er det lagt inn økosysteminformasjon i henhold til Eurostats klassifikasjonssystem. Grunnkartet kan kobles med andre datakilder, som for eksempel arealplaner, og benyttes som grunnlag for ulike typer arealanalyser og arealregnskap. Les mer om datainnhold og metode under Prosesshistorie.\n\n\n**Rapporter**\n\n\n* Alle endringer som er implementert i Årsversjon 2025 er samlet i rapporten [Nasjonalt grunnkart for arealanalyse - Årsversjon 2025](https://doi.org/10.21350/4m2k-7z04)\n\n* Alle tilbakemeldinger til Testversjon 2 er samlet i rapporten [Nasjonalt grunnkart for arealanalyse, Testversjon 2 - Tilbakemeldinger og vurderinger](https://www.kartverket.no/globalassets/forskning-og-utvikling/rapporter/nasjonalt-grunnkart-for-arealanalyse-testversjon-2-tilbakemeldinger-og-vurderinger.pdf).\n\n* Alle endringer som er implementert i Testversjon 2 er samlet i rapporten [Testversjon 2 - Nasjonalt grunnkart for bruk i arealregnskap](https://hdl.handle.net/11250/3185743)\n\n* Alle tilbakemeldinger til Testversjon 1 er samlet i rapporten [Grunnkart for bruk i arealregnskap - Tilbakemeldinger, vurderinger og anbefalinger](https://www.kartverket.no/globalassets/forskning-og-utvikling/rapporter/rapport-grunnkart-for-bruk-i-arealregnskap-tilbakemeldinger-vurderinger-og-anbefalinger-2.pdf).\n\n* Les mer om metode og bruk av Grunnkartet i rapporten [Grunnkart for bruk i arealregnskap](https://hdl.handle.net/11250/3120510)",
+    "abstract": "Nasjonalt grunnkart for arealanalyse er tilgjengelig som **årsversjon 2025**. \nNå er GML, FGDB og Geopackage filer av årsversjon 2025 tilgjengelig for nedlasting. \n\n**Dersom du ønsker å se på Årsversjon 2025 av Grunnkartet, er den nye WMS-tjenesten tilgjengelig.** Mer informasjon om WMS-tjenesten finner du på https://kartkatalog.geonorge.no/Metadata/c7dc425b-60cd-42f7-a84e-202c7d7b912a. \n\n- - - \nVelkommen til **webinar om årsversjon 2025 torsdag 23. april 2026 kl 09.00 - 10.30.** \nDu får en orientering til Grunnkartet, samt en gjennomgang av nyhetene i årsversjonen. Det vil også vises nok eksempler på praktisk bruk av kartet. \n\nWebinaret er åpent for alle og det vil være mulig å stille spørsmål. \nHer kan du melde deg og følge webinaret: https://events.teams.microsoft.com/event/cc7eafa1-dcdd-492c-bde3-c30fd9cbf62e@7f74c8a2-43ce-46b2-b0e8-b6306cba73a3\n\nWebinaret blir ikke tatt opp. \n- - -\n\nGrunnkartet er utviklet i samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet, og er ment som et felles datagrunnlag for ulike typer arealanalyser.\n\nDatasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK), som viser arealressurs- og arealbruksdata, og innebærer ingen nykartlegging.  Kildedata som er brukt i denne versjonen var oppdatert per 01.01.2025. I tillegg til arealressurs- og arealbruksdata er det lagt inn økosysteminformasjon i henhold til Eurostats klassifikasjonssystem. Grunnkartet kan kobles med andre datakilder, som for eksempel arealplaner, og benyttes som grunnlag for ulike typer arealanalyser og arealregnskap. Les mer om datainnhold og metode under Prosesshistorie.\n\n\n**Rapporter**\n\n\n* Alle endringer som er implementert i Årsversjon 2025 er samlet i rapporten [Nasjonalt grunnkart for arealanalyse - Årsversjon 2025](https://doi.org/10.21350/4m2k-7z04)\n\n* Alle tilbakemeldinger til Testversjon 2 er samlet i rapporten [Nasjonalt grunnkart for arealanalyse, Testversjon 2 - Tilbakemeldinger og vurderinger](https://www.kartverket.no/globalassets/forskning-og-utvikling/rapporter/nasjonalt-grunnkart-for-arealanalyse-testversjon-2-tilbakemeldinger-og-vurderinger.pdf).\n\n* Alle endringer som er implementert i Testversjon 2 er samlet i rapporten [Testversjon 2 - Nasjonalt grunnkart for bruk i arealregnskap](https://hdl.handle.net/11250/3185743)\n\n* Alle tilbakemeldinger til Testversjon 1 er samlet i rapporten [Grunnkart for bruk i arealregnskap - Tilbakemeldinger, vurderinger og anbefalinger](https://www.kartverket.no/globalassets/forskning-og-utvikling/rapporter/rapport-grunnkart-for-bruk-i-arealregnskap-tilbakemeldinger-vurderinger-og-anbefalinger-2.pdf).\n\n* Les mer om metode og bruk av Grunnkartet i rapporten [Grunnkart for bruk i arealregnskap](https://hdl.handle.net/11250/3120510)",
     "purpose": {
       "summary": "Nasjonalt grunnkart for arealanalyse er en sammenstilling av grunnleggende datasett som danner basis for ulike typer arealregnskap. Formålet er å tilrettelegge data for kommunal og regional forvaltning, slik at blant annet kostnadskrevende dobbeltarbeid unngås. Et felles kartgrunnlag gjør det også enklere å sammenligne arealregnskap på tvers av sektorer. Dette gir kommuner og fylker, sammen med rådgivende firmaer, mulighet til å fokusere på å tilrettelegge supplerende temadata for å lage sektorspesifikke regnskap.",
       "useCase": {
@@ -81,14 +81,14 @@
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2024-02-13",
-          "endPosition": "2026-03-05"
+          "endPosition": "2026-03-19"
         }
       }
     },
     "date": {
       "creation": "2024-02-13",
       "publication": "2024-02-13",
-      "revision": "2026-03-05"
+      "revision": "2026-03-19"
     },
     "language": "nor"
   },
@@ -178,7 +178,7 @@
     {
       "delivery": {
         "deliveryMedium": {
-          "unitsOfDelivery": "kommunevis",
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Geonorge nedlastning",
           "deliveryService": {
             "serviceEndpoint": "https://nedlasting.geonorge.no/api/capabilities/",
@@ -204,7 +204,7 @@
     {
       "delivery": {
         "deliveryMedium": {
-          "unitsOfDelivery": "kommunevis",
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
             "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedFGDB.xml",
@@ -224,7 +224,7 @@
     {
       "delivery": {
         "deliveryMedium": {
-          "unitsOfDelivery": "kommunevis",
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
             "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGML.xml",
@@ -244,7 +244,7 @@
     {
       "delivery": {
         "deliveryMedium": {
-          "unitsOfDelivery": "kommunevis",
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
             "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGPKG.xml",
@@ -286,7 +286,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-17",
+    "metadataDate": "2026-03-20",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",

@@ -7,45 +7,19 @@ logo: "https://register.geonorge.no/data/organizations/971526920_SSB_liten.png"
 
 # Produktspesifikasjon: Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
 
-## Generelt om spesifikasjonen
-
-
-### Unik identifisering
-
-28c28e3a-d88f-4a34-8c60-5efe6d56a44d
-
-#### Fullstendig navn
-
-Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
-
-#### Versjon
-
-2024-02-13
-
-### Referansedato
-
-2026-03-05
-
-### Ansvarlig organisasjon
-
-Statistisk sentralbyrå
-
-### Språk
-
-nor
-
-### Hovedtema
-
-Grunnkart, Arealregnskap, Arealstatistikk, Økosystemtyper, Arealanalyse, Norges fastland for landsdekkende datasett, ØkologiskGrunnkart, Det offentlige kartgrunnlaget, geodataloven, arealplanerPBL, Plan
-
-### Sammendrag
-
-Nasjonalt grunnkart for arealanalyse er tilgjengelig som **årsversjon 2025**. 
+*Nasjonalt grunnkart for arealanalyse er tilgjengelig som **årsversjon 2025**. 
 Nå er GML, FGDB og Geopackage filer av årsversjon 2025 tilgjengelig for nedlasting. 
 
 **Dersom du ønsker å se på Årsversjon 2025 av Grunnkartet, er den nye WMS-tjenesten tilgjengelig.** Mer informasjon om WMS-tjenesten finner du på <https://kartkatalog.geonorge.no/Metadata/c7dc425b-60cd-42f7-a84e-202c7d7b912a>. 
 
+- - - 
+Velkommen til **webinar om årsversjon 2025 torsdag 23. april 2026 kl 09.00 - 10.30.** 
+Du får en orientering til Grunnkartet, samt en gjennomgang av nyhetene i årsversjonen. Det vil også vises nok eksempler på praktisk bruk av kartet. 
 
+Webinaret er åpent for alle og det vil være mulig å stille spørsmål. 
+Her kan du melde deg og følge webinaret: <https://events.teams.microsoft.com/event/cc7eafa1-dcdd-492c-bde3-c30fd9cbf62e@7f74c8a2-43ce-46b2-b0e8-b6306cba73a3>
+
+Webinaret blir ikke tatt opp. 
 - - -
 
 Grunnkartet er utviklet i samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet, og er ment som et felles datagrunnlag for ulike typer arealanalyser.
@@ -64,7 +38,49 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 
 * Alle tilbakemeldinger til Testversjon 1 er samlet i rapporten [Grunnkart for bruk i arealregnskap - Tilbakemeldinger, vurderinger og anbefalinger](https://www.kartverket.no/globalassets/forskning-og-utvikling/rapporter/rapport-grunnkart-for-bruk-i-arealregnskap-tilbakemeldinger-vurderinger-og-anbefalinger-2.pdf).
 
-* Les mer om metode og bruk av Grunnkartet i rapporten [Grunnkart for bruk i arealregnskap](https://hdl.handle.net/11250/3120510)
+* Les mer om metode og bruk av Grunnkartet i rapporten [Grunnkart for bruk i arealregnskap](https://hdl.handle.net/11250/3120510)*
+
+**Nøkkelord:** Grunnkart, Arealregnskap, Arealstatistikk, Økosystemtyper, Arealanalyse, Norges fastland for landsdekkende datasett, ØkologiskGrunnkart, Det offentlige kartgrunnlaget, geodataloven, arealplanerPBL, Plan
+
+**Emnekategorier:** 
+
+**Geografisk utstrekning:** **Geografisk utstrekning**:
+
+- **Vest**: 2.0
+- **Øst**: 33.0
+- **Sør**: 57.0
+- **Nord**: 72.0
+
+**Tidsmessig utstrekning**:
+
+- **Tidsperiode**:
+  - **Fra**: 2024-02-13
+  - **Til**: 2026-03-19
+
+## Om spesifikasjonen
+
+
+**Unik identifikator:** 28c28e3a-d88f-4a34-8c60-5efe6d56a44d\
+**Fullstendig navn:** Nasjonalt grunnkart for arealanalyse - Årsversjon 2025\
+**Versjon:** 2024-02-13\
+**Opprettet dato:** 2024-02-13\
+**Endret dato:** 2026-03-19\
+**Språk:** nor\
+**Kontaktinformasjon:** Statistisk sentralbyrå
+
+## Om produktet Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
+
+
+**Romlig representasjonstype:** Vektor\
+**Romlig oppløsning:** **Ekvivalent målestokk**: 1:500 - 1:50000\
+**Begrensninger:** **Juridiske begrensninger**:
+
+- **Tilgangsbegrensninger**: Norge digitalt begrenset
+- **Bruksbegrensninger**: Lisens
+- **Lisens**: Norge digitalt-lisens
+- **Lisenslenke**: <https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/>
+- **Andre begrensninger**: Wms-tjenesten er åpen for alle. Nedlastbare data er begrenset til Norge digitalt-parter.\
+**Kontaktinformasjon:** Statistisk sentralbyrå
 
 ### Formål
 
@@ -76,55 +92,7 @@ Grunnkartet kan brukes som grunnlag for etablering av arealanalyse, og kan suppl
 
 Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Årsversjonen 2025 av Grunnkartet supplerer og delvis erstatter datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.
 
-### Romlig representasjonstype
-
-Vektor
-
-### Romlig oppløsning
-
-**Ekvivalent målestokk**: 1:500 - 1:50000
-
-### Utstrekning
-
-**Geografisk utstrekning**:
-
-- **Vest**: 2.0
-- **Øst**: 33.0
-- **Sør**: 57.0
-- **Nord**: 72.0
-
-**Tidsmessig utstrekning**:
-
-- **Tidsperiode**:
-  - **Fra**: 2024-02-13
-  - **Til**: 2026-03-05
-
-### Tilleggsinformasjon
-
-Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.
-
-Hvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. 
-Alle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. 
-
-For generelle spørsmål og spørsmål til metode: gisdrift@nibio.no
-
-For spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no
-
-For spørsmål knyttet til Arealdekke: gisdrift@nibio.no
-
-For spørsmål knyttet til Økosystemtype: post@miljodir.no
-
-### Begrensninger
-
-**Juridiske begrensninger**:
-
-- **Tilgangsbegrensninger**: Norge digitalt begrenset
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: Norge digitalt-lisens
-- **Lisenslenke**: <https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/>
-- **Andre begrensninger**: Wms-tjenesten er åpen for alle. Nedlastbare data er begrenset til Norge digitalt-parter.
-
-## Spesifikasjonsomfang
+## Omfang
 
 - **Omfang**:
 
@@ -134,7 +102,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
     #### Filleveranse
     Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
-## Innhold og struktur
+## Datainnhold og struktur
 
 **Beskrivelse**:
 Grunnkartet kan brukes som grunnlag for etablering av arealanalyse, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. 
@@ -170,7 +138,7 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 - **kode**: EPSG:25832
   **navn**: EUREF89 UTM sone 32, 2d
 
-## Kvalitet
+## Datakvalitet
 
 **Nivå**: dataset
 
@@ -203,7 +171,7 @@ For spørsmål knyttet til Arealdekke: gisdrift@nibio.no
 
 For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
-## Datafangst
+## Datafangst og produksjon
 
 **Datainnsamling og prosessering**:
 
@@ -239,7 +207,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
     Eurostats økosystemklassifikasjon er beskrevet i [NIBIO rapport 9 (143) 2023 Hovedøkosystemkart for Norge](https://hdl.handle.net/11250/3106442)
     - - -
 
-## Datavedlikehold
+## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Årlig
 
@@ -257,7 +225,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: kommunevis
+    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Geonorge nedlastning
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
@@ -274,7 +242,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: kommunevis
+    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedFGDB.xml>
@@ -286,7 +254,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: kommunevis
+    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGML.xml>
@@ -298,7 +266,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: kommunevis
+    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGPKG.xml>
@@ -327,7 +295,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-17
+**Metadatadato**: 2026-03-20
 
 **språk**: nor
 
@@ -372,3 +340,18 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
   **relasjon**: service
   **type**: application/xml
   **tittel**: Tjeneste-distribusjon
+
+## Tilleggsinformasjon
+
+Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.
+
+Hvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. 
+Alle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. 
+
+For generelle spørsmål og spørsmål til metode: gisdrift@nibio.no
+
+For spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no
+
+For spørsmål knyttet til Arealdekke: gisdrift@nibio.no
+
+For spørsmål knyttet til Økosystemtype: post@miljodir.no
