@@ -43,7 +43,7 @@ package "Objekttyper" {
     + oppdateringsdato [1] : Date
   }
 
-  class Identifikasjon {
+  class Identifikasjon <<dataType>> {
     + lokalId [1] : CharacterString
     + navnerom [1] : CharacterString
     + versjonId [0..1] : CharacterString
