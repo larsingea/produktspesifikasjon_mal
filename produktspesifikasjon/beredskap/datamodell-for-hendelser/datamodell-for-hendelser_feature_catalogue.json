@@ -1,22 +1,36 @@
 [
   {
-    "name": "Felles",
-    "description": "Overordnet informasjon.",
+    "name": "VersjonertObjekt",
+    "description": "Informasjon som er direkte knyttet til hendelsen, men som ikke indikerer hendelsestype (se angitte verdier).",
     "attributes": [
       {
         "name": "identifikasjon",
-        "type": "uuid",
+        "type": "Identifikasjon",
         "description": "Unik ID.",
-        "cardinality": "1"
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "uuid",
+            "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
+            "cardinality": "1"
+          },
+          {
+            "name": "navnerom",
+            "type": "CharacterString",
+            "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
+            "cardinality": "1"
+          },
+          {
+            "name": "versjonId",
+            "type": "CharacterString",
+            "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans)",
+            "cardinality": "0..1"
+          }
+        ]
       },
       {
-        "name": "betegnelse",
-        "type": "CharacterString",
-        "description": "Navn eller beskrivelse av hendelsen.",
-        "cardinality": "0..1"
-      },
-      {
-        "name": "førsteRegistreringstidspunkt",
+        "name": "registreringstidspunkt",
         "type": "DateTime",
         "description": "Dato og tid for førstegangs-registrering av hendelsen.",
         "cardinality": "1"
@@ -25,7 +39,34 @@
         "name": "oppdateringstidspunkt",
         "type": "DateTime",
         "description": "Dato og tid for siste oppdatering.",
-        "cardinality": "1"
+        "cardinality": "0..1"
+      },
+      {
+        "name": "gyldigFra",
+        "type": "DateTime",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "gyldigTil",
+        "type": "DateTime",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Fellesegenskaper",
+    "description": "Overordnet informasjon.",
+    "attributes": [
+      {
+        "name": "kommentar",
+        "type": "CharacterString",
+        "description": "Mulighet for å legge inn kommentar som fritekst.",
+        "cardinality": "0..1"
       },
       {
         "name": "geometriobjekt",
@@ -34,9 +75,11 @@
         "cardinality": "0..1"
       }
     ],
-    "abstract": false,
+    "abstract": true,
     "relationships": {
-      "inheritance": [],
+      "inheritance": [
+        "VersjonertObjekt"
+      ],
       "associations": []
     }
   },
@@ -103,6 +146,12 @@
         "cardinality": "1"
       },
       {
+        "name": "betegnelse",
+        "type": "CharacterString",
+        "description": "Navn eller beskrivelse av hendelsen.",
+        "cardinality": "0..1"
+      },
+      {
         "name": "opphavsaktør",
         "type": "Hovedaktør",
         "description": "Den enhet som registrerer eller rapporterer en hendelse, begrenset til politi, brann, helse eller HRS.",
@@ -128,32 +177,6 @@
           ],
           "definition": "enhet som bidrar i å håndtere en hendelse, begrenset til politi, brann, helse eller HRS."
         }
-      },
-      {
-        "name": "innmelder",
-        "type": "Observatør",
-        "description": "Person eller sensor som varsler om en hendelse til nødetatene.",
-        "cardinality": "1..*",
-        "attributes": [
-          {
-            "name": "kontaktinformasjon",
-            "type": "CharacterStreng",
-            "description": "Kontaktinformasjon",
-            "cardinality": "1"
-          },
-          {
-            "name": "OPSoperatør",
-            "type": "Boolean",
-            "description": "Angir om operatøren er tilknyttet OPS.",
-            "cardinality": "1"
-          },
-          {
-            "name": "sensor",
-            "type": "Boolean",
-            "description": "om observasjonen er gjort fra en automatisk sensor.",
-            "cardinality": "1"
-          }
-        ]
       },
       {
         "name": "beskrivelse",
@@ -323,7 +346,7 @@
     "abstract": true,
     "relationships": {
       "inheritance": [
-        "Felles"
+        "Fellesegenskaper"
       ],
       "associations": [
         {
@@ -332,17 +355,12 @@
           "cardinality": "1"
         },
         {
-          "target": "Utbredelse",
-          "role": "framskriving",
-          "cardinality": "0..*"
-        },
-        {
           "target": "Objekt",
           "role": "objekt",
-          "cardinality": "0..*"
+          "cardinality": "1..*"
         },
         {
-          "target": "Utbredelse",
+          "target": "FramskrevetSkadested",
           "role": "utbredelse",
           "cardinality": "0..*"
         },
@@ -352,9 +370,19 @@
           "cardinality": "0..*"
         },
         {
+          "target": "Skadested",
+          "role": "skadested",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Hendelsesområde",
+          "role": "hendelsesområde",
+          "cardinality": "0..*"
+        },
+        {
           "target": "SammensattHendelse",
-          "role": "sammensattHendlelse",
-          "cardinality": "0..1"
+          "role": "sammensattHendelse",
+          "cardinality": "0..*"
         },
         {
           "target": "Ressurs",
@@ -365,6 +393,16 @@
           "target": "Kontekst",
           "role": "kontekst",
           "cardinality": "0..*"
+        },
+        {
+          "target": "Innsatsområde",
+          "role": "innsatsområde",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Observasjon",
+          "role": "____innmeldtObservasjon",
+          "cardinality": "1"
         },
         {
           "target": "Observatør",
@@ -414,32 +452,22 @@
     }
   },
   {
-    "name": "Utbredelse",
-    "description": "Geografisk utbredelse av hendelsen.",
+    "name": "FramskrevetSkadested",
+    "description": "Framskrevet utbredelse av skadestedet",
     "attributes": [
       {
-        "name": "flate",
-        "type": "Flate",
+        "name": "sted",
+        "type": "GM_Object",
         "description": "Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).",
-        "cardinality": "0..1"
+        "cardinality": "1"
       },
       {
-        "name": "kurve",
-        "type": "Kurve",
-        "description": "Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en kurve (eks. brannfront).",
-        "cardinality": "0..1"
-      },
-      {
-        "name": "utbredelsestype",
-        "type": "TypeUtbredelse",
+        "name": "typeSkadested",
+        "type": "TypeSkadested",
         "description": "Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse.",
-        "cardinality": "1",
+        "cardinality": "0..1",
         "valueDomain": {
           "listedValues": [
-            {
-              "value": "hendelsesområde",
-              "label": "En generisk betegnelse for ustrekning av en hendelse som kan brukes dersom hendelsen ikke har begreper for områder som er rammet."
-            },
             {
               "value": "brannfront",
               "label": "Den fremste delen av en brann hvor forbrenningen er mest intens og hvordan brannen sprer seg videre (retning, hastighet, tid, prognose, etc.)."
@@ -469,12 +497,17 @@
         "type": "CharacterString",
         "description": "Kort beskrivelse som fritekst.",
         "cardinality": "0..1"
+      },
+      {
+        "name": "estimertTidspunkt",
+        "type": "DateTime",
+        "cardinality": "0..1"
       }
     ],
     "abstract": false,
     "relationships": {
       "inheritance": [
-        "Felles"
+        "Fellesegenskaper"
       ],
       "associations": []
     }
@@ -486,7 +519,7 @@
     "abstract": false,
     "relationships": {
       "inheritance": [
-        "Felles"
+        "Fellesegenskaper"
       ],
       "associations": [
         {
@@ -560,6 +593,36 @@
     "relationships": {
       "inheritance": [
         "Hendelse"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "FramskrevetHendelsesområde",
+    "description": "Område hvor hendelsen har effekt eller risiko",
+    "attributes": [
+      {
+        "name": "flate",
+        "type": "GM_Surface",
+        "description": "Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).",
+        "cardinality": "1"
+      },
+      {
+        "name": "beskrivelse",
+        "type": "CharacterString",
+        "description": "Kort beskrivelse som fritekst.",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "estimertTidspunkt",
+        "type": "DateTime",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
       ],
       "associations": []
     }
@@ -708,28 +771,157 @@
     }
   },
   {
-    "name": "Hendelsesrelatert",
-    "description": "Informasjon som er direkte knyttet til hendelsen, men som ikke indikerer hendelsestype (se angitte verdier).",
+    "name": "Hendelsesområde",
+    "description": "Område hvor hendelsen har effekt eller risiko",
     "attributes": [
       {
-        "name": "kommentar",
-        "type": "CharacterString",
-        "description": "Kort beskrivelse som fritekst.",
-        "cardinality": "0..*"
+        "name": "flate",
+        "type": "GM_Surface",
+        "description": "Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).",
+        "cardinality": "1"
       },
       {
-        "name": "registreringstidspunkt",
-        "type": "DateTime",
-        "description": "Dato og tid for registrering av hendelsesrelatert informasjon.",
-        "cardinality": "1"
+        "name": "beskrivelse",
+        "type": "CharacterString",
+        "description": "Kort beskrivelse som fritekst.",
+        "cardinality": "0..1"
       }
     ],
-    "abstract": true,
+    "abstract": false,
     "relationships": {
       "inheritance": [
-        "Felles"
+        "Fellesegenskaper"
+      ],
+      "associations": [
+        {
+          "target": "FramskrevetHendelsesområde",
+          "role": "scenario",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "FramskrevetInnsatsområde",
+    "description": "Framskrevet utbredelse av  innsatsområdet",
+    "attributes": [
+      {
+        "name": "flate",
+        "type": "GM_Surface",
+        "description": "Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).",
+        "cardinality": "1"
+      },
+      {
+        "name": "beskrivelse",
+        "type": "CharacterString",
+        "description": "Kort beskrivelse som fritekst.",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "estimertTidspunkt",
+        "type": "DateTime",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
       ],
       "associations": []
+    }
+  },
+  {
+    "name": "Innsatsområde",
+    "description": "Område for iverksatte og planlagte tiltak",
+    "attributes": [
+      {
+        "name": "flate",
+        "type": "GM_Surface",
+        "description": "Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).",
+        "cardinality": "1"
+      },
+      {
+        "name": "beskrivelse",
+        "type": "CharacterString",
+        "description": "Kort beskrivelse som fritekst.",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": [
+        {
+          "target": "FramskrevetInnsatsområde",
+          "role": "scenario",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Skadested",
+    "description": "Utbredelse av skadestedet",
+    "attributes": [
+      {
+        "name": "sted",
+        "type": "GM_Object",
+        "description": "Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).",
+        "cardinality": "1"
+      },
+      {
+        "name": "typeSkadested",
+        "type": "TypeSkadested",
+        "description": "Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse.",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "brannfront",
+              "label": "Den fremste delen av en brann hvor forbrenningen er mest intens og hvordan brannen sprer seg videre (retning, hastighet, tid, prognose, etc.)."
+            },
+            {
+              "value": "aktivtBrannområde",
+              "label": "Området som er rammet av brannen, hvor det pågår aktiv brann."
+            },
+            {
+              "value": "brentOmråde",
+              "label": "Området som er rammet av brannen, som er brent."
+            },
+            {
+              "value": "skredområde",
+              "label": "Området som er rammet av skredet."
+            },
+            {
+              "value": "flomområde",
+              "label": "Området som er rammet av flommen."
+            }
+          ],
+          "definition": "Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse."
+        }
+      },
+      {
+        "name": "beskrivelse",
+        "type": "CharacterString",
+        "description": "Kort beskrivelse som fritekst.",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": [
+        {
+          "target": "FramskrevetSkadested",
+          "role": "framskriving",
+          "cardinality": "0..*"
+        }
+      ]
     }
   },
   {
@@ -832,21 +1024,52 @@
     "abstract": false,
     "relationships": {
       "inheritance": [
-        "Hendelsesrelatert"
+        "Fellesegenskaper"
       ],
       "associations": [
-        {
-          "target": "Hendelse"
-        },
-        {
-          "target": "Tiltakslokasjon"
-        },
         {
           "target": "Observasjon",
           "role": "observasjon",
           "cardinality": "1..*"
         }
       ]
+    }
+  },
+  {
+    "name": "Observatør",
+    "description": "Kilde for observasjonen, person eller sensor\nMerknad: Person kan være en personressurs knyttet til hendelsen eller en utenforstående person (eks. vitne).",
+    "attributes": [
+      {
+        "name": "kontaktinformasjon",
+        "type": "CharacterStreng",
+        "description": "Kontaktinformasjon",
+        "cardinality": "1"
+      },
+      {
+        "name": "OPSoperatør",
+        "type": "Boolean",
+        "description": "Angir om operatøren er tilknyttet OPS.",
+        "cardinality": "1"
+      },
+      {
+        "name": "sensor",
+        "type": "Boolean",
+        "description": "om observasjonen er gjort fra en automatisk sensor.",
+        "cardinality": "1"
+      },
+      {
+        "name": "virksomhet",
+        "type": "CharacterStreng",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "VersjonertObjekt",
+        "Fellesegenskaper"
+      ],
+      "associations": []
     }
   },
   {
@@ -973,38 +1196,12 @@
           ],
           "definition": "Beskrivelse av kvaliteten på stedfestingen. Angir grad av presisjon knyttet til posisjon."
         }
-      },
-      {
-        "name": "observatør",
-        "type": "Observatør",
-        "description": "Person eller sensor som gjør en observasjon.",
-        "cardinality": "0..1",
-        "attributes": [
-          {
-            "name": "kontaktinformasjon",
-            "type": "CharacterStreng",
-            "description": "Kontaktinformasjon",
-            "cardinality": "1"
-          },
-          {
-            "name": "OPSoperatør",
-            "type": "Boolean",
-            "description": "Angir om operatøren er tilknyttet OPS.",
-            "cardinality": "1"
-          },
-          {
-            "name": "sensor",
-            "type": "Boolean",
-            "description": "om observasjonen er gjort fra en automatisk sensor.",
-            "cardinality": "1"
-          }
-        ]
       }
     ],
     "abstract": false,
     "relationships": {
       "inheritance": [
-        "Hendelsesrelatert"
+        "Fellesegenskaper"
       ],
       "associations": [
         {
@@ -1016,6 +1213,16 @@
           "target": "Observatør",
           "role": "observatør",
           "cardinality": "1"
+        },
+        {
+          "target": "Observatør",
+          "role": "observatør",
+          "cardinality": "0..1"
+        },
+        {
+          "target": "Ressurs",
+          "role": "observertAv",
+          "cardinality": "0..1"
         }
       ]
     }
@@ -1148,21 +1355,19 @@
         }
       },
       {
-        "name": "kommentar",
-        "type": "CharacterString",
-        "description": "Mulighet for å legge inn kommentar som fritekst.",
-        "cardinality": "0..1"
-      },
-      {
-        "name": "status",
-        "type": "CharacterString",
-        "cardinality": "1"
+        "name": "utstyr",
+        "type": "TypeUtstyr",
+        "description": "Utstyr",
+        "cardinality": "0..*",
+        "valueDomain": {
+          "definition": "Lister som defineres fra nødetatene. Dette er foreløpig utelatt fra standarden."
+        }
       }
     ],
     "abstract": true,
     "relationships": {
       "inheritance": [
-        "Felles"
+        "Fellesegenskaper"
       ],
       "associations": [
         {
@@ -1231,16 +1436,7 @@
   {
     "name": "Depot",
     "description": "Et lager eller oppbevaringssted for utstyr, forsyninger eller ressurser, ofte strategisk plassert for å støtte operasjoner og sikre rask tilgang under nødsituasjoner eller beredskap.",
-    "attributes": [
-      {
-        "name": "utstyr",
-        "type": "TypeUtstyr",
-        "cardinality": "0..*",
-        "valueDomain": {
-          "definition": "Lister som defineres fra nødetatene. Dette er foreløpig utelatt fra standarden."
-        }
-      }
-    ],
+    "attributes": [],
     "abstract": false,
     "relationships": {
       "inheritance": [
@@ -1274,15 +1470,6 @@
             }
           ],
           "definition": "Ressurs som ikke inngår i forhåndsdefinerte ressurskategorier."
-        }
-      },
-      {
-        "name": "utstyr",
-        "type": "TypeUtstyr",
-        "description": "Utstyr",
-        "cardinality": "0..*",
-        "valueDomain": {
-          "definition": "Lister som defineres fra nødetatene. Dette er foreløpig utelatt fra standarden."
         }
       }
     ],
@@ -1386,14 +1573,6 @@
           ],
           "definition": "Kategorier av roller."
         }
-      },
-      {
-        "name": "utstyr",
-        "type": "TypeUtstyr",
-        "cardinality": "0..*",
-        "valueDomain": {
-          "definition": "Lister som defineres fra nødetatene. Dette er foreløpig utelatt fra standarden."
-        }
       }
     ],
     "abstract": false,
@@ -1480,15 +1659,6 @@
             }
           ],
           "definition": "Person med spesialistkompetanse som er tildelt en rådgivende rolle ifm. håndteringen av en hendelse."
-        }
-      },
-      {
-        "name": "utstyr",
-        "type": "TypeUtstyr",
-        "description": "Utstyr",
-        "cardinality": "0..*",
-        "valueDomain": {
-          "definition": "Lister som defineres fra nødetatene. Dette er foreløpig utelatt fra standarden."
         }
       }
     ],
@@ -1800,29 +1970,14 @@
         "type": "Boolean",
         "description": "\"Bevar åsted\" innebærer at ingen skal røre noe uten at nødvendig dokumentasjon av omstendighetene er foretatt og sikring av spor er gjennomført, med mindre det er nødvendig for å redde liv, pågripe eller berge større verdier.",
         "cardinality": "0..1"
-      },
-      {
-        "name": "kommentar",
-        "type": "CharacterString",
-        "description": "Mulighet for å legge inn kommentar som fritekst.",
-        "cardinality": "0..1"
       }
     ],
     "abstract": false,
     "relationships": {
       "inheritance": [
-        "Felles"
+        "Fellesegenskaper"
       ],
       "associations": [
-        {
-          "target": "Hendelse",
-          "role": "hendelse"
-        },
-        {
-          "target": "Objekt",
-          "role": "lokasjon",
-          "cardinality": "0..1"
-        },
         {
           "target": "Ressurs"
         },
@@ -1931,60 +2086,17 @@
         }
       },
       {
-        "name": "kommentar",
-        "type": "CharacterString",
-        "description": "Mulighet for å legge inn kommentar som fritekst.",
-        "cardinality": "0..1"
-      },
-      {
         "name": "posisjon",
-        "type": "Posisjon",
-        "cardinality": "1",
-        "attributes": [
-          {
-            "name": "geometri",
-            "type": "GM_Object",
-            "cardinality": "1"
-          },
-          {
-            "name": "Referanse",
-            "type": "Identifikasjon",
-            "cardinality": "0..1",
-            "attributes": [
-              {
-                "name": "lokalId",
-                "type": "uuid",
-                "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
-                "cardinality": "1"
-              },
-              {
-                "name": "navnerom",
-                "type": "CharacterString",
-                "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
-                "cardinality": "1"
-              },
-              {
-                "name": "versjonId",
-                "type": "CharacterString",
-                "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans)",
-                "cardinality": "0..1"
-              }
-            ]
-          }
-        ]
+        "type": "GM_Object",
+        "cardinality": "1"
       }
     ],
     "abstract": false,
     "relationships": {
       "inheritance": [
-        "Felles"
+        "Fellesegenskaper"
       ],
-      "associations": [
-        {
-          "target": "Hendelse",
-          "role": "hendelse"
-        }
-      ]
+      "associations": []
     }
   }
 ]
