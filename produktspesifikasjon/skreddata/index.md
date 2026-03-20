@@ -7,40 +7,42 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 
 # Produktspesifikasjon: Havnedata
 
+*Havnedata er detaljert geografisk informasjon om havner, kaier og tilhørende objekter som er en del av infrastrukturen på en kai eller i en havn. Tilhørende objekttyper som inngår i standarden er havneanlegg, kaifront, vannuttak, tilkoblingspunkt for strøm, beredskapsutstyr, sensorer, avfallspunkt, kraner, slipp, fender, fortøyningsinnretninger, tømmestasjon, gjerder m.fl. 
+
+Reguleringer i form av lovverk, regler, restriksjoner eller annet som er relatert til havn og har en geografisk avgrensning som kan kartfestes, inngår også i standarden. 
+
+Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd på NGIS-forvaltningsplattformen etter samme forvaltningskonsept som SFKB.*
+
+**Nøkkelord:** Havnedata, Havneområde, Havn, WMS, Kyst, Kai, transport, Norge, Transportnett, Kyst og fiskeri, Samferdsel, Kaifront, Beredskapspunkt, HavneområdeGrense, Fortøyningsinnretning, Kran, Havnegjerde, Avfallspunkt, Havnesensor, Lastbegrensningsområde, tillattFortøyningsvinkelGrunnriss, tillattFortøyningsvinkelOppriss, kainavn, portFaciilityNrIMO, kontaktinformasjonPFSO, kontakttype, drivstofftype, fendertype, avfallsplan, beholdertype, havneident, UNLOCODE, vektbegrensning, bruksklasse, kaidekke
+
+**Emnekategorier:** Kyst og sjø
+
+**Geografisk utstrekning:** **Geografisk utstrekning**:
+
+- **Vest**: 2.0
+- **Øst**: 33.0
+- **Sør**: 57.0
+- **Nord**: 72.0
+
+**Tidsmessig utstrekning**:
+
+- **Tidsperiode**:
+  - **Fra**: 2021-03-02
+  - **Til**: 2026-03-07
+
+## Om spesifikasjonen
+
+
+**Unik identifikator:** e46767e4-c6d9-49a6-93e8-716da0922fd7\
+**Fullstendig navn:** Havnedata\
+**Versjon:** 2021-03-02\
+**Opprettet dato:** 2021-03-02\
+**Endret dato:** 2026-03-07\
+**Språk:** nor\
+**Kontaktinformasjon:** Kartverket
+
 ## Generelt om spesifikasjonen
 
-
-### Unik identifisering
-
-e46767e4-c6d9-49a6-93e8-716da0922fd7
-
-#### Fullstendig navn
-
-Havnedata
-
-#### Versjon
-
-2021-03-02
-
-### Referansedato
-
-2026-03-07
-
-### Ansvarlig organisasjon
-
-Kartverket
-
-### Språk
-
-nor
-
-### Hovedtema
-
-Havnedata, Havneområde, Havn, WMS, Kyst, Kai, transport, Norge, Transportnett, Kyst og fiskeri, Samferdsel, Kaifront, Beredskapspunkt, HavneområdeGrense, Fortøyningsinnretning, Kran, Havnegjerde, Avfallspunkt, Havnesensor, Lastbegrensningsområde, tillattFortøyningsvinkelGrunnriss, tillattFortøyningsvinkelOppriss, kainavn, portFaciilityNrIMO, kontaktinformasjonPFSO, kontakttype, drivstofftype, fendertype, avfallsplan, beholdertype, havneident, UNLOCODE, vektbegrensning, bruksklasse, kaidekke
-
-### Temakategori
-
-Kyst og sjø
 
 ### Sammendrag
 
@@ -81,21 +83,6 @@ Vektor
 ### Romlig oppløsning
 
 **Ekvivalent målestokk**: 5000
-
-### Utstrekning
-
-**Geografisk utstrekning**:
-
-- **Vest**: 2.0
-- **Øst**: 33.0
-- **Sør**: 57.0
-- **Nord**: 72.0
-
-**Tidsmessig utstrekning**:
-
-- **Tidsperiode**:
-  - **Fra**: 2021-03-02
-  - **Til**: 2026-03-07
 
 ### Begrensninger
 
@@ -275,7 +262,7 @@ Eksempler på bruksområder for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-17
+**Metadatadato**: 2026-03-20
 
 **språk**: nor
 
