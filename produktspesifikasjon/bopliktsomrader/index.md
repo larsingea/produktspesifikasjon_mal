@@ -7,32 +7,56 @@ logo: "https://register.geonorge.no/data/organizations/981544315_Landbruksdirekt
 
 # Produktspesifikasjon: Bopliktsområder
 
+*Datasettet er under etablering.
+
+Bopliktområder er områder med nedsatt konsesjonsgrense fastsatt med forskrift (nullgrenseforskrift). Dette er lokale regler som medfører at det er boplikt på eiendom som det etter konsesjonsloven i utgangspunktet ikke er boplikt på. Boplikten oppfylles ved at eier eller andre er registrerer seg som bosatt på eiendommen i Folkeregisteret. Formålet med slike forskrifter er å hindre at eiendommer som bør brukes til helårsbolig blir brukt til fritidsformål. Kommuner med nullgrenseforskrift har bestemt at reglene om konsesjonsfrihet uten boplikt helt eller delvis ikke gjelder.
+
+Et bopliktområde kan gjelde en hel kommune, eller deler av denne, slik som angitt i datasettet.
+
+En forskrift om nedsatt konsesjonsgrense kan innenfor bopliktområdet gjelde følgende eiendommer:
+
+- bebygd eiendom som er eller har vært i bruk som helårsbolig
+- eiendom med bebyggelse som ikke er tatt i bruk som helårsbolig herunder eiendom under oppføring regulert til boligformål
+- ubebygd tomt regulert til boligformål
+
+Kommunens forskrift kan fastsettes for ett eller flere av alternativene.
+
+Nullgrenseforskriften kan også sette slektskapsunntaket ut av kraft. Det betyr at nær slekt heller ikke kan overta konsesjonsfritt uten krav om boplikt.
+
+Forskriftene gjelder ikke der man har en bebygd eiendom som er større enn 100 dekar eller har mer enn 35 dekar fulldyrka eller overflatedyrka jord.
+
+Datasettet er en del av tjenester for digitalisering av konsesjonsavklaringer og automatiserte tjenester knyttet til dette.*
+
+**Nøkkelord:** 
+
+**Emnekategorier:** 
+
+**Geografisk utstrekning:** **Geografisk utstrekning**:
+
+- **Vest**: 2.0
+- **Øst**: 33.0
+- **Sør**: 57.0
+- **Nord**: 72.0
+
+**Tidsmessig utstrekning**:
+
+- **Tidsperiode**:
+  - **Fra**: 2025-12-11
+  - **Til**: 2025-12-11
+
+## Om spesifikasjonen
+
+
+**Unik identifikator:** 49415185-d99f-4546-b976-18cfbf167827\
+**Fullstendig navn:** Bopliktsområder\
+**Versjon:** 2025-12-11\
+**Opprettet dato:** 2025-12-11\
+**Endret dato:** 2025-12-11\
+**Språk:** nor\
+**Kontaktinformasjon:** Landbruksdirektoratet
+
 ## Generelt om spesifikasjonen
 
-
-### Unik identifisering
-
-49415185-d99f-4546-b976-18cfbf167827
-
-#### Fullstendig navn
-
-Bopliktsområder
-
-#### Versjon
-
-2025-12-11
-
-### Referansedato
-
-2025-12-11
-
-### Ansvarlig organisasjon
-
-Landbruksdirektoratet
-
-### Språk
-
-nor
 
 ### Sammendrag
 
@@ -69,21 +93,6 @@ Bopliktområder er en del av de egenskaper knyttet til en eiendom som avgjør om
 ### Romlig representasjonstype
 
 Vektor
-
-### Utstrekning
-
-**Geografisk utstrekning**:
-
-- **Vest**: 2.0
-- **Øst**: 33.0
-- **Sør**: 57.0
-- **Nord**: 72.0
-
-**Tidsmessig utstrekning**:
-
-- **Tidsperiode**:
-  - **Fra**: 2025-12-11
-  - **Til**: 2025-12-11
 
 ### Tilleggsinformasjon
 
