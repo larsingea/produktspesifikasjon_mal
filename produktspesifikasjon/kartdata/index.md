@@ -7,56 +7,13 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 
 # Produktspesifikasjon: N50 Kartdata
 
-## Generelt om spesifikasjonen
+*Kartdata tilpasset målestokkområdet 1:25 000 til 1:100 000. Produktet har et innhold som tilsvarer papirkartserien Norge 1:50 000 med unntak av bathymetri (dybder). Temaer som inngår i produktet er arealdekke (vann, markslag, etc.), administrative områder, bygninger og anlegg, høyde, restriksjonsområder, samferdsel og stedsnavn. N50 Kartdata dekker fastlands-Norge og er begrenset av riksgrensen mot nabolandene og territorialgrensen i havet. Produktet er kartografisk redigert med tanke på presentasjon i målestokk 1:50 000. N50 Kartdata ajourføres kontinuerlig og distribueres ukentlig.*
 
+**Nøkkelord:** Kartdata, N50, N50 Kartdata, Landsdekkende, Nasjonalt datasett, 1:50 000, M711, Norge 1:50 000, Turkart, Norge 1:50000, 1:50000, Kart over Norge, N 50, Bakgrunnskart, Vann, 50, Kart, Norge fastland, Administrative enheter, Allmennyttige og offentlige tjenester, Arealdekke, Bygninger, Hydrografi, Høyde, Produksjons- og industrianlegg, Stedsnavn, Transportnett, Vernede områder, Inspire, Det offentlige kartgrunnlaget, geodataloven, Norge digitalt, beredskapsbase, fellesDatakatalog, Basis geodata, Norge
 
-### Unik identifisering
+**Emnekategorier:** Basisdata
 
-ea192681-d039-42ec-b1bc-f3ce04c189ac
-
-#### Fullstendig navn
-
-N50 Kartdata
-
-### Referansedato
-
-2026-03-13
-
-### Ansvarlig organisasjon
-
-Kartverket
-
-### Språk
-
-nor
-
-### Hovedtema
-
-Kartdata, N50, N50 Kartdata, Landsdekkende, Nasjonalt datasett, 1:50 000, M711, Norge 1:50 000, Turkart, Norge 1:50000, 1:50000, Kart over Norge, N 50, Bakgrunnskart, Vann, 50, Kart, Norge fastland, Administrative enheter, Allmennyttige og offentlige tjenester, Arealdekke, Bygninger, Hydrografi, Høyde, Produksjons- og industrianlegg, Stedsnavn, Transportnett, Vernede områder, Inspire, Det offentlige kartgrunnlaget, geodataloven, Norge digitalt, beredskapsbase, fellesDatakatalog, Basis geodata, Norge
-
-### Temakategori
-
-Basisdata
-
-### Sammendrag
-
-Kartdata tilpasset målestokkområdet 1:25 000 til 1:100 000. Produktet har et innhold som tilsvarer papirkartserien Norge 1:50 000 med unntak av bathymetri (dybder). Temaer som inngår i produktet er arealdekke (vann, markslag, etc.), administrative områder, bygninger og anlegg, høyde, restriksjonsområder, samferdsel og stedsnavn. N50 Kartdata dekker fastlands-Norge og er begrenset av riksgrensen mot nabolandene og territorialgrensen i havet. Produktet er kartografisk redigert med tanke på presentasjon i målestokk 1:50 000. N50 Kartdata ajourføres kontinuerlig og distribueres ukentlig.
-
-### Bruksområde
-
-Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, turkart/fritidskart, interaktive kart, som datagrunnlag for kartløsninger på internett og i analysesammenheng.
-
-### Romlig representasjonstype
-
-Vektor
-
-### Romlig oppløsning
-
-**Ekvivalent målestokk**: 50000
-
-### Utstrekning
-
-**Geografisk utstrekning**:
+**Geografisk utstrekning:** **Geografisk utstrekning**:
 
 - **Vest**: 2.0
 - **Øst**: 33.0
@@ -66,16 +23,26 @@ Vektor
 **Tidsmessig utstrekning**:
 
 - **Tidsperiode**:
-  - **Fra**: 2026-03-13
-  - **Til**: 2026-03-13
+  - **Fra**: 2026-03-20
+  - **Til**: 2026-03-20
 
-### Tilleggsinformasjon
+## Om spesifikasjonen
 
-Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.
 
-### Begrensninger
+**Unik identifikator:** ea192681-d039-42ec-b1bc-f3ce04c189ac\
+**Fullstendig navn:** N50 Kartdata\
+**Versjon:** \
+**Opprettet dato:** \
+**Endret dato:** 2026-03-20\
+**Språk:** nor\
+**Kontaktinformasjon:** Kartverket
 
-**Ressursbegrensninger**:
+## Om produktet N50 Kartdata
+
+
+**Romlig representasjonstype:** Vektor\
+**Romlig oppløsning:** **Ekvivalent målestokk**: 50000\
+**Begrensninger:** **Ressursbegrensninger**:
 
 - **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt
 
@@ -88,9 +55,14 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
 
 **Sikkerhetsbegrensninger**:
 
-- **Klassifisering**: Ugradert
+- **Klassifisering**: Ugradert\
+**Kontaktinformasjon:** Kartverket
 
-## Spesifikasjonsomfang
+### Bruksområde
+
+Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, turkart/fritidskart, interaktive kart, som datagrunnlag for kartløsninger på internett og i analysesammenheng.
+
+## Omfang
 
 - **Omfang**:
 
@@ -101,7 +73,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
     #### Datamodell for kartdata
     Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
-## Innhold og struktur
+## Datainnhold og struktur
 
 **Beskrivelse**: Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, turkart/fritidskart, interaktive kart, som datagrunnlag for kartløsninger på internett og i analysesammenheng.
 
@@ -131,7 +103,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
 - **kode**: EPSG:25832
   **navn**: EUREF89 UTM sone 32, 2d
 
-## Kvalitet
+## Datakvalitet
 
 **Nivå**: dataset
 
@@ -160,7 +132,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
 
 **Beskrivelse**: Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.
 
-## Datavedlikehold
+## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Ukentlig
 
@@ -327,7 +299,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-17
+**Metadatadato**: 2026-03-20
 
 **språk**: nor
 
@@ -386,3 +358,7 @@ Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? P�
   **relasjon**: alternate
   **type**: WMTS-tjeneste
   **tittel**: Topografisk norgeskart WMTS / cache
+
+## Tilleggsinformasjon
+
+Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.
