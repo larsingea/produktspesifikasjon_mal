@@ -1,6 +1,6 @@
-#### Felles
+#### VersjonertObjekt (abstrakt)
 
-Overordnet informasjon.
+Informasjon som er direkte knyttet til hendelsen, men som ikke indikerer hendelsestype (se angitte verdier).
 
 Egenskaper
 
@@ -24,6 +24,31 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
+      <td>Identifikasjon</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>identifikasjon.lokalId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>lokal identifikator av et objekt<br /><br />Merknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
       <td>uuid</td>
     </tr>
   </tbody>
@@ -37,11 +62,36 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>betegnelse</strong></td>
+      <td><strong>identifikasjon.navnerom</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Navn eller beskrivelse av hendelsen.</td>
+      <td>navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI<br /><br />Eksempel: <a href="http://data.geonorge.no/SentraltStedsnavnsregister/1.0">http://data.geonorge.no/SentraltStedsnavnsregister/1.0</a><br /><br />Merknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>identifikasjon.versjonId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>identifikasjon av en spesiell versjon av et geografisk objekt (instans)</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -62,7 +112,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>førsteRegistreringstidspunkt</strong></td>
+      <td><strong>registreringstidspunkt</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
@@ -95,11 +145,84 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
       <td>DateTime</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>gyldigFra</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>DateTime</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>gyldigTil</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>DateTime</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Fellesegenskaper (abstrakt)
+
+Overordnet informasjon.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kommentar</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Mulighet for å legge inn kommentar som fritekst.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
     </tr>
   </tbody>
 </table>
@@ -128,6 +251,11 @@ Egenskaper
     </tr>
   </tbody>
 </table>
+
+Relasjoner
+
+**Arv**
+VersjonertObjekt
 
 #### ops
 
@@ -216,6 +344,31 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
+      <td><strong>betegnelse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navn eller beskrivelse av hendelsen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
       <td><strong>opphavsaktør</strong></td>
     </tr>
     <tr>
@@ -233,106 +386,6 @@ Egenskaper
     <tr>
       <th scope="row">Tillatte verdier:</th>
       <td>- politi – Politi<br />- helse – Helse<br />- brann – Brann<br />- HRS</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>innmelder</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Person eller sensor som varsler om en hendelse til nødetatene.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1..*</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Observatør</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>innmelder.kontaktinformasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Kontaktinformasjon</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>CharacterStreng</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>innmelder.OPSoperatør</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Angir om operatøren er tilknyttet OPS.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Boolean</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>innmelder.sensor</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>om observasjonen er gjort fra en automatisk sensor.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Boolean</td>
     </tr>
   </tbody>
 </table>
@@ -585,17 +638,20 @@ Egenskaper
 Relasjoner
 
 **Arv**
-Felles
+Fellesegenskaper
 
 **Assosiasjoner**
 ops – rolle: ops – kardinalitet: 1
-Utbredelse – rolle: framskriving – kardinalitet: 0..*
-Objekt – rolle: objekt – kardinalitet: 0..*
-Utbredelse – rolle: utbredelse – kardinalitet: 0..*
+Objekt – rolle: objekt – kardinalitet: 1..*
+FramskrevetSkadested – rolle: utbredelse – kardinalitet: 0..*
 Tiltakslokasjon – rolle: tiltakslokasjon – kardinalitet: 0..*
-SammensattHendelse – rolle: sammensattHendlelse – kardinalitet: 0..1
+Skadested – rolle: skadested – kardinalitet: 0..*
+Hendelsesområde – rolle: hendelsesområde – kardinalitet: 0..*
+SammensattHendelse – rolle: sammensattHendelse – kardinalitet: 0..*
 Ressurs – rolle: tilordnetRessurs – kardinalitet: 0..*
 Kontekst – rolle: kontekst – kardinalitet: 0..*
+Innsatsområde – rolle: innsatsområde – kardinalitet: 0..*
+Observasjon – rolle: ____innmeldtObservasjon – kardinalitet: 1
 Observatør – rolle: innmelder – kardinalitet: 1..*
 
 #### PlanlagtHendelse
@@ -634,9 +690,9 @@ Relasjoner
 **Arv**
 Hendelse
 
-#### Utbredelse
+#### FramskrevetSkadested
 
-Geografisk utbredelse av hendelsen.
+Framskrevet utbredelse av skadestedet
 
 Egenskaper
 
@@ -648,7 +704,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>flate</strong></td>
+      <td><strong>sted</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
@@ -656,11 +712,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>Flate</td>
+      <td>GM_Object</td>
     </tr>
   </tbody>
 </table>
@@ -673,32 +729,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>kurve</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en kurve (eks. brannfront).</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Kurve</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>utbredelsestype</strong></td>
+      <td><strong>typeSkadested</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
@@ -706,15 +737,15 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>TypeUtbredelse</td>
+      <td>TypeSkadested</td>
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- hendelsesområde – En generisk betegnelse for ustrekning av en hendelse som kan brukes dersom hendelsen ikke har begreper for områder som er rammet.<br />- brannfront – Den fremste delen av en brann hvor forbrenningen er mest intens og hvordan brannen sprer seg videre (retning, hastighet, tid, prognose, etc.).<br />- aktivtBrannområde – Området som er rammet av brannen, hvor det pågår aktiv brann.<br />- brentOmråde – Området som er rammet av brannen, som er brent.<br />- skredområde – Området som er rammet av skredet.<br />- flomområde – Området som er rammet av flommen.</td>
+      <td>- brannfront – Den fremste delen av en brann hvor forbrenningen er mest intens og hvordan brannen sprer seg videre (retning, hastighet, tid, prognose, etc.).<br />- aktivtBrannområde – Området som er rammet av brannen, hvor det pågår aktiv brann.<br />- brentOmråde – Området som er rammet av brannen, som er brent.<br />- skredområde – Området som er rammet av skredet.<br />- flomområde – Området som er rammet av flommen.</td>
     </tr>
   </tbody>
 </table>
@@ -744,10 +775,31 @@ Egenskaper
   </tbody>
 </table>
 
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>estimertTidspunkt</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>DateTime</td>
+    </tr>
+  </tbody>
+</table>
+
 Relasjoner
 
 **Arv**
-Felles
+Fellesegenskaper
 
 #### SammensattHendelse
 
@@ -760,7 +812,7 @@ Egenskaper
 Relasjoner
 
 **Arv**
-Felles
+Fellesegenskaper
 
 **Assosiasjoner**
 Hendelse – rolle: hendelse – kardinalitet: 0..*
@@ -813,6 +865,88 @@ Relasjoner
 
 **Arv**
 Hendelse
+
+#### FramskrevetHendelsesområde
+
+Område hvor hendelsen har effekt eller risiko
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>flate</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>GM_Surface</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>beskrivelse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kort beskrivelse som fritekst.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>estimertTidspunkt</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>DateTime</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+Fellesegenskaper
 
 #### Naturhendelse
 
@@ -890,9 +1024,9 @@ Relasjoner
 **Arv**
 Hendelse
 
-#### Hendelsesrelatert (abstrakt)
+#### Hendelsesområde
 
-Informasjon som er direkte knyttet til hendelsen, men som ikke indikerer hendelsestype (se angitte verdier).
+Område hvor hendelsen har effekt eller risiko
 
 Egenskaper
 
@@ -904,7 +1038,32 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>kommentar</strong></td>
+      <td><strong>flate</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>GM_Surface</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>beskrivelse</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
@@ -912,7 +1071,71 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>0..*</td>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+Fellesegenskaper
+
+**Assosiasjoner**
+FramskrevetHendelsesområde – rolle: scenario – kardinalitet: 0..*
+
+#### FramskrevetInnsatsområde
+
+Framskrevet utbredelse av  innsatsområdet
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>flate</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>GM_Surface</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>beskrivelse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kort beskrivelse som fritekst.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
@@ -929,15 +1152,11 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>registreringstidspunkt</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato og tid for registrering av hendelsesrelatert informasjon.</td>
+      <td><strong>estimertTidspunkt</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
@@ -949,7 +1168,164 @@ Egenskaper
 Relasjoner
 
 **Arv**
-Felles
+Fellesegenskaper
+
+#### Innsatsområde
+
+Område for iverksatte og planlagte tiltak
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>flate</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>GM_Surface</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>beskrivelse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kort beskrivelse som fritekst.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+Fellesegenskaper
+
+**Assosiasjoner**
+FramskrevetInnsatsområde – rolle: scenario – kardinalitet: 0..*
+
+#### Skadested
+
+Utbredelse av skadestedet
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>sted</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Geometri som avgrenser hendelsen dersom hendelsen kan defineres som en flate (eks. skogbrannområder og flomområder).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>GM_Object</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>typeSkadested</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>TypeSkadested</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- brannfront – Den fremste delen av en brann hvor forbrenningen er mest intens og hvordan brannen sprer seg videre (retning, hastighet, tid, prognose, etc.).<br />- aktivtBrannområde – Området som er rammet av brannen, hvor det pågår aktiv brann.<br />- brentOmråde – Området som er rammet av brannen, som er brent.<br />- skredområde – Området som er rammet av skredet.<br />- flomområde – Området som er rammet av flommen.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>beskrivelse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kort beskrivelse som fritekst.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+Fellesegenskaper
+
+**Assosiasjoner**
+FramskrevetSkadested – rolle: framskriving – kardinalitet: 0..*
 
 #### Objekt
 
@@ -1043,12 +1419,117 @@ Egenskaper
 Relasjoner
 
 **Arv**
-Hendelsesrelatert
+Fellesegenskaper
 
 **Assosiasjoner**
-Hendelse
-Tiltakslokasjon
 Observasjon – rolle: observasjon – kardinalitet: 1..*
+
+#### Observatør
+
+Kilde for observasjonen, person eller sensor<br />Merknad: Person kan være en personressurs knyttet til hendelsen eller en utenforstående person (eks. vitne).
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kontaktinformasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kontaktinformasjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterStreng</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>OPSoperatør</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angir om operatøren er tilknyttet OPS.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>sensor</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>om observasjonen er gjort fra en automatisk sensor.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>virksomhet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterStreng</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+VersjonertObjekt, Fellesegenskaper
 
 #### Observasjon
 
@@ -1243,114 +1724,16 @@ Egenskaper
   </tbody>
 </table>
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>observatør</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Person eller sensor som gjør en observasjon.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Observatør</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>observatør.kontaktinformasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Kontaktinformasjon</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>CharacterStreng</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>observatør.OPSoperatør</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Angir om operatøren er tilknyttet OPS.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Boolean</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>observatør.sensor</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>om observasjonen er gjort fra en automatisk sensor.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Boolean</td>
-    </tr>
-  </tbody>
-</table>
-
 Relasjoner
 
 **Arv**
-Hendelsesrelatert
+Fellesegenskaper
 
 **Assosiasjoner**
 Objekt – rolle: objekt – kardinalitet: 1..*
 Observatør – rolle: observatør – kardinalitet: 1
+Observatør – rolle: observatør – kardinalitet: 0..1
+Ressurs – rolle: observertAv – kardinalitet: 0..1
 
 #### Ressurs (abstrakt)
 
@@ -1528,40 +1911,19 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>kommentar</strong></td>
+      <td><strong>utstyr</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Mulighet for å legge inn kommentar som fritekst.</td>
+      <td>Utstyr</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
+      <td>0..*</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>CharacterString</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>status</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>CharacterString</td>
+      <td>TypeUtstyr</td>
     </tr>
   </tbody>
 </table>
@@ -1569,7 +1931,7 @@ Egenskaper
 Relasjoner
 
 **Arv**
-Felles
+Fellesegenskaper
 
 **Assosiasjoner**
 Hendelse – rolle: hendelse – kardinalitet: 0..1
@@ -1645,26 +2007,7 @@ Et lager eller oppbevaringssted for utstyr, forsyninger eller ressurser, ofte st
 
 Egenskaper
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>utstyr</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..*</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>TypeUtstyr</td>
-    </tr>
-  </tbody>
-</table>
+(ingen)
 
 Relasjoner
 
@@ -1702,31 +2045,6 @@ Egenskaper
     <tr>
       <th scope="row">Tillatte verdier:</th>
       <td>- hund – Inkluderer politihund, redningshund mv.<br />- aggregat – Strømagregat<br />- annenRessurs – Annen ressurs inkluderer også utstyr som ikke kan knyttes til Transportmiddel eller Personell.</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>utstyr</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Utstyr</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..*</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>TypeUtstyr</td>
     </tr>
   </tbody>
 </table>
@@ -1796,27 +2114,6 @@ Egenskaper
   </tbody>
 </table>
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>utstyr</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..*</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>TypeUtstyr</td>
-    </tr>
-  </tbody>
-</table>
-
 Relasjoner
 
 **Arv**
@@ -1882,31 +2179,6 @@ Egenskaper
     <tr>
       <th scope="row">Tillatte verdier:</th>
       <td>- CBRNE – Ekspertise innen kjemiske, biologiske, radiologiske, nukleære og eksplosive trusler, inkludert helserelevant ekspertise for å håndtere og respondere på farer knyttet til farlige stoffer og eksplosiver.<br />- geotekniskRiskoOgNaturfare – Ekspertise innen jordstabilitet, grunnforhold, skred, seismisk risiko mv.<br />- flom – Ekspertise innen flom, flomutsatte områder, flomdynamikk og tiltak mot flomfare.<br />- brannSkogbrann – Ekspertise innen brannslukking, spredning, evakuering mv.<br />- værKlimarisiko – Ekspertise innen værforhold, klimarisiko, og ekstreme værhendelser, inkludert hvordan klimaendringer påvirker hendelser som flom, tørke og stormer.<br />- sjøKystfare – Ekspertise innen kyst- og sjørelaterte hendelser, som stormflo, kysterosjon og maritime ulykker.<br />- epidemiologiSmittevern – Ekspertise innen smitte og sykdomsutbrudd, inkludert responstiltak.<br />- transportInfrastruktursikkerhet – Ekspertise innen transportnettverk og kritisk infrastruktur, som veier, jernbane, kraftnett mv.<br />- søkRedning – Ekspertise innen søk- og redningsoperasjoner, inkludert USAR.<br />- annenEkspertise – Ekspertise innen områder som ikke dekkes av de andre kategoriene.</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>utstyr</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Utstyr</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..*</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>TypeUtstyr</td>
     </tr>
   </tbody>
 </table>
@@ -2137,39 +2409,12 @@ Egenskaper
   </tbody>
 </table>
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kommentar</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Mulighet for å legge inn kommentar som fritekst.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>CharacterString</td>
-    </tr>
-  </tbody>
-</table>
-
 Relasjoner
 
 **Arv**
-Felles
+Fellesegenskaper
 
 **Assosiasjoner**
-Hendelse – rolle: hendelse
-Objekt – rolle: lokasjon – kardinalitet: 0..1
 Ressurs
 X___TiltakOppgave
 
@@ -2245,53 +2490,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>kommentar</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Mulighet for å legge inn kommentar som fritekst.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>CharacterString</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
       <td><strong>posisjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Posisjon</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon.geometri</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -2304,109 +2503,10 @@ Egenskaper
   </tbody>
 </table>
 
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon.Referanse</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>Identifikasjon</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon.Referanse.lokalId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>lokal identifikator av et objekt<br /><br />Merknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>uuid</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon.Referanse.navnerom</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI<br /><br />Eksempel: <a href="http://data.geonorge.no/SentraltStedsnavnsregister/1.0">http://data.geonorge.no/SentraltStedsnavnsregister/1.0</a><br /><br />Merknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>CharacterString</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>posisjon.Referanse.versjonId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>identifikasjon av en spesiell versjon av et geografisk objekt (instans)</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>CharacterString</td>
-    </tr>
-  </tbody>
-</table>
-
 Relasjoner
 
 **Arv**
-Felles
-
-**Assosiasjoner**
-Hendelse – rolle: hendelse
+Fellesegenskaper
 
 ### Kodelister
 
@@ -2594,7 +2694,7 @@ Koder
   </tbody>
 </table>
 
-#### «Enumeration» TypeUtbredelse
+#### «Enumeration» TypeSkadested
 
 **Definisjon:** Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse.
 
@@ -2609,11 +2709,6 @@ Koder
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>hendelsesområde</td>
-      <td>En generisk betegnelse for ustrekning av en hendelse som kan brukes dersom hendelsen ikke har begreper for områder som er rammet.</td>
-      <td></td>
-    </tr>
     <tr>
       <td>brannfront</td>
       <td>Den fremste delen av en brann hvor forbrenningen er mest intens og hvordan brannen sprer seg videre (retning, hastighet, tid, prognose, etc.).</td>
@@ -3202,6 +3297,10 @@ Koder
   </tbody>
 </table>
 
+#### «CodeList» TypeUtstyr
+
+**Definisjon:** Lister som defineres fra nødetatene. Dette er foreløpig utelatt fra standarden.
+
 #### «Enumeration» TypeDrone
 
 **Definisjon:** Kategorier av dronetyper.
@@ -3239,10 +3338,6 @@ Koder
     </tr>
   </tbody>
 </table>
-
-#### «CodeList» TypeUtstyr
-
-**Definisjon:** Lister som defineres fra nødetatene. Dette er foreløpig utelatt fra standarden.
 
 #### «Enumeration» TypeAnnenRessurs
 

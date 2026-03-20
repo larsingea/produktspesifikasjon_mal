@@ -7,56 +7,13 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 # Produktspesifikasjon: Tilfluktsrom - Offentlige
 
-## Generelt om spesifikasjonen
+*Offentlige tilfluktsrom i Norge. Tilfluktsrom er permanente beskyttelsesrom som skal verne befolkningen mot skader ved krigshandlinger. Offentlige tilfluktsrom er for befolkningen i et område og er bygget i byer og større tettsteder, samt i boligområder hvor dekningen av private tilfluktsrom ikke er tilfredsstillende.*
 
+**Nøkkelord:** Norge digitalt, fellesDatakatalog, dataNorgeNo, Samfunnssikkerhet
 
-### Unik identifisering
+**Emnekategorier:** Samfunn og kultur
 
-dbae9aae-10e7-4b75-8d67-7f0e8828f3d8
-
-#### Fullstendig navn
-
-Tilfluktsrom - Offentlige
-
-#### Versjon
-
-2019-09-09
-
-### Referansedato
-
-2026-03-17
-
-### Ansvarlig organisasjon
-
-Direktoratet for samfunnssikkerhet og beredskap
-
-### Språk
-
-nor
-
-### Hovedtema
-
-Norge digitalt, fellesDatakatalog, dataNorgeNo, Samfunnssikkerhet
-
-### Temakategori
-
-Samfunn og kultur
-
-### Sammendrag
-
-Offentlige tilfluktsrom i Norge. Tilfluktsrom er permanente beskyttelsesrom som skal verne befolkningen mot skader ved krigshandlinger. Offentlige tilfluktsrom er for befolkningen i et område og er bygget i byer og større tettsteder, samt i boligområder hvor dekningen av private tilfluktsrom ikke er tilfredsstillende.
-
-### Romlig representasjonstype
-
-Vektor
-
-### Romlig oppløsning
-
-**Ekvivalent målestokk**: 5000
-
-### Utstrekning
-
-**Geografisk utstrekning**:
+**Geografisk utstrekning:** **Geografisk utstrekning**:
 
 - **Vest**: 2.0
 - **Øst**: 33.0
@@ -67,11 +24,25 @@ Vektor
 
 - **Tidsperiode**:
   - **Fra**: 2019-09-09
-  - **Til**: 2026-03-17
+  - **Til**: 2026-03-20
 
-### Begrensninger
+## Om spesifikasjonen
 
-**Ressursbegrensninger**:
+
+**Unik identifikator:** dbae9aae-10e7-4b75-8d67-7f0e8828f3d8\
+**Fullstendig navn:** Tilfluktsrom - Offentlige\
+**Versjon:** 2019-09-09\
+**Opprettet dato:** 2019-09-09\
+**Endret dato:** 2026-03-20\
+**Språk:** nor\
+**Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
+
+## Om produktet Tilfluktsrom - Offentlige
+
+
+**Romlig representasjonstype:** Vektor\
+**Romlig oppløsning:** **Ekvivalent målestokk**: 5000\
+**Begrensninger:** **Ressursbegrensninger**:
 
 - **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt.
 
@@ -85,9 +56,10 @@ Vektor
 
 **Sikkerhetsbegrensninger**:
 
-- **Klassifisering**: Ugradert
+- **Klassifisering**: Ugradert\
+**Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
 
-## Spesifikasjonsomfang
+## Omfang
 
 - **Omfang**:
 
@@ -98,7 +70,7 @@ Vektor
     #### Datamodell for hendelser
     Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
-## Innhold og struktur
+## Datainnhold og struktur
 
 
 
@@ -128,7 +100,7 @@ Vektor
 - **kode**: EPSG:25832
   **navn**: EUREF89 UTM sone 32, 2d
 
-## Kvalitet
+## Datakvalitet
 
 **Nivå**: dataset
 
@@ -142,13 +114,13 @@ Vektor
 
 
 
-## Datafangst
+## Datafangst og produksjon
 
 **Datainnsamling og prosessering**:
 
 - **Prosesstrinn**: - **Beskrivelse**: Ingen prosesshistorie tilgjengelig
 
-## Datavedlikehold
+## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Etter behov
 
@@ -243,7 +215,7 @@ Vektor
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-17
+**Metadatadato**: 2026-03-20
 
 **språk**: nor
 
@@ -288,3 +260,4 @@ Vektor
   **relasjon**: service
   **type**: application/xml
   **tittel**: Tjeneste-distribusjon
+
