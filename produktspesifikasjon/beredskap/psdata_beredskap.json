@@ -2,7 +2,7 @@
   "title": "Tilfluktsrom - Offentlige",
   "date": {
     "creation": "2019-09-09",
-    "revision": "2026-03-12"
+    "revision": "2026-03-17"
   },
   "language": "nor",
   "contact": {
@@ -75,14 +75,14 @@
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2019-09-09",
-          "endPosition": "2026-03-12"
+          "endPosition": "2026-03-17"
         }
       }
     },
     "date": {
       "creation": "2019-09-09",
       "publication": "2019-09-09",
-      "revision": "2026-03-12"
+      "revision": "2026-03-17"
     },
     "language": "nor"
   },
@@ -283,7 +283,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-12",
+    "metadataDate": "2026-03-17",
     "language": "nor",
     "contact": {
       "organizationName": "Direktoratet for samfunnssikkerhet og beredskap",
