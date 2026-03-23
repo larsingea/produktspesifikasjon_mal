@@ -84,7 +84,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Identifikasjon</td>
     </tr>
   </tbody>
 </table>
@@ -242,7 +242,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Identifikasjon</td>
     </tr>
   </tbody>
 </table>
@@ -400,7 +400,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Identifikasjon</td>
     </tr>
   </tbody>
 </table>
@@ -687,7 +687,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Identifikasjon</td>
     </tr>
   </tbody>
 </table>
@@ -1028,7 +1028,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Posisjonskvalitet</td>
     </tr>
   </tbody>
 </table>
@@ -1274,7 +1274,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Identifikasjon</td>
     </tr>
   </tbody>
 </table>
@@ -1486,7 +1486,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Posisjonskvalitet</td>
     </tr>
   </tbody>
 </table>
@@ -1732,7 +1732,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>Identifikasjon</td>
     </tr>
   </tbody>
 </table>

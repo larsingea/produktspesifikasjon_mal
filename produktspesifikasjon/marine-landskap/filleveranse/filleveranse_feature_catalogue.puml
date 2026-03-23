@@ -24,17 +24,12 @@ skinparam stereotypeCFontColor #2D201A
 
 package "Objekttyper" {
 
+  class Dataavgrensning <<featureType>> {
+    + grense [1] : Kurve
+    + identifikasjon [0..1] : Identifikasjon
+  }
+
   class MarinLandskapsgrense <<featureType>> {
-    + geolPavisningstype [1] : GeolPavisningstype
-    + geolPavisningstypeNavn [1] : CharacterString
-    + temakvalitet [1] : TemaKvalitet
-    + datauttaksdato [1] : Date
-    + førsteDigitaliseringsdato [1] : Date
-    + oppdateringsdato [0..1] : Date
-    + kvalitet [1] : Posisjonskvalitet
-    + medium [1] : Medium
-    + mediumNavn [1] : CharacterString
-    + opphav [1] : CharacterString
     + grense [1] : Kurve
     + identifikasjon [0..1] : Identifikasjon
   }
@@ -47,20 +42,34 @@ package "Objekttyper" {
   }
 
   abstract class FellesegenskaperLosmasse <<featureType>> {
-    ' Ingen attributter
+    + datauttaksdato [1] : Date
+    + førsteDigitaliseringsdato [1] : Date
+    + oppdateringsdato [0..1] : Date
+    + kvalitet [1] : Posisjonskvalitet
+    + medium [1] : Medium
+    + mediumNavn [1] : CharacterString
+    + opphav [1] : CharacterString
   }
 
   abstract class LosmasseGrense <<featureType>> {
-    ' Ingen attributter
+    + geolPavisningstype [1] : GeolPavisningstype
+    + geolPavisningstypeNavn [1] : CharacterString
+    + temakvalitet [1] : TemaKvalitet
   }
 
-  class Identifikasjon {
+  abstract class FellesegenskaperFlater <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + datauttaksdato [1] : Date
+    + førsteDigitaliseringsdato [0..1] : Date
+  }
+
+  class Identifikasjon <<dataType>> {
     + lokalId [1] : CharacterString
     + navnerom [1] : CharacterString
     + versjonId [1] : CharacterString
   }
 
-  class Posisjonskvalitet {
+  class Posisjonskvalitet <<dataType>> {
     + målemetode [1] : Målemetode
     + målemetodeNavn [1] : CharacterString
     + nøyaktighet [0..1] : Integer
