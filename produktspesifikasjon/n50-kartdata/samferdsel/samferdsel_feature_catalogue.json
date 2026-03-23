@@ -1,1 +1,812 @@
-[]
+[
+  {
+    "name": "Sti",
+    "description": "tydelig tråkk i terrenget som er markert gjennom års bruk eller tilrettelagt for ferdsel til fots\n\n\n-- Definition --\ndistinct path in the terrain which has become pronounced through many years' use or prepared for general travel on foot.",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "merking",
+        "type": "RuteMerking",
+        "description": "om stien er merket eller ikke\n\n-- Definition --\nwhether the trail is marked or not Kommentar-tillegg Kommentar-tillegg Kommentar-tillegg Kommentar-tillegg Kommentar-tillegg",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Merket, uspesifisert",
+              "label": "Merket, uspesifisert"
+            },
+            {
+              "value": "Ikke merket",
+              "label": "Ikke merket"
+            }
+          ],
+          "definition": "forteller om det er merking  langs en sti, løype, veg, sykkelvei mv"
+        }
+      },
+      {
+        "name": "vedlikeholdsansvarlig",
+        "type": "Vedlikeholdsansvarlig",
+        "description": "institusjon eller andre som har ansvar for vedlikehold av rute",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Alta og Omegn Turlag",
+              "label": "Alta og Omegn Turlag"
+            },
+            {
+              "value": "Aust-Agder TF",
+              "label": "Aust-Agder TF"
+            },
+            {
+              "value": "Bergen og Hordaland Turlag",
+              "label": "Bergen og Hordaland Turlag"
+            },
+            {
+              "value": "Bodø og Omegns Tf",
+              "label": "Bodø og Omegns Tf"
+            },
+            {
+              "value": "Brurskanken Turlag",
+              "label": "Brurskanken Turlag"
+            },
+            {
+              "value": "Brønnøysund Turlag",
+              "label": "Brønnøysund Turlag"
+            },
+            {
+              "value": "DNT Drammen og Omegn",
+              "label": "DNT Drammen og Omegn"
+            },
+            {
+              "value": "DNT Gjøvik og Omegn",
+              "label": "DNT Gjøvik og Omegn"
+            },
+            {
+              "value": "DNT Gudbrandsdalen",
+              "label": "DNT Gudbrandsdalen"
+            },
+            {
+              "value": "DNT Indre Østfold",
+              "label": "DNT Indre Østfold"
+            },
+            {
+              "value": "DNT Lillehammer",
+              "label": "DNT Lillehammer"
+            },
+            {
+              "value": "DNT Nedre Glomma",
+              "label": "DNT Nedre Glomma"
+            },
+            {
+              "value": "DNT Nord-Østerdal",
+              "label": "DNT Nord-Østerdal"
+            },
+            {
+              "value": "DNT Oslo og Omegn",
+              "label": "DNT Oslo og Omegn"
+            },
+            {
+              "value": "DNT Sør",
+              "label": "DNT Sør"
+            },
+            {
+              "value": "DNT Valdres",
+              "label": "DNT Valdres"
+            },
+            {
+              "value": "DNT Vansjø",
+              "label": "DNT Vansjø"
+            },
+            {
+              "value": "Engerdal og Trysil Turlag",
+              "label": "Engerdal og Trysil Turlag"
+            },
+            {
+              "value": "Finnskogen Tf",
+              "label": "Finnskogen Tf"
+            },
+            {
+              "value": "Flekkefjord og Oplands Tf",
+              "label": "Flekkefjord og Oplands Tf"
+            },
+            {
+              "value": "Hadeland Turlag",
+              "label": "Hadeland Turlag"
+            },
+            {
+              "value": "Hamar og Hedemarken Tf",
+              "label": "Hamar og Hedemarken Tf"
+            },
+            {
+              "value": "Hammerfest og Omegn Turlag",
+              "label": "Hammerfest og Omegn Turlag"
+            },
+            {
+              "value": "Harstad Turlag",
+              "label": "Harstad Turlag"
+            },
+            {
+              "value": "Haugesund Tf",
+              "label": "Haugesund Tf"
+            },
+            {
+              "value": "Hemnes Tf",
+              "label": "Hemnes Tf"
+            },
+            {
+              "value": "Holmestrand og Omegn Tf",
+              "label": "Holmestrand og Omegn Tf"
+            },
+            {
+              "value": "Horten og Omegn Tf",
+              "label": "Horten og Omegn Tf"
+            },
+            {
+              "value": "Kongsberg og Omegns Tf",
+              "label": "Kongsberg og Omegns Tf"
+            },
+            {
+              "value": "Kristiansund og Nordmøre Tf",
+              "label": "Kristiansund og Nordmøre Tf"
+            },
+            {
+              "value": "Larvik og Omegns Tf",
+              "label": "Larvik og Omegns Tf"
+            },
+            {
+              "value": "Lofoten Turlag",
+              "label": "Lofoten Turlag"
+            },
+            {
+              "value": "Molde og Romsdals Tf",
+              "label": "Molde og Romsdals Tf"
+            },
+            {
+              "value": "Narvik og Omegn Tf",
+              "label": "Narvik og Omegn Tf"
+            },
+            {
+              "value": "Nord-Salten Turlag",
+              "label": "Nord-Salten Turlag"
+            },
+            {
+              "value": "Nord-Trøndelag Tf",
+              "label": "Nord-Trøndelag Tf"
+            },
+            {
+              "value": "Nordkapp og Omegn Tf",
+              "label": "Nordkapp og Omegn Tf"
+            },
+            {
+              "value": "Notodden Turlag",
+              "label": "Notodden Turlag"
+            },
+            {
+              "value": "Odal Turlag",
+              "label": "Odal Turlag"
+            },
+            {
+              "value": "Rana Tf",
+              "label": "Rana Tf"
+            },
+            {
+              "value": "Rena og Omegn Tf",
+              "label": "Rena og Omegn Tf"
+            },
+            {
+              "value": "Ringerikes Tf",
+              "label": "Ringerikes Tf"
+            },
+            {
+              "value": "Sandefjord og Oplands Tf",
+              "label": "Sandefjord og Oplands Tf"
+            },
+            {
+              "value": "Sandnessjøen og Omegn Tf",
+              "label": "Sandnessjøen og Omegn Tf"
+            },
+            {
+              "value": "Sogn og Fjordane Turlag",
+              "label": "Sogn og Fjordane Turlag"
+            },
+            {
+              "value": "Stavanger Tf",
+              "label": "Stavanger Tf"
+            },
+            {
+              "value": "Sulitjelma og Omegn Tf",
+              "label": "Sulitjelma og Omegn Tf"
+            },
+            {
+              "value": "Sør-Varanger Turlag",
+              "label": "Sør-Varanger Turlag"
+            },
+            {
+              "value": "Telemark Tf",
+              "label": "Telemark Tf"
+            },
+            {
+              "value": "Tistedalen Friluftslag",
+              "label": "Tistedalen Friluftslag"
+            },
+            {
+              "value": "Troms Turlag",
+              "label": "Troms Turlag"
+            },
+            {
+              "value": "Trondhjems Tf",
+              "label": "Trondhjems Tf"
+            },
+            {
+              "value": "Tvedestrand og Vegårdshei Turlag",
+              "label": "Tvedestrand og Vegårdshei Turlag"
+            },
+            {
+              "value": "Tønsberg og Omegn Tf",
+              "label": "Tønsberg og Omegn Tf"
+            },
+            {
+              "value": "Varangerhalvøya Turlag",
+              "label": "Varangerhalvøya Turlag"
+            },
+            {
+              "value": "Vesterålen Turlag",
+              "label": "Vesterålen Turlag"
+            },
+            {
+              "value": "Voss Utferdslag",
+              "label": "Voss Utferdslag"
+            },
+            {
+              "value": "Ålesund-Sunnmøre Tf",
+              "label": "Ålesund-Sunnmøre Tf"
+            },
+            {
+              "value": "Andre",
+              "label": "Andre"
+            },
+            {
+              "value": "Ukjent",
+              "label": "Ukjent"
+            }
+          ],
+          "definition": "institusjon eller andre som har ansvar for vedlikehold av rute",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "rutenummer",
+        "type": "CharacterString",
+        "description": "nummer på samferdsels- eller friluftsrute",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Veglenke",
+    "description": "abstrakt supertype for objekttyper som representerer lenker i veinettet\n\n\n-- Definition --\nsegment of the road network",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "vegident",
+        "type": "Vegident",
+        "description": "sammensatt identifikator for en vegrute\n\n--Definition--\ncompound identifier for a road route",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "vegkategori",
+            "type": "Vegkategori",
+            "description": "angir hvilken type veg veglenken beskriver\n\n-- Definition --\nindicates which type of road the road segment describes",
+            "cardinality": "0..1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Europaveg",
+                  "label": "Europaveg"
+                },
+                {
+                  "value": "Riksveg",
+                  "label": "Riksveg"
+                },
+                {
+                  "value": "Fylkesveg",
+                  "label": "Fylkesveg"
+                },
+                {
+                  "value": "Kommunal veg",
+                  "label": "Kommunal veg"
+                },
+                {
+                  "value": "Privat veg",
+                  "label": "Privat veg"
+                }
+              ],
+              "definition": "angir hvilken type veg veglenken beskriver\n\n\n-- Definition - -\nindicates which type of road the road segment describes"
+            }
+          },
+          {
+            "name": "vegstatus",
+            "type": "VegStatus",
+            "description": "angir veglenkens status\n\n-- Definition --\nindicates the status of the road segment",
+            "cardinality": "0..1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Vedtatt veg",
+                  "label": "Vedtatt veg"
+                },
+                {
+                  "value": "Eksisterende veg",
+                  "label": "Eksisterende veg"
+                }
+              ],
+              "definition": "angir veglenkens status\n\n\n-- Definition - -\nindicates the status of the road segment"
+            }
+          },
+          {
+            "name": "vegnummer",
+            "type": "Integer",
+            "description": "angir nummeret til en vegrute\n\n-- Definition --\nindicates the number of a road route",
+            "cardinality": "0..1"
+          }
+        ]
+      },
+      {
+        "name": "rutenummer",
+        "type": "CharacterString",
+        "description": "nummer på samferdsels- eller friluftsrute",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Stasjon",
+    "description": "representasjonspunkt for stasjon, holdeplass eller godsterminal\n\n\n-- Definition --\nrepresentation point for station, stopping place or freight terminal",
+    "attributes": [
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "description": "navn på stasjon\n\n-- Definition --\nname of a station",
+        "cardinality": "1"
+      },
+      {
+        "name": "retning",
+        "type": "Retning",
+        "description": "linjestykke i planet med retning\n\n\n-- Definition - -\ndirected line segment in the plane",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "retningsverdi",
+            "type": "Real",
+            "description": "generelt element med angivelse av retning",
+            "cardinality": "1"
+          },
+          {
+            "name": "retningsenhet",
+            "type": "Retningsenhet",
+            "description": "enhet for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Grader (360 graders deling)",
+                  "label": "360 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Gon (400 graders deling)",
+                  "label": "400 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Radianer",
+                  "label": "Radianer med positiv retning med sola"
+                }
+              ],
+              "definition": "enhet for retning"
+            }
+          },
+          {
+            "name": "retningsreferanse",
+            "type": "Retningsreferanse",
+            "description": "referansesystem for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Sant nord",
+                  "label": "(default)"
+                },
+                {
+                  "value": "Magnetisk nord",
+                  "label": "Magnetisk nord"
+                },
+                {
+                  "value": "Lokal",
+                  "label": "Lokal"
+                }
+              ],
+              "definition": "referansesystem for retning"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Jernbanepunkt"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Jernbanepunkt",
+    "description": "abstrakt supertype for objekttyper som representerer punktobjekter i eller ved jernbanenettet.\n\n\n-- Definition --\nabstract supertype for points in, or connected to, the railway network.",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Jernbanelenke",
+    "description": "abstrakt supertype for objekttyper som representerer lenker i jernbanenettet.\n\n\n-- Definition --\nabstract supertype for links in the railway network.",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del Kommentar-tillegg Kommentar-tillegg Kommentar-tillegg Kommentar-tillegg",
+        "cardinality": "1"
+      },
+      {
+        "name": "jernbaneinformasjon",
+        "type": "Jernbaneinformasjon",
+        "description": "beskrivelse av jernbanen",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "anleggstype",
+            "type": "Jernbanetype",
+            "description": "angir type jernbaneanlegg",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Jernbane",
+                  "label": "Jernbane"
+                },
+                {
+                  "value": "Tunnelbane",
+                  "label": "Tunnelbane"
+                },
+                {
+                  "value": "Museumsbane",
+                  "label": "Museumsbane"
+                },
+                {
+                  "value": "Nedlagt",
+                  "label": "Nedlagt"
+                }
+              ],
+              "definition": "klassifisering av jernbaneanlegg i hht. konstruksjon/dimensjonering. Tunnelbane dekker også metro- og forstadsbaner.\n\n\n-- Definition --\nclassification of railway facility in accordance with design/dimensioning\n\n\n<font color=\"#008000\">-- INSPIRE --</font>\n<font color=\"#008000\">Maps to RailwayTypeValue</font>"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Barmarksløype",
+    "description": "tradisjonelle kjørespor/traktorveger i utmark hvor motorisert ferdsel på barmark er tillatt for allmennheten, etter forskrift gitt av Fylkesmannen\n\n\n-- Definition --\ntraditional driving tracks/tractor roads on uncultivated land where motor traffic for the general public is permitted on snowless ground in accordance with the regulations laid down by the County governor",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "rutenummer",
+        "type": "CharacterString",
+        "description": "nummer på samferdsels- eller friluftsrute",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Bane",
+    "description": "teoretisk linje som representerer ett enkelt eller flere parallelle spor som del av en banestrekning\n\n\n-- Definition --\ntheoretical line which represents a single or several parallel tracks as part of a railway line\n\n\n<font color=\"#008000\">-- INSPIRE --</font>\n<font color=\"#008000\">Maps to RailwayLink</font>",
+    "attributes": [
+      {
+        "name": "sporantall",
+        "type": "Sporantall",
+        "description": "definerer antall spor på en banestrekning\n\n-- Definition --\ndefines the number of tracks on a railway line",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Enkeltspor",
+              "label": "Enkeltspor"
+            },
+            {
+              "value": "Flere spor",
+              "label": "Flere spor"
+            }
+          ],
+          "definition": "antall jernbanespor",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Jernbanelenke"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Traktorveg",
+    "description": "veg som hele året (eller deler av året) ikke egner seg for vanlig bilkjøring, men som er farbar med traktor\n\n\n-- Definition --\nroad not suitable for ordinary year-round (or only seasonal) car traffic, but which is passable by tractor",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "rutenummer",
+        "type": "CharacterString",
+        "description": "nummer på samferdsels- eller friluftsrute",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Bilferjestrekning",
+    "description": "strekning trafikert av bilferjer som del av vegnettet\n\n\n-- Definition --\nroute serviced by car ferries as part of the road network",
+    "attributes": [],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Veglenke"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "GangSykkelveg",
+    "description": "bane for fotgjengere og syklister langs eller nær en kjøreveg\n\n\n-- Definition --\nlane for pedestrians and cyclists along or near a road",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "rutenummer",
+        "type": "CharacterString",
+        "description": "nummer på samferdsels- eller friluftsrute",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "VegSenterlinje",
+    "description": "linje midt mellom vegkanter.\n\n\n-- Definition --\nline mid-way between edges of road",
+    "attributes": [
+      {
+        "name": "motorvegtype",
+        "type": "Motorvegtype",
+        "description": "klassifisering av type veg",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Ikke motorveg",
+              "label": "Vanlig veg"
+            },
+            {
+              "value": "Motortrafikkveg",
+              "label": "motortrafikkveg. Motortrafikkveger kan være tofelts-, trefelts- eller flerfeltsveger, med eller uten midtdeler eller midtrekkverk, men følgende krav skal være oppfylt:\n• Vegen skal vare avkjørselsfri.\n• Vegkryss skal være planskilte.\n• Det skal finnes et tilfredsstillende parallellvegnett for de kjøretøy og trafikantgruppene som ikke er tillatt på motortrafikkvegen.\nSkiltet med skilt 503.\nTidligere motorveg klasse B."
+            },
+            {
+              "value": "Motorveg",
+              "label": "veg med fire eller flere kjørefelt, midtdeler, planskilte kryss og uten direkte tilknytning til eiendommene langs vegen. Skiltet med skilt 502. Tidligere motorveg klasse A."
+            }
+          ],
+          "definition": "klassifisering av type veg",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Veglenke"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "RuteGenerell",
+    "description": "rute for ferdsel generelt\n\n\n-- Definition --\nroute for general ??traffic/travel",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "rutenummer",
+        "type": "CharacterString",
+        "description": "nummer på samferdsels- eller friluftsrute",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Passasjerferjestrekning",
+    "description": "båtrute beregnet på person- og varetransport\n\n\n-- Definition --\nferry route for transportation of people and goods",
+    "attributes": [],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "RuteGenerell"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Vegsperring",
+    "description": "fysisk sperring av vegen\n\n\n-- Definition --\nphysical blockage of the road",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "vegsperringtype",
+        "type": "Vegsperringtype",
+        "description": "angir type vegsperring\n\n-- Definition --\nindicates type of roadblock",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Låst bom",
+              "label": "Låst bom"
+            }
+          ],
+          "definition": "angir type vegsperring\n\n\n-- Definition - -\nindicates type of roadblock"
+        }
+      },
+      {
+        "name": "retning",
+        "type": "Retning",
+        "description": "linjestykke i planet med retning\n\n\n-- Definition - -\ndirected line segment in the plane",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "retningsverdi",
+            "type": "Real",
+            "description": "generelt element med angivelse av retning",
+            "cardinality": "1"
+          },
+          {
+            "name": "retningsenhet",
+            "type": "Retningsenhet",
+            "description": "enhet for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Grader (360 graders deling)",
+                  "label": "360 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Gon (400 graders deling)",
+                  "label": "400 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Radianer",
+                  "label": "Radianer med positiv retning med sola"
+                }
+              ],
+              "definition": "enhet for retning"
+            }
+          },
+          {
+            "name": "retningsreferanse",
+            "type": "Retningsreferanse",
+            "description": "referansesystem for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Sant nord",
+                  "label": "(default)"
+                },
+                {
+                  "value": "Magnetisk nord",
+                  "label": "Magnetisk nord"
+                },
+                {
+                  "value": "Lokal",
+                  "label": "Lokal"
+                }
+              ],
+              "definition": "referansesystem for retning"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  }
+]

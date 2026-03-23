@@ -25,73 +25,70 @@ skinparam stereotypeCFontColor #2D201A
 package "Objekttyper" {
 
   class FiktivDelelinje <<featureType>> {
-    + oppdateringsdato [0..1] : Date
     + grense [1] : GM_Curve
   }
 
   class Dataavgrensning <<featureType>> {
-    + oppdateringsdato [0..1] : Date
     + grense [1] : GM_Curve
   }
 
   abstract class SOSI_Objekt_Hjelpelinjer <<featureType>> {
-    ' Ingen attributter
+    + oppdateringsdato [0..1] : Date
   }
 
   abstract class SOSI_Objekt_Linjer_Samferdsel <<featureType>> {
-    ' Ingen attributter
+    + medium [0..1] : MediumSamferdsel
+    + datafangstdato [1] : Date
+    + oppdateringsdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
   }
 
   abstract class SOSI_Objekt_Flater <<featureType>> {
-    ' Ingen attributter
+    + oppdateringsdato [1] : Date
   }
 
   abstract class SOSI_Objekt_Sperrelinjer <<featureType>> {
-    ' Ingen attributter
+    + oppdateringsdato [1] : Date
   }
 
   abstract class SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <<featureType>> {
-    ' Ingen attributter
+    + datafangstdato [0..1] : Date
+    + oppdateringsdato [1] : Date
+    + kvalitet [0..1] : Posisjonskvalitet
   }
 
   abstract class "SOSI_Objekt_PunkterOgLinjer_Høyde" as SOSI_Objekt_PunkterOgLinjer_H_yde <<featureType>> {
-    ' Ingen attributter
+    + medium [1] : MediumHøyde
+    + datafangstdato [1] : Date
+    + oppdateringsdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
   }
 
   class KantUtsnitt <<featureType>> {
-    + oppdateringsdato [0..1] : Date
     + grense [1] : GM_Curve
   }
 
   abstract class SOSI_Objekt_PunkterOgLinjer <<featureType>> {
-    ' Ingen attributter
-  }
-
-  class AvtaltAvgrensningslinje <<featureType>> {
     + datafangstdato [1] : Date
     + oppdateringsdato [1] : Date
     + kvalitet [1] : Posisjonskvalitet
+  }
+
+  class AvtaltAvgrensningslinje <<featureType>> {
     + grense [1] : GM_Curve
   }
 
   class Teiggrensepunkt <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + grensepunkttype [1] : Grensepunkttype
     + grensepunktnummer [0..1] : CharacterString
   }
 
   class Fylkesgrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Kommune <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
     + kommunenavn [1] : CharacterString
     + kommunenummer [1] : Kommunenummer
@@ -100,118 +97,76 @@ package "Objekttyper" {
   }
 
   class Riksgrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Grunnlinje <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Kommunegrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Grunnlinjepunkt <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + grunnlinjepunktnavn [0..1] : CharacterString
     + grunnlinjepunktnummer [1] : CharacterString
   }
 
   class Territorialgrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class ElvMidtlinje <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Park <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "Flomløpkant" as Floml_pkant <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class ElvelinjeFiktiv <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Skog <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class ElveKant <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class "InnsjøInnsjøSperre" as Innsj_Innsj_Sperre <<featureType>> {
-    + oppdateringsdato [1] : Date
     + grense [1] : GM_Curve
   }
 
   class Myr <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "ÅpentOmråde" as _pentOmr_de <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class Gravplass <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class Kystkontur <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Arealbrukgrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Lufthavn <<featureType>> {
-    + datafangstdato [0..1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [0..1] : Posisjonskvalitet
     + område [0..1] : GM_Surface
     + posisjon [0..1] : GM_Point
     + lufthavntype [0..1] : Lufthavntype
@@ -224,116 +179,86 @@ package "Objekttyper" {
   }
 
   class "FerskvannTørrfall" as FerskvannT_rrfall <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class SportIdrettPlass <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "KanalGrøft" as KanalGr_ft <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + vannBredde [1] : VannBredde
   }
 
   class ElvBekk <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + vannbredde [1] : VannBredde
   }
 
   class "FerskvannTørrfallkant" as FerskvannT_rrfallkant <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class "Innsjøkant" as Innsj_kant <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class BymessigBebyggelse <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class Tettbebyggelse <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class DyrketMark <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class Steintipp <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class Steinbrudd <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class Rullebane <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "HavInnsjøSperre" as HavInnsj_Sperre <<featureType>> {
-    + oppdateringsdato [1] : Date
     + grense [1] : GM_Curve
   }
 
   class HavElvSperre <<featureType>> {
-    + oppdateringsdato [1] : Date
     + grense [1] : GM_Curve
   }
 
   class Golfbane <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "SnøIsbre" as Sn_Isbre <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "Innsjø" as Innsj_ <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
     + vatnLøpenummer [0..1] : Integer
     + høyde [0..1] : Integer
   }
 
   class "InnsjøMidtlinje" as Innsj_Midtlinje <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Havflate <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "InnsjøRegulert" as Innsj_Regulert <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [0..1] : GM_Surface
     + vatnLøpenummer [0..1] : Integer
     + lavesteRegulerteVannstand [0..1] : Integer
@@ -341,139 +266,87 @@ package "Objekttyper" {
   }
 
   class Elv <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "Industriområde" as Industriomr_de <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class Foss <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + retning [1] : Retning
   }
 
   class "Skjær" as Skj_r <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class "InnsjøkantRegulert" as Innsj_kantRegulert <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Tregruppe <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class "InnsjøElvSperre" as Innsj_ElvSperre <<featureType>> {
-    + oppdateringsdato [1] : Date
     + grense [1] : GM_Curve
   }
 
   class Alpinbakke <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
   }
 
   class "Tårn" as T_rn <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class Reingjerde <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Gruve <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class MastTele <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class Campingplass <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class "Lysløype" as Lysl_ype <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class "Parkeringsområde" as Parkeringsomr_de <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class Navigasjonsinstallasjon <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class Taubane <<featureType>> {
-    ' Ingen attributter
+    + senterlinje [1] : GM_Curve
   }
 
   class Vindkraftverk <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
   }
 
   class Pir <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class "Rørgate" as R_rgate <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Bygning <<featureType>> {
-    + datafangstdato [0..1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [0..1] : Posisjonskvalitet
     + posisjon [0..1] : GM_Point
     + område [0..1] : GM_Surface
     + bygningstype [1] : BygningstypeKode
@@ -482,176 +355,106 @@ package "Objekttyper" {
   }
 
   class Tankkant <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Molo <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Skytebaneinnretning <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Ledning <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Takkant <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class KaiBrygge <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class Skitrekk <<featureType>> {
-    + senterlinje [1] : GM_Curve
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
+    ' Ingen attributter
   }
 
   class Flytebrygge <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class LuftledningLH <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + flerLinjer [1] : FlerLinjer
   }
 
   class Hoppbakke <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + lengde [1] : Integer
     + retning [1] : Retning
   }
 
   class Dam <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
   }
 
   class SpesiellDetalj <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [0..1] : GM_Point
     + senterlinje [0..1] : GM_Curve
   }
 
   class Tank <<featureType>> {
-    + datafangstdato [0..1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [0..1] : Posisjonskvalitet
     + posisjon [0..1] : GM_Point
     + område [0..1] : GM_Surface
   }
 
   class "Høydekurve" as H_ydekurve <<featureType>> {
-    + medium [1] : MediumHøyde
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + høyde [1] : Integer
   }
 
   class Terrengpunkt <<featureType>> {
-    + medium [1] : MediumHøyde
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + høyde [1] : Integer
   }
 
   class TrigonometriskPunkt <<featureType>> {
-    + medium [1] : MediumHøyde
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + høyde [1] : Integer
   }
 
   class Forsenkningskurve <<featureType>> {
-    + medium [1] : MediumHøyde
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + høyde [1] : Integer
   }
 
   class Hjelpekurve <<featureType>> {
-    + medium [1] : MediumHøyde
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + høyde [1] : Integer
   }
 
   class Allmenning <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
     + allmenningtype [1] : Allmenningtype
     + navn [1] : CharacterString
   }
 
   class Skytefeltgrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Naturverngrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class Allmenninggrense <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + grense [1] : GM_Curve
   }
 
   class "Naturvernområde" as Naturvernomr_de <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
     + vernedato [1] : Date
     + verneform [1] : Verneform
@@ -659,16 +462,12 @@ package "Objekttyper" {
   }
 
   class Skytefelt <<featureType>> {
-    + oppdateringsdato [1] : Date
     + område [1] : GM_Surface
     + navn [1] : CharacterString
     + skytefeltstatus [1] : Skytefeltstatus
   }
 
   class Naturvernpunkt <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + vernedato [1] : Date
     + verneform [1] : Verneform
@@ -676,10 +475,6 @@ package "Objekttyper" {
   }
 
   class Veglenke <<featureType>> {
-    + medium [0..1] : MediumSamferdsel
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + typeVeg [1] : TypeVeg
     + vegsystem [0..1] : Vegsystem
@@ -689,40 +484,24 @@ package "Objekttyper" {
   }
 
   class Stasjon <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + navn [1] : CharacterString
     + retning [1] : Retning
   }
 
   class Vegsperring <<featureType>> {
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + posisjon [1] : GM_Point
     + vegsperringtype [0..1] : Vegsperringtype
     + retning [1] : Retning
   }
 
   class Bane <<featureType>> {
-    + medium [0..1] : MediumSamferdsel
-    + datafangstdato [1] : Date
-    + oppdateringsdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
     + senterlinje [1] : GM_Curve
     + jernbaneinformasjon [1] : Jernbaneinformasjon
     + sporantall [1] : Sporantall
   }
 
   class StedsnavnTekst <<featureType>> {
-    + geometri [1] : GM_Curve
-    + streng [1] : CharacterString
-    + oppdateringsdato [0..1] : Date
-    + datafangstdato [0..1] : Date
-    + tekstformatering [1] : Tekstformatering
-    + fulltekst [1] : CharacterString
     + navneobjekthovedgruppe [1] : Navneobjekthovedgruppe
     + navneobjektgruppe [1] : Navneobjektgruppe
     + navneobjekttype [1] : Navneobjekttype
@@ -734,48 +513,47 @@ package "Objekttyper" {
   }
 
   abstract class FellesTekst <<featureType>> {
-    ' Ingen attributter
-  }
-
-  class PresentasjonTekst <<featureType>> {
     + geometri [1] : GM_Curve
     + streng [1] : CharacterString
     + oppdateringsdato [0..1] : Date
     + datafangstdato [0..1] : Date
     + tekstformatering [1] : Tekstformatering
     + fulltekst [1] : CharacterString
+  }
+
+  class PresentasjonTekst <<featureType>> {
     + teksttype [1] : Teksttype
   }
 
-  class Posisjonskvalitet {
+  class Posisjonskvalitet <<dataType>> {
     + målemetode [1] : Målemetode
     + nøyaktighet [1] : Nøyaktighet
   }
 
-  class Retning {
+  class Retning <<dataType>> {
     + retningsverdi [1] : Real
     + retningsenhet [1] : Retningsenhet
     + retningsreferanse [1] : Retningsreferanse
   }
 
-  class Hytteinformasjon {
+  class Hytteinformasjon <<dataType>> {
     + betjeningsgrad [0..1] : Betjeningsgrad
     + hytteeier [0..1] : Hytteeier
     + tilgjengelighet [0..1] : Tilgjengelighet
   }
 
-  class Vegsystem {
+  class Vegsystem <<dataType>> {
     + vegkategori [0..1] : Vegkategori
     + vegfase [0..1] : Vegfase
     + vegnummer [0..1] : Integer
   }
 
-  class Jernbaneinformasjon {
+  class Jernbaneinformasjon <<dataType>> {
     + anleggstype [0..1] : Jernbanetype
     + banestatus [0..1] : Jernbanestatus
   }
 
-  class Tekstformatering {
+  class Tekstformatering <<dataType>> {
     + tekstReferansepunkt [0..1] : TekstReferansePunkt
     + tegnavstand [0..1] : Integer
     + skriftkode [0..1] : Skriftkode
@@ -783,7 +561,7 @@ package "Objekttyper" {
     + referansemålestokk [0..1] : Integer
   }
 
-  class TekstReferansePunkt {
+  class TekstReferansePunkt <<dataType>> {
     + tekstReferansePunktNord [1] : TekstReferansePunktNord
     + tekstReferansePunktØst [1] : TekstReferansePunktØst
   }

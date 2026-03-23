@@ -1,0 +1,346 @@
+@startuml
+title N50 Kartdata - Arealdekke - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class Steintipp <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class Skog <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class SportIdrettPlass <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class "Innsjøkant" as Innsj_kant <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Park <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class Lufthavn <<featureType>> {
+    + område [0..1] : Flate
+    + posisjon [0..1] : Punkt
+    + lufthavntype [0..1] : Lufthavntype
+    + trafikktype [0..1] : Trafikktype
+    + IATAKode [0..1] : IATAKode
+    + ICAOKode [1] : ICAOKode
+    + lufthavneier [0..1] : CharacterString
+    + navn [0..1] : CharacterString
+    + retning [0..1] : Retning
+  }
+
+  class "Innsjø" as Innsj_ <<featureType>> {
+    + område [1] : Flate
+    + vatnLøpenummer [0..1] : Integer
+    + høyde [0..1] : Høyde
+  }
+
+  class Tettbebyggelse <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class "ÅpentOmråde" as _pentOmr_de <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class HavElvSperre <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Myr <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class Dataavgrensning <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Alpinbakke <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class "InnsjøInnsjøSperre" as Innsj_Innsj_Sperre <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Havflate <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class Kystkontur <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class "Skjær" as Skj_r <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class FiktivDelelinje <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Rullebane <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class ElveElvSperre <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class "HavInnsjøSperre" as HavInnsj_Sperre <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Gravplass <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class DyrketMark <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class "SnøIsbre" as Sn_Isbre <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class "Flomløpkant" as Floml_pkant <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class BymessigBebyggelse <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class "InnsjøElvSperre" as Innsj_ElvSperre <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Hyttefelt <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class Tregruppe <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class "InnsjøkantRegulert" as Innsj_kantRegulert <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class "FerskvannTørrfallkant" as FerskvannT_rrfallkant <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class ElvBekkKant <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Arealbrukgrense <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Steinbrudd <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class "FerskvannTørrfall" as FerskvannT_rrfall <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class Golfbane <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class ElvBekk <<featureType>> {
+    + område [0..1] : Flate
+    + senterlinje [0..1] : Kurve
+    + vannBredde [1] : VannBredde
+  }
+
+  class "Industriområde" as Industriomr_de <<featureType>> {
+    + område [1] : Flate
+  }
+
+  class Retning <<dataType>> {
+    + retningsverdi [1] : Real
+    + retningsenhet [1] : Retningsenhet
+    + retningsreferanse [1] : Retningsreferanse
+  }
+}
+
+  Steintipp --> Kystkontur : kystkontur [0..*]
+  Steintipp --> Dataavgrensning : dataavgrensning [0..*]
+  Steintipp --> Arealbrukgrense : arealbrukgrense [0..*]
+  Steintipp --> ElvBekkKant : elvBekkKant [0..*]
+  Steintipp --> Innsj_kant : innsjøkant [0..*]
+  Steintipp --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Steintipp --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Skog --> Arealbrukgrense : arealbrukgrense [0..*]
+  Skog --> Dataavgrensning : dataavgrensning [0..*]
+  Skog --> Kystkontur : kystkontur [0..*]
+  Skog --> Innsj_kant : innsjøkant [0..*]
+  Skog --> ElvBekkKant : elvBekkKant [0..*]
+  Skog --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Skog --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  SportIdrettPlass --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  SportIdrettPlass --> ElvBekkKant : elvBekkKant [0..*]
+  SportIdrettPlass --> Kystkontur : kystkontur [0..*]
+  SportIdrettPlass --> Innsj_kant : innsjøkant [0..*]
+  SportIdrettPlass --> Dataavgrensning : dataavgrensning [0..*]
+  SportIdrettPlass --> FiktivDelelinje : fiktivDelelinje [0..*]
+  SportIdrettPlass --> Arealbrukgrense : arealbrukgrense [0..*]
+  Park --> Innsj_kant : innsjøkant [0..*]
+  Park --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Park --> Dataavgrensning : dataavgrensning [0..*]
+  Park --> Kystkontur : kystkontur [0..*]
+  Park --> Arealbrukgrense : arealbrukgrense [0..*]
+  Park --> ElvBekkKant : elvBekkKant [0..*]
+  Park --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Lufthavn --> Innsj_kant : innsjøkant [0..*]
+  Lufthavn --> Dataavgrensning : dataavgrensning [0..*]
+  Lufthavn --> ElvBekkKant : elvBekkKant [0..*]
+  Lufthavn --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Lufthavn --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Lufthavn --> Arealbrukgrense : arealbrukgrense [0..*]
+  Lufthavn --> Kystkontur : kystkontur [0..*]
+  Innsj_ --> Innsj_kant : innsjøkant [0..*]
+  Innsj_ --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Innsj_ --> HavInnsj_Sperre : havInnsjøSperre [0..*]
+  Innsj_ --> Dataavgrensning : dataavgrensning [0..*]
+  Innsj_ --> Innsj_ElvSperre : innsjøElvSperre [0..*]
+  Innsj_ --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Innsj_ --> Innsj_Innsj_Sperre : innsjøInnsjøSperre [0..*]
+  Tettbebyggelse --> Innsj_kant : innsjøkant [0..*]
+  Tettbebyggelse --> ElvBekkKant : elvBekkKant [0..*]
+  Tettbebyggelse --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Tettbebyggelse --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Tettbebyggelse --> Dataavgrensning : dataavgrensning [0..*]
+  Tettbebyggelse --> Kystkontur : kystkontur [0..*]
+  Tettbebyggelse --> Arealbrukgrense : arealbrukgrense [0..*]
+  _pentOmr_de --> Innsj_kant : innsjøkant [0..*]
+  _pentOmr_de --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  _pentOmr_de --> Arealbrukgrense : arealbrukgrense [0..*]
+  _pentOmr_de --> Dataavgrensning : dataavgrensning [0..*]
+  _pentOmr_de --> ElvBekkKant : elvBekkKant [0..*]
+  _pentOmr_de --> Kystkontur : kystkontur [0..*]
+  _pentOmr_de --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Myr --> Innsj_kant : innsjøkant [0..*]
+  Myr --> Dataavgrensning : dataavgrensning [0..*]
+  Myr --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Myr --> Kystkontur : kystkontur [0..*]
+  Myr --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Myr --> Arealbrukgrense : arealbrukgrense [0..*]
+  Myr --> ElvBekkKant : elvBekkKant [0..*]
+  Alpinbakke --> Innsj_kant : innsjøkant [0..*]
+  Alpinbakke --> Dataavgrensning : dataavgrensning [0..*]
+  Alpinbakke --> ElvBekkKant : elvBekkKant [0..*]
+  Alpinbakke --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Alpinbakke --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Alpinbakke --> Kystkontur : kystkontur [0..*]
+  Alpinbakke --> Arealbrukgrense : arealbrukgrense [0..*]
+  Havflate --> HavElvSperre : havElvSperre [0..*]
+  Havflate --> Dataavgrensning : dataavgrensning [0..*]
+  Havflate --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Havflate --> Kystkontur : kystkontur [0..*]
+  Havflate --> HavInnsj_Sperre : havInnsjøSperre [0..*]
+  Rullebane --> Innsj_kant : innsjøkant [0..*]
+  Rullebane --> Dataavgrensning : dataavgrensning [0..*]
+  Rullebane --> Kystkontur : kystkontur [0..*]
+  Rullebane --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Rullebane --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Rullebane --> ElvBekkKant : elvBekkKant [0..*]
+  Rullebane --> Arealbrukgrense : arealbrukgrense [0..*]
+  Gravplass --> Innsj_kant : innsjøkant [0..*]
+  Gravplass --> Dataavgrensning : dataavgrensning [0..*]
+  Gravplass --> Kystkontur : kystkontur [0..*]
+  Gravplass --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Gravplass --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Gravplass --> Arealbrukgrense : arealbrukgrense [0..*]
+  Gravplass --> ElvBekkKant : elvBekkKant [0..*]
+  DyrketMark --> Innsj_kant : innsjøkant [0..*]
+  DyrketMark --> Dataavgrensning : dataavgrensning [0..*]
+  DyrketMark --> Kystkontur : kystkontur [0..*]
+  DyrketMark --> FiktivDelelinje : fiktivDelelinje [0..*]
+  DyrketMark --> ElvBekkKant : elvBekkKant [0..*]
+  DyrketMark --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  DyrketMark --> Arealbrukgrense : arealbrukgrense [0..*]
+  Sn_Isbre --> Innsj_kant : innsjøkant [0..*]
+  Sn_Isbre --> Dataavgrensning : dataavgrensning [0..*]
+  Sn_Isbre --> Kystkontur : kystkontur [0..*]
+  Sn_Isbre --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Sn_Isbre --> Arealbrukgrense : arealbrukgrense [0..*]
+  Sn_Isbre --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Sn_Isbre --> ElvBekkKant : elvBekkKant [0..*]
+  BymessigBebyggelse --> Innsj_kant : innsjøkant [0..*]
+  BymessigBebyggelse --> Dataavgrensning : dataavgrensning [0..*]
+  BymessigBebyggelse --> Kystkontur : kystkontur [0..*]
+  BymessigBebyggelse --> FiktivDelelinje : fiktivDelelinje [0..*]
+  BymessigBebyggelse --> Arealbrukgrense : arealbrukgrense [0..*]
+  BymessigBebyggelse --> ElvBekkKant : elvBekkKant [0..*]
+  BymessigBebyggelse --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Hyttefelt --> Innsj_kant : innsjøkant [0..*]
+  Hyttefelt --> Dataavgrensning : dataavgrensning [0..*]
+  Hyttefelt --> Kystkontur : kystkontur [0..*]
+  Hyttefelt --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Hyttefelt --> ElvBekkKant : elvBekkKant [0..*]
+  Hyttefelt --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Hyttefelt --> Arealbrukgrense : arealbrukgrense [0..*]
+  Steinbrudd --> Innsj_kant : innsjøkant [0..*]
+  Steinbrudd --> Dataavgrensning : dataavgrensning [0..*]
+  Steinbrudd --> Kystkontur : kystkontur [0..*]
+  Steinbrudd --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Steinbrudd --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Steinbrudd --> ElvBekkKant : elvBekkKant [0..*]
+  Steinbrudd --> Arealbrukgrense : arealbrukgrense [0..*]
+  FerskvannT_rrfall --> FerskvannT_rrfallkant : ferskvannTørrfallkant [0..*]
+  FerskvannT_rrfall --> ElvBekkKant : elvBekkKant [0..*]
+  Golfbane --> Innsj_kant : innsjøkant [0..*]
+  Golfbane --> Dataavgrensning : dataavgrensning [0..*]
+  Golfbane --> Kystkontur : kystkontur [0..*]
+  Golfbane --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Golfbane --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Golfbane --> ElvBekkKant : elvBekkKant [0..*]
+  Golfbane --> Arealbrukgrense : arealbrukgrense [0..*]
+  ElvBekk --> HavElvSperre : havElvSperre [0..*]
+  ElvBekk --> Dataavgrensning : dataavgrensning [0..*]
+  ElvBekk --> FiktivDelelinje : fiktivDelelinje [0..*]
+  ElvBekk --> ElveElvSperre : elveElvSperre [0..*]
+  ElvBekk --> Innsj_ElvSperre : innsjøElvSperre [0..*]
+  ElvBekk --> FerskvannT_rrfallkant : ferskvannTørrfallkant [0..*]
+  ElvBekk --> ElvBekkKant : elvBekkKant [0..*]
+  Industriomr_de --> Innsj_kant : innsjøkant [0..*]
+  Industriomr_de --> Dataavgrensning : dataavgrensning [0..*]
+  Industriomr_de --> Kystkontur : kystkontur [0..*]
+  Industriomr_de --> FiktivDelelinje : fiktivDelelinje [0..*]
+  Industriomr_de --> Innsj_kantRegulert : innsjøkantRegulert [0..*]
+  Industriomr_de --> ElvBekkKant : elvBekkKant [0..*]
+  Industriomr_de --> Arealbrukgrense : arealbrukgrense [0..*]
+
+@enduml

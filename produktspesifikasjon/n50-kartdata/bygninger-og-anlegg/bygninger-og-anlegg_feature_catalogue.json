@@ -1,1 +1,1197 @@
-[]
+[
+  {
+    "name": "Takriss",
+    "description": "bygningens avgrensning i form av takkant, fiktiv bygningsavgrensning og/eller bygningsdelelinje\n\n\n-- Definition --\nthe delimitation of the building by the roof edge, fictitious building delimitation and/or building dividing line",
+    "attributes": [],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [
+        "Bygningsavgrensning"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Reingjerde",
+    "description": "gjerde for reindrift\n\n\n-- Definition --\nfence for reindeer husbandry",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Skitrekk",
+    "description": "taubane til å dra skiløper opp bratte bakker\nMerknad: Særlig brukt i alpinbakker\n\n\n-- Definition --\ncableway for pulling skiers up steep slopes",
+    "attributes": [],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Taubane"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Rørgate",
+    "description": "rør som leder vann frem til foredlingsanlegg\n\n\n-- Definition --\npipes which lead water into processing facility",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Lysløype",
+    "description": "løypetrasé som har belysning\n\n\n-- Definition --\ntrail route with lighting",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Flytebrygge",
+    "description": "brygge som er forankret til bunn og hvor plasseringen kan avhenge av vind og strømretning\n\n\n-- Definition --\nwharf chained to the bottom and whose location may depend on the direction of the wind and current",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Tårn",
+    "description": "høy bygningsmessig konstruksjon hvor høyden er stor i forhold til bygningens areal i grunnplanet\nMerknad: Omfatter alle tårn med unntak av de tårn som har en mer spesifisert beskrivelse- som f.eks Silo og tank.\nEksempel: Måletårn og stupetårn\n\n\n-- Definition --\nTall building structure in which the height is great in relation to the footprint of the building",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Campingplass",
+    "description": "faste anlegg med vaskerom, campinghytter o.l.\n\n\n-- Definition --\npermanent  construction with wash rooms, cabins, etc.",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Skytebaneinnretning",
+    "description": "omriss av tekniske anlegg på skytebane - standplass og skiver som ikke blir registrert som f.eks bygninger og murer\n\n\n-- Definition --\noutline of technical facilities at shooting range - stands and targets that are not registered as building or walls",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Tank",
+    "description": "lukkede kar for oppbevaring av gass eller væsker som ikke er registrert som bygning\n\n\n-- Definition --\nclosed tank/vessel for storage of gas or fluids which is not registered as building",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Tankkant",
+          "role": "tankkant",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Parkeringsområde",
+    "description": "område for parkering av kjøretøy",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "KaiBrygge",
+    "description": "angivelse av  innretninger som er satt opp for å betjene båter ved lasting- lossing og landligge\nMerknad: Kai er utvidet til også å kunne være bare et fortøyningsanlegg- f.eks. enkeltstående metallring for fastgjøring av skip.\n\n\n-- Definition --\nindication of facilities set up to serve boats during loading, unloading and docking",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Gruve",
+    "description": "ikke dagbrudd og skjerp, hvor gruveinngangen er tydelig\n\n\n-- Definition --\nnot quarry and prospect, where the pit entrance is prominent",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Bygning",
+    "description": "Bygning er matrikkelens representasjon av en planlagt, under oppføring, fullført eller av en eller annen grunn utgått bygning. Alle bygninger oppført etter 1983 er registrert. I enkelte kommuner har man registrert samtlige bygninger.\n\nEn bygning er identifisert med sitt bygningsnummer som er unikt på tvers av kommuner. Enhver bygning har en bygningsstatus som angir tilstand ved siste registrering. Det lagres også historikk for dette.\n\nI N50 Kartdata er dette bygningsnummeret utelatt. Årsaken er at N50 er en generalisert database. For eksempel kan man i et område der det i Matrikkelen finnes 5 bygninger kun finner 2 eller 3 bygninger i N50 Kartdata. Årsaken er at man fjerne bygninger for å kunne tilpasse inneholdet til en presentasjonsmålestokk på 1:50 000. Det finnes da ingen en-til-en relasjon mellom bygningen i N50 og den virkelige bygningen i terrenget. Bygningsnummeret er da ikke lenger relevant.\n\nEn bygning har en eller flere bruksenheter som beskriver logiske enheter ved bygningen (leiligheter, lokaler). Hver av disse kan ha en egen knytning til adresse og matrikkelenhet.\nFor bygninger registreres enkelte endringer slik at det er mulig å se hva de enkelte endringer medførte for bygningen. Dette er aktuelt for ombygginger og tilbygging som medfører byggesaksbehandlinger. Dette blir gjort ved at det registreres en \"bygningsendring\" når endringen påbegynnes. Ved bygningsendringens ferdigstilling vil bygningen endres med verdier fra bygningsendringen.\n\nMerknad: Bygninger over 15 kvadratmeter skal registreres i matrikkelen",
+    "attributes": [
+      {
+        "name": "bygningstype",
+        "type": "BygningstypeKode",
+        "description": "Bygningstype sier hva bygningen er brukt til",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Enebolig",
+              "label": "Frittliggende bygning med kun en boligenhet."
+            },
+            {
+              "value": "Enebolig m/hybel/sokkelleilighet",
+              "label": "Enebolig som i tillegg inneholder en eller flere hybler el.l., som minimum dekkes av SSB?s krav til hybel. (Bygningen må fremstå som en enebolig)"
+            },
+            {
+              "value": "Våningshus",
+              "label": "Enebolig på gårdsbruk, kan også omfatte enebolig med hybelleilighet, sokkelleilighet ol"
+            },
+            {
+              "value": "Tomannsbolig, vertikaldelt",
+              "label": "Dette gjelder bolighus med to boliger, inkl. våningshus på gårdsbruk. Tomannsboligen kan i tillegg inneholde en eller  flere hybler eller lignende som minimum dekkes av SSB`s krav til hybel. (Bygningen må framstå som en tomannsbolig).En tomannsbolig kan ha vertikalt eller horisontalt boligskille. Vertikaldelt tomannsbolig skal ha to bygningspunkt i GAB. Bygningen er frittliggende, og boligene kan ha separat eller felles inngang."
+            },
+            {
+              "value": "Tomannsbolig, horisontaldelt",
+              "label": "Dette gjelder bolighus med to boliger, inkl. våningshus på gårdsbruk. Tomannsboligen kan i tillegg inneholde en eller  flere hybler eller lignende som minimum dekkes av SSB`s krav til hybel. (Bygningen må framstå som en tomannsbolig).En tomannsbolig kan ha vertikalt eller horisontalt boligskille. Vertikaldelt tomannsbolig skal ha to bygningspunkt i GAB. Bygningen er frittliggende, og boligene kan ha separat eller felles inngang."
+            },
+            {
+              "value": "Våningshus tomannsbolig - vertikaldelt",
+              "label": "Dette gjelder bolighus med to boliger, inkl. våningshus på gårdsbruk. Tomannsboligen kan i tillegg inneholde en eller  flere hybler eller lignende som minimum dekkes av SSB`s krav til hybel. (Bygningen må framstå som en tomannsbolig).En tomannsbolig kan ha vertikalt eller horisontalt boligskille. Vertikaldelt tomannsbolig skal ha to bygningspunkt i GAB. Bygningen er frittliggende, og boligene kan ha separat eller felles inngang."
+            },
+            {
+              "value": "Våningshus tomannsbolig - horisontaldelt",
+              "label": "Dette gjelder bolighus med to boliger, inkl. våningshus på gårdsbruk. Tomannsboligen kan i tillegg inneholde en eller  flere hybler eller lignende som minimum dekkes av SSB`s krav til hybel. (Bygningen må framstå som en tomannsbolig).En tomannsbolig kan ha vertikalt eller horisontalt boligskille. Vertikaldelt tomannsbolig skal ha to bygningspunkt i GAB. Bygningen er frittliggende, og boligene kan ha separat eller felles inngang."
+            },
+            {
+              "value": "Rekkehus",
+              "label": "Rekkehus:Rekkehus har vertikale gjennomgående felles boligskiller og hver boligenhet skal ligge på grunnen. Rekkehus skal ikke inneholde fellesareal for eksempel tilboder eller garasje. Et rekkehus må bestå av minimum 3 boliger, den enkeltebolig har ofte 1 - 3 etasjer og separat inngang. Hver enkelt del skal ha egetbygningspunkt i GAB."
+            },
+            {
+              "value": "Kjede-, atriumhus",
+              "label": "Kjedehus: Kjedehus har vertikale boligskiller der de enkelte boligenhetene er kjedetsammen med mellombygninger, ofte garasjer eller boder. Et kjedehus må bestå avminimum 2 boliger, den enkelte bolig har ofte 1 - 3 etasjer og separat inngang. Hver enkelt del skal ha eget bygningspunkt i GAB. Kjedehus benevnes også oftesom eneboliger i kjede.\n\nAtriumhus: Betegnelsenatriumhusbenyttes om sammenbygde hus ivinkelform. Ved hjelp av de tilstøtende ytterveggene på nabohusene og/ellerlevegger får hvert enkelt hus et skjermet og innelukket uteareal/hage."
+            },
+            {
+              "value": "Terrassehus",
+              "label": "Et størrebolighus i bratt terreng hvor bygningen følger hellingen i terrenget. De enkelteboligene blir dermed avtrappet eller forskjøvet i forhold til hverandre, slik atde får terrasse på taket til boligen under. Terrassehus er vanligvis ikkeavhengig av felles inngang og felles trappehus."
+            },
+            {
+              "value": "Andre småhus med 3 boliger eller flere",
+              "label": "Andre småhus med 3 boliger eller flere"
+            },
+            {
+              "value": "Stort frittliggende boligbygg på 2 etg",
+              "label": "Stort frittliggende boligbygg på 2 etasjer (5 boliger eller mer)"
+            },
+            {
+              "value": "Stort frittliggende boligbygg på 3 og 4 etg",
+              "label": "Stort frittliggende boligbygg på 3 og 4 etasjer (5 boliger eller mer)"
+            },
+            {
+              "value": "Stort frittliggende boligbygg på 5 etg el mer",
+              "label": "Stort frittliggende bolighus på 5 etasjer eller mer (5 boliger eller mer)"
+            },
+            {
+              "value": "Store sammenbygde boligbygg på 2 etg",
+              "label": "Store sammenbygde boligbygg på 2 etasjer (5 boliger eller mer)"
+            },
+            {
+              "value": "Store sammenbygde boligbygg på 3 og 4 etg",
+              "label": "Store sammenbygde boligbygg på 3 og 4 etasjer (5 boliger eller mer)"
+            },
+            {
+              "value": "Store sammenbygde boligbygg på 5 el mer",
+              "label": "Store sammenbygde boligbygg på 5 etasjer eller over (5 boliger eller mer)"
+            },
+            {
+              "value": "Bo- og servicesenter",
+              "label": "Bo- og servicesenter. For eldre, utviklingshemmede, funksjonshemmede mv."
+            },
+            {
+              "value": "Studenthjem/studentboliger",
+              "label": "Studenthjem / studentboliger"
+            },
+            {
+              "value": "Annen bygning for bofellesskap",
+              "label": "Annen bygning for bofellesskap, eller bygning som har nær tilknytning til / tjener slik(e) bygning(er)"
+            },
+            {
+              "value": "Hytter, sommerhus ol fritidsbygning",
+              "label": "Hytter, sommerhus og lignende. Fritidsbygg\n\nHer registreres også bygning med fritidsboliger hvor boligene enten\ner seksjonert eller på annen måte disponeres eksklusivt av fast\nbruker. Bruksenhetene skal registreres med bruksenhetskode ?F?\nfritidsbolig."
+            },
+            {
+              "value": "Helårsbolig som benyttes som fritidsbygning",
+              "label": "Helårsbolig utenom våningshus som benyttes som fritidsbolig."
+            },
+            {
+              "value": "Våningshus som benyttes som fritidsbygning",
+              "label": "Våningshus som benyttes som fritidsbolig"
+            },
+            {
+              "value": "Seterhus, sel, rorbu ol",
+              "label": "Seterhus, sel, rorbu o.l.\n\nRorbu, hus for fiskere til bruk under de store\nsesongfiskerier."
+            },
+            {
+              "value": "Skogs- og utmarkskoie, gamme",
+              "label": "Skogs- og utmarkskoie , gamme\n\nSkogs- og utmarkskoie, primitiv hytte brukt av jegere og\ntømmerhuggere.\n\nGamme, jordhytte, særlig brukt av samer."
+            },
+            {
+              "value": "Garasje, uthus, anneks til bolig",
+              "label": "Garasje, uthus , anneks knyttet til bolig.\n\nGarasje: F rittliggende bygning som primært benyttes for parkering av bil. Kan i tillegg inneholde boder o.l.\n\nUthus: F rittliggende bygning som benyttes til oppbevaring av redskap, ved, materialer o.l.\n\nAnneks : Frittliggende bygg beregnet for overnatting og er ingen selvstendig boenhet for varig opphold. Det skal ikke registreres bruksareal til bolig på slike bygg."
+            },
+            {
+              "value": "Garasje, uthus, anneks til fritidsbolig",
+              "label": "Garasje, uthus , anneks knyttet til fritidsbolig.\n\nGarasje: F rittliggende bygning som primært benyttes for parkering av bil. Kan i tillegg inneholde boder o.l.\n\nUthus: F rittliggende bygning som benyttes til oppbevaring av redskap, ved, materialer o.l.\n\nAnneks : Frittliggende bygg beregnet for overnatting og er ingen selvstendig boenhet for varig opphold. Det skal ikke registreres bruksareal til bolig på slike bygg."
+            },
+            {
+              "value": "Naust, båthus, sjøbu",
+              "label": "Naust , båthus, sjøbu\n\nFrittliggende bygning som primært benyttes til plassering av båt(er). Kan i tillegg benyttes til oppbevaring av forskjellig redskap o.l."
+            },
+            {
+              "value": "Boligbrakker",
+              "label": "Boligbrakke"
+            },
+            {
+              "value": "Annen boligbygning (sekundærbolig reindrift)",
+              "label": "Annen boligbygning/sekundærbolig (f.eks. sekundærbolig reindrift)"
+            },
+            {
+              "value": "Fabrikkbygning",
+              "label": "Bygning for industriell serieproduksjon."
+            },
+            {
+              "value": "Verkstedbygning",
+              "label": "Bygning for spesialproduksjon eller reparasjon"
+            },
+            {
+              "value": "Bygning for renseanlegg",
+              "label": "Bygning for renseanlegg, bl.a. kloakkpumpestasjon"
+            },
+            {
+              "value": "Bygning for vannforsyning",
+              "label": "Bygning for vannforsyning, bl.a. pumpestasjon."
+            },
+            {
+              "value": "Annen industribygning",
+              "label": "Annen industribygning, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)"
+            },
+            {
+              "value": "Kraftstasjon",
+              "label": "Kraftstasjon"
+            },
+            {
+              "value": "Transformatorstasjasjon",
+              "label": "Transformatorstasjasjon"
+            },
+            {
+              "value": "Annen energiforsyning",
+              "label": "Annen energiforsyningsbygning,eller bygning som har nær tilknytning til/tjener slik(e)bygning(er)"
+            },
+            {
+              "value": "Lagerhall",
+              "label": "Lagerhall"
+            },
+            {
+              "value": "Kjøle og fryselager",
+              "label": "Kjøle- og fryselager"
+            },
+            {
+              "value": "Silobygning",
+              "label": "Silobygning"
+            },
+            {
+              "value": "Annen lagerbygning",
+              "label": "Annen lagerbygning, eller bygning som har nær tilknytning til/tjener slik(e)\nbygning(er)"
+            },
+            {
+              "value": "Hus for dyr/landbruk, lager/silo",
+              "label": "Hus for dyr, fôrlager, strølager, landbrukssilo, høy-/korntørke"
+            },
+            {
+              "value": "Veksthus",
+              "label": "Veksthus"
+            },
+            {
+              "value": "Driftsbygning fiske/fangst/oppdrett",
+              "label": "Driftsbygning for fiske og fangst, inkl. oppdrettsanlegg"
+            },
+            {
+              "value": "Naust, redskapshus for fiske",
+              "label": "Naust, redskapshus for fiske"
+            },
+            {
+              "value": "Annen fiskeri- og fangstbygning",
+              "label": "Annen fiskeri- og fangstbygning"
+            },
+            {
+              "value": "Annen landbruksbygning",
+              "label": "Annen landbruksbygning"
+            },
+            {
+              "value": "Kontor- og administrasjonsbygning , rådhus.",
+              "label": "Kontor- og administrasjonsbygning er en bygning for administrasjon, planlegging\nog annet tjenesteytende arbeid, både offentlig og privat."
+            },
+            {
+              "value": "Bankbygning, posthus",
+              "label": "Bankbygning, posthus"
+            },
+            {
+              "value": "Mediabygning",
+              "label": "Hus for produksjon og distribusjon/kringkasting av medieprodukter (aviser, radio\nog TV)"
+            },
+            {
+              "value": "Annen kontorbygning",
+              "label": "Annen kontorbygning, eller bygning som har nær tilknytning til/tjener slik(e)\nbygning(er)."
+            },
+            {
+              "value": "Kjøpesenter, varehus",
+              "label": "En bygning som inneholder flere forskjellige butikker."
+            },
+            {
+              "value": "Butikkbygning",
+              "label": "Butikkbygning"
+            },
+            {
+              "value": "Bensinstasjon",
+              "label": "Bensinstasjon"
+            },
+            {
+              "value": "Annen forretningsbygning",
+              "label": "Annen forretningsbygning, eller bygning som har nær tilknytning til/tjener slik(e)\nbygning(er)"
+            },
+            {
+              "value": "Messe og kongressbygning",
+              "label": "Dette gjelder bygninger for messer, utstillinger, kongresser og konferanser."
+            },
+            {
+              "value": "Ekspedisjonsbygning, flyterminal, kontrolltårn",
+              "label": "Ekspedisjonsbygning, flyterminal, kontrolltårn"
+            },
+            {
+              "value": "Jernbane og T-banestasjon",
+              "label": "Jernbane og T-banestasjon"
+            },
+            {
+              "value": "Godsterminal",
+              "label": "Godsterminal"
+            },
+            {
+              "value": "Postterminal",
+              "label": "Postterminal"
+            },
+            {
+              "value": "Annen ekspedisjons- og terminalbygning",
+              "label": "Annen ekspedisjons- og terminalbygning"
+            },
+            {
+              "value": "Telekommunikasjonsbygning",
+              "label": "Telekommunikasjonsbygning"
+            },
+            {
+              "value": "Parkeringshus",
+              "label": "Parkeringshus"
+            },
+            {
+              "value": "Annen garasje- /hangarbygning",
+              "label": "Annen garasje- og hangarbygning, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)"
+            },
+            {
+              "value": "Trafikktilsynsbygning",
+              "label": "En bygning hvor det foregår førerkortutstedelse, teknisk kontroll og registrering av motorkjøretøyer. Bygningen kan også inneholde en administrasjonsdel tilknyttet biltilsynet."
+            },
+            {
+              "value": "Annen veg- og trafikktilsynsbygning",
+              "label": "Annen veg- og trafikktilsynsbygning"
+            },
+            {
+              "value": "Hotellbygning",
+              "label": "Større bygning for overnatting, godkjent etter hotelloven."
+            },
+            {
+              "value": "Motellbygning",
+              "label": "Egentlig motorhotell, oftest beliggende langs en hovedferdselsåre. Godkjent som motell etter hotelloven. Ofte mindre en eller to etasjes bygninger for overnatting (minst 4 rom og 10 senger). Skiller seg fra vanlig hotell ved at det ikke er vanlig romservice."
+            },
+            {
+              "value": "Annen hotellbygning",
+              "label": "Annen bygning for overnatting - godkjent etter hotelloven. , eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Hospits, pensjonat",
+              "label": "Rimelig, enkelt utstyrt overnattingssted, vanligvis serveres også mat. I byene ofte leid ut på mer fast basis; over uker, måneder eller år."
+            },
+            {
+              "value": "Vandrer-, feriehjem",
+              "label": "Vandrerhjem, feriehjem/-koloni , turisthytte\n\nVandrerhjem - rimelig nattelosji, ofte knyttet til medlemskap i en forening.\n\nFeriehjem/-koloni : Sted med formål å skaffe barn et sunt og styrkende ferieopphold og anledning til friluftsliv i samvær med andre barn.\n\nTuristhytte : Opprinnelig turiststasjon, fjellstue, skysstasjon, ofte kombinert med annen næring som gårdsbruk eller vertshus. Brukes også om hytter knyttet til turistforeningens løypenett, der de fleste er betjente, men også noen ubetjente hytter."
+            },
+            {
+              "value": "Appartement",
+              "label": "Bygning med fritidsboliger/ boliger til utleie, boligene har bad og kokemuligheter, og leies oftest for døgn- eller ukebasis.  Moderne varianter er ofte knyttet til en sentral ekspedisjon med forretning og av og til restaurant.  Opprinnelig basert på at man skal ha med sengetøy og stelle mat selv. Boligene registreres med lokalekode A (annet enn bolig). Det skal ikke registreres bruksareal til bolig."
+            },
+            {
+              "value": "Camping/utleiehytte",
+              "label": "Campinghytte : En enklere overnattingshytte fortrinnsvis beregnet for bilturister. Som regel er de knyttet til en campingplass.  Gjestene holder vanligvis sengetøy selv.\n\nUtleiehytte : Et lite hus med høy, middels eller lav standard, til midlertidig opphold.  Oftest større og bedre standard enn en campinghytte, ofte ikke beliggende på en campingplass, men mer spredt i terrenget.  Moderne utleiehytter har ofte høy standard og flere er ofte knyttet til et senter med vakt, kiosk/forretning og andre fasiliteter."
+            },
+            {
+              "value": "Annen bygning for overnatting",
+              "label": "Andre bygninger som ikke kan plasseres i de underpunktene nevnt over, men som er bygning for overnatting, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Restaurantbygning, kafebygning",
+              "label": "Restaurantbygning : Offentlig spisested, som i følge Hotelloven må ha godkjent restaurant-bevilling.  Dette krever et visst driftsmessig og utstyrsmessig nivå.\n\nKafé : Bevertningssted der det blir solgt kaffe/te, øl, andre drikker, smørbrød og annen enkel mat."
+            },
+            {
+              "value": "Sentralkjøkken, kantinebygning",
+              "label": "Bygning for kjøkken eller kantine tilknyttet større enhet, men der bygningen ligger for seg selv."
+            },
+            {
+              "value": "Gatekjøkken, kioskbygning",
+              "label": "Gatekjøkken : Lite serveringssted, med enkle retter - oftest halvfabrikata - leveres over disk.\n\nKiosk : Liten bygning for salg av bl.a godter, blader, pølser og mineralvann."
+            },
+            {
+              "value": "Annen restaurantbygning",
+              "label": "Andre spisesteder som ikke passer inn i kodene over, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Lekepark",
+              "label": "Sted for opphold for barn 1-5 år. Oftest 4-5 timers tilbud, men kan også være heldag. Ingen krav til pedagogisk innhold, og selve huset i lekeparken er ofte lite og dårlig utstyrt, nærmest som spiserom å betrakte. En lekepark er i stor grad basert på at barna skal være ute og leke."
+            },
+            {
+              "value": "Barnehage",
+              "label": "Sted for opphold for barn 1 - 5 år. Kan være heldag og halvdag, og det er knyttet et visst pedagogisk innhold til oppholdet. Selve barnehagebygningen er ofte velutstyrt, med flere avdelinger, spiserom/hvilerom for de ansatte og kjøkken. Styrt av Barnehageloven"
+            },
+            {
+              "value": "Barneskole",
+              "label": "Skolebygning for skoleklassene 1-7, for barn i alderen 6-12 år."
+            },
+            {
+              "value": "Ungdomsskole",
+              "label": "Skolebygning for skoleklassene 8-10, for barn i alderen 13-15 år."
+            },
+            {
+              "value": "Kombinert barne- og ungdomsskole",
+              "label": "Skolebygning for skoleklassene 1-10, for barn i alderen 6-15 år."
+            },
+            {
+              "value": "Videregående skole",
+              "label": "Skolebygning for skole etter grunnskolen. Allmennfaglig eller yrkesrettet.Ikke høgskole"
+            },
+            {
+              "value": "Annen skolebygning",
+              "label": "Andre skoler som ikke passer inn under ovennevnte kategorier, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Universitet, høgskole m/auditorie,lesesal mv.",
+              "label": "Universitets- og høgskolebygning med integrerte funksjoner, auditorium, lesesal mv."
+            },
+            {
+              "value": "Laboratoriebygning",
+              "label": "Bygninger for laboratorievirksomhet (f.eks. i industri, sykehus og ved universiteter)."
+            },
+            {
+              "value": "Annen universitet, høgskole og forskningsbygning",
+              "label": "Andre universitets- og høgskolebygninger som ikke passer inn under ovennevnte\nkategorier , eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Museum, kunstgalleri",
+              "label": "Museum : Bygning for utstilling av spesielle gjenstander, og omtale av disse.\n\nKunstgalleri :  Bygning for utstilling og salg av kunst."
+            },
+            {
+              "value": "Bibliotek, mediatek",
+              "label": "Bygning for utlån av bøker, lydbøker, filmer, aviser o.l.  Moderne bibliotek/mediatek har ofte tilgjengelig PC gjerne med Internett-tilknytning."
+            },
+            {
+              "value": "Zoologisk og botanisk hage",
+              "label": "Bygninger i tilknytning til zoologisk og botanisk hage, gjelder også utstillingsbygninger i dyrepark."
+            },
+            {
+              "value": "Annen museums- og biblioteksbygning",
+              "label": "Bygninger som ikke passer inn under ovennevnte kategorier , eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Idrettshall",
+              "label": "Bygning primært til bruk for idrettsformål, innehar som regel også garderobeanlegg og kiosk."
+            },
+            {
+              "value": "Ishall",
+              "label": "Bygning primært brukt som skøytehall for lengdeløp og ishockey, innehar som regel også garderobeanlegg og kiosk.  Ishallene er ofte ikke islagt mer enn halve året,  resten av tiden brukes den gjerne til andre idrettsarrangementer, friidrett, ulike turneringer o.l. eller den kan brukes til messer o.l."
+            },
+            {
+              "value": "Svømmehall",
+              "label": "Bygning for innendørs badeanlegg som brukes til undervisning, mosjon, trening og konkurranser."
+            },
+            {
+              "value": "Tribune og idrettsgarderobe",
+              "label": "Tribune : Innebygd tribuneanlegg til utendørs idrettsanlegg\n\nIdrettsgarderobe : Bygning for garderobe i tilknytning til idrettsanlegg."
+            },
+            {
+              "value": "Helsestudio",
+              "label": "Kompakt treningsanlegg, drevet på forretningsmessig basis - ikke offentlig.  Moderne studioer har ofte muligheter for apparattrening, squash, aerobic, massasje og andre mer eller mindre organiserte aktiviteter."
+            },
+            {
+              "value": "Annen idrettsbygning",
+              "label": "Andre idrettsbygninger som ikke passer inn under ovennevnte kategorier , eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Kinobygning, teaterbygning, opera/konserthus.",
+              "label": "Bygning for framføring av kino, teater, opera og konserter."
+            },
+            {
+              "value": "Samfunnshus , grendehus.",
+              "label": "Sentralt aktivitetshus for bygda/grenda,  multifunksjonsbygg som benyttes til alt fra idrettsarrangementer til fest og andre sosiale sammenkomster."
+            },
+            {
+              "value": "Diskotek",
+              "label": "Bygning for ungdomsaktiviteter, særlig knyttet til musikk og dans - drevet på forretningsmessig basis."
+            },
+            {
+              "value": "Annet kulturhus",
+              "label": "Andre multifunksjonshus for kultur og idrett, herunder ungdomsklubb, som ikke passer inn under ovennevnte kategorier , eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Kirke , kapell",
+              "label": "Kristent gudshus"
+            },
+            {
+              "value": "Bedehus , menighetshus",
+              "label": "Kristent forsamlingshus"
+            },
+            {
+              "value": "Krematorium, gravkapell, bårehus",
+              "label": "Krematorium : Bygning for likbrenning.\n\nGravkapell  og bårehus: Bygning for oppbevaring av døde mennesker inntil begravelse og kremasjon."
+            },
+            {
+              "value": "Synage og moske",
+              "label": "Synagoge :  Jødisk Gudshus\nMoské :  Muslimsk Gudshus"
+            },
+            {
+              "value": "Kloster",
+              "label": "Bygning der menn eller kvinner har trukket seg tilbake for å virkeliggjøre det religiøse ideal, i et lukket samfunn, og etter en bestemt regel."
+            },
+            {
+              "value": "Annen bygninger for religiøse aktiviteter",
+              "label": "Bygninger som ikke passer inn under ovennevnte kategorier, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Sykehus",
+              "label": "Dette gjelder bygninger for lokalsykehus, sentralsykehus, regionsykehus og universitetssykehus.  Typen omfatter også spesialsykehus, f.eks. psykiatriske sykehus, rehabiliteringssykehus, reumatiske sykehus, kreftsykehus o.a."
+            },
+            {
+              "value": "Sykehjem",
+              "label": "Sykehjem"
+            },
+            {
+              "value": "Bo- og behandlingssenter",
+              "label": "Institusjoner der man bor permanent og samtidig har tilgang til et behandlingstilbud."
+            },
+            {
+              "value": "Rehabiliteringsinstitusjon, kurbad.",
+              "label": "Institusjon der man bor for en kortere eller lengre periode, samtidig som man får behandling."
+            },
+            {
+              "value": "Annet sykehjem",
+              "label": "Annet sykehjem, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Klinikk, legekontor/-senter/-vakt/dyresykehus",
+              "label": "Klinikk kan vere private sykehus, men også tannklinikker o.l."
+            },
+            {
+              "value": "Helse- og sosialsenter, helsestasjon",
+              "label": "Senter som inneholderflere tilbud som f.eks. fysioterapi, kiroprakti, akupunktur, alternative behandlingsformer etc."
+            },
+            {
+              "value": "Annen primærhelsebygning",
+              "label": "Annen primærhelsebygning eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Fengselsbygning",
+              "label": "Fengselsbygning, eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)"
+            },
+            {
+              "value": "Politistasjon",
+              "label": "Politistasjon"
+            },
+            {
+              "value": "Brannstasjon, ambulansestasjon",
+              "label": "Brannstasjon, ambulansestasjon"
+            },
+            {
+              "value": "Fyrstasjon, losstasjon",
+              "label": "Fyrstasjon, losstasjon"
+            },
+            {
+              "value": "Stasjon for radarovervåkning av fly- og/eller skipstrafikk",
+              "label": "Stasjon for radarovervåkning av fly- og/eller skipstrafikk"
+            },
+            {
+              "value": "Tilfluktsrom / bunker",
+              "label": "Tilfluktsrom / bunker"
+            },
+            {
+              "value": "Annen beredskapsbygning",
+              "label": "Annen beredskapsbygning eller bygning som har nær tilknytning til/tjener slik(e) bygning(er)."
+            },
+            {
+              "value": "Monument",
+              "label": "Dette gjelder konstruksjoner som er minnesmerker eller kunstverker. Må tilfredsstille krav til bygning."
+            },
+            {
+              "value": "Offentlig toalett",
+              "label": "Dette gjelder bygninger som per definisjon er klassifisert under hovedtype 8 (fengselsbygning,\nberedskapsbygning mv.), men som ikke naturlig hører inn under én av de ovennevnte bygningstypene."
+            },
+            {
+              "value": "Turisthytte",
+              "label": "Turisthytte"
+            },
+            {
+              "value": "Sykehus med akuttmottak",
+              "label": "Sykehus med akuttmottak"
+            },
+            {
+              "value": "Ukjent bygningstype",
+              "label": "Ukjent bygningstype"
+            }
+          ],
+          "definition": "koder for hva bygget er brukt til.",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "hytteinformasjon",
+        "type": "Hytteinformasjon",
+        "description": "Informasjon om hytter i form av identifikasjon, betjeningsgrad og eier\n\n-- Definition --\nInformation on cabins in the form of identification, services offered and owner",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "hytteId",
+            "type": "Integer",
+            "description": "unik nummerering av en hytte\nMerknad: For hytter som benyttes av DNT benyttes deres hytteidentifikasjon. For andre hytter finnes i dag ingen predefinert identifikasjon.\n\n-- Definition --\nunique numbering of a cabin    Note: For cabins which are used by DNT their cabin identification is to be used. For other cabins there is currently no predefined identification.",
+            "cardinality": "0..1"
+          },
+          {
+            "name": "betjeningsgrad",
+            "type": "Betjeningsgrad",
+            "description": "beskrivelse av hvilke servicefunksjoner som er tilgengelige\n\n-- Definition --\ndescription of which service functions are available",
+            "cardinality": "0..1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Selvbetjent",
+                  "label": "Selvbetjent hytte med proviant til salgs. Kan ha hyttevakt i høysesongen(e). Kan være stengt for bruk deler av året."
+                },
+                {
+                  "value": "Ubetjent",
+                  "label": "Ubetjent hytte uten proviant. Sengene må ha madrasser og hytta være forsynt med ovn, ved og kokeutstyr."
+                },
+                {
+                  "value": "Betjent",
+                  "label": "Betjent hytte som er åpen og serverer middag (vanligvis tre retter med kaffe) og frokost i sommer- og som regel også i vintersesongen. Ikke muligheter for å tilberede egen mat."
+                },
+                {
+                  "value": "Rastebu",
+                  "label": "Rastehytte/nødbu med ovn og som oftest med ved. Kan ha brisker (benker uten madrasser) eller benker med madrasser som det er mulig å sove på i et knipetak."
+                },
+                {
+                  "value": "Dagstur",
+                  "label": "Dagsturhytte/serveringssted som er sesongåpent. Hytta må ha betjening."
+                },
+                {
+                  "value": "Gapahuk",
+                  "label": "Gapahuker, primitive buer, gammer, kåter og hytter med og uten ovn. Mange har overnattingsmuligheter, men av svært enkel standard. Alle gapahuker, også de med ildsted, vedlager og dø, regnes med her."
+                }
+              ],
+              "definition": "beskrivelse av hvilke servicefunksjoner som er tilgengelige\n\n\n-- Definition - -\ndescription of which service functions are available"
+            }
+          },
+          {
+            "name": "hytteeier",
+            "type": "Hytteeier",
+            "description": "eieren av en hytte\n\n-- Definition --\nthe owner of a cabin",
+            "cardinality": "0..1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "DNT",
+                  "label": "Den Norske Turistforening er eier av hytta"
+                },
+                {
+                  "value": "Andre",
+                  "label": "Det er ikke spesifisert hvem som er eier av hytta. Dette kan for eksempel være en lokal Jeger og fiskerforening, et Utmarkslag eller en speiderforening."
+                },
+                {
+                  "value": "Fjellstyre",
+                  "label": "Fjellstyret er eier av hytta"
+                },
+                {
+                  "value": "Statskog",
+                  "label": "Statskog er eier av hytta"
+                }
+              ],
+              "definition": "eieren av en turisthytte\n\n\n-- Definition - -\nthe owner of a cabin"
+            }
+          }
+        ]
+      },
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "description": "navn på turisthytta",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "Representasjonspunkt for bygningen. Punktet angis med geometritypen Punkt definert i SOSI\n\nSkal plasseres innenfor bygningens omriss.\n\nPunkt registreres også uten at en har omrisset, men da settes ikke kvalitetsmerket for at den er verifisert mot bygningens omriss.",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Takkant",
+          "role": "takkant",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Molo",
+    "description": "kunstig eller naturlig oppbygning som demper eller tilintetgjør bølgebevegelser i sjøen\n\n\n-- Definition --\nartificial or natural structure which reduces or eliminates waves in the sea",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Takkant",
+    "description": "bygningens ytre takflateavgrensing\n\nMerknad: Høydereferansen er de målte punktene på taket.\n\nMerknad: Dersom deler av takkanten ikke er synlig kodes den synlige delen som takkant- og den ikke synlige som fiktiv bygningsavgrensning.\n\n\n-- Definition --\nthe external delimitation of the roof surface of the building",
+    "attributes": [],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Takriss"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Bygningsavgrensning",
+    "description": "abstrakt supertype som bærer geometrien til avgrensningslinjene. Vil aldri realiseres som en objekttype\n\n\n-- Definition --\nabstract supertype which carries the geometry of the delimitation lines",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del (ytterkant)\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Vindkraftverk",
+    "description": "kraftverk som nytter vindens energi til å produsere elkraft\n\nMerknad:\nKan benyttes dersom ..KOPLING * 3 * VKST\n\n\n-- Definition --\npower plant which utilises the wind's energy to produce electric power. Note: may be used if ..KOPLING * 3 * VKST   (KOPLING := coupling)",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Hoppbakke",
+    "description": "anlegg for skihopping med kunstig eller naturlig tilløp\n\n\n-- Definition --\nfacility for ski jumping with artificial or natural approach",
+    "attributes": [
+      {
+        "name": "lengde",
+        "type": "Integer",
+        "description": "bakkens lengde i meter",
+        "cardinality": "1"
+      },
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      },
+      {
+        "name": "retning",
+        "type": "Retning",
+        "description": "linjestykke i planet med retning",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "retningsverdi",
+            "type": "Real",
+            "description": "generelt element med angivelse av retning",
+            "cardinality": "1"
+          },
+          {
+            "name": "retningsenhet",
+            "type": "Retningsenhet",
+            "description": "enhet for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Grader (360 graders deling)",
+                  "label": "360 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Gon (400 graders deling)",
+                  "label": "400 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Radianer",
+                  "label": "Radianer med positiv retning med sola"
+                }
+              ],
+              "definition": "enhet for retning"
+            }
+          },
+          {
+            "name": "retningsreferanse",
+            "type": "Retningsreferanse",
+            "description": "referansesystem for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Sant nord",
+                  "label": "(default)"
+                },
+                {
+                  "value": "Magnetisk nord",
+                  "label": "Magnetisk nord"
+                },
+                {
+                  "value": "Lokal",
+                  "label": "Lokal"
+                }
+              ],
+              "definition": "referansesystem for retning"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Navigasjonsinstallasjon",
+    "description": "objekt som hjelper sjøfarende å navigere på sjøen\n\n\n-- Definition --\nobject which helps mariners to navigate at sea",
+    "attributes": [
+      {
+        "name": "fyrlistenummer",
+        "type": "CharacterString",
+        "description": "identifikasjonsnummeret til installasjonen i h h t Norsk fyrliste\n\n-- Definition --\nthe identification number of the installation used in the Norwegian List of Lights publication.",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "SpesiellDetalj",
+    "description": "objekttyper som det er nødvendig å angi av kartografiske hensyn og som ikke fanges opp av definerte objekttyper",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Taubane",
+    "description": "innretning hvor tau eller vaiere bærer og eller trekker last over en strekning\n\n\n-- Definition --\nfacility where ropes or cables carry and/or pull cargo over some distance",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Dam",
+    "description": "konstruksjon for å heve vannspeilet og danne et kunstig vannmagasin, samt regulere vannføringen\n\n\n-- Definition --\nconstruction for elevating the water surface and creating an artifical water reservoir as well as regulating the flow of water",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Tankkant",
+    "description": "avgrensning av tank\n\n\n-- Definition --\ndelimitation of tank/vessel",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Ledning",
+    "description": "begrepet ledning er i modellen generalisert til å bety alle typer langsgående fysiske objekter i ledningstraseen\n\nMerknad:\nDette inkluderer også tunnel, kanal, rør og andre objekter som brukes som omsluttende konstruksjon for andre ledninger.\n\n\n-- Definition --\nin the model, the term line has been generalised to mean all types of longitudinal physical objects in the route. Note: this also includes tunnels, ducts, pipes and other objects used as encasing?? structures for other lines",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "LuftledningLH",
+    "description": "linje som fører elektrisk kraft over store avstander og der det er usikkert om det lav- eller høyspentlinje\n\nMerknad:\nKan benyttes dersom ..MEDIUM L og ..LEDNING * 3 8\n\n\n-- Definition --\nline conducting electrical power over large distances and where it is uncertain whether there is a low-voltage or high-voltage line. Note: may be used if ..MEDIUM L and ..LINE * 3 8",
+    "attributes": [
+      {
+        "name": "fler_linjer",
+        "type": "Fler_linjer",
+        "description": "angivelse av antall kraftlinjer",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "enkel linje",
+              "label": "kraftlinja representerer en enkelt kraftlinje"
+            },
+            {
+              "value": "to eller flere linjer",
+              "label": "kraftlinja representerer to eller flere parallelle kraftlinjer"
+            }
+          ],
+          "definition": "angivelse av antall kraftlinjer",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Pir",
+    "description": "markert utstikkende brygge, normalt med vann under, i sjø\n\n\n-- Definition --\nmarked protruding pier, normally with water underneath, in the sea",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "MastTele",
+    "description": "mast med radio- og telekommunikasjonsutstyr for sending/mottak av telesignaler\n\nMerknad:\nKan benyttes dersom ..KOPLING * 2 * MA\n\n\n-- Definition --\nmast with radio and telecommunication equipment for sending /receiving telecommunications signals. Note: may be used if ..KOPLING * 2 * MA  (KOPLING := coupling)",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  }
+]

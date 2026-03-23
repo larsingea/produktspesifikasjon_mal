@@ -1,1 +1,117 @@
-[]
+[
+  {
+    "name": "Terrengpunkt",
+    "description": "punkt i terrenget med målt høydeverdi som brukes for å angi høyde på markerte flater i terrenget som for eksempel sadler og store flater, i veg- og gatekryss og andre kryss mellom samferdselslinjer, på gårdsplasser utenfor hovedinnganger og på parkeringsplasser\n\n\n-- Definition --\npoint in the terrain with a measured height value used to indicate the height on pronounced surfaces in the terrain, such as saddles and large surfaces, in road and street intersections and other intersections between transportation lines, in courtyards outside main entrances and in car parks",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      },
+      {
+        "name": "høyde",
+        "type": "Integer",
+        "description": "angivelse av punktets høyde, og oppgis som et desimalt tall hvis nødvendig\n\n-- Definition --\nindication of the height of the point, to be given with decimals if necessary",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Forsenkningskurve",
+    "description": "linje i terrenget med fast høydeverdi (z-verdi) som beskriver en forsenkning i terrenget\n\nMerknad: Alle kurver som beskriver en forsenkning skal kodes som forsenkningskurver- ikke bare den nederste kurven.\n\n\n-- Definition --\nline in the terrain with a fixed height value (z value) which describes a depression in the terrain",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "høyde",
+        "type": "Integer",
+        "description": "angir forsenkningskurvens  høyde over høydereferansen i meter- og oppgis som et desimalt tall hvis nødvendig\n\n-- Definition --\nindicates the depression curve's height above the height reference in metres - to given with decimals if necessary",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Høydekurve",
+    "description": "linje i terrenget med fast høydeverdi (z-verdi) over referansehøyden\n\nMerknad: Høydekurver skal ikke krysse hverandre, bortsett fra der dette er tilfelle (overheng).\n\n\n-- Definition --\nline in the terrain with a fixed height value (z value) above the reference height",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "høyde",
+        "type": "Integer",
+        "description": "angivelse av høydekurvens høyde over høydereferansen i meter- og oppgis som et desimalt tall hvis nødvendig\n\n-- Definition --\nindication of the depression curve's height above the height reference in metres - to be given with decimals if necessary",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Hjelpekurve",
+    "description": "linje som følger terrenget med fast høydeverdi (z-verdi) og som brukes for bedre å beskrive terrenget mellom de vanlige høydekurvene\n\nMerknad: Tidligere kalt mellomkurve\n\n\n-- Definition --\nline which follows the terrain with a fixed height value (z value), and which is used to provide a better description of the terrain between the ordinary ??(contour lines / height contours)",
+    "attributes": [
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "1"
+      },
+      {
+        "name": "høyde",
+        "type": "Integer",
+        "description": "angivelse av hjelpekurvens høyde over høydereferansen i meter- og oppgis som et desimalt tall hvis nødvendig\n\n-- Definition --\nindication of the auxiliary curve's height above the height reference in metres - to be given with decimals if necessary",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "TrigonometriskPunkt",
+    "description": "varig merket punkt, markert med bolt eller annet merke, der plane koordinater og høyde er bestemt i et trigonometrisk nett, i et geodetisk system\n\n\n-- Definition --\npermanently marked point, marked with a bolt or other mark in which the plane coordinates and/or height are determined in a Trigonometrical network in a geodetic system",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      },
+      {
+        "name": "høyde",
+        "type": "Integer",
+        "description": "angivelse av punktets høyde, og oppgis som et desimalt tall hvis nødvendig\n\n-- Definition --\nindication of the height of the point, to be given with decimals if necessary",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  }
+]

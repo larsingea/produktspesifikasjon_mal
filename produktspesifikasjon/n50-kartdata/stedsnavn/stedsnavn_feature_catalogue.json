@@ -1,1 +1,1096 @@
-[]
+[
+  {
+    "name": "Skrivemåte",
+    "description": "ulike skrivemåter av navneenheten, ikke forskjellige navn",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\nmerknad 1: Posisjon .PUNKT må mappes til .TEKST i henhold til SOSI 4.5\nmerknad 2: .TEKST angis med 3 koordinater. Første er objektkoordinat, andre er plasseringskoordinat og tredje er retningskoordinat",
+        "cardinality": "1"
+      },
+      {
+        "name": "ssrId",
+        "type": "Integer",
+        "description": "koblingsnøkkel til navneenheten i SSR (Sentralt StedsnavnsRegister)",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "navnetype",
+        "type": "Navnetype",
+        "description": "beskriver hvilke type terrengdetalj stedsnavnet representerer",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Adm. by",
+              "label": "Alle steder hvor kommunen har vedtatt bystatus"
+            },
+            {
+              "value": "Adm. bydel",
+              "label": "(Offisielt navn på bydelsforvaltningen). Se også Bydel  132."
+            },
+            {
+              "value": "Adm. tettsted",
+              "label": "Statistisk sentralbyrås spesifikasjon."
+            },
+            {
+              "value": "Adressenavn",
+              "label": "Omfatter et område, ev. som supplement til gate-/veiadresse. (Kommunalt adresseområde)"
+            },
+            {
+              "value": "Allmenning",
+              "label": "Område hvor rettighetene er regulert. (Alle typer. Noter i merknadsfelt)"
+            },
+            {
+              "value": "Ankringsplass",
+              "label": "F.eks. opplagsplass for store båter/skip"
+            },
+            {
+              "value": "Annen adm. Inndeling",
+              "label": "Landsdel, havnedistrikt, politidistrikt bispedømme, prestegjeld, skolekrets, valgkrets, postområde, etc. (Noter type i merknadsfelt)"
+            },
+            {
+              "value": "Annen bygning for religiøse aktiviteter",
+              "label": "Synagoge, moske,  frikirke, menighetshus, kloster, gravkapell,    bårehus, krematorium. Noter i merknadsfelt hvilken type + dato for merknaden."
+            },
+            {
+              "value": "Annen kulturdetalj",
+              "label": "Alle typer kulturdetaljer f.eks. lekeplass, tårn, fiskeplass, etc. Noter forklaring med dato i merknadsfeltet"
+            },
+            {
+              "value": "Badeplass",
+              "label": "Offentlige og private badeplasser"
+            },
+            {
+              "value": "Bakke",
+              "label": "Skråning"
+            },
+            {
+              "value": "Bakke i sjø",
+              "label": "Skrånende sjøbunn"
+            },
+            {
+              "value": "Banke",
+              "label": "Flatt, større undervannsområde"
+            },
+            {
+              "value": "Banke i sjø",
+              "label": "Flatt, større undervannsområde"
+            },
+            {
+              "value": "Barnehage",
+              "label": "Offentlig eller privat barnehage"
+            },
+            {
+              "value": "Bekk",
+              "label": "Rennende vann i naturlig vannvei. Generelt smalere enn 3 meter"
+            },
+            {
+              "value": "Bergverk (underjord./dagbrudd)",
+              "label": "Gruve, skjerp"
+            },
+            {
+              "value": "Boligblokk",
+              "label": "Stort boligbygg med 2 eller flere etasjer hvor det er 5 eller flere boligenheter"
+            },
+            {
+              "value": "Boligfelt",
+              "label": "Regulert boligområde"
+            },
+            {
+              "value": "Bomstasjon",
+              "label": "Større bomanlegg på offentlig veg"
+            },
+            {
+              "value": "Borettslag",
+              "label": "Bofellesskap, vanligvis blokkbebyggelse"
+            },
+            {
+              "value": "Botn",
+              "label": "Dalende"
+            },
+            {
+              "value": "Bru",
+              "label": "Både for veg og jernbane. Angi ett punkt i hver ende for store bruer og ett midt på for små bruer."
+            },
+            {
+              "value": "Bruk (gardsbruk)",
+              "label": "Landbruksbebyggelse som er eller har vært knyttet til jord- og/eller skogbruksdrift. Bruksnamn, namn på eigedom med eitt eller fleire bruksnummer eller festenummer under eit gardsnummer. Punktet ligger normalt på våningshuset (hvis dette finnes)."
+            },
+            {
+              "value": "Brygge",
+              "label": "Mindre, fast bryggeanlegg"
+            },
+            {
+              "value": "Busstopp",
+              "label": "Stoppested for rutegående vegtrafikk"
+            },
+            {
+              "value": "By",
+              "label": "Tettsted med handels- og servicefunksjoner. Bymessig med mer eller mindre sammenhengende, kvartalsbebyggelse (bykjerne). Bygninger med 2 eller flere etasjer. (Se også Adm. by 268)."
+            },
+            {
+              "value": "Bydel",
+              "label": "Kulturmessig del av by. F.eks. Gamlebyen, Vålerenga, Posebyen, Nordnes, Lade, Tromsdalen, Fagernes. (Se også Adm. bydel  269)"
+            },
+            {
+              "value": "Bygdelag (bygd)",
+              "label": "Stort uregulert gårdsbruk- og boligområde"
+            },
+            {
+              "value": "Bygg for jordbruk, fiske og fangst",
+              "label": "Bu, naust, uthus, fjøs, gamme"
+            },
+            {
+              "value": "Båe",
+              "label": "Stein under vannflaten"
+            },
+            {
+              "value": "Båe i sjø",
+              "label": "Stein under  vannflaten."
+            },
+            {
+              "value": "Båke",
+              "label": "Offisiell og privat båke langs kysten og i innlandet, fast."
+            },
+            {
+              "value": "Campingplass",
+              "label": "Alle typer både for campinghytter, campingvogner og telt"
+            },
+            {
+              "value": "Dal",
+              "label": "Mellomstor eller liten dal"
+            },
+            {
+              "value": "Dalføre",
+              "label": "Stor dal: Gudbrandsdalen, Namdalen, Setesdal, Valdres"
+            },
+            {
+              "value": "Dam",
+              "label": "Store reguleringsdammer og små fløtningsdammer"
+            },
+            {
+              "value": "Del av innsjø",
+              "label": "Mindre deler av store innsjøer. F.eks. Steinsfjorden i Tyrifjorden"
+            },
+            {
+              "value": "Dyp (havdyp)",
+              "label": "Område mer enn 200-300 meter under havflaten"
+            },
+            {
+              "value": "Egg",
+              "label": "Undersjøisk kant mot havdyp"
+            },
+            {
+              "value": "Eid",
+              "label": "Lavt/smalt parti mellom to vannkanter, elver eller vann"
+            },
+            {
+              "value": "Eid i sjø",
+              "label": "Lavt parti i terrenget mellom to sjøkanter"
+            },
+            {
+              "value": "Eiendommer",
+              "label": "Matrikulert eiendom"
+            },
+            {
+              "value": "Elv",
+              "label": "Rennende vann i naturlig vannvei. Generelt bredere enn 3 meter"
+            },
+            {
+              "value": "Elvemel",
+              "label": "Bratt sand- eller grus- skråning langs en elv (eller et vann)"
+            },
+            {
+              "value": "Enebolig/mindre boligbygg (villa)",
+              "label": "Enebolig eller tomannsbolig  Hus for fast bosetting, utenom våningshus, jf. 108. (Vanligvis dss. bruks­navn.)"
+            },
+            {
+              "value": "Eng",
+              "label": "Kultivert slåtte/gressmark"
+            },
+            {
+              "value": "Fabrikk",
+              "label": "Større industrivirksomhet"
+            },
+            {
+              "value": "Farled/Skipslei",
+              "label": "Normal strekning for skip f.eks. Trondheimsleia"
+            },
+            {
+              "value": "Fengsel",
+              "label": "Fengsel, arbeidskoloni"
+            },
+            {
+              "value": "Ferjekai",
+              "label": "Punktet legges på ferjelemmen på kaia for vegtrafikken"
+            },
+            {
+              "value": "Ferjestrekning",
+              "label": "Eksisterende ferjesamband som inngår i områdets samferdselsnett"
+            },
+            {
+              "value": "Fiskeoppdrettsanlegg",
+              "label": "På land, i sjø og i ferskvann"
+            },
+            {
+              "value": "Fiskeplass",
+              "label": "Fiskested, fiskemed i sjø."
+            },
+            {
+              "value": "Fjell",
+              "label": "Stort fjell"
+            },
+            {
+              "value": "Fjellheis",
+              "label": "Gondolbane."
+            },
+            {
+              "value": "Fjellkant (aksel)",
+              "label": "Skulder, nese, bryn"
+            },
+            {
+              "value": "Fjellområde",
+              "label": "Stort  fjellområde: Rondane, Saltfjellet, Lyseheiane"
+            },
+            {
+              "value": "Fjellside",
+              "label": "Vanligvis åpent skrånende terreng i fjellet"
+            },
+            {
+              "value": "Fjord",
+              "label": "Arm av havet inn i fastlandet"
+            },
+            {
+              "value": "Fjordmunning",
+              "label": "Område ytterst i en fjord"
+            },
+            {
+              "value": "Flyplass",
+              "label": "Landingsplass for rutegående flytrafikk og regulert privat flygning"
+            },
+            {
+              "value": "Fløtningsannlegg",
+              "label": "Kunstig fløtningsanlegg"
+            },
+            {
+              "value": "Fonn",
+              "label": "Liten snø- eller isflate"
+            },
+            {
+              "value": "Fornøyelsespark",
+              "label": "(Store, regulerte anlegg)"
+            },
+            {
+              "value": "Forretningsbygg",
+              "label": "Hus for kontor- og servicevirksomhet"
+            },
+            {
+              "value": "Forsamlingshus/Kulturhus",
+              "label": "Teater, kino, samf.hus, grendehus, etc."
+            },
+            {
+              "value": "Foss",
+              "label": "Vann i tilnærmet fritt fall"
+            },
+            {
+              "value": "Fritidsbolig (hytte, sommerhus)",
+              "label": "Hus som ikke er ment for fast bosetting. (Vanligvis dass. bruks­navn.)"
+            },
+            {
+              "value": "Fylke",
+              "label": "(Offisielt navn)"
+            },
+            {
+              "value": "Fyllplass",
+              "label": "Plass for deponering av masse"
+            },
+            {
+              "value": "Fyr(Fyrstasjon)",
+              "label": "Offisielt fyr og fyrstasjon langs kysten."
+            },
+            {
+              "value": "Gammel bosettingsplass",
+              "label": "Nedlagt bruk, seter, boplass, gamme. MRK !! Hus borte eller kun ruin."
+            },
+            {
+              "value": "Garasje/hangarbygg",
+              "label": "Parkeringshus/ trikkestall/ bussgarasje/flyhangar/ lokomotivstall"
+            },
+            {
+              "value": "Gard",
+              "label": "Landbruksbebyggelse som er eller har vært knyttet til jord- og/eller skogbruksdrift. Gardsnamn, namnet på heile det gardsområdet som eitt eller fleire gardsnummer er knytte til. Punktet ligger normalt på våningshuset (hvis dette finnes) på et sentralt pla"
+            },
+            {
+              "value": "Gjerde",
+              "label": "Steingjerde, tregjerde etc."
+            },
+            {
+              "value": "Gravplass",
+              "label": "Alle typer gravlunder, gravplasser."
+            },
+            {
+              "value": "Grend",
+              "label": "Mindre uregulert gårdsbruk-, seterfelt- og boligområde"
+            },
+            {
+              "value": "Grensemerke",
+              "label": "Off. godkjent grensemerke (generelt): Varde, tre, stein, bolt, kors etc."
+            },
+            {
+              "value": "Grind",
+              "label": "Port i gjerde"
+            },
+            {
+              "value": "Grotte",
+              "label": "Naturlig fjellgrotte f.eks. Grønnligrotta (Rana)"
+            },
+            {
+              "value": "Grunne",
+              "label": "Lite område under vann"
+            },
+            {
+              "value": "Grunne i sjø",
+              "label": "Forhøyning på bunnen som skiller seg vesentlig fra høyden på bunnen omkring"
+            },
+            {
+              "value": "Grunnkrets",
+              "label": "Se også 253 annen adm. inndeling"
+            },
+            {
+              "value": "Gruppe av tjern",
+              "label": "Flere små vann"
+            },
+            {
+              "value": "Gruppe av vann",
+              "label": "Flere middels store vann"
+            },
+            {
+              "value": "Grustak/Steinbrudd",
+              "label": "Uttaksplass, område, drevet i dagen for  sand, grus, pukk, skifer eller stein"
+            },
+            {
+              "value": "Grøft",
+              "label": "Rennende vann der forløpet er menneskeskapt  f.eks. dreneringsgrøfter i myr"
+            },
+            {
+              "value": "Halvøy",
+              "label": "Større nes i ferskvann med smalt eide mot fastland"
+            },
+            {
+              "value": "Halvøy i sjø",
+              "label": "Større nes med smalt eid mot fastland"
+            },
+            {
+              "value": "Haug",
+              "label": "Liten markant terrengform"
+            },
+            {
+              "value": "Havn",
+              "label": "Sted der fartøy  kan laste, losse eller søke ly for vær og sjø."
+            },
+            {
+              "value": "Havnehage",
+              "label": "Inngjerdet beitemark"
+            },
+            {
+              "value": "Havområde",
+              "label": "Store områder: Barentshavet Nordsjøen, Atlanterhavet"
+            },
+            {
+              "value": "Hei",
+              "label": "Berglendt, høyere beliggende område med beitemark"
+            },
+            {
+              "value": "Heller",
+              "label": "Steinhule, steinsatt overnattingssted"
+            },
+            {
+              "value": "Helseinstitusjon",
+              "label": "Aldershjem, rekreasjonshjem og lignende"
+            },
+            {
+              "value": "Holdeplass",
+              "label": "Ubetjent stoppested for jernbane og trikk"
+            },
+            {
+              "value": "Holme",
+              "label": "Liten øy i ferskvann"
+            },
+            {
+              "value": "Holme i sjø",
+              "label": "Liten øy/skjær i sjø"
+            },
+            {
+              "value": "Holmegruppe i sjø",
+              "label": "Flere små skjær i sjø"
+            },
+            {
+              "value": "Hotell",
+              "label": "Offentlig godkjent overnattingssted"
+            },
+            {
+              "value": "Hylle (hjell)",
+              "label": "Flatt område i fjellside"
+            },
+            {
+              "value": "Hyttefelt",
+              "label": "Offentlig eller privat  hyttefelt. Område som har høy utnyttelsesgrad med tanke på hytter."
+            },
+            {
+              "value": "Høl",
+              "label": "Dyp elvebunn under foss eller ved ende av stryk"
+            },
+            {
+              "value": "Høyde",
+              "label": "Mindre terrengform som ikke vurderes som fjell"
+            },
+            {
+              "value": "Idrettsanlegg",
+              "label": "(Alle typer utendørsanl. Noter type i merknadsfelt, f.eks. ridebane, fotballbane)"
+            },
+            {
+              "value": "Idrettshall",
+              "label": "Alle typer innendørsanlegg Ishall/svømmehall idrettshall."
+            },
+            {
+              "value": "Industriområde",
+              "label": "Større sammenhengende område benyttet for industriformål"
+            },
+            {
+              "value": "Innsjø",
+              "label": "Stort vann: Altevatnet, Femunden, Mjøsa, Nisser"
+            },
+            {
+              "value": "Isbre",
+              "label": "Større sammenhengende snø- eller is område som ikke smelter i løpet av sommeren. F.eks. Svartisen eller Folgefonna"
+            },
+            {
+              "value": "Jernbanestrekning",
+              "label": "Lang  jernbanestrekning. F.eks.  Ofotbanen, Bergensbanen"
+            },
+            {
+              "value": "Jorde",
+              "label": "Kultivert dyrknings- mark"
+            },
+            {
+              "value": "Juv",
+              "label": "Kløftlignende dal, canyon"
+            },
+            {
+              "value": "Kabel",
+              "label": "Alle typer kabler i både sjø og ferskvann."
+            },
+            {
+              "value": "Kai",
+              "label": "Større, fast bryggeanlegg"
+            },
+            {
+              "value": "Kanal",
+              "label": "Utgravd vannveg  i sjø og ferskvann"
+            },
+            {
+              "value": "Kilde",
+              "label": "Oppkomme, olle, vannkilde. Kildeutspring. Benyttes for å angi stedet hvor grunnvannet kommer i dagen"
+            },
+            {
+              "value": "Kirke",
+              "label": "Kirke / Kapell / Arbeidskirke knyttet til Den norske kirke"
+            },
+            {
+              "value": "Klakk",
+              "label": "Spiss grunne. (Trøndersk/Nordnorsk uttrykk)"
+            },
+            {
+              "value": "Klopp",
+              "label": "Gangbru over sjø og ferskvann"
+            },
+            {
+              "value": "Kommune",
+              "label": "(Offisielt navn)"
+            },
+            {
+              "value": "Kraftgate (Rørgate)",
+              "label": "Store tilførselsrør for kraftanlegg"
+            },
+            {
+              "value": "Kraftledning",
+              "label": "Vanligvis store overføringsledninger"
+            },
+            {
+              "value": "Kraftstasjon",
+              "label": "Alle størrelser for energi produksjon, (el. og varme)"
+            },
+            {
+              "value": "Kryss (Veg/Gate)",
+              "label": "(For alle type veger)"
+            },
+            {
+              "value": "Landingsstripe",
+              "label": "Landingsplass for privat flygning"
+            },
+            {
+              "value": "Landskapsområde",
+              "label": "Stort landskapsområde:  Dalane, Jæren, Romerike, Grenland, Salten, Varanger"
+            },
+            {
+              "value": "Lanterne",
+              "label": "Offisiell og privat lanterne langs kysten og i innlandet, fast"
+            },
+            {
+              "value": "Li",
+              "label": "Vanligvis skogkledd skrånende terreng"
+            },
+            {
+              "value": "Lone",
+              "label": "Nesten stillestående vik i elv eller bekk"
+            },
+            {
+              "value": "Lykt (Fyrlykt)",
+              "label": "Offisiell og privat lykt/fyrlykt langs kysten og i innlandet."
+            },
+            {
+              "value": "Lysbøye",
+              "label": "Offisiell og privat lysbøye langs kysten og i innlandet, flytende"
+            },
+            {
+              "value": "Melkeplass",
+              "label": "Seterplass uten hus. Vanligvis i bratte områder på Vestlandet"
+            },
+            {
+              "value": "Militært bygg/Anlegg",
+              "label": "Militærleir, militært bygg"
+            },
+            {
+              "value": "Mo",
+              "label": "Flatt område, vanligvis skogkledd"
+            },
+            {
+              "value": "Molo",
+              "label": "Fast byggverk, utstikkende voll i sjøen"
+            },
+            {
+              "value": "Museum/ Galleri/Bibliotek",
+              "label": "Alle typer museum,  galleri og bibliotek"
+            },
+            {
+              "value": "Myr",
+              "label": "Alle typer fra gressmyr til våt moldjord"
+            },
+            {
+              "value": "Nasjon",
+              "label": "Selvstendig land (Offisielt navn)"
+            },
+            {
+              "value": "Nes",
+              "label": "Landområde stikkende ut i ferskvann"
+            },
+            {
+              "value": "Nes i sjø",
+              "label": "Landområde stikkende ut i saltvann"
+            },
+            {
+              "value": "Nes ved elver",
+              "label": "Landet mellom to møtende elver. Vanligvis kun brukt i samiske områder. Stedsnavnets skrivemåte skal IKKE avgjøre om navnet skal gis denne koden, men KUN lokalitetens størrelse eller fasong."
+            },
+            {
+              "value": "Offersted",
+              "label": "Samisk, norsk eller finsk offersted"
+            },
+            {
+              "value": "Oljeinstallasjon (Sjø)",
+              "label": "Stasjonære oljeinstallasjoner (faste og flytende)"
+            },
+            {
+              "value": "Os",
+              "label": "Innløp eller utløp av elv eller bekk i innsjø/vann/tjern eller sjø (saltvann)"
+            },
+            {
+              "value": "Overett",
+              "label": "Offisiell og privat. To stenger med/uten lys overett langs kysten og i innlandet, faste."
+            },
+            {
+              "value": "Park",
+              "label": "Kultivert område med eller uten trær. Kolonihage (i by eller tettbygd strøk)"
+            },
+            {
+              "value": "Parkeringsplass",
+              "label": "Offentlig og privat"
+            },
+            {
+              "value": "Pensjonat",
+              "label": "Offentlig godkjent overnattingssted"
+            },
+            {
+              "value": "Plass/torg",
+              "label": "(I tettsted eller by)"
+            },
+            {
+              "value": "Poststed (Postkontor)",
+              "label": "Offisielt poststed"
+            },
+            {
+              "value": "Pytt",
+              "label": "Liten dam, myrpytt"
+            },
+            {
+              "value": "Rasteplass",
+              "label": "Rasteplass med ansvarlig Statens vegvesen eller annen offentlig myndighet"
+            },
+            {
+              "value": "Renne",
+              "label": "Undersjøisk dal"
+            },
+            {
+              "value": "Rygg",
+              "label": "Langstrakt terrengform"
+            },
+            {
+              "value": "Rygg i sjø",
+              "label": "Undersjøisk ås"
+            },
+            {
+              "value": "Rørledning",
+              "label": "Alle typer rørledninger: Olje, gass, vann, etc."
+            },
+            {
+              "value": "Rådhus (komm, fylke, stat)",
+              "label": "Adm. senteret (-huset) i adm. enheten."
+            },
+            {
+              "value": "Sand",
+              "label": "Sand-grusområde over vannkontur/kystkontur. Morenemateriale"
+            },
+            {
+              "value": "Senkning",
+              "label": "Flat forsenkning, dalsenkning"
+            },
+            {
+              "value": "Serveringssted",
+              "label": "Serveringssted utenfor tettbygd område"
+            },
+            {
+              "value": "Seter (sel, støl)",
+              "label": "Enklere landbruksbe­byggelse. Kan ha periodisk fast bosetting, vanligvis sommerstid."
+            },
+            {
+              "value": "Setervoll",
+              "label": "Ryddet, gressbevokst område på ei seter, med   eller uten hus"
+            },
+            {
+              "value": "Severdighet",
+              "label": "Noter forklaring i merknadsfeltet, f.eks. minnesmerke"
+            },
+            {
+              "value": "Sjøstykke",
+              "label": "Del av sjøen, vanligvis innaskjærs eller i kystnære farvann. F.eks. Folda, Hustadvika"
+            },
+            {
+              "value": "Skar",
+              "label": "Markant senkning i fjell"
+            },
+            {
+              "value": "Skiheis",
+              "label": "Skitrekk og stolheis i skianlegg."
+            },
+            {
+              "value": "Skjær",
+              "label": "Stein i vannflaten"
+            },
+            {
+              "value": "Skjær i sjø",
+              "label": "Stein i vannflaten."
+            },
+            {
+              "value": "Skog",
+              "label": "Alle typer fra stor barskog til vierkratt i Finnmark"
+            },
+            {
+              "value": "Skogområde",
+              "label": "Stort skogområde: Nordmarka, Bymarka, Finnskogen"
+            },
+            {
+              "value": "Skole",
+              "label": "Offentlig og privat skole"
+            },
+            {
+              "value": "Skred",
+              "label": "Rasområde: Alle typer materiale  (f.eks. stein, jord, sand, leire, o.l.)"
+            },
+            {
+              "value": "Skytebane",
+              "label": "Pistol- eller geværbane (o.l. våpen)"
+            },
+            {
+              "value": "Skytefelt",
+              "label": "Militære skytefelt."
+            },
+            {
+              "value": "Slalåm- og utforbakke",
+              "label": "Alle typer regulerte alpinanlegg."
+            },
+            {
+              "value": "Slette",
+              "label": "Åpent, flatt, ikke skogbevokst område"
+            },
+            {
+              "value": "Sluse",
+              "label": "Kunstig løfteanretning for båter i vassdrag"
+            },
+            {
+              "value": "Småbåthavn",
+              "label": "Regulerte havneanlegg for småbåter"
+            },
+            {
+              "value": "Sogn",
+              "label": "Kirkesogn Knyttet til Den norske kirke"
+            },
+            {
+              "value": "Soneinndeling til havs",
+              "label": "Fiskerisone, havrettssone, etc. (Noter type i merknadsfelt)"
+            },
+            {
+              "value": "Stake",
+              "label": "Offisiell og privat stake langs kysten og i innlandet, flytende"
+            },
+            {
+              "value": "Stang",
+              "label": "Offisiell og privat jernstang langs kysten og i innlandet, fast"
+            },
+            {
+              "value": "Stasjon",
+              "label": "Betjent stoppested for jernbane og trikk"
+            },
+            {
+              "value": "Stein",
+              "label": "F.eks. flyttstein i fjellet"
+            },
+            {
+              "value": "Sti",
+              "label": "Stistrekning, sleper (gamle drifteveger), reindriftsveger"
+            },
+            {
+              "value": "Strand",
+              "label": "Sand-, grus- eller steindekket område i vannkanten"
+            },
+            {
+              "value": "Strand i sjø",
+              "label": "Sand-, grus- eller steindekket område i sjøkanten"
+            },
+            {
+              "value": "Stryk",
+              "label": "Parti der vannet går i stryk og skiller seg tydelig fra resten av elv eller bekk"
+            },
+            {
+              "value": "Stup",
+              "label": "Loddrett eller svært bratt, fallende terreng"
+            },
+            {
+              "value": "Stø",
+              "label": "Båtstø, båtplass i  vannkanten uten naust"
+            },
+            {
+              "value": "Sund",
+              "label": "Innsnevret område i vann eller vassdrag"
+            },
+            {
+              "value": "Sund i sjø",
+              "label": "Innsnevret område mellom øyer eller fastland"
+            },
+            {
+              "value": "Sva",
+              "label": "Bart fjell-/steinparti"
+            },
+            {
+              "value": "Sykehus",
+              "label": "Offentlig og privat sykehus"
+            },
+            {
+              "value": "Søkk",
+              "label": "Mindre markant, begrenset fordypning"
+            },
+            {
+              "value": "Søkk i sjø",
+              "label": "Stor eller liten grop på sjøbunnen"
+            },
+            {
+              "value": "Taubane",
+              "label": "Uten persontrafikk. Se også 193"
+            },
+            {
+              "value": "Terrengdetalj",
+              "label": "Alle typer små naturdetaljer. f.eks. sprekker, hulveier, sand-/stein-/grusflater, etc."
+            },
+            {
+              "value": "Tettbebyggelse",
+              "label": "Mindre bebygd område uten sentrumskarakter f.eks. boligområde"
+            },
+            {
+              "value": "Tettsted",
+              "label": "Mindre bymessig bebygd område av sentrumskarakter"
+            },
+            {
+              "value": "Tettsteddel",
+              "label": "Kulturmessig del av tettsted. Se også navnetype 101."
+            },
+            {
+              "value": "Tjern",
+              "label": "Lite vann"
+            },
+            {
+              "value": "Topp (fjelltopp/tind)",
+              "label": "Øverste fjelltopp"
+            },
+            {
+              "value": "Torvtak",
+              "label": "Sted for uttak av myrtorv / brenntorv / veksttorv."
+            },
+            {
+              "value": "Traktorveg",
+              "label": "Driftsveger for kjøretøyer hvor vegen ikke kan kjøres med vanlig bil."
+            },
+            {
+              "value": "Tunnel",
+              "label": "Vanlig tunnel, rasoverbygg, undergang. Både gangveg, veg og jernbane. Angi ett punkt i hver ende for lange og ett punkt midt på for korte tunneler"
+            },
+            {
+              "value": "Turisthytte",
+              "label": "Overnattingssted"
+            },
+            {
+              "value": "TV/Radio-mast",
+              "label": "TV/Radio ?tårn. Alle typer bakkebasert telekommunikasjon"
+            },
+            {
+              "value": "Tømmerrenne",
+              "label": "Kunstig tømmeranlegg"
+            },
+            {
+              "value": "Tømmervelte",
+              "label": "Midlertidig lagringsplass for tømmer"
+            },
+            {
+              "value": "Universitet/høgskole",
+              "label": "Offentlig og privat høyskole og universitet"
+            },
+            {
+              "value": "Ur",
+              "label": "Steinområde, steinrøys"
+            },
+            {
+              "value": "Utmark",
+              "label": "Ikke inngjerdet beitemark"
+            },
+            {
+              "value": "Utsiktspunkt",
+              "label": "Både i tårn og på bakken f.eks. Kongens utsikt"
+            },
+            {
+              "value": "Utstikker",
+              "label": "Flytende bryggeanlegg"
+            },
+            {
+              "value": "Vad",
+              "label": "Vassested i elv, bekk vann eller sjø."
+            },
+            {
+              "value": "Vaktstasjon/Beredsskapsbygning",
+              "label": "Bygning for Politi/Brann/Los/Toll/Ambulanse/Fly- og skipsovervåkning"
+            },
+            {
+              "value": "Vann",
+              "label": "Middels stort vann"
+            },
+            {
+              "value": "Vanndetalj",
+              "label": "Alle typer : Noter forklaring i merknadsfeltet"
+            },
+            {
+              "value": "Varde",
+              "label": "F.eks. merkerøys, steinrøys. Langs kysten og i innlandet"
+            },
+            {
+              "value": "Veg (Gate)",
+              "label": "Formelle veg/gatenavn ellers kode 240"
+            },
+            {
+              "value": "Vegbom",
+              "label": "Mindre bomanlegg på privat veg"
+            },
+            {
+              "value": "Verksted",
+              "label": "Mindre industrivirksomhet"
+            },
+            {
+              "value": "Verneområder",
+              "label": "(Alle typer både sjø og land. Noter type f.eks. Nasjonalpark i merknadsfelt)"
+            },
+            {
+              "value": "Vidde",
+              "label": "Høyere liggende større område uten skog med lave terrengvariasjoner innenfor området. F.eks. Valdresflyi, Hardangervidda, Finnmarksvidda, Laksefjordvidda"
+            },
+            {
+              "value": "Vik",
+              "label": "Kil, bukt i vann eller vassdrag."
+            },
+            {
+              "value": "Vik i sjø",
+              "label": "Kil, bukt"
+            },
+            {
+              "value": "Våg",
+              "label": "Fjordarm, større vik"
+            },
+            {
+              "value": "Øy",
+              "label": "Tørt landområde i ferskvann atskilt fra fastlandet"
+            },
+            {
+              "value": "Øy i sjø",
+              "label": "Tørt landområde i saltvann atskilt fra fastlandet"
+            },
+            {
+              "value": "Øygruppe",
+              "label": "To eller flere øyer i ferskvann"
+            },
+            {
+              "value": "Øygruppe i sjø",
+              "label": "To eller flere øyer i saltvann f.eks. Hvaler og Lofoten"
+            },
+            {
+              "value": "Øyr",
+              "label": "Sand-grusområde i elvemunning, elvedelta både mot innsjø/vann og saltvann"
+            },
+            {
+              "value": "Ås",
+              "label": "Langstrakt, vanligvis skogkledd høydedrag."
+            }
+          ],
+          "definition": "navnetype er en underinndeling av TEMA-koden, brukt for mer detaljert koding. Denne forteller hva slags begrep navneheten står til\nMerknad: Kun typer som er beskrevet i tabellen kan benyttes. Listen er delt inn i hovedgrupper og undergrupper."
+        }
+      },
+      {
+        "name": "presentasjonskode",
+        "type": "Presentasjonskode",
+        "description": "koplingsnøkkel mot presentasjonsinformasjon.\nMerknad: Kan brukes for både tekst og symbol",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "definition": "koplingsnøkkel mot presentasjonsinformasjon.\nMerknad: Kan brukes for både tekst og symbol\n\nNB: Dette er en tom kodeliste, innholdet følger med\ndokumentversjonen av produktspesifikasjonen for N50 Kartdata",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "stedsnavn",
+        "type": "CharacterString",
+        "description": "navneenhetens skrivemåte uten forkortninger",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "tekstReferansepunkt",
+        "type": "TekstReferansePunkt",
+        "description": "Tekstens referansepunkt er det stedet på teksten  hvor en tekstplassering refererer seg til. Hvis teksten består av flere linjer er det fremdeles referert ut fra første del av strengen (dvs i første linje).\nMerknad: Hvis ikke andre verdier er oppgitt, er default plassering av TREF som følger:\nTRNORD = 1, TRØST = 0, dvs nedre venstre punkt til første bokstav.",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "tekstReferansePunktNord",
+            "type": "TekstReferansePunktNord",
+            "description": "vertikal plassering av teksten.\nMerknad: N50 Kartdata plasseres alltid teksten langs bunnlinja, dvs. TRNORD = 0",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Bunnlinje",
+                  "label": "Bunnlinje"
+                },
+                {
+                  "value": "Midtlinje",
+                  "label": "Midtlinje"
+                },
+                {
+                  "value": "Øvre kant",
+                  "label": "Øvre kant"
+                },
+                {
+                  "value": "Grunnlinje",
+                  "label": "Grunnlinje"
+                }
+              ],
+              "definition": "vertikal plassering av teksten",
+              "asDictionary": "true",
+              "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+            }
+          },
+          {
+            "name": "tekstReferansePunktØst",
+            "type": "TekstReferansePunktØst",
+            "description": "horisontal plassering av teksten",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Venstre kant",
+                  "label": "Venstre kant"
+                },
+                {
+                  "value": "Midt i",
+                  "label": "Midt i"
+                },
+                {
+                  "value": "Høyre kant",
+                  "label": "Høyre kant"
+                }
+              ],
+              "definition": "horisontal plassering av teksten",
+              "asDictionary": "true",
+              "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+            }
+          }
+        ]
+      },
+      {
+        "name": "generellTekststreng",
+        "type": "CharacterString",
+        "description": "navneenhetens skrivemåte",
+        "cardinality": "1"
+      },
+      {
+        "name": "sperring",
+        "type": "Sperring",
+        "description": "sperring regulerer avstanden mellom bokstavene i teksten. Dette gjøres ved forholdstall relatert til størrelsen på største bokstavblokk",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Liten sperring",
+              "label": "Liten sperring = 1 drittel, dvs 1/3 av \"største bokstavblokk\" mellom hver bokstav."
+            },
+            {
+              "value": "Middels sperring",
+              "label": "Middels sperring = halvgefirt, dvs 1/2 av \"største bokstavblokk\" mellom hver bokstav."
+            },
+            {
+              "value": "Stor sperring",
+              "label": "Stor sperring = 1 gefirt, dvs 1 (største) \"bokstavblokk\" mellom hver bokstav."
+            }
+          ],
+          "definition": "sperring regulerer avstanden mellom bokstavene i teksten. Dette gjøres ved forhåndstall regulert til størrelsen på største bokstavblokk",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "frisperring",
+        "type": "Integer",
+        "description": "skriftlengden i mm på presentasjonsmedium",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  }
+]

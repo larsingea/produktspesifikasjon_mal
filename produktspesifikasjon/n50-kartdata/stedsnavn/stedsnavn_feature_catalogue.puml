@@ -1,0 +1,45 @@
+@startuml
+title N50 Kartdata - Stedsnavn - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class "Skrivemåte" as Skrivem_te <<featureType>> {
+    + posisjon [1] : Punkt
+    + ssrId [0..1] : Integer
+    + navnetype [1] : Navnetype
+    + presentasjonskode [0..1] : Presentasjonskode
+    + stedsnavn [0..1] : CharacterString
+    + tekstReferansepunkt [1] : TekstReferansePunkt
+    + generellTekststreng [1] : CharacterString
+    + sperring [0..1] : Sperring
+    + frisperring [0..1] : Integer
+  }
+
+  class TekstReferansePunkt <<dataType>> {
+    + tekstReferansePunktNord [1] : TekstReferansePunktNord
+    + tekstReferansePunktØst [1] : TekstReferansePunktØst
+  }
+}
+
+@enduml

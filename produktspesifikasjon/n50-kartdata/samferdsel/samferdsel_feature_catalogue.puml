@@ -1,0 +1,119 @@
+@startuml
+title N50 Kartdata - Samferdsel - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class Sti <<featureType>> {
+    + senterlinje [1] : Kurve
+    + merking [1] : RuteMerking
+    + vedlikeholdsansvarlig [0..1] : Vedlikeholdsansvarlig
+    + rutenummer [0..1] : CharacterString
+  }
+
+  abstract class Veglenke <<featureType>> {
+    + senterlinje [1] : Kurve
+    + vegident [0..1] : Vegident
+    + rutenummer [0..1] : CharacterString
+  }
+
+  class Stasjon <<featureType>> {
+    + navn [1] : CharacterString
+    + retning [1] : Retning
+  }
+
+  abstract class Jernbanepunkt <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  abstract class Jernbanelenke <<featureType>> {
+    + senterlinje [1] : Kurve
+    + jernbaneinformasjon [1] : Jernbaneinformasjon
+  }
+
+  class "Barmarksløype" as Barmarksl_ype <<featureType>> {
+    + senterlinje [1] : Kurve
+    + rutenummer [0..1] : CharacterString
+  }
+
+  class Bane <<featureType>> {
+    + sporantall [1] : Sporantall
+  }
+
+  class Traktorveg <<featureType>> {
+    + senterlinje [1] : Kurve
+    + rutenummer [0..1] : CharacterString
+  }
+
+  class Bilferjestrekning <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class GangSykkelveg <<featureType>> {
+    + senterlinje [1] : Kurve
+    + rutenummer [0..1] : CharacterString
+  }
+
+  class VegSenterlinje <<featureType>> {
+    + motorvegtype [0..1] : Motorvegtype
+  }
+
+  abstract class RuteGenerell <<featureType>> {
+    + senterlinje [1] : Kurve
+    + rutenummer [0..1] : CharacterString
+  }
+
+  class Passasjerferjestrekning <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class Vegsperring <<featureType>> {
+    + posisjon [1] : Punkt
+    + vegsperringtype [1] : Vegsperringtype
+    + retning [1] : Retning
+  }
+
+  class Vegident <<dataType>> {
+    + vegkategori [0..1] : Vegkategori
+    + vegstatus [0..1] : VegStatus
+    + vegnummer [0..1] : Integer
+  }
+
+  class Retning <<dataType>> {
+    + retningsverdi [1] : Real
+    + retningsenhet [1] : Retningsenhet
+    + retningsreferanse [1] : Retningsreferanse
+  }
+
+  class Jernbaneinformasjon <<dataType>> {
+    + anleggstype [1] : Jernbanetype
+  }
+}
+
+  Jernbanepunkt <|-- Stasjon
+  Jernbanelenke <|-- Bane
+  Veglenke <|-- Bilferjestrekning
+  Veglenke <|-- VegSenterlinje
+  RuteGenerell <|-- Passasjerferjestrekning
+
+@enduml
