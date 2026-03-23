@@ -13,7 +13,7 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 **Emnekategorier:** Samfunn og kultur
 
-**Geografisk utstrekning:** **Geografisk utstrekning**:
+**Geografisk utstrekning**:
 
 - **Vest**: 2.0
 - **Øst**: 33.0
@@ -29,35 +29,36 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 ## Om spesifikasjonen
 
 
-**Unik identifikator:** dbae9aae-10e7-4b75-8d67-7f0e8828f3d8\
-**Fullstendig navn:** Tilfluktsrom - Offentlige\
-**Versjon:** 2019-09-09\
-**Opprettet dato:** 2019-09-09\
-**Endret dato:** 2026-03-20\
-**Språk:** nor\
-**Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
+> **Denne versjonen av produktspesifikasjonen:** <br>
+> **Opprettet dato:** 2019-09-09<br>
+> **Endret dato:** 2026-03-20<br>
+> **Språk:** nor<br>
+> **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
 
 ## Om produktet Tilfluktsrom - Offentlige
 
 
-**Romlig representasjonstype:** Vektor\
-**Romlig oppløsning:** **Ekvivalent målestokk**: 5000\
-**Begrensninger:** **Ressursbegrensninger**:
-
-- **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt.
-
-**Juridiske begrensninger**:
-
-- **Tilgangsbegrensninger**: Åpne data
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: Norsk lisens for offentlige data (NLOD)
-- **Lisenslenke**: <http://data.norge.no/nlod/no/1.0>
-- **Andre begrensninger**: Ingen begrensninger oppgitt.
-
-**Sikkerhetsbegrensninger**:
-
-- **Klassifisering**: Ugradert\
-**Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
+> **Romlig representasjonstype:** Vektor<br>
+> **Unik identifikator:** dbae9aae-10e7-4b75-8d67-7f0e8828f3d8<br>
+> **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
+>
+> **Romlig oppløsning:** **Ekvivalent målestokk**: 5000
+>
+> **Begrensninger:** **Ressursbegrensninger**:
+>
+> - **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt.
+>
+> **Juridiske begrensninger**:
+>
+> - **Tilgangsbegrensninger**: Åpne data
+> - **Bruksbegrensninger**: Lisens
+> - **Lisens**: Norsk lisens for offentlige data (NLOD)
+> - **Lisenslenke**: <http://data.norge.no/nlod/no/1.0>
+> - **Andre begrensninger**: Ingen begrensninger oppgitt.
+>
+> **Sikkerhetsbegrensninger**:
+>
+> - **Klassifisering**: Ugradert
 
 ## Omfang
 
@@ -65,7 +66,8 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
   - **Identifikasjon**: hele datasettet
   - **Nivå**: dataset
-  - **Utstrekning**: - **Beskrivelse**: National
+  - **Utstrekning**:
+    - **Beskrivelse**: National
   - **Nivåbeskrivelse**:
     #### Datamodell for hendelser
     Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
@@ -86,19 +88,11 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 ## Referansesystem
 
-**Romlige referansesystemer**:
-
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
-
-- **kode**: EPSG:25833
-  **navn**: EUREF89 UTM sone 33, 2d
-
-- **kode**: EPSG:25835
-  **navn**: EUREF89 UTM sone 35, 2d
-
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
+| EPSG-kode | Navn på referansesystem |
+| --- | --- |
+| [EPSG:25832](https://epsg.io/25832) | [EUREF89 UTM sone 32, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25833](https://epsg.io/25833) | [EUREF89 UTM sone 33, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25835](https://epsg.io/25835) | [EUREF89 UTM sone 35, 2d](https://register.geonorge.no/epsg-koder) |
 
 ## Datakvalitet
 
@@ -118,7 +112,8 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 **Datainnsamling og prosessering**:
 
-- **Prosesstrinn**: - **Beskrivelse**: Ingen prosesshistorie tilgjengelig
+- **Prosesstrinn**:
+  - **Beskrivelse**: Ingen prosesshistorie tilgjengelig
 
 ## Vedlikehold
 
@@ -131,7 +126,7 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler
+    - **Leveranseenheter**: fylkesvis, landsfiler
     - **Medienavn**: Geonorge nedlastning
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
@@ -150,50 +145,54 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler
+    - **Leveranseenheter**: fylkesvis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedFGDB.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: FGDB
+  - **Leveranseformat**:
+    - **Formatnavn**: FGDB
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler
+    - **Leveranseenheter**: fylkesvis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedGML.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GML
+  - **Leveranseformat**:
+    - **Formatnavn**: GML
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler
+    - **Leveranseenheter**: fylkesvis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedGEOJSON.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GeoJSON
+  - **Leveranseformat**:
+    - **Formatnavn**: GeoJSON
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler
+    - **Leveranseenheter**: fylkesvis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedPostGIS.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: PostGIS
+  - **Leveranseformat**:
+    - **Formatnavn**: PostGIS
 
 - **Leveranse**:
 
@@ -215,7 +214,7 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-20
+**Metadatadato**: 2026-03-22
 
 **språk**: nor
 

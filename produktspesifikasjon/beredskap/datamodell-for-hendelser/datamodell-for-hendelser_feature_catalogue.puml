@@ -200,6 +200,9 @@ package "Objekttyper" {
     + prioritet [1] : PrioritetHendelse
     + kompleksitet [0..1] : Kompleksitet
   }
+
+  class X___TiltakOppgave {
+  }
 }
 
   VersjonertObjekt <|-- Fellesegenskaper
