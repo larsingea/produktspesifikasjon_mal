@@ -7,48 +7,53 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 
 # Produktspesifikasjon: Havnedata
 
-## Generelt om spesifikasjonen
-
-
-### Unik identifisering
-
-e46767e4-c6d9-49a6-93e8-716da0922fd7
-
-#### Fullstendig navn
-
-Havnedata
-
-#### Versjon
-
-2021-03-02
-
-### Referansedato
-
-2026-03-07
-
-### Ansvarlig organisasjon
-
-Kartverket
-
-### Språk
-
-nor
-
-### Hovedtema
-
-Havnedata, Havneområde, Havn, WMS, Kyst, Kai, transport, Norge, Transportnett, Kyst og fiskeri, Samferdsel, Kaifront, Beredskapspunkt, HavneområdeGrense, Fortøyningsinnretning, Kran, Havnegjerde, Avfallspunkt, Havnesensor, Lastbegrensningsområde, tillattFortøyningsvinkelGrunnriss, tillattFortøyningsvinkelOppriss, kainavn, portFaciilityNrIMO, kontaktinformasjonPFSO, kontakttype, drivstofftype, fendertype, avfallsplan, beholdertype, havneident, UNLOCODE, vektbegrensning, bruksklasse, kaidekke
-
-### Temakategori
-
-Kyst og sjø
-
-### Sammendrag
-
-Havnedata er detaljert geografisk informasjon om havner, kaier og tilhørende objekter som er en del av infrastrukturen på en kai eller i en havn. Tilhørende objekttyper som inngår i standarden er havneanlegg, kaifront, vannuttak, tilkoblingspunkt for strøm, beredskapsutstyr, sensorer, avfallspunkt, kraner, slipp, fender, fortøyningsinnretninger, tømmestasjon, gjerder m.fl. 
+*Havnedata er detaljert geografisk informasjon om havner, kaier og tilhørende objekter som er en del av infrastrukturen på en kai eller i en havn. Tilhørende objekttyper som inngår i standarden er havneanlegg, kaifront, vannuttak, tilkoblingspunkt for strøm, beredskapsutstyr, sensorer, avfallspunkt, kraner, slipp, fender, fortøyningsinnretninger, tømmestasjon, gjerder m.fl. 
 
 Reguleringer i form av lovverk, regler, restriksjoner eller annet som er relatert til havn og har en geografisk avgrensning som kan kartfestes, inngår også i standarden. 
 
-Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd på NGIS-forvaltningsplattformen etter samme forvaltningskonsept som SFKB.
+Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd på NGIS-forvaltningsplattformen etter samme forvaltningskonsept som SFKB.*
+
+**Nøkkelord:** Havnedata, Havneområde, Havn, WMS, Kyst, Kai, transport, Norge, Transportnett, Kyst og fiskeri, Samferdsel, Kaifront, Beredskapspunkt, HavneområdeGrense, Fortøyningsinnretning, Kran, Havnegjerde, Avfallspunkt, Havnesensor, Lastbegrensningsområde, tillattFortøyningsvinkelGrunnriss, tillattFortøyningsvinkelOppriss, kainavn, portFaciilityNrIMO, kontaktinformasjonPFSO, kontakttype, drivstofftype, fendertype, avfallsplan, beholdertype, havneident, UNLOCODE, vektbegrensning, bruksklasse, kaidekke
+
+**Emnekategorier:** Kyst og sjø
+
+**Geografisk utstrekning**:
+
+- **Vest**: 2.0
+- **Øst**: 33.0
+- **Sør**: 57.0
+- **Nord**: 72.0
+
+**Tidsmessig utstrekning**:
+
+- **Tidsperiode**:
+  - **Fra**: 2021-03-02
+  - **Til**: 2026-03-07
+
+## Om spesifikasjonen
+
+
+> **Denne versjonen av produktspesifikasjonen:** <br>
+> **Opprettet dato:** 2021-03-02<br>
+> **Endret dato:** 2026-03-07<br>
+> **Språk:** nor<br>
+> **Kontaktinformasjon:** Kartverket
+
+## Om produktet Havnedata
+
+
+> **Romlig representasjonstype:** Vektor<br>
+> **Unik identifikator:** e46767e4-c6d9-49a6-93e8-716da0922fd7<br>
+> **Kontaktinformasjon:** Kartverket
+>
+> **Romlig oppløsning:** **Ekvivalent målestokk**: 5000
+>
+> **Begrensninger:** **Juridiske begrensninger**:
+>
+> - **Tilgangsbegrensninger**: Norge digitalt begrenset
+> - **Bruksbegrensninger**: Lisens
+> - **Lisens**: Creative Commons BY-NC 4.0 (CC BY-NC 4.0)
+> - **Lisenslenke**: <https://creativecommons.org/licenses/by-nc/4.0/>
 
 ### Formål
 
@@ -74,45 +79,14 @@ Eksempler på bruksområder for havnedata:
 - Produksjon av kart og avledede produkter. 
 - Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud.
 
-### Romlig representasjonstype
-
-Vektor
-
-### Romlig oppløsning
-
-**Ekvivalent målestokk**: 5000
-
-### Utstrekning
-
-**Geografisk utstrekning**:
-
-- **Vest**: 2.0
-- **Øst**: 33.0
-- **Sør**: 57.0
-- **Nord**: 72.0
-
-**Tidsmessig utstrekning**:
-
-- **Tidsperiode**:
-  - **Fra**: 2021-03-02
-  - **Til**: 2026-03-07
-
-### Begrensninger
-
-**Juridiske begrensninger**:
-
-- **Tilgangsbegrensninger**: Norge digitalt begrenset
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: Creative Commons BY-NC 4.0 (CC BY-NC 4.0)
-- **Lisenslenke**: <https://creativecommons.org/licenses/by-nc/4.0/>
-
-## Spesifikasjonsomfang
+## Omfang
 
 - **Omfang**:
 
   - **Identifikasjon**: hele datasettet
   - **Nivå**: dataset
-  - **Utstrekning**: - **Beskrivelse**: National
+  - **Utstrekning**:
+    - **Beskrivelse**: National
   - **Nivåbeskrivelse**:
     #### Filleveranser
     Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
@@ -120,7 +94,7 @@ Vektor
     #### Innsynstjeneste (API)
     Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
 
-## Innhold og struktur
+## Datainnhold og struktur
 
 **Beskrivelse**:
 Aktører som har behov for tilgang til detaljert informasjon om havner:
@@ -163,21 +137,13 @@ Eksempler på bruksområder for havnedata:
 
 ## Referansesystem
 
-**Romlige referansesystemer**:
+| EPSG-kode | Navn på referansesystem |
+| --- | --- |
+| [EPSG:5972](https://epsg.io/5972) | [EUREF89 UTM sone 32, 2d + NN2000](https://register.geonorge.no/epsg-koder) |
+| [EPSG:5973](https://epsg.io/5973) | [EUREF89 UTM sone 33, 2d + NN2000](https://register.geonorge.no/epsg-koder) |
+| [EPSG:5975](https://epsg.io/5975) | [EUREF89 UTM sone 35, 2d + NN2000](https://register.geonorge.no/epsg-koder) |
 
-- **kode**: EPSG:5972
-  **navn**: EUREF89 UTM sone 32, 2d + NN2000
-
-- **kode**: EPSG:5973
-  **navn**: EUREF89 UTM sone 33, 2d + NN2000
-
-- **kode**: EPSG:5975
-  **navn**: EUREF89 UTM sone 35, 2d + NN2000
-
-- **kode**: EPSG:5972
-  **navn**: EUREF89 UTM sone 32, 2d + NN2000
-
-## Kvalitet
+## Datakvalitet
 
 **Nivå**: dataset
 
@@ -199,7 +165,7 @@ Eksempler på bruksområder for havnedata:
 
 
 
-## Datavedlikehold
+## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Ukjent
 
@@ -217,7 +183,7 @@ Eksempler på bruksområder for havnedata:
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Geonorge nedlastning
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
@@ -236,50 +202,54 @@ Eksempler på bruksområder for havnedata:
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedFGDB.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: FGDB
+  - **Leveranseformat**:
+    - **Formatnavn**: FGDB
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedGML.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GML
+  - **Leveranseformat**:
+    - **Formatnavn**: GML
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedPostGIS.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: PostGIS
+  - **Leveranseformat**:
+    - **Formatnavn**: PostGIS
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedSOSI.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: SOSI
+  - **Leveranseformat**:
+    - **Formatnavn**: SOSI
 
 - **Leveranse**:
 
@@ -301,7 +271,7 @@ Eksempler på bruksområder for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-17
+**Metadatadato**: 2026-03-22
 
 **språk**: nor
 
@@ -340,3 +310,4 @@ Eksempler på bruksområder for havnedata:
   **relasjon**: service
   **type**: application/xml
   **tittel**: Tjeneste-distribusjon
+
