@@ -44,7 +44,7 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 
 **Emnekategorier:** 
 
-**Geografisk utstrekning:** **Geografisk utstrekning**:
+**Geografisk utstrekning**:
 
 - **Vest**: 2.0
 - **Øst**: 33.0
@@ -60,27 +60,28 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 ## Om spesifikasjonen
 
 
-**Unik identifikator:** 28c28e3a-d88f-4a34-8c60-5efe6d56a44d\
-**Fullstendig navn:** Nasjonalt grunnkart for arealanalyse - Årsversjon 2025\
-**Versjon:** 2024-02-13\
-**Opprettet dato:** 2024-02-13\
-**Endret dato:** 2026-03-19\
-**Språk:** nor\
-**Kontaktinformasjon:** Statistisk sentralbyrå
+> **Denne versjonen av produktspesifikasjonen:** <br>
+> **Opprettet dato:** 2024-02-13<br>
+> **Endret dato:** 2026-03-19<br>
+> **Språk:** nor<br>
+> **Kontaktinformasjon:** Statistisk sentralbyrå
 
 ## Om produktet Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
 
 
-**Romlig representasjonstype:** Vektor\
-**Romlig oppløsning:** **Ekvivalent målestokk**: 1:500 - 1:50000\
-**Begrensninger:** **Juridiske begrensninger**:
-
-- **Tilgangsbegrensninger**: Norge digitalt begrenset
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: Norge digitalt-lisens
-- **Lisenslenke**: <https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/>
-- **Andre begrensninger**: Wms-tjenesten er åpen for alle. Nedlastbare data er begrenset til Norge digitalt-parter.\
-**Kontaktinformasjon:** Statistisk sentralbyrå
+> **Romlig representasjonstype:** Vektor<br>
+> **Unik identifikator:** 28c28e3a-d88f-4a34-8c60-5efe6d56a44d<br>
+> **Kontaktinformasjon:** Statistisk sentralbyrå
+>
+> **Romlig oppløsning:** **Ekvivalent målestokk**: 1:500 - 1:50000
+>
+> **Begrensninger:** **Juridiske begrensninger**:
+>
+> - **Tilgangsbegrensninger**: Norge digitalt begrenset
+> - **Bruksbegrensninger**: Lisens
+> - **Lisens**: Norge digitalt-lisens
+> - **Lisenslenke**: <https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/>
+> - **Andre begrensninger**: Wms-tjenesten er åpen for alle. Nedlastbare data er begrenset til Norge digitalt-parter.
 
 ### Formål
 
@@ -121,22 +122,12 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 ## Referansesystem
 
-**Romlige referansesystemer**:
-
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
-
-- **kode**: EPSG:25833
-  **navn**: EUREF89 UTM sone 33, 2d
-
-- **kode**: EPSG:25835
-  **navn**: EUREF89 UTM sone 35, 2d
-
-- **kode**: EPSG:4258
-  **navn**: EUREF 89 Geografisk (ETRS 89) 2d
-
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
+| EPSG-kode | Navn på referansesystem |
+| --- | --- |
+| [EPSG:25832](https://epsg.io/25832) | [EUREF89 UTM sone 32, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25833](https://epsg.io/25833) | [EUREF89 UTM sone 33, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25835](https://epsg.io/25835) | [EUREF89 UTM sone 35, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:4258](https://epsg.io/4258) | [EUREF 89 Geografisk (ETRS 89) 2d](https://register.geonorge.no/epsg-koder) |
 
 ## Datakvalitet
 
@@ -225,7 +216,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Geonorge nedlastning
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
@@ -242,38 +233,41 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedFGDB.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: FGDB
+  - **Leveranseformat**:
+    - **Formatnavn**: FGDB
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGML.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GML
+  - **Leveranseformat**:
+    - **Formatnavn**: GML
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGPKG.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GPKG
+  - **Leveranseformat**:
+    - **Formatnavn**: GPKG
 
 - **Leveranse**:
 
@@ -295,7 +289,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-20
+**Metadatadato**: 2026-03-22
 
 **språk**: nor
 
