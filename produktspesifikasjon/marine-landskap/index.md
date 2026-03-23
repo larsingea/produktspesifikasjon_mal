@@ -7,62 +7,11 @@ logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
 
 # Produktspesifikasjon: Marine landformer
 
-## Generelt om spesifikasjonen
+*Datasettet viser en rekke landskapsformer på havbunnen på norsk kontinentalsokkel og i fjordene. Landformer kan være dannet under påvirkning av is (morenerygger, isfjellpløyemerker osv), ved utglidninger a sedimenter (skredformer), formet av bunnstrømmer (sandbølger) osv. Tolkningen er basert å detaljerte dybdedata og sedimentdata.*
 
+**Nøkkelord:** landformer, landform, terrengform, terreng, morfologi, dybde, ekkolodd, geologi, habitat, hav, havbunn, kartlegging, løsmasser, marin, maringeologi, natur, naturtype, prosesser, undervanns, sediment, sjøbunn, ras, skred, kanal, morene, morenerygg, sandbølge, gjel, isfjellpløyemerke, marine, landskap, Norge, Barentshavet, Norskehavet, Rijpfjorden, Kongsfjorden, Trondheimsfjorden, Drammensfjorden, Havområder, Inspire, Norge digitalt, geodataloven, Mareano, ØkologiskGrunnkart, MarineGrunnkart, modellbaserteVegprosjekter, fellesDatakatalog, NGU
 
-### Unik identifisering
-
-5e8d9286-4d94-4e95-8546-2ef4b891c007
-
-#### Fullstendig navn
-
-Marine landformer
-
-#### Versjon
-
-2007-08-15
-
-### Referansedato
-
-2012-04-28
-
-### Ansvarlig organisasjon
-
-Norges geologiske undersøkelse
-
-### Språk
-
-nor
-
-### Hovedtema
-
-landformer, landform, terrengform, terreng, morfologi, dybde, ekkolodd, geologi, habitat, hav, havbunn, kartlegging, løsmasser, marin, maringeologi, natur, naturtype, prosesser, undervanns, sediment, sjøbunn, ras, skred, kanal, morene, morenerygg, sandbølge, gjel, isfjellpløyemerke, marine, landskap, Norge, Barentshavet, Norskehavet, Rijpfjorden, Kongsfjorden, Trondheimsfjorden, Drammensfjorden, Havområder, Inspire, Norge digitalt, geodataloven, Mareano, ØkologiskGrunnkart, MarineGrunnkart, modellbaserteVegprosjekter, fellesDatakatalog, NGU
-
-### Temakategori
-
-Geovitenskapelig informasjon
-
-### Sammendrag
-
-Datasettet viser en rekke landskapsformer på havbunnen på norsk kontinentalsokkel og i fjordene. Landformer kan være dannet under påvirkning av is (morenerygger, isfjellpløyemerker osv), ved utglidninger a sedimenter (skredformer), formet av bunnstrømmer (sandbølger) osv. Tolkningen er basert å detaljerte dybdedata og sedimentdata.
-
-### Formål
-
-Kunnskap om landformer på havbunnen gir oss forståelse av prosessene i det marine miljø, både de som formet havbunnen under og rett etter istiden, og de som påvirker havbunnen i dag.
-
-### Bruksområde
-
-Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, sårbarhetsanalyser, habitatskartlegging, i forbindelse med installasjoner på sjøbunnen osv.
-
-### Romlig representasjonstype
-
-Vektor
-
-### Romlig oppløsning
-
-**Ekvivalent målestokk**: 100000
-
-### Utstrekning
+**Emnekategorier:** Geovitenskapelig informasjon
 
 **Geografisk utstrekning**:
 
@@ -77,30 +26,51 @@ Vektor
   - **Fra**: 2007-08-15
   - **Til**: 2012-04-28
 
-### Tilleggsinformasjon
+## Om spesifikasjonen
 
-Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedimentdata.
 
-### Begrensninger
+> **Denne versjonen av produktspesifikasjonen:** <br>
+> **Opprettet dato:** 2007-08-15<br>
+> **Endret dato:** 2012-04-28<br>
+> **Språk:** nor<br>
+> **Kontaktinformasjon:** Norges geologiske undersøkelse
 
-**Ressursbegrensninger**:
+## Om produktet Marine landformer
 
-- **Bruksbegrensninger**: Detaljnivået på datasettet tilsier bruk innenfor kartmålestokken: 1:50.000 - 1:250.000.
 
-**Juridiske begrensninger**:
+> **Romlig representasjonstype:** Vektor<br>
+> **Unik identifikator:** 5e8d9286-4d94-4e95-8546-2ef4b891c007<br>
+> **Kontaktinformasjon:** Norges geologiske undersøkelse
+>
+> **Romlig oppløsning:** **Ekvivalent målestokk**: 100000
+>
+> **Begrensninger:** **Ressursbegrensninger**:
+>
+> - **Bruksbegrensninger**: Detaljnivået på datasettet tilsier bruk innenfor kartmålestokken: 1:50.000 - 1:250.000.
+>
+> **Juridiske begrensninger**:
+>
+> - **Tilgangsbegrensninger**: Åpne data
+> - **Bruksbegrensninger**: Lisens
+> - **Lisens**: Norsk lisens for offentlige data (NLOD)
+> - **Lisenslenke**: <http://data.norge.no/nlod/no/1.0>
 
-- **Tilgangsbegrensninger**: Åpne data
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: Norsk lisens for offentlige data (NLOD)
-- **Lisenslenke**: <http://data.norge.no/nlod/no/1.0>
+### Formål
 
-## Spesifikasjonsomfang
+Kunnskap om landformer på havbunnen gir oss forståelse av prosessene i det marine miljø, både de som formet havbunnen under og rett etter istiden, og de som påvirker havbunnen i dag.
+
+### Bruksområde
+
+Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, sårbarhetsanalyser, habitatskartlegging, i forbindelse med installasjoner på sjøbunnen osv.
+
+## Omfang
 
 - **Omfang**:
 
   - **Identifikasjon**: hele datasettet
   - **Nivå**: dataset
-  - **Utstrekning**: - **Beskrivelse**: National
+  - **Utstrekning**:
+    - **Beskrivelse**: National
   - **Nivåbeskrivelse**:
     #### Filleveranse
     Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
@@ -108,7 +78,7 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
     #### OGC API Features - strømme-API
     Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i henhold til en enklere datamodell enn nedlastbare filleveranser.
 
-## Innhold og struktur
+## Datainnhold og struktur
 
 **Beskrivelse**: Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, sårbarhetsanalyser, habitatskartlegging, i forbindelse med installasjoner på sjøbunnen osv.
 
@@ -134,33 +104,17 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
 
 ## Referansesystem
 
-**Romlige referansesystemer**:
+| EPSG-kode | Navn på referansesystem |
+| --- | --- |
+| [EPSG:25832](https://epsg.io/25832) | [EUREF89 UTM sone 32, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25833](https://epsg.io/25833) | [EUREF89 UTM sone 33, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25835](https://epsg.io/25835) | [EUREF89 UTM sone 35, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:32632](https://epsg.io/32632) | [WGS84 UTM sone 32, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:32633](https://epsg.io/32633) | [WGS84 UTM sone 33, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:32635](https://epsg.io/32635) | [WGS84 UTM sone 35, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:4326](https://epsg.io/4326) | [WGS84 Geografisk](https://register.geonorge.no/epsg-koder) |
 
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
-
-- **kode**: EPSG:25833
-  **navn**: EUREF89 UTM sone 33, 2d
-
-- **kode**: EPSG:25835
-  **navn**: EUREF89 UTM sone 35, 2d
-
-- **kode**: EPSG:32632
-  **navn**: WGS84 UTM sone 32, 2d
-
-- **kode**: EPSG:32633
-  **navn**: WGS84 UTM sone 33, 2d
-
-- **kode**: EPSG:32635
-  **navn**: WGS84 UTM sone 35, 2d
-
-- **kode**: EPSG:4326
-  **navn**: WGS84 Geografisk
-
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
-
-## Kvalitet
+## Datakvalitet
 
 **Nivå**: dataset
 
@@ -188,13 +142,14 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
 
 **Beskrivelse**: Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedimentdata.
 
-## Datafangst
+## Datafangst og produksjon
 
 **Datainnsamling og prosessering**:
 
-- **Prosesstrinn**: - **Beskrivelse**: Datasettet er tolket og digitalisert av NGU, men grunnlaget for tolkninger er data fra Norges geologiske undersøkelse (NGU), Statens kartverk sjødivisjonen (SKS), Havforskningsinstituttet (HI), Forsvarets Forskningsinstitutt (FFI). Datatemaet Marine landformer er basert på kornstørrelsesdata, tolkning av video og prøver av sjøbunnen, tolkning av digitale reflektivitetsdata, samt tolkning av digitale seismiske data. Detaljerte vanndypsdata har inngått som støtte i tolkningen. Dataene er digitalisert og tilrettelagt vha. ArcGIS verktøy. Metodikken er beskrevet i egenskapsfeltene Målemetode og Geopåvisningtype.
+- **Prosesstrinn**:
+  - **Beskrivelse**: Datasettet er tolket og digitalisert av NGU, men grunnlaget for tolkninger er data fra Norges geologiske undersøkelse (NGU), Statens kartverk sjødivisjonen (SKS), Havforskningsinstituttet (HI), Forsvarets Forskningsinstitutt (FFI). Datatemaet Marine landformer er basert på kornstørrelsesdata, tolkning av video og prøver av sjøbunnen, tolkning av digitale reflektivitetsdata, samt tolkning av digitale seismiske data. Detaljerte vanndypsdata har inngått som støtte i tolkningen. Dataene er digitalisert og tilrettelagt vha. ArcGIS verktøy. Metodikken er beskrevet i egenskapsfeltene Målemetode og Geopåvisningtype.
 
-## Datavedlikehold
+## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Etter behov
 
@@ -212,7 +167,7 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler, kommunevis
+    - **Leveranseenheter**: fylkesvis, landsfiler, kommunevis
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <https://nedlasting.ngu.no/api/atom/0f7c4324-e50d-4b68-b2b8-d10dcfaa05f7>
@@ -229,7 +184,7 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler, kommunevis
+    - **Leveranseenheter**: fylkesvis, landsfiler, kommunevis
     - **Medienavn**: Egen nedlastningsside
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://geo.ngu.no/download/order?dataset=710>
@@ -246,7 +201,7 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, landsfiler, kommunevis
+    - **Leveranseenheter**: fylkesvis, landsfiler, kommunevis
     - **Medienavn**: WMS-tjeneste
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/MarinTerrengWMS2?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>
@@ -277,7 +232,8 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
       - **Tjenesteegenskap**:
         - **type**: Marine landformer
         - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**: - **Formatnavn**: [{}]
+  - **Leveranseformat**:
+    - **Formatnavn**: [{}]
   - **Leveranseomfang**: Tjeneste
 
 ## Metadata
@@ -336,3 +292,7 @@ Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedim
   **relasjon**: service
   **type**: application/xml
   **tittel**: Tjeneste-distribusjon
+
+## Tilleggsinformasjon
+
+Tolkningsgrunnlag for dette datasettet er detaljerte digitale dybdedata og sedimentdata.

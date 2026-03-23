@@ -23,7 +23,7 @@
       },
       {
         "name": "identifikasjon",
-        "type": "object",
+        "type": "Identifikasjon",
         "cardinality": "0..1",
         "attributes": [
           {
@@ -72,7 +72,7 @@
       },
       {
         "name": "identifikasjon",
-        "type": "object",
+        "type": "Identifikasjon",
         "cardinality": "0..1",
         "attributes": [
           {
@@ -121,7 +121,7 @@
       },
       {
         "name": "identifikasjon",
-        "type": "object",
+        "type": "Identifikasjon",
         "cardinality": "0..1",
         "attributes": [
           {
@@ -201,7 +201,7 @@
       },
       {
         "name": "identifikasjon",
-        "type": "object",
+        "type": "Identifikasjon",
         "cardinality": "0..1",
         "attributes": [
           {
@@ -294,7 +294,7 @@
       },
       {
         "name": "kvalitet",
-        "type": "object",
+        "type": "Posisjonskvalitet",
         "cardinality": "0..1",
         "attributes": [
           {
@@ -355,7 +355,7 @@
       },
       {
         "name": "identifikasjon",
-        "type": "object",
+        "type": "Identifikasjon",
         "cardinality": "0..1",
         "attributes": [
           {
@@ -417,7 +417,7 @@
       },
       {
         "name": "kvalitet",
-        "type": "object",
+        "type": "Posisjonskvalitet",
         "cardinality": "0..1",
         "attributes": [
           {
@@ -478,7 +478,7 @@
       },
       {
         "name": "identifikasjon",
-        "type": "object",
+        "type": "Identifikasjon",
         "cardinality": "0..1",
         "attributes": [
           {
