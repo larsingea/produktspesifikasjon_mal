@@ -13,7 +13,7 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 
 **Emnekategorier:** Basisdata
 
-**Geografisk utstrekning:** **Geografisk utstrekning**:
+**Geografisk utstrekning**:
 
 - **Vest**: 2.0
 - **Øst**: 33.0
@@ -29,34 +29,35 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 ## Om spesifikasjonen
 
 
-**Unik identifikator:** ea192681-d039-42ec-b1bc-f3ce04c189ac\
-**Fullstendig navn:** N50 Kartdata\
-**Versjon:** \
-**Opprettet dato:** \
-**Endret dato:** 2026-03-20\
-**Språk:** nor\
-**Kontaktinformasjon:** Kartverket
+> **Denne versjonen av produktspesifikasjonen:** <br>
+> **Opprettet dato:** <br>
+> **Endret dato:** 2026-03-20<br>
+> **Språk:** nor<br>
+> **Kontaktinformasjon:** Kartverket
 
 ## Om produktet N50 Kartdata
 
 
-**Romlig representasjonstype:** Vektor\
-**Romlig oppløsning:** **Ekvivalent målestokk**: 50000\
-**Begrensninger:** **Ressursbegrensninger**:
-
-- **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt
-
-**Juridiske begrensninger**:
-
-- **Tilgangsbegrensninger**: Åpne data
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: Creative Commons BY 4.0 (CC BY 4.0)
-- **Lisenslenke**: <https://creativecommons.org/licenses/by/4.0/>
-
-**Sikkerhetsbegrensninger**:
-
-- **Klassifisering**: Ugradert\
-**Kontaktinformasjon:** Kartverket
+> **Romlig representasjonstype:** Vektor<br>
+> **Unik identifikator:** ea192681-d039-42ec-b1bc-f3ce04c189ac<br>
+> **Kontaktinformasjon:** Kartverket
+>
+> **Romlig oppløsning:** **Ekvivalent målestokk**: 50000
+>
+> **Begrensninger:** **Ressursbegrensninger**:
+>
+> - **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt
+>
+> **Juridiske begrensninger**:
+>
+> - **Tilgangsbegrensninger**: Åpne data
+> - **Bruksbegrensninger**: Lisens
+> - **Lisens**: Creative Commons BY 4.0 (CC BY 4.0)
+> - **Lisenslenke**: <https://creativecommons.org/licenses/by/4.0/>
+>
+> **Sikkerhetsbegrensninger**:
+>
+> - **Klassifisering**: Ugradert
 
 ### Bruksområde
 
@@ -68,7 +69,8 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
   - **Identifikasjon**: hele datasettet
   - **Nivå**: dataset
-  - **Utstrekning**: - **Beskrivelse**: National
+  - **Utstrekning**:
+    - **Beskrivelse**: National
   - **Nivåbeskrivelse**:
     #### Datamodell for kartdata
     Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
@@ -89,19 +91,11 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 ## Referansesystem
 
-**Romlige referansesystemer**:
-
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
-
-- **kode**: EPSG:25833
-  **navn**: EUREF89 UTM sone 33, 2d
-
-- **kode**: EPSG:25835
-  **navn**: EUREF89 UTM sone 35, 2d
-
-- **kode**: EPSG:25832
-  **navn**: EUREF89 UTM sone 32, 2d
+| EPSG-kode | Navn på referansesystem |
+| --- | --- |
+| [EPSG:25832](https://epsg.io/25832) | [EUREF89 UTM sone 32, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25833](https://epsg.io/25833) | [EUREF89 UTM sone 33, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25835](https://epsg.io/25835) | [EUREF89 UTM sone 35, 2d](https://register.geonorge.no/epsg-koder) |
 
 ## Datakvalitet
 
@@ -150,7 +144,7 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Geonorge nedlastning
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
@@ -169,50 +163,54 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedFGDB.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: FGDB
+  - **Leveranseformat**:
+    - **Formatnavn**: FGDB
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedGML.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GML
+  - **Leveranseformat**:
+    - **Formatnavn**: GML
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedPostGIS.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: PostGIS
+  - **Leveranseformat**:
+    - **Formatnavn**: PostGIS
 
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: fylkesvis, kommunevis, landsfiler
+    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
     - **Medienavn**: Atom Feed
     - **Leveransetjeneste**:
       - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedSOSI.xml>
       - **Tjenesteegenskap**:
         - **type**: Atom Feed
         - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: SOSI
+  - **Leveranseformat**:
+    - **Formatnavn**: SOSI
 
 - **Leveranse**:
 
@@ -236,7 +234,8 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
       - **Tjenesteegenskap**:
         - **type**: Norwegian Arctic SDI WMS
         - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**: - **Formatnavn**: png
+  - **Leveranseformat**:
+    - **Formatnavn**: png
   - **Leveranseomfang**: Tjeneste
 
 - **Leveranse**:
@@ -276,7 +275,8 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
       - **Tjenesteegenskap**:
         - **type**: Topografisk Norgeskart gråtone WMS
         - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**: - **Formatnavn**: png
+  - **Leveranseformat**:
+    - **Formatnavn**: png
   - **Leveranseomfang**: Tjeneste
 
 - **Leveranse**:
@@ -299,7 +299,7 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-20
+**Metadatadato**: 2026-03-22
 
 **språk**: nor
 
