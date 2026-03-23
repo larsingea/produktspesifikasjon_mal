@@ -1,1 +1,2536 @@
-[]
+[
+  {
+    "name": "Steintipp",
+    "description": "permanent massedeponering som ikke er skogbevokst og er dominerende i\nlandskapet (f.eks. laget i forbindelse med gruvedrift eller vassdragsutbygging)",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Skog",
+    "description": "alle typer skogsmark som barskog, lauvskog og blandingsskog\n\nMerknad: Også hogstflater - selv om nyplanting ikke er synlig.  Omfatter alle slags skogboniteter, også storvokste vierkrattbelter i Nord-Norge\n\n\n-- Definition --\nall types of forest land, such as coniferous forest, deciduous forest and mixed forest",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "SportIdrettPlass",
+    "description": "område hvor det utøves sport og idrett\n\n\n-- Definition --\narea where sports and athletics are engaged in??",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Innsjøkant",
+    "description": "konturlinje mellom land og innsjø\n\n\n-- Definition --\nDemarkation line between land and lake surface.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Park",
+    "description": "grøntområde i by- eller tettbygd område, opparbeidet og vedlikeholdt med plenareal, beplantninger, vannpartier og lignende\n\n\n-- Definition --\ngreen area in a city or densely populated area, worked up and maintained, with lawns, planting, water features, etc.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Lufthavn",
+    "description": "land- eller sjøområde (med bygninger, installasjoner og utstyr) som helt eller delvis brukes for luftfartøyers avgang, landing og annen manøvrering på bakken",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "lufthavntype",
+        "type": "Lufthavntype",
+        "description": "angivelse av type lufthavn",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Fly",
+              "label": "Kode hentet fra AIXM 4.5 (L=Landplane)"
+            },
+            {
+              "value": "Helikopter",
+              "label": "Kode hentet fra AIXM 4.5 (H=Helicopter)"
+            }
+          ],
+          "definition": "angivelse av type lufthavn"
+        }
+      },
+      {
+        "name": "trafikktype",
+        "type": "Trafikktype",
+        "description": "beskrivelse av rutetrafikk",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Internasjonal",
+              "label": "Internasjonal"
+            },
+            {
+              "value": "Nasjonal",
+              "label": "Nasjonal"
+            },
+            {
+              "value": "Annen trafikk",
+              "label": "Annen trafikk"
+            }
+          ],
+          "definition": "angivelse av type rutetrafikk\n\nMerknad: Benyttes i N50 Kartdata i forhold til luftfart"
+        }
+      },
+      {
+        "name": "IATAKode",
+        "type": "IATAKode",
+        "description": "unik kode for lufthavner.\n\nMerknad1: Ikke alle lufthavner har IATA kode.\nMerknad 2: Bare norske lufthavner er tatt med her.",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Alta",
+              "label": "Alta"
+            },
+            {
+              "value": "Andenes/Andøya",
+              "label": "Andenes/Andøya"
+            },
+            {
+              "value": "Bardufoss",
+              "label": "Bardufoss"
+            },
+            {
+              "value": "Bergen/Flesland",
+              "label": "Bergen/Flesland"
+            },
+            {
+              "value": "Berlevåg",
+              "label": "Berlevåg"
+            },
+            {
+              "value": "Bodø",
+              "label": "Bodø"
+            },
+            {
+              "value": "Brønnøysund/Brønnøy",
+              "label": "Brønnøysund/Brønnøy"
+            },
+            {
+              "value": "Båtsfjord",
+              "label": "Båtsfjord"
+            },
+            {
+              "value": "Fagernes/Leirin",
+              "label": "Fagernes/Leirin"
+            },
+            {
+              "value": "Farsund/Lista",
+              "label": "Farsund/Lista"
+            },
+            {
+              "value": "Florø",
+              "label": "Florø"
+            },
+            {
+              "value": "Førde/Bringeland",
+              "label": "Førde/Bringeland"
+            },
+            {
+              "value": "Gol/Klanten",
+              "label": "Gol/Klanten"
+            },
+            {
+              "value": "Hamar/Stafsberg",
+              "label": "Hamar/Stafsberg"
+            },
+            {
+              "value": "Hammerfest",
+              "label": "Hammerfest"
+            },
+            {
+              "value": "Harstad/Narvik/Evenes",
+              "label": "Harstad/Narvik/Evenes"
+            },
+            {
+              "value": "Hasvik",
+              "label": "Hasvik"
+            },
+            {
+              "value": "Haugesund/Karmøy",
+              "label": "Haugesund/Karmøy"
+            },
+            {
+              "value": "Honningsvåg/Valan",
+              "label": "Honningsvåg/Valan"
+            },
+            {
+              "value": "Kautokeino",
+              "label": "Kautokeino"
+            },
+            {
+              "value": "Kirkenes/Høybuktmoen",
+              "label": "Kirkenes/Høybuktmoen"
+            },
+            {
+              "value": "Kristiansand/Kjevik",
+              "label": "Kristiansand/Kjevik"
+            },
+            {
+              "value": "Kristiansund/Kvernberget",
+              "label": "Kristiansund/Kvernberget"
+            },
+            {
+              "value": "Lakselv/Banak",
+              "label": "Lakselv/Banak"
+            },
+            {
+              "value": "Leknes",
+              "label": "Leknes"
+            },
+            {
+              "value": "Mehamn",
+              "label": "Mehamn"
+            },
+            {
+              "value": "Molde/Årø",
+              "label": "Molde/Årø"
+            },
+            {
+              "value": "Mosjøen/Kjærstad",
+              "label": "Mosjøen/Kjærstad"
+            },
+            {
+              "value": "Moss/Rygge",
+              "label": "Moss/Rygge"
+            },
+            {
+              "value": "Namsos",
+              "label": "Namsos"
+            },
+            {
+              "value": "Narvik/Framnes",
+              "label": "Narvik/Framnes"
+            },
+            {
+              "value": "Notodden",
+              "label": "Notodden"
+            },
+            {
+              "value": "Ny Ålesund/Hamnerabben",
+              "label": "Ny Ålesund/Hamnerabben"
+            },
+            {
+              "value": "Oslo/Gardermoen",
+              "label": "Oslo/Gardermoen"
+            },
+            {
+              "value": "Røros",
+              "label": "Røros"
+            },
+            {
+              "value": "Rørvik/Ryum",
+              "label": "Rørvik/Ryum"
+            },
+            {
+              "value": "Røst",
+              "label": "Røst"
+            },
+            {
+              "value": "Sandane/Anda",
+              "label": "Sandane/Anda"
+            },
+            {
+              "value": "Sandefjord/Torp",
+              "label": "Sandefjord/Torp"
+            },
+            {
+              "value": "Sandnessjøen/Stokka",
+              "label": "Sandnessjøen/Stokka"
+            },
+            {
+              "value": "Skien/Geiteryggen",
+              "label": "Skien/Geiteryggen"
+            },
+            {
+              "value": "Sogndal/Haukåsen",
+              "label": "Sogndal/Haukåsen"
+            },
+            {
+              "value": "Stavanger/Sola",
+              "label": "Stavanger/Sola"
+            },
+            {
+              "value": "Stokmarknes/Skagen",
+              "label": "Stokmarknes/Skagen"
+            },
+            {
+              "value": "Stord/Sørstokken",
+              "label": "Stord/Sørstokken"
+            },
+            {
+              "value": "Svalbard/Longyear",
+              "label": "Svalbard/Longyear"
+            },
+            {
+              "value": "Svolvær/Helle",
+              "label": "Svolvær/Helle"
+            },
+            {
+              "value": "Sørkjosen",
+              "label": "Sørkjosen"
+            },
+            {
+              "value": "Tromsø/Langnes",
+              "label": "Tromsø/Langnes"
+            },
+            {
+              "value": "Trondheim/Værnes",
+              "label": "Trondheim/Værnes"
+            },
+            {
+              "value": "Vadsø",
+              "label": "Vadsø"
+            },
+            {
+              "value": "Vardø/Svartnes",
+              "label": "Vardø/Svartnes"
+            },
+            {
+              "value": "Værøy",
+              "label": "Værøy"
+            },
+            {
+              "value": "Ørland",
+              "label": "Ørland"
+            },
+            {
+              "value": "Ørsta-Volda/Hovden",
+              "label": "Ørsta-Volda/Hovden"
+            },
+            {
+              "value": "Ålesund/Vigra",
+              "label": "Ålesund/Vigra"
+            }
+          ],
+          "definition": "unik kode for lufthavner.\n\nMerknad1: Ikke alle lufthavner har IATA kode.\nMerknad 2: Bare norske lufthavner er tatt med her."
+        }
+      },
+      {
+        "name": "ICAOKode",
+        "type": "ICAOKode",
+        "description": "angivelse av lufthavn ved <a href=\"C:\\\\wiki\\\\Kode\"><font color=\"#0000ff\"><u>kode</u></font></a> på fire <a href=\"C:\\\\w\\\\index.php?title=Alfanumerisk&action=edit&redlink=1\"><font color=\"#0000ff\"><u>alfanumeriske</u></font></a> <a href=\"C:\\\\wiki\\\\Tegn\"><font color=\"#0000ff\"><u>tegn</u></font></a>.\n\nMerknad: Den første bokstaven tilordnes etter kontinent og angir et land eller en gruppe land på det samme kontinentet. Den andre bokstaven angir landet og de to siste angir lufthavn.",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Albuskjell A",
+              "label": "Albuskjell A"
+            },
+            {
+              "value": "Albuskjell F",
+              "label": "Albuskjell F"
+            },
+            {
+              "value": "Alta",
+              "label": "Alta"
+            },
+            {
+              "value": "Alvheim FPSO",
+              "label": "Alvheim FPSO"
+            },
+            {
+              "value": "Andenes/Andøya",
+              "label": "Andenes/Andøya"
+            },
+            {
+              "value": "Arendal/Sørlandet Sykehus HF",
+              "label": "Arendal/Sørlandet Sykehus HF"
+            },
+            {
+              "value": "Balder A",
+              "label": "Balder A"
+            },
+            {
+              "value": "Bardufoss",
+              "label": "Bardufoss"
+            },
+            {
+              "value": "Barentsburg",
+              "label": "Barentsburg"
+            },
+            {
+              "value": "Bergen/Flesland",
+              "label": "Bergen/Flesland"
+            },
+            {
+              "value": "Bergen/Grønneviksøren",
+              "label": "Bergen/Grønneviksøren"
+            },
+            {
+              "value": "Berlevåg",
+              "label": "Berlevåg"
+            },
+            {
+              "value": "Bjørnøya",
+              "label": "Bjørnøya"
+            },
+            {
+              "value": "Bodø",
+              "label": "Bodø"
+            },
+            {
+              "value": "Brage A",
+              "label": "Brage A"
+            },
+            {
+              "value": "Brønnøysund/Brønnøy",
+              "label": "Brønnøysund/Brønnøy"
+            },
+            {
+              "value": "Bømoen",
+              "label": "Bømoen"
+            },
+            {
+              "value": "Båtsfjord",
+              "label": "Båtsfjord"
+            },
+            {
+              "value": "Cod",
+              "label": "Cod"
+            },
+            {
+              "value": "Dokka/Thomlevold",
+              "label": "Dokka/Thomlevold"
+            },
+            {
+              "value": "Dombås/Brunshagen",
+              "label": "Dombås/Brunshagen"
+            },
+            {
+              "value": "Drammen/Sykehuset Buskerud HF",
+              "label": "Drammen/Sykehuset Buskerud HF"
+            },
+            {
+              "value": "Draugen",
+              "label": "Draugen"
+            },
+            {
+              "value": "Draugen FLP",
+              "label": "Draugen FLP"
+            },
+            {
+              "value": "Draupner",
+              "label": "Draupner"
+            },
+            {
+              "value": "Edda",
+              "label": "Edda"
+            },
+            {
+              "value": "Eggemoen",
+              "label": "Eggemoen"
+            },
+            {
+              "value": "Ekofisk A",
+              "label": "Ekofisk A"
+            },
+            {
+              "value": "Ekofisk D",
+              "label": "Ekofisk D"
+            },
+            {
+              "value": "Ekofisk K",
+              "label": "Ekofisk K"
+            },
+            {
+              "value": "Eldfisk A",
+              "label": "Eldfisk A"
+            },
+            {
+              "value": "Eldfisk B",
+              "label": "Eldfisk B"
+            },
+            {
+              "value": "Elverum/Starmoen",
+              "label": "Elverum/Starmoen"
+            },
+            {
+              "value": "Elverum/Sykehuset Innlandet HF",
+              "label": "Elverum/Sykehuset Innlandet HF"
+            },
+            {
+              "value": "Embla",
+              "label": "Embla"
+            },
+            {
+              "value": "Engeløy/Grådussan",
+              "label": "Engeløy/Grådussan"
+            },
+            {
+              "value": "Fagernes/Leirin",
+              "label": "Fagernes/Leirin"
+            },
+            {
+              "value": "Farsund/Lista",
+              "label": "Farsund/Lista"
+            },
+            {
+              "value": "Fedje Heliport",
+              "label": "Fedje Heliport"
+            },
+            {
+              "value": "Florø",
+              "label": "Florø"
+            },
+            {
+              "value": "Fritzøe",
+              "label": "Fritzøe"
+            },
+            {
+              "value": "Frøya/Flatval",
+              "label": "Frøya/Flatval"
+            },
+            {
+              "value": "Fyresdal",
+              "label": "Fyresdal"
+            },
+            {
+              "value": "Førde/Bringeland",
+              "label": "Førde/Bringeland"
+            },
+            {
+              "value": "Førde/Sentralsjukehuset",
+              "label": "Førde/Sentralsjukehuset"
+            },
+            {
+              "value": "Geilo/Dagali",
+              "label": "Geilo/Dagali"
+            },
+            {
+              "value": "Gjoa",
+              "label": "Gjoa"
+            },
+            {
+              "value": "Gol/Klanten",
+              "label": "Gol/Klanten"
+            },
+            {
+              "value": "Grane",
+              "label": "Grane"
+            },
+            {
+              "value": "Grimsmoen",
+              "label": "Grimsmoen"
+            },
+            {
+              "value": "Gullfaks A",
+              "label": "Gullfaks A"
+            },
+            {
+              "value": "Gullfaks A SPM1",
+              "label": "Gullfaks A SPM1"
+            },
+            {
+              "value": "Gullfaks A SPM2",
+              "label": "Gullfaks A SPM2"
+            },
+            {
+              "value": "Gullfaks B",
+              "label": "Gullfaks B"
+            },
+            {
+              "value": "Gullfaks C",
+              "label": "Gullfaks C"
+            },
+            {
+              "value": "Gullknapp",
+              "label": "Gullknapp"
+            },
+            {
+              "value": "Gyda",
+              "label": "Gyda"
+            },
+            {
+              "value": "Hamar/Stafsberg",
+              "label": "Hamar/Stafsberg"
+            },
+            {
+              "value": "Hammerfest",
+              "label": "Hammerfest"
+            },
+            {
+              "value": "Harstad/Narvik/Evenes",
+              "label": "Harstad/Narvik/Evenes"
+            },
+            {
+              "value": "Hasvik",
+              "label": "Hasvik"
+            },
+            {
+              "value": "Hattfjelldal/Vollen",
+              "label": "Hattfjelldal/Vollen"
+            },
+            {
+              "value": "Haugesund/Haugesund Sjukehus HF",
+              "label": "Haugesund/Haugesund Sjukehus HF"
+            },
+            {
+              "value": "Haugesund/Karmøy",
+              "label": "Haugesund/Karmøy"
+            },
+            {
+              "value": "Heidrun A",
+              "label": "Heidrun A"
+            },
+            {
+              "value": "Heimdal",
+              "label": "Heimdal"
+            },
+            {
+              "value": "Hod",
+              "label": "Hod"
+            },
+            {
+              "value": "Hokksund",
+              "label": "Hokksund"
+            },
+            {
+              "value": "Honningsvåg/Valan",
+              "label": "Honningsvåg/Valan"
+            },
+            {
+              "value": "Hopen",
+              "label": "Hopen"
+            },
+            {
+              "value": "Hornmoen",
+              "label": "Hornmoen"
+            },
+            {
+              "value": "Huldra",
+              "label": "Huldra"
+            },
+            {
+              "value": "Hønefoss, Ringerike Sykehus",
+              "label": "Hønefoss, Ringerike Sykehus"
+            },
+            {
+              "value": "Isfjord",
+              "label": "Isfjord"
+            },
+            {
+              "value": "Jan Mayen",
+              "label": "Jan Mayen"
+            },
+            {
+              "value": "Jarlsberg",
+              "label": "Jarlsberg"
+            },
+            {
+              "value": "Jotun A",
+              "label": "Jotun A"
+            },
+            {
+              "value": "Jotun B",
+              "label": "Jotun B"
+            },
+            {
+              "value": "Kautokeino",
+              "label": "Kautokeino"
+            },
+            {
+              "value": "Kirkenes/Høybuktmoen",
+              "label": "Kirkenes/Høybuktmoen"
+            },
+            {
+              "value": "Kjeller",
+              "label": "Kjeller"
+            },
+            {
+              "value": "Kristiansand/Kjevik",
+              "label": "Kristiansand/Kjevik"
+            },
+            {
+              "value": "Kristiansund/Kvernberget",
+              "label": "Kristiansund/Kvernberget"
+            },
+            {
+              "value": "Kristin Semi",
+              "label": "Kristin Semi"
+            },
+            {
+              "value": "Kvitebjørn",
+              "label": "Kvitebjørn"
+            },
+            {
+              "value": "Lakselv/Banak",
+              "label": "Lakselv/Banak"
+            },
+            {
+              "value": "Leknes",
+              "label": "Leknes"
+            },
+            {
+              "value": "Lesja/Bjorli",
+              "label": "Lesja/Bjorli"
+            },
+            {
+              "value": "Lillehammer/Sykehuset Innlandet HF",
+              "label": "Lillehammer/Sykehuset Innlandet HF"
+            },
+            {
+              "value": "Lunde",
+              "label": "Lunde"
+            },
+            {
+              "value": "Lørenskog/Akershus Universitetssykehus",
+              "label": "Lørenskog/Akershus Universitetssykehus"
+            },
+            {
+              "value": "Mehamn",
+              "label": "Mehamn"
+            },
+            {
+              "value": "Molde/Årø",
+              "label": "Molde/Årø"
+            },
+            {
+              "value": "Mosjøen/Kjærstad",
+              "label": "Mosjøen/Kjærstad"
+            },
+            {
+              "value": "Moss/Rygge",
+              "label": "Moss/Rygge"
+            },
+            {
+              "value": "Namsos",
+              "label": "Namsos"
+            },
+            {
+              "value": "Namsos, Sykehuset",
+              "label": "Namsos, Sykehuset"
+            },
+            {
+              "value": "Narvik/Framnes",
+              "label": "Narvik/Framnes"
+            },
+            {
+              "value": "Njord A",
+              "label": "Njord A"
+            },
+            {
+              "value": "Njord B",
+              "label": "Njord B"
+            },
+            {
+              "value": "Norne A",
+              "label": "Norne A"
+            },
+            {
+              "value": "Notodden",
+              "label": "Notodden"
+            },
+            {
+              "value": "Ny Ålesund/Hamnerabben",
+              "label": "Ny Ålesund/Hamnerabben"
+            },
+            {
+              "value": "Oppdal/Fagerhaug",
+              "label": "Oppdal/Fagerhaug"
+            },
+            {
+              "value": "Oseberg A",
+              "label": "Oseberg A"
+            },
+            {
+              "value": "Oseberg C",
+              "label": "Oseberg C"
+            },
+            {
+              "value": "Oseberg Sør",
+              "label": "Oseberg Sør"
+            },
+            {
+              "value": "Oseberg Øst",
+              "label": "Oseberg Øst"
+            },
+            {
+              "value": "Oslo, Rikshospitalet",
+              "label": "Oslo, Rikshospitalet"
+            },
+            {
+              "value": "Oslo/Gardermoen",
+              "label": "Oslo/Gardermoen"
+            },
+            {
+              "value": "Oslo/Ullevål Universitetssykehus",
+              "label": "Oslo/Ullevål Universitetssykehus"
+            },
+            {
+              "value": "Os/Vaksinen",
+              "label": "Os/Vaksinen"
+            },
+            {
+              "value": "Petrojarl Varg",
+              "label": "Petrojarl Varg"
+            },
+            {
+              "value": "Petrojarl 1",
+              "label": "Petrojarl 1"
+            },
+            {
+              "value": "Pyramiden",
+              "label": "Pyramiden"
+            },
+            {
+              "value": "Rakkestad",
+              "label": "Rakkestad"
+            },
+            {
+              "value": "Reinsvoll",
+              "label": "Reinsvoll"
+            },
+            {
+              "value": "Ringebu/Frya",
+              "label": "Ringebu/Frya"
+            },
+            {
+              "value": "Ringhorne",
+              "label": "Ringhorne"
+            },
+            {
+              "value": "Rognan",
+              "label": "Rognan"
+            },
+            {
+              "value": "Røros",
+              "label": "Røros"
+            },
+            {
+              "value": "Rørvik/Ryum",
+              "label": "Rørvik/Ryum"
+            },
+            {
+              "value": "Røst",
+              "label": "Røst"
+            },
+            {
+              "value": "Salangen/Elvenes",
+              "label": "Salangen/Elvenes"
+            },
+            {
+              "value": "Sandane/Anda",
+              "label": "Sandane/Anda"
+            },
+            {
+              "value": "Sandefjord/Torp",
+              "label": "Sandefjord/Torp"
+            },
+            {
+              "value": "Sandnessjøen/Stokka",
+              "label": "Sandnessjøen/Stokka"
+            },
+            {
+              "value": "Skarv",
+              "label": "Skarv"
+            },
+            {
+              "value": "Skien/Geiteryggen",
+              "label": "Skien/Geiteryggen"
+            },
+            {
+              "value": "Ski/Søndre Ski gård",
+              "label": "Ski/Søndre Ski gård"
+            },
+            {
+              "value": "Sleipner A",
+              "label": "Sleipner A"
+            },
+            {
+              "value": "Sleipner B",
+              "label": "Sleipner B"
+            },
+            {
+              "value": "Snorre A",
+              "label": "Snorre A"
+            },
+            {
+              "value": "Snorre B",
+              "label": "Snorre B"
+            },
+            {
+              "value": "Snåsa/Gronora",
+              "label": "Snåsa/Gronora"
+            },
+            {
+              "value": "Sogndal/Haukåsen",
+              "label": "Sogndal/Haukåsen"
+            },
+            {
+              "value": "Statfjord A",
+              "label": "Statfjord A"
+            },
+            {
+              "value": "Statfjord B",
+              "label": "Statfjord B"
+            },
+            {
+              "value": "Statfjord C",
+              "label": "Statfjord C"
+            },
+            {
+              "value": "Statfjord C/SPM",
+              "label": "Statfjord C/SPM"
+            },
+            {
+              "value": "Stavanger/Sola",
+              "label": "Stavanger/Sola"
+            },
+            {
+              "value": "Stavanger/Stavanger Universitetssykehus",
+              "label": "Stavanger/Stavanger Universitetssykehus"
+            },
+            {
+              "value": "Stokmarknes/Skagen",
+              "label": "Stokmarknes/Skagen"
+            },
+            {
+              "value": "Stord/Sørstokken",
+              "label": "Stord/Sørstokken"
+            },
+            {
+              "value": "Sunndalsøra",
+              "label": "Sunndalsøra"
+            },
+            {
+              "value": "Svalbard/Longyear",
+              "label": "Svalbard/Longyear"
+            },
+            {
+              "value": "Svea",
+              "label": "Svea"
+            },
+            {
+              "value": "Svolvær/Helle",
+              "label": "Svolvær/Helle"
+            },
+            {
+              "value": "Sørkjosen",
+              "label": "Sørkjosen"
+            },
+            {
+              "value": "Tambar",
+              "label": "Tambar"
+            },
+            {
+              "value": "Tor",
+              "label": "Tor"
+            },
+            {
+              "value": "Troll A",
+              "label": "Troll A"
+            },
+            {
+              "value": "Troll B",
+              "label": "Troll B"
+            },
+            {
+              "value": "Troll C",
+              "label": "Troll C"
+            },
+            {
+              "value": "Tromsø/Langnes",
+              "label": "Tromsø/Langnes"
+            },
+            {
+              "value": "Trondheim/Rosten",
+              "label": "Trondheim/Rosten"
+            },
+            {
+              "value": "Trondheim/St. Olavs Hospital",
+              "label": "Trondheim/St. Olavs Hospital"
+            },
+            {
+              "value": "Trondheim/Værnes",
+              "label": "Trondheim/Værnes"
+            },
+            {
+              "value": "Trysil/Sæteråsen",
+              "label": "Trysil/Sæteråsen"
+            },
+            {
+              "value": "Tynset",
+              "label": "Tynset"
+            },
+            {
+              "value": "Ula",
+              "label": "Ula"
+            },
+            {
+              "value": "Vadsø",
+              "label": "Vadsø"
+            },
+            {
+              "value": "Valhall A",
+              "label": "Valhall A"
+            },
+            {
+              "value": "Valhall Flank North",
+              "label": "Valhall Flank North"
+            },
+            {
+              "value": "Valhall Flank South",
+              "label": "Valhall Flank South"
+            },
+            {
+              "value": "Valle/Åraksøyene",
+              "label": "Valle/Åraksøyene"
+            },
+            {
+              "value": "Vardø/Svartnes",
+              "label": "Vardø/Svartnes"
+            },
+            {
+              "value": "Varg",
+              "label": "Varg"
+            },
+            {
+              "value": "Veslefrikk A",
+              "label": "Veslefrikk A"
+            },
+            {
+              "value": "Veslefrikk B",
+              "label": "Veslefrikk B"
+            },
+            {
+              "value": "Visund A",
+              "label": "Visund A"
+            },
+            {
+              "value": "Værøy",
+              "label": "Værøy"
+            },
+            {
+              "value": "Yme",
+              "label": "Yme"
+            },
+            {
+              "value": "Ørland",
+              "label": "Ørland"
+            },
+            {
+              "value": "Ørsta-Volda/Hovden",
+              "label": "Ørsta-Volda/Hovden"
+            },
+            {
+              "value": "Østre Æra",
+              "label": "Østre Æra"
+            },
+            {
+              "value": "Ålesund/Vigra",
+              "label": "Ålesund/Vigra"
+            },
+            {
+              "value": "Ål/Hallingdal Sjukestugu",
+              "label": "Ål/Hallingdal Sjukestugu"
+            },
+            {
+              "value": "Åsgård B",
+              "label": "Åsgård B"
+            },
+            {
+              "value": "Åsgård C",
+              "label": "Åsgård C"
+            },
+            {
+              "value": "Åsgård A",
+              "label": "Åsgård A"
+            }
+          ],
+          "definition": "angivelse av lufthavn ved <a href=\"C:\\\\wiki\\\\Kode\"><font color=\"#0000ff\"><u>kode</u></font></a> på fire <a href=\"C:\\\\w\\\\index.php?title=Alfanumerisk&action=edit&redlink=1\"><font color=\"#0000ff\"><u>alfanumeriske</u></font></a> <a href=\"C:\\\\wiki\\\\Tegn\"><font color=\"#0000ff\"><u>tegn</u></font></a>.\n\nMerknad: Den første bokstaven tilordnes etter kontinent og angir et land eller en gruppe land på det samme kontinentet. Den andre bokstaven angir landet og de to siste angir lufthavn."
+        }
+      },
+      {
+        "name": "lufthavneier",
+        "type": "CharacterString",
+        "description": "eier av lufthavn",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "description": "navn på flyplass\n\nMerknad: Benyttes spesielt for de flyplasser som ikke har IATA eller ICAO kode",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "retning",
+        "type": "Retning",
+        "description": "linjestykke i planet med retning",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "retningsverdi",
+            "type": "Real",
+            "description": "generelt element med angivelse av retning",
+            "cardinality": "1"
+          },
+          {
+            "name": "retningsenhet",
+            "type": "Retningsenhet",
+            "description": "enhet for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Gon (400 graders deling)",
+                  "label": "400 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Grader (360 graders deling)",
+                  "label": "360 graders deling med positiv retning med sola"
+                },
+                {
+                  "value": "Radianer",
+                  "label": "Radianer med positiv retning med sola"
+                }
+              ],
+              "definition": "enhet for retning"
+            }
+          },
+          {
+            "name": "retningsreferanse",
+            "type": "Retningsreferanse",
+            "description": "referansesystem for retning",
+            "cardinality": "1",
+            "valueDomain": {
+              "listedValues": [
+                {
+                  "value": "Lokal",
+                  "label": "Lokal"
+                },
+                {
+                  "value": "Magnetisk nord",
+                  "label": "Magnetisk nord"
+                },
+                {
+                  "value": "Sant nord",
+                  "label": "(default)"
+                }
+              ],
+              "definition": "referansesystem for retning"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Innsjø",
+    "description": "en ferskvannsflate som ikke er renndende vann\n\n\n-- Definition --\nFreshwater surface which is not running water.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      },
+      {
+        "name": "vatnLøpenummer",
+        "type": "Integer",
+        "description": "unik identifikasjon på innsjøer som fortløpende løpenummer i henhold til NVEs Innsjøregister\n\n-- Definition --\nunique identification of lakes as consecutive serial number in accordance with the lake register of the NVE (The Norwegian Water Resources and Energy Administration)",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "høyde",
+        "type": "Høyde",
+        "description": "registrert høyde for vannspeilet",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "HavInnsjøSperre",
+          "role": "havInnsjøSperre",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøElvSperre",
+          "role": "innsjøElvSperre",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøInnsjøSperre",
+          "role": "innsjøInnsjøSperre",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Tettbebyggelse",
+    "description": "sammenhengende bebygd område (overveiende boligbegyggelse) hvor husene i hovedsak ligger tettere enn 50 meter\n\n\n-- Definition --\ncontinuous, developed area (predominantly residential) where the buildings, for the most part, are closer than 50 metres apart",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "ÅpentOmråde",
+    "description": "område som ikke er klassifisert som annet tema i henhold til gjeldende produktspesifikasjon",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "HavElvSperre",
+    "description": "en fiktiv linje som definerer grensa mellom sjø og elv, i samme nivå som kystKontur (middel høyvann)\n\nMerknad:\nDenne er identisk med samme linje nevnt under kapitlet Innsjøer og vassdrag).\n\n\n-- Definition --\na fictitious line which defines the border between sea and river at the same level as coastline (mean high water) Note: This is identical to the same line referred to in the chapter on Lakes and watercourses).",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Myr",
+    "description": "åpent ikke skogvokst område med myrvegetasjon\n\nMerknad:  Myra kan være bevokst, men da av få eller små trær.  Grøftet myr som er blitt skogmark tas IKKE med\n\n\n-- Definition --\nopen, non-forested area with marsh vegetation",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Dataavgrensning",
+    "description": "generell avgrensningslinje, f.eks. mellom datasett med ulik kvalitet, innhold eller detaljering",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Alpinbakke",
+    "description": "nedfart for ski med permanent karakter\n\n\n-- Definition --\npermanent downhill ski slope",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "InnsjøInnsjøSperre",
+    "description": "hjelpelinje for avgrensning av en innsjø mot en annen innsjø der det ikke er elv mellom\n\n\n-- Definition --\nConstruction line for delimitation of lake surface from another lake where there is no river between them.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Havflate",
+    "description": "havområde som avgrenses av Kystkontur, Kystsperre, HavElvSperre og KystkonturTekniskAnlegg\n\n\n-- Definition --\nsea area which is delimited by Coastline, CoastDelineation, SeaRiverDelineation and ShorelineConstruction",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "HavElvSperre",
+          "role": "havElvSperre",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "HavInnsjøSperre",
+          "role": "havInnsjøSperre",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Kystkontur",
+    "description": "grense mellom land og sjø, definert som midlere høyvannslinje\n\nMerknad:\nTilsvarer COALNE i S-57\n\n\n-- Definition --\nboundary between land and sea, defined as the mean high water line Note: Corresponds to COALNE in S-57",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Skjær",
+    "description": "generalisert punktobjekt for små øyer eller landareal\n\n\n-- Definition --\ngeneralised point object for small islands or land area",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "FiktivDelelinje",
+    "description": "linje for å dele opp store flateobjekter\n\nMerknad:\nEn del produktspesifikasjoner benytter spesifikke fiktive delelinjer.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Rullebane",
+    "description": "avgrenset, rektangulært område på en flyplass på land innrettet for landing og avgang med luftfartøyer",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "ElveElvSperre",
+    "description": "hjelpelinje for avgrensning av en elveflate der den renner ut i en annen elv-/kanalflate\n\n\n-- Definition --\nConstruction line for delimitation of river surface where it confluences with another river or canal surface.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "HavInnsjøSperre",
+    "description": "en fiktiv linje som definerer grensen mellom hav og innsjø, i samme nivå som kystkontur (middel høyvann)\n\n\n-- Definition --\nConstruction line for delimitation of lake surface where it turns into sea surface. At the same altitude as the shoreline (by middle high tide).",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Gravplass",
+    "description": "område for gravstøtter, begravelsesplass og kirkegård\n\n\n-- Definition --\narea for tombstones, graveyard and cemetery",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "DyrketMark",
+    "description": "fulldyrket (plogmark), beitemark som er overflatebehandlet og bærhager. Jordbruksareal som ligger brakk i kortere perioder eller brukes til kulturbeite, regnes også som dyrket mark\n\n\n-- Definition --\nfullly cultured (plowed land), pasture with surface treatment, and berry gardens. Farmlands which lie fallow for shorter periods or are used as cultivated pasture, are also regarded as crop land.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "SnøIsbre",
+    "description": "grense mellom snø eller isbre og barmark der det er usikkert om det er isbre eller snø\n\n\nMerknad:\nIsbre kan også være en del av evig snø, særlig når breens kantlinje ikke kan defineres (og registreres) som Isbre.  Den gamle koden for isbre er overført til dette objektet !\n\n\n-- Definition --\nSnow or glacier and bare ground where it is uncertain if it is snow or glacier. Note: A snowfield can also be a part of perpetual snow, especially when the glacier's edge cannot be defined and registered as a glacier.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Flomløpkant",
+    "description": "begrensningslinje for store markerte elveløp hvor det pga regulering eller andre årsaker bare det en sjelden gang er vannføring\n\n\n-- Definition --\nDemarkation line for large river courses where water flow is occational due to regulation or other causes.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "BymessigBebyggelse",
+    "description": "kvartalsbebyggelse (bykjerne) med stort innslag av forretnings- og servicebygg\n\nMerknad:\nHusene har overveiende to eller flere etasjer.\n\n\n-- Definition --\ncity block (town centre) with a large element of shops and service buildings. Note: The buildings have predominantly two or more storeys.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "InnsjøElvSperre",
+    "description": "hjelpelinje for avgrensning av innsjø mot elv eller kanal/grøft\n\n\n-- Definition --\nConstruction line for delimitation of lake surface from river, canal or ditch.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Hyttefelt",
+    "description": "område som har høy utnyttelsesgrad med tanke på hytter\n\nMerknad:\nAvgrenser blant annet markslagsregistreringer.\n\n\n-- Definition --\narea with a high exploitation ratio in terms of cottages. Note: Delimits soil type registrations, etc.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Tregruppe",
+    "description": "enkeltstående tre eller trær i små grupper\n\nMerknad: Avstanden mellom trærne/gruppene skal være så stor at det ikke kan defineres som et sammenhengende skogsområde\n\n\n-- Definition --\nsingle tree or trees in small groups",
+    "attributes": [
+      {
+        "name": "posisjon",
+        "type": "Punkt",
+        "description": "sted som objektet eksisterer på\n\n-- Definition --\nlocation where the object exists",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "InnsjøkantRegulert",
+    "description": "avgrensningslinje for innsjø som er oppdemt/regulert\n\n\n-- Definition --\nDemarkation line for dammed or regulated lake.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "FerskvannTørrfallkant",
+    "description": "avgrensningslinje for FerskvannTørrfall\n\n\n-- Definition --\nDemarkation line for FreshwaterForeshoreEdge",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "ElvBekkKant",
+    "description": "konturlinje mellom land og elveflate\n\n\n-- Definition --\nDemarkation line between land and river surface.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Arealbrukgrense",
+    "description": "avgrensning av de ulike arealbruksflatene\n\nMerknad:\nKode for bruken av arealet legges på flaten, dvs på representasjonspunktet der dette representerer flata.\n\n\n-- Definition --\ndelimitation of the various land use areas Note: Land use code is assigned to the surface, i.e. on the representation point which represents this surface.",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncourse follwing the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "Steinbrudd",
+    "description": "område for steinbrudd\n\n\n-- Definition --\narea for stone quarry. Land use boundary is used as delimitation.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "FerskvannTørrfall",
+    "description": "sandbanker og avleiringer i elv/bekk som oversvømmes ved normal høyvannsføring\n\nMerknad:\nFlatene avgrenses av FerskvannTørrfallKant og elve- eller kanalkant som grenser inn til tørrfallet.\n\n\n-- Definition --\nBanks of sand or sediments in rivers and brooks which is flooded during high water levels.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "FerskvannTørrfallkant",
+          "role": "ferskvannTørrfallkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Golfbane",
+    "description": "område for golfspilling\n\n\n-- Definition --\narea for golfing",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "ElvBekk",
+    "description": "vannvei for rennende vann\n\n\n-- Definition --\nWater course for running water.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "senterlinje",
+        "type": "Kurve",
+        "description": "forløp som følger objektets sentrale del\n\n-- Definition --\ncource follwed by the central part of the object",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "vannBredde",
+        "type": "VannBredde",
+        "description": "grov klassifikasjon av vassdrag etter gjennomsnittelig bredde over lengre strekninge\n\n-- Definition --\nrough classification of watercourses according to average width over longer expanses",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Bredde <> 1-3m",
+              "label": "Bredde <> 1-3m"
+            },
+            {
+              "value": "Bredde <> 3-15m",
+              "label": "Bredde <> 3-15m"
+            },
+            {
+              "value": "Bredde <> 15-40m",
+              "label": "Bredde <> 15-40m"
+            }
+          ],
+          "definition": "grov klassifikasjon av vassdrag etter gjennomsnittelig bredde over lengre strekninger\n\n\n-- Definition - -\nRough classification of river system according to average width over longer sections."
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "HavElvSperre",
+          "role": "havElvSperre",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElveElvSperre",
+          "role": "elveElvSperre",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøElvSperre",
+          "role": "innsjøElvSperre",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FerskvannTørrfallkant",
+          "role": "ferskvannTørrfallkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Industriområde",
+    "description": "område, bebygd eller ubebygd, benyttet til industriformål\n\nMerknad:\nOmfatter også anlegg for vannforsyning, avfallshåndtering og rensing, samt kraftstasjon, transformatorstasjon o.l.\n\n\n-- Definition --\ndeveloped or undeveloped, used for industrial purposes. Also includes installations for water supply, waste handling and cleaning, as well as power plants, transformer substation, etc.",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "Flate",
+        "description": "objektets utstrekning\n\n-- Definition --\narea over which an object extends",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Innsjøkant",
+          "role": "innsjøkant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Dataavgrensning",
+          "role": "dataavgrensning",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Kystkontur",
+          "role": "kystkontur",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "FiktivDelelinje",
+          "role": "fiktivDelelinje",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "InnsjøkantRegulert",
+          "role": "innsjøkantRegulert",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "ElvBekkKant",
+          "role": "elvBekkKant",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Arealbrukgrense",
+          "role": "arealbrukgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  }
+]

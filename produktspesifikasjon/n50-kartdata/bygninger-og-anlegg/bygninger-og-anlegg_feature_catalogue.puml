@@ -1,0 +1,168 @@
+@startuml
+title N50 Kartdata - Bygninger og anlegg - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  abstract class Takriss <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class Reingjerde <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class Skitrekk <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class "Rørgate" as R_rgate <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class "Lysløype" as Lysl_ype <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class Flytebrygge <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class "Tårn" as T_rn <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class Campingplass <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class Skytebaneinnretning <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class Tank <<featureType>> {
+    + område [0..1] : Flate
+    + posisjon [0..1] : Punkt
+  }
+
+  class "Parkeringsområde" as Parkeringsomr_de <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class KaiBrygge <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class Gruve <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class Bygning <<featureType>> {
+    + bygningstype [1] : BygningstypeKode
+    + hytteinformasjon [0..1] : Hytteinformasjon
+    + navn [0..1] : CharacterString
+    + område [0..1] : Flate
+    + posisjon [0..1] : Punkt
+  }
+
+  class Molo <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class Takkant <<featureType>> {
+    ' Ingen attributter
+  }
+
+  abstract class Bygningsavgrensning <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Vindkraftverk <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class Hoppbakke <<featureType>> {
+    + lengde [1] : Integer
+    + posisjon [1] : Punkt
+    + retning [1] : Retning
+  }
+
+  class Navigasjonsinstallasjon <<featureType>> {
+    + fyrlistenummer [0..1] : CharacterString
+    + posisjon [1] : Punkt
+  }
+
+  class SpesiellDetalj <<featureType>> {
+    + posisjon [0..1] : Punkt
+    + senterlinje [0..1] : Kurve
+  }
+
+  class Taubane <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class Dam <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class Tankkant <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Ledning <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class LuftledningLH <<featureType>> {
+    + fler_linjer [1] : Fler_linjer
+    + senterlinje [1] : Kurve
+  }
+
+  class Pir <<featureType>> {
+    + senterlinje [1] : Kurve
+  }
+
+  class MastTele <<featureType>> {
+    + posisjon [1] : Punkt
+  }
+
+  class Hytteinformasjon <<dataType>> {
+    + hytteId [0..1] : Integer
+    + betjeningsgrad [0..1] : Betjeningsgrad
+    + hytteeier [0..1] : Hytteeier
+  }
+
+  class Retning <<dataType>> {
+    + retningsverdi [1] : Real
+    + retningsenhet [1] : Retningsenhet
+    + retningsreferanse [1] : Retningsreferanse
+  }
+}
+
+  Bygningsavgrensning <|-- Takriss
+  Taubane <|-- Skitrekk
+  Tank --> Tankkant : tankkant [0..*]
+  Bygning --> Takkant : takkant [0..*]
+  Takriss <|-- Takkant
+
+@enduml

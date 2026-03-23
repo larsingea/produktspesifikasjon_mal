@@ -1,0 +1,53 @@
+@startuml
+title N50 Kartdata - Hoyde - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class Terrengpunkt <<featureType>> {
+    + posisjon [1] : Punkt
+    + høyde [1] : Integer
+  }
+
+  class Forsenkningskurve <<featureType>> {
+    + senterlinje [1] : Kurve
+    + høyde [1] : Integer
+  }
+
+  class "Høydekurve" as H_ydekurve <<featureType>> {
+    + senterlinje [1] : Kurve
+    + høyde [1] : Integer
+  }
+
+  class Hjelpekurve <<featureType>> {
+    + senterlinje [1] : Kurve
+    + høyde [1] : Integer
+  }
+
+  class TrigonometriskPunkt <<featureType>> {
+    + posisjon [1] : Punkt
+    + høyde [1] : Integer
+  }
+}
+
+@enduml
