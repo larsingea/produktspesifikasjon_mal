@@ -3,16 +3,11 @@ output_directory: produktspesifikasjon
 product_slug: N50 Kartdata
 updated: 2025-01-01
 # 
-#ogc_feature_api: https://kos-pygeoapi.atkv3-dev.kartverket.cloud/collections
-#xmi_url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Havnedata_testing.xml
-#include_only_features:
-#  - Uttak
-#
  scopes: 
-   - name: Datamodell for kartdata
-     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50Kartdata20230401.xml
-     generator: xmi
-     description: Viser full modell for N50 kartdata
+#   - name: Datamodell for kartdata
+#     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50Kartdata20230401.xml
+#     generator: xmi
+#     description: Viser full modell for N50 kartdata
    - name: Arealdekke
      url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Arealdekke.xml
      generator: xmi
@@ -34,6 +29,3 @@ updated: 2025-01-01
      generator: xmi 
      description: Temaet: "Stedsnavn" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl.
      
-#     include_only_features:
-#       - Undersoekelsesrett
-#       - Utvinningsrett
