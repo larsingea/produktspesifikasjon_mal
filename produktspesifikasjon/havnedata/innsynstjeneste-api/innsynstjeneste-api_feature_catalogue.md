@@ -76,7 +76,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -201,7 +201,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -609,7 +609,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -734,7 +734,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -1542,7 +1542,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -1667,7 +1667,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -2350,7 +2350,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -2475,7 +2475,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -3308,7 +3308,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -3433,7 +3433,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -4029,7 +4029,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>ElKoblinger &gt; effekt</td>
     </tr>
   </tbody>
 </table>
@@ -4387,7 +4387,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -4512,7 +4512,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -5020,7 +5020,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -5145,7 +5145,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -5353,7 +5353,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -5478,7 +5478,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -6236,7 +6236,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -6361,7 +6361,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -6994,7 +6994,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -7119,7 +7119,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -7627,7 +7627,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -7752,7 +7752,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -7960,7 +7960,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -8085,7 +8085,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -8815,11 +8815,11 @@ Egenskaper
   </tbody>
 </table>
 
-#### havneområde
+#### havneomrade
 
 Avgrenset geografisk område som inneholder kai/kaier tilknyttet land- og sjøarealer som er tilrettelagt for overføring av gods, personer eller lignende mellom land og sjø, eller et område tilpasset mottak og fortøyning av fartøy i næringsvirksomhet, offentlig tjeneste, fiskefartøy eller fritidsfartøy. Havner er ofte beskyttet fra vær og vind, av naturgitte landskapsformasjoner eller menneskeskapte anlegg som molo eller bølgebryter.<br /><br />Havneområde har vanligvis en UNLOCODE-kode tilknyttet seg, og innenfor området må det være minst én kai og én kaifront. Havneområdet kan inneholde havneanlegg, kaier og andre objekter.
 
-Geometri:<br />Elementtype: feature<br />Type: geometry-polygon<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
+Geometri:<br />Elementtype: feature<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
 
 Egenskaper
 
@@ -8839,511 +8839,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-polygon</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>lokalid</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>lokalid</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>id</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.lokalId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifikator innenfor navnerommet. For NGIS benyttes UUID.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.navnerom</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navnerom som unikt identifiserer datakilden til et objekt. I form av en URI.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.versjonId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Identifikasjon av en spesiell versjon av et geografisk objekt (instans).</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datafangstdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato når objektet siste gang ble registrert/observert/målt i terrenget.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date (string)</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-instant</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.datafangstmetode</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode for datafangst.<br />Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.nøyaktighet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Punktstandardavviket i grunnriss for punkter samt tverravvik for linjer.<br /><br />Merknad:<br />Oppgitt i cm</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.synbarhet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor godt den kartlagte detalj var synbar ved kartleggingen.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.datafangstmetodeHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode brukt for høyderegistrering av posisjon.<br />Det er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.nøyaktighetHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Nøyaktighet for høyden i cm.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>informasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Generell opplysning.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>link</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Link i form av URL eller annet til mer informasjon om objektet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>oppdateringsdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato for siste endring på objektetdataene.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date-time (string)</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>GLN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Global location number. Globalt nummersystem for identifikasjon av juridiske enheter og fysiske lokasjoner, forvaltet av GS1.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havnNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Stedsnavn på havnen som har blitt tildelt en UNLOCODE. Navnet må samsvare med UNLOCODE.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>MRN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Marine Resource Name. Nummereringssystem for unik identifikasjon av maritime ressurser på global basis.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>UNLOCODE</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Lokaliseringskode fra UNLOCODE-systemet som identifiserer et havneområde. Koden består av 5 bokstaver: de to første bokstavene angir landskode, mens de tre siste identifiserer havnen. Eks: NOSVG (Stavanger).<br />Se liste med lovlige kodeverdier her: <a href="https://service.unece.org/trade/locode/no.htm">https://service.unece.org/trade/locode/no.htm</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>forvaltesAv</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvem som forvalter eller administrerer havneområdet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
+      <td>geometry</td>
     </tr>
   </tbody>
 </table>
@@ -9352,7 +8848,7 @@ Egenskaper
 
 Innretning som måler, samler inn data eller registrerer annet i tilknytning til havnen.
 
-Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
+Geometri:<br />Elementtype: feature<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
 
 Egenskaper
 
@@ -9372,611 +8868,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-point</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>lokalid</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>lokalid</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>id</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.lokalId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifikator innenfor navnerommet. For NGIS benyttes UUID.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.navnerom</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navnerom som unikt identifiserer datakilden til et objekt. I form av en URI.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.versjonId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Identifikasjon av en spesiell versjon av et geografisk objekt (instans).</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datafangstdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato når objektet siste gang ble registrert/observert/målt i terrenget.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date (string)</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-instant</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.datafangstmetode</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode for datafangst.<br />Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.nøyaktighet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Punktstandardavviket i grunnriss for punkter samt tverravvik for linjer.<br /><br />Merknad:<br />Oppgitt i cm</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.synbarhet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor godt den kartlagte detalj var synbar ved kartleggingen.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.datafangstmetodeHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode brukt for høyderegistrering av posisjon.<br />Det er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.nøyaktighetHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Nøyaktighet for høyden i cm.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>informasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Generell opplysning.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>link</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Link i form av URL eller annet til mer informasjon om objektet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>oppdateringsdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato for siste endring på objektetdataene.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date-time (string)</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>GLN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Global location number. Globalt nummersystem for identifikasjon av juridiske enheter og fysiske lokasjoner, forvaltet av GS1.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havnNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Stedsnavn på havnen som har blitt tildelt en UNLOCODE. Navnet må samsvare med UNLOCODE.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>MRN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Marine Resource Name. Nummereringssystem for unik identifikasjon av maritime ressurser på global basis.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>UNLOCODE</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Lokaliseringskode fra UNLOCODE-systemet som identifiserer et havneområde. Koden består av 5 bokstaver: de to første bokstavene angir landskode, mens de tre siste identifiserer havnen. Eks: NOSVG (Stavanger).<br />Se liste med lovlige kodeverdier her: <a href="https://service.unece.org/trade/locode/no.htm">https://service.unece.org/trade/locode/no.htm</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>sensortype</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Type sensor.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>høydereferanse</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor på objektet koordinatregistreringen er utført.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>status</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Objektets tilstand.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>objektLøpenummer</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unikt løpenummer for identifisering av det enkelte objekt på kaien.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>eier</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Eier av havnesensor.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
+      <td>geometry</td>
     </tr>
   </tbody>
 </table>
@@ -10059,7 +8951,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -10184,7 +9076,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -10917,7 +9809,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -11042,7 +9934,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -11650,7 +10542,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -11775,7 +10667,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -11983,7 +10875,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; identifikasjon.lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -12004,7 +10896,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; identifikasjon.lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -12129,7 +11021,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; kvalitet.datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -12150,7 +11042,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; kvalitet.datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -12958,7 +11850,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; identifikasjon.lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -12979,7 +11871,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; identifikasjon.lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -13104,7 +11996,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; kvalitet.datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -13125,7 +12017,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; kvalitet.datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -13858,7 +12750,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; identifikasjon.lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -13879,7 +12771,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>identifikasjon &gt; identifikasjon.lokalId</td>
     </tr>
   </tbody>
 </table>
@@ -14004,7 +12896,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; kvalitet.datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -14025,7 +12917,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>object</td>
+      <td>kvalitet &gt; kvalitet.datafangstmetode</td>
     </tr>
   </tbody>
 </table>
@@ -14784,7 +13676,7 @@ Egenskaper
 
 Offentlig toalett.
 
-Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
+Geometri:<br />Elementtype: feature<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
 
 Egenskaper
 
@@ -14804,828 +13696,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-point</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>lokalid</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>lokalid</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>id</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.lokalId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifikator innenfor navnerommet. For NGIS benyttes UUID.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.navnerom</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navnerom som unikt identifiserer datakilden til et objekt. I form av en URI.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.versjonId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Identifikasjon av en spesiell versjon av et geografisk objekt (instans).</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datafangstdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato når objektet siste gang ble registrert/observert/målt i terrenget.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date (string)</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-instant</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.datafangstmetode</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode for datafangst.<br />Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.nøyaktighet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Punktstandardavviket i grunnriss for punkter samt tverravvik for linjer.<br /><br />Merknad:<br />Oppgitt i cm</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.synbarhet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor godt den kartlagte detalj var synbar ved kartleggingen.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.datafangstmetodeHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode brukt for høyderegistrering av posisjon.<br />Det er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.nøyaktighetHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Nøyaktighet for høyden i cm.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>informasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Generell opplysning.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>link</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Link i form av URL eller annet til mer informasjon om objektet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>oppdateringsdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato for siste endring på objektetdataene.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date-time (string)</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>GLN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Global location number. Globalt nummersystem for identifikasjon av juridiske enheter og fysiske lokasjoner, forvaltet av GS1.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havnNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Stedsnavn på havnen som har blitt tildelt en UNLOCODE. Navnet må samsvare med UNLOCODE.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>MRN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Marine Resource Name. Nummereringssystem for unik identifikasjon av maritime ressurser på global basis.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>UNLOCODE</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Lokaliseringskode fra UNLOCODE-systemet som identifiserer et havneområde. Koden består av 5 bokstaver: de to første bokstavene angir landskode, mens de tre siste identifiserer havnen. Eks: NOSVG (Stavanger).<br />Se liste med lovlige kodeverdier her: <a href="https://service.unece.org/trade/locode/no.htm">https://service.unece.org/trade/locode/no.htm</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>ISPS</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Boolsk verdi som angir om havneanlegget er et ISPS Havneanlegg.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havneanleggNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navn på havneanlegg. Navn bør stemme overens med SafeSeaNet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havneanleggId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifisering av det enkelte havneanlegg.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kaiId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifisering av den enkelte kai.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kainavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navn på kaien. Det samme kainavnet brukes på alle kaifronter og kaiområder som regnes å tilhøre samme kai. Navn bør stemme overens med SafeSeaNet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kaiIdIntern</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Havnens interne egendefinerte nummering av kaier.<br />Nummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>objektIdIntern</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Havnens interne egendefinerte nummering av objekter.<br />Nummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>objektLøpenummer</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unikt løpenummer for identifisering av det enkelte objekt på kaien.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datoTilgjengeligFra</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato objektet er tilgjengelig fra. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>høydereferanse</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor på objektet koordinatregistreringen er utført.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datoTilgjengeligTil</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato objektet er tilgjengelig til. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>status</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Objektets tilstand.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
+      <td>geometry</td>
     </tr>
   </tbody>
 </table>
@@ -15634,7 +13705,7 @@ Egenskaper
 
 Tilkoblingspunkt for vann på kaia.
 
-Geometri:<br />Elementtype: feature<br />Type: geometry-point<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
+Geometri:<br />Elementtype: feature<br />Lagrings-CRS:<br />• <a href="http://www.opengis.net/def/crs/EPSG/0/5973">http://www.opengis.net/def/crs/EPSG/0/5973</a><br />Koordinatreferansesystem (crs):<br />• #/crs<br />• <a href="http://www.opengis.net/def/crs/OGC/0/CRS84h">http://www.opengis.net/def/crs/OGC/0/CRS84h</a>
 
 Egenskaper
 
@@ -15654,953 +13725,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>geometry-point</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-geometry</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>lokalid</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>lokalid</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>id</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.lokalId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifikator innenfor navnerommet. For NGIS benyttes UUID.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.navnerom</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navnerom som unikt identifiserer datakilden til et objekt. I form av en URI.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>identifikasjon.identifikasjon.versjonId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Identifikasjon av en spesiell versjon av et geografisk objekt (instans).</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datafangstdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato når objektet siste gang ble registrert/observert/målt i terrenget.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date (string)</td>
-    </tr>
-    <tr>
-      <th scope="row">OGC-rolle:</th>
-      <td>primary-instant</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>object</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.datafangstmetode</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode for datafangst.<br />Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.nøyaktighet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Punktstandardavviket i grunnriss for punkter samt tverravvik for linjer.<br /><br />Merknad:<br />Oppgitt i cm</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.synbarhet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor godt den kartlagte detalj var synbar ved kartleggingen.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.datafangstmetodeHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Metode brukt for høyderegistrering av posisjon.<br />Det er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kvalitet.kvalitet.nøyaktighetHøyde</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Nøyaktighet for høyden i cm.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>informasjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Generell opplysning.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>link</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Link i form av URL eller annet til mer informasjon om objektet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>oppdateringsdato</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato for siste endring på objektetdataene.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>date-time (string)</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>GLN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Global location number. Globalt nummersystem for identifikasjon av juridiske enheter og fysiske lokasjoner, forvaltet av GS1.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havnNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Stedsnavn på havnen som har blitt tildelt en UNLOCODE. Navnet må samsvare med UNLOCODE.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>MRN</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Marine Resource Name. Nummereringssystem for unik identifikasjon av maritime ressurser på global basis.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>UNLOCODE</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Lokaliseringskode fra UNLOCODE-systemet som identifiserer et havneområde. Koden består av 5 bokstaver: de to første bokstavene angir landskode, mens de tre siste identifiserer havnen. Eks: NOSVG (Stavanger).<br />Se liste med lovlige kodeverdier her: <a href="https://service.unece.org/trade/locode/no.htm">https://service.unece.org/trade/locode/no.htm</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>ISPS</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Boolsk verdi som angir om havneanlegget er et ISPS Havneanlegg.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>boolean</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havneanleggNavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navn på havneanlegg. Navn bør stemme overens med SafeSeaNet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>havneanleggId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifisering av det enkelte havneanlegg.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kaiId</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unik identifisering av den enkelte kai.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kainavn</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Navn på kaien. Det samme kainavnet brukes på alle kaifronter og kaiområder som regnes å tilhøre samme kai. Navn bør stemme overens med SafeSeaNet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kaiIdIntern</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Havnens interne egendefinerte nummering av kaier.<br />Nummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>objektIdIntern</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Havnens interne egendefinerte nummering av objekter.<br />Nummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>objektLøpenummer</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Unikt løpenummer for identifisering av det enkelte objekt på kaien.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datoTilgjengeligFra</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato objektet er tilgjengelig fra. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>høydereferanse</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hvor på objektet koordinatregistreringen er utført.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kapasitet</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Kapasitet til fylling av vann angitt i antall m3/time.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>kumnummer</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>ID-merking av kummer. Kan tas fra havnas eget merkesystem eller kommunens SID-nr.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>integer</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>datoTilgjengeligTil</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Dato objektet er tilgjengelig til. Brukes for objekter som kun er tilgjengelige deler av året eller i en sesong (sommer/vinter-halvåret). Dato oppgis som DD-MM. Årstall er ikke nødvendig.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>status</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Objektets tilstand.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>tilgangstype</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Hva slags bruker som har tilgang til objektet.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..*</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>array</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>tilkoblingsdimensjon</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Størrelse/dimensjon på rørene som skal kobles sammen.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="feature-attribute-table">
-  <colgroup>
-    <col style="width: 35%;" />
-    <col style="width: 65%;" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <th scope="row">Navn:</th>
-      <td><strong>VAuttakstype</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Definisjon:</th>
-      <td>Type vanntilkobling som kan gjøres.</td>
-    </tr>
-    <tr>
-      <th scope="row">Multiplisitet:</th>
-      <td>0..1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type:</th>
-      <td>string</td>
+      <td>geometry</td>
     </tr>
   </tbody>
 </table>
