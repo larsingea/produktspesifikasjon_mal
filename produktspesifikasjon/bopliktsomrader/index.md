@@ -31,7 +31,7 @@ Datasettet er en del av tjenester for digitalisering av konsesjonsavklaringer og
 
 **Emnekategorier:** 
 
-**Geografisk utstrekning:** **Geografisk utstrekning**:
+**Geografisk utstrekning**:
 
 - **Vest**: 2.0
 - **Øst**: 33.0
@@ -47,26 +47,27 @@ Datasettet er en del av tjenester for digitalisering av konsesjonsavklaringer og
 ## Om spesifikasjonen
 
 
-**Unik identifikator:** 49415185-d99f-4546-b976-18cfbf167827\
-**Fullstendig navn:** Bopliktsområder\
-**Versjon:** 2025-12-11\
-**Opprettet dato:** 2025-12-11\
-**Endret dato:** 2025-12-11\
-**Språk:** nor\
-**Kontaktinformasjon:** Landbruksdirektoratet
+> **Denne versjonen av produktspesifikasjonen:** <br>
+> **Opprettet dato:** 2025-12-11<br>
+> **Endret dato:** 2025-12-11<br>
+> **Språk:** nor<br>
+> **Kontaktinformasjon:** Landbruksdirektoratet
 
 ## Om produktet Bopliktsområder
 
 
-**Romlig representasjonstype:** Vektor\
-**Romlig oppløsning:** \
-**Begrensninger:** **Juridiske begrensninger**:
-
-- **Tilgangsbegrensninger**: Åpne data
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: No conditions apply to access and use
-- **Lisenslenke**: <http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply\>
-**Kontaktinformasjon:** Landbruksdirektoratet
+> **Romlig representasjonstype:** Vektor<br>
+> **Unik identifikator:** 49415185-d99f-4546-b976-18cfbf167827<br>
+> **Kontaktinformasjon:** Landbruksdirektoratet
+>
+> **Romlig oppløsning:** 
+>
+> **Begrensninger:** **Juridiske begrensninger**:
+>
+> - **Tilgangsbegrensninger**: Åpne data
+> - **Bruksbegrensninger**: Lisens
+> - **Lisens**: No conditions apply to access and use
+> - **Lisenslenke**: <http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply>
 
 ### Formål
 
@@ -84,7 +85,8 @@ Bopliktområder er en del av de egenskaper knyttet til en eiendom som avgjør om
 
   - **Identifikasjon**: hele datasettet
   - **Nivå**: dataset
-  - **Utstrekning**: - **Beskrivelse**: National
+  - **Utstrekning**:
+    - **Beskrivelse**: National
   - **Nivåbeskrivelse**:
     #### Filleveranser - full modell
     Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
@@ -125,13 +127,14 @@ I enkelte kommuner er forskriften formulert slik at en automatisk bekreftelse av
 - **Leveranse**:
 
   - **Leveransemedium**:
-    - **unitsOfDelivery**: landsfiler
+    - **Leveranseenheter**: landsfiler
     - **Medienavn**: Egen nedlastningsside
     - **Leveransetjeneste**:
       - **Tjenesteegenskap**:
         - **type**: Egen nedlastningsside
         - **Verdi**: WWW:DOWNLOAD-1.0-http--download
-  - **Leveranseformat**: - **Formatnavn**: GeoJSON
+  - **Leveranseformat**:
+    - **Formatnavn**: GeoJSON
 
 ## Metadata
 
