@@ -24,14 +24,14 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 - **Tidsperiode**:
   - **Fra**: 2019-09-09
-  - **Til**: 2026-03-20
+  - **Til**: 2026-03-27
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2019-09-09<br>
-> **Endret dato:** 2026-03-20<br>
+> **Endret dato:** 2026-03-27<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
 
@@ -42,9 +42,13 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 > **Unik identifikator:** dbae9aae-10e7-4b75-8d67-7f0e8828f3d8<br>
 > **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
 >
-> **Romlig oppløsning:** **Ekvivalent målestokk**: 5000
+> **Romlig oppløsning:**
 >
-> **Begrensninger:** **Ressursbegrensninger**:
+> **Ekvivalent målestokk**: 5000
+>
+> **Begrensninger:**
+>
+> **Ressursbegrensninger**:
 >
 > - **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt.
 >
@@ -62,15 +66,13 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 ## Omfang
 
-- **Omfang**:
+### Datamodell for hendelser
 
-  - **Identifikasjon**: hele datasettet
-  - **Nivå**: dataset
-  - **Utstrekning**:
-    - **Beskrivelse**: National
-  - **Nivåbeskrivelse**:
-    #### Datamodell for hendelser
-    Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+**Nivå**: dataset
+
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
 ## Datainnhold og struktur
 
@@ -123,90 +125,14 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler
-    - **Medienavn**: Geonorge nedlastning
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
-      - **Tjenesteegenskap**:
-        - **type**: Geonorge nedlastning
-        - **Verdi**: GEONORGE:DOWNLOAD
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-    - **Formatnavn**: GeoJSON
-
-    - **Formatnavn**: GML
-
-    - **Formatnavn**: PostGIS
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedFGDB.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedGML.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: GML
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedGEOJSON.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: GeoJSON
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedPostGIS.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: PostGIS
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: DSBs WMS-tjenester
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://ogc.dsb.no/wms.ashx?SERVICE=WMS&REQUEST=GetCapabilities&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: DSBs WMS-tjenester
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Geonorge nedlastning | [Lenke](https://nedlasting.geonorge.no/api/capabilities/) | GEONORGE:DOWNLOAD | FGDB, GeoJSON, GML, PostGIS | fylkesvis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedFGDB.xml) | W3C:AtomFeed | FGDB | fylkesvis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedGML.xml) | W3C:AtomFeed | GML | fylkesvis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedGEOJSON.xml) | W3C:AtomFeed | GeoJSON | fylkesvis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/TilfluktsromOffentlige_AtomFeedPostGIS.xml) | W3C:AtomFeed | PostGIS | fylkesvis, landsfiler |
+| DSBs WMS-tjenester | [Lenke](https://ogc.dsb.no/wms.ashx?SERVICE=WMS&REQUEST=GetCapabilities&version=1.3.0) | WMS-tjeneste | WMS |  |
 
 ## Metadata
 
@@ -214,7 +140,7 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-22
+**Metadatadato**: 2026-03-27
 
 **språk**: nor
 
