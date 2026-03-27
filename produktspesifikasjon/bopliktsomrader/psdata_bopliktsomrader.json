@@ -76,12 +76,12 @@
   "scopeSection": [
     {
       "specificationScope": {
-        "scopeIdentification": "hele datasettet",
+        "scopeIdentification": "Filleveranser - full modell",
         "level": "dataset",
         "extent": {
           "description": "National"
         },
-        "levelDescription": "#### Filleveranser - full modell\nDatamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser."
+        "levelDescription": "Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser."
       }
     }
   ],
