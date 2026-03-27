@@ -3,7 +3,7 @@ output_directory: produktspesifikasjon
 product_slug: grunnkart_arealanalyser
 updated: 2026-03-06
 scopes: 
-  - name: Filleveranse
+  - name: Filleveranse som DB
     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/NasjonaltGrunnkartForArealanalyse-20260101.xml
     generator: xmi
     description: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
