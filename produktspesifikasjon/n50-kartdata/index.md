@@ -23,15 +23,15 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 **Tidsmessig utstrekning**:
 
 - **Tidsperiode**:
-  - **Fra**: 2026-03-20
-  - **Til**: 2026-03-20
+  - **Fra**: 2026-03-27
+  - **Til**: 2026-03-27
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** <br>
-> **Endret dato:** 2026-03-20<br>
+> **Endret dato:** 2026-03-27<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Kartverket
 
@@ -42,9 +42,13 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 > **Unik identifikator:** ea192681-d039-42ec-b1bc-f3ce04c189ac<br>
 > **Kontaktinformasjon:** Kartverket
 >
-> **Romlig oppløsning:** **Ekvivalent målestokk**: 50000
+> **Romlig oppløsning:**
 >
-> **Begrensninger:** **Ressursbegrensninger**:
+> **Ekvivalent målestokk**: 50000
+>
+> **Begrensninger:**
+>
+> **Ressursbegrensninger**:
 >
 > - **Bruksbegrensninger**: Ingen begrensninger på bruk er oppgitt
 >
@@ -65,44 +69,49 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 ## Omfang
 
-- **Omfang**:
+### Arealdekke
 
-  - **Identifikasjon**: hele datasettet
-  - **Nivå**: dataset
-  - **Utstrekning**:
-    - **Beskrivelse**: National
-  - **Nivåbeskrivelse**:
-    #### Datamodell for kartdata
-    Viser full modell for N50 kartdata
+**Nivå**: dataset
 
-    #### Arealdekke
-    Temaet: "Arealdekke" inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.
+**Utstrekning**: National
 
-    #### Bygninger og anlegg
-    Temaet: "Bygninger og anlegg" inneholder utelukkende menneskeskapte objekter.
+**Nivåbeskrivelse**: Temaet: "Arealdekke" inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.
 
-    #### Hoyde
-    Temaet: "Høyde" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
+### Bygninger og anlegg
 
-    #### Samferdsel
-    Temaet: "Samferdsel" inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
+**Nivå**: dataset
 
-    #### Stedsnavn
-    Temaet: "Stedsnavn" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl.
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Temaet: "Bygninger og anlegg" inneholder utelukkende menneskeskapte objekter.
+
+### Hoyde
+
+**Nivå**: dataset
+
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Temaet: "Høyde" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme
+
+### Samferdsel
+
+**Nivå**: dataset
+
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Temaet: "Samferdsel" inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer
+
+### Stedsnavn
+
+**Nivå**: dataset
+
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Temaet: "Stedsnavn" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl.
 
 ## Datainnhold og struktur
 
 **Beskrivelse**: Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, turkart/fritidskart, interaktive kart, som datagrunnlag for kartløsninger på internett og i analysesammenheng.
-
-### Datamodell - Datamodell for kartdata
-
-
-
-[Objektkatalog - Datamodell for kartdata](datamodell-for-kartdata/objektkatalog.html)
-
-
-
-<a href="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" alt="Datamodell Datamodell for kartdata" style="max-width: 100%; height: auto;" /></a>
 
 ### Datamodell - Arealdekke
 
@@ -206,157 +215,19 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Geonorge nedlastning
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
-      - **Tjenesteegenskap**:
-        - **type**: Geonorge nedlastning
-        - **Verdi**: GEONORGE:DOWNLOAD
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-    - **Formatnavn**: GML
-
-    - **Formatnavn**: PostGIS
-
-    - **Formatnavn**: SOSI
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedFGDB.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedGML.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: GML
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedPostGIS.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: PostGIS
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedSOSI.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: SOSI
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Topografisk Norgeskart WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://wms.geonorge.no/skwms1/wms.topo?service=wms&request=getcapabilities>
-      - **Tjenesteegenskap**:
-        - **type**: Topografisk Norgeskart WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: png
-      **versjon**: 1
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Norwegian Arctic SDI WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteegenskap**:
-        - **type**: Norwegian Arctic SDI WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: png
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Kartdata WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://wms.geonorge.no/skwms1/wms.kartdata?service=wms&request=getcapabilities>
-      - **Tjenesteegenskap**:
-        - **type**: Kartdata WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: OGC WMS
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Bakgrunnskart for Matrikkelen WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities>
-      - **Tjenesteegenskap**:
-        - **type**: Bakgrunnskart for Matrikkelen WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: OGC WMS
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Topografisk Norgeskart gråtone WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://wms.geonorge.no/skwms1/wms.topograatone?service=wms&request=getcapabilities>
-      - **Tjenesteegenskap**:
-        - **type**: Topografisk Norgeskart gråtone WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: png
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Topografisk norgeskart WMTS / cache
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://cache.kartverket.no/v1/wmts/1.0.0/WMTSCapabilities.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Topografisk norgeskart WMTS / cache
-        - **Verdi**: WMTS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: OGC WMTS
-      **versjon**: 1.0.0
-  - **Leveranseomfang**: Tjeneste
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Geonorge nedlastning | [Lenke](https://nedlasting.geonorge.no/api/capabilities/) | GEONORGE:DOWNLOAD | FGDB, GML, PostGIS, SOSI | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedFGDB.xml) | W3C:AtomFeed | FGDB | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedGML.xml) | W3C:AtomFeed | GML | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedPostGIS.xml) | W3C:AtomFeed | PostGIS | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/N50Kartdata_AtomFeedSOSI.xml) | W3C:AtomFeed | SOSI | fylkesvis, kommunevis, landsfiler |
+| Topografisk Norgeskart WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.topo?service=wms&request=getcapabilities) | WMS-tjeneste | png |  |
+| Norwegian Arctic SDI WMS |  | WMS-tjeneste | png |  |
+| Kartdata WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.kartdata?service=wms&request=getcapabilities) | WMS-tjeneste | OGC WMS |  |
+| Bakgrunnskart for Matrikkelen WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities) | WMS-tjeneste | OGC WMS |  |
+| Topografisk Norgeskart gråtone WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.topograatone?service=wms&request=getcapabilities) | WMS-tjeneste | png |  |
+| Topografisk norgeskart WMTS / cache | [Lenke](https://cache.kartverket.no/v1/wmts/1.0.0/WMTSCapabilities.xml) | WMTS-tjeneste | OGC WMTS |  |
 
 ## Metadata
 
@@ -364,7 +235,7 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-22
+**Metadatadato**: 2026-03-27
 
 **språk**: nor
 
