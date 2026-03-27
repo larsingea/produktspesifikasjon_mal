@@ -1,6 +1,6 @@
 ---
 title: "Nasjonalt grunnkart for arealanalyse - Årsversjon 2025"
-updated: "2026-03-06"
+updated: "2026-03-27"
 organization: "Statistisk sentralbyrå"
 logo: "https://register.geonorge.no/data/organizations/971526920_SSB_liten.png"
 ---
@@ -55,14 +55,14 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 
 - **Tidsperiode**:
   - **Fra**: 2024-02-13
-  - **Til**: 2026-03-19
+  - **Til**: 2026-03-25
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2024-02-13<br>
-> **Endret dato:** 2026-03-19<br>
+> **Endret dato:** 2026-03-25<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Statistisk sentralbyrå
 
@@ -73,9 +73,13 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 > **Unik identifikator:** 28c28e3a-d88f-4a34-8c60-5efe6d56a44d<br>
 > **Kontaktinformasjon:** Statistisk sentralbyrå
 >
-> **Romlig oppløsning:** **Ekvivalent målestokk**: 1:500 - 1:50000
+> **Romlig oppløsning:**
 >
-> **Begrensninger:** **Juridiske begrensninger**:
+> **Ekvivalent målestokk**: 1:500 - 1:50000
+>
+> **Begrensninger:**
+>
+> **Juridiske begrensninger**:
 >
 > - **Tilgangsbegrensninger**: Norge digitalt begrenset
 > - **Bruksbegrensninger**: Lisens
@@ -95,13 +99,11 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 ## Omfang
 
-- **Omfang**:
+### Filleveranse som DB
 
-  - **Identifikasjon**: hele datasettet
-  - **Nivå**: dataset
-  - **Nivåbeskrivelse**:
-    #### Filleveranse
-    Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+**Nivå**: dataset
+
+**Nivåbeskrivelse**: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
 ## Datainnhold og struktur
 
@@ -110,15 +112,15 @@ Grunnkartet kan brukes som grunnlag for etablering av arealanalyse, og kan suppl
 
 Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Årsversjonen 2025 av Grunnkartet supplerer og delvis erstatter datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.
 
-### Datamodell - Filleveranse
+### Datamodell - Filleveranse som DB
 
 
 
-[Objektkatalog - Filleveranse](filleveranse/objektkatalog.html)
+[Objektkatalog - Filleveranse som DB](filleveranse-som-db/objektkatalog.html)
 
 
 
-<a href="filleveranse/filleveranse_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranse/filleveranse_feature_catalogue.png" alt="Datamodell Filleveranse" style="max-width: 100%; height: auto;" /></a>
+<a href="filleveranse-som-db/filleveranse-som-db_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranse-som-db/filleveranse-som-db_feature_catalogue.png" alt="Datamodell Filleveranse som DB" style="max-width: 100%; height: auto;" /></a>
 
 ## Referansesystem
 
@@ -213,75 +215,13 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Geonorge nedlastning
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
-      - **Tjenesteegenskap**:
-        - **type**: Geonorge nedlastning
-        - **Verdi**: GEONORGE:DOWNLOAD
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-    - **Formatnavn**: GML
-
-    - **Formatnavn**: GPKG
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedFGDB.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGML.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: GML
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGPKG.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: GPKG
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Nasjonalt grunnkart for arealanalyse WMS - årsversjon 2025
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://wms.nibio.no/cgi-bin/grunnkart_arealanalyse?service=WMS&request=GetCapabilities>
-      - **Tjenesteegenskap**:
-        - **type**: Nasjonalt grunnkart for arealanalyse WMS - årsversjon 2025
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: OGC WMS
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Geonorge nedlastning | [Lenke](https://nedlasting.geonorge.no/api/capabilities/) | GEONORGE:DOWNLOAD | FGDB, GML, GPKG | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedFGDB.xml) | W3C:AtomFeed | FGDB | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGML.xml) | W3C:AtomFeed | GML | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/GrunnkartArealanalyse_AtomFeedGPKG.xml) | W3C:AtomFeed | GPKG | fylkesvis, kommunevis, landsfiler |
+| Nasjonalt grunnkart for arealanalyse WMS - årsversjon 2025 | [Lenke](https://wms.nibio.no/cgi-bin/grunnkart_arealanalyse?service=WMS&request=GetCapabilities) | WMS-tjeneste | OGC WMS |  |
 
 ## Metadata
 
@@ -289,7 +229,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-22
+**Metadatadato**: 2026-03-27
 
 **språk**: nor
 
