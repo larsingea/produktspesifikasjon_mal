@@ -2,7 +2,7 @@
   "title": "Tilfluktsrom - Offentlige",
   "date": {
     "creation": "2019-09-09",
-    "revision": "2026-03-20"
+    "revision": "2026-03-27"
   },
   "language": "nor",
   "contact": {
@@ -75,26 +75,26 @@
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2019-09-09",
-          "endPosition": "2026-03-20"
+          "endPosition": "2026-03-27"
         }
       }
     },
     "date": {
       "creation": "2019-09-09",
       "publication": "2019-09-09",
-      "revision": "2026-03-20"
+      "revision": "2026-03-27"
     },
     "language": "nor"
   },
   "scopeSection": [
     {
       "specificationScope": {
-        "scopeIdentification": "hele datasettet",
+        "scopeIdentification": "Datamodell for hendelser",
         "level": "dataset",
         "extent": {
           "description": "National"
         },
-        "levelDescription": "#### Datamodell for hendelser\nFiler levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed."
+        "levelDescription": "Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed."
       }
     }
   ],
@@ -283,7 +283,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-22",
+    "metadataDate": "2026-03-27",
     "language": "nor",
     "contact": {
       "organizationName": "Direktoratet for samfunnssikkerhet og beredskap",
