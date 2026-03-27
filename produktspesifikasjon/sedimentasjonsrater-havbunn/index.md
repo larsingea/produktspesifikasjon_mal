@@ -13,7 +13,7 @@ logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
 
 **Emnekategorier:** Geovitenskapelig informasjon
 
-**Geografisk utstrekning:** **Geografisk utstrekning**:
+**Geografisk utstrekning**:
 
 - **Vest**: -4.5
 - **Øst**: 12.0
@@ -29,37 +29,42 @@ logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
 ## Om spesifikasjonen
 
 
-**Unik identifikator:** a7cb6545-b8ae-411b-b4e8-4808863dfa74\
-**Fullstendig navn:** Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak\
-**Versjon:** \
-**Opprettet dato:** \
-**Endret dato:** 2023-05-16\
-**Språk:** nor\
-**Kontaktinformasjon:** Norges geologiske undersøkelse
+> **Denne versjonen av produktspesifikasjonen:** <br>
+> **Opprettet dato:** <br>
+> **Endret dato:** 2023-05-16<br>
+> **Språk:** nor<br>
+> **Kontaktinformasjon:** Norges geologiske undersøkelse
 
 ## Om produktet Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
 
 
-**Romlig representasjonstype:** Rasterbilde/digital terrengmodell\
-**Romlig oppløsning:** **Avstand**:
-
-- **Måleenhet**: meter
-- **Verdi**: 500.0\
-**Begrensninger:** **Ressursbegrensninger**:
-
-- **Bruksbegrensninger**: Detaljnivået på de ulike data tilsier bruk innenfor kartmålestokken: 1:200 000 til 1:5 000 000
-
-**Juridiske begrensninger**:
-
-- **Tilgangsbegrensninger**: Åpne data
-- **Bruksbegrensninger**: Lisens
-- **Lisens**: Norsk lisens for offentlige data (NLOD)
-- **Lisenslenke**: <http://data.norge.no/nlod/no/1.0>
-
-**Sikkerhetsbegrensninger**:
-
-- **Klassifisering**: Ugradert\
-**Kontaktinformasjon:** Norges geologiske undersøkelse
+> **Romlig representasjonstype:** Rasterbilde/digital terrengmodell<br>
+> **Unik identifikator:** a7cb6545-b8ae-411b-b4e8-4808863dfa74<br>
+> **Kontaktinformasjon:** Norges geologiske undersøkelse
+>
+> **Romlig oppløsning:**
+>
+> **Avstand**:
+>
+> - **Måleenhet**: meter
+> - **Verdi**: 500.0
+>
+> **Begrensninger:**
+>
+> **Ressursbegrensninger**:
+>
+> - **Bruksbegrensninger**: Detaljnivået på de ulike data tilsier bruk innenfor kartmålestokken: 1:200 000 til 1:5 000 000
+>
+> **Juridiske begrensninger**:
+>
+> - **Tilgangsbegrensninger**: Åpne data
+> - **Bruksbegrensninger**: Lisens
+> - **Lisens**: Norsk lisens for offentlige data (NLOD)
+> - **Lisenslenke**: <http://data.norge.no/nlod/no/1.0>
+>
+> **Sikkerhetsbegrensninger**:
+>
+> - **Klassifisering**: Ugradert
 
 ### Formål
 
@@ -71,10 +76,10 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 ## Omfang
 
-- **Omfang**:
+### hele datasettet
 
-  - **Identifikasjon**: hele datasettet
-  - **Nivå**: dataset
+**Nivå**: dataset
+
 
 ## Datainnhold og struktur
 
@@ -82,13 +87,9 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 ## Referansesystem
 
-**Romlige referansesystemer**:
-
-- **kode**: EPSG:32633
-  **navn**: WGS84 UTM sone 33, 2d
-
-- **kode**: EPSG:32633
-  **navn**: WGS84 UTM sone 33, 2d
+| EPSG-kode | Navn på referansesystem |
+| --- | --- |
+| [EPSG:32633](https://epsg.io/32633) | [WGS84 UTM sone 33, 2d](https://register.geonorge.no/epsg-koder) |
 
 ## Datakvalitet
 
@@ -114,7 +115,8 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 **Datainnsamling og prosessering**:
 
-- **Prosesstrinn**: - **Beskrivelse**: Sedimentasjonsrater og tilsvarende usikkerhet i estimater er predikert med maskinlæring. Resultatene er kvantitative og er estimert med romlige modelleringsmetoder. Det er brukt ulike datakilder, blant annet fra MAREANO, EMODnet, Bio-ORACLE og vitenskapelige publikasjoner.
+- **Prosesstrinn**:
+  - **Beskrivelse**: Sedimentasjonsrater og tilsvarende usikkerhet i estimater er predikert med maskinlæring. Resultatene er kvantitative og er estimert med romlige modelleringsmetoder. Det er brukt ulike datakilder, blant annet fra MAREANO, EMODnet, Bio-ORACLE og vitenskapelige publikasjoner.
 
 ## Vedlikehold
 
@@ -131,263 +133,12 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **unitsOfDelivery**: regional inndeling
-    - **Medienavn**: Geonorge nedlastning
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://nedlasting.ngu.no/api/capabilities/>
-      - **Tjenesteegenskap**:
-        - **type**: Geonorge nedlastning
-        - **Verdi**: GEONORGE:DOWNLOAD
-  - **Leveranseformat**: - **Formatnavn**: GeoTIFF
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **unitsOfDelivery**: regional inndeling
-    - **Medienavn**: WMS-tjeneste
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0&>
-      - **Tjenesteegenskap**:
-        - **type**: WMS-tjeneste
-        - **Verdi**: OGC:WMS
-  - **Leveranseformat**: - **Formatnavn**: GeoTIFF
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **unitsOfDelivery**: regional inndeling
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://nedlasting.ngu.no/api/atom/a7cb6545-b8ae-411b-b4e8-4808863dfa74>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**: - **Formatnavn**: GeoTIFF
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Konsentrasjoner av OK - Nordsjøen/Skagerrak
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Konsentrasjoner av OK - Nordsjøen/Skagerrak
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Karbonlager av OK - Stavanger kommune
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Karbonlager av OK - Stavanger kommune
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Sedimentasjonsrater - Nordsjøen/Skagerrak
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Sedimentasjonsrater - Nordsjøen/Skagerrak
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Usikkerhet i akkumulasjonsrater for OK - Nordsjøen/Skagerrak
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Usikkerhet i akkumulasjonsrater for OK - Nordsjøen/Skagerrak
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Akkumulasjonsrater for OK - Nordsjøen/Skagerrak
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Akkumulasjonsrater for OK - Nordsjøen/Skagerrak
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Sedimentasjonsrater (gruppelag)
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Sedimentasjonsrater (gruppelag)
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Usikkerhet i sedimentasjonsrater - Nordsjøen/Skagerrak
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Usikkerhet i sedimentasjonsrater - Nordsjøen/Skagerrak
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Organisk karbon (OK) - karbonlager (gruppelag)
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Organisk karbon (OK) - karbonlager (gruppelag)
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Organisk karbon - dekningskart i kystsonen
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Organisk karbon - dekningskart i kystsonen
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Organisk karbon (OK) - akkumulasjonsrater (gruppelag)
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Organisk karbon (OK) - akkumulasjonsrater (gruppelag)
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Organisk karbon (OK) - konsentrasjoner (gruppelag)
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Organisk karbon (OK) - konsentrasjoner (gruppelag)
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Karbonlager av labilt OK - Stavanger kommune
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Karbonlager av labilt OK - Stavanger kommune
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Akkumulasjonsrater for OK - Stavanger kommune
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Akkumulasjonsrater for OK - Stavanger kommune
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Usikkerhet i konsentrasjoner av OK - Nordsjøen/Skagerrak
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Usikkerhet i konsentrasjoner av OK - Nordsjøen/Skagerrak
-        - **Verdi**: Tjenestelag
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Modellert Havbunnsgeologi WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Modellert Havbunnsgeologi WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS-tjeneste
-      **versjon**: 1.3.0
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0&>
-      - **Tjenesteegenskap**:
-        - **type**: Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**: - **Formatnavn**: GeoTIFF
-  - **Leveranseomfang**: Tjeneste
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Geonorge nedlastning | [Lenke](https://nedlasting.ngu.no/api/capabilities/) | GEONORGE:DOWNLOAD | GeoTIFF | regional inndeling |
+| WMS-tjeneste | [Lenke](https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0&) | OGC:WMS | GeoTIFF | regional inndeling |
+| Atom Feed | [Lenke](https://nedlasting.ngu.no/api/atom/a7cb6545-b8ae-411b-b4e8-4808863dfa74) | W3C:AtomFeed | GeoTIFF | regional inndeling |
+| Konsentrasjoner av OK - Nordsjøen/Skagerrak | [Lenke](https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0) | Tjenestelag | WMS-tjeneste |  |
 
 ## Metadata
 
@@ -395,7 +146,7 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-20
+**Metadatadato**: 2026-03-27
 
 **språk**: nor
 
