@@ -60,9 +60,13 @@ Datasettet er en del av tjenester for digitalisering av konsesjonsavklaringer og
 > **Unik identifikator:** 49415185-d99f-4546-b976-18cfbf167827<br>
 > **Kontaktinformasjon:** Landbruksdirektoratet
 >
-> **Romlig oppløsning:** 
+> **Romlig oppløsning:**
 >
-> **Begrensninger:** **Juridiske begrensninger**:
+>
+>
+> **Begrensninger:**
+>
+> **Juridiske begrensninger**:
 >
 > - **Tilgangsbegrensninger**: Åpne data
 > - **Bruksbegrensninger**: Lisens
@@ -81,15 +85,13 @@ Bopliktområder er en del av de egenskaper knyttet til en eiendom som avgjør om
 
 ## Omfang
 
-- **Omfang**:
+### Filleveranser - full modell
 
-  - **Identifikasjon**: hele datasettet
-  - **Nivå**: dataset
-  - **Utstrekning**:
-    - **Beskrivelse**: National
-  - **Nivåbeskrivelse**:
-    #### Filleveranser - full modell
-    Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
+**Nivå**: dataset
+
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
 
 ## Datainnhold og struktur
 
@@ -124,17 +126,9 @@ I enkelte kommuner er forskriften formulert slik at en automatisk bekreftelse av
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: landsfiler
-    - **Medienavn**: Egen nedlastningsside
-    - **Leveransetjeneste**:
-      - **Tjenesteegenskap**:
-        - **type**: Egen nedlastningsside
-        - **Verdi**: WWW:DOWNLOAD-1.0-http--download
-  - **Leveranseformat**:
-    - **Formatnavn**: GeoJSON
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Egen nedlastningsside |  | WWW:DOWNLOAD-1.0-http--download | GeoJSON | landsfiler |
 
 ## Metadata
 
