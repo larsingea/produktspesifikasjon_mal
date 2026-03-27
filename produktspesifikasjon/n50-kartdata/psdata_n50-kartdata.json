@@ -1,7 +1,7 @@
 {
   "title": "N50 Kartdata",
   "date": {
-    "revision": "2026-03-20"
+    "revision": "2026-03-27"
   },
   "language": "nor",
   "contact": {
@@ -107,25 +107,65 @@
       },
       "temporalElement": {
         "timePeriod": {
-          "beginPosition": "2026-03-20",
-          "endPosition": "2026-03-20"
+          "beginPosition": "2026-03-27",
+          "endPosition": "2026-03-27"
         }
       }
     },
     "date": {
-      "revision": "2026-03-20"
+      "revision": "2026-03-27"
     },
     "language": "nor"
   },
   "scopeSection": [
     {
       "specificationScope": {
-        "scopeIdentification": "hele datasettet",
+        "scopeIdentification": "Arealdekke",
         "level": "dataset",
         "extent": {
           "description": "National"
         },
-        "levelDescription": "#### Datamodell for kartdata\nViser full modell for N50 kartdata\n\n#### Arealdekke\nTemaet: \"Arealdekke\" inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn.\n\n#### Bygninger og anlegg\nTemaet: \"Bygninger og anlegg\" inneholder utelukkende menneskeskapte objekter.\n\n#### Hoyde\nTemaet: \"Høyde\" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme\n\n#### Samferdsel\nTemaet: \"Samferdsel\" inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer\n\n#### Stedsnavn\nTemaet: \"Stedsnavn\" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl."
+        "levelDescription": "Temaet: \"Arealdekke\" inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn."
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Bygninger og anlegg",
+        "level": "dataset",
+        "extent": {
+          "description": "National"
+        },
+        "levelDescription": "Temaet: \"Bygninger og anlegg\" inneholder utelukkende menneskeskapte objekter."
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Hoyde",
+        "level": "dataset",
+        "extent": {
+          "description": "National"
+        },
+        "levelDescription": "Temaet: \"Høyde\" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme"
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Samferdsel",
+        "level": "dataset",
+        "extent": {
+          "description": "National"
+        },
+        "levelDescription": "Temaet: \"Samferdsel\" inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer"
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Stedsnavn",
+        "level": "dataset",
+        "extent": {
+          "description": "National"
+        },
+        "levelDescription": "Temaet: \"Stedsnavn\" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl."
       }
     }
   ],
@@ -436,7 +476,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-22",
+    "metadataDate": "2026-03-27",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
