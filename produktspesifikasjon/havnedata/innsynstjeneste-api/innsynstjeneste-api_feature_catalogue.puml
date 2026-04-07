@@ -331,12 +331,44 @@ package "Objekttyper" {
     + geometry [1] : GM_Point
   }
 
-  class havneomrade <<featureType>> {
-    + geometry [1] : feature
+  class "havneområde" as havneomr_de <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : identifikasjon > lokalId
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : kvalitet > datafangstmetode
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + forvaltesAv [0..1] : CharacterString
+
+    ..Geometri..
+    + geometry [1] : GM_Surface
   }
 
   class havnesensor <<featureType>> {
-    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : identifikasjon > lokalId
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : kvalitet > datafangstmetode
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + sensortype [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + eier [0..1] : CharacterString
+
+    ..Geometri..
+    + geometry [1] : GM_Point
   }
 
   class kaifront <<featureType>> {
@@ -472,6 +504,10 @@ package "Objekttyper" {
   }
 
   class slipp <<featureType>> {
+    + geometry [1] : feature
+  }
+
+  class toalett <<featureType>> {
     + lokalid [0..1] : CharacterString
     + identifikasjon [0..1] : identifikasjon > identifikasjon.lokalId
     + datafangstdato [0..1] : Date
@@ -489,29 +525,49 @@ package "Objekttyper" {
     + kaiId [0..1] : CharacterString
     + kainavn [0..1] : CharacterString
     + kaiIdIntern [0..1] : CharacterString
-    + kaidekketype [0..1] : CharacterString
-    + navn [0..1] : CharacterString
-    + spesifikasjon [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + datoTilgjengeligFra [0..1] : CharacterString
     + høydereferanse [0..1] : CharacterString
-    + høydeOverSjøkartnull [0..1] : Real
-    + maksLengdeFartøy [0..1] : Real
+    + datoTilgjengeligTil [0..1] : CharacterString
     + status [0..1] : CharacterString
-    + tilgangstype [0..*] : Sequence
-    + slippKapasitet [0..1] : Integer
-    + maksBreddeFartøy [0..1] : Real
-    + maksDyptgåendeFartøy [0..1] : Real
-    + kranKapasitet [0..1] : Integer
 
     ..Geometri..
-    + geometry [1] : GM_Surface
-  }
-
-  class toalett <<featureType>> {
-    + geometry [1] : feature
+    + geometry [1] : GM_Point
   }
 
   class vauttak <<featureType>> {
-    + geometry [1] : feature
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [0..1] : identifikasjon > identifikasjon.lokalId
+    + datafangstdato [0..1] : Date
+    + kvalitet [0..1] : kvalitet > kvalitet.datafangstmetode
+    + informasjon [0..1] : CharacterString
+    + link [0..1] : CharacterString
+    + oppdateringsdato [0..1] : DateTime
+    + GLN [0..1] : Integer
+    + havnNavn [0..1] : CharacterString
+    + MRN [0..1] : CharacterString
+    + UNLOCODE [0..1] : CharacterString
+    + ISPS [0..1] : Boolean
+    + havneanleggNavn [0..1] : CharacterString
+    + havneanleggId [0..1] : CharacterString
+    + kaiId [0..1] : CharacterString
+    + kainavn [0..1] : CharacterString
+    + kaiIdIntern [0..1] : CharacterString
+    + objektIdIntern [0..1] : CharacterString
+    + objektLøpenummer [0..1] : CharacterString
+    + datoTilgjengeligFra [0..1] : CharacterString
+    + høydereferanse [0..1] : CharacterString
+    + kapasitet [0..1] : Integer
+    + kumnummer [0..1] : Integer
+    + datoTilgjengeligTil [0..1] : CharacterString
+    + status [0..1] : CharacterString
+    + tilgangstype [0..*] : Sequence
+    + tilkoblingsdimensjon [0..1] : CharacterString
+    + VAuttakstype [0..1] : CharacterString
+
+    ..Geometri..
+    + geometry [1] : GM_Point
   }
 
   class "identifikasjon > lokalId" as identifikasjon___lokalId <<dataType>> {
