@@ -1,6 +1,6 @@
 ---
 title: "N50 Kartdata"
-updated: "2025-01-01"
+updated: "2025-04-07"
 organization: "Kartverket"
 logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png"
 ---
@@ -23,15 +23,15 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 **Tidsmessig utstrekning**:
 
 - **Tidsperiode**:
-  - **Fra**: 2026-03-27
-  - **Til**: 2026-03-27
+  - **Fra**: 2026-04-03
+  - **Til**: 2026-04-03
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** <br>
-> **Endret dato:** 2026-03-27<br>
+> **Endret dato:** 2026-04-03<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Kartverket
 
@@ -235,7 +235,7 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-27
+**Metadatadato**: 2026-04-06
 
 **språk**: nor
 
