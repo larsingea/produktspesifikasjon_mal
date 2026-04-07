@@ -1,6 +1,6 @@
 ---
 title: "Marine landformer"
-updated: "2026-03-06"
+updated: "2025-04-07"
 organization: "Norges geologiske undersøkelse"
 logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
 ---
@@ -42,9 +42,13 @@ logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
 > **Unik identifikator:** 5e8d9286-4d94-4e95-8546-2ef4b891c007<br>
 > **Kontaktinformasjon:** Norges geologiske undersøkelse
 >
-> **Romlig oppløsning:** **Ekvivalent målestokk**: 100000
+> **Romlig oppløsning:**
 >
-> **Begrensninger:** **Ressursbegrensninger**:
+> **Ekvivalent målestokk**: 100000
+>
+> **Begrensninger:**
+>
+> **Ressursbegrensninger**:
 >
 > - **Bruksbegrensninger**: Detaljnivået på datasettet tilsier bruk innenfor kartmålestokken: 1:50.000 - 1:250.000.
 >
@@ -65,18 +69,21 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, s
 
 ## Omfang
 
-- **Omfang**:
+### Filleveranse
 
-  - **Identifikasjon**: hele datasettet
-  - **Nivå**: dataset
-  - **Utstrekning**:
-    - **Beskrivelse**: National
-  - **Nivåbeskrivelse**:
-    #### Filleveranse
-    Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+**Nivå**: dataset
 
-    #### OGC API Features - strømme-API
-    Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i henhold til en enklere datamodell enn nedlastbare filleveranser.
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+
+### OGC API Features - strømme-API
+
+**Nivå**: dataset
+
+**Utstrekning**: National
+
+**Nivåbeskrivelse**: Tjeneste for for å strømme vektordata til kartapplikasjon eller for å inngå i en prosessering/analyse, eventuelt for nedlasting. API-et leverer data som JSON-FG, GML og GeoJSON i henhold til en enklere datamodell enn nedlastbare filleveranser.
 
 ## Datainnhold og struktur
 
@@ -164,77 +171,12 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, s
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler, kommunevis
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://nedlasting.ngu.no/api/atom/0f7c4324-e50d-4b68-b2b8-d10dcfaa05f7>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-    - **Formatnavn**: Shape
-
-    - **Formatnavn**: SOSI
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler, kommunevis
-    - **Medienavn**: Egen nedlastningsside
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://geo.ngu.no/download/order?dataset=710>
-      - **Tjenesteegenskap**:
-        - **type**: Egen nedlastningsside
-        - **Verdi**: WWW:DOWNLOAD-1.0-http--download
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-    - **Formatnavn**: Shape
-
-    - **Formatnavn**: SOSI
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, landsfiler, kommunevis
-    - **Medienavn**: WMS-tjeneste
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/MarinTerrengWMS2?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: WMS-tjeneste
-        - **Verdi**: OGC:WMS
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Marine landformer WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/MarinTerrengWMS2?request=GetCapabilities&service=WMS&version=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Marine landformer WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: image/png
-      **versjon**: 1
-  - **Leveranseomfang**: Tjeneste
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Marine landformer
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://geo.ngu.no/mapserver/MarinTerrengWMS2?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>
-      - **Tjenesteegenskap**:
-        - **type**: Marine landformer
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: [{}]
-  - **Leveranseomfang**: Tjeneste
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Atom Feed | [Lenke](https://nedlasting.ngu.no/api/atom/0f7c4324-e50d-4b68-b2b8-d10dcfaa05f7) | W3C:AtomFeed | FGDB, Shape, SOSI | fylkesvis, landsfiler, kommunevis |
+| Egen nedlastningsside | [Lenke](http://geo.ngu.no/download/order?dataset=710) | WWW:DOWNLOAD-1.0-http--download | FGDB, Shape, SOSI | fylkesvis, landsfiler, kommunevis |
+| WMS-tjeneste | [Lenke](https://geo.ngu.no/mapserver/MarinTerrengWMS2?REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0) | OGC:WMS | [{}] | fylkesvis, landsfiler, kommunevis |
+| Marine landformer WMS | [Lenke](https://geo.ngu.no/mapserver/MarinTerrengWMS2?request=GetCapabilities&service=WMS&version=1.3.0) | WMS-tjeneste | image/png |  |
 
 ## Metadata
 
