@@ -2,7 +2,7 @@
   "title": "Havnedata",
   "date": {
     "creation": "2021-03-02",
-    "revision": "2026-03-07"
+    "revision": "2026-03-28"
   },
   "language": "nor",
   "contact": {
@@ -103,14 +103,14 @@
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2021-03-02",
-          "endPosition": "2026-03-07"
+          "endPosition": "2026-03-28"
         }
       }
     },
     "date": {
       "creation": "2021-03-02",
       "publication": "2021-03-02",
-      "revision": "2026-03-07"
+      "revision": "2026-03-28"
     },
     "language": "nor"
   },
@@ -318,7 +318,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-22",
+    "metadataDate": "2026-04-06",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",

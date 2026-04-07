@@ -1,6 +1,6 @@
 ---
 title: "Havnedata"
-updated: "2025-03-05"
+updated: "2025-04-07"
 organization: "Kartverket"
 logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png"
 ---
@@ -28,14 +28,14 @@ Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd p�
 
 - **Tidsperiode**:
   - **Fra**: 2021-03-02
-  - **Til**: 2026-03-07
+  - **Til**: 2026-03-28
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2021-03-02<br>
-> **Endret dato:** 2026-03-07<br>
+> **Endret dato:** 2026-03-28<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Kartverket
 
@@ -46,9 +46,13 @@ Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd p�
 > **Unik identifikator:** e46767e4-c6d9-49a6-93e8-716da0922fd7<br>
 > **Kontaktinformasjon:** Kartverket
 >
-> **Romlig oppløsning:** **Ekvivalent målestokk**: 5000
+> **Romlig oppløsning:**
 >
-> **Begrensninger:** **Juridiske begrensninger**:
+> **Ekvivalent målestokk**: 5000
+>
+> **Begrensninger:**
+>
+> **Juridiske begrensninger**:
 >
 > - **Tilgangsbegrensninger**: Norge digitalt begrenset
 > - **Bruksbegrensninger**: Lisens
@@ -81,12 +85,12 @@ Eksempler på bruksområder for havnedata:
 
 ## Omfang
 
-- **Omfang**:
+### hele datasettet
 
-  - **Identifikasjon**: hele datasettet
-  - **Nivå**: dataset
-  - **Utstrekning**:
-    - **Beskrivelse**: National
+**Nivå**: dataset
+
+**Utstrekning**: National
+
 
 ## Datainnhold og struktur
 
@@ -154,90 +158,14 @@ Eksempler på bruksområder for havnedata:
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Geonorge nedlastning
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://nedlasting.geonorge.no/api/capabilities/>
-      - **Tjenesteegenskap**:
-        - **type**: Geonorge nedlastning
-        - **Verdi**: GEONORGE:DOWNLOAD
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-    - **Formatnavn**: GML
-
-    - **Formatnavn**: PostGIS
-
-    - **Formatnavn**: SOSI
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedFGDB.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: FGDB
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedGML.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: GML
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedPostGIS.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: PostGIS
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Leveranseenheter**: fylkesvis, kommunevis, landsfiler
-    - **Medienavn**: Atom Feed
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedSOSI.xml>
-      - **Tjenesteegenskap**:
-        - **type**: Atom Feed
-        - **Verdi**: W3C:AtomFeed
-  - **Leveranseformat**:
-    - **Formatnavn**: SOSI
-
-- **Leveranse**:
-
-  - **Leveransemedium**:
-    - **Medienavn**: Havnedata WMS
-    - **Leveransetjeneste**:
-      - **Tjenesteendepunkt**: <https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities>
-      - **Tjenesteegenskap**:
-        - **type**: Havnedata WMS
-        - **Verdi**: WMS-tjeneste
-  - **Leveranseformat**:
-    - **Formatnavn**: WMS
-      **versjon**: 2.0.0
-  - **Leveranseomfang**: Tjeneste
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Geonorge nedlastning | [Lenke](https://nedlasting.geonorge.no/api/capabilities/) | GEONORGE:DOWNLOAD | FGDB, GML, PostGIS, SOSI | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedFGDB.xml) | W3C:AtomFeed | FGDB | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedGML.xml) | W3C:AtomFeed | GML | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedPostGIS.xml) | W3C:AtomFeed | PostGIS | fylkesvis, kommunevis, landsfiler |
+| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedSOSI.xml) | W3C:AtomFeed | SOSI | fylkesvis, kommunevis, landsfiler |
+| Havnedata WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities) | WMS-tjeneste | WMS |  |
 
 ## Metadata
 
@@ -245,7 +173,7 @@ Eksempler på bruksområder for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-03-22
+**Metadatadato**: 2026-04-06
 
 **språk**: nor
 
