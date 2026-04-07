@@ -1,7 +1,7 @@
 metadataId: ea192681-d039-42ec-b1bc-f3ce04c189ac
 output_directory: produktspesifikasjon
 product_slug: Kartdata
-updated: 2026-03-11
+updated: 2025-04-07
 scopes: 
   - name: Datamodell for kartdata
     url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50Kartdata20230401.xml
