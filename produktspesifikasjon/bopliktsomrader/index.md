@@ -1,6 +1,6 @@
 ---
 title: "Bopliktsområder"
-updated: "2025-03-17"
+updated: "2025-04-07"
 organization: "Landbruksdirektoratet"
 logo: "https://register.geonorge.no/data/organizations/981544315_Landbruksdirektoratet_liten.png"
 ---
