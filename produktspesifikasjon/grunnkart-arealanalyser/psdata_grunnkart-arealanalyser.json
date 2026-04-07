@@ -2,7 +2,7 @@
   "title": "Nasjonalt grunnkart for arealanalyse - Årsversjon 2025",
   "date": {
     "creation": "2024-02-13",
-    "revision": "2026-03-19"
+    "revision": "2026-03-25"
   },
   "language": "nor",
   "contact": {
@@ -81,23 +81,23 @@
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2024-02-13",
-          "endPosition": "2026-03-19"
+          "endPosition": "2026-03-25"
         }
       }
     },
     "date": {
       "creation": "2024-02-13",
       "publication": "2024-02-13",
-      "revision": "2026-03-19"
+      "revision": "2026-03-25"
     },
     "language": "nor"
   },
   "scopeSection": [
     {
       "specificationScope": {
-        "scopeIdentification": "hele datasettet",
+        "scopeIdentification": "Filleveranse som DB",
         "level": "dataset",
-        "levelDescription": "#### Filleveranse\nFiler levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed."
+        "levelDescription": "Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed."
       }
     }
   ],
@@ -286,7 +286,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-03-22",
+    "metadataDate": "2026-04-06",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
