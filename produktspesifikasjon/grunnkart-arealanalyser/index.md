@@ -132,7 +132,9 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 | [EPSG:4258](https://epsg.io/4258) | [EUREF 89 Geografisk (ETRS 89) 2d](https://register.geonorge.no/epsg-koder) |
 
 ## Datakvalitet
+### Ekstra datakvalitetelementer
 
+**Nøyaktighet:** Datasettet må ikke benyttes til navigasjon eller til nøyaktige reguleringsplaner
 **Nivå**: dataset
 
 - **Kvalitetsmål**: SOSI produktspesifikasjon: Nasjonalt grunnkart for arealanalyse
@@ -229,7 +231,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-06
+**Metadatadato**: 2026-04-08
 
 **språk**: nor
 
