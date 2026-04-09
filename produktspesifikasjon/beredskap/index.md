@@ -24,14 +24,14 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 - **Tidsperiode**:
   - **Fra**: 2019-09-09
-  - **Til**: 2026-04-06
+  - **Til**: 2026-04-08
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2019-09-09<br>
-> **Endret dato:** 2026-04-06<br>
+> **Endret dato:** 2026-04-08<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
 
@@ -140,7 +140,7 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-06
+**Metadatadato**: 2026-04-08
 
 **språk**: nor
 
