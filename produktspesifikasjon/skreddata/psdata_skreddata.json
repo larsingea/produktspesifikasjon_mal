@@ -1,98 +1,84 @@
 {
-  "title": "Havnedata",
+  "title": "Skredfaresoner",
   "date": {
-    "creation": "2021-03-02",
-    "revision": "2026-03-28"
+    "creation": "2014-02-28",
+    "revision": "2026-04-07"
   },
   "language": "nor",
   "contact": {
-    "organizationName": "Kartverket",
-    "logo": "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png",
-    "electronicMailAddress": "kundesenter@kartverket.no",
+    "organizationName": "Norges vassdrags- og energidirektorat",
+    "logo": "https://register.geonorge.no/data/organizations/970205039_NVE_liten.png",
+    "electronicMailAddress": "gisstotte@nve.no",
     "role": "owner"
   },
   "identificationSection": {
-    "title": "Havnedata",
-    "abstract": "Havnedata er detaljert geografisk informasjon om havner, kaier og tilhørende objekter som er en del av infrastrukturen på en kai eller i en havn. Tilhørende objekttyper som inngår i standarden er havneanlegg, kaifront, vannuttak, tilkoblingspunkt for strøm, beredskapsutstyr, sensorer, avfallspunkt, kraner, slipp, fender, fortøyningsinnretninger, tømmestasjon, gjerder m.fl. \n\nReguleringer i form av lovverk, regler, restriksjoner eller annet som er relatert til havn og har en geografisk avgrensning som kan kartfestes, inngår også i standarden. \n\nSpesifikasjonen er laget med tanke på forvaltning i en sentral database bygd på NGIS-forvaltningsplattformen etter samme forvaltningskonsept som SFKB.",
+    "title": "Skredfaresoner",
+    "abstract": "NVE gjennomfører faresonekartlegging av skred i bratt terreng for utvalgte områder prioritert for kartlegging, jfr Plan for skredfarekartlegging (NVE rapport 14/2011).Kartleggingen dekker skredtypene snøskred, sørpeskred, steinsprang, jordskred og flomskred.",
     "purpose": {
-      "summary": "Havnedata-standarden er utviklet fordi det var et behov for å få tak i oppdatert, standardisert og tilgjengelig informasjon om havner og havnefasiliteter.",
+      "summary": "The data is suitable for use for planning, civil protection and emergency response.",
       "useCase": {
         "name": "Bruksområde",
-        "summary": "Aktører som har behov for tilgang til detaljert informasjon om havner:\n- Havnemyndigheter og andre brukere av havnen.\n- Ansatte i havn (personell som jobber med vedlikehold, oppsyn, trafikk- utbyggings- eller eiendomsavdeling, havneinspektør).\n- Maritim næring: navigatører, skipsredere, los, nødetater.\n- Kommune og fylkeskommune.\n- Offentlige etater: Kystverket, Miljødirektoratet, Sjøfartsdirektoratet, Forsvaret, Statsforvalteren m.fl.\n- Andre beslutningstakere\n\nHavnedata gir nøyaktig og detaljert geografisk informasjon om havner. Havnedata danner et kunnskapsgrunnlag for effektiv havnedrift og for å ta gode beslutninger. Datasettet kan også benyttes til beslutningssøtte, planlegging og forvaltning, som underlag for ulike temakart eller til forskning og analyse. \n\nEksempler på bruksområder for havnedata: \n- Inngå som et element i digitale verktøy til planlegging og effektivisering av havners drift, f.eks. kaibestilling.\n- Fortøyningsplanlegging: kartskisse med kai-utforming, tilgjengelige ressurser på kai, og begrensninger for fartøyets størrelse. \n- Forvaltningsmessig saksbehandling i kommuner og statlige etater.\n- Analyse og presentasjon i et integrert informasjonssystem (GIS-system).\n- Produksjon av kart og avledede produkter. \n- Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud."
+        "summary": "Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\\\n\\\\nSammenliknet med aktsomhetskart, er faresonekart mer detaljerte. På faresonekart er faren undersøkt nøyere ved hjelp av befaringer, modeller og målinger. Faregraden er kvantifisert med opplysninger om gjennomsnittlig årlig sannsynlighet eller gjentaksintervall for den eller de faretypene som kartet omhandler. Faresonene viser soner med ulike årlige sannsynlighet/gjentaksintervall for den aktuelle faren, ofte med de samme sannsynlighetene som er gitt for de ulike trygghetsklassene i byggteknisk forskrift (TEK 17).\\\\n\\\\nInformasjon om hvordan man skal bruke og benytte data om flom- og skredfare i arealplaner er beskrevet i ulike veiledere på NVEs hjemmesider:\\\\nhttps://www.nve.no/flaum-og-skred/arealplanlegging/?ref=mainmenu"
       }
     },
     "topicCategory": [
-      "Kyst og sjø"
+      "Geovitenskapelig informasjon"
     ],
     "spatialRepresentationType": "Vektor",
     "spatialResolution": {
       "equivalentScale": "5000"
     },
-    "uniqueId": "e46767e4-c6d9-49a6-93e8-716da0922fd7",
+    "supplementalInformation": "NVEs kartlegging retter seg først og fremst mot eksisterende bebyggelse. Ved identifisering og prioritering av områder er det derfor lagt vekt på hvor det bor og oppholder seg mennesker innenfor potensielt skredfareutsatte områder.For hver skredtype er det utarbeidet prioriteringslister for farekartlegging, jfr Plan for skredfarekartlegging kap 6. Ved faresonekartlegging vil områdene med prioritet 1 normalt bli kartlagt først, deretter områdene med prioritet 2. For områder med høy prioritet for flere skredtyper, vil dette også kunne gi samlet høyere prioritet. Områder som skulle vise seg allerede kartlagt eller tilstrekkelig sikret, vil kunne nedrangeres eller også fjernes fra prioriteringslisten. På samme vis vil nye skredhendelser og registreringer kunne føre til en høyere prioritet.",
+    "uniqueId": "b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1",
     "keyword": [
-      "Havnedata",
-      "Havneområde",
-      "Havn",
-      "WMS",
-      "Kyst",
-      "Kai",
-      "transport",
-      "Norge",
-      "Transportnett",
-      "Kyst og fiskeri",
-      "Samferdsel",
-      "Kaifront",
-      "Beredskapspunkt",
-      "HavneområdeGrense",
-      "Fortøyningsinnretning",
-      "Kran",
-      "Havnegjerde",
-      "Avfallspunkt",
-      "Havnesensor",
-      "Lastbegrensningsområde",
-      "tillattFortøyningsvinkelGrunnriss",
-      "tillattFortøyningsvinkelOppriss",
-      "kainavn",
-      "portFaciilityNrIMO",
-      "kontaktinformasjonPFSO",
-      "kontakttype",
-      "drivstofftype",
-      "fendertype",
-      "avfallsplan",
-      "beholdertype",
-      "havneident",
-      "UNLOCODE",
-      "vektbegrensning",
-      "bruksklasse",
-      "kaidekke"
+      "skred",
+      "Faresoner",
+      "Skredfaresoner",
+      "farekart",
+      "Skredfareområder",
+      "Norge fastland",
+      "Områder med naturbetingede farer",
+      "Inspire",
+      "Det offentlige kartgrunnlaget",
+      "Norge digitalt",
+      "geodataloven",
+      "modellbaserteVegprosjekter",
+      "fellesDatakatalog",
+      "Samfunnssikkerhet"
     ],
     "restriction": {
+      "resourceConstraints": {
+        "useLimitations": "Ingen begrensninger på bruk er oppgitt."
+      },
       "legalConstraints": {
-        "accessConstraints": "Norge digitalt begrenset",
+        "accessConstraints": "Åpne data",
         "useConstraints": "Lisens",
-        "license": "Creative Commons BY-NC 4.0 (CC BY-NC 4.0)",
-        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/"
+        "license": "Norsk lisens for offentlige data (NLOD)",
+        "licenseUrl": "http://data.norge.no/nlod/no/1.0",
+        "otherConstraints": "ingen juridiske begrensninger"
+      },
+      "securityConstraints": {
+        "classification": "Ugradert"
       }
     },
     "contact": [
       {
-        "organizationName": "Kartverket",
-        "electronicMailAddress": "kundesenter@kartverket.no",
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "gisstotte@nve.no",
         "role": "owner"
       },
       {
-        "organizationName": "Kartverket",
-        "electronicMailAddress": "kundesenter@kartverket.no",
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "gisstotte@nve.no",
         "role": "pointOfContact"
       },
       {
-        "individualName": "Sigbjørn Wik",
-        "organizationName": "Kartverket",
-        "electronicMailAddress": "kundesenter@kartverket.no",
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "gisstotte@nve.no",
         "role": "publisher"
       }
     ],
-    "maintenance": "Ukjent",
+    "maintenance": "Kontinuerlig",
     "extent": {
       "geographicElement": {
         "westBoundLongitude": "2.0",
@@ -102,15 +88,15 @@
       },
       "temporalElement": {
         "timePeriod": {
-          "beginPosition": "2021-03-02",
-          "endPosition": "2026-03-28"
+          "beginPosition": "2014-02-28",
+          "endPosition": "2026-04-07"
         }
       }
     },
     "date": {
-      "creation": "2021-03-02",
-      "publication": "2021-03-02",
-      "revision": "2026-03-28"
+      "creation": "2014-02-28",
+      "publication": "2014-02-28",
+      "revision": "2026-04-07"
     },
     "language": "nor"
   },
@@ -126,25 +112,33 @@
     }
   ],
   "dataContentAndStructureSection": {
-    "narrativeDescription": "Aktører som har behov for tilgang til detaljert informasjon om havner:\n- Havnemyndigheter og andre brukere av havnen.\n- Ansatte i havn (personell som jobber med vedlikehold, oppsyn, trafikk- utbyggings- eller eiendomsavdeling, havneinspektør).\n- Maritim næring: navigatører, skipsredere, los, nødetater.\n- Kommune og fylkeskommune.\n- Offentlige etater: Kystverket, Miljødirektoratet, Sjøfartsdirektoratet, Forsvaret, Statsforvalteren m.fl.\n- Andre beslutningstakere\n\nHavnedata gir nøyaktig og detaljert geografisk informasjon om havner. Havnedata danner et kunnskapsgrunnlag for effektiv havnedrift og for å ta gode beslutninger. Datasettet kan også benyttes til beslutningssøtte, planlegging og forvaltning, som underlag for ulike temakart eller til forskning og analyse. \n\nEksempler på bruksområder for havnedata: \n- Inngå som et element i digitale verktøy til planlegging og effektivisering av havners drift, f.eks. kaibestilling.\n- Fortøyningsplanlegging: kartskisse med kai-utforming, tilgjengelige ressurser på kai, og begrensninger for fartøyets størrelse. \n- Forvaltningsmessig saksbehandling i kommuner og statlige etater.\n- Analyse og presentasjon i et integrert informasjonssystem (GIS-system).\n- Produksjon av kart og avledede produkter. \n- Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud."
+    "narrativeDescription": "Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\\\n\\\\nSammenliknet med aktsomhetskart, er faresonekart mer detaljerte. På faresonekart er faren undersøkt nøyere ved hjelp av befaringer, modeller og målinger. Faregraden er kvantifisert med opplysninger om gjennomsnittlig årlig sannsynlighet eller gjentaksintervall for den eller de faretypene som kartet omhandler. Faresonene viser soner med ulike årlige sannsynlighet/gjentaksintervall for den aktuelle faren, ofte med de samme sannsynlighetene som er gitt for de ulike trygghetsklassene i byggteknisk forskrift (TEK 17).\\\\n\\\\nInformasjon om hvordan man skal bruke og benytte data om flom- og skredfare i arealplaner er beskrevet i ulike veiledere på NVEs hjemmesider:\\\\nhttps://www.nve.no/flaum-og-skred/arealplanlegging/?ref=mainmenu"
   },
   "referenceSystemSection": {
     "spatialReferenceSystem": [
       {
-        "code": "EPSG:5972",
-        "name": "EUREF89 UTM sone 32, 2d + NN2000"
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
       },
       {
-        "code": "EPSG:5973",
-        "name": "EUREF89 UTM sone 33, 2d + NN2000"
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
       },
       {
-        "code": "EPSG:5975",
-        "name": "EUREF89 UTM sone 35, 2d + NN2000"
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
       },
       {
-        "code": "EPSG:5972",
-        "name": "EUREF89 UTM sone 32, 2d + NN2000"
+        "code": "EPSG:3035",
+        "name": "EUREF89 / ETRS89-LAEA Europe"
+      },
+      {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
       }
     ]
   },
@@ -154,34 +148,46 @@
     },
     "report": [
       {
-        "nameOfMeasure": "SOSI produktspesifikasjon: Havnedata",
+        "nameOfMeasure": "COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
         "measureDescription": "Dataene er ikke vurdert iht produktspesifikasjonen",
         "descriptiveResult": "Dataene er ikke vurdert iht produktspesifikasjonen"
       },
       {
-        "nameOfMeasure": "Sosi applikasjonsskjema",
-        "measureDescription": "SOSI-filer er ikke vurdert i henhold til applikasjonsskjema",
-        "descriptiveResult": "SOSI-filer er ikke vurdert i henhold til applikasjonsskjema"
+        "nameOfMeasure": "SOSI produktspesifikasjon: Skredfaresoner",
+        "measureDescription": "Dataene er i henhold til produktspesifikasjonen",
+        "descriptiveResult": "Dataene er i henhold til produktspesifikasjonen"
       },
       {
         "nameOfMeasure": "Sosi applikasjonsskjema",
-        "measureDescription": "GML-filer er ikke vurdert i henhold til applikasjonsskjema",
-        "descriptiveResult": "GML-filer er ikke vurdert i henhold til applikasjonsskjema"
+        "measureDescription": "SOSI-filer er i henhold til applikasjonsskjema",
+        "descriptiveResult": "SOSI-filer er i henhold til applikasjonsskjema"
       },
       {
-        "nameOfMeasure": "Produktspesifikasjon: Registreringsinstruks",
-        "measureDescription": "Dataene er ikke vurdert iht produktspesifikasjonen",
-        "descriptiveResult": "Dataene er ikke vurdert iht produktspesifikasjonen"
+        "nameOfMeasure": "Sosi applikasjonsskjema",
+        "measureDescription": "GML-filer er i henhold til applikasjonsskjema",
+        "descriptiveResult": "GML-filer er i henhold til applikasjonsskjema"
+      },
+      {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "95"
+      },
+      {
+        "nameOfMeasure": "FAIR",
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 95%"
       }
-    ]
+    ],
+    "resourceLineage": {
+      "statement": "NVEs kartlegging retter seg først og fremst mot eksisterende bebyggelse. Ved identifisering og prioritering av områder er det derfor lagt vekt på hvor det bor og oppholder seg mennesker innenfor potensielt skredfareutsatte områder.For hver skredtype er det utarbeidet prioriteringslister for farekartlegging, jfr Plan for skredfarekartlegging kap 6. Ved faresonekartlegging vil områdene med prioritet 1 normalt bli kartlagt først, deretter områdene med prioritet 2. For områder med høy prioritet for flere skredtyper, vil dette også kunne gi samlet høyere prioritet. Områder som skulle vise seg allerede kartlagt eller tilstrekkelig sikret, vil kunne nedrangeres eller også fjernes fra prioriteringslisten. På samme vis vil nye skredhendelser og registreringer kunne føre til en høyere prioritet."
+    }
   },
   "maintenanceSection": {
-    "maintenanceAndUpdateFrequency": "Ukjent",
+    "maintenanceAndUpdateFrequency": "Kontinuerlig",
     "maintenanceAndUpdateStatement": "Kontinuerlig oppdatert"
   },
   "portrayal": {
     "name": "Tegneregler",
-    "linkage": "https://register.geonorge.no/register/versjoner/tegneregler/kartverket/havnedata"
+    "linkage": "https://register.geonorge.no/register/versjoner/tegneregler/norges-vassdrags-og-energidirektorat/skredfaresoner"
   },
   "deliverySection": [
     {
@@ -205,7 +211,7 @@
             "formatName": "GML"
           },
           {
-            "formatName": "PostGIS"
+            "formatName": "PostGIS.sql"
           },
           {
             "formatName": "SOSI"
@@ -219,7 +225,7 @@
           "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
-            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedFGDB.xml",
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Skredfaresoner_AtomFeedFGDB.xml",
             "serviceProperty": {
               "type": "Atom Feed",
               "value": "W3C:AtomFeed"
@@ -239,7 +245,7 @@
           "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
-            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedGML.xml",
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Skredfaresoner_AtomFeedGML.xml",
             "serviceProperty": {
               "type": "Atom Feed",
               "value": "W3C:AtomFeed"
@@ -259,7 +265,7 @@
           "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
-            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedPostGIS.xml",
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Skredfaresoner_AtomFeedPostGIS.xml",
             "serviceProperty": {
               "type": "Atom Feed",
               "value": "W3C:AtomFeed"
@@ -279,7 +285,7 @@
           "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
           "deliveryMediumName": "Atom Feed",
           "deliveryService": {
-            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedSOSI.xml",
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Skredfaresoner_AtomFeedSOSI.xml",
             "serviceProperty": {
               "type": "Atom Feed",
               "value": "W3C:AtomFeed"
@@ -296,19 +302,19 @@
     {
       "delivery": {
         "deliveryMedium": {
-          "deliveryMediumName": "Havnedata WMS",
+          "deliveryMediumName": "Skredfaresoner WMS",
           "deliveryService": {
-            "serviceEndpoint": "https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities",
+            "serviceEndpoint": "https://kart.nve.no/enterprise/services/Skredfaresoner1/MapServer/WMSServer?request=GetCapabilities&service=WMS",
             "serviceProperty": {
-              "type": "Havnedata WMS",
+              "type": "Skredfaresoner WMS",
               "value": "WMS-tjeneste"
             }
           }
         },
         "deliveryFormat": [
           {
-            "formatName": "WMS",
-            "version": "2.0.0"
+            "formatName": "wms",
+            "version": "1.3.0"
           }
         ],
         "deliveryScope": "Tjeneste"
@@ -321,23 +327,29 @@
     "metadataDate": "2026-04-08",
     "language": "nor",
     "contact": {
-      "organizationName": "Kartverket",
-      "logo": "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png",
-      "electronicMailAddress": "kundesenter@kartverket.no",
+      "organizationName": "Norges vassdrags- og energidirektorat",
+      "logo": "https://register.geonorge.no/data/organizations/970205039_NVE_liten.png",
+      "electronicMailAddress": "gisstotte@nve.no",
       "role": "pointOfContact"
     },
     "metadataIdentifier": {
       "authority": "Geonorge",
-      "code": "e46767e4-c6d9-49a6-93e8-716da0922fd7",
+      "code": "b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1",
       "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
-      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/e46767e4-c6d9-49a6-93e8-716da0922fd7"
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1"
     },
     "links": [
       {
-        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=e46767e4-c6d9-49a6-93e8-716da0922fd7",
+        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1",
         "rel": "describedby",
         "type": "application/xml",
         "title": "Metadata (ISO 19139)"
+      },
+      {
+        "href": "https://www.nve.no/naturfare/utredning-av-naturfare/om-kart-og-kartlegging-av-naturfare/om-kartlegging-av-skredfare-i-bratt-terreng/",
+        "rel": "about",
+        "type": "text/html",
+        "title": "Produktside"
       },
       {
         "href": "https://nedlasting.geonorge.no/api/capabilities/",
@@ -346,13 +358,13 @@
         "title": "Nedlasting"
       },
       {
-        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.geonorge.no/skwms1/wms.havnedata",
+        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://kart.nve.no/enterprise/services/Skredfaresoner1/MapServer/WMSServer",
         "rel": "service",
         "type": "text/html",
         "title": "Tjeneste"
       },
       {
-        "href": "https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities",
+        "href": "https://kart.nve.no/enterprise/services/Skredfaresoner1/MapServer/WMSServer?request=GetCapabilities&service=WMS",
         "rel": "service",
         "type": "application/xml",
         "title": "Tjeneste-distribusjon"
