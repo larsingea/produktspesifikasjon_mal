@@ -10,7 +10,7 @@ updated: 2025-04-07
 #
 #scopes: 
 - name: Filleveranser
-  url: https://sosi.geonorge.no/!/#SOSI/view/head/SOSI%20Del%203/Norges%20vassdrags-%20og%20energidirektorat/Skredfareomr%C3%A5der_1.2.xml
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Norges vassdrags- og energidirektorat/Skredfareområder_1.2.xml
   generator: xmi
   description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
 #- name: Innsynstjeneste (API)
