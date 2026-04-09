@@ -202,7 +202,7 @@ Eksempler på bruksområder for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-06
+**Metadatadato**: 2026-04-08
 
 **språk**: nor
 
