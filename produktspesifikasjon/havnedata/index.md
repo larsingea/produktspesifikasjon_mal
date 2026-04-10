@@ -30,8 +30,11 @@ Spesifikasjonen er laget med tanke pÃ¥ forvaltning i en sentral database bygd pÃ
   - **Fra**: 2021-03-02
   - **Til**: 2026-03-28
 
-## Om spesifikasjonen
-**Denne versjonen:** [https://register.geonorge.no/produktspesifikasjoner/](https://register.geonorge.no/produktspesifikasjoner/nrl-nasjonalt-register-over-luftfartshindre-distribusjon)
+# Forkortelser
+**GIS:** Geografiske InformasjonsSystemer  
+**FKB:** Felles KartBase  
+
+**Denne versjonen:** [https://register.geonorge.no/produktspesifikasjoner/](https://register.geonorge.no/produktspesifikasjoner/nrl-nasjonalt-register-over-luftfartshindre-distribusjon)  
 **Siste versjon:** [https://register.geonorge.no/produktspesifikasjoner/](https://register.geonorge.no/produktspesifikasjoner/nrl-nasjonalt-register-over-luftfartshindre-distribusjon)
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
