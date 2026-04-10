@@ -1,0 +1,97 @@
+@startuml
+title Nasjonalt register over luftfartshindre - nedlastingstjeneste - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class NrlLinje <<featureType>> {
+    + anleggsbredde [0..1] : Real
+    + beliggenhet [1] : GM_Curve
+    + linjeType [1] : LinjeType
+  }
+
+  abstract class Fellesegenskaper <<featureType>> {
+    + datafangstdato [0..1] : Date
+    + høydereferanse [0..1] : Høydereferanse
+    + informasjon [0..1] : CharacterString
+    + komponentident [0..1] : CharacterString
+    + kvalitet [0..1] : Posisjonskvalitet
+    + luftfartshinderlyssetting [0..1] : Luftfartshinderlyssetting
+    + luftfartshindermerking [0..1] : Luftfartshindermerking
+    + materiale [0..1] : Materiale
+    + navn [0..1] : CharacterString
+    + planlagtFjernetDato [0..1] : Date
+    + referanse [0..1] : Komponentreferanse
+    + status [1] : Status
+    + verifisertRapporteringsnøyaktighet [1] : VerifisertRapporteringsnøyaktighet
+    + vertikalAvstand [0..1] : Real
+    + vertikalAvstandUnderFemten [1] : Boolean
+  }
+
+  class NrlFlate <<featureType>> {
+    + flateType [1] : FlateType
+    + område [1] : GM_Surface
+  }
+
+  class NrlLuftspenn <<featureType>> {
+    + anleggsbredde [0..1] : Real
+    + beliggenhet [1] : GM_Curve
+    + friseilingshøyde [0..1] : Real
+    + luftspennType [1] : LuftspennType
+  }
+
+  class NrlPunkt <<featureType>> {
+    + horisontalAvstand [0..1] : Real
+    + posisjon [1] : GM_Point
+    + punktType [1] : PunktType
+  }
+
+  class NrlMast <<featureType>> {
+    + horisontalAvstand [0..1] : Real
+    + mastType [1] : MastType
+    + posisjon [1] : GM_Point
+  }
+
+  class Posisjonskvalitet <<dataType>> {
+    + datafangstmetode [0..1] : Datafangstmetode
+    + datafangstmetodeHøyde [0..1] : Datafangstmetode
+    + nøyaktighet [0..1] : Integer
+    + nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class Komponentreferanse <<dataType>> {
+    + kodesystemversjon [0..1] : CharacterString
+    + komponentkodesystem [0..1] : CharacterString
+    + komponentkodeverdi [0..1] : CharacterString
+  }
+}
+
+  Fellesegenskaper <|-- NrlLinje
+  Fellesegenskaper <|-- NrlFlate
+  Fellesegenskaper <|-- NrlLuftspenn
+  NrlLuftspenn --> NrlMast : nrlMast [0..2]
+  Fellesegenskaper <|-- NrlPunkt
+  Fellesegenskaper <|-- NrlMast
+  NrlMast --> NrlLuftspenn : nrlLuftspenn [0..*]
+
+@enduml

@@ -1,0 +1,381 @@
+[
+  {
+    "name": "NrlLinje",
+    "description": "Objekt som er representert som ei linje i NRL.\nLuftspenn registreres ikke som NrlLinje, men som NrlLuftspenn.",
+    "attributes": [
+      {
+        "name": "anleggsbredde",
+        "type": "Real",
+        "description": "Luftfartshinderets maksimale bredde",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "beliggenhet",
+        "type": "GM_Curve",
+        "description": "Geometri, linje/kurve",
+        "cardinality": "1"
+      },
+      {
+        "name": "linjeType",
+        "type": "LinjeType",
+        "description": "Type linje",
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Kodeliste for NRL linjetyper.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/linjetype"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Fellesegenskaper",
+    "description": "Abstrakt objekttype (ikke instansierbar, dvs. ikke mulig å rapportere et objekt med objektnavn \"Fellesegenskaper\"), fungerer som et konteinerobjekt i UML-modellen. Denne objekttypen samler egenskaper som er felles for alle realiserbare objekttyper i NRL\n\nEgenskapene \"status\", \"datafangstdato\", \"kvalitet\" og \"informasjon\" er en hentet fra SOSI del 1 - Generelle typer 5.1 og SOSI_Fellesegenskaper og SOSI_Objekt.",
+    "attributes": [
+      {
+        "name": "datafangstdato",
+        "type": "Date",
+        "description": "Dato sist gang objektet ble stedfestet.",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "høydereferanse",
+        "type": "Høydereferanse",
+        "description": "Angir hvilken del av objektet høydeverdien refererer til.\n\nMå angis dersom objektet har høydeverdi (\"<i>høyde over havet</i>\")",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "definition": "Angir hvilken del av objektet høydeverdien refererer til.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/h%C3%B8ydereferanse"
+        }
+      },
+      {
+        "name": "informasjon",
+        "type": "CharacterString",
+        "description": "Utfyllende tekst",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "komponentident",
+        "type": "CharacterString",
+        "description": "Universell Unik Identifikasjon (UUID/GUID) for fysisk objekt, skal følge objektet i hele objektets \"levetid\".\n\nDersom komponentident ikke angis ved rapportering vil den bli automatisk generert og påført objektet. Ved endring av et objekt som allerede er rapportert til NRL må komponentident angis.",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "kvalitet",
+        "type": "Posisjonskvalitet",
+        "description": "Beskrivelse av kvaliteten på stedfestingen.",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "datafangstmetode",
+            "type": "Datafangstmetode",
+            "description": "Metode for datafangst.\n\nEgenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.",
+            "cardinality": "0..1",
+            "valueDomain": {
+              "definition": "metode som ligger til grunn for registrering av posisjon",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode"
+            }
+          },
+          {
+            "name": "datafangstmetodeHøyde",
+            "type": "Datafangstmetode",
+            "description": "Metoden brukt for høyderegistrering av posisjon.\n\nDet er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.",
+            "cardinality": "0..1",
+            "valueDomain": {
+              "definition": "metode som ligger til grunn for registrering av posisjon",
+              "asDictionary": "true",
+              "codeList": "https://register.geonorge.no/sosi-kodelister/fkb/generell/5.0/datafangstmetode"
+            }
+          },
+          {
+            "name": "nøyaktighet",
+            "type": "Integer",
+            "description": "Standardavviket til posisjoneringa av objektet oppgitt i cm.\n\nI de aller fleste sammenhenger benyttes en anslått eller forventet verdi for standardavvik, men dersom man har en beregnet verdi skal denne benyttes.\n\nFor objekter med punktgeometri benyttes verdi for punktstandardavvik. For objekter med kurvegeometri benyttes standardavviket for tverravviket fra kurva. For objekter med overflate- eller volumgeometri er forståelsen at standardavviket beregnes ut fra (3D) avvikene mellom sann posisjon og nærmeste punkt på overflata.\n\nMerknad:\nVerdien er ment å beskrive nøyaktigheten til objektet sammenlignet med sann verdi. Standardavvik er i utgangspunktet et mål på det tilfeldige avviket og det innebærer at vi forutsetter at det systematiske avviket i liten grad påvirker nøyaktigheten til posisjoneringa. For fotogrammetriske data settes som hovedregel verdien lik kravet til standardavvik ved datafangst. Se standarden Geodatakvalitet for nærmere definisjon av standardavvik og hvordan dette defineres, beregnes og kontrolleres.",
+            "cardinality": "0..1"
+          },
+          {
+            "name": "nøyaktighetHøyde",
+            "type": "Integer",
+            "description": "<i>Standardavviket til posisjoneringa av objektet oppgitt i cm.</i>\n\n<i>I de aller fleste sammenhenger benyttes en anslått eller forventet verdi for standardavviket, men dersom man faktisk har standardavviket til posisjoneringa av objektet oppgitt i cm.</i>\n<i>\n</i><i>I de aller fleste sammenhenger benyttes en anslått eller forventet verdi for standardavvik, men dersom man har en beregnet verdi skal denne benyttes. </i>\n\n<i>Merknad:</i>\n<i>Verdien er ment å beskrive nøyaktigheten til objektet sammenlignet med sann verdi. Standardavvik er i utgangspunktet et mål på det tilfeldige avviket og det innebærer at vi forutsetter at det systematiske avviket i liten grad påvirker nøyaktigheten til posisjoneringa. For fotogrammetriske data settes som hovedregel verdien lik kravet til standardavvik ved datafangst. Se standarden Geodatakvalitet for nærmere definisjon av standardavvik og hvordan dette defineres, beregnes og kontrolleres.</i>",
+            "cardinality": "0..1"
+          }
+        ]
+      },
+      {
+        "name": "luftfartshinderlyssetting",
+        "type": "Luftfartshinderlyssetting",
+        "description": "Hinderlys benyttet ved merking av luftfartshinder.",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "definition": "Hinderlys benyttet ved merking av luftfartshinder. For informasjon om krav til merking, se forskrift om rapportering, registrering og merking av luftfartshinder.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/luftfartshinderlyssetting"
+        }
+      },
+      {
+        "name": "luftfartshindermerking",
+        "type": "Luftfartshindermerking",
+        "description": "Visuell merking benyttet ved merking av luftfartshinder",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "definition": "Visuell merking benyttet ved merking av luftfartshinder. Gjelder ikke hinderlys. For informasjon om krav til merking, se forskrift om rapportering, registrering og merking av luftfartshinder.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/luftfartshindermerking"
+        }
+      },
+      {
+        "name": "materiale",
+        "type": "Materiale",
+        "description": "Dominerende overflatemateriale for luftfartshinder",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "definition": "Dominerende overflatemateriale for luftfartshinder",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/materiale"
+        }
+      },
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "description": "Navn på objekt i de tilfeller hvor dette har relevans, f.eks. Tryvannstårnet, Gullfaks C, Stolheis Hafjell 360, Hardangerbrua, osv.",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "planlagtFjernetDato",
+        "type": "Date",
+        "description": "Dato for når luftfartshindret er planlagt revet/fjernet. Spesielt relevant for anlegg som kun står oppført i en begrenset periode, f.eks. kraner",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "referanse",
+        "type": "Komponentreferanse",
+        "description": "Referanse til ID i eiers forvaltningssystem, evt. annet register.",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "kodesystemversjon",
+            "type": "CharacterString",
+            "description": "Angir versjon av system.",
+            "cardinality": "0..1"
+          },
+          {
+            "name": "komponentkodesystem",
+            "type": "CharacterString",
+            "description": "Angir hvilket system/register referansen er registrert i.",
+            "cardinality": "0..1"
+          },
+          {
+            "name": "komponentkodeverdi",
+            "type": "CharacterString",
+            "description": "Ekstern id av samme objekt i et annet register/system.",
+            "cardinality": "0..1"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "type": "Status",
+        "description": "Objektets tilstand",
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Objektets tilstand.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/status"
+        }
+      },
+      {
+        "name": "verifisertRapporteringsnøyaktighet",
+        "type": "VerifisertRapporteringsnøyaktighet",
+        "description": "Verifikasjon av at objektet som er meldt inn til NRL oppfyller kravene til rapporteringsnøyaktighet angitt i luftfartshinderforskriften.",
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Verifikasjon av at objektet som er meldt inn til NRL oppfyller kravene til rapporteringsnøyaktighet angitt i luftfartshinderforskriften. Kravene til rapporteringsnøyaktighet kan endre seg fra en versjon av forskriften til neste. Hvilken versjon av luftfartshinderforskriften, med tilhørende §§, som rapporteringen er iht. må angis.\nMerknad: Med rapporteringsnøyaktighet menes her innenfor hvilke nøyaktighetskrav i grunnriss og høyde (x, y, z), samt maksimal vertikal avstand (h) som gjelder ved rapportering til NRL.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/verifisertrapporteringsn%C3%B8yaktighet"
+        }
+      },
+      {
+        "name": "vertikalAvstand",
+        "type": "Real",
+        "description": "Maksimal avstand i vertikalplanet fra objektet til underliggende terreng eller vannoverflate.\n\nMå angis dersom vertikal avstand er større enn 15 meter.\n\nEnhet: meter",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "vertikalAvstandUnderFemten",
+        "type": "Boolean",
+        "description": "Er luftfartshindrets vertikalAvstand, maksimal høyde over terreng eller vann, under 15 meter?\n\nVerifiserer at et luftfartshinder er lavere enn 15 meter og dermed at det ikke er krav til rapportering av ytterligere høydeinformasjon.",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  },
+  {
+    "name": "NrlFlate",
+    "description": "Objekt som er representert som en flate i NRL",
+    "attributes": [
+      {
+        "name": "flateType",
+        "type": "FlateType",
+        "description": "Type, flate",
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Kodeliste for NRL flatetyper.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/flatetype"
+        }
+      },
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "description": "Geometri, flate",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "NrlLuftspenn",
+    "description": "Objekt som er representert som et luftspenn i NRL",
+    "attributes": [
+      {
+        "name": "anleggsbredde",
+        "type": "Real",
+        "description": "Luftfartshinderets maksimale bredde",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "beliggenhet",
+        "type": "GM_Curve",
+        "description": "Geometri, linje/kurve",
+        "cardinality": "1"
+      },
+      {
+        "name": "friseilingshøyde",
+        "type": "Real",
+        "description": "Minste seilingshøyde under luftspenn fra et gitt referansenivå\n\nMerknad:\nFra 1. januar 2000 er høyeste astronomiske tidevann (HAT) referansenivå for friseilingshøyde",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "luftspennType",
+        "type": "LuftspennType",
+        "description": "Type luftspenn",
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Kodeliste for NRL luftspenn.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/luftspenntype"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": [
+        {
+          "target": "NrlMast",
+          "role": "nrlMast",
+          "cardinality": "0..2"
+        }
+      ]
+    }
+  },
+  {
+    "name": "NrlPunkt",
+    "description": "Objekt som er representert som et punkt i NRL.\nMast registreres ikke som NrlPunkt, men som NrlMast.",
+    "attributes": [
+      {
+        "name": "horisontalAvstand",
+        "type": "Real",
+        "description": "Maksimal avstand i horisontalplanet fra punkt til luftfartshinderets avgrensning",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "posisjon",
+        "type": "GM_Point",
+        "description": "Geometri, punkt",
+        "cardinality": "1"
+      },
+      {
+        "name": "punktType",
+        "type": "PunktType",
+        "description": "Type punkt",
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Kodeliste for NRL punkttyper.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/punkttype"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "NrlMast",
+    "description": "Objekt som er representert som ei mast i NRL",
+    "attributes": [
+      {
+        "name": "horisontalAvstand",
+        "type": "Real",
+        "description": "Maksimal avstand i horisontalplanet fra punkt til luftfartshinderets avgrensning",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "mastType",
+        "type": "MastType",
+        "description": "Type mast",
+        "cardinality": "1",
+        "valueDomain": {
+          "definition": "Kodeliste for NRL mast.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/luftfartshinder/nrl-rapportering/1.0/masttype"
+        }
+      },
+      {
+        "name": "posisjon",
+        "type": "GM_Point",
+        "description": "Geometri, punkt",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": [
+        {
+          "target": "NrlLuftspenn",
+          "role": "nrlLuftspenn",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  }
+]
