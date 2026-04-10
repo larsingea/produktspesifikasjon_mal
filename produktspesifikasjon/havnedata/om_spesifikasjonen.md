@@ -2,7 +2,7 @@
 **GIS:** Geografiske InformasjonsSystemer  
 **FKB:** Felles KartBase  
 
-## Termer og definisjoner (Om spesifikasjonen)
+### Termer og definisjoner (Om spesifikasjonen)
 **Nøyaktighet:** Datasettet må ikke benyttes til navigasjon eller til nøyaktige reguleringsplaner
 **Busk:** flerårig vedaktig plante som vokser med flere stammer direkte fra bakken i en klase, og som generelt er lavere enn et tre
 **Hagegnom:** skulptur av gnom som stilles ut i hager
