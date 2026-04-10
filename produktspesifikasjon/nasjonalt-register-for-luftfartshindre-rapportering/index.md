@@ -35,14 +35,14 @@ NB! Luftfartshinder under 15 meter med registreringsdato etter 3.7.2025 inngår 
 > **Opprettet dato:** 2014-04-01<br>
 > **Endret dato:** 2026-04-09<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Kartverket
+> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
 ## Om produktet Nasjonalt register over luftfartshindre
 
 
 > **Romlig representasjonstype:** Vektor<br>
-> **Unik identifikator:** 28c896d0-8a0d-4209-bf31-4931033b1082<br>
-> **Kontaktinformasjon:** Kartverket
+> **Unik identifikator:** <https://data.geonorge.no/sosi/samferdsel/luftfartshindre><br>
+> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 >
 > **Romlig oppløsning:**
 >
@@ -76,27 +76,31 @@ Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Si
 
 ## Omfang
 
-### nedlastingstjeneste
+### Hele datasettet
 
 **Nivå**: dataset
 
-**Utstrekning**: National
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
+
+### nedlastingstjeneste
+
+**Nivå**: dataset
 
 **Nivåbeskrivelse**: Datamodellen beskriver et produkt for innrapportering av luftfartshindre.
 
 ## Datainnhold og struktur
 
-**Beskrivelse**: Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Siden dataene i tjenesten er etablert ved innmelding fra luftfartshindereierne kan Kartverket ikke garantere for kvaliteten på data i NRL.
+
 
 ### Datamodell - nedlastingstjeneste
 
 
 
-[Objektkatalog - nedlastingstjeneste](nedlastingstjeneste/objektkatalog.html)
-
-
-
 <a href="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" title="Klikk for stor visning"><img src="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" alt="Datamodell nedlastingstjeneste" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
 
 ## Referansesystem
 
@@ -120,8 +124,6 @@ Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Si
 - **Kvalitetsmål**: Sosi applikasjonsskjema
   **Målebeskrivelse**: GML-filer er ikke vurdert i henhold til applikasjonsskjema
   **Beskrivende resultat**: GML-filer er ikke vurdert i henhold til applikasjonsskjema
-
-**Beskrivelse**: Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.
 
 ## Datafangst og produksjon
 
@@ -180,33 +182,6 @@ Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Si
 - **kode**: 28c896d0-8a0d-4209-bf31-4931033b1082
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/28c896d0-8a0d-4209-bf31-4931033b1082>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=28c896d0-8a0d-4209-bf31-4931033b1082>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://kartverket.no/api-og-data/samferdselsdata>
-  **relasjon**: about
-  **type**: text/html
-  **tittel**: Produktside
-
-- **lenke**: <https://nedlasting.geonorge.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://wms.geonorge.no/skwms1/wms.nrl5>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://wms.geonorge.no/skwms1/wms.nrl5?request=GetCapabilities&service=WMS>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
 
 ## Tilleggsinformasjon
 
