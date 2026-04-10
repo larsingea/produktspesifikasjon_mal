@@ -41,14 +41,14 @@ FKB-data er ikke-sensistive og åpne data. FKB-dataene er finansiert gjennom Geo
 > **Opprettet dato:** 2017-01-15<br>
 > **Endret dato:** 2026-04-07<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Geovekst
+> **Kontaktinformasjon:** Geovekst, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
 ## Om produktet FKB-Bygning
 
 
 > **Romlig representasjonstype:** Vektor<br>
 > **Unik identifikator:** 8b4304ea-4fb0-479c-a24d-fa225e2c6e97<br>
-> **Kontaktinformasjon:** Geovekst
+> **Kontaktinformasjon:** Geovekst, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 >
 > **Romlig oppløsning:**
 >
@@ -88,35 +88,31 @@ FKB kan brukes til:
 
 ## Omfang
 
-### nedlastingstjeneste
+### Hele datasettet
 
 **Nivå**: dataset
 
-**Utstrekning**: National
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
+
+### nedlastingstjeneste
+
+**Nivå**: dataset
 
 **Nivåbeskrivelse**: Datamodellen beskriver et nasjonalt produkt med fotogrammetrisk innsamlede bygningsdata.
 
 ## Datainnhold og struktur
 
-**Beskrivelse**:
-FKB kan brukes til:
-- å kjenne seg igjen ute i terrenget
-- forvaltningsmessig saksbehandling i kommuner, statlige etater og ledningsetater
-- saksbehandling knyttet til plan- og bygningsloven med forskrifter
-- prosjekteringsformål
-- analyse og presentasjon i et integrert informasjonssystem (GIS-system)
-- produksjon av kart og avledede produkter med forskjellig krav til innhold, detaljering og stedfestingsnøyaktighet
-- sammen med gode terrengdata kan FKB-Bygning brukes til å lage 3D-modeller av bygninger (gjelder FKB-Aog FKB-B).
+
 
 ### Datamodell - nedlastingstjeneste
 
 
 
-[Objektkatalog - nedlastingstjeneste](nedlastingstjeneste/objektkatalog.html)
-
-
-
 <a href="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" title="Klikk for stor visning"><img src="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" alt="Datamodell nedlastingstjeneste" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
 
 ## Referansesystem
 
@@ -156,10 +152,6 @@ FKB kan brukes til:
 - **Kvalitetsmål**: Coverage
   **Resultat**: Prosentvis dekning i forhold til datasettets utstrekning: 90%
 
-**Beskrivelse**:
-FKB-data er spesifisert i fire standarder (FKB-A, FKB-B, FKB-C og FKB-D). FKB-A er mest detaljert og FKB-D er minst detaljert. Områdedekning for FKB-standardene finnes på forvaltningsinformasjon.geonorge.no 
-I FKB finnes kvalitetskoding på det enkelte kartobjekt som angir dette objektets målemetode og antatte nøyaktighet. En oversikt over alder og kvalitet på dataene finnes på forvaltningsinformasjon.geonorge.no
-
 ## Datafangst og produksjon
 
 **Datainnsamling og prosessering**:
@@ -196,7 +188,7 @@ I FKB finnes kvalitetskoding på det enkelte kartobjekt som angir dette objektet
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-09
+**Metadatadato**: 2026-04-10
 
 **språk**: nor
 
@@ -214,28 +206,6 @@ I FKB finnes kvalitetskoding på det enkelte kartobjekt som angir dette objektet
 - **kode**: 8b4304ea-4fb0-479c-a24d-fa225e2c6e97
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/8b4304ea-4fb0-479c-a24d-fa225e2c6e97>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=8b4304ea-4fb0-479c-a24d-fa225e2c6e97>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://nedlasting.geonorge.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://wms.geonorge.no/skwms1/wms.fkb>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://wms.geonorge.no/skwms1/wms.fkb?service=wms&request=getcapabilities>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
 
 ## Tilleggsinformasjon
 

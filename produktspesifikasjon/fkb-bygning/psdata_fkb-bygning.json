@@ -1,5 +1,7 @@
 {
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
   "title": "FKB-Bygning",
+  "format": "text/html",
   "date": {
     "creation": "2017-01-15",
     "revision": "2026-04-07"
@@ -107,18 +109,19 @@
   "scopeSection": [
     {
       "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
         "scopeIdentification": "nedlastingstjeneste",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Datamodellen beskriver et nasjonalt produkt med fotogrammetrisk innsamlede bygningsdata."
       }
     }
   ],
-  "dataContentAndStructureSection": {
-    "narrativeDescription": "FKB kan brukes til:\n- å kjenne seg igjen ute i terrenget\n- forvaltningsmessig saksbehandling i kommuner, statlige etater og ledningsetater\n- saksbehandling knyttet til plan- og bygningsloven med forskrifter\n- prosjekteringsformål\n- analyse og presentasjon i et integrert informasjonssystem (GIS-system)\n- produksjon av kart og avledede produkter med forskjellig krav til innhold, detaljering og stedfestingsnøyaktighet\n- sammen med gode terrengdata kan FKB-Bygning brukes til å lage 3D-modeller av bygninger (gjelder FKB-Aog FKB-B)."
-  },
   "referenceSystemSection": {
     "spatialReferenceSystem": [
       {
@@ -177,10 +180,7 @@
         "nameOfMeasure": "Coverage",
         "result": "Prosentvis dekning i forhold til datasettets utstrekning: 90%"
       }
-    ],
-    "resourceLineage": {
-      "statement": "FKB-data er spesifisert i fire standarder (FKB-A, FKB-B, FKB-C og FKB-D). FKB-A er mest detaljert og FKB-D er minst detaljert. Områdedekning for FKB-standardene finnes på forvaltningsinformasjon.geonorge.no \nI FKB finnes kvalitetskoding på det enkelte kartobjekt som angir dette objektets målemetode og antatte nøyaktighet. En oversikt over alder og kvalitet på dataene finnes på forvaltningsinformasjon.geonorge.no"
-    }
+    ]
   },
   "maintenanceSection": {
     "maintenanceAndUpdateFrequency": "Kontinuerlig",
@@ -310,7 +310,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-04-09",
+    "metadataDate": "2026-04-10",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
@@ -324,32 +324,6 @@
       "code": "8b4304ea-4fb0-479c-a24d-fa225e2c6e97",
       "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
       "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/8b4304ea-4fb0-479c-a24d-fa225e2c6e97"
-    },
-    "links": [
-      {
-        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=8b4304ea-4fb0-479c-a24d-fa225e2c6e97",
-        "rel": "describedby",
-        "type": "application/xml",
-        "title": "Metadata (ISO 19139)"
-      },
-      {
-        "href": "https://nedlasting.geonorge.no/api/capabilities/",
-        "rel": "enclosure",
-        "type": "text/html",
-        "title": "Nedlasting"
-      },
-      {
-        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.geonorge.no/skwms1/wms.fkb",
-        "rel": "service",
-        "type": "text/html",
-        "title": "Tjeneste"
-      },
-      {
-        "href": "https://wms.geonorge.no/skwms1/wms.fkb?service=wms&request=getcapabilities",
-        "rel": "service",
-        "type": "application/xml",
-        "title": "Tjeneste-distribusjon"
-      }
-    ]
+    }
   }
 }
