@@ -1,5 +1,7 @@
 {
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
   "title": "Nasjonalt register over luftfartshindre",
+  "format": "text/html",
   "date": {
     "creation": "2014-04-01",
     "revision": "2026-04-09"
@@ -30,7 +32,7 @@
       "equivalentScale": "Ikke angitt"
     },
     "supplementalInformation": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.",
-    "uniqueId": "28c896d0-8a0d-4209-bf31-4931033b1082",
+    "uniqueId": "https://data.geonorge.no/sosi/samferdsel/luftfartshindre",
     "keyword": [
       "Luftfartshindre",
       "NRL",
@@ -137,18 +139,19 @@
   "scopeSection": [
     {
       "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
         "scopeIdentification": "nedlastingstjeneste",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Datamodellen beskriver et produkt for innrapportering av luftfartshindre."
       }
     }
   ],
-  "dataContentAndStructureSection": {
-    "narrativeDescription": "Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Siden dataene i tjenesten er etablert ved innmelding fra luftfartshindereierne kan Kartverket ikke garantere for kvaliteten på data i NRL."
-  },
   "referenceSystemSection": {
     "spatialReferenceSystem": [
       {
@@ -196,10 +199,7 @@
         "measureDescription": "GML-filer er ikke vurdert i henhold til applikasjonsskjema",
         "descriptiveResult": "GML-filer er ikke vurdert i henhold til applikasjonsskjema"
       }
-    ],
-    "resourceLineage": {
-      "statement": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning."
-    }
+    ]
   },
   "maintenanceSection": {
     "maintenanceAndUpdateFrequency": "Ukentlig",
@@ -344,38 +344,6 @@
       "code": "28c896d0-8a0d-4209-bf31-4931033b1082",
       "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
       "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/28c896d0-8a0d-4209-bf31-4931033b1082"
-    },
-    "links": [
-      {
-        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=28c896d0-8a0d-4209-bf31-4931033b1082",
-        "rel": "describedby",
-        "type": "application/xml",
-        "title": "Metadata (ISO 19139)"
-      },
-      {
-        "href": "https://kartverket.no/api-og-data/samferdselsdata",
-        "rel": "about",
-        "type": "text/html",
-        "title": "Produktside"
-      },
-      {
-        "href": "https://nedlasting.geonorge.no/api/capabilities/",
-        "rel": "enclosure",
-        "type": "text/html",
-        "title": "Nedlasting"
-      },
-      {
-        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.geonorge.no/skwms1/wms.nrl5",
-        "rel": "service",
-        "type": "text/html",
-        "title": "Tjeneste"
-      },
-      {
-        "href": "https://wms.geonorge.no/skwms1/wms.nrl5?request=GetCapabilities&service=WMS",
-        "rel": "service",
-        "type": "application/xml",
-        "title": "Tjeneste-distribusjon"
-      }
-    ]
+    }
   }
 }
