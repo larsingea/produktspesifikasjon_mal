@@ -1,0 +1,10 @@
+metadataId: 28c896d0-8a0d-4209-bf31-4931033b1082
+output_directory: produktspesifikasjon
+product_slug: Nasjonalt register for luftfartshindre - rapportering
+updated: 2026-04-10
+
+scopes: 
+- name: nedlastingstjeneste
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/NRL-rapportering-2.0.xml
+  generator: xmi
+  description: Datamodellen beskriver et produkt for innrapportering av luftfartshindre.
