@@ -1,0 +1,381 @@
+{
+  "title": "Nasjonalt register over luftfartshindre",
+  "date": {
+    "creation": "2014-04-01",
+    "revision": "2026-04-09"
+  },
+  "language": "nor",
+  "contact": {
+    "individualName": "Geir Myhr Øien",
+    "organizationName": "Kartverket",
+    "logo": "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png",
+    "electronicMailAddress": "kundesenter@kartverket.no",
+    "role": "owner"
+  },
+  "identificationSection": {
+    "title": "Nasjonalt register over luftfartshindre",
+    "abstract": "Nasjonalt register over luftfartshindre (NRL) inneholder luftfartshindre som er samlet inn som følge av \"Forskrift om rapportering, registrering og merking av luftfartshinder\". NRL inneholder posisjon og andre egenskaper for menneskeskapte objekter som stikker opp fra terrenget (master, tårn, kraner, kraftledninger m.m.). Hindre i NRL er representert som vektorer, enten punkter, linjer eller flater.\n\nNB! Luftfartshinder under 15 meter med registreringsdato etter 3.7.2025 inngår ikke i de nedlastbare dataene. NRL-data er ikke komplett og må ikke benyttes til planlegging av flyvning.",
+    "purpose": {
+      "summary": "Nasjonalt register over luftfartshindre (NRL) inneholder luftfartshindre som er samlet inn som følge av \"Forskrift om rapportering, registrering og merking av luftfartshinder\".",
+      "useCase": {
+        "name": "Bruksområde",
+        "summary": "Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Siden dataene i tjenesten er etablert ved innmelding fra luftfartshindereierne kan Kartverket ikke garantere for kvaliteten på data i NRL."
+      }
+    },
+    "topicCategory": [
+      "Konstruksjoner"
+    ],
+    "spatialRepresentationType": "Vektor",
+    "spatialResolution": {
+      "equivalentScale": "Ikke angitt"
+    },
+    "supplementalInformation": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.",
+    "uniqueId": "28c896d0-8a0d-4209-bf31-4931033b1082",
+    "keyword": [
+      "Luftfartshindre",
+      "NRL",
+      "Luftfartshinder",
+      "Nasjonalt register over luftfartshindre",
+      "Norge",
+      "Norsk kontinentalsokkel",
+      "Svalbard",
+      "Jan Mayen",
+      "Åpne data",
+      "beredskapsbase",
+      "Norge digitalt",
+      "modellbaserteVegprosjekter",
+      "fellesDatakatalog",
+      "Samferdsel",
+      "Hinder",
+      "Hindring",
+      "Lufthinder",
+      "SOSI_Fellesegenskaper",
+      "Fellesegenskaper",
+      "NrlLinje",
+      "NrlMast",
+      "NrlPunkt",
+      "NrlLuftspenn",
+      "NrlFlate",
+      "verifisertRapporteringsnøyaktighet",
+      "registreringsdato",
+      "historiskNrlId",
+      "vertikalAvstand",
+      "luftfartshindermerking",
+      "luftfartshinderlyssetting",
+      "materiale",
+      "høydereferanse",
+      "linjeType",
+      "beliggenhet",
+      "anleggsbredde",
+      "mastType",
+      "horisontalAvstand",
+      "punktType",
+      "luftspennType",
+      "flateType",
+      "luftfartshinderId",
+      "geometriId",
+      "datafangstmetode",
+      "datafangstmetodeHøyde"
+    ],
+    "restriction": {
+      "resourceConstraints": {
+        "useLimitations": "Ingen begrensninger på bruk er oppgitt."
+      },
+      "legalConstraints": {
+        "accessConstraints": "Åpne data",
+        "useConstraints": "Lisens",
+        "license": "No conditions apply to access and use",
+        "licenseUrl": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
+        "otherConstraints": "Ingen begrensninger oppgitt."
+      },
+      "securityConstraints": {
+        "classification": "Ugradert"
+      }
+    },
+    "contact": [
+      {
+        "individualName": "Geir Myhr Øien",
+        "organizationName": "Kartverket",
+        "electronicMailAddress": "kundesenter@kartverket.no",
+        "role": "owner"
+      },
+      {
+        "individualName": "Geir Myhr Øien",
+        "organizationName": "Kartverket",
+        "electronicMailAddress": "kundesenter@kartverket.no",
+        "role": "pointOfContact"
+      },
+      {
+        "individualName": "Geir Myhr Øien",
+        "organizationName": "Kartverket",
+        "electronicMailAddress": "kundesenter@kartverket.no",
+        "role": "publisher"
+      }
+    ],
+    "maintenance": "Ukentlig",
+    "extent": {
+      "geographicElement": {
+        "westBoundLongitude": "-10.0",
+        "eastBoundLongitude": "35.0",
+        "southBoundLatitude": "57.0",
+        "northBoundLatitude": "81.0"
+      },
+      "temporalElement": {
+        "timePeriod": {
+          "beginPosition": "2014-04-01",
+          "endPosition": "2026-04-09"
+        }
+      }
+    },
+    "date": {
+      "creation": "2014-04-01",
+      "publication": "2014-04-01",
+      "revision": "2026-04-09"
+    },
+    "language": "nor"
+  },
+  "scopeSection": [
+    {
+      "specificationScope": {
+        "scopeIdentification": "nedlastingstjeneste",
+        "level": "dataset",
+        "extent": {
+          "description": "National"
+        },
+        "levelDescription": "Datamodellen beskriver et produkt for innrapportering av luftfartshindre."
+      }
+    }
+  ],
+  "dataContentAndStructureSection": {
+    "narrativeDescription": "Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Siden dataene i tjenesten er etablert ved innmelding fra luftfartshindereierne kan Kartverket ikke garantere for kvaliteten på data i NRL."
+  },
+  "referenceSystemSection": {
+    "spatialReferenceSystem": [
+      {
+        "code": "http://www.opengis.net/def/crs/EPSG/0/4258+3855",
+        "name": "EUREF 89 Geografisk + EGM2008 høyde"
+      },
+      {
+        "code": "EPSG:4937",
+        "name": "EUREF89 Geografisk, 2d + ellipsoide"
+      },
+      {
+        "code": "EPSG:5942",
+        "name": "EUREF89 Geografisk + NN2000"
+      },
+      {
+        "code": "EPSG:5972",
+        "name": "EUREF89 UTM sone 32, 2d + NN2000"
+      },
+      {
+        "code": "EPSG:5973",
+        "name": "EUREF89 UTM sone 33, 2d + NN2000"
+      },
+      {
+        "code": "EPSG:5975",
+        "name": "EUREF89 UTM sone 35, 2d + NN2000"
+      },
+      {
+        "code": "http://www.opengis.net/def/crs/EPSG/0/4258+3855",
+        "name": "EUREF 89 Geografisk + EGM2008 høyde"
+      }
+    ]
+  },
+  "dataQualitySection": {
+    "scope": {
+      "level": "dataset"
+    },
+    "report": [
+      {
+        "nameOfMeasure": "SOSI produktspesifikasjon: NRL - Nasjonalt register over luftfartshindre distribusjon",
+        "measureDescription": "Dataene er ikke vurdert iht produktspesifikasjonen",
+        "descriptiveResult": "Dataene er ikke vurdert iht produktspesifikasjonen"
+      },
+      {
+        "nameOfMeasure": "Sosi applikasjonsskjema",
+        "measureDescription": "GML-filer er ikke vurdert i henhold til applikasjonsskjema",
+        "descriptiveResult": "GML-filer er ikke vurdert i henhold til applikasjonsskjema"
+      }
+    ],
+    "resourceLineage": {
+      "statement": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning."
+    }
+  },
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Ukentlig",
+    "maintenanceAndUpdateStatement": "Kontinuerlig oppdatert"
+  },
+  "dataCaptureAndProductionSection": {
+    "DataAcquisitionAndProcessing": {
+      "processStep": [
+        {
+          "description": "«Forskrift om rapportering, registrering og merking av luftfartshinder» (luftfartshinderforskriften) definerer hva som regnes for å være et luftfartshinder. Forskriften slår fast at den som eier et luftfartshinder er ansvarlig for å rapportere til NRL.\n\nKartverket registrerer luftfartshindre i Nasjonalt register over luftfartshindre ut fra opplysninger i hindereiernes rapporter. Kartverket utfører også kontroller av datakvalitet så langt det er kapasitet til dette, men det må understrekes at registerets kvalitet i meget stor grad avhenger av at hindereierne faktisk overholder plikten til rapportering. Kartverket kan på ingen måte garantere at kravene til nøyaktighet i luftfartshinderforskriften er oppfylt for alle objekter i databasen. Videre er det usannsynlig at datasettet inneholder alle objekter som skal ligge i registeret. Registeret inneholder antakelig også hindre med ukorrekt status, for eksempel kondemnerte hindre som fremdeles er registrert med status «eksisterende». Andre feil kan også forekomme. Se produktspesifikasjonens kapittel 7 for mer informasjon om kvalitet."
+        }
+      ]
+    }
+  },
+  "portrayal": {
+    "name": "Tegneregler",
+    "linkage": "https://register.geonorge.no/tegneregler/nasjonalt-register-over-luftfartshindre-nrl"
+  },
+  "deliverySection": [
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, landsfiler",
+          "deliveryMediumName": "Geonorge nedlastning",
+          "deliveryService": {
+            "serviceEndpoint": "https://nedlasting.geonorge.no/api/capabilities/",
+            "serviceProperty": {
+              "type": "Geonorge nedlastning",
+              "value": "GEONORGE:DOWNLOAD"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "FGDB"
+          },
+          {
+            "formatName": "GML"
+          },
+          {
+            "formatName": "PostGIS"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Luftfartshindre_AtomFeedFGDB.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "FGDB"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Luftfartshindre_AtomFeedGML.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GML"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Luftfartshindre_AtomFeedPostGIS.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "PostGIS"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Nasjonalt register over luftfartshindre WMS",
+          "deliveryService": {
+            "serviceEndpoint": "https://wms.geonorge.no/skwms1/wms.nrl5?request=GetCapabilities&service=WMS",
+            "serviceProperty": {
+              "type": "Nasjonalt register over luftfartshindre WMS",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "png",
+            "version": "1.0"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
+    }
+  ],
+  "metadataSection": {
+    "metadataStandard": "ISO19115",
+    "metadataStandardVersion": "2003",
+    "metadataDate": "2026-04-10",
+    "language": "nor",
+    "contact": {
+      "organizationName": "Kartverket",
+      "individualName": "Geir Myhr Øien",
+      "logo": "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png",
+      "electronicMailAddress": "kundesenter@kartverket.no",
+      "role": "pointOfContact"
+    },
+    "metadataIdentifier": {
+      "authority": "Geonorge",
+      "code": "28c896d0-8a0d-4209-bf31-4931033b1082",
+      "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/28c896d0-8a0d-4209-bf31-4931033b1082"
+    },
+    "links": [
+      {
+        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=28c896d0-8a0d-4209-bf31-4931033b1082",
+        "rel": "describedby",
+        "type": "application/xml",
+        "title": "Metadata (ISO 19139)"
+      },
+      {
+        "href": "https://kartverket.no/api-og-data/samferdselsdata",
+        "rel": "about",
+        "type": "text/html",
+        "title": "Produktside"
+      },
+      {
+        "href": "https://nedlasting.geonorge.no/api/capabilities/",
+        "rel": "enclosure",
+        "type": "text/html",
+        "title": "Nedlasting"
+      },
+      {
+        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.geonorge.no/skwms1/wms.nrl5",
+        "rel": "service",
+        "type": "text/html",
+        "title": "Tjeneste"
+      },
+      {
+        "href": "https://wms.geonorge.no/skwms1/wms.nrl5?request=GetCapabilities&service=WMS",
+        "rel": "service",
+        "type": "application/xml",
+        "title": "Tjeneste-distribusjon"
+      }
+    ]
+  }
+}
