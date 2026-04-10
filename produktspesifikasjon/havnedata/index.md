@@ -31,20 +31,21 @@ Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd p�
   - **Til**: 2026-03-28
 
 ## Om spesifikasjonen
-
+**Denne versjonen:** [https://register.geonorge.no/produktspesifikasjoner/](https://register.geonorge.no/produktspesifikasjoner/nrl-nasjonalt-register-over-luftfartshindre-distribusjon)
+**Siste versjon:** [https://register.geonorge.no/produktspesifikasjoner/](https://register.geonorge.no/produktspesifikasjoner/nrl-nasjonalt-register-over-luftfartshindre-distribusjon)
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2021-03-02<br>
 > **Endret dato:** 2026-03-28<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Kartverket
+> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
 ## Om produktet Havnedata
 
 
 > **Romlig representasjonstype:** Vektor<br>
-> **Unik identifikator:** e46767e4-c6d9-49a6-93e8-716da0922fd7<br>
-> **Kontaktinformasjon:** Kartverket
+> **Unik identifikator:** <https://data.geonorge.no/sosi/kyst/havnedata><br>
+> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 >
 > **Romlig oppløsning:**
 >
@@ -85,11 +86,15 @@ Eksempler på bruksområder for havnedata:
 
 ## Omfang
 
-### Filleveranser
+### Hele datasettet
 
 **Nivå**: dataset
 
-**Utstrekning**: National
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
+
+### Filleveranser
+
+**Nivå**: dataset
 
 **Nivåbeskrivelse**: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
 
@@ -97,50 +102,31 @@ Eksempler på bruksområder for havnedata:
 
 **Nivå**: dataset
 
-**Utstrekning**: National
-
 **Nivåbeskrivelse**: Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
 
 ## Datainnhold og struktur
 
-**Beskrivelse**:
-Aktører som har behov for tilgang til detaljert informasjon om havner:
-- Havnemyndigheter og andre brukere av havnen.
-- Ansatte i havn (personell som jobber med vedlikehold, oppsyn, trafikk- utbyggings- eller eiendomsavdeling, havneinspektør).
-- Maritim næring: navigatører, skipsredere, los, nødetater.
-- Kommune og fylkeskommune.
-- Offentlige etater: Kystverket, Miljødirektoratet, Sjøfartsdirektoratet, Forsvaret, Statsforvalteren m.fl.
-- Andre beslutningstakere
 
-Havnedata gir nøyaktig og detaljert geografisk informasjon om havner. Havnedata danner et kunnskapsgrunnlag for effektiv havnedrift og for å ta gode beslutninger. Datasettet kan også benyttes til beslutningssøtte, planlegging og forvaltning, som underlag for ulike temakart eller til forskning og analyse. 
-
-Eksempler på bruksområder for havnedata: 
-- Inngå som et element i digitale verktøy til planlegging og effektivisering av havners drift, f.eks. kaibestilling.
-- Fortøyningsplanlegging: kartskisse med kai-utforming, tilgjengelige ressurser på kai, og begrensninger for fartøyets størrelse. 
-- Forvaltningsmessig saksbehandling i kommuner og statlige etater.
-- Analyse og presentasjon i et integrert informasjonssystem (GIS-system).
-- Produksjon av kart og avledede produkter. 
-- Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud.
 
 ### Datamodell - Filleveranser
 
 
 
-[Objektkatalog - Filleveranser](filleveranser/objektkatalog.html)
-
-
-
 <a href="filleveranser/filleveranser_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranser/filleveranser_feature_catalogue.png" alt="Datamodell Filleveranser" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "Filleveranser" (diagram og objektkatalog)](filleveranser/objektkatalog.html)
 
 ### Datamodell - Innsynstjeneste (API)
 
 
 
-[Objektkatalog - Innsynstjeneste (API)](innsynstjeneste-api/objektkatalog.html)
-
-
-
 <a href="innsynstjeneste-api/innsynstjeneste-api_feature_catalogue.png" title="Klikk for stor visning"><img src="innsynstjeneste-api/innsynstjeneste-api_feature_catalogue.png" alt="Datamodell Innsynstjeneste (API)" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram og objektkatalog)](innsynstjeneste-api/objektkatalog.html)
 
 ## Referansesystem
 
@@ -151,7 +137,9 @@ Eksempler på bruksområder for havnedata:
 | [EPSG:5975](https://epsg.io/5975) | [EUREF89 UTM sone 35, 2d + NN2000](https://register.geonorge.no/epsg-koder) |
 
 ## Datakvalitet
+### Ekstra datakvalitetelementer
 
+**Nøyaktighet:** Datasettet må ikke benyttes til navigasjon eller til nøyaktige reguleringsplaner
 **Nivå**: dataset
 
 - **Kvalitetsmål**: SOSI produktspesifikasjon: Havnedata
@@ -169,8 +157,6 @@ Eksempler på bruksområder for havnedata:
 - **Kvalitetsmål**: Produktspesifikasjon: Registreringsinstruks
   **Målebeskrivelse**: Dataene er ikke vurdert iht produktspesifikasjonen
   **Beskrivende resultat**: Dataene er ikke vurdert iht produktspesifikasjonen
-
-
 
 ## Vedlikehold
 
@@ -197,12 +183,14 @@ Eksempler på bruksområder for havnedata:
 | Havnedata WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities) | WMS-tjeneste | WMS |  |
 
 ## Metadata
+### Ekstra metadata
 
+**Påkrevde metadata:** Dato oppdatert er påkrevd dateType:"revision"
 **Metadatastandard**: ISO19115
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-08
+**Metadatadato**: 2026-04-10
 
 **språk**: nor
 
@@ -219,26 +207,4 @@ Eksempler på bruksområder for havnedata:
 - **kode**: e46767e4-c6d9-49a6-93e8-716da0922fd7
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/e46767e4-c6d9-49a6-93e8-716da0922fd7>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=e46767e4-c6d9-49a6-93e8-716da0922fd7>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://nedlasting.geonorge.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://wms.geonorge.no/skwms1/wms.havnedata>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
 
