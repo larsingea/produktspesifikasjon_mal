@@ -188,7 +188,7 @@ FKB kan brukes til:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-10
+**Metadatadato**: 2026-04-17
 
 **språk**: nor
 
