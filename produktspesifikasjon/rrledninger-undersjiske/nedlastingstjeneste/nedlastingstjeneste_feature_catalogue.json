@@ -1,0 +1,1422 @@
+[
+  {
+    "name": "CablesPipelines",
+    "description": "",
+    "attributes": [
+      {
+        "name": "cablePipelineFunction",
+        "type": "CableAndPipelineFunction",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "CO2",
+              "label": "CO2"
+            },
+            {
+              "value": "Communication",
+              "label": "Communication"
+            },
+            {
+              "value": "Condensate",
+              "label": "Condensate"
+            },
+            {
+              "value": "DEH",
+              "label": "DEH"
+            },
+            {
+              "value": "Gas",
+              "label": "Gas"
+            },
+            {
+              "value": "Power",
+              "label": "Power"
+            },
+            {
+              "value": "Glycol",
+              "label": "Glycol"
+            },
+            {
+              "value": "Seismic",
+              "label": "Seismic"
+            },
+            {
+              "value": "Hydraulic",
+              "label": "Hydraulic"
+            },
+            {
+              "value": "Methanol",
+              "label": "Methanol"
+            },
+            {
+              "value": "Oil",
+              "label": "Oil"
+            },
+            {
+              "value": "Oil/Gas",
+              "label": "Oil/Gas"
+            },
+            {
+              "value": "Umbilical",
+              "label": "Umbilical"
+            },
+            {
+              "value": "Water",
+              "label": "Water"
+            },
+            {
+              "value": "Water/Gas",
+              "label": "Water/Gas"
+            },
+            {
+              "value": "Miscellaneous",
+              "label": "Miscellaneous"
+            },
+            {
+              "value": "Unknown",
+              "label": "Unknown"
+            },
+            {
+              "value": "Serviceline",
+              "label": "Serviceline"
+            },
+            {
+              "value": "Flowline",
+              "label": "Flowline"
+            },
+            {
+              "value": "Spool",
+              "label": "Spool"
+            },
+            {
+              "value": "Riser",
+              "label": "Riser"
+            }
+          ],
+          "definition": "Valid FUNCTION codes for pipelines",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "dimension",
+        "type": "Integer",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "dimensionUnit",
+        "type": "CablePipelineDimensionUnits",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "mm",
+              "label": "mm"
+            },
+            {
+              "value": "Feet",
+              "label": "Feet"
+            },
+            {
+              "value": "Inches",
+              "label": "Inches"
+            },
+            {
+              "value": "Unknown",
+              "label": "Unknown"
+            }
+          ],
+          "definition": "Valid DIMENSION codes for cables and pipeline (diameter)",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "length",
+        "type": "Integer",
+        "description": "length in meters",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "CommonProperties"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "InstallationPoint",
+    "description": "",
+    "attributes": [
+      {
+        "name": "position",
+        "type": "Punkt",
+        "description": "Location where the object exists.",
+        "cardinality": "1"
+      },
+      {
+        "name": "type",
+        "type": "InstallationPointEquipmentTypes",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Anchor",
+              "label": "Anchor"
+            },
+            {
+              "value": "Compressor",
+              "label": "Compressor"
+            },
+            {
+              "value": "Facility",
+              "label": "Facility"
+            },
+            {
+              "value": "Buoy (general)",
+              "label": "Buoy (general)"
+            },
+            {
+              "value": "Crossing Position",
+              "label": "Crossing Position"
+            },
+            {
+              "value": "Distribution Unit",
+              "label": "Distribution Unit"
+            },
+            {
+              "value": "Static Platform",
+              "label": "Static Platform"
+            },
+            {
+              "value": "Structure",
+              "label": "Structure"
+            },
+            {
+              "value": "Buoy (midline)",
+              "label": "Buoy (midline)"
+            },
+            {
+              "value": "Dynamic Platform",
+              "label": "Dynamic Platform"
+            },
+            {
+              "value": "Equipment",
+              "label": "Equipment"
+            },
+            {
+              "value": "Hang-off Position",
+              "label": "Hang-off Position"
+            },
+            {
+              "value": "Junction/Branch",
+              "label": "Junction/Branch"
+            },
+            {
+              "value": "Concrete Block",
+              "label": "Concrete Block"
+            },
+            {
+              "value": "Living Quarter",
+              "label": "Living Quarter"
+            },
+            {
+              "value": "Manifold",
+              "label": "Manifold"
+            },
+            {
+              "value": "Start/End/Tie-in Position",
+              "label": "Start/End/Tie-in Position"
+            },
+            {
+              "value": "Counteract",
+              "label": "Counteract"
+            },
+            {
+              "value": "Hub Position",
+              "label": "Hub Position"
+            },
+            {
+              "value": "Cover",
+              "label": "Cover"
+            },
+            {
+              "value": "On-shore Facility/Plant",
+              "label": "On-shore Facility/Plant"
+            },
+            {
+              "value": "PLEM/PLET",
+              "label": "PLEM/PLET"
+            },
+            {
+              "value": "Touch Down Position",
+              "label": "Touch Down Position"
+            },
+            {
+              "value": "Floating Unit - Ship",
+              "label": "Floating Unit - Ship"
+            },
+            {
+              "value": "Mattress",
+              "label": "Mattress"
+            },
+            {
+              "value": "Riser Base",
+              "label": "Riser Base"
+            },
+            {
+              "value": "Other/Undefined",
+              "label": "Other/Undefined"
+            },
+            {
+              "value": "Template",
+              "label": "Template"
+            },
+            {
+              "value": "Pile",
+              "label": "Pile"
+            },
+            {
+              "value": "Valve/Valve Station",
+              "label": "Valve/Valve Station"
+            },
+            {
+              "value": "Transponder",
+              "label": "Transponder"
+            },
+            {
+              "value": "Well/Wellpad",
+              "label": "Well/Wellpad"
+            },
+            {
+              "value": "Big Bag/Gravel Bag",
+              "label": "Big Bag/Gravel Bag"
+            },
+            {
+              "value": "Cable Connection Module",
+              "label": "Cable Connection Module"
+            },
+            {
+              "value": "El-substation/Power supply",
+              "label": "El-substation/Power supply"
+            },
+            {
+              "value": "Filter Unit Bag",
+              "label": "Filter Unit Bag"
+            },
+            {
+              "value": "Marker Bag",
+              "label": "Marker Bag"
+            },
+            {
+              "value": "Support Plate",
+              "label": "Support Plate"
+            },
+            {
+              "value": "Storage Tank/Unit",
+              "label": "Storage Tank/Unit"
+            },
+            {
+              "value": "Loading Buoy",
+              "label": "Loading Buoy"
+            },
+            {
+              "value": "Wave Buoy Floater",
+              "label": "Wave Buoy Floater"
+            },
+            {
+              "value": "Submerged Loading Buoy",
+              "label": "Submerged Loading Buoy"
+            },
+            {
+              "value": "Subsea Current Buoy",
+              "label": "Subsea Current Buoy"
+            },
+            {
+              "value": "Clamp",
+              "label": "Clamp"
+            },
+            {
+              "value": "Substructure/Base",
+              "label": "Substructure/Base"
+            },
+            {
+              "value": "Flange",
+              "label": "Flange"
+            },
+            {
+              "value": "Wind Turbine",
+              "label": "Wind Turbine"
+            },
+            {
+              "value": "J-tube",
+              "label": "J-tube"
+            },
+            {
+              "value": "Anode Bed",
+              "label": "Anode Bed"
+            },
+            {
+              "value": "CP Cabinet",
+              "label": "CP Cabinet"
+            },
+            {
+              "value": "Clump Weight/Dead Man Anchor",
+              "label": "Clump Weight/Dead Man Anchor"
+            }
+          ],
+          "definition": "Valid TYPE codes for Equipment subtype (point)",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "refSys",
+        "type": "CharacterString",
+        "cardinality": "1"
+      },
+      {
+        "name": "utmEast",
+        "type": "Real",
+        "cardinality": "1"
+      },
+      {
+        "name": "utmNorth",
+        "type": "Real",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "CommonProperties"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "SafetyRestrictionPolygon",
+    "description": "",
+    "attributes": [
+      {
+        "name": "area",
+        "type": "Flate",
+        "description": "area over which an object extends",
+        "cardinality": "1"
+      },
+      {
+        "name": "type",
+        "type": "SafetyRestrictionTypes",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "airApproachZone",
+              "label": "airApproachZone"
+            },
+            {
+              "value": "buoyMovement",
+              "label": "buoyMovement"
+            },
+            {
+              "value": "drillCuttingsDisposalArea",
+              "label": "drillCuttingsDisposalArea"
+            },
+            {
+              "value": "militaryZone",
+              "label": "militaryZone"
+            },
+            {
+              "value": "noLoadingDischarging",
+              "label": "noLoadingDischarging"
+            },
+            {
+              "value": "prohibitedArea",
+              "label": "prohibitedArea"
+            },
+            {
+              "value": "rigHandlingZone",
+              "label": "rigHandlingZone"
+            },
+            {
+              "value": "targetBox",
+              "label": "targetBox"
+            },
+            {
+              "value": "wetStoreArea",
+              "label": "wetStoreArea"
+            },
+            {
+              "value": "otherUndefined",
+              "label": "otherUndefined"
+            },
+            {
+              "value": "safetyZone",
+              "label": "safetyZone"
+            },
+            {
+              "value": "anchoringAndFishingProhibited",
+              "label": "anchoringAndFishingProhibited"
+            },
+            {
+              "value": "loadingZone",
+              "label": "loadingZone"
+            },
+            {
+              "value": "exclusionZone-Red",
+              "label": "exclusionZone-Red"
+            },
+            {
+              "value": "exclusionZone-Yellow",
+              "label": "exclusionZone-Yellow"
+            },
+            {
+              "value": "subseaCautionArea",
+              "label": "subseaCautionArea"
+            },
+            {
+              "value": "contaminatedArea",
+              "label": "contaminatedArea"
+            },
+            {
+              "value": "plantArea",
+              "label": "plantArea"
+            },
+            {
+              "value": "windfarmArea",
+              "label": "windfarmArea"
+            },
+            {
+              "value": "onshoreRestrictedArea",
+              "label": "onshoreRestrictedArea"
+            },
+            {
+              "value": "pipelineMovementArea",
+              "label": "pipelineMovementArea"
+            },
+            {
+              "value": "rigArea",
+              "label": "rigArea"
+            },
+            {
+              "value": "seabedCautionArea",
+              "label": "seabedCautionArea"
+            },
+            {
+              "value": "surfaceCautionArea",
+              "label": "surfaceCautionArea"
+            },
+            {
+              "value": "temporarySurveillanceZone",
+              "label": "temporarySurveillanceZone"
+            },
+            {
+              "value": "anchorZone",
+              "label": "anchorZone"
+            }
+          ],
+          "definition": "Valid TYPE codes for safety - and restricted/reserved areas",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "CommonProperties"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "InstallationLine",
+    "description": "",
+    "attributes": [
+      {
+        "name": "line",
+        "type": "Kurve",
+        "description": "geometritype som representerer en sekvens av posisjoner",
+        "cardinality": "1"
+      },
+      {
+        "name": "type",
+        "type": "InstallationLineEquipmentTypes",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Anchor",
+              "label": "Anchor"
+            },
+            {
+              "value": "Compressor",
+              "label": "Compressor"
+            },
+            {
+              "value": "Facility",
+              "label": "Facility"
+            },
+            {
+              "value": "Wire",
+              "label": "Wire"
+            },
+            {
+              "value": "Anchor Line",
+              "label": "Anchor Line"
+            },
+            {
+              "value": "Clump Weight",
+              "label": "Clump Weight"
+            },
+            {
+              "value": "Distribution Unit",
+              "label": "Distribution Unit"
+            },
+            {
+              "value": "Static Platform",
+              "label": "Static Platform"
+            },
+            {
+              "value": "Structure",
+              "label": "Structure"
+            },
+            {
+              "value": "Counteract",
+              "label": "Counteract"
+            },
+            {
+              "value": "Dynamic Platform",
+              "label": "Dynamic Platform"
+            },
+            {
+              "value": "Equipment",
+              "label": "Equipment"
+            },
+            {
+              "value": "Junction/Branch",
+              "label": "Junction/Branch"
+            },
+            {
+              "value": "Living Quarter",
+              "label": "Living Quarter"
+            },
+            {
+              "value": "Manifold",
+              "label": "Manifold"
+            },
+            {
+              "value": "Other/Undefined",
+              "label": "Other/Undefined"
+            },
+            {
+              "value": "Clamp",
+              "label": "Clamp"
+            },
+            {
+              "value": "Drilling Rig",
+              "label": "Drilling Rig"
+            },
+            {
+              "value": "Flange",
+              "label": "Flange"
+            },
+            {
+              "value": "PLEM/PLET",
+              "label": "PLEM/PLET"
+            },
+            {
+              "value": "Floating Unit - Ship",
+              "label": "Floating Unit - Ship"
+            },
+            {
+              "value": "Riser Base",
+              "label": "Riser Base"
+            },
+            {
+              "value": "Template",
+              "label": "Template"
+            },
+            {
+              "value": "Valve/Valve Station",
+              "label": "Valve/Valve Station"
+            },
+            {
+              "value": "Well/Wellpad",
+              "label": "Well/Wellpad"
+            },
+            {
+              "value": "Cable Connection Module",
+              "label": "Cable Connection Module"
+            },
+            {
+              "value": "Platform/Rig bridge",
+              "label": "Platform/Rig bridge"
+            },
+            {
+              "value": "Submerged Loading Buoy",
+              "label": "Submerged Loading Buoy"
+            },
+            {
+              "value": "Substructure/Base",
+              "label": "Substructure/Base"
+            },
+            {
+              "value": "Wind Turbine",
+              "label": "Wind Turbine"
+            },
+            {
+              "value": "Deck",
+              "label": "Deck"
+            }
+          ],
+          "definition": "Valid TYPE codes for Equipment subtype (line)",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "CommonProperties"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "InstallationPolygon",
+    "description": "",
+    "attributes": [
+      {
+        "name": "area",
+        "type": "Flate",
+        "description": "area over which an object extends",
+        "cardinality": "1"
+      },
+      {
+        "name": "type",
+        "type": "InstallationPolyEqipmentTypes",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Bag Area",
+              "label": "Bag Area"
+            },
+            {
+              "value": "Distribution Unit",
+              "label": "Distribution Unit"
+            },
+            {
+              "value": "Facility",
+              "label": "Facility"
+            },
+            {
+              "value": "Cover",
+              "label": "Cover"
+            },
+            {
+              "value": "Structure",
+              "label": "Structure"
+            },
+            {
+              "value": "Equipment",
+              "label": "Equipment"
+            },
+            {
+              "value": "Mattress",
+              "label": "Mattress"
+            },
+            {
+              "value": "Support Plate",
+              "label": "Support Plate"
+            },
+            {
+              "value": "Template",
+              "label": "Template"
+            },
+            {
+              "value": "Other/Undefined",
+              "label": "Other/Undefined"
+            },
+            {
+              "value": "Tunnel",
+              "label": "Tunnel"
+            },
+            {
+              "value": "Borehole",
+              "label": "Borehole"
+            },
+            {
+              "value": "Substructure/Base",
+              "label": "Substructure/Base"
+            }
+          ],
+          "definition": "Valid TYPE codes for installation equipment (polygon)",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "CommonProperties"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "CommonProperties",
+    "description": "Abstract object used as a container for properties that the object-types have in common.",
+    "attributes": [
+      {
+        "name": "crsOriginal",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "coordinateStatus",
+        "type": "CoordinateStatusExisting",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "As built",
+              "label": "As built"
+            },
+            {
+              "value": "As found",
+              "label": "As found"
+            },
+            {
+              "value": "Authorized",
+              "label": "Authorized"
+            },
+            {
+              "value": "Designed",
+              "label": "Designed"
+            },
+            {
+              "value": "Digitized",
+              "label": "Digitized"
+            },
+            {
+              "value": "Unknown",
+              "label": "Unknown"
+            },
+            {
+              "value": "As laid/installed",
+              "label": "As laid/installed"
+            }
+          ],
+          "definition": "Valid COORDINATE_STATUS code for existing features",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "field",
+        "type": "OilField",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Gina Krog",
+              "label": "Gina Krog"
+            },
+            {
+              "value": "Glitne",
+              "label": "Glitne"
+            },
+            {
+              "value": "Kristin",
+              "label": "Kristin"
+            },
+            {
+              "value": "Lavrans",
+              "label": "Lavrans"
+            },
+            {
+              "value": "Loke",
+              "label": "Loke"
+            },
+            {
+              "value": "Maria",
+              "label": "Maria"
+            },
+            {
+              "value": "Morvin",
+              "label": "Morvin"
+            },
+            {
+              "value": "Norne",
+              "label": "Norne"
+            },
+            {
+              "value": "Sigyn",
+              "label": "Sigyn"
+            },
+            {
+              "value": "Skarv",
+              "label": "Skarv"
+            },
+            {
+              "value": "Sleipner",
+              "label": "Sleipner"
+            },
+            {
+              "value": "Sleipner øst",
+              "label": "Sleipner øst"
+            },
+            {
+              "value": "Smørbukk",
+              "label": "Smørbukk"
+            },
+            {
+              "value": "Snøhvit",
+              "label": "Snøhvit"
+            },
+            {
+              "value": "Trestakk",
+              "label": "Trestakk"
+            },
+            {
+              "value": "Tyrihans",
+              "label": "Tyrihans"
+            },
+            {
+              "value": "Volve",
+              "label": "Volve"
+            },
+            {
+              "value": "Åsgard",
+              "label": "Åsgard"
+            },
+            {
+              "value": "Askeladd",
+              "label": "Askeladd"
+            },
+            {
+              "value": "Gudrun",
+              "label": "Gudrun"
+            },
+            {
+              "value": "Johan Castberg",
+              "label": "Johan Castberg"
+            },
+            {
+              "value": "Midgard",
+              "label": "Midgard"
+            },
+            {
+              "value": "Mikkel",
+              "label": "Mikkel"
+            }
+          ],
+          "definition": "oljefelt",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "crsTransformationMethod",
+        "type": "CRS_TransformationMethod",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "ST_ED50_WGS84_N62_T1612",
+              "label": "ST_ED50_WGS84_N62_T1612"
+            },
+            {
+              "value": "ST_ED50_WGS84_S62_T1613",
+              "label": "ST_ED50_WGS84_S62_T1613"
+            },
+            {
+              "value": "ST_ED50_WGS84_OnShore_Europe_T1133",
+              "label": "ST_ED50_WGS84_OnShore_Europe_T1133"
+            },
+            {
+              "value": "ST_ED50_WGS84_OffShore_GB_T1311",
+              "label": "ST_ED50_WGS84_OffShore_GB_T1311"
+            }
+          ],
+          "definition": "Valid method used to transform from original CRS",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "fromDate",
+        "type": "Date",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "name",
+        "type": "CharacterString",
+        "cardinality": "1"
+      },
+      {
+        "name": "objectId",
+        "type": "Integer",
+        "cardinality": "1"
+      },
+      {
+        "name": "operator",
+        "type": "Operator",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Amerada",
+              "label": "Amerada"
+            },
+            {
+              "value": "Apache",
+              "label": "Apache"
+            },
+            {
+              "value": "Apollo",
+              "label": "Apollo"
+            },
+            {
+              "value": "Arco",
+              "label": "Arco"
+            },
+            {
+              "value": "Asn_Telecom",
+              "label": "Asn Telecom"
+            },
+            {
+              "value": "Atp",
+              "label": "Atp"
+            },
+            {
+              "value": "Bbl",
+              "label": "Bbl"
+            },
+            {
+              "value": "Bhp",
+              "label": "Bhp"
+            },
+            {
+              "value": "Bkk_Nett_As",
+              "label": "Bkk Nett As"
+            },
+            {
+              "value": "Bord_Gais",
+              "label": "Bord Gais"
+            },
+            {
+              "value": "Bp_Exploration",
+              "label": "Bp Exploration"
+            },
+            {
+              "value": "Britannia",
+              "label": "Britannia"
+            },
+            {
+              "value": "British_Gas",
+              "label": "British Gas"
+            },
+            {
+              "value": "British_Telecom_International",
+              "label": "British Telecom International"
+            },
+            {
+              "value": "Burlington",
+              "label": "Burlington"
+            },
+            {
+              "value": "C_W_Telecom",
+              "label": "C&W Telecom"
+            },
+            {
+              "value": "Cable_Wireless",
+              "label": "Cable & Wireless"
+            },
+            {
+              "value": "Cableco",
+              "label": "Cableco"
+            },
+            {
+              "value": "Caledonia",
+              "label": "Caledonia"
+            },
+            {
+              "value": "Centrica",
+              "label": "Centrica"
+            },
+            {
+              "value": "Ch4_Energy",
+              "label": "Ch4 Energy"
+            },
+            {
+              "value": "Channel_Islands_Electricity_Grid",
+              "label": "Channel Islands Electricity Grid"
+            },
+            {
+              "value": "Chevrontexaco",
+              "label": "Chevrontexaco"
+            },
+            {
+              "value": "Cnr_International",
+              "label": "Cnr International"
+            },
+            {
+              "value": "Conocophillips",
+              "label": "Conocophillips"
+            },
+            {
+              "value": "Cvc",
+              "label": "Cvc"
+            },
+            {
+              "value": "Dana_Pet",
+              "label": "Dana Pet"
+            },
+            {
+              "value": "Dangas_Rlk",
+              "label": "Dangas/Rlk"
+            },
+            {
+              "value": "Dea",
+              "label": "Dea"
+            },
+            {
+              "value": "Det_Norske",
+              "label": "Det Norske"
+            },
+            {
+              "value": "Deutsche_Bundes_Post_Telecom",
+              "label": "Deutsche Bundes Post Telecom"
+            },
+            {
+              "value": "Deutsche_Telekom_Ag",
+              "label": "Deutsche Telekom Ag"
+            },
+            {
+              "value": "Dong",
+              "label": "Dong"
+            },
+            {
+              "value": "Encana",
+              "label": "Encana"
+            },
+            {
+              "value": "Eni",
+              "label": "Eni"
+            },
+            {
+              "value": "Esat_Telecom",
+              "label": "Esat Telecom"
+            },
+            {
+              "value": "Exxonmobil",
+              "label": "Exxonmobil"
+            },
+            {
+              "value": "Farice_Ltd",
+              "label": "Farice Ltd"
+            },
+            {
+              "value": "Flag_Ltd",
+              "label": "Flag Ltd"
+            },
+            {
+              "value": "Gasnor",
+              "label": "Gasnor"
+            },
+            {
+              "value": "Gassco",
+              "label": "Gassco"
+            },
+            {
+              "value": "Gdf_Suez",
+              "label": "Gdf Suez"
+            },
+            {
+              "value": "Global_Crossing_Telecom",
+              "label": "Global Crossing Telecom"
+            },
+            {
+              "value": "Global_Submarine_Telecom",
+              "label": "Global Submarine Telecom"
+            },
+            {
+              "value": "Global_Telesystems",
+              "label": "Global Telesystems"
+            },
+            {
+              "value": "Great_Northern_Telegraph",
+              "label": "Great Northern Telegraph"
+            },
+            {
+              "value": "Hamilton",
+              "label": "Hamilton"
+            },
+            {
+              "value": "Haugaland_Kraftlag",
+              "label": "Haugaland Kraftlag"
+            },
+            {
+              "value": "Hrl",
+              "label": "Hrl"
+            },
+            {
+              "value": "Interconnector",
+              "label": "Interconnector"
+            },
+            {
+              "value": "Interoute",
+              "label": "Interoute"
+            },
+            {
+              "value": "Kerr-Mcgee",
+              "label": "Kerr-Mcgee"
+            },
+            {
+              "value": "Kpn_Telecom_Bv",
+              "label": "Kpn Telecom Bv"
+            },
+            {
+              "value": "Lundin",
+              "label": "Lundin"
+            },
+            {
+              "value": "Lyse",
+              "label": "Lyse"
+            },
+            {
+              "value": "Manx_Electricity_Authority",
+              "label": "Manx Electricity Authority"
+            },
+            {
+              "value": "Marathon",
+              "label": "Marathon"
+            },
+            {
+              "value": "Mci_Telecom",
+              "label": "Mci Telecom"
+            },
+            {
+              "value": "Mærsk",
+              "label": "Mærsk"
+            },
+            {
+              "value": "Nederlandse_Aardolie_Maatschappij_Bv",
+              "label": "Nederlandse Aardolie Maatschappij Bv"
+            },
+            {
+              "value": "Netherlands_Post_Telegraph_Telephone",
+              "label": "Netherlands Post,Telegraph,Telephone"
+            },
+            {
+              "value": "Newfield",
+              "label": "Newfield"
+            },
+            {
+              "value": "Nexen",
+              "label": "Nexen"
+            },
+            {
+              "value": "Nordhordaland_Kraftlag",
+              "label": "Nordhordaland Kraftlag"
+            },
+            {
+              "value": "Norsk_Hydro",
+              "label": "Norsk Hydro"
+            },
+            {
+              "value": "Norske_Shell",
+              "label": "Norske Shell"
+            },
+            {
+              "value": "Northern_Ireland_Electricity",
+              "label": "Northern Ireland Electricity"
+            },
+            {
+              "value": "Ntl",
+              "label": "Ntl"
+            },
+            {
+              "value": "Paladin",
+              "label": "Paladin"
+            },
+            {
+              "value": "Perenco",
+              "label": "Perenco"
+            },
+            {
+              "value": "Petrocan",
+              "label": "Petrocan"
+            },
+            {
+              "value": "Petroland",
+              "label": "Petroland"
+            },
+            {
+              "value": "Petroleum_Geo-Services",
+              "label": "Petroleum Geo-Services"
+            },
+            {
+              "value": "Placid",
+              "label": "Placid"
+            },
+            {
+              "value": "Repsol",
+              "label": "Repsol"
+            },
+            {
+              "value": "Ruhrgas",
+              "label": "Ruhrgas"
+            },
+            {
+              "value": "Shefa",
+              "label": "Shefa"
+            },
+            {
+              "value": "Shell",
+              "label": "Shell"
+            },
+            {
+              "value": "Shell_UK_E_P",
+              "label": "Shell UK E&P"
+            },
+            {
+              "value": "Smedvig_Petroservices",
+              "label": "Smedvig Petroservices"
+            },
+            {
+              "value": "Sonatrach",
+              "label": "Sonatrach"
+            },
+            {
+              "value": "Statoil",
+              "label": "Statoil"
+            },
+            {
+              "value": "Sun_Oil",
+              "label": "Sun Oil"
+            },
+            {
+              "value": "Tampnet",
+              "label": "Tampnet"
+            },
+            {
+              "value": "Telecom_Danmark",
+              "label": "Telecom Danmark"
+            },
+            {
+              "value": "Telecom_Fin_Swe_Nor_Den",
+              "label": "Telecom Fin/Swe/Nor/Den"
+            },
+            {
+              "value": "Telenor",
+              "label": "Telenor"
+            },
+            {
+              "value": "Total",
+              "label": "Total"
+            },
+            {
+              "value": "Tullow",
+              "label": "Tullow"
+            },
+            {
+              "value": "Unknown",
+              "label": "Unknown"
+            },
+            {
+              "value": "Unocal",
+              "label": "Unocal"
+            },
+            {
+              "value": "Venture",
+              "label": "Venture"
+            },
+            {
+              "value": "Vsnl_Telecoms",
+              "label": "Vsnl Telecoms"
+            },
+            {
+              "value": "Vtl_UK_Ltd",
+              "label": "Vtl UK Ltd"
+            },
+            {
+              "value": "Wintershall",
+              "label": "Wintershall"
+            }
+          ],
+          "definition": "operator",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "revDate",
+        "type": "Date",
+        "cardinality": "1"
+      },
+      {
+        "name": "revNo",
+        "type": "Integer",
+        "cardinality": "1"
+      },
+      {
+        "name": "status",
+        "type": "StatusDescription",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Decommissioned",
+              "label": "Decommissioned"
+            },
+            {
+              "value": "Installed",
+              "label": "Installed"
+            },
+            {
+              "value": "Planned",
+              "label": "Planned"
+            },
+            {
+              "value": "Under construction",
+              "label": "Under construction"
+            },
+            {
+              "value": "In service",
+              "label": "In service"
+            },
+            {
+              "value": "Not in service",
+              "label": "Not in service"
+            },
+            {
+              "value": "Temporary",
+              "label": "Temporary"
+            },
+            {
+              "value": "Unknown",
+              "label": "Unknown"
+            }
+          ],
+          "definition": "Valid STATUS description codes",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  }
+]
