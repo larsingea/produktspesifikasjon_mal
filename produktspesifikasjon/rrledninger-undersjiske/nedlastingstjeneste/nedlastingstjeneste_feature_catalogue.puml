@@ -1,0 +1,78 @@
+@startuml
+title Rørledninger - nedlastingstjeneste - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class CablesPipelines <<featureType>> {
+    + cablePipelineFunction [1] : CableAndPipelineFunction
+    + dimension [0..1] : Integer
+    + dimensionUnit [0..1] : CablePipelineDimensionUnits
+    + length [1] : Integer
+  }
+
+  class InstallationPoint <<featureType>> {
+    + position [1] : Punkt
+    + type [1] : InstallationPointEquipmentTypes
+    + refSys [1] : CharacterString
+    + utmEast [1] : Real
+    + utmNorth [1] : Real
+  }
+
+  class SafetyRestrictionPolygon <<featureType>> {
+    + area [1] : Flate
+    + type [1] : SafetyRestrictionTypes
+  }
+
+  class InstallationLine <<featureType>> {
+    + line [1] : Kurve
+    + type [1] : InstallationLineEquipmentTypes
+  }
+
+  class InstallationPolygon <<featureType>> {
+    + area [1] : Flate
+    + type [1] : InstallationPolyEqipmentTypes
+  }
+
+  abstract class CommonProperties <<featureType>> {
+    + crsOriginal [0..1] : CharacterString
+    + coordinateStatus [1] : CoordinateStatusExisting
+    + field [0..1] : OilField
+    + crsTransformationMethod [1] : CRS_TransformationMethod
+    + fromDate [0..1] : Date
+    + name [1] : CharacterString
+    + objectId [1] : Integer
+    + operator [1] : Operator
+    + revDate [1] : Date
+    + revNo [1] : Integer
+    + status [1] : StatusDescription
+  }
+}
+
+  CommonProperties <|-- CablesPipelines
+  CommonProperties <|-- InstallationPoint
+  CommonProperties <|-- SafetyRestrictionPolygon
+  CommonProperties <|-- InstallationLine
+  CommonProperties <|-- InstallationPolygon
+
+@enduml

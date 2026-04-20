@@ -1,0 +1,224 @@
+{
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
+  "title": "Rørledninger",
+  "format": "text/html",
+  "date": {
+    "revision": "2020-05-07"
+  },
+  "language": "nor",
+  "contact": {
+    "individualName": "Sigbjørn Dale",
+    "organizationName": "Sokkeldirektoratet",
+    "logo": "https://register.geonorge.no/data/organizations/870917732_Sokkeldepartementet_liten.png",
+    "electronicMailAddress": "factweb@sodir.no",
+    "role": "owner"
+  },
+  "identificationSection": {
+    "title": "Rørledninger",
+    "abstract": "Rørledningssystem med tilhørende installasjoner, utgjør transportsystemene for petroleum fra Norsk kontinentalsokkel",
+    "topicCategory": [
+      "Transport"
+    ],
+    "spatialRepresentationType": "Vektor",
+    "spatialResolution": {
+      "equivalentScale": "100000"
+    },
+    "uniqueId": "https://data.geonorge.no/sosi/energi/petroleum/TUF",
+    "keyword": [
+      "Rørledninger",
+      "Transportsystemer",
+      "olje",
+      "gass",
+      "Norsk kontinentalsokkel",
+      "Allmennyttige og offentlige tjenester",
+      "Inspire",
+      "geodataloven",
+      "Norge digitalt",
+      "modellbaserteVegprosjekter",
+      "fellesDatakatalog",
+      "Energi"
+    ],
+    "restriction": {
+      "resourceConstraints": {
+        "useLimitations": "Legal.The contents on the website of the Norwegian Offshore Directorate may be copied and used free of charge as long as all material subject to copyright contains a reference to the source."
+      },
+      "legalConstraints": {
+        "accessConstraints": "Åpne data",
+        "useConstraints": "Lisens",
+        "license": "Norsk lisens for offentlige data (NLOD)",
+        "licenseUrl": "http://data.norge.no/nlod/no/1.0",
+        "otherConstraints": "Ingen begrensninger oppgitt."
+      },
+      "securityConstraints": {
+        "classification": "Ugradert"
+      }
+    },
+    "contact": [
+      {
+        "individualName": "Sigbjørn Dale",
+        "organizationName": "Sokkeldirektoratet",
+        "electronicMailAddress": "factweb@sodir.no",
+        "role": "owner"
+      },
+      {
+        "individualName": "Sigbjørn Dale",
+        "organizationName": "Sokkeldirektoratet",
+        "electronicMailAddress": "factweb@sodir.no",
+        "role": "pointOfContact"
+      },
+      {
+        "individualName": "Sigbjørn Dale",
+        "organizationName": "Sokkeldirektoratet",
+        "electronicMailAddress": "factweb@sodir.no",
+        "role": "publisher"
+      }
+    ],
+    "maintenance": "Etter behov",
+    "extent": {
+      "geographicElement": {
+        "westBoundLongitude": "-1.825318",
+        "eastBoundLongitude": "23.651189",
+        "southBoundLatitude": "51.046406",
+        "northBoundLatitude": "71.568704"
+      },
+      "temporalElement": {
+        "timePeriod": {
+          "beginPosition": "2020-05-07",
+          "endPosition": "2020-05-07"
+        }
+      }
+    },
+    "date": {
+      "revision": "2020-05-07"
+    },
+    "language": "nor"
+  },
+  "scopeSection": [
+    {
+      "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "nedlastingstjeneste",
+        "level": "dataset",
+        "levelDescription": "Datamodellen beskriver et planlagt datasett for undersjøiske rørledninger."
+      }
+    }
+  ],
+  "referenceSystemSection": {
+    "spatialReferenceSystem": [
+      {
+        "code": "EPSG:23032",
+        "name": "ED 50 UTM Sone 32N, 2D"
+      },
+      {
+        "code": "EPSG:23032",
+        "name": "ED 50 UTM Sone 32N, 2D"
+      }
+    ]
+  },
+  "dataQualitySection": {
+    "scope": {
+      "level": "dataset"
+    },
+    "report": [
+      {
+        "nameOfMeasure": "COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
+        "measureDescription": "The dataset is established according to national specifications.",
+        "descriptiveResult": "The dataset is established according to national specifications."
+      }
+    ]
+  },
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Etter behov"
+  },
+  "dataCaptureAndProductionSection": {
+    "DataAcquisitionAndProcessing": {
+      "processStep": [
+        {
+          "description": "Datasettet genereres daglig fra Sokkeldirektoratets operasjonelle databaser.Detaljeringsgraden for de data som legges ut er +/- 50 meter. Traseene nærmere enn 500 meter fra innretningene og landfall er ikke inkludert"
+        }
+      ]
+    }
+  },
+  "deliverySection": [
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "MB",
+          "deliveryMediumName": "Egen nedlastningsside",
+          "deliveryService": {
+            "serviceEndpoint": "https://factpages.sodir.no/downloads/shape/pipLine.zip",
+            "serviceProperty": {
+              "type": "Egen nedlastningsside",
+              "value": "WWW:DOWNLOAD-1.0-http--download"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "Shape"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "MB",
+          "deliveryMediumName": "WMS-tjeneste",
+          "deliveryService": {
+            "serviceEndpoint": "https://factmaps.sodir.no/api/services/Factmaps/FactMapsED50UTM32/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+            "serviceProperty": {
+              "type": "WMS-tjeneste",
+              "value": "OGC:WMS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Rørledninger",
+          "deliveryService": {
+            "serviceEndpoint": "https://factmaps.sodir.no/api/services/Factmaps/FactMapsED50UTM32/MapServer/WMSServer?request=GetCapabilities&service=WMS",
+            "serviceProperty": {
+              "type": "Rørledninger",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "[{}]"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
+    }
+  ],
+  "metadataSection": {
+    "metadataStandard": "ISO19115",
+    "metadataStandardVersion": "2003",
+    "metadataDate": "2025-06-05",
+    "language": "nor",
+    "contact": {
+      "organizationName": "Sokkeldirektoratet",
+      "individualName": "Sigbjørn Dale",
+      "logo": "https://register.geonorge.no/data/organizations/870917732_Sokkeldepartementet_liten.png",
+      "electronicMailAddress": "factweb@sodir.no",
+      "role": "pointOfContact"
+    },
+    "metadataIdentifier": {
+      "authority": "Geonorge",
+      "code": "3a31a1f1-f836-4565-937f-731286fb8baa",
+      "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/3a31a1f1-f836-4565-937f-731286fb8baa"
+    }
+  }
+}
