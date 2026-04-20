@@ -1,0 +1,10 @@
+metadataId: 3a31a1f1-f836-4565-937f-731286fb8baa
+output_directory: produktspesifikasjon
+product_slug: Rørledninger - undersjøiske
+updated: 2026-04-20
+
+scopes: 
+- name: nedlastingstjeneste
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/EPIM.xml
+  generator: xmi
+  description: Datamodellen beskriver et planlagt datasett for undersjøiske rørledninger.
