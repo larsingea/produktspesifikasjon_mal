@@ -5,6 +5,6 @@ updated: 2026-04-20
 
 scopes: 
 - name: nedlastingstjeneste
-  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/EPIM.xml
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Sandkasse/ToreFreddy/EPIM_MindsPilot20171020.xml
   generator: xmi
   description: Datamodellen beskriver et planlagt datasett for undersjøiske rørledninger.
