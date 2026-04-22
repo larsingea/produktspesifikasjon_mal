@@ -1,0 +1,10 @@
+metadataId: bf45a463-434d-4b4d-84dc-9325780ab5fb
+output_directory: produktspesifikasjon
+product_slug: NADAG
+updated: 2026-04-22
+
+scopes: 
+- name: nedlastingstjeneste
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/NGU/Grunnundersøkelser.xml
+  generator: xmi
+  description: Grunnundersøkelser
