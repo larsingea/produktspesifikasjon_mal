@@ -8,3 +8,8 @@ scopes:
   url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/NGU/Grunnundersøkelser.xml
   generator: xmi
   description: Grunnundersøkelser
+
+- name: Innsynstjeneste (API)
+  url: https://geo.ngu.no/api/features/grunnundersokelser_utvidet/collections
+  generator: ogc_feature_api
+  description: Tjeneste for innsyn i Grunnundersøkelser
