@@ -1,0 +1,596 @@
+@startuml
+title Nasjonal database for grunnundersøkelser (NADAG) - Innsynstjeneste (API) - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class "1.f) DeformasjonMåling (geometri)" as 1_f__DeformasjonM_ling__geometri_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + datafangstdato [0..1] : DateTime
+    + digitaliseringsmålestokk [0..1] : Integer
+    + identifikasjon [1..1] : Identifikasjon
+    + kvalitet [0..1] : PosisjonskvalitetNADAG
+    + oppdateringsdato [0..1] : DateTime
+    + observasjonStart [0..1] : DateTime
+    + observasjonSlutt [0..1] : DateTime
+    + observatør [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + boreBeskrivelse [0..1] : CharacterString
+    + boretAzimuth [0..1] : Real
+    + boretHelningsgrad [0..1] : Real
+    + boretLengde [0..1] : Real
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + dybdeFraGittPosisjon [0..1] : Real
+    + dybdeFraVannoverflaten [0..1] : Real
+    + lenkeTilTileggsinfo [0..1] : CharacterString
+    + værforholdVedBoring [0..1] : CharacterString
+    + høyde [0..1] : Real
+    + høydeReferanse [0..1] : CharacterString
+    + undersøkelseNr [0..1] : CharacterString
+    + eksternIdentifikasjon [0..1] : EksternIdentifikasjon
+    + opprettetDato [1..1] : DateTime
+    + dybdeGrunnvannstand [0..1] : Real
+    + forboretDiameter [0..1] : Real
+    + forboretLengde [0..1] : Real
+    + forboringMetode [0..1] : CharacterString
+    + stoppKode [0..1] : CharacterString
+    + forboretStartLengde [0..1] : Real
+    + tilhørerGB [0..1] : Link
+    + absoluttverdi [0..1] : Boolean
+    + installasjonTidspunkt [0..1] : DateTime
+    + installasjonNivå [0..1] : Real
+    + målertype [0..1] : CharacterString
+    + målepunkt [0..1] : Real
+
+    ..Geometri..
+    + geometry [1] : GM_Point
+  }
+
+  class "3.a) DynamiskSondering (metode)" as 3_a__DynamiskSondering__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + torvTykkelse [0..1] : Real
+    + antPrøveuttakForstyrretMatr [0..1] : Integer
+    + tilhørerGBU [0..1] : Link
+    + dynamiskSonderingObservasjon [0..1] : Link
+  }
+
+  class "4.a) DynamiskSonderingData (måledata)" as 4_a__DynamiskSonderingData__m_ledata_ <<featureType>> {
+    + lokalid [0..1] : Integer
+    + boretLengde [1..1] : Real
+    + dreieMoment [0..1] : Real
+    + fallHøyde [0..1] : Real
+    + harRotasjon [0..1] : Boolean
+    + nedpressingTid [0..1] : Integer
+    + observasjonKode [0..1] : CharacterString
+    + observasjonMerknad [0..1] : CharacterString
+    + prøveuttakNummer [0..1] : CharacterString
+    + ramMotstand [0..1] : Real
+    + rotasjonHastighet [0..1] : Real
+    + slagFrekvens [0..1] : Real
+    + dynamiskSondering [0..1] : CharacterString
+    + tilhørerDynamiskSondering [0..1] : Link
+  }
+
+  class "1.b) GeotekniskBorehull (geometri)" as 1_b__GeotekniskBorehull__geometri_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + datafangstdato [0..1] : DateTime
+    + digitaliseringsmålestokk [0..1] : Integer
+    + identifikasjon [1..1] : Identifikasjon
+    + kvalitet [0..1] : PosisjonskvalitetNADAG
+    + oppdateringsdato [0..1] : DateTime
+    + antallBorehullUndersøkelser [0..1] : Integer
+    + beskrivelse [0..1] : CharacterString
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + gjennomboretMedium [0..*] : Sequence
+    + boreNr [0..1] : CharacterString
+    + høyde [0..1] : Real
+    + høydeReferanse [0..1] : CharacterString
+    + opprettetDato [1..1] : DateTime
+    + eksternIdentifikasjon [0..1] : EksternIdentifikasjon
+    + kvikkleirePåvisning [0..1] : CharacterString
+    + opprinneligGeotekniskUndersID [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + maksBoretLengde [0..1] : Real
+    + harUndersøkelse [0..1] : Link
+    + undersOmr [0..*] : Sequence
+    + harDokument [0..1] : Link
+    + harTolkning [0..1] : Link
+
+    ..Geometri..
+    + geometry [1] : GM_Point
+  }
+
+  class "1.c) GeotekniskBorehullUnders (geometri)" as 1_c__GeotekniskBorehullUnders__geometri_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + datafangstdato [0..1] : DateTime
+    + digitaliseringsmålestokk [0..1] : Integer
+    + identifikasjon [1..1] : Identifikasjon
+    + kvalitet [0..1] : PosisjonskvalitetNADAG
+    + oppdateringsdato [0..1] : DateTime
+    + boreBeskrivelse [0..1] : CharacterString
+    + boretAzimuth [0..1] : Real
+    + boretHelningsgrad [0..1] : Real
+    + boretLengde [0..1] : Real
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + dybdeFraGittPosisjon [0..1] : Real
+    + dybdeFraVannoverflaten [0..1] : Real
+    + lenkeTilTileggsinfo [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + undersøkelseSlutt [0..1] : DateTime
+    + undersøkelseStart [0..1] : DateTime
+    + værforholdVedBoring [0..1] : CharacterString
+    + høyde [0..1] : Real
+    + høydeReferanse [0..1] : CharacterString
+    + undersøkelseNr [0..1] : CharacterString
+    + eksternIdentifikasjon [0..1] : EksternIdentifikasjon
+    + opprettetDato [1..1] : DateTime
+    + geotekniskMetode [1..1] : CharacterString
+    + dybdeGrunnvannstand [0..1] : Real
+    + forboretDiameter [0..1] : Real
+    + forboretLengde [0..1] : Real
+    + forboringMetode [0..1] : CharacterString
+    + stoppKode [0..1] : CharacterString
+    + forboretStartLengde [0..1] : Real
+    + underspkt_fk [0..1] : CharacterString
+    + undersPkt [0..1] : Link
+    + harDokument [0..1] : Link
+    + metode-DynamiskSondering [0..*] : Sequence
+    + metode-GeotekniskPrøveserie [0..*] : Sequence
+    + metode-GrunnvannMåling [0..*] : Sequence
+    + metode-KjernePrøve [0..*] : Sequence
+    + metode-KombinasjonSondering [0..*] : Sequence
+    + metode-MiljøUndersøkelse [0..*] : Sequence
+    + metode-StatiskSondering [0..*] : Sequence
+    + metode-Trykksondering [0..*] : Sequence
+    + metode-Vingeboring [0..*] : Sequence
+
+    ..Geometri..
+    + geometry [1] : GM_Point
+  }
+
+  class "2.a) GeotekniskDokument (dokumentasjon)" as 2_a__GeotekniskDokument__dokumentasjon_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + dokumentID [0..1] : CharacterString
+    + dokumentNøkkel [0..1] : CharacterString
+    + dokumentType [1..1] : CharacterString
+    + dokumentFilnavn [0..1] : CharacterString
+    + dokumentURL [0..1] : CharacterString
+    + innholdType [0..1] : CharacterString
+    + beskrivelse [0..1] : CharacterString
+    + eksternIdentifikasjon [0..1] : EksternIdentifikasjon
+    + dokumentNavn [0..1] : CharacterString
+    + opprettetDato [0..1] : DateTime
+    + dokumentNr [0..1] : CharacterString
+    + dokumentDato [0..1] : DateTime
+    + tilhorerfeltunders_fk [0..1] : CharacterString
+    + tilhorergu_fk [0..1] : CharacterString
+    + tilhorergb_fk [0..1] : CharacterString
+    + tilhorergbu_fk [0..1] : CharacterString
+    + tilhørerFeltUnders [0..1] : Link
+    + tilhørerGU [0..1] : Link
+    + tilhørerGB [0..1] : Link
+    + tilhørerGBU [0..1] : Link
+  }
+
+  class "1.g) GeotekniskFeltUnders (geometri)" as 1_g__GeotekniskFeltUnders__geometri_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + geotekniskFeltUndersMetode [0..1] : CharacterString
+    + eksternidentifikasjon [0..1] : EksternIdentifikasjon
+    + opprettetDato [0..1] : DateTime
+    + feltundersType [0..1] : CharacterString
+    + tolkningMetode [0..1] : CharacterString
+    + høydeFjell [0..1] : Real
+    + høyde [0..1] : Real
+    + høydeReferanse [0..1] : CharacterString
+    + feltundersNr [0..1] : CharacterString
+    + tilhorergu_fk [0..1] : CharacterString
+    + tilhørerGU [0..1] : Link
+
+    ..Geometri..
+    + geometry [1] : GM_Point
+  }
+
+  class "3.b) GeotekniskPrøveserie (metode)" as 3_b__GeotekniskPr_veserie__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + prøvetype [0..1] : CharacterString
+    + densitetPrøvetaking [0..1] : Real
+    + miljøtekniskUndersøkelse [0..1] : CharacterString
+    + prøvegrop [0..1] : Boolean
+    + prøvegropKun [0..1] : Boolean
+    + skovelprøve [0..1] : Boolean
+    + skovelprøveKun [0..1] : Boolean
+    + erOmrørt [0..1] : Boolean
+    + erUforstyrret [0..1] : Boolean
+    + geotekniskborehullunders [0..1] : CharacterString
+    + harPrøveseriedel [0..1] : Link
+    + tilhørerGBU [0..1] : Link
+  }
+
+  class "3.c) GeotekniskPrøveseriedel (metode)" as 3_c__GeotekniskPr_veseriedel__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + prøveMetode [0..1] : CharacterString
+    + prøveseriedelNavn [0..1] : CharacterString
+    + fraLengde [0..1] : Real
+    + tilLengde [0..1] : Real
+    + prøveseriedelId [1..1] : CharacterString
+    + prøveserieId [1..1] : CharacterString
+    + tilhørerPrøveserie [0..1] : Link
+    + harData [0..1] : Link
+  }
+
+  class "4.b) GeotekniskPrøveseriedelData (måledata)" as 4_b__GeotekniskPr_veseriedelData__m_ledata_ <<featureType>> {
+    + lokalid [0..1] : Integer
+    + lagPosisjon [0..1] : CharacterString
+    + prøveMetode [0..1] : CharacterString
+    + aksielDeformasjon [0..1] : Real
+    + skjærfasthetUdrenert [0..1] : Real
+    + detaljertLagSammensetning [0..1] : CharacterString
+    + skjærfasthetOmrørt [0..1] : Real
+    + densitetPrøvetaking [0..1] : Real
+    + erOmrørt [0..1] : Boolean
+    + labAnalyse [0..1] : Boolean
+    + flyteGrense [0..1] : Real
+    + glødeTap [0..1] : Real
+    + plastitetsGrense [0..1] : Real
+    + sensitivitet [0..1] : Real
+    + skjærfasthetUforstyrret [0..1] : Real
+    + boretLengde [0..1] : Real
+    + vanninnhold [0..1] : Real
+    + observasjonKode [0..1] : CharacterString
+    + observasjonMerknad [0..1] : CharacterString
+    + geotekniskproveseriedel [0..1] : CharacterString
+    + tilhørerPrøveseriedel [0..1] : Link
+  }
+
+  class "1.e) GeotekniskTolketLag (geometri)" as 1_e__GeotekniskTolketLag__geometri_ <<featureType>> {
+    + lokalid [0..1] : Integer
+    + tolketLagID [0..1] : CharacterString
+    + klassifiseringMetode [0..1] : CharacterString
+    + hovedLagKlassifiseringsKode [0..1] : CharacterString
+    + lagBeskrivelse [0..1] : CharacterString
+    + tolketAv [0..1] : CharacterString
+    + tolketTidspunkt [0..1] : DateTime
+    + tolkningMerknad [0..1] : CharacterString
+    + navn [0..1] : CharacterString
+    + påTerrengOverflate [0..1] : Boolean
+    + vurdering [0..1] : Real
+    + underTerrengOverflate [0..1] : Boolean
+    + eksternIdentifikasjon [0..1] : EksternIdentifikasjon
+    + høyde [0..1] : Real
+    + høydeReferanse [0..1] : CharacterString
+    + tilhorertolketpunkt_fk [0..1] : CharacterString
+    + tilhørerTolketPunkt [0..1] : Link
+
+    ..Geometri..
+    + geometry [1] : GM_Point
+  }
+
+  class "1.d) GeotekniskTolketPunkt (geometri)" as 1_d__GeotekniskTolketPunkt__geometri_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + tolketAv [0..1] : CharacterString
+    + tolketTidspunkt [0..1] : DateTime
+    + navn [0..1] : CharacterString
+    + tilhorergu_fk [0..1] : CharacterString
+    + tilhørerGU [0..1] : Link
+    + tilhorergb_fk [0..1] : CharacterString
+    + tilhørerGB [0..1] : Link
+    + harTolketLag [0..1] : Link
+
+    ..Geometri..
+    + geometry [1] : GM_Point
+  }
+
+  class "1.a) GeotekniskUnders (geometri)" as 1_a__GeotekniskUnders__geometri_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + oppdateringsdato [0..1] : DateTime
+    + beskrivelse [0..1] : CharacterString
+    + oppdragsgiver [0..1] : CharacterString
+    + oppdragstaker [0..1] : CharacterString
+    + prosjektNavn [0..1] : CharacterString
+    + undersøkelsePeriodeFra [0..1] : DateTime
+    + undersøkelsePeriodeTil [0..1] : DateTime
+    + eksternIdentifikasjon [0..1] : EksternIdentifikasjon
+    + representasjonKvalitet [0..1] : CharacterString
+    + opprettetDato [1..1] : DateTime
+    + prosjektNr [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + undersøkelseÅrAntatt [0..1] : Integer
+    + undersPkt [0..1] : Link
+    + harDokument [0..1] : Link
+    + feltUnders [0..1] : Link
+    + harTolkning [0..1] : Link
+
+    ..Geometri..
+    + geometry [1] : GM_Surface
+  }
+
+  class "4.c) GrunnvannData (måledata)" as 4_c__GrunnvannData__m_ledata_ <<featureType>> {
+    + lokalid [0..1] : Integer
+    + måleDato [0..1] : Date
+    + dybdeGrunnvannstand [0..1] : Real
+    + måleTidspunkt [0..1] : DateTime
+    + observasjonKode [0..1] : CharacterString
+    + observasjonMerknad [0..1] : CharacterString
+    + pH [0..1] : Real
+    + ledningsevne [0..1] : Real
+    + oksygenInnhold [0..1] : Real
+    + temperatur [0..1] : Real
+    + redoks [0..1] : Real
+    + turbiditet [0..1] : Real
+    + boretLengde [0..1] : Real
+    + grunnvannObservasjonKode [0..1] : CharacterString
+    + erGyldig [0..1] : Boolean
+    + grunnvannmaling [0..1] : CharacterString
+    + tilhørerGrunnvannmaling [0..1] : Link
+  }
+
+  class "3.d) GrunnvannMåling (metode)" as 3_d__GrunnvannM_ling__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + insituTestStartTidspunkt [0..1] : DateTime
+    + insituTestSluttTidspunkt [0..1] : DateTime
+    + erLangtidsobservasjon [1..1] : Boolean
+    + filterDyp [0..1] : Real
+    + filterLengde [0..1] : Real
+    + filterType [0..1] : CharacterString
+    + grunnvannAkvifer [0..1] : CharacterString
+    + rørBunn [0..1] : Real
+    + rørTopp [0..1] : Real
+    + rørType [0..1] : CharacterString
+    + tilhørerGBU [0..1] : Link
+    + grunnvannObservasjon [0..1] : Link
+  }
+
+  class "3.e) KjernePrøve (metode)" as 3_e__KjernePr_ve__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + prøvetype [0..1] : CharacterString
+    + densitetPrøvetaking [0..1] : Real
+    + miljøtekniskUndersøkelse [0..1] : CharacterString
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + tilhørerGBU [0..1] : Link
+  }
+
+  class "3.f) KombinasjonSondering (metode)" as 3_f__KombinasjonSondering__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + torvTykkelse [0..1] : Real
+    + boretLengdeIBerg [0..1] : Real
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + maksLast [0..1] : Real
+    + tilhørerGBU [0..1] : Link
+    + kombinasjonSonderingObservasjon [0..1] : Link
+  }
+
+  class "4.d) KombinasjonSonderingData (måledata)" as 4_d__KombinasjonSonderingData__m_ledata_ <<featureType>> {
+    + lokalid [0..1] : Integer
+    + anvendtLast [0..1] : Real
+    + boretLengde [1..1] : Real
+    + dreieMoment [0..1] : Real
+    + nedpressingHastighet [0..1] : Real
+    + nedpressingKraft [0..1] : Real
+    + nedpressingTid [0..1] : Integer
+    + observasjonKode [0..1] : CharacterString
+    + observasjonMerknad [0..1] : CharacterString
+    + rotasjonHastighet [0..1] : Real
+    + slagFrekvens [0..1] : Real
+    + spyleMengde [0..1] : Real
+    + kombinasjonSondering [0..1] : CharacterString
+    + tilhørerKombinasjonSondering [0..1] : Link
+  }
+
+  class "3.g) MiljøUndersøkelse (metode)" as 3_g__Milj_Unders_kelse__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + prøvetype [0..1] : CharacterString
+    + densitetPrøvetaking [0..1] : Real
+    + miljøtekniskUndersøkelse [0..1] : CharacterString
+    + tilhørerGBU [0..1] : Link
+  }
+
+  class "4.e) PoretrykkDatainsitu (måledata)" as 4_e__PoretrykkDatainsitu__m_ledata_ <<featureType>> {
+    + lokalid [0..*] : Integer
+    + boretDybde [0..*] : Real
+    + enhetsvekt [0..*] : Real
+    + observasjonKode [0..*] : CharacterString
+    + observasjonMerknad [0..*] : CharacterString
+    + poretrykk [0..*] : Real
+    + boretLengde [1..*] : Real
+    + tyngde [0..*] : Real
+    + trykkSondering [0..*] : CharacterString
+    + tilhørerTrykkSondering [0..1] : Link
+  }
+
+  class "3.h) StatiskSondering (metode)" as 3_h__StatiskSondering__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + torvTykkelse [0..1] : Real
+    + telenivå [0..1] : Real
+    + tilhørerGBU [0..1] : Link
+    + statiskSonderingObservasjon [0..1] : Link
+  }
+
+  class "4.f) StatiskSonderingData (måledata)" as 4_f__StatiskSonderingData__m_ledata_ <<featureType>> {
+    + lokalid [0..1] : Integer
+    + anvendtlast [0..1] : Real
+    + boretLengde [1..1] : Real
+    + halveOmdreininger [0..1] : Real
+    + medSlag [0..1] : Boolean
+    + nedpressingTid [0..1] : Integer
+    + nedsynkningHastighet [0..1] : Real
+    + observasjonKode [0..1] : CharacterString
+    + observasjonMerknad [0..1] : CharacterString
+    + rotasjonHastighet [0..1] : Real
+    + harRotasjon [0..1] : Boolean
+    + sideFriksjon [0..1] : Real
+    + slagFrekvens [0..1] : Real
+    + statiskSondering [0..1] : CharacterString
+    + tilhørerStatiskSondering [0..1] : Link
+  }
+
+  class "3.i) Trykksondering (metode)" as 3_i__Trykksondering__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + insituTestStartTidspunkt [0..1] : DateTime
+    + insituTestSluttTidspunkt [0..1] : DateTime
+    + alpha [0..1] : Real
+    + cptKorreksjonsFaktor [0..1] : Real
+    + filterType [0..1] : CharacterString
+    + initiellSpissmotstand [0..1] : Real
+    + metningsMedium [0..1] : CharacterString
+    + nedpressingsKapasitet [0..1] : CharacterString
+    + nedpressningsHastighet [0..1] : Real
+    + nullpunktsKorreksjon [0..1] : Real
+    + rørKappeKorreksjonsFaktor [0..1] : Real
+    + sidefriksjonKorreksjon [0..1] : Real
+    + sondeIdentifikasjon [0..1] : CharacterString
+    + sondeKalibreringDato [0..1] : DateTime
+    + sondeKvalitetKlasse [0..1] : CharacterString
+    + spissKorreksjonFaktor [0..1] : Real
+    + spissType [0..1] : CharacterString
+    + atmosferiskTrykkKorreksjon [0..1] : Real
+    + hylseRadieKorreksjon [0..1] : Real
+    + tilhørerGBU [0..1] : Link
+    + inSituPoretrykkObservasjon [0..1] : Link
+    + trykksonderingObservasjon [0..1] : Link
+  }
+
+  class "4.g) TrykkSonderingData (måledata)" as 4_g__TrykkSonderingData__m_ledata_ <<featureType>> {
+    + lokalid [0..1] : Integer
+    + anvendtLast [0..1] : Real
+    + boretDybde [0..1] : Real
+    + boretLengde [1..1] : Real
+    + friksjon [0..1] : Real
+    + helning [0..1] : Real
+    + initieltPoretrykk [0..1] : Real
+    + resistivitet [0..1] : Real
+    + korrigertFriksjon [0..1] : Real
+    + korrigertNedpressningsKraft [0..1] : Real
+    + nedpressingHastighet [0..1] : Real
+    + nedpressingsKraft [0..1] : Real
+    + nedpressingsTid [0..1] : Integer
+    + observasjonKode [0..1] : CharacterString
+    + observasjonMerknad [0..1] : CharacterString
+    + poretrykk [0..1] : Real
+    + skjærbølgeHastighet [0..1] : Real
+    + temperatur [0..1] : Real
+    + nedpressingTrykk [0..1] : Real
+    + trykkSondering [0..1] : CharacterString
+    + tilhørerTrykkSondering [0..1] : Link
+  }
+
+  class "3.j) Vingeboring (metode)" as 3_j__Vingeboring__metode_ <<featureType>> {
+    + lokalid [0..1] : CharacterString
+    + identifikasjon [1..1] : Identifikasjon
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + insituTestStartTidspunkt [0..1] : DateTime
+    + insituTestSluttTidspunkt [0..1] : DateTime
+    + sensitivitet [0..1] : Real
+    + skjærfasthetOmrørt [0..1] : Real
+    + skjærfasthetUforstyrret [0..1] : Real
+    + vannstandIBorehull [0..1] : Real
+    + vingeDiameter [0..1] : Real
+    + vingeHøyde [0..1] : Real
+    + vingeIdentitet [0..1] : CharacterString
+    + tilhørerGBU [0..1] : Link
+    + vingeboringObservasjon [0..1] : Link
+  }
+
+  class "4.h) VingeboringData (måledata)" as 4_h__VingeboringData__m_ledata_ <<featureType>> {
+    + lokalid [0..*] : Integer
+    + boretDybde [0..*] : Real
+    + effektivDensitet [0..*] : Real
+    + korrigertSkjærfasthet [0..*] : Real
+    + observasjonKode [0..*] : CharacterString
+    + observasjonMerknad [0..*] : CharacterString
+    + omrørtSkjærfasthet [0..*] : Real
+    + omrørtTorsjonMoment [0..*] : Real
+    + sensitivitet [0..*] : Real
+    + uomrørtSkjærfasthet [0..*] : Real
+    + uomrørtTorsjonMoment [0..*] : Real
+    + boretLengde [1..*] : Real
+    + plastisitetIndeks [0..*] : Real
+    + vingeboring [0..*] : CharacterString
+    + tilhørerVingeboring [0..1] : Link
+  }
+
+  class Identifikasjon <<dataType>> {
+    + lokalId [0..1] : CharacterString
+    + navnerom [0..1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+
+  class PosisjonskvalitetNADAG <<dataType>> {
+    + målemetode [0..1] : CharacterString
+    + målemetodeHøyde [0..1] : CharacterString
+    + nøyaktighet [0..1] : Integer
+    + nøyaktighetHøyde [0..1] : Integer
+  }
+
+  class BorlengdeTilBerg <<dataType>> {
+    + borlengdeKvalitet [0..1] : CharacterString
+    + borlengdeTilBerg [0..1] : Real
+  }
+
+  class EksternIdentifikasjon <<dataType>> {
+    + eksternId [0..1] : CharacterString
+    + eksternNavnerom [0..1] : CharacterString
+    + eksternVersjonId [0..1] : CharacterString
+    + eksternLeveringDato [0..1] : DateTime
+  }
+
+  class Link <<dataType>> {
+    + href [0..1] : uri-reference (string)
+    + rel [0..1] : CharacterString
+    + type [0..1] : CharacterString
+    + title [0..1] : CharacterString
+  }
+
+  class array <<dataType>> {
+    + title [0..*] : Sequence
+  }
+}
+
+@enduml
