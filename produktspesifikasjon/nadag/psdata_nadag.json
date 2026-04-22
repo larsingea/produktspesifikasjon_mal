@@ -110,6 +110,13 @@
         "level": "dataset",
         "levelDescription": "Grunnundersøkelser"
       }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Innsynstjeneste (API)",
+        "level": "dataset",
+        "levelDescription": "Tjeneste for innsyn i Grunnundersøkelser"
+      }
     }
   ],
   "referenceSystemSection": {

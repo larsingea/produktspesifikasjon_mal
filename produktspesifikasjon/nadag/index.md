@@ -89,6 +89,12 @@ Fra og med 2025 er det lovfestet plikt for innmelding av geotekniske grunnunders
 
 **Nivåbeskrivelse**: Grunnundersøkelser
 
+### Innsynstjeneste (API)
+
+**Nivå**: dataset
+
+**Nivåbeskrivelse**: Tjeneste for innsyn i Grunnundersøkelser
+
 ## Datainnhold og struktur
 
 
@@ -102,6 +108,16 @@ Fra og med 2025 er det lovfestet plikt for innmelding av geotekniske grunnunders
 
 
 ➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
+
+### Datamodell - Innsynstjeneste (API)
+
+
+
+<a href="innsynstjeneste-api/innsynstjeneste-api_feature_catalogue.png" title="Klikk for stor visning"><img src="innsynstjeneste-api/innsynstjeneste-api_feature_catalogue.png" alt="Datamodell Innsynstjeneste (API)" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram og objektkatalog)](innsynstjeneste-api/objektkatalog.html)
 
 ## Referansesystem
 
