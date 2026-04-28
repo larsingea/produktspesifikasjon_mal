@@ -5,6 +5,6 @@ updated: 2026-04-28
 
 scopes: 
 - name: Filnedlasting
-  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Kartdata.xml
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Hendelser-1.0.xml
   generator: xmi
   description: Naturhendelser
