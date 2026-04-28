@@ -1,1 +1,10 @@
-https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Kartdata.xml
+metadataId: 4851c6ae-cf38-425f-af4e-0b418ef7bb43
+output_directory: produktspesifikasjon
+product_slug: Hendelser
+updated: 2026-04-28
+
+scopes: 
+- name: Filnedlasting
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Kartdata.xml
+  generator: xmi
+  description: Naturhendelser
