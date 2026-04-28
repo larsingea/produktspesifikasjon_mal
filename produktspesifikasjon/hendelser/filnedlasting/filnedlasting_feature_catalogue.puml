@@ -1,0 +1,98 @@
+@startuml
+title Naturhendelser - Filnedlasting - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class "Risikoområde" as Risikoomr_de <<featureType>> {
+    + risikoId [0..1] : CharacterString
+    + område [1] : GM_Surface
+  }
+
+  class "BerørtOmråde" as Ber_rtOmr_de <<featureType>> {
+    + berortOmradeId [0..1] : CharacterString
+    + område [1] : GM_Surface
+  }
+
+  class Hendelse <<featureType>> {
+    + hendelseId [0..1] : CharacterString
+    + posisjon [0..1] : GM_Point
+    + område [0..1] : GM_Surface
+  }
+
+  class Situasjon <<featureType>> {
+    + situasjonId [0..1] : CharacterString
+    + situasjonstype [0..1] : Situasjonstype
+    + område [1] : GM_Surface
+  }
+
+  class "Tiltaksområde" as Tiltaksomr_de <<featureType>> {
+    + risikoId [1] : CharacterString
+    + tiltakstype [1] : Tiltakstype
+    + posisjon [0..1] : GM_Point
+    + område [0..1] : GM_Surface
+    + linje [0..1] : GM_Curve
+  }
+
+  abstract class HendelseGenerell <<featureType>> {
+    + alvorlighetsgrad [0..1] : HendelseAlvorlighet
+    + status [0..1] : HendelseStatus
+    + fase [0..1] : HendelseFase
+    + opprettetAv [0..1] : CharacterString
+    + opprettetDato [0..1] : Date
+    + sistRedigertAv [0..1] : CharacterString
+    + sistRedigertDato [0..1] : Date
+    + lenke [0..1] : URI
+    + beskrivelse [0..1] : CharacterString
+    + navn [0..1] : CharacterString
+    + delingStatus [0..1] : Boolean
+    + CREATED_USER [0..1] : CharacterString
+    + LAST_EDITED_USER [0..1] : CharacterString
+    + LAST_EDITED_DATE [0..1] : CharacterString
+  }
+
+  abstract class Fellesegenskaper <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + oppdateringsdato [1] : Date
+    + sluttdato [0..1] : Date
+  }
+
+  class Identifikasjon <<dataType>> {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+}
+
+  HendelseGenerell <|-- Risikoomr_de
+  HendelseGenerell <|-- Ber_rtOmr_de
+  HendelseGenerell <|-- Ber_rtOmr_de
+  HendelseGenerell <|-- Hendelse
+  HendelseGenerell <|-- Situasjon
+  Situasjon --> Ber_rtOmr_de : situasjonBerort [0..*]
+  Situasjon --> Hendelse : situasjonHendelse [0..*]
+  Situasjon --> Tiltaksomr_de : situasjonTiltak [0..*]
+  HendelseGenerell <|-- Tiltaksomr_de
+  Fellesegenskaper <|-- HendelseGenerell
+
+@enduml

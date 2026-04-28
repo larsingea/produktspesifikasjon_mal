@@ -1,1 +1,483 @@
-[]
+[
+  {
+    "name": "Risikoområde",
+    "description": "Risikoområde",
+    "attributes": [
+      {
+        "name": "risikoId",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "HendelseGenerell"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "BerørtOmråde",
+    "description": "Berørt område",
+    "attributes": [
+      {
+        "name": "berortOmradeId",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "HendelseGenerell",
+        "HendelseGenerell"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Hendelse",
+    "description": "Risikoområde",
+    "attributes": [
+      {
+        "name": "hendelseId",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "posisjon",
+        "type": "GM_Point",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "HendelseGenerell"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Situasjon",
+    "description": "Risikoområde",
+    "attributes": [
+      {
+        "name": "situasjonId",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "situasjonstype",
+        "type": "Situasjonstype",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "akutt_forurensning",
+              "label": "Akutt forurensning"
+            },
+            {
+              "value": "annet",
+              "label": "Annet"
+            },
+            {
+              "value": "atomulykker",
+              "label": "Atomulykker"
+            },
+            {
+              "value": "branner",
+              "label": "Branner"
+            },
+            {
+              "value": "digtale_hendelser",
+              "label": "Digitale hendelser"
+            },
+            {
+              "value": "ekstremvaer",
+              "label": "Ekstremvær"
+            },
+            {
+              "value": "flom",
+              "label": "Flom"
+            },
+            {
+              "value": "forsyningssvikt",
+              "label": "Forsyningssvikt"
+            },
+            {
+              "value": "jernbane",
+              "label": "Jernbane"
+            },
+            {
+              "value": "kriminalitet_og_tilsiktede_hendelser",
+              "label": "Kriminalitet og tilsiktede hendelser"
+            },
+            {
+              "value": "luftfart",
+              "label": "Luftfart"
+            },
+            {
+              "value": "migrasjon",
+              "label": "Migrasjon"
+            },
+            {
+              "value": "naeringsvirksomhet_og_industri",
+              "label": "Næringsvikrsomhet og industri"
+            },
+            {
+              "value": "sikkerhetspolitiske_hendelser",
+              "label": "Sikkerhetspolitiske hendelser"
+            },
+            {
+              "value": "sjoe",
+              "label": "Sjø"
+            },
+            {
+              "value": "skred",
+              "label": "Skred"
+            },
+            {
+              "value": "sykdommer",
+              "label": "Sykdommer"
+            },
+            {
+              "value": "vei",
+              "label": "Veg"
+            }
+          ],
+          "definition": "Alvorlighetsgrad til hendelsen",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "HendelseGenerell"
+      ],
+      "associations": [
+        {
+          "target": "BerørtOmråde",
+          "role": "situasjonBerort",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Hendelse",
+          "role": "situasjonHendelse",
+          "cardinality": "0..*"
+        },
+        {
+          "target": "Tiltaksområde",
+          "role": "situasjonTiltak",
+          "cardinality": "0..*"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Tiltaksområde",
+    "description": "Tiltaksområde",
+    "attributes": [
+      {
+        "name": "risikoId",
+        "type": "CharacterString",
+        "cardinality": "1"
+      },
+      {
+        "name": "tiltakstype",
+        "type": "Tiltakstype",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "alternativ_forsyning",
+              "label": "Alternativ forsyning"
+            },
+            {
+              "value": "evakueringssone",
+              "label": "Evakueringssone"
+            },
+            {
+              "value": "evakueringssenter",
+              "label": "Evakueringssenter"
+            },
+            {
+              "value": "hindring",
+              "label": "Hindring"
+            },
+            {
+              "value": "mottakssted",
+              "label": "Mottakssted"
+            },
+            {
+              "value": "paaroerendesenter",
+              "label": "Pårørendesenter"
+            },
+            {
+              "value": "sperring",
+              "label": "Sperring"
+            },
+            {
+              "value": "teknisk_sikring",
+              "label": "Teknisk Sikring"
+            },
+            {
+              "value": "annet",
+              "label": "Annet"
+            }
+          ],
+          "definition": "Type tiltak",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "posisjon",
+        "type": "GM_Point",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "linje",
+        "type": "GM_Curve",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "HendelseGenerell"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "HendelseGenerell",
+    "description": "Abstrakt klasse med felles elementer for alle typer hendelser",
+    "attributes": [
+      {
+        "name": "alvorlighetsgrad",
+        "type": "HendelseAlvorlighet",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "lav",
+              "label": "Lav"
+            },
+            {
+              "value": "middels",
+              "label": "Middels"
+            },
+            {
+              "value": "hoy",
+              "label": "Høy"
+            },
+            {
+              "value": "ubestemt",
+              "label": "Ubestemt"
+            }
+          ],
+          "definition": "Alvorlighetsgrad til hendelsen",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "status",
+        "type": "HendelseStatus",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "paagaende",
+              "label": "paagaende"
+            },
+            {
+              "value": "avsluttet",
+              "label": "avsluttet"
+            },
+            {
+              "value": "simuleringOvelse",
+              "label": "simuleringOvelse"
+            },
+            {
+              "value": "arkivert",
+              "label": "arkivert"
+            }
+          ],
+          "definition": "Status på hendelse",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "fase",
+        "type": "HendelseFase",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "varsling",
+              "label": "Varsling"
+            },
+            {
+              "value": "mobilisering",
+              "label": "Mobilisering"
+            },
+            {
+              "value": "haandtering",
+              "label": "Håndtering"
+            },
+            {
+              "value": "normalisering",
+              "label": "Normalisering"
+            }
+          ],
+          "definition": "Hvilken fase er hendelsen i",
+          "asDictionary": "false",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        }
+      },
+      {
+        "name": "opprettetAv",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "opprettetDato",
+        "type": "DateTime",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "sistRedigertAv",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "sistRedigertDato",
+        "type": "DateTime",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "lenke",
+        "type": "URI",
+        "description": "referanse til det samme objektet forvaltet i et annet datasystem. Kan f.eks. være parkforvalter i en kommune, skytebaneregister e.l. Informasjonen må vedlikeholdes administrativt.\n\nDet vil være opp til det eksterne systemet å etablere URI-er som unikt indentifiserer systemet og det aktuelle objektet i systemet.",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "beskrivelse",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "delingStatus",
+        "type": "boolean",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "CREATED_USER",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "LAST_EDITED_USER",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      },
+      {
+        "name": "LAST_EDITED_DATE",
+        "type": "CharacterString",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": []
+    }
+  },
+  {
+    "name": "Fellesegenskaper",
+    "description": "abstrakt objekttype som bærer sentrale egenskaper som er anbefalt for bruk i produktspesifikasjoner.",
+    "attributes": [
+      {
+        "name": "identifikasjon",
+        "type": "Identifikasjon",
+        "description": "unik identifikasjon av et objekt\n\nMerknad FKB:\n\nUnik identifikasjon av et objekt, ivaretas av den ansvarlige produsent/forvalter, og som kan benyttes av eksterne applikasjoner som referanse til objektet.\n\nDen unike identifikatoren er unik for kartobjektet og skal ikke endres i kartobjektets levetid. Dette må ikke forveksles med en tematisk identifikator (for eksempel bygningsnummer) som unikt identifiserer et objekt i virkeligheten. En bygning med samme bygningsnummer vil kunne representeres i mange kartprodukter der det finnes en unik identifikasjon i hver av dem.\n\nFor FKB benyttes UUID (Universally unique identifier) som lokalId. Dette innebærer at lokalId alene alltid vil være unik. Likevel skal alltid navnerom også angis. Navnerom angir FKB-datasettet.",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "CharacterString",
+            "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet. For FKB-data benyttes UUID som lokalId.",
+            "cardinality": "1"
+          },
+          {
+            "name": "navnerom",
+            "type": "CharacterString",
+            "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for navnerom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
+            "cardinality": "1"
+          },
+          {
+            "name": "versjonId",
+            "type": "CharacterString",
+            "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans)",
+            "cardinality": "0..1"
+          }
+        ]
+      },
+      {
+        "name": "oppdateringsdato",
+        "type": "DateTime",
+        "description": "tidspunkt for siste endring på objektet\n\nMerknad FKB:\n\nDenne datoen viser datasystemets siste endring på dataobjektet. Egenskapen settes av forvaltningssystemet etter følgende regler:\n\ni. Oppdateringsdato er tidspunkt for oppdatering av databasen og settes av forvaltningsbasen (ikke av klienten).\n\nii. Oppdateringsdato skal endres også hvis det er kopidata som blir endret eller importert i en ”kopibase”.\n\niii. Når avgrensingslinjene til en flate endres, skal flateobjektet få ny oppdateringsdato.\n\niv. Oppdateringsdato skal endres hvis en egenskap endres.",
+        "cardinality": "1"
+      },
+      {
+        "name": "sluttdato",
+        "type": "DateTime",
+        "description": "<i>Tid for når denne versjonen av objektet var erstattet eller opphørt å eksistere.</i>\n<i>\n</i><i>Merknad FKB:</i>\nEgenskapen settes av forvaltningssystemet<i>. Sluttdato skal kun sendes med ut fra forvaltningssystemet i sammenhenger der objektenes historikk er interessant.  </i>",
+        "cardinality": "0..1"
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    }
+  }
+]
