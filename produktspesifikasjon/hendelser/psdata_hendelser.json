@@ -1,0 +1,145 @@
+{
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
+  "title": "Naturhendelser",
+  "format": "text/html",
+  "date": {
+    "creation": "2019-10-23",
+    "revision": "2019-10-23"
+  },
+  "contact": {
+    "individualName": "Skred- og vassdragsavdelingen",
+    "organizationName": "Norges vassdrags- og energidirektorat",
+    "logo": "https://register.geonorge.no/data/organizations/970205039_NVE_liten.png",
+    "electronicMailAddress": "naturhendelser@nve.no",
+    "role": "owner"
+  },
+  "identificationSection": {
+    "title": "Naturhendelser",
+    "abstract": "Naturhendelser, tidligere kalt Flomhendelser.no, er en tjeneste levert av Norges vassdrags- og energi­direktorat (NVE). Tjenesten leverer digitale rapporter som beskriver værrelaterte hendelser som har ført til flom, oversvømmelser, overvann, skred og andre naturfarer i Norge. I dag finnes det mest informasjon om flomhendelser, men på sikt ønsker vi at tjenesten også skal gi informasjon om andre typer naturfarehendelser. Rapportene er utarbeidet av fageksperter fra NVE med mulige eksterne bidragsyter fra for eksempel Meteorologisk institutt (MET) og Statens vegvesen (SVV). Informasjonen er inndelt i følgende temaer:\n\nOversikt\nTidsforløp\nObservasjoner\nVær og varsler\nSkader\nDokumentasjon\n\nInformasjonen som vises er en kombinasjon av redaksjonelt innhold og data hentet inn fra en rekke interne og eksterne kilder. Dette gir et detaljert og nyansert bilde av hendelsen.\n\nVårt mål er at Naturhendelser blir din primærkilde til informasjon om værrelaterte naturfarehendelser i Norge.",
+    "purpose": {
+      "summary": "Vårt mål er at Naturhendelser blir din primærkilde til informasjon om værrelaterte naturfarehendelser i Norge.",
+      "useCase": {
+        "name": "Bruksområde",
+        "summary": "Tjenesten leverer digitale rapporter som beskriver værrelaterte hendelser som har ført til flom, oversvømmelser, overvann, skred og andre naturfarer i Norge. I dag finnes det mest informasjon om flomhendelser, men på sikt ønsker vi at tjenesten også skal gi informasjon om andre typer naturfarehendelser. Denne informasjonen kan brukes som hjelp i arealplanlegging, evaluering av varsling, forberedelse før varslete hendelser (beredskap), forskning, undervisning m.m."
+      }
+    },
+    "uniqueId": "4851c6ae-cf38-425f-af4e-0b418ef7bb43",
+    "keyword": [
+      "Flom",
+      "Naturfare",
+      "Overvann",
+      "Ekstremvær",
+      "Samfunnssikkerhet"
+    ],
+    "restriction": {
+      "legalConstraints": {
+        "accessConstraints": "Åpne data",
+        "useConstraints": "Lisens",
+        "license": "No conditions apply to access and use",
+        "licenseUrl": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply"
+      },
+      "securityConstraints": {
+        "classification": "Ugradert"
+      }
+    },
+    "contact": [
+      {
+        "individualName": "Skred- og vassdragsavdelingen",
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "naturhendelser@nve.no",
+        "role": "owner"
+      },
+      {
+        "individualName": "Yngve Antonsen",
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "yaa@nve.no",
+        "role": "pointOfContact"
+      },
+      {
+        "individualName": "Skred- og vassdragsavdelingen",
+        "organizationName": "Norges vassdrags- og energidirektorat",
+        "electronicMailAddress": "naturhendelser@nve.no",
+        "role": "publisher"
+      }
+    ],
+    "maintenance": "Etter behov",
+    "extent": {
+      "geographicElement": {
+        "westBoundLongitude": "2.0",
+        "eastBoundLongitude": "33.0",
+        "southBoundLatitude": "57.0",
+        "northBoundLatitude": "72.0"
+      },
+      "temporalElement": {
+        "timePeriod": {
+          "beginPosition": "2019-10-23",
+          "endPosition": "2019-10-23"
+        }
+      }
+    },
+    "date": {
+      "creation": "2019-10-23",
+      "publication": "2019-10-23",
+      "revision": "2019-10-23"
+    }
+  },
+  "scopeSection": [
+    {
+      "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Filnedlasting",
+        "level": "dataset",
+        "levelDescription": "Naturhendelser"
+      }
+    }
+  ],
+  "dataQualitySection": {
+    "scope": {
+      "level": "software"
+    }
+  },
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Etter behov"
+  },
+  "deliverySection": [
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Webside",
+          "deliveryService": {
+            "serviceEndpoint": "https://naturhendelser.varsom.no/",
+            "serviceProperty": {
+              "type": "Webside",
+              "value": "WWW:LINK-1.0-http--link"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "metadataSection": {
+    "metadataStandard": "ISO19115",
+    "metadataStandardVersion": "2003",
+    "metadataDate": "2023-07-28",
+    "language": "nor",
+    "contact": {
+      "organizationName": "Norges vassdrags- og energidirektorat",
+      "individualName": "Yngve Antonsen",
+      "logo": "https://register.geonorge.no/data/organizations/970205039_NVE_liten.png",
+      "electronicMailAddress": "yaa@nve.no",
+      "role": "pointOfContact"
+    },
+    "metadataIdentifier": {
+      "authority": "Geonorge",
+      "code": "4851c6ae-cf38-425f-af4e-0b418ef7bb43",
+      "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/4851c6ae-cf38-425f-af4e-0b418ef7bb43"
+    }
+  }
+}
