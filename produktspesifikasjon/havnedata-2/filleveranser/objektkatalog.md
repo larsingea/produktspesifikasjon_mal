@@ -1,3 +1,7274 @@
 ### Datamodell
 
+#### Oversikt
+
+<a href="filleveranser_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_overview.png" alt="Datamodell Filleveranser - oversikt" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Fellesegenskaper og abstrakte objekttyper
+
+<a href="filleveranser_feature_catalogue_Fellesegenskaper_og_abstrakte_objekttyper.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_Fellesegenskaper_og_abstrakte_objekttyper.png" alt="Datamodell Filleveranser - Fellesegenskaper og abstrakte objekttyper" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Havnedata 2.0
+
+<a href="filleveranser_feature_catalogue_Havnedata_2_0.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_Havnedata_2_0.png" alt="Datamodell Filleveranser - Havnedata 2.0" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Reguleringer
+
+<a href="filleveranser_feature_catalogue_Reguleringer.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_Reguleringer.png" alt="Datamodell Filleveranser - Reguleringer" style="max-width: 100%; height: auto;" /></a>
+
+#### Komplett diagram
+
 <a href="filleveranser_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue.png" alt="Datamodell Filleveranser" style="max-width: 100%; height: auto;" /></a>
+
+#### Kran
+
+Innretning for å løfte eller flytte tunge gjenstander, og hører til på kaien/havnen.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>energikilde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere energikilden til kranen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Energikilde</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/energikilde">https://register.geonorge.no/sosi-kodelister/havnedata/energikilde</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kranspesifikasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Spesifikasjon for kranen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>krantype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Krantype.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Krantype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/krantype">https://register.geonorge.no/sosi-kodelister/havnedata/krantype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksbelastning</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maks løfteevne for krana angitt i tonn (ved liten arm).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksbelastningRekkevidde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maks løfteevne for krana ved maksimal arm/rekkevidde angitt i antall tonn.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>mobilitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskap for å angi om en krane er fastmontert eller flyttbar (mobil).<br />Fastmontert krane står i et fast punkt på kaia, mens mobile kraner kan flyttes. Skinnegående kraner eller andre semi-mobile kraner angis som mobile.<br />For mobile kraner registreres punktet som en skjønnsmessig representativ koordinat for krana.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>rekkevidde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Rekkevidden til kranen, ut fra kaifronten, i antall meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### HavneanleggGrense
+
+Avgrensning av havneanlegg.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### VAuttak
+
+Tilkoblingspunkt for vann på kaia.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kapasitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kapasitet til fylling av vann angitt i antall m3/time.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kumnummer</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>ID-merking av kummer. Kan tas fra havnas eget merkesystem eller kommunens SID-nr.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilgangstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere hvem som har mulighet til å benytte uttaket.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilkoblingsdimensjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Størrelse/dimensjon på rørene som skal kobles sammen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>VAuttakstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskrivelse av hva slags uttakstype som kan gjøres.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>VAuttakstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/vauttakstype">https://register.geonorge.no/sosi-kodelister/havnedata/vauttakstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### Havneanlegg
+
+Med havneanlegg menes arealer, bygninger, innretninger og annen infrastruktur som brukes i havnevirksomhet eller havneformål. Herunder: kaier, terminalbygninger, laste-, losse- og omlastningsinnretninger og lager- og administrasjonsbygninger.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>eier</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Eier av havneanlegget.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>eierskap</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Felt for å angi type eierskap.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Eierskap</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/eierskap">https://register.geonorge.no/sosi-kodelister/havnedata/eierskap</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forvaltesAv</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Felt for å angi hvem havneanlegget forvaltes av.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ISPSHavneanlegg</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskaper spesifikke for ISPSHavneanlegg.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>ISPSHavneanlegg</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ISPSHavneanlegg.kontaktinformasjonPFSO</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kontaktinformasjon til PFSP eller assisterende PFSO på det aktuelle ISPS-området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ISPSHavneanlegg.portFacilityNrIMO</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Lokasjonskode for ISPS-området. Består av UNLOCODE, samt en 4-siffret tallkode.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ISPSHavneanlegg.sikkerhetsbarriere</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Attributt for å spesifisere om et havnesikkerhetsområde ikke har inngjerding eller annen form for sikkerhetsbarriere.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ISPSHavneanlegg.sikringstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver sikring/tilgang til havnesikkerhetsområdet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Sikringstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/sikringstype">https://register.geonorge.no/sosi-kodelister/havnedata/sikringstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ISPSHavneanlegg.statusGodkjenning</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Felt for å angi status på ISPS godkjenning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavneanleggId
+
+**Assosiasjoner**
+HavneanleggGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Flytedokk
+
+En flytedokk eller våtdokk er en flytende plattform for å heve skip opp av sjøen når det skal gjøres vedlikehold eller reperasjoner av skip.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>løftekapasitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal løftekapasitet, angitt i tonn.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksFartøyBredde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal bredde på fartøyet som dokken kan romme. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksFartøyDyptgående</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal dyptgående på fartøyet som dokken kan romme. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksFartøyLengde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal lengde på fartøyet som dokken kan romme. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>navn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navn på flytedokken.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavneanleggId
+
+**Assosiasjoner**
+FlytedokkGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Toalett
+
+Offentlig toalett.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### FlytedokkGrense
+
+Avgrensning av Flytedokk.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### Fender
+
+Beskytter/demper for bevegelse mellom båt og kai. Monteres ofte fast på kaikanten.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>antall</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Oppgi antall fendere. Benyttes ved gruppering av fendere.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>fendergruppering</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kurve geometri som brukes ved gruppering av fendere.<br />Geometrien skal følge kaifront der hvor det er mange like fendere. Antall fendere oppgis i antall-felt, og avstand spesifiseres i informasjonsfeltet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>fenderorientering</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Retning/orientering på fenderen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Fenderorientering</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fenderorientering">https://register.geonorge.no/sosi-kodelister/havnedata/fenderorientering</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>fenderspesifikasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskap for å spesifisere fender. Fenderen kan beskrives med mål, for eksempel bredde, høyde, diameter etc.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>fendertype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Fendertype</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Fendertype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fendertype">https://register.geonorge.no/sosi-kodelister/havnedata/fendertype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydeSjøkartnull</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angitt høyde i meter over vannet. Egenskapen høyde angis i forhold til sjøkartnull (dvs. høyder over lokal LAT-verdi) dersom ikke annet er angitt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### LastbegrensningsområdeGrense
+
+Avgrensning av lastbegrensningsområde.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### Avfallspunkt
+
+punkt for å kaste avfall
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>avfallsplan</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Henvisning til avfallsplan som gjør rede for planlagt håndtering av avfall.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>avfallstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Avfallstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Avfallstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/avfallstype">https://register.geonorge.no/sosi-kodelister/havnedata/avfallstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>beholdertype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beholdertype</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Beholdertype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/beholdertype">https://register.geonorge.no/sosi-kodelister/havnedata/beholdertype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>mobilitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskap for å anngi om avfallspunktet er fast montert eller flyttbart ( i form av en bil eller lignende).<br /><br />For mobile tilkoblingspunkt er det vanskelig/meningsløst å stedfeste punktet nøyaktig. Punktet plasseres da på et passelig representativt punkt og gis en kvalitetskode som angir stor usikkerhet i innmåling.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilgangstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere hvem som har mulighet til å benytte avfallspunktet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### Kaiområde
+
+Kaiområde er området direkte innenfor kaifronten som tilhører den samme kaien.<br />Kaiområde avgrenses av KaiområdeGrense. Kaifront brukes ikke som avgrensning til kaiområde, men ligger som et eget objekt.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaidekketype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskrivelse av materialbruk på dekke av kaia (betong, asfalt, tre e.l.)</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kaidekketype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype">https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaitype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angivelse av kaitype.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kaitype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaitype">https://register.geonorge.no/sosi-kodelister/havnedata/kaitype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Område</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+KaiId
+
+**Assosiasjoner**
+KaiområdeGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Fortøyningsinnretning
+
+Fortøyningsinnretning som tilhører kaia.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>fortøyningstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Fortøyningstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Fortøyningstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fortoyningstype">https://register.geonorge.no/sosi-kodelister/havnedata/fortoyningstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydeSjøkartnull</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angitt høyde i meter over vannet. Egenskapen høyde angis i forhold til sjøkartnull (dvs. høyder over lokal LAT-verdi) dersom ikke annet er angitt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksbelastning</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskrivelse av maks belastning for pullerten i antall tonn</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>sertifiseringsdato</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Dato for forrige sertifisering.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>spesifikasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskap for å spesifisere fortøyningsinnretning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tillattFortøyningsvinkelGrunnriss</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Tillatt område for fortøyning sett i grunnriss. Eksempel: +/-90°.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tillattFortøyningsvinkelOppriss</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Tillatt område for fortøyning sett i oppriss. Eksempel: +75°/-15°.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### Havnegjerde
+
+Gjerde eller annen barriere. Følger ofte Havnesikkerhetsområde, men brukes ikke som avgrensning. Havnesikkerhetsområde avgrenses av HavnesikkerhetsområdeGrense.<br />Havnegjerde vil også ofte være kartlagt i FKB-BygnAnlegg som AnnetGjerde, mur e.l. I så fall bør disse objektene ha sammenfallende geometri.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periode</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Periode havnegjerdet er satt opp. Brukes i tilfeller der havnegjerde er kun satt opp i visse tidsrom eller deler av året.  Attributt trengs ikke benyttes ved permanent gjerde.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Periode</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periode.mndFra</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Måned fra.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Måned</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/maned">https://register.geonorge.no/sosi-kodelister/havnedata/maned</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periode.mndTil</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Måned til.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Måned</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/maned">https://register.geonorge.no/sosi-kodelister/havnedata/maned</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>senterlinje</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavneanleggId
+
+#### Tørrdokk
+
+Et basseng stort nok til at skip kan seile ut og inn. Bunnen ligger lavere enn havnivået og innløpet kan lukkes med porter. Vann kan pumpes ut, slik skip kan stå tørt, for vedlikehold og reperasjon.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>løftekapasitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal løftekapasitet, angitt i tonn.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksFartøyBredde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal bredde på fartøyet som dokken kan romme. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksFartøyDyptgående</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal dyptgående på fartøyet som dokken kan romme. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksFartøyLengde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal lengde på fartøyet som dokken kan romme. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>navn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navn på tørrdokken.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavneanleggId
+
+**Assosiasjoner**
+TørrdokkGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### KaiområdeGrense
+
+Avgrensning av kaiområde.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### HavnegjerdeInngang
+
+Inngang, åpning eller innkjørsel til området som er avsperret av Havnegjerde.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>avsperringstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å angi type avsperring for inngangen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Avsperringstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/avsperringstype">https://register.geonorge.no/sosi-kodelister/havnedata/avsperringstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periode</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Periode havnegjerdet og/eller havnegjerdeInngang er satt opp. Brukes i tilfeller der havnegjerde er kun satt opp i visse tidsrom eller deler av året.  Attributt trengs ikke benyttes ved permanent gjerde.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Periode</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periode.mndFra</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Måned fra.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Måned</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/maned">https://register.geonorge.no/sosi-kodelister/havnedata/maned</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periode.mndTil</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Måned til.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Måned</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/maned">https://register.geonorge.no/sosi-kodelister/havnedata/maned</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>senterlinje</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>åpningstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere åpningsmekanisme av port, bom eller annet som avsperrer havnesikkerhetsområde.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Åpningstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/apningstype">https://register.geonorge.no/sosi-kodelister/havnedata/apningstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavneanleggId
+
+#### ForvaltningsområdeGrense
+
+Avgrensning av forvaltningsområde.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### SlippGrense
+
+Avgrensning av Slipp.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### TørrdokkGrense
+
+Avgrensning av Tørrdokk.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### HavneområdeGrense
+
+Avgrensning av havneområde.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### Havneområde
+
+Havn er et avgrenset område som inneholder kai/kaier tilknyttet land- og sjøarealer som er tilrettelagt for overføring av gods, personer eller lignende mellom land og sjø.<br />Havneområde kjennetegnes ved at de har en UNLOCODE tilknyttet seg, og innenfor området må det være minst én kai og én kaifront.<br />Havneområdet kan inneholde mange havneanlegg, mange kaier og andre objekter.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forvaltesAv</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Felt for å angi hvem som forvalter eller administrerer havneområdet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavnId
+
+**Assosiasjoner**
+HavneområdeGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Forvaltningsområde
+
+Areal som viser utstrekningen på det område en kommune eller en kommunal/interkommunal havneadministrasjonen har ansvaret for. Dette området er ofte sammenfallende med kommunens sjøområde, som er det område hvor kommunen har planmyndighet etter plan- og bygningsloven med unntak av hoved- og biled (Hoved- og biled forvaltes av Kystverket).
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forvaltesAv</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Felt for å angi hvem som forvalter området. Vanligvis kommune, IKS eller havneadministrasjon på vegne av kommune.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavnId
+
+**Assosiasjoner**
+ForvaltningsområdeGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Beredskapspunkt
+
+Punkt på kaia der det er plassert utstyr for beredskap/sikkerhet.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>beredskapstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beredskapstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Beredskapstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/beredskapstype">https://register.geonorge.no/sosi-kodelister/havnedata/beredskapstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>spesifikasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskap for å spesifisere beredskapstype.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### Kaifront
+
+Kaifront er den ytterste delen av kaien, som avgrenser sjøen fra land, hvor fartøy kan ligge fortøyd langs.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydeSjøkartnull</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angitt høyde på kaien i meter over vannet. Egenskapen høyde angis i forhold til sjøkartnull (dvs. høyder over lokal LAT-verdi) dersom ikke annet er angitt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaifronttype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver type konstruksjon kaifronten har mot sjøen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kaifronttype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaifronttype">https://register.geonorge.no/sosi-kodelister/havnedata/kaifronttype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaitype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Type kai</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kaitype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaitype">https://register.geonorge.no/sosi-kodelister/havnedata/kaitype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>lengde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angitt lengde på kaifronten i antall meter. Kailengden måles opp på den delen av kaifronten som egner seg for anløp av skip. Lengde kan også beregnes ut fra lengden på geometrien.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>senterlinje</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### Havnesensor
+
+Sensor som måler, samler inn data eller registrerer annet i tilknytning til havnen.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>objektLøpenummer</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Unik identisfisering av det enkelte objekt på kaia i form av URL, nummer, navn eller annet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>sensortype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Type sensor.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Sensortype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/sensortype">https://register.geonorge.no/sosi-kodelister/havnedata/sensortype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavnId
+
+#### Slipp
+
+Skinnegående bane eller et forseggjort opptrekk som fartøy kan hales opp ved landsetting, fra flytende posisjon og opp på tørt land. Skråplanet går vanligvis ut og ned i vannet.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydeSjøkartnull</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angitt høyde på høyeste del av slippen, i meter over vannet. Egenskapen høyde angis i forhold til sjøkartnull (dvs. høyder over lokal LAT-verdi) dersom ikke annet er angitt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaidekketype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskrivelse av materialebruk på dekket av slippen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kaidekketype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype">https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kranKapasitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kapasitet til kran tilknyttet slipp, angitt i tonn.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksBreddeFartøy</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal bredde på fartøyet som slippen kan ta. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksDyptgåendeFartøy</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal dyptgående på fartøyet som slippen kan ta. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>maksLengdeFartøy</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal lengde på fartøy som slippen kan ta. Angis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>navn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navn på slippen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>slippKapasitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Løftekapasitet til slippen, angitt i tonn.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>spesifikasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Attributt for å spesifisere opptrekksmekanisme (vinsj, skinner el.) eller annen relevant informasjon.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilgangstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere hvem som har mulighet til å benytte slippen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+KaiId
+
+**Assosiasjoner**
+SlippGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Lastbegrensningsområde
+
+Område i havnen eller på kai som har begrensinger for hva det tåler av belastning.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>akseltrykk</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Det trykk som må bæres av én aksel på en vogn eller kjøretøy.<br />Øvre grense for akseltrykk. Måles i tonn (t).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>bruksklassetype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Bruksklasse</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Bruksklassetype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/bruksklassetype">https://register.geonorge.no/sosi-kodelister/havnedata/bruksklassetype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaidekketype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kaidekke</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kaidekketype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype">https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>lastId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Tall eller tekst havnen bruker for å identifisere et lastbegrensningsområde.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>lastreferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Referanse til originaldokument, tegning e.l. som inneholder informasjon om lastebegrensing.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>minsteAvstandPunktlast</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Hvor tett to punktlaster kan stå for å ikke overbelaste kaien. Henger sammen med egenskapen punktlast. Måles i meter (m).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Område</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>punktlast</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Vekten av last fordelt i et punkt. Øvre grense for maksimal vekt av en punktlast. Måles i tonn (t).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>vektbegrensning</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Vekten av jevnt fordelt last over et område. Øvre grense for jevnt fordelt last. Måles i antall tonn pr. kvadratmeter (t/m2).</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Real</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+KaiId
+
+**Assosiasjoner**
+LastbegrensningsområdeGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Kamera
+
+Kamera tilknyttet havnen.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>objektLøpenummer</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Unik identisfisering av det enkelte objekt på kaia i form av URL, nummer, navn eller annet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavnId
+
+#### Drivstofftilkobling
+
+Tilkoblingspunkt for drivstoff på kaia.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>drivstofftype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Type drivstoff.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Drivstofftype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/drivstofftype">https://register.geonorge.no/sosi-kodelister/havnedata/drivstofftype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kapasitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kapasitet til fylling av drivstoff angitt i antall m3/time.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>mobilitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskap for å anngi om drivstoffpunktet er fast montert eller flyttbart (mobilt drivstoffpunkt i form av en tankbil eller lignende).<br /><br />For mobile tilkoblingspunkt er det vanskelig/meningsløst å stedfeste punktet nøyaktig. Punktet plasseres da på et passelig representativt punkt og gis en kvalitetskode som angir stor usikkerhet i innmåling.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilgangstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere hvem som har mulighet til å benytte punktet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### Tømmestasjon
+
+Tømmestasjon eller punkt for tømming av væske (avløpsvann, septik eller tilsvarende).
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>avløpstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskrivelse av hva slags tømming/avløpstype som er tilgjengelig.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Avløpstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/avlopstype">https://register.geonorge.no/sosi-kodelister/havnedata/avlopstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kapasitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kapasitet til tømming, angitt i antall m3/time.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kumnummer</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>ID-merking av kummer. Kan tas fra havnas eget merkesystem eller kommunens SID-nr.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>mobilitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Egenskap for å anngi om tømmestasjonen er fast montert eller flyttbart (i form av en tankbil eller lignende).<br /><br />For mobile tilkoblingspunkt er det vanskelig/meningsløst å stedfeste punktet nøyaktig. Punktet plasseres da på et passelig representativt punkt og gis en kvalitetskode som angir stor usikkerhet i innmåling.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilgangstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere hvem som har mulighet til å benytte tømmestasjonen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilkoblingsdimensjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Størrelse/dimensjon på rørene som skal kobles sammen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### ELkobling
+
+Tilkoblingspunkt for strøm på kaia.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELanleggstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskrivelse av hva slags type strømtilkobling som kan gjøres.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>ELanleggstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/elanleggstype">https://register.geonorge.no/sosi-kodelister/havnedata/elanleggstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELkoblinger</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Spesifikasjon av de ulike kombinasjonene EL-koblingspunkt som finnes.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>ELkoblingEgenskaper</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELkoblinger.effekt</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Watt. Arbeid pr. sekund.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELkoblinger.faser</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Betegnelse på de enkelte polene eller lederne i et vekselstrømsystem.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELkoblinger.frekvens</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Hvor mange ganger en elektrisk spenning veksler i løpet av ett sekund. Måles i Hz.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Frekvens</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/frekvens">https://register.geonorge.no/sosi-kodelister/havnedata/frekvens</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELkoblinger.kontaktId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Id-nummer eller annen beskrivelse som spesifiserer hvilken type kontakt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELkoblinger.sikringstørrelse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Strømstyrke, oppgis i ampere, SI-enheten for elektrisk strøm. Strømstyrke er lik ladning som passerer et tverrsnitt av en leder pr. sekund.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ELkoblinger.spenning</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Volt. Elektrisk spenning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Spenning</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/spenning">https://register.geonorge.no/sosi-kodelister/havnedata/spenning</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>høydereferanse</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Høydereferanse til kartobjektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Høydereferanse</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Posisjon</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>rekkeviddeLadeanlegg</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Attributt som benyttes ved ladeannlegg, for å spesifisere lengde på kabeltrommel som er tilgjengelig. Oppgis i meter.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>status</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Beskriver status til et objekt.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Status</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>tilgangstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste for å spesifisere hvem som har mulighet til å benytte punktet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Tilgangstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+ObjektId
+
+#### HavneanleggId (abstrakt)
+
+Abstrakt objekt som holder egenskaper for unik identifisering av et havneanlegg. Egenskapene arves ned til øvrige objektklasser i Havnedata.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>havneanleggId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Unik identifisering av det enkelte havneanlegg.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>havneanleggNavn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navn på havneanlegg. Navn bør stemme overens med SafeSeaNet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>ISPS</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Boolsk verdi (JA/NEI) om angir om havneanlegget er et ISPS Havneanlegg.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Boolean</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavnId
+
+#### FellesegenskaperOpsjonell (abstrakt)
+
+abstrakt objekt som bærer en felles egenskaper som brukes på alle objekttyper i FKB.<br />Opsjonelle egenskaper.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>informasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>generell opplysning</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>link</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Link i form av URL eller annet til mer informasjon om objektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>oppdateringsdato</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>dato for siste endring på objektetdataene.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>DateTime</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### FellesegenskaperPåkrevd (abstrakt)
+
+abstrakt objekt som bærer en felles egenskaper som brukes på alle objekttyper i FKB.<br />Påkrevde egenskaper.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>datafangstdato</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>dato når objektet siste gang ble registrert/observert/målt i terrenget</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>identifikasjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Unik identifikasjon av objektet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Identifikasjon</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>identifikasjon.lokalId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Unik identifikator innenfor navnerommet. For FKB benyttes UUID.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>identifikasjon.navnerom</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>navnerom i form av en URI</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>identifikasjon.versjonId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>identifikasjon av en spesiell versjon av et geografisk objekt (instans), maksimum lengde på 25 karakterers. Dersom spesifikasjonen av et geografisk objekt med en identifikasjon inkludererer livsløpssyklusinformasjon, benyttes denne versjonId for å skille mellom ulike versjoner av samme objekt. versjonId er en unik  identifikasjon av versjonen. Benyttes normalt ikke i FKB.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kvalitet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Stedfestingskvalitet</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Posisjonskvalitet</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kvalitet.datafangstmetode</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Metode for datafangst.<br />Egenskapen beskriver datafangstmetode for grunnrisskoordinater (x,y), eller for både grunnriss og høyde (x,y,z) dersom det ikke er oppgitt noen verdi for datafangstmetodeHøyde.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Datafangstmetode</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode">https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kvalitet.datafangstmetodeHøyde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Metode brukt for høyderegistrering av posisjon.<br />Det er bare nødvending å angi en verdi for egenskapen dersom datafangstmetode for høyde avviker fra datafangstmetode for grunnriss.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Datafangstmetode</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode">https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kvalitet.nøyaktighet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Punktstandardavviket i grunnriss for punkter samt tverravvik for linjer.<br /><br />Merknad:<br />Oppgitt i cm</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kvalitet.nøyaktighetHøyde</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Nøyaktighet for høyden i cm.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kvalitet.synbarhet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Hvor godt den kartlagte detalj var synbar ved kartleggingen.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Synbarhet</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/synbarhet">https://register.geonorge.no/sosi-kodelister/havnedata/synbarhet</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### HavnId (abstrakt)
+
+Abstrakt objekt som holder egenskaper for unik identifisering av en havn. Egenskapene arves ned til øvrige objektklasser i Havnedata.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>havn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Stedsnavn på havnen som har blitt tildelt en UNLOCODE. Navnet må samsvare med UNLOCODE.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>UNLOCODE</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Lokaliseringskode fra UNLOCODE-systemet som identifiserer et havneområde. Koden består av 5 bokstaver: de to første bokstavene angir landskode, mens de tre siste identifiserer havnen. Eks: NOSVG (Stavanger).<br />Se liste med lovlige kodeverdier her: <a href="https://service.unece.org/trade/locode/no.htm">https://service.unece.org/trade/locode/no.htm</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperOpsjonell
+
+#### KaiId (abstrakt)
+
+Abstrakt objekt som holder egenskaper for unik identifisering av en kai. Egenskapene arves ned til øvrige objektklasser i Havnedata.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaiId</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Unik identifisering av den enkelte kai.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kaiIdIntern</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Havnens interne egendefinerte nummering av kaier.<br />Nummerering varierer fra havn til havn, noen bruker utelukkende tall eller bokstaver, mens andre bruker en kombinasjon.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>kainavn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navn på kaien. Det samme kainavnet brukes på alle kaifronter og kaiområder som regnes å tilhøre samme kai. Navn bør stemme overens med SafeSeaNet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+HavneanleggId
+
+#### ObjektId (abstrakt)
+
+Abstrakt objekt som holder egenskaper for unik identifisering av objekt på kaien.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>objektLøpenummer</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Unikt løpenummer for identifisering av det enkelte objekt på kaien, i form av nummer/tekst.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+KaiId
+
+#### Forbudsområde
+
+Område som er omfattet av forbud, som f.eks. ferdselsforbud for vannscooter.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>fastsattAv</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angir hvem forskriften er fastsatt av.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forbudstype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angir hvilket type forbud som gjelder for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Forbudstype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/forbudstype">https://register.geonorge.no/sosi-kodelister/havnedata/forbudstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forskriftLenke</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Lenke til forskiften på lovdata.no.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forskriftNavn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navnet på forskrift som regulerer forbudsområdet. Ved langt navn kan korttittel benyttes.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>gjelderFor</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Geografisk område som forskriften gjelder for. Står spesifisert i lovteksten, kan være en kommune eller et havneområde.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>gjelderForFartøytype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste som spesifiserer hvilken type fartøy som er omfattet av forbudet.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Fartøytype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype">https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>lovhjemmel</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Lov som forbudet eller forskriften har hjemmel i.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periodeGyldigFra</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Periode gyldig fra. Oppgis for forbudsområder som har tidsavgrensning eller gjelder deler av året (f.eks. bare i sommermånedene). Årstall er ikke nødvendig. Dersom årstall ikke oppgis regnes datoen å gjelde hvert år.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periodeGyldigTil</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Periode gyldig til. Oppgis for forbudsområder som har tidsavgrensning eller gjelder deler av året (f.eks. bare i sommermånedene). Årstall er ikke nødvendig. Dersom årstall ikke oppgis regnes datoen å gjelde hvert år.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperOpsjonell
+
+**Assosiasjoner**
+ForbudsområdeGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### Fartsrestriksjoner
+
+Område som har restriksjoner knyttet til ferdsel og fart for fartøyer som ferdes på sjøen.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>fastsattAv</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Angir hvem forskriften er fastsatt av.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forskriftLenke</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Lenke til forskriften på lovdata.no.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>forskriftNavn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navnet på forskriften. Ved langt navn korttittel benyttes.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>gjelderFor</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Geografisk område som forskriften gjelder for. Står spesifisert i lovteksten, og er vanligvis en kommune eller havneområde,</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>gjelderForFartøytype</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Kodeliste som spesifiserer hvilken type fartøy som er omfattet av forskriften.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1..*</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Fartøytype</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype">https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>hastighet</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Maksimal tillatte hastighet, angitt i knop.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Integer</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>lovhjemmel</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Lov som forskriften har hjemmel i.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>område</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Polygon som viser geografisk utstrekning.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Flate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periodeGyldigFra</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Periode gyldig fra. Oppgis for fartsrestriksjoner som har tidsavgrensning eller gjelder deler av året (f.eks. bare i sommermånedene). Årstall er ikke nødvendig. Dersom årstall ikke oppgis regnes datoen å gjelde hvert år.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>periodeGyldigTil</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Periode gyldig til. Oppgis for fartsrestriksjoner som har tidsavgrensning eller gjelder deler av året (f.eks. bare i sommermånedene). Årstall er ikke nødvendig. Dersom årstall ikke oppgis regnes datoen å gjelde hvert år.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Opsjonelt representasjonspunkt for området.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>0..1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Punkt</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperOpsjonell
+
+**Assosiasjoner**
+FartsrestriksjonerGrense – rolle: avgrensning – kardinalitet: 0..*
+
+#### ForbudsområdeGrense
+
+Avgrensning av forbudsområde.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+#### FartsrestriksjonerGrense
+
+Avgrensning av Fartsrestriksjoner.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>grense</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Forløp som følger overgang mellom ulike fenomener.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>Kurve</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+FellesegenskaperPåkrevd
+
+### Kodelister
+
+#### «CodeList» Energikilde
+
+**Definisjon:** Kodeliste for å spesifisere energikilden til et objekt, f.eks. kran.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/energikilde">https://register.geonorge.no/sosi-kodelister/havnedata/energikilde</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Høydereferanse
+
+**Definisjon:** Angivelse av hvor på objektet koordinatregistreringen er utført.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse">https://register.geonorge.no/sosi-kodelister/havnedata/hoydereferanse</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Krantype
+
+**Definisjon:** Angir hvilken type kran.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/krantype">https://register.geonorge.no/sosi-kodelister/havnedata/krantype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Status
+
+**Definisjon:** Angir status til havneobjekt.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/status">https://register.geonorge.no/sosi-kodelister/havnedata/status</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Tilgangstype
+
+**Definisjon:** Angir tilgang til havneobjekt.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype">https://register.geonorge.no/sosi-kodelister/havnedata/tilgangstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» VAuttakstype
+
+**Definisjon:** Type vanntilkobling som kan gjøres.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/vauttakstype">https://register.geonorge.no/sosi-kodelister/havnedata/vauttakstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Eierskap
+
+**Definisjon:** Angir type eierskap.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/eierskap">https://register.geonorge.no/sosi-kodelister/havnedata/eierskap</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Sikringstype
+
+**Definisjon:** Angir sikring til havneobjekt.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/sikringstype">https://register.geonorge.no/sosi-kodelister/havnedata/sikringstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Fenderorientering
+
+**Definisjon:** Angir orientering til fender.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/fenderorientering">https://register.geonorge.no/sosi-kodelister/havnedata/fenderorientering</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Fendertype
+
+**Definisjon:** Angivelse av ulike fendertyper.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/fendertype">https://register.geonorge.no/sosi-kodelister/havnedata/fendertype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Avfallstype
+
+**Definisjon:** Angir type avfall.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/avfallstype">https://register.geonorge.no/sosi-kodelister/havnedata/avfallstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Beholdertype
+
+**Definisjon:** Angir type avfallsbeholder.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/beholdertype">https://register.geonorge.no/sosi-kodelister/havnedata/beholdertype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Kaidekketype
+
+**Definisjon:** Angivelse av ulike typer dekke på kai.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype">https://register.geonorge.no/sosi-kodelister/havnedata/kaidekketype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Kaitype
+
+**Definisjon:** Angivelse av ulik bruk av kai.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaitype">https://register.geonorge.no/sosi-kodelister/havnedata/kaitype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Fortøyningstype
+
+**Definisjon:** Type fortøyningsinnretning.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/fortoyningstype">https://register.geonorge.no/sosi-kodelister/havnedata/fortoyningstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Måned
+
+**Definisjon:** Kodeliste over årets måneder.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/maned">https://register.geonorge.no/sosi-kodelister/havnedata/maned</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Avsperringstype
+
+**Definisjon:** Type avsperring for HavnegjerdeInngang.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/avsperringstype">https://register.geonorge.no/sosi-kodelister/havnedata/avsperringstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Åpningstype
+
+**Definisjon:** Beskriver åpningsmekanisme av port, bom eller annen avsperringstype for HavnegjerdeInngang.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/apningstype">https://register.geonorge.no/sosi-kodelister/havnedata/apningstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Beredskapstype
+
+**Definisjon:** Angir type beredskap eller beredskapsutstyr.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/beredskapstype">https://register.geonorge.no/sosi-kodelister/havnedata/beredskapstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Kaifronttype
+
+**Definisjon:** Ulike typer kaifronter. Beskriver kaifronten sin konstruksjon mot sjøen.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/kaifronttype">https://register.geonorge.no/sosi-kodelister/havnedata/kaifronttype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Sensortype
+
+**Definisjon:** Type sensor.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/sensortype">https://register.geonorge.no/sosi-kodelister/havnedata/sensortype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Bruksklassetype
+
+**Definisjon:** Kodelisten angir bruksklasse på kai. Bruksklassetype er kodeliste for egenskap bruksklasse på objekttype Lastbegrensningsområde. Bruksklassen forkortes Bk og etterfølges av et tall. Den angir største tillatte aksellast, last fra akselkombinasjoner og totalvekt avhengig av avstanden mellom akslene. Som beskrevet i "Forskrift om bruk av kjøretøy" og Statens vegvesen sin håndbok R412.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/bruksklassetype">https://register.geonorge.no/sosi-kodelister/havnedata/bruksklassetype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Drivstofftype
+
+**Definisjon:** Angir hvilke typer drivstoff som kan fylles.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/drivstofftype">https://register.geonorge.no/sosi-kodelister/havnedata/drivstofftype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Avløpstype
+
+**Definisjon:** Angir hvilken type væske som kan tømmes.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/avlopstype">https://register.geonorge.no/sosi-kodelister/havnedata/avlopstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» ELanleggstype
+
+**Definisjon:** Type EL-anlegg/strømanlegg.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/elanleggstype">https://register.geonorge.no/sosi-kodelister/havnedata/elanleggstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Frekvens
+
+**Definisjon:** Angir frekvensen for EL-koblingen, som er hvor mange ganger en elektrisk spenning veksler i løpet av ett sekund. Måles i Hz.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/frekvens">https://register.geonorge.no/sosi-kodelister/havnedata/frekvens</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Spenning
+
+**Definisjon:** Kodeliste for å angi den eletriske spenningen. Måleenhet i volt.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/spenning">https://register.geonorge.no/sosi-kodelister/havnedata/spenning</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Datafangstmetode
+
+**Definisjon:** Metode for datafangst. Datafangstmetoden beskriver hvordan selve vektordataene er posisjonert fra et datagrunnlag (observasjoner med landmålingsutstyr, fotogrammetrisk stereomodell, digital terrengmodell etc.) og ikke prosessen med å innhente det bakenforliggende datagrunnlaget.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode">https://register.geonorge.no/sosi-kodelister/havnedata/datafangstmetode</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Synbarhet
+
+**Definisjon:** hvor godt den kartlagte detalj var synbar ved kartleggingen
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/synbarhet">https://register.geonorge.no/sosi-kodelister/havnedata/synbarhet</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Forbudstype
+
+**Definisjon:** Kodeliste for å angi forbudstype for forbudsområde.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/forbudstype">https://register.geonorge.no/sosi-kodelister/havnedata/forbudstype</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### «CodeList» Fartøytype
+
+**Definisjon:** Kodeliste for å spesifisere hvilket type fartøy en regulering eller restriksjon omfatter.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype">https://register.geonorge.no/sosi-kodelister/havnedata/fartoytype</a></td>
+    </tr>
+  </tbody>
+</table>
