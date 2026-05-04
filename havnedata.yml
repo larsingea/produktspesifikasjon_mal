@@ -1,5 +1,5 @@
 metadataId: e46767e4-c6d9-49a6-93e8-716da0922fd7
-output_directory: produktspesifikasjon
+output_directory: produktspesifikasjon - 2
 product_slug: havnedata_2
 updated: 2025-05-04
 # 
@@ -10,7 +10,7 @@ updated: 2025-05-04
 #
 scopes: 
 - name: Filleveranser
-  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/FKB/Havnedata-20201022 - utkast.xml
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/FKB/Havnedata-2021.xml
   generator: xmi
   description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
 - name: Innsynstjeneste (API)
