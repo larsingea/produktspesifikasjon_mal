@@ -4,7 +4,7 @@
 ' default PlantUML 4096px size limit from cropping the diagram.
 scale max 4000*4000
 
-title Havnedata - Filleveranser - Objekttyper
+title Havnedata - Filleveranser - Havnedata_heleidGeometri-2.0
 
 skinparam backgroundColor #F5F5F5
 skinparam shadowing false
@@ -28,7 +28,7 @@ skinparam stereotypeCBackgroundColor #EAD9CE
 skinparam stereotypeCBorderColor #9C8578
 skinparam stereotypeCFontColor #2D201A
 
-package "Objekttyper" {
+package "Havnedata_heleidGeometri-2.0" {
 
   class Toalett <<featureType>> {
     + posisjon [1] : Punkt
@@ -273,58 +273,6 @@ package "Objekttyper" {
     + objektLøpenummer [1] : CharacterString
   }
 
-  abstract class "FellesegenskaperPåkrevd" as FellesegenskaperP_krevd <<featureType>> {
-    + identifikasjon [1] : Identifikasjon
-    + datafangstdato [1] : Date
-    + kvalitet [1] : Posisjonskvalitet
-  }
-
-  abstract class FellesegenskaperOpsjonell <<featureType>> {
-    + informasjon [0..1] : CharacterString
-    + link [0..1] : CharacterString
-    + oppdateringsdato [0..1] : Date
-  }
-
-  class Tilgangstype <<featureType>> {
-    ' Ingen attributter
-  }
-
-  class FartsrestriksjonerGrense <<featureType>> {
-    + grense [1] : Kurve
-  }
-
-  class "ForbudsområdeGrense" as Forbudsomr_deGrense <<featureType>> {
-    + grense [1] : Kurve
-  }
-
-  class Fartsrestriksjoner <<featureType>> {
-    + område [1] : Flate
-    + posisjon [0..1] : Punkt
-    + forskriftNavn [1] : CharacterString
-    + gjelderForFartøytype [1..*] : Fartøytype
-    + hastighet [1] : Integer
-    + lovhjemmel [0..1] : CharacterString
-    + periodeGyldigFra [0..1] : Date
-    + periodeGyldigTil [0..1] : Date
-    + fastsattAv [0..1] : CharacterString
-    + forskriftLenke [0..1] : CharacterString
-    + gjelderFor [0..1] : CharacterString
-  }
-
-  class "Forbudsområde" as Forbudsomr_de <<featureType>> {
-    + område [1] : Flate
-    + posisjon [0..1] : Punkt
-    + fastsattAv [0..1] : CharacterString
-    + forskriftLenke [0..1] : CharacterString
-    + forskriftNavn [0..1] : CharacterString
-    + gjelderFor [0..1] : CharacterString
-    + gjelderForFartøytype [1..*] : Fartøytype
-    + lovhjemmel [0..1] : CharacterString
-    + periodeGyldigFra [0..1] : Date
-    + periodeGyldigTil [0..1] : Date
-    + forbudstype [1..*] : Forbudstype
-  }
-
   class Periode <<dataType>> {
     + mndFra [1] : Måned
     + mndTil [1] : Måned
@@ -346,55 +294,39 @@ package "Objekttyper" {
     + kontaktId [0..1] : CharacterString
     + faser [0..1] : CharacterString
   }
+}
 
-  class Identifikasjon <<dataType>> {
-    + lokalId [1] : CharacterString
-    + navnerom [1] : CharacterString
-    + versjonId [0..1] : CharacterString
-  }
-
-  class Posisjonskvalitet <<dataType>> {
-    + datafangstmetode [1] : Datafangstmetode
-    + nøyaktighet [1] : Integer
-    + synbarhet [0..1] : Synbarhet
-    + datafangstmetodeHøyde [0..1] : Datafangstmetode
-    + nøyaktighetHøyde [0..1] : Integer
+package "Eksterne referanser" <<Frame>> {
+  class FellesegenskaperOpsjonell <<Generelle konsepter>> {
   }
 }
 
-  ObjektId <|-- Toalett
-  HavnId <|-- Havnesensor
-  HavneanleggId <|-- Havnegjerde
-  ObjektId <|-- VAuttak
-  ObjektId <|-- Fender
-  HavnId <|-- Forvaltningsomr_de
-  ObjektId <|-- Kran
-  KaiId <|-- Lastbegrensningsomr_de
-  ObjektId <|-- T_mmestasjon
-  ObjektId <|-- Kaifront
-  KaiId <|-- Kaiomr_de
-  HavnId <|-- HavneanleggId
-  ObjektId <|-- Fort_yningsinnretning
-  HavnId <|-- Havneomr_de
-  Havnegjerde <|-- HavnegjerdeInngang
-  Havnesensor <|-- Kamera
-  ObjektId <|-- Avfallspunkt
-  HavneanleggId <|-- T_rrdokk
-  ObjektId <|-- Beredskapspunkt
-  ObjektId <|-- Drivstofftilkobling
-  HavneanleggId <|-- Havneanlegg
-  KaiId <|-- Slipp
-  HavneanleggId <|-- Flytedokk
-  ObjektId <|-- ELkobling
-  HavneanleggId <|-- KaiId
-  FellesegenskaperOpsjonell <|-- HavnId
-  KaiId <|-- ObjektId
-  FellesegenskaperP_krevd <|-- FellesegenskaperOpsjonell
-  FellesegenskaperP_krevd <|-- FartsrestriksjonerGrense
-  FellesegenskaperP_krevd <|-- Forbudsomr_deGrense
-  FellesegenskaperOpsjonell <|-- Fartsrestriksjoner
-  Fartsrestriksjoner --> FartsrestriksjonerGrense : avgrensning [0..*]
-  FellesegenskaperOpsjonell <|-- Forbudsomr_de
-  Forbudsomr_de --> Forbudsomr_deGrense : avgrensning [0..*]
+ObjektId <|-- Toalett
+HavnId <|-- Havnesensor
+HavneanleggId <|-- Havnegjerde
+ObjektId <|-- VAuttak
+ObjektId <|-- Fender
+HavnId <|-- Forvaltningsomr_de
+ObjektId <|-- Kran
+KaiId <|-- Lastbegrensningsomr_de
+ObjektId <|-- T_mmestasjon
+ObjektId <|-- Kaifront
+KaiId <|-- Kaiomr_de
+HavnId <|-- HavneanleggId
+ObjektId <|-- Fort_yningsinnretning
+HavnId <|-- Havneomr_de
+Havnegjerde <|-- HavnegjerdeInngang
+Havnesensor <|-- Kamera
+ObjektId <|-- Avfallspunkt
+HavneanleggId <|-- T_rrdokk
+ObjektId <|-- Beredskapspunkt
+ObjektId <|-- Drivstofftilkobling
+HavneanleggId <|-- Havneanlegg
+KaiId <|-- Slipp
+HavneanleggId <|-- Flytedokk
+ObjektId <|-- ELkobling
+HavneanleggId <|-- KaiId
+FellesegenskaperOpsjonell <|-- HavnId
+KaiId <|-- ObjektId
 
 @enduml

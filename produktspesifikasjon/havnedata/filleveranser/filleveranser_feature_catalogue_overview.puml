@@ -1,0 +1,147 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Havnedata - Filleveranser - Oversikt
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Generelle konsepter" {
+  abstract class "FellesegenskaperPåkrevd" as FellesegenskaperP_krevd <<featureType>> {
+  }
+  abstract class FellesegenskaperOpsjonell <<featureType>> {
+  }
+}
+
+package "Havnedata_heleidGeometri-2.0" {
+  class Toalett <<featureType>> {
+  }
+  class Havnesensor <<featureType>> {
+  }
+  class Havnegjerde <<featureType>> {
+  }
+  class VAuttak <<featureType>> {
+  }
+  class Fender <<featureType>> {
+  }
+  class "Forvaltningsområde" as Forvaltningsomr_de <<featureType>> {
+  }
+  class Kran <<featureType>> {
+  }
+  class "Lastbegrensningsområde" as Lastbegrensningsomr_de <<featureType>> {
+  }
+  class "Tømmestasjon" as T_mmestasjon <<featureType>> {
+  }
+  class Kaifront <<featureType>> {
+  }
+  class "Kaiområde" as Kaiomr_de <<featureType>> {
+  }
+  abstract class HavneanleggId <<featureType>> {
+  }
+  class "Fortøyningsinnretning" as Fort_yningsinnretning <<featureType>> {
+  }
+  class "Havneområde" as Havneomr_de <<featureType>> {
+  }
+  class HavnegjerdeInngang <<featureType>> {
+  }
+  class Kamera <<featureType>> {
+  }
+  class Avfallspunkt <<featureType>> {
+  }
+  class "Tørrdokk" as T_rrdokk <<featureType>> {
+  }
+  class Beredskapspunkt <<featureType>> {
+  }
+  class Drivstofftilkobling <<featureType>> {
+  }
+  class Havneanlegg <<featureType>> {
+  }
+  class Slipp <<featureType>> {
+  }
+  class Flytedokk <<featureType>> {
+  }
+  class ELkobling <<featureType>> {
+  }
+  abstract class KaiId <<featureType>> {
+  }
+  abstract class HavnId <<featureType>> {
+  }
+  abstract class ObjektId <<featureType>> {
+  }
+}
+
+package "Kodelister og Datatyper" {
+  class Tilgangstype <<featureType>> {
+  }
+}
+
+package "Reguleringer" {
+  class FartsrestriksjonerGrense <<featureType>> {
+  }
+  class "ForbudsområdeGrense" as Forbudsomr_deGrense <<featureType>> {
+  }
+  class Fartsrestriksjoner <<featureType>> {
+  }
+  class "Forbudsområde" as Forbudsomr_de <<featureType>> {
+  }
+}
+
+
+ObjektId <|-- Toalett
+HavnId <|-- Havnesensor
+HavneanleggId <|-- Havnegjerde
+ObjektId <|-- VAuttak
+ObjektId <|-- Fender
+HavnId <|-- Forvaltningsomr_de
+ObjektId <|-- Kran
+KaiId <|-- Lastbegrensningsomr_de
+ObjektId <|-- T_mmestasjon
+ObjektId <|-- Kaifront
+KaiId <|-- Kaiomr_de
+HavnId <|-- HavneanleggId
+ObjektId <|-- Fort_yningsinnretning
+HavnId <|-- Havneomr_de
+Havnegjerde <|-- HavnegjerdeInngang
+Havnesensor <|-- Kamera
+ObjektId <|-- Avfallspunkt
+HavneanleggId <|-- T_rrdokk
+ObjektId <|-- Beredskapspunkt
+ObjektId <|-- Drivstofftilkobling
+HavneanleggId <|-- Havneanlegg
+KaiId <|-- Slipp
+HavneanleggId <|-- Flytedokk
+ObjektId <|-- ELkobling
+HavneanleggId <|-- KaiId
+FellesegenskaperOpsjonell <|-- HavnId
+KaiId <|-- ObjektId
+FellesegenskaperP_krevd <|-- FellesegenskaperOpsjonell
+FellesegenskaperP_krevd <|-- FartsrestriksjonerGrense
+FellesegenskaperP_krevd <|-- Forbudsomr_deGrense
+FellesegenskaperOpsjonell <|-- Fartsrestriksjoner
+Fartsrestriksjoner --> FartsrestriksjonerGrense : avgrensning [0..*]
+FellesegenskaperOpsjonell <|-- Forbudsomr_de
+Forbudsomr_de --> Forbudsomr_deGrense : avgrensning [0..*]
+
+@enduml

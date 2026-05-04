@@ -28,7 +28,7 @@ Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd p�
 
 - **Tidsperiode**:
   - **Fra**: 2021-03-02
-  - **Til**: 2026-03-28
+  - **Til**: 2026-04-29
 
 ## Om spesifikasjonen
 ### Forkortelser
@@ -46,7 +46,7 @@ Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd p�
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2021-03-02<br>
-> **Endret dato:** 2026-03-28<br>
+> **Endret dato:** 2026-04-29<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
@@ -115,18 +115,18 @@ Eksempler på bruksområder for havnedata:
 **Nivåbeskrivelse**: Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
 
 ## Datainnhold og struktur
-
+**UML-modell:** <https://sosi.geonorge.no/!/#SOSI/view/head/SOSI%20Del%203/Statens%20kartverk/Havnedata_testing.xml>
 
 
 ### Datamodell - Filleveranser
 
 
 
-<a href="filleveranser/filleveranser_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranser/filleveranser_feature_catalogue.png" alt="Datamodell Filleveranser" style="max-width: 100%; height: auto;" /></a>
+<a href="filleveranser/filleveranser_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="filleveranser/filleveranser_feature_catalogue_overview.png" alt="Datamodell Filleveranser" style="max-width: 100%; height: auto;" /></a>
 
 
 
-➡️ [Se full datamodell for omfang "Filleveranser" (diagram og objektkatalog)](filleveranser/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Filleveranser" (diagram per pakke og objektkatalog)](filleveranser/objektkatalog.html)
 
 ### Datamodell - Innsynstjeneste (API)
 
@@ -136,7 +136,7 @@ Eksempler på bruksområder for havnedata:
 
 
 
-➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram og objektkatalog)](innsynstjeneste-api/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram per pakke og objektkatalog)](innsynstjeneste-api/objektkatalog.html)
 
 ## Referansesystem
 
@@ -199,7 +199,7 @@ Eksempler på bruksområder for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-10
+**Metadatadato**: 2026-05-04
 
 **språk**: nor
 
