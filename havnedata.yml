@@ -10,7 +10,7 @@ updated: 2025-04-07
 #
 scopes: 
 - name: Filleveranser
-  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Havnedata_testing.xml
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/FKB/Havnedata.xml
   generator: xmi
   description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
 - name: Innsynstjeneste (API)
