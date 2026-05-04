@@ -4,7 +4,7 @@
 ' default PlantUML 4096px size limit from cropping the diagram.
 scale max 4000*4000
 
-title Naturhendelser - Filnedlasting - Objekttyper
+title Naturhendelser - Filnedlasting - Hendelser Test 20250620
 
 skinparam backgroundColor #F5F5F5
 skinparam shadowing false
@@ -28,7 +28,7 @@ skinparam stereotypeCBackgroundColor #EAD9CE
 skinparam stereotypeCBorderColor #9C8578
 skinparam stereotypeCFontColor #2D201A
 
-package "Objekttyper" {
+package "Hendelser Test 20250620" {
 
   class "Risikoområde" as Risikoomr_de <<featureType>> {
     + risikoId [0..1] : CharacterString
@@ -76,29 +76,22 @@ package "Objekttyper" {
     + LAST_EDITED_USER [0..1] : CharacterString
     + LAST_EDITED_DATE [0..1] : CharacterString
   }
+}
 
-  abstract class Fellesegenskaper <<featureType>> {
-    + identifikasjon [1] : Identifikasjon
-    + oppdateringsdato [1] : Date
-    + sluttdato [0..1] : Date
-  }
-
-  class Identifikasjon <<dataType>> {
-    + lokalId [1] : CharacterString
-    + navnerom [1] : CharacterString
-    + versjonId [0..1] : CharacterString
+package "Eksterne referanser" <<Frame>> {
+  class Fellesegenskaper <<Generelle elementer>> {
   }
 }
 
-  HendelseGenerell <|-- Risikoomr_de
-  HendelseGenerell <|-- Ber_rtOmr_de
-  HendelseGenerell <|-- Ber_rtOmr_de
-  HendelseGenerell <|-- Hendelse
-  HendelseGenerell <|-- Situasjon
-  Situasjon --> Ber_rtOmr_de : situasjonBerort [0..*]
-  Situasjon --> Hendelse : situasjonHendelse [0..*]
-  Situasjon --> Tiltaksomr_de : situasjonTiltak [0..*]
-  HendelseGenerell <|-- Tiltaksomr_de
-  Fellesegenskaper <|-- HendelseGenerell
+HendelseGenerell <|-- Risikoomr_de
+HendelseGenerell <|-- Ber_rtOmr_de
+HendelseGenerell <|-- Ber_rtOmr_de
+HendelseGenerell <|-- Hendelse
+HendelseGenerell <|-- Situasjon
+Situasjon --> Ber_rtOmr_de : situasjonBerort [0..*]
+Situasjon --> Hendelse : situasjonHendelse [0..*]
+Situasjon --> Tiltaksomr_de : situasjonTiltak [0..*]
+HendelseGenerell <|-- Tiltaksomr_de
+Fellesegenskaper <|-- HendelseGenerell
 
 @enduml
