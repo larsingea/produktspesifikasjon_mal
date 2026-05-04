@@ -20,7 +20,8 @@
         "HendelseGenerell"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser Test 20250620"
   },
   {
     "name": "BerørtOmråde",
@@ -44,7 +45,8 @@
         "HendelseGenerell"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser Test 20250620"
   },
   {
     "name": "Hendelse",
@@ -72,7 +74,8 @@
         "HendelseGenerell"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser Test 20250620"
   },
   {
     "name": "Situasjon",
@@ -195,7 +198,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Hendelser Test 20250620"
   },
   {
     "name": "Tiltaksområde",
@@ -276,7 +280,8 @@
         "HendelseGenerell"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser Test 20250620"
   },
   {
     "name": "HendelseGenerell",
@@ -429,7 +434,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser Test 20250620"
   },
   {
     "name": "Fellesegenskaper",
@@ -478,6 +484,7 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle elementer"
   }
 ]

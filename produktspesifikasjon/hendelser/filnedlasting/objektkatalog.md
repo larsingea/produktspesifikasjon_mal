@@ -1,5 +1,19 @@
 ### Datamodell
 
+#### Oversikt
+
+<a href="filnedlasting_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="filnedlasting_feature_catalogue_overview.png" alt="Datamodell Filnedlasting - oversikt" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Generelle elementer
+
+<a href="filnedlasting_feature_catalogue_Generelle_elementer.png" title="Klikk for stor visning"><img src="filnedlasting_feature_catalogue_Generelle_elementer.png" alt="Datamodell Filnedlasting - Generelle elementer" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Hendelser Test 20250620
+
+<a href="filnedlasting_feature_catalogue_Hendelser_Test_20250620.png" title="Klikk for stor visning"><img src="filnedlasting_feature_catalogue_Hendelser_Test_20250620.png" alt="Datamodell Filnedlasting - Hendelser Test 20250620" style="max-width: 100%; height: auto;" /></a>
+
+#### Komplett diagram
+
 <a href="filnedlasting_feature_catalogue.png" title="Klikk for stor visning"><img src="filnedlasting_feature_catalogue.png" alt="Datamodell Filnedlasting" style="max-width: 100%; height: auto;" /></a>
 
 #### Risikoområde
