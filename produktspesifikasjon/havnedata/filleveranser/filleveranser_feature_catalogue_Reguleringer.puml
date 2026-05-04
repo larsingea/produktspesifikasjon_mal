@@ -30,6 +30,20 @@ skinparam stereotypeCFontColor #2D201A
 
 package "Reguleringer" {
 
+  class "Forbudsområde" as Forbudsomr_de <<featureType>> {
+    + område [1] : Flate
+    + posisjon [0..1] : Punkt
+    + fastsattAv [0..1] : CharacterString
+    + forskriftLenke [0..1] : CharacterString
+    + forskriftNavn [0..1] : CharacterString
+    + gjelderFor [0..1] : CharacterString
+    + gjelderForFartøytype [1..*] : Fartøytype
+    + lovhjemmel [0..1] : CharacterString
+    + periodeGyldigFra [0..1] : Date
+    + periodeGyldigTil [0..1] : Date
+    + forbudstype [1..*] : Forbudstype
+  }
+
   class FartsrestriksjonerGrense <<featureType>> {
     + grense [1] : Kurve
   }
@@ -51,20 +65,6 @@ package "Reguleringer" {
     + forskriftLenke [0..1] : CharacterString
     + gjelderFor [0..1] : CharacterString
   }
-
-  class "Forbudsområde" as Forbudsomr_de <<featureType>> {
-    + område [1] : Flate
-    + posisjon [0..1] : Punkt
-    + fastsattAv [0..1] : CharacterString
-    + forskriftLenke [0..1] : CharacterString
-    + forskriftNavn [0..1] : CharacterString
-    + gjelderFor [0..1] : CharacterString
-    + gjelderForFartøytype [1..*] : Fartøytype
-    + lovhjemmel [0..1] : CharacterString
-    + periodeGyldigFra [0..1] : Date
-    + periodeGyldigTil [0..1] : Date
-    + forbudstype [1..*] : Forbudstype
-  }
 }
 
 package "Eksterne referanser" <<Frame>> {
@@ -74,11 +74,11 @@ package "Eksterne referanser" <<Frame>> {
   }
 }
 
+FellesegenskaperOpsjonell <|-- Forbudsomr_de
+Forbudsomr_de --> Forbudsomr_deGrense : avgrensning [0..*]
 FellesegenskaperP_krevd <|-- FartsrestriksjonerGrense
 FellesegenskaperP_krevd <|-- Forbudsomr_deGrense
 FellesegenskaperOpsjonell <|-- Fartsrestriksjoner
 Fartsrestriksjoner --> FartsrestriksjonerGrense : avgrensning [0..*]
-FellesegenskaperOpsjonell <|-- Forbudsomr_de
-Forbudsomr_de --> Forbudsomr_deGrense : avgrensning [0..*]
 
 @enduml

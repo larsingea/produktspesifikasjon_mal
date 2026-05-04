@@ -35,113 +35,140 @@ package "Generelle konsepter" {
   }
 }
 
-package "Havnedata_heleidGeometri-2.0" {
-  class Toalett <<featureType>> {
-  }
-  class Havnesensor <<featureType>> {
-  }
-  class Havnegjerde <<featureType>> {
-  }
-  class VAuttak <<featureType>> {
-  }
-  class Fender <<featureType>> {
-  }
-  class "Forvaltningsområde" as Forvaltningsomr_de <<featureType>> {
-  }
-  class Kran <<featureType>> {
-  }
-  class "Lastbegrensningsområde" as Lastbegrensningsomr_de <<featureType>> {
-  }
-  class "Tømmestasjon" as T_mmestasjon <<featureType>> {
-  }
-  class Kaifront <<featureType>> {
-  }
-  class "Kaiområde" as Kaiomr_de <<featureType>> {
-  }
-  abstract class HavneanleggId <<featureType>> {
-  }
-  class "Fortøyningsinnretning" as Fort_yningsinnretning <<featureType>> {
-  }
+package "Havnedata-2021-Utkast" {
   class "Havneområde" as Havneomr_de <<featureType>> {
-  }
-  class HavnegjerdeInngang <<featureType>> {
-  }
-  class Kamera <<featureType>> {
-  }
-  class Avfallspunkt <<featureType>> {
-  }
-  class "Tørrdokk" as T_rrdokk <<featureType>> {
-  }
-  class Beredskapspunkt <<featureType>> {
-  }
-  class Drivstofftilkobling <<featureType>> {
   }
   class Havneanlegg <<featureType>> {
   }
-  class Slipp <<featureType>> {
+  class HavnegjerdeInngang <<featureType>> {
   }
-  class Flytedokk <<featureType>> {
+  class Havnegjerde <<featureType>> {
   }
-  class ELkobling <<featureType>> {
-  }
-  abstract class KaiId <<featureType>> {
-  }
-  abstract class HavnId <<featureType>> {
+  class Drivstofftilkobling <<featureType>> {
   }
   abstract class ObjektId <<featureType>> {
   }
-}
-
-package "Kodelister og Datatyper" {
-  class Tilgangstype <<featureType>> {
+  class Kran <<featureType>> {
+  }
+  class Slipp <<featureType>> {
+  }
+  class "Tømmestasjon" as T_mmestasjon <<featureType>> {
+  }
+  class FlytedokkGrense <<featureType>> {
+  }
+  abstract class HavneanleggId <<featureType>> {
+  }
+  class "Tørrdokk" as T_rrdokk <<featureType>> {
+  }
+  class Toalett <<featureType>> {
+  }
+  class "ForvaltningsområdeGrense" as Forvaltningsomr_deGrense <<featureType>> {
+  }
+  class SlippGrense <<featureType>> {
+  }
+  class "TørrdokkGrense" as T_rrdokkGrense <<featureType>> {
+  }
+  abstract class HavnId <<featureType>> {
+  }
+  class Kamera <<featureType>> {
+  }
+  class "Lastbegrensningsområde" as Lastbegrensningsomr_de <<featureType>> {
+  }
+  class "Kaiområde" as Kaiomr_de <<featureType>> {
+  }
+  class "KaiområdeGrense" as Kaiomr_deGrense <<featureType>> {
+  }
+  class Flytedokk <<featureType>> {
+  }
+  class Beredskapspunkt <<featureType>> {
+  }
+  class Havnesensor <<featureType>> {
+  }
+  class ELkobling <<featureType>> {
+  }
+  class "Forvaltningsområde" as Forvaltningsomr_de <<featureType>> {
+  }
+  class "HavneområdeGrense" as Havneomr_deGrense <<featureType>> {
+  }
+  class Fender <<featureType>> {
+  }
+  class VAuttak <<featureType>> {
+  }
+  class HavneanleggGrense <<featureType>> {
+  }
+  class Avfallspunkt <<featureType>> {
+  }
+  class "Fortøyningsinnretning" as Fort_yningsinnretning <<featureType>> {
+  }
+  abstract class KaiId <<featureType>> {
+  }
+  class "LastbegrensningsområdeGrense" as Lastbegrensningsomr_deGrense <<featureType>> {
+  }
+  class Kaifront <<featureType>> {
   }
 }
 
 package "Reguleringer" {
+  class "Forbudsområde" as Forbudsomr_de <<featureType>> {
+  }
   class FartsrestriksjonerGrense <<featureType>> {
   }
   class "ForbudsområdeGrense" as Forbudsomr_deGrense <<featureType>> {
   }
   class Fartsrestriksjoner <<featureType>> {
   }
-  class "Forbudsområde" as Forbudsomr_de <<featureType>> {
-  }
 }
 
 
-ObjektId <|-- Toalett
-HavnId <|-- Havnesensor
-HavneanleggId <|-- Havnegjerde
-ObjektId <|-- VAuttak
-ObjektId <|-- Fender
-HavnId <|-- Forvaltningsomr_de
-ObjektId <|-- Kran
-KaiId <|-- Lastbegrensningsomr_de
-ObjektId <|-- T_mmestasjon
-ObjektId <|-- Kaifront
-KaiId <|-- Kaiomr_de
-HavnId <|-- HavneanleggId
-ObjektId <|-- Fort_yningsinnretning
 HavnId <|-- Havneomr_de
-Havnegjerde <|-- HavnegjerdeInngang
-Havnesensor <|-- Kamera
-ObjektId <|-- Avfallspunkt
-HavneanleggId <|-- T_rrdokk
-ObjektId <|-- Beredskapspunkt
-ObjektId <|-- Drivstofftilkobling
+Havneomr_de --> Havneomr_deGrense : avgrensning [0..*]
 HavneanleggId <|-- Havneanlegg
-KaiId <|-- Slipp
-HavneanleggId <|-- Flytedokk
-ObjektId <|-- ELkobling
-HavneanleggId <|-- KaiId
-FellesegenskaperOpsjonell <|-- HavnId
+Havneanlegg --> HavneanleggGrense : avgrensning [0..*]
+Havnegjerde <|-- HavnegjerdeInngang
+HavneanleggId <|-- Havnegjerde
+ObjektId <|-- Drivstofftilkobling
 KaiId <|-- ObjektId
+ObjektId <|-- Kran
+KaiId <|-- Slipp
+Slipp --> SlippGrense : avgrensning [0..*]
+ObjektId <|-- T_mmestasjon
+FellesegenskaperP_krevd <|-- FlytedokkGrense
+HavnId <|-- HavneanleggId
+HavneanleggId <|-- T_rrdokk
+T_rrdokk --> T_rrdokkGrense : avgrensning [0..*]
+ObjektId <|-- Toalett
+FellesegenskaperP_krevd <|-- Forvaltningsomr_deGrense
+FellesegenskaperP_krevd <|-- SlippGrense
+FellesegenskaperP_krevd <|-- T_rrdokkGrense
+FellesegenskaperOpsjonell <|-- HavnId
+Havnesensor <|-- Kamera
+KaiId <|-- Lastbegrensningsomr_de
+Lastbegrensningsomr_de --> Lastbegrensningsomr_deGrense : avgrensning [0..*]
+KaiId <|-- Kaiomr_de
+Kaiomr_de --> Kaiomr_deGrense : avgrensning [0..*]
+FellesegenskaperP_krevd <|-- Kaiomr_deGrense
+HavneanleggId <|-- Flytedokk
+Flytedokk --> FlytedokkGrense : avgrensning [0..*]
+ObjektId <|-- Beredskapspunkt
+HavnId <|-- Havnesensor
+ObjektId <|-- ELkobling
+HavnId <|-- Forvaltningsomr_de
+Forvaltningsomr_de --> Forvaltningsomr_deGrense : avgrensning [0..*]
+FellesegenskaperP_krevd <|-- Havneomr_deGrense
+ObjektId <|-- Fender
+ObjektId <|-- VAuttak
+FellesegenskaperP_krevd <|-- HavneanleggGrense
+ObjektId <|-- Avfallspunkt
+ObjektId <|-- Fort_yningsinnretning
+HavneanleggId <|-- KaiId
+FellesegenskaperP_krevd <|-- Lastbegrensningsomr_deGrense
+ObjektId <|-- Kaifront
 FellesegenskaperP_krevd <|-- FellesegenskaperOpsjonell
+FellesegenskaperOpsjonell <|-- Forbudsomr_de
+Forbudsomr_de --> Forbudsomr_deGrense : avgrensning [0..*]
 FellesegenskaperP_krevd <|-- FartsrestriksjonerGrense
 FellesegenskaperP_krevd <|-- Forbudsomr_deGrense
 FellesegenskaperOpsjonell <|-- Fartsrestriksjoner
 Fartsrestriksjoner --> FartsrestriksjonerGrense : avgrensning [0..*]
-FellesegenskaperOpsjonell <|-- Forbudsomr_de
-Forbudsomr_de --> Forbudsomr_deGrense : avgrensning [0..*]
 
 @enduml

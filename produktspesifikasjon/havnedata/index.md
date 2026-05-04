@@ -1,6 +1,6 @@
 ---
 title: "Havnedata"
-updated: "2025-04-07"
+updated: "2025-05-04"
 organization: "Kartverket"
 logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png"
 ---
