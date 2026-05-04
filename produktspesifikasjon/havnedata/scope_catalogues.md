@@ -2,11 +2,11 @@
 
 
 
-<a href="filleveranser/filleveranser_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranser/filleveranser_feature_catalogue.png" alt="Datamodell Filleveranser" style="max-width: 100%; height: auto;" /></a>
+<a href="filleveranser/filleveranser_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="filleveranser/filleveranser_feature_catalogue_overview.png" alt="Datamodell Filleveranser" style="max-width: 100%; height: auto;" /></a>
 
 
 
-➡️ [Se full datamodell for omfang "Filleveranser" (diagram og objektkatalog)](filleveranser/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Filleveranser" (diagram per pakke og objektkatalog)](filleveranser/objektkatalog.html)
 
 ### Datamodell - Innsynstjeneste (API)
 
@@ -16,4 +16,4 @@
 
 
 
-➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram og objektkatalog)](innsynstjeneste-api/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram per pakke og objektkatalog)](innsynstjeneste-api/objektkatalog.html)

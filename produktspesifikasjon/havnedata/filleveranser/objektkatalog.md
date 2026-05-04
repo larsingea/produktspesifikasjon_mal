@@ -1,5 +1,27 @@
 ### Datamodell
 
+#### Oversikt
+
+<a href="filleveranser_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_overview.png" alt="Datamodell Filleveranser - oversikt" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Generelle konsepter
+
+<a href="filleveranser_feature_catalogue_Generelle_konsepter.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_Generelle_konsepter.png" alt="Datamodell Filleveranser - Generelle konsepter" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Havnedata_heleidGeometri-2.0
+
+<a href="filleveranser_feature_catalogue_Havnedata_heleidGeometri-2_0.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_Havnedata_heleidGeometri-2_0.png" alt="Datamodell Filleveranser - Havnedata_heleidGeometri-2.0" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Kodelister og Datatyper
+
+<a href="filleveranser_feature_catalogue_Kodelister_og_Datatyper.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_Kodelister_og_Datatyper.png" alt="Datamodell Filleveranser - Kodelister og Datatyper" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Reguleringer
+
+<a href="filleveranser_feature_catalogue_Reguleringer.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_Reguleringer.png" alt="Datamodell Filleveranser - Reguleringer" style="max-width: 100%; height: auto;" /></a>
+
+#### Komplett diagram
+
 <a href="filleveranser_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue.png" alt="Datamodell Filleveranser" style="max-width: 100%; height: auto;" /></a>
 
 #### Toalett

@@ -38,7 +38,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Havnesensor",
@@ -96,7 +97,8 @@
         "HavnId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Havnegjerde",
@@ -167,7 +169,8 @@
         "HavneanleggId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "VAuttak",
@@ -246,7 +249,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Fender",
@@ -333,7 +337,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Forvaltningsområde",
@@ -364,7 +369,8 @@
         "HavnId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Kran",
@@ -457,7 +463,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Lastbegrensningsområde",
@@ -540,7 +547,8 @@
         "KaiId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Tømmestasjon",
@@ -625,7 +633,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Kaifront",
@@ -700,7 +709,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Kaiområde",
@@ -747,7 +757,8 @@
         "KaiId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "HavneanleggId",
@@ -778,7 +789,8 @@
         "HavnId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Fortøyningsinnretning",
@@ -866,7 +878,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Havneområde",
@@ -897,7 +910,8 @@
         "HavnId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "HavnegjerdeInngang",
@@ -932,7 +946,8 @@
         "Havnegjerde"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Kamera",
@@ -944,7 +959,8 @@
         "Havnesensor"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Avfallspunkt",
@@ -1028,7 +1044,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Tørrdokk",
@@ -1105,7 +1122,8 @@
         "HavneanleggId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Beredskapspunkt",
@@ -1163,7 +1181,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Drivstofftilkobling",
@@ -1236,7 +1255,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Havneanlegg",
@@ -1327,7 +1347,8 @@
         "HavneanleggId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Slipp",
@@ -1442,7 +1463,8 @@
         "KaiId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "Flytedokk",
@@ -1519,7 +1541,8 @@
         "HavneanleggId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "ELkobling",
@@ -1640,7 +1663,8 @@
         "ObjektId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "KaiId",
@@ -1671,7 +1695,8 @@
         "HavneanleggId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "HavnId",
@@ -1696,7 +1721,8 @@
         "FellesegenskaperOpsjonell"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "ObjektId",
@@ -1715,7 +1741,8 @@
         "KaiId"
       ],
       "associations": []
-    }
+    },
+    "package": "Havnedata_heleidGeometri-2.0"
   },
   {
     "name": "FellesegenskaperPåkrevd",
@@ -1811,7 +1838,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle konsepter"
   },
   {
     "name": "FellesegenskaperOpsjonell",
@@ -1842,7 +1870,8 @@
         "FellesegenskaperPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Generelle konsepter"
   },
   {
     "name": "Tilgangstype",
@@ -1852,7 +1881,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Kodelister og Datatyper"
   },
   {
     "name": "FartsrestriksjonerGrense",
@@ -1871,7 +1901,8 @@
         "FellesegenskaperPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Reguleringer"
   },
   {
     "name": "ForbudsområdeGrense",
@@ -1890,7 +1921,8 @@
         "FellesegenskaperPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Reguleringer"
   },
   {
     "name": "Fartsrestriksjoner",
@@ -1980,7 +2012,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Reguleringer"
   },
   {
     "name": "Forbudsområde",
@@ -2075,6 +2108,7 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Reguleringer"
   }
 ]
