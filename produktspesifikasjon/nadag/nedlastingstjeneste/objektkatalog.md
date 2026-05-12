@@ -1,5 +1,25 @@
 ### Datamodell
 
+**Kilde:** [SOSI UML XMI-fil](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/NGU/Grunnundersøkelser.xml)
+
+#### Oversikt
+
+<a href="nedlastingstjeneste_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="nedlastingstjeneste_feature_catalogue_overview.png" alt="Datamodell nedlastingstjeneste - oversikt" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Abstrakte Featurtyper
+
+<a href="nedlastingstjeneste_feature_catalogue_Abstrakte_Featurtyper.png" title="Klikk for stor visning"><img src="nedlastingstjeneste_feature_catalogue_Abstrakte_Featurtyper.png" alt="Datamodell nedlastingstjeneste - Abstrakte Featurtyper" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Datatyper
+
+<a href="nedlastingstjeneste_feature_catalogue_Datatyper.png" title="Klikk for stor visning"><img src="nedlastingstjeneste_feature_catalogue_Datatyper.png" alt="Datamodell nedlastingstjeneste - Datatyper" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: FeatureTypes
+
+<a href="nedlastingstjeneste_feature_catalogue_FeatureTypes.png" title="Klikk for stor visning"><img src="nedlastingstjeneste_feature_catalogue_FeatureTypes.png" alt="Datamodell nedlastingstjeneste - FeatureTypes" style="max-width: 100%; height: auto;" /></a>
+
+#### Komplett diagram
+
 <a href="nedlastingstjeneste_feature_catalogue.png" title="Klikk for stor visning"><img src="nedlastingstjeneste_feature_catalogue.png" alt="Datamodell nedlastingstjeneste" style="max-width: 100%; height: auto;" /></a>
 
 #### Trykksondering
@@ -2197,7 +2217,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
@@ -2222,7 +2242,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>

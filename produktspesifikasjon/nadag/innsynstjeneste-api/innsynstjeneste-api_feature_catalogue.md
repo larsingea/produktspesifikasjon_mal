@@ -7028,7 +7028,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>harPrøveseriedel</strong></td>
+      <td><strong>harPrøverseriedel</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -7049,7 +7049,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>harPrøveseriedel.href</strong></td>
+      <td><strong>harPrøverseriedel.href</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -7070,7 +7070,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>harPrøveseriedel.rel</strong></td>
+      <td><strong>harPrøverseriedel.rel</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -7091,7 +7091,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>harPrøveseriedel.type</strong></td>
+      <td><strong>harPrøverseriedel.type</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -7112,7 +7112,7 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>harPrøveseriedel.title</strong></td>
+      <td><strong>harPrøverseriedel.title</strong></td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>

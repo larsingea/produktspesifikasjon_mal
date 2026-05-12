@@ -103,11 +103,11 @@ Fra og med 2025 er det lovfestet plikt for innmelding av geotekniske grunnunders
 
 
 
-<a href="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" title="Klikk for stor visning"><img src="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" alt="Datamodell nedlastingstjeneste" style="max-width: 100%; height: auto;" /></a>
+<a href="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue_overview.png" alt="Datamodell nedlastingstjeneste" style="max-width: 100%; height: auto;" /></a>
 
 
 
-➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
+➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram per pakke og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
 
 ### Datamodell - Innsynstjeneste (API)
 
@@ -117,7 +117,7 @@ Fra og med 2025 er det lovfestet plikt for innmelding av geotekniske grunnunders
 
 
 
-➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram og objektkatalog)](innsynstjeneste-api/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Innsynstjeneste (API)" (diagram per pakke og objektkatalog)](innsynstjeneste-api/objektkatalog.html)
 
 ## Referansesystem
 
@@ -174,7 +174,7 @@ Fra og med 2025 er det lovfestet plikt for innmelding av geotekniske grunnunders
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-22
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 

@@ -168,7 +168,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "Platebelastning",
@@ -199,7 +200,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GrunnvannMåling",
@@ -297,7 +299,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskUndersøkelseGrense",
@@ -309,7 +312,8 @@
         "GeovitenskapeligUndersøkelseGrense"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "DilatometerTest",
@@ -346,7 +350,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "StempelPrøve",
@@ -358,7 +363,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "SedimentPrøve",
@@ -370,7 +376,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "RamPrøve",
@@ -382,7 +389,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "KombinasjonSondering",
@@ -447,7 +455,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskTolketLag",
@@ -809,7 +818,8 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskDokument",
@@ -1005,7 +1015,8 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GassPrøve",
@@ -1017,7 +1028,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "VannPrøve",
@@ -1058,7 +1070,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "NaverPrøve",
@@ -1070,7 +1083,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GassMåling",
@@ -1101,7 +1115,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "SkovlPrøve",
@@ -1113,7 +1128,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "StatiskSondering",
@@ -1138,7 +1154,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskTolketPunkt",
@@ -1160,13 +1177,13 @@
         "name": "høyde",
         "type": "Real",
         "description": "Terrenghøyde overflate for punkt med tolkning(/er)[m]",
-        "cardinality": "1"
+        "cardinality": "0..1"
       },
       {
         "name": "høydeReferanse",
         "type": "NADAG_Høyderef",
         "description": "Referansesystem for høydeangivelse, som EPSG-kode.",
-        "cardinality": "1",
+        "cardinality": "0..1",
         "valueDomain": {
           "listedValues": [
             {
@@ -1698,7 +1715,8 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "KjerneBoring",
@@ -1751,7 +1769,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskBorehullUnders",
@@ -2159,7 +2178,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskPrøveserie",
@@ -2208,7 +2228,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskUnders",
@@ -2328,7 +2349,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "BlokkPrøve",
@@ -2340,7 +2362,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "MiljøUndersøkelse",
@@ -2352,7 +2375,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "KjernePrøve",
@@ -2399,7 +2423,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskFeltUnders",
@@ -2630,7 +2655,8 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeotekniskBorehull",
@@ -2779,7 +2805,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GravePrøve",
@@ -2791,7 +2818,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "DynamiskSondering",
@@ -2816,7 +2844,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "PoretrykkMåling",
@@ -2915,7 +2944,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "Vingeboring",
@@ -2958,7 +2988,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "HydrauliskTest",
@@ -2995,7 +3026,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "DeformasjonMåling",
@@ -3049,7 +3081,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "KannePrøve",
@@ -3061,7 +3094,8 @@
         "GeotekniskPrøvetaking"
       ],
       "associations": []
-    }
+    },
+    "package": "FeatureTypes"
   },
   {
     "name": "GeovitenskapeligUndersøkelse",
@@ -3122,7 +3156,8 @@
         "Supertype_Geotekn_obj_omr"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeovitenskapeligObservasjon",
@@ -3165,7 +3200,8 @@
         "Supertype_Geotekn_obj_pkt"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeovitenskapeligUndersøkelseDelområdeGrense",
@@ -3182,7 +3218,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeotekniskObservasjon_NADAG",
@@ -3444,7 +3481,8 @@
         "GeovitenskapeligObservasjon"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "Supertype_Geotekn_obj_omr",
@@ -3487,7 +3525,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeotekniskObservasjon",
@@ -3505,7 +3544,8 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeovitenskapeligUndersøkelseGrense",
@@ -3522,7 +3562,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeovitenskapligBorehullUndersøkelse",
@@ -3647,7 +3688,8 @@
         "Supertype_Geotekn_obj_pkt"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "Geotekniskmetode",
@@ -3684,7 +3726,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeovitenskapeligUndersøkelseDelområde",
@@ -3709,7 +3752,8 @@
         "Supertype_Geotekn_obj_omr"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "Supertype_Geotekn_obj_pkt",
@@ -4204,7 +4248,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeotekniskSondering",
@@ -4235,7 +4280,8 @@
         "Geotekniskmetode"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeovitenskapligBorehull",
@@ -4336,7 +4382,8 @@
         "Supertype_Geotekn_obj_pkt"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeotekniskPrøvetaking",
@@ -4409,7 +4456,8 @@
         "Geotekniskmetode"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeotekniskInsituTest",
@@ -4446,7 +4494,8 @@
         "Geotekniskmetode"
       ],
       "associations": []
-    }
+    },
+    "package": "Abstrakte Featurtyper"
   },
   {
     "name": "GeotekniskPrøveseriedel",
@@ -4498,6 +4547,7 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Datatyper"
   }
 ]
