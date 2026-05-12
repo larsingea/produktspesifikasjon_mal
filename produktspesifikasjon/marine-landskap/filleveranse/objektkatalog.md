@@ -1,5 +1,7 @@
 ### Datamodell
 
+**Kilde:** [SOSI UML XMI-fil](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/NGU/MarineLandskap-1.0.xml)
+
 <a href="filleveranse_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranse_feature_catalogue.png" alt="Datamodell Filleveranse" style="max-width: 100%; height: auto;" /></a>
 
 #### Dataavgrensning
