@@ -24,23 +24,23 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 - **Tidsperiode**:
   - **Fra**: 2019-09-09
-  - **Til**: 2026-04-08
+  - **Til**: 2026-05-11
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2019-09-09<br>
-> **Endret dato:** 2026-04-08<br>
+> **Endret dato:** 2026-05-11<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
+> **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap, [lars.kjaerstad@dsb.no](mailto:lars.kjaerstad@dsb.no)
 
 ## Om produktet Tilfluktsrom - Offentlige
 
 
 > **Romlig representasjonstype:** Vektor<br>
-> **Unik identifikator:** dbae9aae-10e7-4b75-8d67-7f0e8828f3d8<br>
-> **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap
+> **Unik identifikator:** <https://data.geonorge.no/sosi/samfunnssikkerhet/tilfluktsromoffentlige><br>
+> **Kontaktinformasjon:** Direktoratet for samfunnssikkerhet og beredskap, [lars.kjaerstad@dsb.no](mailto:lars.kjaerstad@dsb.no)
 >
 > **Romlig oppløsning:**
 >
@@ -66,11 +66,15 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 ## Omfang
 
-### Datamodell for hendelser
+### Hele datasettet
 
 **Nivå**: dataset
 
-**Utstrekning**: National
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
+
+### Datamodell for hendelser
+
+**Nivå**: dataset
 
 **Nivåbeskrivelse**: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
@@ -82,11 +86,11 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 
 
-[Objektkatalog - Datamodell for hendelser](datamodell-for-hendelser/objektkatalog.html)
+<a href="datamodell-for-hendelser/datamodell-for-hendelser_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="datamodell-for-hendelser/datamodell-for-hendelser_feature_catalogue_overview.png" alt="Datamodell Datamodell for hendelser" style="max-width: 100%; height: auto;" /></a>
 
 
 
-<a href="datamodell-for-hendelser/datamodell-for-hendelser_feature_catalogue.png" title="Klikk for stor visning"><img src="datamodell-for-hendelser/datamodell-for-hendelser_feature_catalogue.png" alt="Datamodell Datamodell for hendelser" style="max-width: 100%; height: auto;" /></a>
+➡️ [Se full datamodell for omfang "Datamodell for hendelser" (diagram per pakke og objektkatalog)](datamodell-for-hendelser/objektkatalog.html)
 
 ## Referansesystem
 
@@ -107,8 +111,6 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 - **Kvalitetsmål**: Sosi applikasjonsskjema
   **Målebeskrivelse**: GML-filer er ikke vurdert i henhold til applikasjonsskjema
   **Beskrivende resultat**: GML-filer er ikke vurdert i henhold til applikasjonsskjema
-
-
 
 ## Datafangst og produksjon
 
@@ -140,7 +142,7 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-08
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 
@@ -158,31 +160,4 @@ logo: "https://register.geonorge.no/data/organizations/974760983_dsb_liten.png"
 - **kode**: dbae9aae-10e7-4b75-8d67-7f0e8828f3d8
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/dbae9aae-10e7-4b75-8d67-7f0e8828f3d8>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=dbae9aae-10e7-4b75-8d67-7f0e8828f3d8>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://www.sivilforsvaret.no/dette-er-sivilforsvaret/tilfluktsrom/>
-  **relasjon**: about
-  **type**: text/html
-  **tittel**: Produktside
-
-- **lenke**: <https://nedlasting.geonorge.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://ogc.dsb.no/wms.ashx>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://ogc.dsb.no/wms.ashx?SERVICE=WMS&REQUEST=GetCapabilities&version=1.3.0>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
 

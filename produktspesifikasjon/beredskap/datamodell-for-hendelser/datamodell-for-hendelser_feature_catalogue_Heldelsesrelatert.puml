@@ -1,0 +1,83 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Tilfluktsrom - Offentlige - Datamodell for hendelser - Heldelsesrelatert
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Heldelsesrelatert" {
+
+  class Objekt <<featureType>> {
+    + typeObjekt [1] : TypeObject
+    + posisjon [1] : GM_Object
+    + posisjonskvalitet [1] : Posisjonskvalitet
+  }
+
+  class "Observatør" as Observat_r <<featureType>> {
+    + kontaktinformasjon [1] : CharacterStreng
+    + OPSoperatør [1] : Boolean
+    + sensor [1] : Boolean
+    + virksomhet [0..1] : CharacterStreng
+  }
+
+  class Objektgruppe <<featureType>> {
+    + navn [1] : CharacterString
+    + typeObjekt [1] : TypeObject
+    + posisjon [1] : GM_Object
+  }
+
+  class Observasjon <<featureType>> {
+    + observasjonsmåte [1] : Observasjonsmåte
+    + observasjonskvalitet [0..1] : Observasjonskvalitet
+    + observasjonFraTid [1] : Date
+    + observasjonTilTid [1] : Date
+    + objektPosisjon [0..1] : GM_Objekt
+    + observertFraPosisjon [1] : GM_Object
+    + posisjonskvalitet [0..1] : Posisjonskvalitet
+  }
+}
+
+package "Eksterne referanser" <<Frame>> {
+  class Fellesegenskaper <<Geografiske hendelser>> {
+  }
+  class Ressurs <<Ressurser>> {
+  }
+  class VersjonertObjekt <<Geografiske hendelser>> {
+  }
+}
+
+Fellesegenskaper <|-- Objekt
+Objekt --> Observasjon : observasjon [1..*]
+VersjonertObjekt <|-- Observat_r
+Fellesegenskaper <|-- Observat_r
+Objektgruppe --> Objekt : [0..*]
+Fellesegenskaper <|-- Observasjon
+Observasjon --> Objekt : objekt [1..*]
+Observasjon --> Observat_r : observatør [1]
+Observasjon --> Observat_r : observatør [0..1]
+Observasjon --> Ressurs : observertAv [0..1]
+
+@enduml

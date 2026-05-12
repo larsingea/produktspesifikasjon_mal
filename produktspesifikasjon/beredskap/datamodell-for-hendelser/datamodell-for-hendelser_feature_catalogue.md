@@ -239,7 +239,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>referanse til en eksisterende geometri som stedefester dette objektet</td>
+      <td>Referanse til en eksisterende geometri som stedefester dette objektet. Man kan referere til geometri i eksterne datasett (navnerom + UUID + ev. versjonsID), samt geometri som opprettes i hendelsen.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -271,7 +271,7 @@ Ressurs – rolle: potesiellResserus – kardinalitet: 0..*
 
 #### Helsesamvirke
 
-Hendelsestype som ikke inngår i de forhåndsdefinerte hendelsestypene.
+Hendelsestyper med samvirke i forbindelse med utvalgte helseoppdrag.
 
 Egenskaper
 
@@ -295,7 +295,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- firstResponder<br />- tvang</td>
+      <td>- firstResponder – En "first responder" er den første kvalifiserte personen eller ressursen som ankommer et skadested eller en hendelse, og som iverksetter nødvendige livreddende, sikrende eller skadebegrensende tiltak inntil ordinære nød- og redningsressurser overtar.<br />- tvang – En hendelseskategori der det er nødvendig å anvende lovhjemlede tvangsmidler eller makt for å gjennomføre helsehjelp, ivareta sikkerhet eller håndtere personer som motsetter seg nødvendige tiltak.</td>
     </tr>
   </tbody>
 </table>
@@ -331,7 +331,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>Punkt</td>
+      <td>GM_Point</td>
     </tr>
   </tbody>
 </table>
@@ -642,6 +642,7 @@ Fellesegenskaper
 
 **Assosiasjoner**
 ops – rolle: ops – kardinalitet: 1
+Objektgruppe – kardinalitet: 0..*
 Objekt – rolle: objekt – kardinalitet: 1..*
 FramskrevetSkadested – rolle: utbredelse – kardinalitet: 0..*
 Tiltakslokasjon – rolle: tiltakslokasjon – kardinalitet: 0..*
@@ -651,6 +652,7 @@ SammensattHendelse – rolle: sammensattHendelse – kardinalitet: 0..*
 Ressurs – rolle: tilordnetRessurs – kardinalitet: 0..*
 Kontekst – rolle: kontekst – kardinalitet: 0..*
 Innsatsområde – rolle: innsatsområde – kardinalitet: 0..*
+LokaltReferansesystem – kardinalitet: 0..*
 Observasjon – rolle: ____innmeldtObservasjon – kardinalitet: 1
 Observatør – rolle: innmelder – kardinalitet: 1..*
 
@@ -1531,6 +1533,88 @@ Relasjoner
 **Arv**
 VersjonertObjekt, Fellesegenskaper
 
+#### Objektgruppe
+
+Grupperingsmekanisme for objekter eller observerte forhold på hendelsesstedet, knyttet til hendelsen.<br /><br />Det skal være mulig å koble objekter sammen i grupper, samt definere et objekt som en gruppe/container med tilhørende underordnede objekter.<br /><br />Eksempel: Objektet «togvogn» defineres som en gruppe og inneholder objektene «skadde personer».<br /><br />Et objekt kan inngå i flere grupper samtidig.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>navn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>typeObjekt</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Objekter fra kodelisten "TypeObjekt".</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>TypeObject</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- nødsignal – Ethvert signal som brukes til å påkalle oppmerksomhet ifm nødssituasjon og ved andre omstendigheter hvor oppmerksomhet er krevet.<br />- spor – Klesplagg, mobil o.l. som kan knyttes til (er relevant for) et søk etter savnet person.<br />- funn – Funn av savnet person.<br />- person – Person (inkludert skadde på hendelsesstedet).<br />- last – Eks. gods fra varebil eller jernbanevogn som er spredt utover hendelsesområdet ved en ulykke.<br />- transportmiddel – Transportmiddel som er observert i tilknyting til hendelsen.<br />- bygg – Bygg som er relevant for håndtering av hendelsen.<br />- dyr – Dyr<br />- annet – Objekter som ikke inngår i de forhåndsdefinerte typene.<br />- ikkeSatt – Verdien er ikke lagt inn.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>posisjon</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>GM_Object</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Assosiasjoner**
+Objekt – kardinalitet: 0..*
+
 #### Observasjon
 
 Registrerte iakttakelser/fenomener som er relevante for hendelsen.<br />Merknad: Observasjoner er knyttet til objekt, jf.  kodeliste for objekttyper.
@@ -1761,7 +1845,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>Punkt</td>
+      <td>GM_Point</td>
     </tr>
   </tbody>
 </table>
@@ -2191,6 +2275,67 @@ Ressurs
 **Assosiasjoner**
 Transportmiddel – rolle: transportmiddel – kardinalitet: 0..1
 
+#### LokaltReferansesystem
+
+Lokalt referansesystem i form av enten rutenett eller fargekoder for bygg, brukt til å kommunisere lokasjon i et avgrenset område.<br /><br />Et LokaltReferansesystem er en container for enten ruter som til sammen danner et rutenett, eller fargekodede bygningssider som til sammen beskriver relevante sider av et bygg.<br /><br />Et LokaltReferansesystem skal inneholde akkurat én av disse typene. Dersom en hendelse har behov for både rutenett og fargekoder for bygg, skal det opprettes flere lokale referansesystemer.
+
+Egenskaper
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>navn</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Referansesystemer består av rutenett med en eller flere rektangler, eller fagekoder for bygg. Egenskapen "navn" gir grupper av tilhørende objekter en felles benevnelse.</td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>CharacterString</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">Navn:</th>
+      <td><strong>typeReferansesystem</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Multiplisitet:</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type:</th>
+      <td>TypeReferansesystem</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- rutenett – Område med høy risiko for liv/helse.<br />- fargekodeBygg – Område med risiko for liv/helse.</td>
+    </tr>
+  </tbody>
+</table>
+
+Relasjoner
+
+**Arv**
+Fellesegenskaper
+
 #### Tiltakslokasjon
 
 Lokasjon til tiltak som planlegges og eventuelt gjennomføres for å håndtere hendelsen.
@@ -2217,7 +2362,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>CharacterString</td>
+      <td>GM_Object</td>
     </tr>
   </tbody>
 </table>
@@ -2246,7 +2391,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- oppmøtested – Et forhåndsdefinert sted hvor innsatspersonell først møter.<br />- bevarÅsted – "Bevar åsted" innebærer at ingen skal røre noe uten at nødvendig dokumentasjon av omstendighetene er foretatt og sikring av spor er gjennomført, med mindre det er nødvendig for å redde liv, pågripe eller berge større verdier.<br />- møtepunkt – Punkt der nødetatene har avtalt å møtes. Inkluderer situasjoner der samhandling mellom ulike ressurser er nødvendig.<br />- leveringssted – Behandlingssted for levering av pasienter.<br />- kontrollpunkt – Bemannet punkt for ulike typer kontroll, inkludert kontroll av tilgang til avgrensede områder, registrering av personer som evakueres (evakueringspunkt) etc.<br />- kommandoplass<br />- innsatsledersKO – Stedet hvor innsatslederne fra brann, politi og helse samles for å lede og koordinere innsatsen under en hendelse. Dette fungerer som et taktisk knutepunkt for informasjonsutveksling og beslutningstaking. (IL-KO).<br />- helsehjelp – Et dedikert område på eller nær et skadested hvor medisinsk behandling gis til skadde eller syke personer. Kan inkludere fasiliteter for førstehjelp og mer omfattende medisinsk hjelp.<br />- triage – Arbeidsprosess med hensikt å bestemme prioritering til behandling og transport basert på hvor alvorlig pasientenes medisinske tilstand er (Helsedirektoratet)<br />- dekontaminering – Dekontaminasjon: fjerning av forurensninger (kontaminasjoner) som har spredt seg innen et begrenset område. Slike forurensninger kan finnes på faste overflater av ulik type, i væsker eller i gasser. De kan bestå av giftige eller miljøresistente kjemikalier, mikroorganismer (bakterier o.l.) og av radioaktive substanser (SNL).<br />- samleplass – Inkluderer sampleplass for døde, skadde, uskadde, vitner, berørte etc.<br />- mottakssenter – Sted hvor man mottar et større antall evakuerte og/ eller skadde fra en hendelse på sjøen eller i utlandet. Mottakssenteret kan også benyttes som en samleplass for evakuerte eller skadde eller som et evakueringspunkt dersom det er hensiktsmessig (PBS 1).<br />- evakuerteOgPårørendesenter – Oppholdssted for evakuerte som ikke er skadet, samt oppmøtested for pårørende.<br />- presseOgMedia – Et dedikert område for håndtering av mediekontakt under hendelser eller operasjoner, hvor journalister kan få informasjon.<br />- observasjonspost – En strategisk plassert posisjon for overvåking og innsamling av informasjon om et bestemt område, ofte brukt til å identifisere risiko, observere hendelser eller koordinere respons.<br />- helikopterlandingsplass – Et tilrettelagt område for trygg landing og avgang av helikoptre, ofte brukt i redningsarbeid, beredskap eller transport til vanskelig tilgjengelige steder.<br />- sambandsinstallasjon – En teknisk installasjon som muliggjør kommunikasjon og informasjonsdeling, ofte brukt i nødetatens og beredskapsaktørers arbeid for å sikre effektiv koordinering.<br />- depot – Lager (opprettet for håndtering av hendelsen) der det oppbevares større mengder materiell for senere bruk.<br />- parkeringsplass – Parkeringsplass<br />- kjørerute – Angivelse av definert kjørerute fra ressursens lokasjon til hendelsessted. Innhentet fra relevant tjeneste.<br />- sikkerRute – Sikker rute for nødetatene inn og ut fra hendelsessted (inkl. for helsepersonell som skal inn til skadde personer, samt evakueringslinje/akse, jf. Håndbok for redningstjeneste). Inkluderer sikker innpå marsj (polititerminologi.).<br />- avsperring – Sperringstiltak oppsatt ifm. en hendelse som marker definerte områder hvor kun nødetater og annet autorisert personell kan oppholde seg. Avsperring settes i kartet iht. etablerte prosedyrer for nødetatene.<br />- evakueringssone – Sone som personer skal evakueres fra.<br />- søketeigsone – Definert område hvor det søkes etter savnede. Merkes iht gjeldende regler for søkeoppdrag (Se Nasjonal veileder søk etter savnet person på land (2022)).<br />- faresone – Definerte områder rundt hendelsen som indikerer grad av risiko for de som oppholder seg der.<br />- sikring – Forebyggende tiltak i forbindelse med brann, flom, utslipp etc.<br />- arbeidsområde – Område som avgrenses for nødetatenes særskilte tiltak under håndteringen av hendelsen.<br />- slukking – Prosessen med å bekjempe og eliminere brann ved hjelp av ulike metoder og utstyr for å stoppe brannens spredning og redusere skadeomfanget.<br />- vannbombing – En metode for brannslukking hvor store mengder vann slippes fra fly eller helikoptre over brannområder, spesielt effektivt ved skogbranner.<br />- begrensningslinjeVåt – En fysisk eller strategisk linje etablert for å hindre videre spredning av brann, ofte ved bruk av naturlige barrierer eller opprettede brannlinjer (Bruk av vann).<br />- begrensningslinjeTørr – En fysisk eller strategisk linje etablert for å hindre videre spredning av brann, ofte ved bruk av naturlige barrierer eller opprettede brannlinjer (uten bruk av vann).<br />- vannslange – Slange brukt i brannslukking for å transportere og levere vann til brannstedet.<br />- vannpumpe – Pumpe brukt i brannslukking for å transportere og levere vann til brannstedet.<br />- sektorgrense – En definert avgrensning mellom ulike sektorer på et skadested, som brukes for å organisere og koordinere innsatsen effektivt.<br />- referansesystem – System som brukes for å identifisere og beskrive spesifikke steder innenfor et område. Brukes ofte for koordinering, spesielt i nødsituasjoner eller komplekse omgivelser.<br />- annetTiltak – Ikke forhåndsdefinerte tiltak</td>
+      <td>- oppmøtested – Et forhåndsdefinert sted hvor innsatspersonell først møter.<br />- bevarÅsted – "Bevar åsted" innebærer at ingen skal røre noe uten at nødvendig dokumentasjon av omstendighetene er foretatt og sikring av spor er gjennomført, med mindre det er nødvendig for å redde liv, pågripe eller berge større verdier.<br />- møtepunkt – Punkt der nødetatene har avtalt å møtes. Inkluderer situasjoner der samhandling mellom ulike ressurser er nødvendig.<br />- leveringssted – Behandlingssted for levering av pasienter.<br />- kontrollpunkt – Bemannet punkt for ulike typer kontroll, inkludert kontroll av tilgang til avgrensede områder, registrering av personer som evakueres (evakueringspunkt) etc.<br />- kommandoplass<br />- innsatsledersKO – Stedet hvor innsatslederne fra brann, politi og helse samles for å lede og koordinere innsatsen under en hendelse. Dette fungerer som et taktisk knutepunkt for informasjonsutveksling og beslutningstaking. (IL-KO).<br />- helsehjelp – Et dedikert område på eller nær et skadested hvor medisinsk behandling gis til skadde eller syke personer. Kan inkludere fasiliteter for førstehjelp og mer omfattende medisinsk hjelp.<br />- triage – Arbeidsprosess med hensikt å bestemme prioritering til behandling og transport basert på hvor alvorlig pasientenes medisinske tilstand er (Helsedirektoratet)<br />- dekontaminering – Dekontaminasjon: fjerning av forurensninger (kontaminasjoner) som har spredt seg innen et begrenset område. Slike forurensninger kan finnes på faste overflater av ulik type, i væsker eller i gasser. De kan bestå av giftige eller miljøresistente kjemikalier, mikroorganismer (bakterier o.l.) og av radioaktive substanser (SNL).<br />- samleplass – Inkluderer sampleplass for døde, skadde, uskadde, vitner, berørte etc.<br />- mottakssenter – Sted hvor man mottar et større antall evakuerte og/ eller skadde fra en hendelse på sjøen eller i utlandet. Mottakssenteret kan også benyttes som en samleplass for evakuerte eller skadde eller som et evakueringspunkt dersom det er hensiktsmessig (PBS 1).<br />- evakuerteOgPårørendesenter – Oppholdssted for evakuerte som ikke er skadet, samt oppmøtested for pårørende.<br />- presseOgMedia – Et dedikert område for håndtering av mediekontakt under hendelser eller operasjoner, hvor journalister kan få informasjon.<br />- observasjonspost – En strategisk plassert posisjon for overvåking og innsamling av informasjon om et bestemt område, ofte brukt til å identifisere risiko, observere hendelser eller koordinere respons.<br />- helikopterlandingsplass – Et tilrettelagt område for trygg landing og avgang av helikoptre, ofte brukt i redningsarbeid, beredskap eller transport til vanskelig tilgjengelige steder.<br />- sambandsinstallasjon – En teknisk installasjon som muliggjør kommunikasjon og informasjonsdeling, ofte brukt i nødetatens og beredskapsaktørers arbeid for å sikre effektiv koordinering.<br />- depot – Lager (opprettet for håndtering av hendelsen) der det oppbevares større mengder materiell for senere bruk.<br />- parkeringsplass – Parkeringsplass<br />- kjørerute – Angivelse av definert kjørerute fra ressursens lokasjon til hendelsessted. Innhentet fra relevant tjeneste.<br />- sikkerRute – Sikker rute for nødetatene inn og ut fra hendelsessted (inkl. for helsepersonell som skal inn til skadde personer, samt evakueringslinje/akse, jf. Håndbok for redningstjeneste). Inkluderer sikker innpå marsj (polititerminologi.).<br />- avsperring – Sperringstiltak oppsatt ifm. en hendelse som marker definerte områder hvor kun nødetater og annet autorisert personell kan oppholde seg. Avsperring settes i kartet iht. etablerte prosedyrer for nødetatene.<br />- evakueringssone – Sone som personer skal evakueres fra.<br />- evakueringspunkt – Stedet hvor skadde og uskadde som transporteres eller følges ut av innsatsområdet registreres.<br />- søketeigsone – Definert område hvor det søkes etter savnede. Merkes iht gjeldende regler for søkeoppdrag (Se Nasjonal veileder søk etter savnet person på land (2022)).<br />- faresone – Definerte områder rundt hendelsen som indikerer grad av risiko for de som oppholder seg der.<br />- sikring – Forebyggende tiltak i forbindelse med brann, flom, utslipp etc.<br />- arbeidsområde – Område som avgrenses for nødetatenes særskilte tiltak under håndteringen av hendelsen.<br />- slukking – Prosessen med å bekjempe og eliminere brann ved hjelp av ulike metoder og utstyr for å stoppe brannens spredning og redusere skadeomfanget.<br />- vannbombing – En metode for brannslukking hvor store mengder vann slippes fra fly eller helikoptre over brannområder, spesielt effektivt ved skogbranner.<br />- begrensningslinjeVåt – En fysisk eller strategisk linje etablert for å hindre videre spredning av brann, ofte ved bruk av naturlige barrierer eller opprettede brannlinjer (Bruk av vann).<br />- begrensningslinjeTørr – En fysisk eller strategisk linje etablert for å hindre videre spredning av brann, ofte ved bruk av naturlige barrierer eller opprettede brannlinjer (uten bruk av vann).<br />- vannslange – Slange brukt i brannslukking for å transportere og levere vann til brannstedet.<br />- vannpumpe – Pumpe brukt i brannslukking for å transportere og levere vann til brannstedet.<br />- sektorgrense – En definert avgrensning mellom ulike sektorer på et skadested, som brukes for å organisere og koordinere innsatsen effektivt.<br />- annetTiltak – Ikke forhåndsdefinerte tiltak</td>
     </tr>
   </tbody>
 </table>
@@ -2416,7 +2561,6 @@ Fellesegenskaper
 
 **Assosiasjoner**
 Ressurs
-X___TiltakOppgave
 
 #### Kontekst
 
@@ -2527,12 +2671,12 @@ Koder
   <tbody>
     <tr>
       <td>firstResponder</td>
-      <td></td>
+      <td>En "first responder" er den første kvalifiserte personen eller ressursen som ankommer et skadested eller en hendelse, og som iverksetter nødvendige livreddende, sikrende eller skadebegrensende tiltak inntil ordinære nød- og redningsressurser overtar.</td>
       <td></td>
     </tr>
     <tr>
       <td>tvang</td>
-      <td></td>
+      <td>En hendelseskategori der det er nødvendig å anvende lovhjemlede tvangsmidler eller makt for å gjennomføre helsehjelp, ivareta sikkerhet eller håndtere personer som motsetter seg nødvendige tiltak.</td>
       <td></td>
     </tr>
   </tbody>
@@ -2696,7 +2840,8 @@ Koder
 
 #### «Enumeration» TypeSkadested
 
-**Definisjon:** Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse.
+**Definisjon:** Spredningsbeskrivelser for et utvalg hendelser som har begreper for utbredelse.
+For CBRNE benyttes fareområde.
 
 Koder
 
@@ -3223,7 +3368,7 @@ Koder
 
 #### «Enumeration» TilgjengelighetOps
 
-**Definisjon:** Angir tilgjengeligheten av ressurser sett fra operasjonssentralens perspektiv, inkludert både operative og potensielt tilgjengelige ressurser.
+**Definisjon:** Angir tilgjengeligheten av ressurser sett fra operasjonssentralens perspektiv, inkludert både operative og potensielt tilgjengelige ressurser. (Kodelisten er identisk med "TilgjengelighetHendelse", men har ulike definisjoner for kodeverdiene).
 
 Koder
 
@@ -3261,7 +3406,7 @@ Koder
 
 #### «Enumeration» TilgjengelighetHendelse
 
-**Definisjon:** Angir tilgjengeligheten av ressurser tilordnet hendelsen.
+**Definisjon:** Angir tilgjengeligheten til ressurser tilordnet hendelsen, sett fra innsatsleders og personellets perspektiv. Kodelisten er identisk med «TilgjengelighetOps», men kodeverdiene har egne definisjoner i denne konteksten. Opptatt dekker også tilfeller der personell hviler.
 
 Koder
 
@@ -3561,6 +3706,34 @@ Koder
   </tbody>
 </table>
 
+#### «Enumeration» TypeReferansesystem
+
+**Definisjon:** Kategorier av referansesystemer.
+
+Koder
+
+<table class="code-list-table">
+  <thead>
+    <tr>
+      <th>Kodenavn:</th>
+      <th>Definisjon:</th>
+      <th>Kodeverdi:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rutenett</td>
+      <td>Område med høy risiko for liv/helse.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>fargekodeBygg</td>
+      <td>Område med risiko for liv/helse.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
 #### «Enumeration» TypeTiltakslokasjon
 
 **Definisjon:** En kodeliste med relevante tiltak.
@@ -3692,6 +3865,11 @@ Koder
       <td></td>
     </tr>
     <tr>
+      <td>evakueringspunkt</td>
+      <td>Stedet hvor skadde og uskadde som transporteres eller følges ut av innsatsområdet registreres.</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>søketeigsone</td>
       <td>Definert område hvor det søkes etter savnede. Merkes iht gjeldende regler for søkeoppdrag (Se Nasjonal veileder søk etter savnet person på land (2022)).</td>
       <td></td>
@@ -3744,11 +3922,6 @@ Koder
     <tr>
       <td>sektorgrense</td>
       <td>En definert avgrensning mellom ulike sektorer på et skadested, som brukes for å organisere og koordinere innsatsen effektivt.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>referansesystem</td>
-      <td>System som brukes for å identifisere og beskrive spesifikke steder innenfor et område. Brukes ofte for koordinering, spesielt i nødsituasjoner eller komplekse omgivelser.</td>
       <td></td>
     </tr>
     <tr>

@@ -56,7 +56,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Geografiske hendelser"
   },
   {
     "name": "Fellesegenskaper",
@@ -71,7 +72,7 @@
       {
         "name": "geometriobjekt",
         "type": "URI",
-        "description": "referanse til en eksisterende geometri som stedefester dette objektet",
+        "description": "Referanse til en eksisterende geometri som stedefester dette objektet. Man kan referere til geometri i eksterne datasett (navnerom + UUID + ev. versjonsID), samt geometri som opprettes i hendelsen.",
         "cardinality": "0..1"
       }
     ],
@@ -81,7 +82,8 @@
         "VersjonertObjekt"
       ],
       "associations": []
-    }
+    },
+    "package": "Geografiske hendelser"
   },
   {
     "name": "ops",
@@ -102,11 +104,12 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Geografiske hendelser"
   },
   {
     "name": "Helsesamvirke",
-    "description": "Hendelsestype som ikke inngår i de forhåndsdefinerte hendelsestypene.",
+    "description": "Hendelsestyper med samvirke i forbindelse med utvalgte helseoppdrag.",
     "attributes": [
       {
         "name": "samvirkeType",
@@ -116,11 +119,11 @@
           "listedValues": [
             {
               "value": "firstResponder",
-              "label": "firstResponder"
+              "label": "En \"first responder\" er den første kvalifiserte personen eller ressursen som ankommer et skadested eller en hendelse, og som iverksetter nødvendige livreddende, sikrende eller skadebegrensende tiltak inntil ordinære nød- og redningsressurser overtar."
             },
             {
               "value": "tvang",
-              "label": "tvang"
+              "label": "En hendelseskategori der det er nødvendig å anvende lovhjemlede tvangsmidler eller makt for å gjennomføre helsehjelp, ivareta sikkerhet eller håndtere personer som motsetter seg nødvendige tiltak."
             }
           ],
           "definition": "Kategorier av hendelsestypen helsesamvikre"
@@ -133,7 +136,8 @@
         "Hendelse"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Hendelse",
@@ -141,7 +145,7 @@
     "attributes": [
       {
         "name": "punkt",
-        "type": "Punkt",
+        "type": "GM_Point",
         "description": "Geografisk lokasjon for hendelsen.",
         "cardinality": "1"
       },
@@ -355,6 +359,10 @@
           "cardinality": "1"
         },
         {
+          "target": "Objektgruppe",
+          "cardinality": "0..*"
+        },
+        {
           "target": "Objekt",
           "role": "objekt",
           "cardinality": "1..*"
@@ -400,6 +408,10 @@
           "cardinality": "0..*"
         },
         {
+          "target": "LokaltReferansesystem",
+          "cardinality": "0..*"
+        },
+        {
           "target": "Observasjon",
           "role": "____innmeldtObservasjon",
           "cardinality": "1"
@@ -410,7 +422,8 @@
           "cardinality": "1..*"
         }
       ]
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "PlanlagtHendelse",
@@ -449,7 +462,8 @@
         "Hendelse"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "FramskrevetSkadested",
@@ -489,7 +503,7 @@
               "label": "Området som er rammet av flommen."
             }
           ],
-          "definition": "Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse."
+          "definition": "Spredningsbeskrivelser for et utvalg hendelser som har begreper for utbredelse.\nFor CBRNE benyttes fareområde."
         }
       },
       {
@@ -510,7 +524,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "SammensattHendelse",
@@ -528,7 +543,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "AnnenHendelse",
@@ -540,7 +556,8 @@
         "Hendelse"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Sikkerhetshendelse",
@@ -595,7 +612,8 @@
         "Hendelse"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "FramskrevetHendelsesområde",
@@ -625,7 +643,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Naturhendelse",
@@ -673,7 +692,8 @@
         "Hendelse"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Ulykke",
@@ -768,7 +788,8 @@
         "Hendelse"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Hendelsesområde",
@@ -799,7 +820,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "FramskrevetInnsatsområde",
@@ -829,7 +851,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Innsatsområde",
@@ -860,7 +883,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Skadested",
@@ -900,7 +924,7 @@
               "label": "Området som er rammet av flommen."
             }
           ],
-          "definition": "Spredningsbeskrivelser for et utvalg av hendelser som har begreper for utbredelse."
+          "definition": "Spredningsbeskrivelser for et utvalg hendelser som har begreper for utbredelse.\nFor CBRNE benyttes fareområde."
         }
       },
       {
@@ -922,7 +946,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Hendelser"
   },
   {
     "name": "Objekt",
@@ -1033,7 +1058,8 @@
           "cardinality": "1..*"
         }
       ]
-    }
+    },
+    "package": "Heldelsesrelatert"
   },
   {
     "name": "Observatør",
@@ -1070,7 +1096,86 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Heldelsesrelatert"
+  },
+  {
+    "name": "Objektgruppe",
+    "description": "Grupperingsmekanisme for objekter eller observerte forhold på hendelsesstedet, knyttet til hendelsen.\n\nDet skal være mulig å koble objekter sammen i grupper, samt definere et objekt som en gruppe/container med tilhørende underordnede objekter.\n\nEksempel: Objektet «togvogn» defineres som en gruppe og inneholder objektene «skadde personer».\n\nEt objekt kan inngå i flere grupper samtidig.",
+    "attributes": [
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "cardinality": "1"
+      },
+      {
+        "name": "typeObjekt",
+        "type": "TypeObject",
+        "description": "Objekter fra kodelisten \"TypeObjekt\".",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "nødsignal",
+              "label": "Ethvert signal som brukes til å påkalle oppmerksomhet ifm nødssituasjon og ved andre omstendigheter hvor oppmerksomhet er krevet."
+            },
+            {
+              "value": "spor",
+              "label": "Klesplagg, mobil o.l. som kan knyttes til (er relevant for) et søk etter savnet person."
+            },
+            {
+              "value": "funn",
+              "label": "Funn av savnet person."
+            },
+            {
+              "value": "person",
+              "label": "Person (inkludert skadde på hendelsesstedet)."
+            },
+            {
+              "value": "last",
+              "label": "Eks. gods fra varebil eller jernbanevogn som er spredt utover hendelsesområdet ved en ulykke."
+            },
+            {
+              "value": "transportmiddel",
+              "label": "Transportmiddel som er observert i tilknyting til hendelsen."
+            },
+            {
+              "value": "bygg",
+              "label": "Bygg som er relevant for håndtering av hendelsen."
+            },
+            {
+              "value": "dyr",
+              "label": "Dyr"
+            },
+            {
+              "value": "annet",
+              "label": "Objekter som ikke inngår i de forhåndsdefinerte typene."
+            },
+            {
+              "value": "ikkeSatt",
+              "label": "Verdien er ikke lagt inn."
+            }
+          ],
+          "definition": "Angir hva som er observert."
+        }
+      },
+      {
+        "name": "posisjon",
+        "type": "GM_Object",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": [
+        {
+          "target": "Objekt",
+          "cardinality": "0..*"
+        }
+      ]
+    },
+    "package": "Heldelsesrelatert"
   },
   {
     "name": "Observasjon",
@@ -1225,7 +1330,8 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "Heldelsesrelatert"
   },
   {
     "name": "Ressurs",
@@ -1233,7 +1339,7 @@
     "attributes": [
       {
         "name": "posisjon",
-        "type": "Punkt",
+        "type": "GM_Point",
         "description": "Angir ressursens posisjon (statisk/dynamisk) til enhver tid, innhentet fra relevant tjeneste.",
         "cardinality": "1"
       },
@@ -1324,7 +1430,7 @@
               "label": "Tilgjengelighet ikke angitt."
             }
           ],
-          "definition": "Angir tilgjengeligheten av ressurser sett fra operasjonssentralens perspektiv, inkludert både operative og potensielt tilgjengelige ressurser."
+          "definition": "Angir tilgjengeligheten av ressurser sett fra operasjonssentralens perspektiv, inkludert både operative og potensielt tilgjengelige ressurser. (Kodelisten er identisk med \"TilgjengelighetHendelse\", men har ulike definisjoner for kodeverdiene)."
         }
       },
       {
@@ -1351,7 +1457,7 @@
               "label": "Tilgjengelighet ikke angitt."
             }
           ],
-          "definition": "Angir tilgjengeligheten av ressurser tilordnet hendelsen."
+          "definition": "Angir tilgjengeligheten til ressurser tilordnet hendelsen, sett fra innsatsleders og personellets perspektiv. Kodelisten er identisk med «TilgjengelighetOps», men kodeverdiene har egne definisjoner i denne konteksten. Opptatt dekker også tilfeller der personell hviler."
         }
       },
       {
@@ -1380,7 +1486,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Ressurser"
   },
   {
     "name": "Drone",
@@ -1431,7 +1538,8 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "Ressurser"
   },
   {
     "name": "Depot",
@@ -1443,7 +1551,8 @@
         "Ressurs"
       ],
       "associations": []
-    }
+    },
+    "package": "Ressurser"
   },
   {
     "name": "AnnenRessurs",
@@ -1479,7 +1588,8 @@
         "Ressurs"
       ],
       "associations": []
-    }
+    },
+    "package": "Ressurser"
   },
   {
     "name": "Transportmiddel",
@@ -1581,7 +1691,8 @@
         "Ressurs"
       ],
       "associations": []
-    }
+    },
+    "package": "Ressurser"
   },
   {
     "name": "Personell",
@@ -1674,7 +1785,46 @@
           "cardinality": "0..1"
         }
       ]
-    }
+    },
+    "package": "Ressurser"
+  },
+  {
+    "name": "LokaltReferansesystem",
+    "description": "Lokalt referansesystem i form av enten rutenett eller fargekoder for bygg, brukt til å kommunisere lokasjon i et avgrenset område.\n\nEt LokaltReferansesystem er en container for enten ruter som til sammen danner et rutenett, eller fargekodede bygningssider som til sammen beskriver relevante sider av et bygg.\n\nEt LokaltReferansesystem skal inneholde akkurat én av disse typene. Dersom en hendelse har behov for både rutenett og fargekoder for bygg, skal det opprettes flere lokale referansesystemer.",
+    "attributes": [
+      {
+        "name": "navn",
+        "type": "CharacterString",
+        "description": "Referansesystemer består av rutenett med en eller flere rektangler, eller fagekoder for bygg. Egenskapen \"navn\" gir grupper av tilhørende objekter en felles benevnelse.",
+        "cardinality": "1"
+      },
+      {
+        "name": "typeReferansesystem",
+        "type": "TypeReferansesystem",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "rutenett",
+              "label": "Område med høy risiko for liv/helse."
+            },
+            {
+              "value": "fargekodeBygg",
+              "label": "Område med risiko for liv/helse."
+            }
+          ],
+          "definition": "Kategorier av referansesystemer."
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Fellesegenskaper"
+      ],
+      "associations": []
+    },
+    "package": "Tiltak"
   },
   {
     "name": "Tiltakslokasjon",
@@ -1682,7 +1832,7 @@
     "attributes": [
       {
         "name": "posisjon",
-        "type": "CharacterString",
+        "type": "GM_Object",
         "description": "Geometri (punkt/linje/flate) knyttet til tiltak.",
         "cardinality": "1"
       },
@@ -1786,6 +1936,10 @@
               "label": "Sone som personer skal evakueres fra."
             },
             {
+              "value": "evakueringspunkt",
+              "label": "Stedet hvor skadde og uskadde som transporteres eller følges ut av innsatsområdet registreres."
+            },
+            {
               "value": "søketeigsone",
               "label": "Definert område hvor det søkes etter savnede. Merkes iht gjeldende regler for søkeoppdrag (Se Nasjonal veileder søk etter savnet person på land (2022))."
             },
@@ -1828,10 +1982,6 @@
             {
               "value": "sektorgrense",
               "label": "En definert avgrensning mellom ulike sektorer på et skadested, som brukes for å organisere og koordinere innsatsen effektivt."
-            },
-            {
-              "value": "referansesystem",
-              "label": "System som brukes for å identifisere og beskrive spesifikke steder innenfor et område. Brukes ofte for koordinering, spesielt i nødsituasjoner eller komplekse omgivelser."
             },
             {
               "value": "annetTiltak",
@@ -1980,12 +2130,10 @@
       "associations": [
         {
           "target": "Ressurs"
-        },
-        {
-          "target": "X___TiltakOppgave"
         }
       ]
-    }
+    },
+    "package": "Tiltak"
   },
   {
     "name": "Kontekst",
@@ -2097,6 +2245,7 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Kontekst"
   }
 ]
