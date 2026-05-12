@@ -90,7 +90,7 @@ logo: "https://register.geonorge.no/data/organizations/870917732_Sokkeldeparteme
 
 
 
-➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
+➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram per pakke og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
 
 ## Referansesystem
 

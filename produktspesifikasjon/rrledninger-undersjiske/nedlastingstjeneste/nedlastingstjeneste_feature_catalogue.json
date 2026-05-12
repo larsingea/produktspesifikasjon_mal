@@ -132,7 +132,8 @@
         "CommonProperties"
       ],
       "associations": []
-    }
+    },
+    "package": "EPIM_MindsPilot20171020"
   },
   {
     "name": "CablesPipelines",
@@ -286,7 +287,8 @@
         "CommonProperties"
       ],
       "associations": []
-    }
+    },
+    "package": "EPIM_MindsPilot20171020"
   },
   {
     "name": "InstallationPolygon",
@@ -369,7 +371,8 @@
         "CommonProperties"
       ],
       "associations": []
-    }
+    },
+    "package": "EPIM_MindsPilot20171020"
   },
   {
     "name": "CommonProperties",
@@ -1028,7 +1031,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "EPIM_MindsPilot20171020"
   },
   {
     "name": "InstallationPoint",
@@ -1278,7 +1282,8 @@
         "CommonProperties"
       ],
       "associations": []
-    }
+    },
+    "package": "EPIM_MindsPilot20171020"
   },
   {
     "name": "InstallationLine",
@@ -1433,6 +1438,7 @@
         "CommonProperties"
       ],
       "associations": []
-    }
+    },
+    "package": "EPIM_MindsPilot20171020"
   }
 ]
