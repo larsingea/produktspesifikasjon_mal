@@ -24,23 +24,23 @@ logo: "https://register.geonorge.no/data/organizations/970205039_NVE_liten.png"
 
 - **Tidsperiode**:
   - **Fra**: 2014-02-28
-  - **Til**: 2026-04-07
+  - **Til**: 2026-05-10
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2014-02-28<br>
-> **Endret dato:** 2026-04-07<br>
+> **Endret dato:** 2026-05-10<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Norges vassdrags- og energidirektorat
+> **Kontaktinformasjon:** Norges vassdrags- og energidirektorat, [gisstotte@nve.no](mailto:gisstotte@nve.no)
 
 ## Om produktet Skredfaresoner
 
 
 > **Romlig representasjonstype:** Vektor<br>
-> **Unik identifikator:** b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1<br>
-> **Kontaktinformasjon:** Norges vassdrags- og energidirektorat
+> **Unik identifikator:** <https://data.geonorge.no/sosi/samfunnssikkerhet/skredfaresoner><br>
+> **Kontaktinformasjon:** Norges vassdrags- og energidirektorat, [gisstotte@nve.no](mailto:gisstotte@nve.no)
 >
 > **Romlig oppløsning:**
 >
@@ -74,16 +74,11 @@ Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\n
 
 ## Omfang
 
-### hele datasettet
+### Hele datasettet
 
 **Nivå**: dataset
 
-**Utstrekning**: National
-
-
-## Datainnhold og struktur
-
-**Beskrivelse**: Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\n\\nSammenliknet med aktsomhetskart, er faresonekart mer detaljerte. På faresonekart er faren undersøkt nøyere ved hjelp av befaringer, modeller og målinger. Faregraden er kvantifisert med opplysninger om gjennomsnittlig årlig sannsynlighet eller gjentaksintervall for den eller de faretypene som kartet omhandler. Faresonene viser soner med ulike årlige sannsynlighet/gjentaksintervall for den aktuelle faren, ofte med de samme sannsynlighetene som er gitt for de ulike trygghetsklassene i byggteknisk forskrift (TEK 17).\\n\\nInformasjon om hvordan man skal bruke og benytte data om flom- og skredfare i arealplaner er beskrevet i ulike veiledere på NVEs hjemmesider:\\n<https://www.nve.no/flaum-og-skred/arealplanlegging/?ref=mainmenu>
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
 
 ## Referansesystem
 
@@ -122,8 +117,6 @@ Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\n
 - **Kvalitetsmål**: FAIR
   **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 95%
 
-**Beskrivelse**: NVEs kartlegging retter seg først og fremst mot eksisterende bebyggelse. Ved identifisering og prioritering av områder er det derfor lagt vekt på hvor det bor og oppholder seg mennesker innenfor potensielt skredfareutsatte områder.For hver skredtype er det utarbeidet prioriteringslister for farekartlegging, jfr Plan for skredfarekartlegging kap 6. Ved faresonekartlegging vil områdene med prioritet 1 normalt bli kartlagt først, deretter områdene med prioritet 2. For områder med høy prioritet for flere skredtyper, vil dette også kunne gi samlet høyere prioritet. Områder som skulle vise seg allerede kartlagt eller tilstrekkelig sikret, vil kunne nedrangeres eller også fjernes fra prioriteringslisten. På samme vis vil nye skredhendelser og registreringer kunne føre til en høyere prioritet.
-
 ## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Kontinuerlig
@@ -154,7 +147,7 @@ Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\n
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-08
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 
@@ -171,33 +164,6 @@ Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\n
 - **kode**: b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://www.nve.no/naturfare/utredning-av-naturfare/om-kart-og-kartlegging-av-naturfare/om-kartlegging-av-skredfare-i-bratt-terreng/>
-  **relasjon**: about
-  **type**: text/html
-  **tittel**: Produktside
-
-- **lenke**: <https://nedlasting.geonorge.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://kart.nve.no/enterprise/services/Skredfaresoner1/MapServer/WMSServer>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://kart.nve.no/enterprise/services/Skredfaresoner1/MapServer/WMSServer?request=GetCapabilities&service=WMS>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
 
 ## Tilleggsinformasjon
 

@@ -1,8 +1,10 @@
 {
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
   "title": "Skredfaresoner",
+  "format": "text/html",
   "date": {
     "creation": "2014-02-28",
-    "revision": "2026-04-07"
+    "revision": "2026-05-10"
   },
   "language": "nor",
   "contact": {
@@ -29,7 +31,7 @@
       "equivalentScale": "5000"
     },
     "supplementalInformation": "NVEs kartlegging retter seg først og fremst mot eksisterende bebyggelse. Ved identifisering og prioritering av områder er det derfor lagt vekt på hvor det bor og oppholder seg mennesker innenfor potensielt skredfareutsatte områder.For hver skredtype er det utarbeidet prioriteringslister for farekartlegging, jfr Plan for skredfarekartlegging kap 6. Ved faresonekartlegging vil områdene med prioritet 1 normalt bli kartlagt først, deretter områdene med prioritet 2. For områder med høy prioritet for flere skredtyper, vil dette også kunne gi samlet høyere prioritet. Områder som skulle vise seg allerede kartlagt eller tilstrekkelig sikret, vil kunne nedrangeres eller også fjernes fra prioriteringslisten. På samme vis vil nye skredhendelser og registreringer kunne føre til en høyere prioritet.",
-    "uniqueId": "b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1",
+    "uniqueId": "https://data.geonorge.no/sosi/samfunnssikkerhet/skredfaresoner",
     "keyword": [
       "skred",
       "Faresoner",
@@ -89,31 +91,26 @@
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2014-02-28",
-          "endPosition": "2026-04-07"
+          "endPosition": "2026-05-10"
         }
       }
     },
     "date": {
       "creation": "2014-02-28",
       "publication": "2014-02-28",
-      "revision": "2026-04-07"
+      "revision": "2026-05-10"
     },
     "language": "nor"
   },
   "scopeSection": [
     {
       "specificationScope": {
-        "scopeIdentification": "hele datasettet",
+        "scopeIdentification": "Hele datasettet",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        }
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
       }
     }
   ],
-  "dataContentAndStructureSection": {
-    "narrativeDescription": "Dataene egner seg for bruk innen planlegging, samfunnssikkerhet og beredskap.\\\\n\\\\nSammenliknet med aktsomhetskart, er faresonekart mer detaljerte. På faresonekart er faren undersøkt nøyere ved hjelp av befaringer, modeller og målinger. Faregraden er kvantifisert med opplysninger om gjennomsnittlig årlig sannsynlighet eller gjentaksintervall for den eller de faretypene som kartet omhandler. Faresonene viser soner med ulike årlige sannsynlighet/gjentaksintervall for den aktuelle faren, ofte med de samme sannsynlighetene som er gitt for de ulike trygghetsklassene i byggteknisk forskrift (TEK 17).\\\\n\\\\nInformasjon om hvordan man skal bruke og benytte data om flom- og skredfare i arealplaner er beskrevet i ulike veiledere på NVEs hjemmesider:\\\\nhttps://www.nve.no/flaum-og-skred/arealplanlegging/?ref=mainmenu"
-  },
   "referenceSystemSection": {
     "spatialReferenceSystem": [
       {
@@ -176,10 +173,7 @@
         "nameOfMeasure": "FAIR",
         "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 95%"
       }
-    ],
-    "resourceLineage": {
-      "statement": "NVEs kartlegging retter seg først og fremst mot eksisterende bebyggelse. Ved identifisering og prioritering av områder er det derfor lagt vekt på hvor det bor og oppholder seg mennesker innenfor potensielt skredfareutsatte områder.For hver skredtype er det utarbeidet prioriteringslister for farekartlegging, jfr Plan for skredfarekartlegging kap 6. Ved faresonekartlegging vil områdene med prioritet 1 normalt bli kartlagt først, deretter områdene med prioritet 2. For områder med høy prioritet for flere skredtyper, vil dette også kunne gi samlet høyere prioritet. Områder som skulle vise seg allerede kartlagt eller tilstrekkelig sikret, vil kunne nedrangeres eller også fjernes fra prioriteringslisten. På samme vis vil nye skredhendelser og registreringer kunne føre til en høyere prioritet."
-    }
+    ]
   },
   "maintenanceSection": {
     "maintenanceAndUpdateFrequency": "Kontinuerlig",
@@ -324,7 +318,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-04-08",
+    "metadataDate": "2026-05-11",
     "language": "nor",
     "contact": {
       "organizationName": "Norges vassdrags- og energidirektorat",
@@ -337,38 +331,6 @@
       "code": "b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1",
       "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
       "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1"
-    },
-    "links": [
-      {
-        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=b2d5aaf8-79ac-40f3-9cd6-fdc30bc42ea1",
-        "rel": "describedby",
-        "type": "application/xml",
-        "title": "Metadata (ISO 19139)"
-      },
-      {
-        "href": "https://www.nve.no/naturfare/utredning-av-naturfare/om-kart-og-kartlegging-av-naturfare/om-kartlegging-av-skredfare-i-bratt-terreng/",
-        "rel": "about",
-        "type": "text/html",
-        "title": "Produktside"
-      },
-      {
-        "href": "https://nedlasting.geonorge.no/api/capabilities/",
-        "rel": "enclosure",
-        "type": "text/html",
-        "title": "Nedlasting"
-      },
-      {
-        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://kart.nve.no/enterprise/services/Skredfaresoner1/MapServer/WMSServer",
-        "rel": "service",
-        "type": "text/html",
-        "title": "Tjeneste"
-      },
-      {
-        "href": "https://kart.nve.no/enterprise/services/Skredfaresoner1/MapServer/WMSServer?request=GetCapabilities&service=WMS",
-        "rel": "service",
-        "type": "application/xml",
-        "title": "Tjeneste-distribusjon"
-      }
-    ]
+    }
   }
 }
