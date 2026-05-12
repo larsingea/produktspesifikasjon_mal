@@ -1,5 +1,7 @@
 ### Datamodell
 
+**Kilde:** [SOSI UML XMI-fil](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/Hendelser-1.0.xml)
+
 #### Oversikt
 
 <a href="filnedlasting_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="filnedlasting_feature_catalogue_overview.png" alt="Datamodell Filnedlasting - oversikt" style="max-width: 100%; height: auto;" /></a>
