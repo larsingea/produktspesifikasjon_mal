@@ -1,0 +1,90 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title N50 Kartdata - Datamodell for kartdata - Restriksjonsområder
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Restriksjonsområder" {
+
+  class Allmenning <<featureType>> {
+    + område [1] : GM_Surface
+    + allmenningtype [1] : Allmenningtype
+    + navn [1] : CharacterString
+  }
+
+  class Skytefeltgrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Naturverngrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Allmenninggrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class "Naturvernområde" as Naturvernomr_de <<featureType>> {
+    + område [1] : GM_Surface
+    + vernedato [1] : Date
+    + verneform [1] : Verneform
+    + navn [1] : CharacterString
+  }
+
+  class Skytefelt <<featureType>> {
+    + område [1] : GM_Surface
+    + navn [1] : CharacterString
+    + skytefeltstatus [1] : Skytefeltstatus
+  }
+
+  class Naturvernpunkt <<featureType>> {
+    + posisjon [1] : GM_Point
+    + vernedato [1] : Date
+    + verneform [1] : Verneform
+    + navn [1] : CharacterString
+  }
+}
+
+package "Eksterne referanser" <<Frame>> {
+  class SOSI_Objekt_Flater <<Generelle typer>> {
+  }
+  class SOSI_Objekt_PunkterOgLinjer <<Generelle typer>> {
+  }
+}
+
+SOSI_Objekt_Flater <|-- Allmenning
+Allmenning --> Allmenninggrense : avgrensesAvAllmenninggrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Skytefeltgrense
+SOSI_Objekt_PunkterOgLinjer <|-- Naturverngrense
+SOSI_Objekt_PunkterOgLinjer <|-- Allmenninggrense
+SOSI_Objekt_Flater <|-- Naturvernomr_de
+Naturvernomr_de --> Naturverngrense : avgrensesAvNaturverngrense [0..*]
+SOSI_Objekt_Flater <|-- Skytefelt
+Skytefelt --> Skytefeltgrense : avgrensesAvSkytefeltgrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Naturvernpunkt
+
+@enduml

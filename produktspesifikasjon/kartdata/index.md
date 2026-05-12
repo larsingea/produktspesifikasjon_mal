@@ -23,24 +23,24 @@ logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_lite
 **Tidsmessig utstrekning**:
 
 - **Tidsperiode**:
-  - **Fra**: 2026-04-03
-  - **Til**: 2026-04-03
+  - **Fra**: 2026-05-09
+  - **Til**: 2026-05-09
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** <br>
-> **Endret dato:** 2026-04-03<br>
+> **Endret dato:** 2026-05-09<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Kartverket
+> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
 ## Om produktet N50 Kartdata
 
 
 > **Romlig representasjonstype:** Vektor<br>
-> **Unik identifikator:** ea192681-d039-42ec-b1bc-f3ce04c189ac<br>
-> **Kontaktinformasjon:** Kartverket
+> **Unik identifikator:** <https://data.geonorge.no/sosi/kartdata/n50><br>
+> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 >
 > **Romlig oppløsning:**
 >
@@ -69,27 +69,31 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 ## Omfang
 
-### Datamodell for kartdata
+### Hele datasettet
 
 **Nivå**: dataset
 
-**Utstrekning**: National
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
+
+### Datamodell for kartdata
+
+**Nivå**: dataset
 
 **Nivåbeskrivelse**: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
 ## Datainnhold og struktur
 
-**Beskrivelse**: Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, turkart/fritidskart, interaktive kart, som datagrunnlag for kartløsninger på internett og i analysesammenheng.
+
 
 ### Datamodell - Datamodell for kartdata
 
 
 
-[Objektkatalog - Datamodell for kartdata](datamodell-for-kartdata/objektkatalog.html)
+<a href="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue_overview.png" alt="Datamodell Datamodell for kartdata" style="max-width: 100%; height: auto;" /></a>
 
 
 
-<a href="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata/datamodell-for-kartdata_feature_catalogue.png" alt="Datamodell Datamodell for kartdata" style="max-width: 100%; height: auto;" /></a>
+➡️ [Se full datamodell for omfang "Datamodell for kartdata" (diagram per pakke og objektkatalog)](datamodell-for-kartdata/objektkatalog.html)
 
 ## Referansesystem
 
@@ -126,8 +130,6 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 - **Kvalitetsmål**: FAIR
   **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 90%
 
-**Beskrivelse**: Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.
-
 ## Vedlikehold
 
 **Vedlikeholdsfrekvens**: Ukentlig
@@ -153,9 +155,9 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 | Topografisk Norgeskart WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.topo?service=wms&request=getcapabilities) | WMS-tjeneste | png |  |
 | Norwegian Arctic SDI WMS |  | WMS-tjeneste | png |  |
 | Kartdata WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.kartdata?service=wms&request=getcapabilities) | WMS-tjeneste | OGC WMS |  |
-| Bakgrunnskart for Matrikkelen WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities) | WMS-tjeneste | OGC WMS |  |
 | Topografisk Norgeskart gråtone WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.topograatone?service=wms&request=getcapabilities) | WMS-tjeneste | png |  |
 | Topografisk norgeskart WMTS / cache | [Lenke](https://cache.kartverket.no/v1/wmts/1.0.0/WMTSCapabilities.xml) | WMTS-tjeneste | OGC WMTS |  |
+| Bakgrunnskart for Matrikkelen WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities) | WMS-tjeneste | OGC WMS |  |
 
 ## Metadata
 
@@ -163,7 +165,7 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-08
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 
@@ -180,48 +182,6 @@ Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, t
 - **kode**: ea192681-d039-42ec-b1bc-f3ce04c189ac
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/ea192681-d039-42ec-b1bc-f3ce04c189ac>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=ea192681-d039-42ec-b1bc-f3ce04c189ac>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://nedlasting.geonorge.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://wms.geonorge.no/skwms1/wms.topo>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://wms.geonorge.no/skwms1/wms.topo?service=wms&request=getcapabilities>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
-
-- **lenke**: <https://wms.geonorge.no/skwms1/wms.kartdata?service=wms&request=getcapabilities>
-  **relasjon**: alternate
-  **type**: WMS-tjeneste
-  **tittel**: Kartdata WMS
-
-- **lenke**: <https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities>
-  **relasjon**: alternate
-  **type**: WMS-tjeneste
-  **tittel**: Bakgrunnskart for Matrikkelen WMS
-
-- **lenke**: <https://wms.geonorge.no/skwms1/wms.topograatone?service=wms&request=getcapabilities>
-  **relasjon**: alternate
-  **type**: WMS-tjeneste
-  **tittel**: Topografisk Norgeskart gråtone WMS
-
-- **lenke**: <https://cache.kartverket.no/v1/wmts/1.0.0/WMTSCapabilities.xml>
-  **relasjon**: alternate
-  **type**: WMTS-tjeneste
-  **tittel**: Topografisk norgeskart WMTS / cache
 
 ## Tilleggsinformasjon
 

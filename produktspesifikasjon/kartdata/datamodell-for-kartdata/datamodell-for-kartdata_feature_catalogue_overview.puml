@@ -1,0 +1,519 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title N50 Kartdata - Datamodell for kartdata - Oversikt
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Administrative_områder" {
+  class AvtaltAvgrensningslinje <<featureType>> {
+  }
+  class Teiggrensepunkt <<featureType>> {
+  }
+  class Fylkesgrense <<featureType>> {
+  }
+  class Kommune <<featureType>> {
+  }
+  class Riksgrense <<featureType>> {
+  }
+  class Grunnlinje <<featureType>> {
+  }
+  class Kommunegrense <<featureType>> {
+  }
+  class Grunnlinjepunkt <<featureType>> {
+  }
+  class Territorialgrense <<featureType>> {
+  }
+}
+
+package "Arealdekke" {
+  class ElvMidtlinje <<featureType>> {
+  }
+  class Park <<featureType>> {
+  }
+  class "Flomløpkant" as Floml_pkant <<featureType>> {
+  }
+  class ElvelinjeFiktiv <<featureType>> {
+  }
+  class Skog <<featureType>> {
+  }
+  class ElveKant <<featureType>> {
+  }
+  class "InnsjøInnsjøSperre" as Innsj_Innsj_Sperre <<featureType>> {
+  }
+  class Myr <<featureType>> {
+  }
+  class "ÅpentOmråde" as _pentOmr_de <<featureType>> {
+  }
+  class Gravplass <<featureType>> {
+  }
+  class Kystkontur <<featureType>> {
+  }
+  class Arealbrukgrense <<featureType>> {
+  }
+  class Lufthavn <<featureType>> {
+  }
+  class "FerskvannTørrfall" as FerskvannT_rrfall <<featureType>> {
+  }
+  class SportIdrettPlass <<featureType>> {
+  }
+  class "KanalGrøft" as KanalGr_ft <<featureType>> {
+  }
+  class ElvBekk <<featureType>> {
+  }
+  class "FerskvannTørrfallkant" as FerskvannT_rrfallkant <<featureType>> {
+  }
+  class "Innsjøkant" as Innsj_kant <<featureType>> {
+  }
+  class BymessigBebyggelse <<featureType>> {
+  }
+  class Tettbebyggelse <<featureType>> {
+  }
+  class DyrketMark <<featureType>> {
+  }
+  class Steintipp <<featureType>> {
+  }
+  class Steinbrudd <<featureType>> {
+  }
+  class Rullebane <<featureType>> {
+  }
+  class "HavInnsjøSperre" as HavInnsj_Sperre <<featureType>> {
+  }
+  class HavElvSperre <<featureType>> {
+  }
+  class Golfbane <<featureType>> {
+  }
+  class "SnøIsbre" as Sn_Isbre <<featureType>> {
+  }
+  class "Innsjø" as Innsj_ <<featureType>> {
+  }
+  class "InnsjøMidtlinje" as Innsj_Midtlinje <<featureType>> {
+  }
+  class Havflate <<featureType>> {
+  }
+  class "InnsjøRegulert" as Innsj_Regulert <<featureType>> {
+  }
+  class Elv <<featureType>> {
+  }
+  class "Industriområde" as Industriomr_de <<featureType>> {
+  }
+  class Foss <<featureType>> {
+  }
+  class "Skjær" as Skj_r <<featureType>> {
+  }
+  class "InnsjøkantRegulert" as Innsj_kantRegulert <<featureType>> {
+  }
+  class Tregruppe <<featureType>> {
+  }
+  class "InnsjøElvSperre" as Innsj_ElvSperre <<featureType>> {
+  }
+  class Alpinbakke <<featureType>> {
+  }
+}
+
+package "Bygninger_og_anlegg" {
+  class "Tårn" as T_rn <<featureType>> {
+  }
+  class Reingjerde <<featureType>> {
+  }
+  class Gruve <<featureType>> {
+  }
+  class MastTele <<featureType>> {
+  }
+  class Campingplass <<featureType>> {
+  }
+  class "Lysløype" as Lysl_ype <<featureType>> {
+  }
+  class "Parkeringsområde" as Parkeringsomr_de <<featureType>> {
+  }
+  class Navigasjonsinstallasjon <<featureType>> {
+  }
+  class Taubane <<featureType>> {
+  }
+  class Vindkraftverk <<featureType>> {
+  }
+  class Pir <<featureType>> {
+  }
+  class "Rørgate" as R_rgate <<featureType>> {
+  }
+  class Bygning <<featureType>> {
+  }
+  class Tankkant <<featureType>> {
+  }
+  class Molo <<featureType>> {
+  }
+  class Skytebaneinnretning <<featureType>> {
+  }
+  class Ledning <<featureType>> {
+  }
+  class Takkant <<featureType>> {
+  }
+  class KaiBrygge <<featureType>> {
+  }
+  class Skitrekk <<featureType>> {
+  }
+  class Flytebrygge <<featureType>> {
+  }
+  class LuftledningLH <<featureType>> {
+  }
+  class Hoppbakke <<featureType>> {
+  }
+  class Dam <<featureType>> {
+  }
+  class SpesiellDetalj <<featureType>> {
+  }
+  class Tank <<featureType>> {
+  }
+}
+
+package "Generelle typer" {
+  class FiktivDelelinje <<featureType>> {
+  }
+  class Dataavgrensning <<featureType>> {
+  }
+  abstract class SOSI_Objekt_Hjelpelinjer <<featureType>> {
+  }
+  abstract class SOSI_Objekt_Linjer_Samferdsel <<featureType>> {
+  }
+  abstract class SOSI_Objekt_Flater <<featureType>> {
+  }
+  abstract class SOSI_Objekt_Sperrelinjer <<featureType>> {
+  }
+  abstract class SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <<featureType>> {
+  }
+  abstract class "SOSI_Objekt_PunkterOgLinjer_Høyde" as SOSI_Objekt_PunkterOgLinjer_H_yde <<featureType>> {
+  }
+  class KantUtsnitt <<featureType>> {
+  }
+  abstract class SOSI_Objekt_PunkterOgLinjer <<featureType>> {
+  }
+}
+
+package "Høyde" {
+  class "Høydekurve" as H_ydekurve <<featureType>> {
+  }
+  class Terrengpunkt <<featureType>> {
+  }
+  class TrigonometriskPunkt <<featureType>> {
+  }
+  class Forsenkningskurve <<featureType>> {
+  }
+  class Hjelpekurve <<featureType>> {
+  }
+}
+
+package "Restriksjonsområder" {
+  class Allmenning <<featureType>> {
+  }
+  class Skytefeltgrense <<featureType>> {
+  }
+  class Naturverngrense <<featureType>> {
+  }
+  class Allmenninggrense <<featureType>> {
+  }
+  class "Naturvernområde" as Naturvernomr_de <<featureType>> {
+  }
+  class Skytefelt <<featureType>> {
+  }
+  class Naturvernpunkt <<featureType>> {
+  }
+}
+
+package "Samferdsel" {
+  class Veglenke <<featureType>> {
+  }
+  class Stasjon <<featureType>> {
+  }
+  class Vegsperring <<featureType>> {
+  }
+  class Bane <<featureType>> {
+  }
+}
+
+package "Stedsnavn" {
+  class StedsnavnTekst <<featureType>> {
+  }
+  abstract class FellesTekst <<featureType>> {
+  }
+  class PresentasjonTekst <<featureType>> {
+  }
+}
+
+
+SOSI_Objekt_Hjelpelinjer <|-- FiktivDelelinje
+SOSI_Objekt_Hjelpelinjer <|-- Dataavgrensning
+SOSI_Objekt_Flater --> KantUtsnitt : avgrensesAvKantutsnitt [0..*]
+SOSI_Objekt_Kombinasjon_Ulike_Geometrityper --> KantUtsnitt : avgrensesAvKantUtsnitt [0..*]
+SOSI_Objekt_Hjelpelinjer <|-- KantUtsnitt
+SOSI_Objekt_PunkterOgLinjer <|-- AvtaltAvgrensningslinje
+SOSI_Objekt_PunkterOgLinjer <|-- Teiggrensepunkt
+SOSI_Objekt_PunkterOgLinjer <|-- Fylkesgrense
+SOSI_Objekt_Flater <|-- Kommune
+Kommune --> AvtaltAvgrensningslinje : avgrensesAvAvtaltAvgrensningslinje [0..*]
+Kommune --> Fylkesgrense : avgrensesAvFylkesgrense [0..*]
+Kommune --> Riksgrense : avgrensesAvRiksgrense [0..*]
+Kommune --> Territorialgrense : avgrensesAvTerritorialgrense [0..*]
+Kommune --> Kommunegrense : avgrensesAvKommunegrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Riksgrense
+SOSI_Objekt_PunkterOgLinjer <|-- Grunnlinje
+SOSI_Objekt_PunkterOgLinjer <|-- Kommunegrense
+SOSI_Objekt_PunkterOgLinjer <|-- Grunnlinjepunkt
+SOSI_Objekt_PunkterOgLinjer <|-- Territorialgrense
+SOSI_Objekt_PunkterOgLinjer <|-- ElvMidtlinje
+SOSI_Objekt_Flater <|-- Park
+Park --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Park --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Park --> Kystkontur : avgrensesAvKystkontur [0..*]
+Park --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Park --> ElveKant : avgrensesAvElveKant [0..*]
+Park --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Park --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Floml_pkant
+SOSI_Objekt_PunkterOgLinjer <|-- ElvelinjeFiktiv
+SOSI_Objekt_Flater <|-- Skog
+Skog --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Skog --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Skog --> Kystkontur : avgrensesAvKystkontur [0..*]
+Skog --> ElveKant : avgrensesAvElveKant [0..*]
+Skog --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Skog --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+Skog --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- ElveKant
+SOSI_Objekt_Sperrelinjer <|-- Innsj_Innsj_Sperre
+SOSI_Objekt_Flater <|-- Myr
+Myr --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Myr --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Myr --> ElveKant : avgrensesAvElveKant [0..*]
+Myr --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+Myr --> Kystkontur : avgrensesAvKystkontur [0..*]
+Myr --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Myr --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+SOSI_Objekt_Flater <|-- _pentOmr_de
+_pentOmr_de --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+_pentOmr_de --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+_pentOmr_de --> ElveKant : avgrensesAvElveKant [0..*]
+_pentOmr_de --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+_pentOmr_de --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+_pentOmr_de --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+_pentOmr_de --> Kystkontur : avgrensesAvKystkontur [0..*]
+SOSI_Objekt_Flater <|-- Gravplass
+Gravplass --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Gravplass --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Gravplass --> ElveKant : avgrensesAvElveKant [0..*]
+Gravplass --> Innsj_kantRegulert : avgrensesAvInnsjøkantregulert [0..*]
+Gravplass --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Gravplass --> Kystkontur : avgrensesAvKystkontur [0..*]
+Gravplass --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Kystkontur
+SOSI_Objekt_PunkterOgLinjer <|-- Arealbrukgrense
+SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <|-- Lufthavn
+Lufthavn --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Lufthavn --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Lufthavn --> ElveKant : avgrensesAvElveKant [0..*]
+Lufthavn --> Kystkontur : avgrensesAvKystkontur [0..*]
+Lufthavn --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Lufthavn --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+Lufthavn --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+SOSI_Objekt_Flater <|-- FerskvannT_rrfall
+FerskvannT_rrfall --> ElveKant : avgrensesAvElveKant [0..*]
+FerskvannT_rrfall --> FerskvannT_rrfallkant : avgrensesAvFerskvanntørrfallkant [0..*]
+SOSI_Objekt_Flater <|-- SportIdrettPlass
+SportIdrettPlass --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+SportIdrettPlass --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+SportIdrettPlass --> ElveKant : avgrensesAvElveKant [0..*]
+SportIdrettPlass --> Kystkontur : avgrensesAvKystkontur [0..*]
+SportIdrettPlass --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+SportIdrettPlass --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SportIdrettPlass --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- KanalGr_ft
+SOSI_Objekt_PunkterOgLinjer <|-- ElvBekk
+SOSI_Objekt_PunkterOgLinjer <|-- FerskvannT_rrfallkant
+SOSI_Objekt_PunkterOgLinjer <|-- Innsj_kant
+SOSI_Objekt_Flater <|-- BymessigBebyggelse
+BymessigBebyggelse --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+BymessigBebyggelse --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+BymessigBebyggelse --> ElveKant : avgrensesAvElveKant [0..*]
+BymessigBebyggelse --> Kystkontur : avgrensesAvKystkontur [0..*]
+BymessigBebyggelse --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+BymessigBebyggelse --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+BymessigBebyggelse --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Flater <|-- Tettbebyggelse
+Tettbebyggelse --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Tettbebyggelse --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Tettbebyggelse --> ElveKant : avgrensesAvElveKant [0..*]
+Tettbebyggelse --> Kystkontur : avgrensesAvKystkontur [0..*]
+Tettbebyggelse --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Tettbebyggelse --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Tettbebyggelse --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Flater <|-- DyrketMark
+DyrketMark --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+DyrketMark --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+DyrketMark --> ElveKant : avgrensesAvElveKant [0..*]
+DyrketMark --> Kystkontur : avgrensesAvKystkontur [0..*]
+DyrketMark --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+DyrketMark --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+DyrketMark --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Flater <|-- Steintipp
+Steintipp --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Steintipp --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Steintipp --> ElveKant : avgrensesAvElveKant [0..*]
+Steintipp --> Kystkontur : avgrensesAvKystkontur [0..*]
+Steintipp --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Steintipp --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Steintipp --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Flater <|-- Steinbrudd
+Steinbrudd --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Steinbrudd --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Steinbrudd --> ElveKant : avgrensesAvElveKant [0..*]
+Steinbrudd --> Kystkontur : avgrensesAvKystkontur [0..*]
+Steinbrudd --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Steinbrudd --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Steinbrudd --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Flater <|-- Rullebane
+Rullebane --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Rullebane --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Rullebane --> ElveKant : avgrensesAvElveKant [0..*]
+Rullebane --> Kystkontur : avgrensesAvKystkontur [0..*]
+Rullebane --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Rullebane --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Rullebane --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Sperrelinjer <|-- HavInnsj_Sperre
+SOSI_Objekt_Sperrelinjer <|-- HavElvSperre
+SOSI_Objekt_Flater <|-- Golfbane
+Golfbane --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Golfbane --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Golfbane --> ElveKant : avgrensesAvElveKant [0..*]
+Golfbane --> Kystkontur : avgrensesAvKystkontur [0..*]
+Golfbane --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Golfbane --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Golfbane --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Flater <|-- Sn_Isbre
+Sn_Isbre --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Sn_Isbre --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Sn_Isbre --> ElveKant : avgrensesAvElveKant [0..*]
+Sn_Isbre --> Kystkontur : avgrensesAvKystkontur [0..*]
+Sn_Isbre --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Sn_Isbre --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Sn_Isbre --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_Flater <|-- Innsj_
+Innsj_ --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Innsj_ --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Innsj_ --> Innsj_Innsj_Sperre : avgrensesAvInnsjøinnsjøsperre [0..*]
+Innsj_ --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Innsj_ --> HavInnsj_Sperre : avgrensesAvHavInnsjøSperre [0..*]
+Innsj_ --> Innsj_ElvSperre : avgrensesAvInnsjøElvSperre [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Innsj_Midtlinje
+SOSI_Objekt_Flater <|-- Havflate
+Havflate --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Havflate --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Havflate --> Kystkontur : avgrensesAvKystkontur [0..*]
+Havflate --> HavInnsj_Sperre : avgrensesAvHavInnsjøSperre [0..*]
+Havflate --> HavElvSperre : avgrensesAvHavElvSperre [0..*]
+SOSI_Objekt_Flater <|-- Innsj_Regulert
+Innsj_Regulert --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Innsj_Regulert --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Innsj_Regulert --> Innsj_Innsj_Sperre : avgrensesAvInnsjøinnsjøsperre [0..*]
+Innsj_Regulert --> Innsj_ElvSperre : avgrensesAvInnsjøElvSperre [0..*]
+Innsj_Regulert --> Innsj_kantRegulert : avgrensesAvInnsjøkantregulert [0..*]
+SOSI_Objekt_Flater <|-- Elv
+Elv --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Elv --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Elv --> ElveKant : avgrensesAvElveKant [0..*]
+Elv --> FerskvannT_rrfallkant : avgrensesAvFerskvanntørrfallkant [0..*]
+Elv --> HavElvSperre : avgrensesAvHavElvSperre [0..*]
+Elv --> Innsj_ElvSperre : avgrensesAvInnsjøElvSperre [0..*]
+SOSI_Objekt_Flater <|-- Industriomr_de
+Industriomr_de --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Industriomr_de --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Industriomr_de --> ElveKant : avgrensesAvElveKant [0..*]
+Industriomr_de --> Kystkontur : avgrensesAvKystkontur [0..*]
+Industriomr_de --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Industriomr_de --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Industriomr_de --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Foss
+SOSI_Objekt_PunkterOgLinjer <|-- Skj_r
+SOSI_Objekt_PunkterOgLinjer <|-- Innsj_kantRegulert
+SOSI_Objekt_PunkterOgLinjer <|-- Tregruppe
+SOSI_Objekt_Sperrelinjer <|-- Innsj_ElvSperre
+SOSI_Objekt_Flater <|-- Alpinbakke
+Alpinbakke --> FiktivDelelinje : avgrensesAvFiktivdelelinje [0..*]
+Alpinbakke --> Dataavgrensning : avgrensesAvDataavgrensning [0..*]
+Alpinbakke --> ElveKant : avgrensesAvElveKant [0..*]
+Alpinbakke --> Kystkontur : avgrensesAvKystkontur [0..*]
+Alpinbakke --> Arealbrukgrense : avgrensesAvArealbrukgrense [0..*]
+Alpinbakke --> Innsj_kant : avgrensesAvInnsjøkant [0..*]
+Alpinbakke --> Innsj_kantRegulert : avgrensesAvInnsjøkantRegulert [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- T_rn
+SOSI_Objekt_PunkterOgLinjer <|-- Reingjerde
+SOSI_Objekt_PunkterOgLinjer <|-- Gruve
+SOSI_Objekt_PunkterOgLinjer <|-- MastTele
+SOSI_Objekt_PunkterOgLinjer <|-- Campingplass
+SOSI_Objekt_PunkterOgLinjer <|-- Lysl_ype
+SOSI_Objekt_PunkterOgLinjer <|-- Parkeringsomr_de
+SOSI_Objekt_PunkterOgLinjer <|-- Navigasjonsinstallasjon
+SOSI_Objekt_PunkterOgLinjer <|-- Taubane
+SOSI_Objekt_PunkterOgLinjer <|-- Vindkraftverk
+SOSI_Objekt_PunkterOgLinjer <|-- Pir
+SOSI_Objekt_PunkterOgLinjer <|-- R_rgate
+SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <|-- Bygning
+Bygning --> Takkant : avgrensesAvTakkant [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Tankkant
+SOSI_Objekt_PunkterOgLinjer <|-- Molo
+SOSI_Objekt_PunkterOgLinjer <|-- Skytebaneinnretning
+SOSI_Objekt_PunkterOgLinjer <|-- Ledning
+SOSI_Objekt_PunkterOgLinjer <|-- Takkant
+SOSI_Objekt_PunkterOgLinjer <|-- KaiBrygge
+Taubane <|-- Skitrekk
+SOSI_Objekt_PunkterOgLinjer <|-- Flytebrygge
+SOSI_Objekt_PunkterOgLinjer <|-- LuftledningLH
+SOSI_Objekt_PunkterOgLinjer <|-- Hoppbakke
+SOSI_Objekt_PunkterOgLinjer <|-- Dam
+SOSI_Objekt_PunkterOgLinjer <|-- SpesiellDetalj
+SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <|-- Tank
+Tank --> Tankkant : avgrensesAvTankkant [0..*]
+SOSI_Objekt_PunkterOgLinjer_H_yde <|-- H_ydekurve
+SOSI_Objekt_PunkterOgLinjer_H_yde <|-- Terrengpunkt
+SOSI_Objekt_PunkterOgLinjer_H_yde <|-- TrigonometriskPunkt
+SOSI_Objekt_PunkterOgLinjer_H_yde <|-- Forsenkningskurve
+SOSI_Objekt_PunkterOgLinjer_H_yde <|-- Hjelpekurve
+SOSI_Objekt_Flater <|-- Allmenning
+Allmenning --> Allmenninggrense : avgrensesAvAllmenninggrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Skytefeltgrense
+SOSI_Objekt_PunkterOgLinjer <|-- Naturverngrense
+SOSI_Objekt_PunkterOgLinjer <|-- Allmenninggrense
+SOSI_Objekt_Flater <|-- Naturvernomr_de
+Naturvernomr_de --> Naturverngrense : avgrensesAvNaturverngrense [0..*]
+SOSI_Objekt_Flater <|-- Skytefelt
+Skytefelt --> Skytefeltgrense : avgrensesAvSkytefeltgrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Naturvernpunkt
+SOSI_Objekt_Linjer_Samferdsel <|-- Veglenke
+SOSI_Objekt_PunkterOgLinjer <|-- Stasjon
+SOSI_Objekt_PunkterOgLinjer <|-- Vegsperring
+SOSI_Objekt_Linjer_Samferdsel <|-- Bane
+FellesTekst <|-- StedsnavnTekst
+FellesTekst <|-- PresentasjonTekst
+
+@enduml

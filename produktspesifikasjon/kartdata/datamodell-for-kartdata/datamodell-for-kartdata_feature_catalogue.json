@@ -16,7 +16,8 @@
         "SOSI_Objekt_Hjelpelinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "Dataavgrensning",
@@ -35,7 +36,8 @@
         "SOSI_Objekt_Hjelpelinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "SOSI_Objekt_Hjelpelinjer",
@@ -52,7 +54,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "SOSI_Objekt_Linjer_Samferdsel",
@@ -116,7 +119,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "SOSI_Objekt_Flater",
@@ -139,7 +143,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "SOSI_Objekt_Sperrelinjer",
@@ -156,7 +161,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "SOSI_Objekt_Kombinasjon_Ulike_Geometrityper",
@@ -215,7 +221,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "SOSI_Objekt_PunkterOgLinjer_Høyde",
@@ -279,7 +286,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "KantUtsnitt",
@@ -298,7 +306,8 @@
         "SOSI_Objekt_Hjelpelinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "SOSI_Objekt_PunkterOgLinjer",
@@ -351,7 +360,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle typer"
   },
   {
     "name": "AvtaltAvgrensningslinje",
@@ -370,7 +380,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Teiggrensepunkt",
@@ -406,7 +417,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Fylkesgrense",
@@ -425,7 +437,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Kommune",
@@ -499,7 +512,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Riksgrense",
@@ -518,7 +532,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Grunnlinje",
@@ -537,7 +552,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Kommunegrense",
@@ -556,7 +572,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Grunnlinjepunkt",
@@ -587,7 +604,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "Territorialgrense",
@@ -606,7 +624,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Administrative_områder"
   },
   {
     "name": "ElvMidtlinje",
@@ -625,7 +644,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Park",
@@ -680,7 +700,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Flomløpkant",
@@ -699,7 +720,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "ElvelinjeFiktiv",
@@ -718,7 +740,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Skog",
@@ -773,7 +796,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "ElveKant",
@@ -792,7 +816,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "InnsjøInnsjøSperre",
@@ -811,7 +836,8 @@
         "SOSI_Objekt_Sperrelinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Myr",
@@ -866,7 +892,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "ÅpentOmråde",
@@ -921,7 +948,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Gravplass",
@@ -976,7 +1004,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Kystkontur",
@@ -995,7 +1024,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Arealbrukgrense",
@@ -1014,7 +1044,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Lufthavn",
@@ -1167,7 +1198,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "FerskvannTørrfall",
@@ -1197,7 +1229,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "SportIdrettPlass",
@@ -1252,7 +1285,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "KanalGrøft",
@@ -1282,7 +1316,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "ElvBekk",
@@ -1312,7 +1347,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "FerskvannTørrfallkant",
@@ -1331,7 +1367,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Innsjøkant",
@@ -1350,7 +1387,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "BymessigBebyggelse",
@@ -1405,7 +1443,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Tettbebyggelse",
@@ -1460,7 +1499,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "DyrketMark",
@@ -1515,7 +1555,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Steintipp",
@@ -1570,7 +1611,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Steinbrudd",
@@ -1625,7 +1667,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Rullebane",
@@ -1680,7 +1723,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "HavInnsjøSperre",
@@ -1699,7 +1743,8 @@
         "SOSI_Objekt_Sperrelinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "HavElvSperre",
@@ -1718,7 +1763,8 @@
         "SOSI_Objekt_Sperrelinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Golfbane",
@@ -1773,7 +1819,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "SnøIsbre",
@@ -1828,7 +1875,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Innsjø",
@@ -1890,7 +1938,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "InnsjøMidtlinje",
@@ -1909,7 +1958,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Havflate",
@@ -1954,7 +2004,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "InnsjøRegulert",
@@ -2017,7 +2068,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Elv",
@@ -2067,7 +2119,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Industriområde",
@@ -2122,7 +2175,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Foss",
@@ -2177,7 +2231,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Skjær",
@@ -2196,7 +2251,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "InnsjøkantRegulert",
@@ -2215,7 +2271,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Tregruppe",
@@ -2234,7 +2291,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "InnsjøElvSperre",
@@ -2253,7 +2311,8 @@
         "SOSI_Objekt_Sperrelinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Alpinbakke",
@@ -2308,7 +2367,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Arealdekke"
   },
   {
     "name": "Tårn",
@@ -2327,7 +2387,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Reingjerde",
@@ -2346,7 +2407,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Gruve",
@@ -2365,7 +2427,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "MastTele",
@@ -2384,7 +2447,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Campingplass",
@@ -2403,7 +2467,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Lysløype",
@@ -2422,7 +2487,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Parkeringsområde",
@@ -2441,7 +2507,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Navigasjonsinstallasjon",
@@ -2460,7 +2527,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Taubane",
@@ -2479,7 +2547,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Vindkraftverk",
@@ -2498,7 +2567,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Pir",
@@ -2517,7 +2587,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Rørgate",
@@ -2536,7 +2607,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Bygning",
@@ -2625,7 +2697,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Tankkant",
@@ -2644,7 +2717,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Molo",
@@ -2663,7 +2737,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Skytebaneinnretning",
@@ -2682,7 +2757,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Ledning",
@@ -2701,7 +2777,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Takkant",
@@ -2720,7 +2797,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "KaiBrygge",
@@ -2739,7 +2817,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Skitrekk",
@@ -2751,7 +2830,8 @@
         "Taubane"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Flytebrygge",
@@ -2770,7 +2850,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "LuftledningLH",
@@ -2800,7 +2881,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Hoppbakke",
@@ -2861,7 +2943,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Dam",
@@ -2880,7 +2963,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "SpesiellDetalj",
@@ -2905,7 +2989,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Tank",
@@ -2936,7 +3021,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Bygninger_og_anlegg"
   },
   {
     "name": "Høydekurve",
@@ -2961,7 +3047,8 @@
         "SOSI_Objekt_PunkterOgLinjer_Høyde"
       ],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "Terrengpunkt",
@@ -2986,7 +3073,8 @@
         "SOSI_Objekt_PunkterOgLinjer_Høyde"
       ],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "TrigonometriskPunkt",
@@ -3011,7 +3099,8 @@
         "SOSI_Objekt_PunkterOgLinjer_Høyde"
       ],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "Forsenkningskurve",
@@ -3036,7 +3125,8 @@
         "SOSI_Objekt_PunkterOgLinjer_Høyde"
       ],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "Hjelpekurve",
@@ -3061,7 +3151,8 @@
         "SOSI_Objekt_PunkterOgLinjer_Høyde"
       ],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "Allmenning",
@@ -3103,7 +3194,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Restriksjonsområder"
   },
   {
     "name": "Skytefeltgrense",
@@ -3122,7 +3214,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Restriksjonsområder"
   },
   {
     "name": "Naturverngrense",
@@ -3141,7 +3234,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Restriksjonsområder"
   },
   {
     "name": "Allmenninggrense",
@@ -3160,7 +3254,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Restriksjonsområder"
   },
   {
     "name": "Naturvernområde",
@@ -3208,7 +3303,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Restriksjonsområder"
   },
   {
     "name": "Skytefelt",
@@ -3250,7 +3346,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Restriksjonsområder"
   },
   {
     "name": "Naturvernpunkt",
@@ -3292,7 +3389,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Restriksjonsområder"
   },
   {
     "name": "Veglenke",
@@ -3391,7 +3489,8 @@
         "SOSI_Objekt_Linjer_Samferdsel"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Stasjon",
@@ -3452,7 +3551,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Vegsperring",
@@ -3518,7 +3618,8 @@
         "SOSI_Objekt_PunkterOgLinjer"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Bane",
@@ -3578,7 +3679,8 @@
         "SOSI_Objekt_Linjer_Samferdsel"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "StedsnavnTekst",
@@ -3664,7 +3766,8 @@
         "FellesTekst"
       ],
       "associations": []
-    }
+    },
+    "package": "Stedsnavn"
   },
   {
     "name": "FellesTekst",
@@ -3772,7 +3875,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Stedsnavn"
   },
   {
     "name": "PresentasjonTekst",
@@ -3796,6 +3900,7 @@
         "FellesTekst"
       ],
       "associations": []
-    }
+    },
+    "package": "Stedsnavn"
   }
 ]

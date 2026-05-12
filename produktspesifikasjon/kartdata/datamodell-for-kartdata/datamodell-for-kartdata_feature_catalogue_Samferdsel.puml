@@ -1,0 +1,90 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title N50 Kartdata - Datamodell for kartdata - Samferdsel
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Samferdsel" {
+
+  class Veglenke <<featureType>> {
+    + senterlinje [1] : GM_Curve
+    + typeVeg [1] : TypeVeg
+    + vegsystem [0..1] : Vegsystem
+    + motorvegtype [0..1] : Motorvegtype
+    + rutemerking [0..1] : RuteMerking
+    + vedlikeholdsansvarlig [0..1] : Vedlikeholdsansvarlig
+  }
+
+  class Stasjon <<featureType>> {
+    + posisjon [1] : GM_Point
+    + navn [1] : CharacterString
+    + retning [1] : Retning
+  }
+
+  class Vegsperring <<featureType>> {
+    + posisjon [1] : GM_Point
+    + vegsperringtype [0..1] : Vegsperringtype
+    + retning [1] : Retning
+  }
+
+  class Bane <<featureType>> {
+    + senterlinje [1] : GM_Curve
+    + jernbaneinformasjon [1] : Jernbaneinformasjon
+    + sporantall [1] : Sporantall
+  }
+
+  class Vegsystem <<dataType>> {
+    + vegkategori [0..1] : Vegkategori
+    + vegfase [0..1] : Vegfase
+    + vegnummer [0..1] : Integer
+  }
+
+  class Retning <<dataType>> {
+    + retningsverdi [1] : Real
+    + retningsenhet [1] : Retningsenhet
+    + retningsreferanse [1] : Retningsreferanse
+  }
+
+  class Jernbaneinformasjon <<dataType>> {
+    + anleggstype [0..1] : Jernbanetype
+    + banestatus [0..1] : Jernbanestatus
+  }
+}
+
+package "Eksterne referanser" <<Frame>> {
+  class SOSI_Objekt_Linjer_Samferdsel <<Generelle typer>> {
+  }
+  class SOSI_Objekt_PunkterOgLinjer <<Generelle typer>> {
+  }
+}
+
+SOSI_Objekt_Linjer_Samferdsel <|-- Veglenke
+SOSI_Objekt_PunkterOgLinjer <|-- Stasjon
+SOSI_Objekt_PunkterOgLinjer <|-- Vegsperring
+SOSI_Objekt_Linjer_Samferdsel <|-- Bane
+
+@enduml
