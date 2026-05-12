@@ -1,5 +1,7 @@
 ### Datamodell
 
+**Kilde:** [SOSI UML XMI-fil](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/FKB/Havnedata-2021.xml)
+
 #### Oversikt
 
 <a href="filleveranser_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="filleveranser_feature_catalogue_overview.png" alt="Datamodell Filleveranser - oversikt" style="max-width: 100%; height: auto;" /></a>

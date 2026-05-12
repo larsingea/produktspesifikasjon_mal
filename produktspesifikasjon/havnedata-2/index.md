@@ -56,8 +56,8 @@ Spesifikasjonen er laget med tanke p책 forvaltning i en sentral database bygd p�
 >
 > - **Tilgangsbegrensninger**: Norge digitalt begrenset
 > - **Bruksbegrensninger**: Lisens
-> - **Lisens**: Creative Commons BY-NC 4.0 (CC BY-NC 4.0)
-> - **Lisenslenke**: <https://creativecommons.org/licenses/by-nc/4.0/>
+> - **Lisens**: Norge digitalt-lisens
+> - **Lisenslenke**: <https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens>
 
 ### Form책l
 
@@ -185,7 +185,7 @@ Eksempler p책 bruksomr책der for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-05-04
+**Metadatadato**: 2026-05-11
 
 **spr책k**: nor
 

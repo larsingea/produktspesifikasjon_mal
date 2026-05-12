@@ -72,8 +72,8 @@
       "legalConstraints": {
         "accessConstraints": "Norge digitalt begrenset",
         "useConstraints": "Lisens",
-        "license": "Creative Commons BY-NC 4.0 (CC BY-NC 4.0)",
-        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/"
+        "license": "Norge digitalt-lisens",
+        "licenseUrl": "https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens"
       }
     },
     "contact": [
@@ -329,7 +329,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-05-04",
+    "metadataDate": "2026-05-11",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
