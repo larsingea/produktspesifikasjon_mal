@@ -32,14 +32,14 @@ FKB-data er ikke-sensistive og åpne data. FKB-dataene er finansiert gjennom Geo
 
 - **Tidsperiode**:
   - **Fra**: 2017-01-15
-  - **Til**: 2026-04-07
+  - **Til**: 2026-05-11
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2017-01-15<br>
-> **Endret dato:** 2026-04-07<br>
+> **Endret dato:** 2026-05-11<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Geovekst, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
@@ -65,7 +65,7 @@ FKB-data er ikke-sensistive og åpne data. FKB-dataene er finansiert gjennom Geo
 > - **Tilgangsbegrensninger**: Norge digitalt begrenset
 > - **Bruksbegrensninger**: Lisens
 > - **Lisens**: Norge digitalt-lisens
-> - **Lisenslenke**: <https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/>
+> - **Lisenslenke**: <https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens>
 >
 > **Sikkerhetsbegrensninger**:
 >
@@ -108,11 +108,11 @@ FKB kan brukes til:
 
 
 
-<a href="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" title="Klikk for stor visning"><img src="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue.png" alt="Datamodell nedlastingstjeneste" style="max-width: 100%; height: auto;" /></a>
+<a href="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="nedlastingstjeneste/nedlastingstjeneste_feature_catalogue_overview.png" alt="Datamodell nedlastingstjeneste" style="max-width: 100%; height: auto;" /></a>
 
 
 
-➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
+➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram per pakke og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
 
 ## Referansesystem
 
@@ -137,6 +137,10 @@ FKB kan brukes til:
 - **Kvalitetsmål**: Sosi applikasjonsskjema
   **Målebeskrivelse**: GML-filer er i henhold til applikasjonsskjema
   **Beskrivende resultat**: GML-filer er i henhold til applikasjonsskjema
+
+- **Kvalitetsmål**: Prosentvis oppfyllelse av FAIR-prinsipper
+  **Målebeskrivelse**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
+  **Resultat**: 95
 
 - **Kvalitetsmål**: Prosentvis dekning i forhold til datasettets utstrekning
   **Målebeskrivelse**: Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning
@@ -188,7 +192,7 @@ FKB kan brukes til:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-17
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 
