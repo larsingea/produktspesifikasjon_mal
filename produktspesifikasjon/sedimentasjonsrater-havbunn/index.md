@@ -2,7 +2,7 @@
 title: "Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak"
 updated: "2025-03-05"
 organization: "Norges geologiske undersøkelse"
-logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
+logo: "https://register.geonorge.no/data/organizations/970188290_NGU_hovedlogo_svart.svg thumbnail.png"
 ---
 
 # Produktspesifikasjon: Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
@@ -33,14 +33,14 @@ logo: "https://register.geonorge.no/data/organizations/970188290_NGU_liten.png"
 > **Opprettet dato:** <br>
 > **Endret dato:** 2023-05-16<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Norges geologiske undersøkelse
+> **Kontaktinformasjon:** Norges geologiske undersøkelse, [markus.diesing@ngu.no](mailto:markus.diesing@ngu.no)
 
 ## Om produktet Sedimentasjonsrater i havbunnsedimenter i Nordsjøen og Skagerrak
 
 
 > **Romlig representasjonstype:** Rasterbilde/digital terrengmodell<br>
-> **Unik identifikator:** a7cb6545-b8ae-411b-b4e8-4808863dfa74<br>
-> **Kontaktinformasjon:** Norges geologiske undersøkelse
+> **Unik identifikator:** <https://data.geonorge.no/sosi/geologi/sedimentasjonsrater><br>
+> **Kontaktinformasjon:** Norges geologiske undersøkelse, [markus.diesing@ngu.no](mailto:markus.diesing@ngu.no)
 >
 > **Romlig oppløsning:**
 >
@@ -76,14 +76,11 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 ## Omfang
 
-### hele datasettet
+### Hele datasettet
 
 **Nivå**: dataset
 
-
-## Datainnhold og struktur
-
-**Beskrivelse**: Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, habitatskartlegging, sårbarhetsanalyser, konsekvensutredninger i forbindelse med installasjoner på sjøbunnen osv.
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
 
 ## Referansesystem
 
@@ -108,8 +105,6 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 - **Kvalitetsmål**: Coverage
   **Resultat**: Prosentvis dekning i forhold til datasettets utstrekning: 100%
-
-**Beskrivelse**: Datasettet omfatter predikerte sedimentasjonsrater og tilsvarende usikkerhet. Rasterdata, 500m-oppløsning.
 
 ## Datafangst og produksjon
 
@@ -146,14 +141,14 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-08
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 
 **Kontakt**:
 
 - **Organisasjon**: Norges geologiske undersøkelse
-- **Logo**: <https://register.geonorge.no/data/organizations/970188290_NGU_liten.png>
+- **Logo**: <https://register.geonorge.no/data/organizations/970188290_NGU_hovedlogo_svart.svg> thumbnail.png
 - **Epost**: metadataansvarlig@ngu.no
 - **rolle**: pointOfContact
 
@@ -163,38 +158,6 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, h
 - **kode**: a7cb6545-b8ae-411b-b4e8-4808863dfa74
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/a7cb6545-b8ae-411b-b4e8-4808863dfa74>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=a7cb6545-b8ae-411b-b4e8-4808863dfa74>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://doi.org/10.5194/bg-18-2139-2021>
-  **relasjon**: about
-  **type**: text/html
-  **tittel**: Produktside
-
-- **lenke**: <https://nedlasting.ngu.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0&>
-  **relasjon**: alternate
-  **type**: text/html
-  **tittel**: Kartvisning
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/&addLayers=OrganiskKarbon_konsentrasjon>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://geo.ngu.no/mapserver/ModellertHavbunnsgeologiWMS/?request=getcapabilities&service=wms&version=1.3.0>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
 
 ## Tilleggsinformasjon
 
