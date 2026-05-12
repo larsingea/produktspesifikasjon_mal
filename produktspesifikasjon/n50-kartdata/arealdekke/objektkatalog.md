@@ -1,5 +1,7 @@
 ### Datamodell
 
+**Kilde:** [SOSI UML XMI-fil](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Arealdekke.xml)
+
 <a href="arealdekke_feature_catalogue.png" title="Klikk for stor visning"><img src="arealdekke_feature_catalogue.png" alt="Datamodell Arealdekke" style="max-width: 100%; height: auto;" /></a>
 
 #### Steintipp

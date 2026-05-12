@@ -1,5 +1,7 @@
 ### Datamodell
 
+**Kilde:** [SOSI UML XMI-fil](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50_Samferdsel.xml)
+
 <a href="samferdsel_feature_catalogue.png" title="Klikk for stor visning"><img src="samferdsel_feature_catalogue.png" alt="Datamodell Samferdsel" style="max-width: 100%; height: auto;" /></a>
 
 #### Sti

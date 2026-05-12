@@ -1,7 +1,9 @@
 {
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
   "title": "N50 Kartdata",
+  "format": "text/html",
   "date": {
-    "revision": "2026-04-03"
+    "revision": "2026-05-09"
   },
   "language": "nor",
   "contact": {
@@ -27,7 +29,7 @@
       "equivalentScale": "50000"
     },
     "supplementalInformation": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning.",
-    "uniqueId": "ea192681-d039-42ec-b1bc-f3ce04c189ac",
+    "uniqueId": "https://data.geonorge.no/sosi/kartdata/n50",
     "keyword": [
       "Kartdata",
       "N50",
@@ -107,24 +109,28 @@
       },
       "temporalElement": {
         "timePeriod": {
-          "beginPosition": "2026-04-03",
-          "endPosition": "2026-04-03"
+          "beginPosition": "2026-05-09",
+          "endPosition": "2026-05-09"
         }
       }
     },
     "date": {
-      "revision": "2026-04-03"
+      "revision": "2026-05-09"
     },
     "language": "nor"
   },
   "scopeSection": [
     {
       "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
         "scopeIdentification": "Arealdekke",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Temaet: \"Arealdekke\" inneholder alle vannrelaterte objekter, samt naturlige og menneskeskapte arealtyper. I tillegg finnes punktobjekter som tregrupper, skjr og lufthavn."
       }
     },
@@ -132,9 +138,6 @@
       "specificationScope": {
         "scopeIdentification": "Bygninger og anlegg",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Temaet: \"Bygninger og anlegg\" inneholder utelukkende menneskeskapte objekter."
       }
     },
@@ -142,9 +145,6 @@
       "specificationScope": {
         "scopeIdentification": "Hoyde",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Temaet: \"Høyde\" inneholder h�ydekurver og terrengpunkter som er n�dvendig for � beskrive terrengets form over havflaten, samt trigonometriske punkter. Generelt brukes 20 meter ekvidistanse,mellomkurver med 10 meter ekvidistanse kan forekomme"
       }
     },
@@ -152,9 +152,6 @@
       "specificationScope": {
         "scopeIdentification": "Samferdsel",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Temaet: \"Samferdsel\" inneholder menneskeskapte kommunikasjonslinjer, samt jernbanestasjoner og vegsperringer"
       }
     },
@@ -162,16 +159,10 @@
       "specificationScope": {
         "scopeIdentification": "Stedsnavn",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Temaet: \"Stedsnavn\" Mangler inneholder stedsnavn på geografiske objekter på steder, fjelltopper, vann, daler, elver m.fl."
       }
     }
   ],
-  "dataContentAndStructureSection": {
-    "narrativeDescription": "Dataene egner seg blant annet for fremstilling av topografiske kart, temakart, turkart/fritidskart, interaktive kart, som datagrunnlag for kartløsninger på internett og i analysesammenheng."
-  },
   "referenceSystemSection": {
     "spatialReferenceSystem": [
       {
@@ -226,10 +217,7 @@
         "nameOfMeasure": "FAIR",
         "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 90%"
       }
-    ],
-    "resourceLineage": {
-      "statement": "Trenger du hjelp til å laste ned og ta i bruk Kartverkets data og tjenester? På kartverket.no finner du tips og veiledning."
-    }
+    ]
   },
   "maintenanceSection": {
     "maintenanceAndUpdateFrequency": "Ukentlig",
@@ -413,27 +401,6 @@
     {
       "delivery": {
         "deliveryMedium": {
-          "deliveryMediumName": "Bakgrunnskart for Matrikkelen WMS",
-          "deliveryService": {
-            "serviceEndpoint": "https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities",
-            "serviceProperty": {
-              "type": "Bakgrunnskart for Matrikkelen WMS",
-              "value": "WMS-tjeneste"
-            }
-          }
-        },
-        "deliveryFormat": [
-          {
-            "formatName": "OGC WMS",
-            "version": "1.3.0"
-          }
-        ],
-        "deliveryScope": "Tjeneste"
-      }
-    },
-    {
-      "delivery": {
-        "deliveryMedium": {
           "deliveryMediumName": "Topografisk Norgeskart gråtone WMS",
           "deliveryService": {
             "serviceEndpoint": "https://wms.geonorge.no/skwms1/wms.topograatone?service=wms&request=getcapabilities",
@@ -471,12 +438,33 @@
         ],
         "deliveryScope": "Tjeneste"
       }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Bakgrunnskart for Matrikkelen WMS",
+          "deliveryService": {
+            "serviceEndpoint": "https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities",
+            "serviceProperty": {
+              "type": "Bakgrunnskart for Matrikkelen WMS",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "OGC WMS",
+            "version": "1.3.0"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
     }
   ],
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-04-08",
+    "metadataDate": "2026-05-11",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
@@ -489,56 +477,6 @@
       "code": "ea192681-d039-42ec-b1bc-f3ce04c189ac",
       "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
       "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/ea192681-d039-42ec-b1bc-f3ce04c189ac"
-    },
-    "links": [
-      {
-        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=ea192681-d039-42ec-b1bc-f3ce04c189ac",
-        "rel": "describedby",
-        "type": "application/xml",
-        "title": "Metadata (ISO 19139)"
-      },
-      {
-        "href": "https://nedlasting.geonorge.no/api/capabilities/",
-        "rel": "enclosure",
-        "type": "text/html",
-        "title": "Nedlasting"
-      },
-      {
-        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.geonorge.no/skwms1/wms.topo",
-        "rel": "service",
-        "type": "text/html",
-        "title": "Tjeneste"
-      },
-      {
-        "href": "https://wms.geonorge.no/skwms1/wms.topo?service=wms&request=getcapabilities",
-        "rel": "service",
-        "type": "application/xml",
-        "title": "Tjeneste-distribusjon"
-      },
-      {
-        "href": "https://wms.geonorge.no/skwms1/wms.kartdata?service=wms&request=getcapabilities",
-        "rel": "alternate",
-        "type": "WMS-tjeneste",
-        "title": "Kartdata WMS"
-      },
-      {
-        "href": "https://wms.geonorge.no/skwms1/wms.matrikkel_bakgrunn2/?service=wms&request=getcapabilities",
-        "rel": "alternate",
-        "type": "WMS-tjeneste",
-        "title": "Bakgrunnskart for Matrikkelen WMS"
-      },
-      {
-        "href": "https://wms.geonorge.no/skwms1/wms.topograatone?service=wms&request=getcapabilities",
-        "rel": "alternate",
-        "type": "WMS-tjeneste",
-        "title": "Topografisk Norgeskart gråtone WMS"
-      },
-      {
-        "href": "https://cache.kartverket.no/v1/wmts/1.0.0/WMTSCapabilities.xml",
-        "rel": "alternate",
-        "type": "WMTS-tjeneste",
-        "title": "Topografisk norgeskart WMTS / cache"
-      }
-    ]
+    }
   }
 }

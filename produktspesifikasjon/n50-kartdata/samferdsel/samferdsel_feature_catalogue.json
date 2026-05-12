@@ -292,7 +292,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Veglenke",
@@ -379,7 +380,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Stasjon",
@@ -458,7 +460,8 @@
         "Jernbanepunkt"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Jernbanepunkt",
@@ -475,7 +478,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Jernbanelenke",
@@ -527,7 +531,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Barmarksløype",
@@ -550,7 +555,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Bane",
@@ -584,7 +590,8 @@
         "Jernbanelenke"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Traktorveg",
@@ -607,7 +614,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Bilferjestrekning",
@@ -619,7 +627,8 @@
         "Veglenke"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "GangSykkelveg",
@@ -642,7 +651,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "VegSenterlinje",
@@ -680,7 +690,8 @@
         "Veglenke"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "RuteGenerell",
@@ -703,7 +714,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Passasjerferjestrekning",
@@ -715,7 +727,8 @@
         "RuteGenerell"
       ],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   },
   {
     "name": "Vegsperring",
@@ -807,6 +820,7 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Samferdsel"
   }
 ]
