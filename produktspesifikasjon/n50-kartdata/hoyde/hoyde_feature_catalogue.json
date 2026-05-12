@@ -20,7 +20,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "Forsenkningskurve",
@@ -43,7 +44,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "Høydekurve",
@@ -66,7 +68,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "Hjelpekurve",
@@ -89,7 +92,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   },
   {
     "name": "TrigonometriskPunkt",
@@ -112,6 +116,7 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Høyde"
   }
 ]
