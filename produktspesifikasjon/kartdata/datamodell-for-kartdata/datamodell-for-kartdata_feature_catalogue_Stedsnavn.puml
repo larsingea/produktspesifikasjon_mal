@@ -1,0 +1,74 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title N50 Kartdata - Datamodell for kartdata - Stedsnavn
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Stedsnavn" {
+
+  class StedsnavnTekst <<featureType>> {
+    + navneobjekthovedgruppe [1] : Navneobjekthovedgruppe
+    + navneobjektgruppe [1] : Navneobjektgruppe
+    + navneobjekttype [1] : Navneobjekttype
+    + språk [0..1] : SpråkKode
+    + stedsnavnnummer [0..1] : Integer
+    + språkprioritering [0..1] : SpråkprioriteringKode
+    + stedsnummer [0..1] : Integer
+    + skrivemåtenummer [0..1] : Integer
+  }
+
+  abstract class FellesTekst <<featureType>> {
+    + geometri [1] : GM_Curve
+    + streng [1] : CharacterString
+    + oppdateringsdato [0..1] : Date
+    + datafangstdato [0..1] : Date
+    + tekstformatering [1] : Tekstformatering
+    + fulltekst [1] : CharacterString
+  }
+
+  class PresentasjonTekst <<featureType>> {
+    + teksttype [1] : Teksttype
+  }
+
+  class Tekstformatering <<dataType>> {
+    + tekstReferansepunkt [0..1] : TekstReferansePunkt
+    + tegnavstand [0..1] : Integer
+    + skriftkode [0..1] : Skriftkode
+    + skrifttype [0..1] : CharacterString
+    + referansemålestokk [0..1] : Integer
+  }
+
+  class TekstReferansePunkt <<dataType>> {
+    + tekstReferansePunktNord [1] : TekstReferansePunktNord
+    + tekstReferansePunktØst [1] : TekstReferansePunktØst
+  }
+}
+
+FellesTekst <|-- StedsnavnTekst
+FellesTekst <|-- PresentasjonTekst
+
+@enduml

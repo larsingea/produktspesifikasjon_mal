@@ -1,0 +1,100 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title N50 Kartdata - Datamodell for kartdata - Administrative_områder
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Administrative_områder" {
+
+  class AvtaltAvgrensningslinje <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Teiggrensepunkt <<featureType>> {
+    + posisjon [1] : GM_Point
+    + grensepunkttype [1] : Grensepunkttype
+    + grensepunktnummer [0..1] : CharacterString
+  }
+
+  class Fylkesgrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Kommune <<featureType>> {
+    + område [1] : GM_Surface
+    + kommunenavn [1] : CharacterString
+    + kommunenummer [1] : Kommunenummer
+    + fylkesnummer [1] : CharacterString
+    + fylkesnavn [1] : CharacterString
+  }
+
+  class Riksgrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Grunnlinje <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Kommunegrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Grunnlinjepunkt <<featureType>> {
+    + posisjon [1] : GM_Point
+    + grunnlinjepunktnavn [0..1] : CharacterString
+    + grunnlinjepunktnummer [1] : CharacterString
+  }
+
+  class Territorialgrense <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+}
+
+package "Eksterne referanser" <<Frame>> {
+  class SOSI_Objekt_Flater <<Generelle typer>> {
+  }
+  class SOSI_Objekt_PunkterOgLinjer <<Generelle typer>> {
+  }
+}
+
+SOSI_Objekt_PunkterOgLinjer <|-- AvtaltAvgrensningslinje
+SOSI_Objekt_PunkterOgLinjer <|-- Teiggrensepunkt
+SOSI_Objekt_PunkterOgLinjer <|-- Fylkesgrense
+SOSI_Objekt_Flater <|-- Kommune
+Kommune --> AvtaltAvgrensningslinje : avgrensesAvAvtaltAvgrensningslinje [0..*]
+Kommune --> Fylkesgrense : avgrensesAvFylkesgrense [0..*]
+Kommune --> Riksgrense : avgrensesAvRiksgrense [0..*]
+Kommune --> Territorialgrense : avgrensesAvTerritorialgrense [0..*]
+Kommune --> Kommunegrense : avgrensesAvKommunegrense [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Riksgrense
+SOSI_Objekt_PunkterOgLinjer <|-- Grunnlinje
+SOSI_Objekt_PunkterOgLinjer <|-- Kommunegrense
+SOSI_Objekt_PunkterOgLinjer <|-- Grunnlinjepunkt
+SOSI_Objekt_PunkterOgLinjer <|-- Territorialgrense
+
+@enduml

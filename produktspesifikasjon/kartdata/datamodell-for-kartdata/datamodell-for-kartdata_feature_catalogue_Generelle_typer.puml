@@ -1,0 +1,95 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title N50 Kartdata - Datamodell for kartdata - Generelle typer
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Generelle typer" {
+
+  class FiktivDelelinje <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Dataavgrensning <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  abstract class SOSI_Objekt_Hjelpelinjer <<featureType>> {
+    + oppdateringsdato [0..1] : Date
+  }
+
+  abstract class SOSI_Objekt_Linjer_Samferdsel <<featureType>> {
+    + medium [0..1] : MediumSamferdsel
+    + datafangstdato [1] : Date
+    + oppdateringsdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
+  }
+
+  abstract class SOSI_Objekt_Flater <<featureType>> {
+    + oppdateringsdato [1] : Date
+  }
+
+  abstract class SOSI_Objekt_Sperrelinjer <<featureType>> {
+    + oppdateringsdato [1] : Date
+  }
+
+  abstract class SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <<featureType>> {
+    + datafangstdato [0..1] : Date
+    + oppdateringsdato [1] : Date
+    + kvalitet [0..1] : Posisjonskvalitet
+  }
+
+  abstract class "SOSI_Objekt_PunkterOgLinjer_Høyde" as SOSI_Objekt_PunkterOgLinjer_H_yde <<featureType>> {
+    + medium [1] : MediumHøyde
+    + datafangstdato [1] : Date
+    + oppdateringsdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
+  }
+
+  class KantUtsnitt <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  abstract class SOSI_Objekt_PunkterOgLinjer <<featureType>> {
+    + datafangstdato [1] : Date
+    + oppdateringsdato [1] : Date
+    + kvalitet [1] : Posisjonskvalitet
+  }
+
+  class Posisjonskvalitet <<dataType>> {
+    + målemetode [1] : Målemetode
+    + nøyaktighet [1] : Nøyaktighet
+  }
+}
+
+SOSI_Objekt_Hjelpelinjer <|-- FiktivDelelinje
+SOSI_Objekt_Hjelpelinjer <|-- Dataavgrensning
+SOSI_Objekt_Flater --> KantUtsnitt : avgrensesAvKantutsnitt [0..*]
+SOSI_Objekt_Kombinasjon_Ulike_Geometrityper --> KantUtsnitt : avgrensesAvKantUtsnitt [0..*]
+SOSI_Objekt_Hjelpelinjer <|-- KantUtsnitt
+
+@enduml

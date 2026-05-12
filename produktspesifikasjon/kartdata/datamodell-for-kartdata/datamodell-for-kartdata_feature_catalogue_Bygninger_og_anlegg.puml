@@ -1,0 +1,195 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title N50 Kartdata - Datamodell for kartdata - Bygninger_og_anlegg
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Bygninger_og_anlegg" {
+
+  class "Tårn" as T_rn <<featureType>> {
+    + posisjon [1] : GM_Point
+  }
+
+  class Reingjerde <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class Gruve <<featureType>> {
+    + posisjon [1] : GM_Point
+  }
+
+  class MastTele <<featureType>> {
+    + posisjon [1] : GM_Point
+  }
+
+  class Campingplass <<featureType>> {
+    + posisjon [1] : GM_Point
+  }
+
+  class "Lysløype" as Lysl_ype <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class "Parkeringsområde" as Parkeringsomr_de <<featureType>> {
+    + posisjon [1] : GM_Point
+  }
+
+  class Navigasjonsinstallasjon <<featureType>> {
+    + posisjon [1] : GM_Point
+  }
+
+  class Taubane <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class Vindkraftverk <<featureType>> {
+    + posisjon [1] : GM_Point
+  }
+
+  class Pir <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class "Rørgate" as R_rgate <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class Bygning <<featureType>> {
+    + posisjon [0..1] : GM_Point
+    + område [0..1] : GM_Surface
+    + bygningstype [1] : BygningstypeKode
+    + hytteinformasjon [0..1] : Hytteinformasjon
+    + navn [0..1] : CharacterString
+  }
+
+  class Tankkant <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class Molo <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class Skytebaneinnretning <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class Ledning <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class Takkant <<featureType>> {
+    + grense [1] : GM_Curve
+  }
+
+  class KaiBrygge <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class Skitrekk <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class Flytebrygge <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class LuftledningLH <<featureType>> {
+    + senterlinje [1] : GM_Curve
+    + flerLinjer [1] : FlerLinjer
+  }
+
+  class Hoppbakke <<featureType>> {
+    + posisjon [1] : GM_Point
+    + lengde [1] : Integer
+    + retning [1] : Retning
+  }
+
+  class Dam <<featureType>> {
+    + senterlinje [1] : GM_Curve
+  }
+
+  class SpesiellDetalj <<featureType>> {
+    + posisjon [0..1] : GM_Point
+    + senterlinje [0..1] : GM_Curve
+  }
+
+  class Tank <<featureType>> {
+    + posisjon [0..1] : GM_Point
+    + område [0..1] : GM_Surface
+  }
+
+  class Hytteinformasjon <<dataType>> {
+    + betjeningsgrad [0..1] : Betjeningsgrad
+    + hytteeier [0..1] : Hytteeier
+    + tilgjengelighet [0..1] : Tilgjengelighet
+  }
+
+  class Retning <<dataType>> {
+    + retningsverdi [1] : Real
+    + retningsenhet [1] : Retningsenhet
+    + retningsreferanse [1] : Retningsreferanse
+  }
+}
+
+package "Eksterne referanser" <<Frame>> {
+  class SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <<Generelle typer>> {
+  }
+  class SOSI_Objekt_PunkterOgLinjer <<Generelle typer>> {
+  }
+}
+
+SOSI_Objekt_PunkterOgLinjer <|-- T_rn
+SOSI_Objekt_PunkterOgLinjer <|-- Reingjerde
+SOSI_Objekt_PunkterOgLinjer <|-- Gruve
+SOSI_Objekt_PunkterOgLinjer <|-- MastTele
+SOSI_Objekt_PunkterOgLinjer <|-- Campingplass
+SOSI_Objekt_PunkterOgLinjer <|-- Lysl_ype
+SOSI_Objekt_PunkterOgLinjer <|-- Parkeringsomr_de
+SOSI_Objekt_PunkterOgLinjer <|-- Navigasjonsinstallasjon
+SOSI_Objekt_PunkterOgLinjer <|-- Taubane
+SOSI_Objekt_PunkterOgLinjer <|-- Vindkraftverk
+SOSI_Objekt_PunkterOgLinjer <|-- Pir
+SOSI_Objekt_PunkterOgLinjer <|-- R_rgate
+SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <|-- Bygning
+Bygning --> Takkant : avgrensesAvTakkant [0..*]
+SOSI_Objekt_PunkterOgLinjer <|-- Tankkant
+SOSI_Objekt_PunkterOgLinjer <|-- Molo
+SOSI_Objekt_PunkterOgLinjer <|-- Skytebaneinnretning
+SOSI_Objekt_PunkterOgLinjer <|-- Ledning
+SOSI_Objekt_PunkterOgLinjer <|-- Takkant
+SOSI_Objekt_PunkterOgLinjer <|-- KaiBrygge
+Taubane <|-- Skitrekk
+SOSI_Objekt_PunkterOgLinjer <|-- Flytebrygge
+SOSI_Objekt_PunkterOgLinjer <|-- LuftledningLH
+SOSI_Objekt_PunkterOgLinjer <|-- Hoppbakke
+SOSI_Objekt_PunkterOgLinjer <|-- Dam
+SOSI_Objekt_PunkterOgLinjer <|-- SpesiellDetalj
+SOSI_Objekt_Kombinasjon_Ulike_Geometrityper <|-- Tank
+Tank --> Tankkant : avgrensesAvTankkant [0..*]
+
+@enduml

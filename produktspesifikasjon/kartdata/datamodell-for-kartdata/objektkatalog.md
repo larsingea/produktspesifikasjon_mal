@@ -1,5 +1,45 @@
 ### Datamodell
 
+**Kilde:** [SOSI UML XMI-fil](https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/N50Kartdata20230401.xml)
+
+#### Oversikt
+
+<a href="datamodell-for-kartdata_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_overview.png" alt="Datamodell Datamodell for kartdata - oversikt" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Administrative_områder
+
+<a href="datamodell-for-kartdata_feature_catalogue_Administrative_omr_der.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_Administrative_omr_der.png" alt="Datamodell Datamodell for kartdata - Administrative_områder" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Arealdekke
+
+<a href="datamodell-for-kartdata_feature_catalogue_Arealdekke.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_Arealdekke.png" alt="Datamodell Datamodell for kartdata - Arealdekke" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Bygninger_og_anlegg
+
+<a href="datamodell-for-kartdata_feature_catalogue_Bygninger_og_anlegg.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_Bygninger_og_anlegg.png" alt="Datamodell Datamodell for kartdata - Bygninger_og_anlegg" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Generelle typer
+
+<a href="datamodell-for-kartdata_feature_catalogue_Generelle_typer.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_Generelle_typer.png" alt="Datamodell Datamodell for kartdata - Generelle typer" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Høyde
+
+<a href="datamodell-for-kartdata_feature_catalogue_H_yde.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_H_yde.png" alt="Datamodell Datamodell for kartdata - Høyde" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Restriksjonsområder
+
+<a href="datamodell-for-kartdata_feature_catalogue_Restriksjonsomr_der.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_Restriksjonsomr_der.png" alt="Datamodell Datamodell for kartdata - Restriksjonsområder" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Samferdsel
+
+<a href="datamodell-for-kartdata_feature_catalogue_Samferdsel.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_Samferdsel.png" alt="Datamodell Datamodell for kartdata - Samferdsel" style="max-width: 100%; height: auto;" /></a>
+
+#### Pakke: Stedsnavn
+
+<a href="datamodell-for-kartdata_feature_catalogue_Stedsnavn.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue_Stedsnavn.png" alt="Datamodell Datamodell for kartdata - Stedsnavn" style="max-width: 100%; height: auto;" /></a>
+
+#### Komplett diagram
+
 <a href="datamodell-for-kartdata_feature_catalogue.png" title="Klikk for stor visning"><img src="datamodell-for-kartdata_feature_catalogue.png" alt="Datamodell Datamodell for kartdata" style="max-width: 100%; height: auto;" /></a>
 
 #### FiktivDelelinje
