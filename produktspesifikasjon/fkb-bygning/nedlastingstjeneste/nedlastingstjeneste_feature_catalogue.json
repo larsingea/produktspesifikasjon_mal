@@ -63,7 +63,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Generelle elementer"
   },
   {
     "name": "KvalitetOpsjonell",
@@ -129,7 +130,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Generelle elementer"
   },
   {
     "name": "Fellesegenskaper",
@@ -207,7 +209,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Generelle elementer"
   },
   {
     "name": "AnnenBygning",
@@ -349,7 +352,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Bygninger"
   },
   {
     "name": "Bygning",
@@ -535,7 +539,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Bygninger"
   },
   {
     "name": "FiktivBygningsavgrensning",
@@ -565,7 +570,8 @@
         "KvalitetOpsjonell"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsavgrensning"
   },
   {
     "name": "BygningsavgrensningTiltak",
@@ -612,7 +618,8 @@
         "KvalitetOpsjonell"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsavgrensning"
   },
   {
     "name": "Takkant",
@@ -659,7 +666,8 @@
         "KvalitetPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsavgrensning"
   },
   {
     "name": "Fasadeliv",
@@ -706,7 +714,8 @@
         "KvalitetPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsavgrensning"
   },
   {
     "name": "Bygningsdelelinje",
@@ -736,7 +745,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsavgrensning"
   },
   {
     "name": "Grunnmur",
@@ -777,7 +787,8 @@
         "KvalitetPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsavgrensning"
   },
   {
     "name": "TakplatåTopp",
@@ -796,7 +807,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "BeskrivendeBygningsdetalj",
@@ -820,7 +832,8 @@
         "KvalitetPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Portrom",
@@ -850,7 +863,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Hjelpepunkt3D",
@@ -869,7 +883,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Taksprang",
@@ -888,7 +903,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "TaksprangBunn",
@@ -907,7 +923,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Mønelinje",
@@ -926,7 +943,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Hjelpelinje3D",
@@ -945,7 +963,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "TakMur",
@@ -964,7 +983,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Arkade",
@@ -994,7 +1014,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Bygningslinje",
@@ -1013,7 +1034,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Takplatå",
@@ -1032,7 +1054,8 @@
         "BeskrivendeBygningsdetalj"
       ],
       "associations": []
-    }
+    },
+    "package": "BeskrivendeBygningslinjer"
   },
   {
     "name": "Låvebru",
@@ -1044,7 +1067,8 @@
         "Bygningsvedheng"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsvedheng"
   },
   {
     "name": "Bygningsvedheng",
@@ -1063,7 +1087,8 @@
         "KvalitetPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsvedheng"
   },
   {
     "name": "BygningBru",
@@ -1075,7 +1100,8 @@
         "Bygningsvedheng"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsvedheng"
   },
   {
     "name": "Veranda",
@@ -1110,7 +1136,8 @@
         "Bygningsvedheng"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsvedheng"
   },
   {
     "name": "TrappBygg",
@@ -1122,7 +1149,8 @@
         "Bygningsvedheng"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsvedheng"
   },
   {
     "name": "VeggFrittstående",
@@ -1157,7 +1185,8 @@
         "Bygningsvedheng"
       ],
       "associations": []
-    }
+    },
+    "package": "Bygningsvedheng"
   },
   {
     "name": "TakoverbyggKant",
@@ -1176,7 +1205,8 @@
         "KvalitetPåkrevd"
       ],
       "associations": []
-    }
+    },
+    "package": "Takoverbygg"
   },
   {
     "name": "Takoverbygg",
@@ -1212,6 +1242,7 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Takoverbygg"
   }
 ]
