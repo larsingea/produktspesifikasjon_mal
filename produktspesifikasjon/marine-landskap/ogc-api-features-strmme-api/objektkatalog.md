@@ -1,5 +1,7 @@
 ### Datamodell
 
+**Kilde:** [OGC API - Features](https://ogcapitest.ngu.no/rest/services/marinlandskap/collections)
+
 
 
 

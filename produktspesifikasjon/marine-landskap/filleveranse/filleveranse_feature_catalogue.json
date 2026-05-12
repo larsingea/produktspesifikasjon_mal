@@ -40,7 +40,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "MarineLandskap-1.0"
   },
   {
     "name": "MarinLandskapsgrense",
@@ -85,7 +86,8 @@
         "LosmasseGrense"
       ],
       "associations": []
-    }
+    },
+    "package": "MarineLandskap-1.0"
   },
   {
     "name": "MarinLandskap",
@@ -186,7 +188,8 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "MarineLandskap-1.0"
   },
   {
     "name": "FellesegenskaperLosmasse",
@@ -593,7 +596,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "MarineLandskap-1.0"
   },
   {
     "name": "LosmasseGrense",
@@ -772,7 +776,8 @@
         "FellesegenskaperLosmasse"
       ],
       "associations": []
-    }
+    },
+    "package": "MarineLandskap-1.0"
   },
   {
     "name": "FellesegenskaperFlater",
@@ -821,6 +826,7 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "MarineLandskap-1.0"
   }
 ]
