@@ -236,6 +236,7 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "NasjonaltGrunnkartForArealanalyse-1.0"
   }
 ]

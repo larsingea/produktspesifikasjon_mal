@@ -64,14 +64,14 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 > **Opprettet dato:** 2024-02-13<br>
 > **Endret dato:** 2026-03-25<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Statistisk sentralbyrå
+> **Kontaktinformasjon:** Statistisk sentralbyrå, [GISressurssenter@ssb.no](mailto:GISressurssenter@ssb.no)
 
 ## Om produktet Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
 
 
 > **Romlig representasjonstype:** Vektor<br>
-> **Unik identifikator:** 28c28e3a-d88f-4a34-8c60-5efe6d56a44d<br>
-> **Kontaktinformasjon:** Statistisk sentralbyrå
+> **Unik identifikator:** <https://data.geonorge.no/sosi/arealbruk/nasjonalt_grunnkart_arealanalyse><br>
+> **Kontaktinformasjon:** Statistisk sentralbyrå, [GISressurssenter@ssb.no](mailto:GISressurssenter@ssb.no)
 >
 > **Romlig oppløsning:**
 >
@@ -84,7 +84,7 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 > - **Tilgangsbegrensninger**: Norge digitalt begrenset
 > - **Bruksbegrensninger**: Lisens
 > - **Lisens**: Norge digitalt-lisens
-> - **Lisenslenke**: <https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/>
+> - **Lisenslenke**: <https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens>
 > - **Andre begrensninger**: Wms-tjenesten er åpen for alle. Nedlastbare data er begrenset til Norge digitalt-parter.
 
 ### Formål
@@ -99,6 +99,12 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 ## Omfang
 
+### Hele datasettet
+
+**Nivå**: dataset
+
+**Nivåbeskrivelse**: Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser
+
 ### Filleveranse som DB
 
 **Nivå**: dataset
@@ -107,20 +113,17 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 ## Datainnhold og struktur
 
-**Beskrivelse**:
-Grunnkartet kan brukes som grunnlag for etablering av arealanalyse, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. 
 
-Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Årsversjonen 2025 av Grunnkartet supplerer og delvis erstatter datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere.
 
 ### Datamodell - Filleveranse som DB
 
 
 
-[Objektkatalog - Filleveranse som DB](filleveranse-som-db/objektkatalog.html)
-
-
-
 <a href="filleveranse-som-db/filleveranse-som-db_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranse-som-db/filleveranse-som-db_feature_catalogue.png" alt="Datamodell Filleveranse som DB" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "Filleveranse som DB" (diagram per pakke og objektkatalog)](filleveranse-som-db/objektkatalog.html)
 
 ## Referansesystem
 
@@ -149,22 +152,12 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
   **Målebeskrivelse**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
   **Resultat**: 93
 
+- **Kvalitetsmål**: Prosentvis oppfyllelse av FAIR-prinsipper
+  **Målebeskrivelse**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
+  **Resultat**: 93
+
 - **Kvalitetsmål**: FAIR
   **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 93%
-
-**Beskrivelse**:
-Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.
-
-Hvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. 
-Alle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. 
-
-For generelle spørsmål og spørsmål til metode: gisdrift@nibio.no
-
-For spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no
-
-For spørsmål knyttet til Arealdekke: gisdrift@nibio.no
-
-For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 ## Datafangst og produksjon
 
@@ -231,7 +224,7 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-08
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 
@@ -249,33 +242,6 @@ For spørsmål knyttet til Økosystemtype: post@miljodir.no
 - **kode**: 28c28e3a-d88f-4a34-8c60-5efe6d56a44d
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
 - **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/28c28e3a-d88f-4a34-8c60-5efe6d56a44d>
-
-**Lenker**:
-
-- **lenke**: <https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=28c28e3a-d88f-4a34-8c60-5efe6d56a44d>
-  **relasjon**: describedby
-  **type**: application/xml
-  **tittel**: Metadata (ISO 19139)
-
-- **lenke**: <https://nibio.brage.unit.no/nibio-xmlui/handle/11250/3120510>
-  **relasjon**: about
-  **type**: text/html
-  **tittel**: Produktside
-
-- **lenke**: <https://nedlasting.geonorge.no/api/capabilities/>
-  **relasjon**: enclosure
-  **type**: text/html
-  **tittel**: Nedlasting
-
-- **lenke**: #!?zoom=3&lon=306722&lat=7197864&wms=<https://wms.nibio.no/cgi-bin/grunnkart_arealanalyse>
-  **relasjon**: service
-  **type**: text/html
-  **tittel**: Tjeneste
-
-- **lenke**: <https://wms.nibio.no/cgi-bin/grunnkart_arealanalyse?service=WMS&request=GetCapabilities>
-  **relasjon**: service
-  **type**: application/xml
-  **tittel**: Tjeneste-distribusjon
 
 ## Tilleggsinformasjon
 
