@@ -1,0 +1,215 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Nasjonal database for grunnundersøkelser (NADAG) - nedlastingstjeneste - Oversikt
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Abstrakte Featurtyper" {
+  abstract class "GeovitenskapeligUndersøkelse" as GeovitenskapeligUnders_kelse <<featureType>> {
+  }
+  abstract class GeovitenskapeligObservasjon <<featureType>> {
+  }
+  abstract class "GeovitenskapeligUndersøkelseDelområdeGrense" as GeovitenskapeligUnders_kelseDelomr_deGrense <<featureType>> {
+  }
+  abstract class GeotekniskObservasjon_NADAG <<featureType>> {
+  }
+  abstract class Supertype_Geotekn_obj_omr <<featureType>> {
+  }
+  abstract class GeotekniskObservasjon <<featureType>> {
+  }
+  abstract class "GeovitenskapeligUndersøkelseGrense" as GeovitenskapeligUnders_kelseGrense <<featureType>> {
+  }
+  abstract class "GeovitenskapligBorehullUndersøkelse" as GeovitenskapligBorehullUnders_kelse <<featureType>> {
+  }
+  abstract class Geotekniskmetode <<featureType>> {
+  }
+  abstract class "GeovitenskapeligUndersøkelseDelområde" as GeovitenskapeligUnders_kelseDelomr_de <<featureType>> {
+  }
+  abstract class Supertype_Geotekn_obj_pkt <<featureType>> {
+  }
+  abstract class GeotekniskSondering <<featureType>> {
+  }
+  abstract class GeovitenskapligBorehull <<featureType>> {
+  }
+  abstract class "GeotekniskPrøvetaking" as GeotekniskPr_vetaking <<featureType>> {
+  }
+  abstract class GeotekniskInsituTest <<featureType>> {
+  }
+}
+
+package "Datatyper" {
+  class "GeotekniskPrøveseriedel" as GeotekniskPr_veseriedel <<featureType>> {
+  }
+}
+
+package "FeatureTypes" {
+  class Trykksondering <<featureType>> {
+  }
+  class Platebelastning <<featureType>> {
+  }
+  class "GrunnvannMåling" as GrunnvannM_ling <<featureType>> {
+  }
+  class "GeotekniskUndersøkelseGrense" as GeotekniskUnders_kelseGrense <<featureType>> {
+  }
+  class DilatometerTest <<featureType>> {
+  }
+  class "StempelPrøve" as StempelPr_ve <<featureType>> {
+  }
+  class "SedimentPrøve" as SedimentPr_ve <<featureType>> {
+  }
+  class "RamPrøve" as RamPr_ve <<featureType>> {
+  }
+  class KombinasjonSondering <<featureType>> {
+  }
+  class GeotekniskTolketLag <<featureType>> {
+  }
+  class GeotekniskDokument <<featureType>> {
+  }
+  class "GassPrøve" as GassPr_ve <<featureType>> {
+  }
+  class "VannPrøve" as VannPr_ve <<featureType>> {
+  }
+  class "NaverPrøve" as NaverPr_ve <<featureType>> {
+  }
+  class "GassMåling" as GassM_ling <<featureType>> {
+  }
+  class "SkovlPrøve" as SkovlPr_ve <<featureType>> {
+  }
+  class StatiskSondering <<featureType>> {
+  }
+  class GeotekniskTolketPunkt <<featureType>> {
+  }
+  class KjerneBoring <<featureType>> {
+  }
+  class GeotekniskBorehullUnders <<featureType>> {
+  }
+  class "GeotekniskPrøveserie" as GeotekniskPr_veserie <<featureType>> {
+  }
+  class GeotekniskUnders <<featureType>> {
+  }
+  class "BlokkPrøve" as BlokkPr_ve <<featureType>> {
+  }
+  class "MiljøUndersøkelse" as Milj_Unders_kelse <<featureType>> {
+  }
+  class "KjernePrøve" as KjernePr_ve <<featureType>> {
+  }
+  class GeotekniskFeltUnders <<featureType>> {
+  }
+  class GeotekniskBorehull <<featureType>> {
+  }
+  class "GravePrøve" as GravePr_ve <<featureType>> {
+  }
+  class DynamiskSondering <<featureType>> {
+  }
+  class "PoretrykkMåling" as PoretrykkM_ling <<featureType>> {
+  }
+  class Vingeboring <<featureType>> {
+  }
+  class HydrauliskTest <<featureType>> {
+  }
+  class "DeformasjonMåling" as DeformasjonM_ling <<featureType>> {
+  }
+  class "KannePrøve" as KannePr_ve <<featureType>> {
+  }
+}
+
+
+GeotekniskInsituTest <|-- Trykksondering
+Trykksondering --> DissipasjonData : dissipasjonObservasjon [0..*]
+Trykksondering --> TrykksonderingData : trykksonderingObservasjon [0..*]
+Trykksondering --> PoretrykkDataInsitu : inSituPoretrykkObservasjon [0..*]
+GeotekniskInsituTest <|-- Platebelastning
+Platebelastning --> PlatebelastningData : platebelastningObservasjon [0..*]
+GeotekniskInsituTest <|-- GrunnvannM_ling
+GrunnvannM_ling --> Overv_kningData : overvåkningObervasjon [0..*]
+GrunnvannM_ling --> GrunnvannData : grunnvannObservasjon [0..*]
+GeovitenskapeligUnders_kelseGrense <|-- GeotekniskUnders_kelseGrense
+GeotekniskInsituTest <|-- DilatometerTest
+DilatometerTest --> DilatometerTestData : dilatometerObservasjon [0..*]
+GeotekniskPr_vetaking <|-- StempelPr_ve
+GeotekniskPr_vetaking <|-- SedimentPr_ve
+GeotekniskPr_vetaking <|-- RamPr_ve
+GeotekniskSondering <|-- KombinasjonSondering
+KombinasjonSondering --> KombinasjonSonderingData : kombinasjonSonderingObservasjon [0..*]
+GeotekniskTolketLag --> GeotekniskTolketPunkt : tilhørerTolketPunkt [0..1]
+GeotekniskDokument --> GeotekniskBorehullUnders : tilhørerGBU [0..1]
+GeotekniskDokument --> GeotekniskBorehull : tilhørerGB [0..1]
+GeotekniskDokument --> GeotekniskUnders : tilhørerGU [0..1]
+GeotekniskDokument --> GeotekniskFeltUnders : tilhørerFeltUnders [0..1]
+GeotekniskPr_vetaking <|-- GassPr_ve
+GeotekniskPr_vetaking <|-- VannPr_ve
+GeotekniskPr_vetaking <|-- NaverPr_ve
+GeotekniskInsituTest <|-- GassM_ling
+GassM_ling --> GassData : gassObservasjon [0..*]
+GeotekniskPr_vetaking <|-- SkovlPr_ve
+GeotekniskSondering <|-- StatiskSondering
+StatiskSondering --> StatiskSonderingData : statiskSonderingObservasjon [0..*]
+GeotekniskTolketPunkt --> GeotekniskBorehull : tilhørerGB [0..1]
+GeotekniskTolketPunkt --> GeotekniskUnders : tilhørerGU [0..1]
+GeotekniskPr_vetaking <|-- KjerneBoring
+KjerneBoring --> KjerneBoringData : harData [0..*]
+GeovitenskapligBorehullUnders_kelse <|-- GeotekniskBorehullUnders
+GeotekniskBorehullUnders --> GeotekniskBorehull : undersPkt [0..1]
+GeotekniskBorehullUnders --> Geotekniskmetode : metode [0..*]
+GeotekniskPr_vetaking <|-- GeotekniskPr_veserie
+GeovitenskapeligUnders_kelse <|-- GeotekniskUnders
+GeotekniskUnders --> GeotekniskBorehull : undersPkt [0..*]
+GeotekniskPr_vetaking <|-- BlokkPr_ve
+GeotekniskPr_vetaking <|-- Milj_Unders_kelse
+GeotekniskPr_vetaking <|-- KjernePr_ve
+GeotekniskFeltUnders --> GeotekniskUnders : tilhørerGU [0..1]
+GeovitenskapligBorehull <|-- GeotekniskBorehull
+GeotekniskBorehull --> GeotekniskBorehullUnders : harUndersøkelse [0..*]
+GeotekniskBorehull --> GeotekniskUnders : undersOmr [0..*]
+GeotekniskPr_vetaking <|-- GravePr_ve
+GeotekniskSondering <|-- DynamiskSondering
+DynamiskSondering --> DynamiskSonderingData : dynamiskSonderingObservasjon [0..*]
+GeotekniskInsituTest <|-- PoretrykkM_ling
+PoretrykkM_ling --> PoretrykkData : poretrykkObservasjon [0..*]
+GeotekniskInsituTest <|-- Vingeboring
+Vingeboring --> VingeboringData : vingeboringObservasjon [0..*]
+GeotekniskInsituTest <|-- HydrauliskTest
+HydrauliskTest --> HydrauliskeData : hydrauliskObservasjon [0..*]
+GeotekniskObservasjon <|-- DeformasjonM_ling
+DeformasjonM_ling --> DeformasjonM_leData : harSetningObservasjon [0..*]
+DeformasjonM_ling --> DeformasjonOverv_kningData : harOvervåkningObservasjon [0..*]
+GeotekniskPr_vetaking <|-- KannePr_ve
+Supertype_Geotekn_obj_omr <|-- GeovitenskapeligUnders_kelse
+Supertype_Geotekn_obj_pkt <|-- GeovitenskapeligObservasjon
+GeovitenskapeligObservasjon <|-- GeotekniskObservasjon_NADAG
+GeotekniskObservasjon_NADAG <|-- GeotekniskObservasjon
+GeotekniskObservasjon --> GeotekniskBorehull : tilhørerGB [0..1]
+Supertype_Geotekn_obj_pkt <|-- GeovitenskapligBorehullUnders_kelse
+Supertype_Geotekn_obj_omr <|-- GeovitenskapeligUnders_kelseDelomr_de
+Geotekniskmetode <|-- GeotekniskSondering
+Supertype_Geotekn_obj_pkt <|-- GeovitenskapligBorehull
+Geotekniskmetode <|-- GeotekniskPr_vetaking
+Geotekniskmetode <|-- GeotekniskInsituTest
+GeotekniskPr_veseriedel --> GeotekniskPr_veserie : tilhørerPrøveserie [0..1]
+GeotekniskPr_veseriedel --> GeotekniskPr_veseriedelData : harData [0..*]
+
+@enduml

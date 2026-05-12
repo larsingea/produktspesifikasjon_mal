@@ -1,0 +1,198 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Nasjonal database for grunnundersøkelser (NADAG) - nedlastingstjeneste - Abstrakte Featurtyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Abstrakte Featurtyper" {
+
+  abstract class "GeovitenskapeligUndersøkelse" as GeovitenskapeligUnders_kelse <<featureType>> {
+    + beskrivelse [0..1] : CharacterString
+    + område [0..1] : GM_Surface
+    + oppdragsgiver [0..1] : CharacterString
+    + oppdragstaker [0..1] : CharacterString
+    + prosjektNavn [0..1] : CharacterString
+    + sammensattområde [0..1] : GM_MultiSurface
+    + undersøkelsePeriodeFra [0..1] : Date
+    + undersøkelsePeriodeTil [0..1] : Date
+  }
+
+  abstract class GeovitenskapeligObservasjon <<featureType>> {
+    + observasjonSlutt [0..1] : Date
+    + observasjonStart [0..1] : Date
+    + observatør [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + posisjon [1] : Punkt
+  }
+
+  abstract class "GeovitenskapeligUndersøkelseDelområdeGrense" as GeovitenskapeligUnders_kelseDelomr_deGrense <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  abstract class GeotekniskObservasjon_NADAG <<featureType>> {
+    + boreBeskrivelse [0..1] : CharacterString
+    + boretAzimuth [0..1] : Real
+    + boretHelningsgrad [0..1] : Real
+    + boretLengde [0..1] : Real
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + dybdeFraGittPosisjon [0..1] : Real
+    + dybdeFraVannoverflaten [0..1] : Real
+    + dybdeGrunnvannstand [0..1] : Real
+    + eksternIdentifikasjon [0..1] : EksternIdentifikasjon
+    + forboretDiameter [0..1] : Real
+    + forboretLengde [0..1] : Real
+    + forboretStartLengde [0..1] : Real
+    + forboringMetode [0..1] : CharacterString
+    + høyde [0..1] : Real
+    + høydeReferanse [0..1] : NADAG_Høyderef
+    + lenkeTilTileggsinfo [0..1] : CharacterString
+    + opprettetDato [1] : Date
+    + stoppKode [0..1] : GeotekniskStoppkode
+    + undersøkelseNr [0..1] : CharacterString
+    + værforholdVedBoring [0..1] : CharacterString
+  }
+
+  abstract class Supertype_Geotekn_obj_omr <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + oppdateringsdato [0..1] : Date
+  }
+
+  abstract class GeotekniskObservasjon <<featureType>> {
+    ' Ingen attributter
+  }
+
+  abstract class "GeovitenskapeligUndersøkelseGrense" as GeovitenskapeligUnders_kelseGrense <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  abstract class "GeovitenskapligBorehullUndersøkelse" as GeovitenskapligBorehullUnders_kelse <<featureType>> {
+    + boreBeskrivelse [0..1] : CharacterString
+    + borehullForløp [0..1] : Kurve
+    + boretAzimuth [0..1] : Real
+    + boretHelningsgrad [0..1] : Real
+    + boretLengde [0..1] : Real
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + dybdeFraGittPosisjon [0..1] : Real
+    + dybdeFraVannoverflaten [0..1] : Real
+    + lenkeTilTileggsinfo [0..1] : CharacterString
+    + opphav [0..1] : CharacterString
+    + posisjon [1] : Punkt
+    + undersøkelseSlutt [0..1] : Date
+    + undersøkelseStart [0..1] : Date
+    + værforholdVedBoring [0..1] : CharacterString
+  }
+
+  abstract class Geotekniskmetode <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+  }
+
+  abstract class "GeovitenskapeligUndersøkelseDelområde" as GeovitenskapeligUnders_kelseDelomr_de <<featureType>> {
+    + beskrivelse [0..1] : CharacterString
+    + område [1] : Flate
+  }
+
+  abstract class Supertype_Geotekn_obj_pkt <<featureType>> {
+    + datafangstdato [0..1] : Date
+    + digitaliseringsmålestokk [0..1] : Integer
+    + identifikasjon [1] : Identifikasjon
+    + kvalitet [0..1] : PosisjonskvalitetNADAG
+    + oppdateringsdato [0..1] : Date
+  }
+
+  abstract class GeotekniskSondering <<featureType>> {
+    + fraBorlengde [0..1] : Real
+    + tilBorlengde [0..1] : Real
+    + torvTykkelse [0..1] : Real
+  }
+
+  abstract class GeovitenskapligBorehull <<featureType>> {
+    + antallBorehullUndersøkelser [0..1] : Integer
+    + beskrivelse [0..1] : CharacterString
+    + boretLengdeTilBerg [0..1] : BorlengdeTilBerg
+    + gjennomboretMedium [0..*] : GjennomboretMedium
+    + posisjon [1] : Punkt
+  }
+
+  abstract class "GeotekniskPrøvetaking" as GeotekniskPr_vetaking <<featureType>> {
+    + densitetPrøvetaking [0..1] : Real
+    + fraBorlengde [0..1] : Real
+    + miljøtekniskUndersøkelse [0..1] : CharacterString
+    + prøvetype [0..1] : PrøvetakingType
+    + tilBorlengde [0..1] : Real
+  }
+
+  abstract class GeotekniskInsituTest <<featureType>> {
+    + fraBorlengde [0..1] : Real
+    + insituTestSluttTidspunkt [0..1] : Date
+    + insituTestStartTidspunkt [0..1] : Date
+    + tilBorlengde [0..1] : Real
+  }
+
+  class BorlengdeTilBerg <<dataType>> {
+    + borlengdeKvalitet [1] : KvalitetBorlengdeTilBerg
+    + borlengdeTilBerg [1] : Real
+  }
+
+  class EksternIdentifikasjon <<dataType>> {
+    + eksternId [0..1] : CharacterString
+    + eksternLeveringDato [0..1] : Date
+    + eksternNavnerom [0..1] : CharacterString
+    + eksternVersjonId [0..1] : CharacterString
+  }
+
+  class Identifikasjon <<dataType>> {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+
+  class PosisjonskvalitetNADAG <<dataType>> {
+    + målemetode [1] : Målemetode
+    + målemetodeHøyde [0..1] : MålemetodeHøyde
+    + nøyaktighet [0..1] : Integer
+    + nøyaktighetHøyde [0..1] : Integer
+  }
+}
+
+package "Eksterne referanser" <<Frame>> {
+  class GeotekniskBorehull <<FeatureTypes>> {
+  }
+}
+
+Supertype_Geotekn_obj_omr <|-- GeovitenskapeligUnders_kelse
+Supertype_Geotekn_obj_pkt <|-- GeovitenskapeligObservasjon
+GeovitenskapeligObservasjon <|-- GeotekniskObservasjon_NADAG
+GeotekniskObservasjon_NADAG <|-- GeotekniskObservasjon
+GeotekniskObservasjon --> GeotekniskBorehull : tilhørerGB [0..1]
+Supertype_Geotekn_obj_pkt <|-- GeovitenskapligBorehullUnders_kelse
+Supertype_Geotekn_obj_omr <|-- GeovitenskapeligUnders_kelseDelomr_de
+Geotekniskmetode <|-- GeotekniskSondering
+Supertype_Geotekn_obj_pkt <|-- GeovitenskapligBorehull
+Geotekniskmetode <|-- GeotekniskPr_vetaking
+Geotekniskmetode <|-- GeotekniskInsituTest
+
+@enduml

@@ -2193,7 +2193,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
@@ -2218,7 +2218,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
-      <td>1</td>
+      <td>0..1</td>
     </tr>
     <tr>
       <th scope="row">Type:</th>
