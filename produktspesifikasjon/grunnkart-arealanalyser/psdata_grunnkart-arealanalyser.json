@@ -1,5 +1,7 @@
 {
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
   "title": "Nasjonalt grunnkart for arealanalyse - Årsversjon 2025",
+  "format": "text/html",
   "date": {
     "creation": "2024-02-13",
     "revision": "2026-03-25"
@@ -27,7 +29,7 @@
       "equivalentScale": "1:500 - 1:50000"
     },
     "supplementalInformation": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nHvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: post@miljodir.no",
-    "uniqueId": "28c28e3a-d88f-4a34-8c60-5efe6d56a44d",
+    "uniqueId": "https://data.geonorge.no/sosi/arealbruk/nasjonalt_grunnkart_arealanalyse",
     "keyword": [
       "Grunnkart",
       "Arealregnskap",
@@ -46,7 +48,7 @@
         "accessConstraints": "Norge digitalt begrenset",
         "useConstraints": "Lisens",
         "license": "Norge digitalt-lisens",
-        "licenseUrl": "https://www.geonorge.no/Geodataarbeid/geografisk-infrastruktur/Norge-digitalt/Avtaler-og-maler/Norge-digitalt-lisens/",
+        "licenseUrl": "https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens",
         "otherConstraints": "Wms-tjenesten er åpen for alle. Nedlastbare data er begrenset til Norge digitalt-parter."
       }
     },
@@ -95,15 +97,19 @@
   "scopeSection": [
     {
       "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
         "scopeIdentification": "Filleveranse som DB",
         "level": "dataset",
         "levelDescription": "Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed."
       }
     }
   ],
-  "dataContentAndStructureSection": {
-    "narrativeDescription": "Grunnkartet kan brukes som grunnlag for etablering av arealanalyse, og kan suppleres med spesifikke data tilpasset ulike regnskapsformål, slik som kommuneplaner, miljødata eller jordegenskaper. \n\nKommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for arealregnskap i kommunene (https://www.regjeringen.no/no/dokumenter/arealregnskap-i-kommuneplan/id3017913/), som gir oversikt over relevante datakilder og metoder. Årsversjonen 2025 av Grunnkartet supplerer og delvis erstatter datakildene som er nevnt i denne veilederen. For andre typer arealregnskap må det utvikles egne metoder med tilhørende veiledere."
-  },
   "referenceSystemSection": {
     "spatialReferenceSystem": [
       {
@@ -149,13 +155,15 @@
         "result": "93"
       },
       {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "93"
+      },
+      {
         "nameOfMeasure": "FAIR",
         "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 93%"
       }
-    ],
-    "resourceLineage": {
-      "statement": "Grunnkartet kan lastes ned kommunevis for Norge digitalt-parter. WMS-tjenesten er åpen og kan benyttes for innsyn av alle.\n\nHvis du har tilbakemeldinger om Grunnkartet, kan du gjerne sende oss en e-post. \nAlle samarbeidspartene i prosjektet kan kontaktes ved tilbakemeldinger og/eller spørsmål. \n\nFor generelle spørsmål og spørsmål til metode: gisdrift@nibio.no\n\nFor spørsmål knyttet til Arealbruk: GISressurssenter@ssb.no\n\nFor spørsmål knyttet til Arealdekke: gisdrift@nibio.no\n\nFor spørsmål knyttet til Økosystemtype: post@miljodir.no"
-    }
+    ]
   },
   "maintenanceSection": {
     "maintenanceAndUpdateFrequency": "Årlig",
@@ -286,7 +294,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-04-08",
+    "metadataDate": "2026-05-11",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
@@ -300,38 +308,6 @@
       "code": "28c28e3a-d88f-4a34-8c60-5efe6d56a44d",
       "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
       "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/28c28e3a-d88f-4a34-8c60-5efe6d56a44d"
-    },
-    "links": [
-      {
-        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=28c28e3a-d88f-4a34-8c60-5efe6d56a44d",
-        "rel": "describedby",
-        "type": "application/xml",
-        "title": "Metadata (ISO 19139)"
-      },
-      {
-        "href": "https://nibio.brage.unit.no/nibio-xmlui/handle/11250/3120510",
-        "rel": "about",
-        "type": "text/html",
-        "title": "Produktside"
-      },
-      {
-        "href": "https://nedlasting.geonorge.no/api/capabilities/",
-        "rel": "enclosure",
-        "type": "text/html",
-        "title": "Nedlasting"
-      },
-      {
-        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://wms.nibio.no/cgi-bin/grunnkart_arealanalyse",
-        "rel": "service",
-        "type": "text/html",
-        "title": "Tjeneste"
-      },
-      {
-        "href": "https://wms.nibio.no/cgi-bin/grunnkart_arealanalyse?service=WMS&request=GetCapabilities",
-        "rel": "service",
-        "type": "application/xml",
-        "title": "Tjeneste-distribusjon"
-      }
-    ]
+    }
   }
 }
