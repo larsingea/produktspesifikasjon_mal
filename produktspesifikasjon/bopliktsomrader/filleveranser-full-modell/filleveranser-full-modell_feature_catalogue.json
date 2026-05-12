@@ -45,15 +45,15 @@
         }
       },
       {
-        "name": "delAvKommunen",
+        "name": "gjelderKunDelAvKommunen",
         "type": "Boolean",
-        "description": "Angir om bopliktsområde dekker hele eller kun deler av kommunen.\nVerdi = 0 hele kommunen\nVerdi = 1 deler av kommunen",
+        "description": "Angir om bopliktsområdet kun gjelder deler av kommunen. Verdi = True: Gjelder deler av kommunen. Verdi = False: Gjelder hele kommunen.",
         "cardinality": "1"
       },
       {
-        "name": "usikker",
+        "name": "harUsikkerAvgrensning",
         "type": "Boolean",
-        "description": "Angir hvorvidt bopliktsområdets geometriske representasjon er entydig definert. Der dette ikke er tilfelle (verdi = 1) må det manuelt vurderes i tråd med forskriftens materielle vilkår (angitt under Andre avgrensninger i datasettet).\nVerdi = 0 - ikke usikker\nVerdi = 1 - usikker",
+        "description": "Angir om bopliktsområdets geometriske avgrensning er usikker og må vurderes manuelt i tråd med forskriften. Verdi = True: Avgrensningen er usikker. Verdi = False: Avgrensningen er ikke usikker.",
         "cardinality": "1"
       },
       {
@@ -68,33 +68,33 @@
         }
       },
       {
-        "name": "bebygdEiendom",
+        "name": "gjelderForBruktSomHelarsbolig",
         "type": "Boolean",
-        "description": "Nedsatt konsesjonsgrense for bopliktsområde i kommunen gjelder for bebygd eiendom som er eller har vært i bruk som helårsbolig.\nVerdi = gjelder\nVerdi = gjelder ikke",
+        "description": "Angir om nedsatt konsesjonsgrense med boplikt gjelder for bebygd eiendom som er eller har vært brukt som helårsbolig.",
         "cardinality": "1"
       },
       {
-        "name": "ikkeHelarsboligUnderOppforing",
+        "name": "gjelderForBoligIkkeTattIBruk",
         "type": "Boolean",
-        "description": "Nedsatt konsesjonsgrense for bopliktsområde i kommunen gjelder for eiendom med bebyggelse som ikke er tatt i bruk som helårsbolig herunder eiendom under oppføring regulert til boligformål\nVerdi = gjelder\nVerdi = gjelder ikke",
+        "description": "Angir om nedsatt konsesjonsgrense med boplikt gjelder for bolig under oppføring eller bolig som ikke er tatt i bruk som helårsbolig.",
         "cardinality": "1"
       },
       {
-        "name": "ubebygdTomt",
+        "name": "gjelderForUbebygdBoligtomt",
         "type": "Boolean",
-        "description": "Nedsatt konsesjonsgrense for bopliktsområde i kommunen gjelder for ubebygd tomt regulert til boligformål.\nVerdi = True - gjelder\nVerdi = False - gjelder ikke",
+        "description": "Angir om nedsatt konsesjonsgrense med boplikt gjelder for ubebygd tomt regulert til boligformål.",
         "cardinality": "1"
       },
       {
         "name": "unntakFraSlektskapsunntak",
         "type": "Boolean",
-        "description": "Angir om det er innført unntakt fra slektskapsunntaket.\nVerdi = gjelder ikke - det er unntak fra slektskapsunntaket\nVerdi = gjelder - slektskapsunntaket gjelder",
+        "description": "Angir om kommunen har innført unntak fra slektskapsunntaket.",
         "cardinality": "1"
       },
       {
-        "name": "andreAvgrensninger",
+        "name": "andreLokaleAvgrensninger",
         "type": "CharacterString",
-        "description": "Andre materielle avgrensninger gitt i lokal bopliktsforskrift.",
+        "description": "Andre lokale begrensninger eller vilkår som ikke dekkes av de andre feltene.",
         "cardinality": "0..1"
       },
       {
@@ -112,7 +112,7 @@
           {
             "name": "navnerom",
             "type": "CharacterString",
-            "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
+            "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for navnerom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
             "cardinality": "1"
           },
           {
@@ -134,6 +134,7 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Bopliktsområder_20260101"
   }
 ]

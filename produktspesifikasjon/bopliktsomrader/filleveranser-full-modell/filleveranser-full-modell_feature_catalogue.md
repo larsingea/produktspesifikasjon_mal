@@ -166,11 +166,11 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>delAvKommunen</strong></td>
+      <td><strong>gjelderKunDelAvKommunen</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Angir om bopliktsområde dekker hele eller kun deler av kommunen.<br />Verdi = 0 hele kommunen<br />Verdi = 1 deler av kommunen</td>
+      <td>Angir om bopliktsområdet kun gjelder deler av kommunen. Verdi = True: Gjelder deler av kommunen. Verdi = False: Gjelder hele kommunen.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -191,11 +191,11 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>usikker</strong></td>
+      <td><strong>harUsikkerAvgrensning</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Angir hvorvidt bopliktsområdets geometriske representasjon er entydig definert. Der dette ikke er tilfelle (verdi = 1) må det manuelt vurderes i tråd med forskriftens materielle vilkår (angitt under Andre avgrensninger i datasettet).<br />Verdi = 0 - ikke usikker<br />Verdi = 1 - usikker</td>
+      <td>Angir om bopliktsområdets geometriske avgrensning er usikker og må vurderes manuelt i tråd med forskriften. Verdi = True: Avgrensningen er usikker. Verdi = False: Avgrensningen er ikke usikker.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -245,11 +245,11 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>bebygdEiendom</strong></td>
+      <td><strong>gjelderForBruktSomHelarsbolig</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Nedsatt konsesjonsgrense for bopliktsområde i kommunen gjelder for bebygd eiendom som er eller har vært i bruk som helårsbolig.<br />Verdi = gjelder<br />Verdi = gjelder ikke</td>
+      <td>Angir om nedsatt konsesjonsgrense med boplikt gjelder for bebygd eiendom som er eller har vært brukt som helårsbolig.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -270,11 +270,11 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>ikkeHelarsboligUnderOppforing</strong></td>
+      <td><strong>gjelderForBoligIkkeTattIBruk</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Nedsatt konsesjonsgrense for bopliktsområde i kommunen gjelder for eiendom med bebyggelse som ikke er tatt i bruk som helårsbolig herunder eiendom under oppføring regulert til boligformål<br />Verdi = gjelder<br />Verdi = gjelder ikke</td>
+      <td>Angir om nedsatt konsesjonsgrense med boplikt gjelder for bolig under oppføring eller bolig som ikke er tatt i bruk som helårsbolig.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -295,11 +295,11 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>ubebygdTomt</strong></td>
+      <td><strong>gjelderForUbebygdBoligtomt</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Nedsatt konsesjonsgrense for bopliktsområde i kommunen gjelder for ubebygd tomt regulert til boligformål.<br />Verdi = True - gjelder<br />Verdi = False - gjelder ikke</td>
+      <td>Angir om nedsatt konsesjonsgrense med boplikt gjelder for ubebygd tomt regulert til boligformål.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -324,7 +324,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Angir om det er innført unntakt fra slektskapsunntaket.<br />Verdi = gjelder ikke - det er unntak fra slektskapsunntaket<br />Verdi = gjelder - slektskapsunntaket gjelder</td>
+      <td>Angir om kommunen har innført unntak fra slektskapsunntaket.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -345,11 +345,11 @@ Egenskaper
   <tbody>
     <tr>
       <th scope="row">Navn:</th>
-      <td><strong>andreAvgrensninger</strong></td>
+      <td><strong>andreLokaleAvgrensninger</strong></td>
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>Andre materielle avgrensninger gitt i lokal bopliktsforskrift.</td>
+      <td>Andre lokale begrensninger eller vilkår som ikke dekkes av de andre feltene.</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -424,7 +424,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Definisjon:</th>
-      <td>navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI<br /><br />Eksempel: <a href="http://data.geonorge.no/SentraltStedsnavnsregister/1.0">http://data.geonorge.no/SentraltStedsnavnsregister/1.0</a><br /><br />Merknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no</td>
+      <td>navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI<br /><br />Eksempel: <a href="http://data.geonorge.no/SentraltStedsnavnsregister/1.0">http://data.geonorge.no/SentraltStedsnavnsregister/1.0</a><br /><br />Merknad : Verdien for navnerom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>

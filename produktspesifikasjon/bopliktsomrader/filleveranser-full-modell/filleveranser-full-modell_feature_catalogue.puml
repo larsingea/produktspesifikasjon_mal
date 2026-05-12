@@ -1,10 +1,16 @@
 @startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
 title Bopliktsområder - Filleveranser - full modell - Objekttyper
 
 skinparam backgroundColor #F5F5F5
 skinparam shadowing false
 skinparam RoundCorner 6
 skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
 skinparam class {
   BackgroundColor #FBF2E8
   BorderColor #9C8578
@@ -31,14 +37,14 @@ package "Objekttyper" {
     + opphevelse [0..1] : Date
     + kommunenavn [1] : CharacterString
     + kommunenummer [1] : Kommunenummer
-    + delAvKommunen [1] : Boolean
-    + usikker [1] : Boolean
+    + gjelderKunDelAvKommunen [1] : Boolean
+    + harUsikkerAvgrensning [1] : Boolean
     + malemetode [1] : Målemetode
-    + bebygdEiendom [1] : Boolean
-    + ikkeHelarsboligUnderOppforing [1] : Boolean
-    + ubebygdTomt [1] : Boolean
+    + gjelderForBruktSomHelarsbolig [1] : Boolean
+    + gjelderForBoligIkkeTattIBruk [1] : Boolean
+    + gjelderForUbebygdBoligtomt [1] : Boolean
     + unntakFraSlektskapsunntak [1] : Boolean
-    + andreAvgrensninger [0..1] : CharacterString
+    + andreLokaleAvgrensninger [0..1] : CharacterString
     + identifikasjon [1] : Identifikasjon
     + oppdateringsdato [1] : Date
   }
