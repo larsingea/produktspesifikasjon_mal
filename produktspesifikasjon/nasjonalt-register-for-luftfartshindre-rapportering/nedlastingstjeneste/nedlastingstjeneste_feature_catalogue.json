@@ -33,7 +33,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Objekttyper - abstrakte og instansierbare"
   },
   {
     "name": "Fellesegenskaper",
@@ -220,7 +221,8 @@
     "relationships": {
       "inheritance": [],
       "associations": []
-    }
+    },
+    "package": "Objekttyper - abstrakte og instansierbare"
   },
   {
     "name": "NrlFlate",
@@ -250,7 +252,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Objekttyper - abstrakte og instansierbare"
   },
   {
     "name": "NrlLuftspenn",
@@ -298,7 +301,8 @@
           "cardinality": "0..2"
         }
       ]
-    }
+    },
+    "package": "Objekttyper - abstrakte og instansierbare"
   },
   {
     "name": "NrlPunkt",
@@ -334,7 +338,8 @@
         "Fellesegenskaper"
       ],
       "associations": []
-    }
+    },
+    "package": "Objekttyper - abstrakte og instansierbare"
   },
   {
     "name": "NrlMast",
@@ -376,6 +381,7 @@
           "cardinality": "0..*"
         }
       ]
-    }
+    },
+    "package": "Objekttyper - abstrakte og instansierbare"
   }
 ]
