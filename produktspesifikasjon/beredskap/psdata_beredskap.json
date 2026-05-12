@@ -1,8 +1,10 @@
 {
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
   "title": "Tilfluktsrom - Offentlige",
+  "format": "text/html",
   "date": {
     "creation": "2019-09-09",
-    "revision": "2026-04-08"
+    "revision": "2026-05-11"
   },
   "language": "nor",
   "contact": {
@@ -22,7 +24,7 @@
     "spatialResolution": {
       "equivalentScale": "5000"
     },
-    "uniqueId": "dbae9aae-10e7-4b75-8d67-7f0e8828f3d8",
+    "uniqueId": "https://data.geonorge.no/sosi/samfunnssikkerhet/tilfluktsromoffentlige",
     "keyword": [
       "Norge digitalt",
       "fellesDatakatalog",
@@ -75,25 +77,29 @@
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2019-09-09",
-          "endPosition": "2026-04-08"
+          "endPosition": "2026-05-11"
         }
       }
     },
     "date": {
       "creation": "2019-09-09",
       "publication": "2019-09-09",
-      "revision": "2026-04-08"
+      "revision": "2026-05-11"
     },
     "language": "nor"
   },
   "scopeSection": [
     {
       "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
         "scopeIdentification": "Datamodell for hendelser",
         "level": "dataset",
-        "extent": {
-          "description": "National"
-        },
         "levelDescription": "Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed."
       }
     }
@@ -283,7 +289,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-04-08",
+    "metadataDate": "2026-05-11",
     "language": "nor",
     "contact": {
       "organizationName": "Direktoratet for samfunnssikkerhet og beredskap",
@@ -297,38 +303,6 @@
       "code": "dbae9aae-10e7-4b75-8d67-7f0e8828f3d8",
       "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
       "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/dbae9aae-10e7-4b75-8d67-7f0e8828f3d8"
-    },
-    "links": [
-      {
-        "href": "https://www.geonorge.no/geonetwork/srv/nor/csw?service=CSW&request=GetRecordById&version=2.0.2&outputSchema=http://www.isotc211.org/2005/gmd&elementSetName=full&id=dbae9aae-10e7-4b75-8d67-7f0e8828f3d8",
-        "rel": "describedby",
-        "type": "application/xml",
-        "title": "Metadata (ISO 19139)"
-      },
-      {
-        "href": "https://www.sivilforsvaret.no/dette-er-sivilforsvaret/tilfluktsrom/",
-        "rel": "about",
-        "type": "text/html",
-        "title": "Produktside"
-      },
-      {
-        "href": "https://nedlasting.geonorge.no/api/capabilities/",
-        "rel": "enclosure",
-        "type": "text/html",
-        "title": "Nedlasting"
-      },
-      {
-        "href": "#!?zoom=3&lon=306722&lat=7197864&wms=https://ogc.dsb.no/wms.ashx",
-        "rel": "service",
-        "type": "text/html",
-        "title": "Tjeneste"
-      },
-      {
-        "href": "https://ogc.dsb.no/wms.ashx?SERVICE=WMS&REQUEST=GetCapabilities&version=1.3.0",
-        "rel": "service",
-        "type": "application/xml",
-        "title": "Tjeneste-distribusjon"
-      }
-    ]
+    }
   }
 }

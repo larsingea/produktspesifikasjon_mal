@@ -1,10 +1,16 @@
 @startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
 title Tilfluktsrom - Offentlige - Datamodell for hendelser - Objekttyper
 
 skinparam backgroundColor #F5F5F5
 skinparam shadowing false
 skinparam RoundCorner 6
 skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
 skinparam class {
   BackgroundColor #FBF2E8
   BorderColor #9C8578
@@ -46,7 +52,7 @@ package "Objekttyper" {
   }
 
   abstract class Hendelse <<featureType>> {
-    + punkt [1] : Punkt
+    + punkt [1] : GM_Point
     + betegnelse [0..1] : CharacterString
     + opphavsaktør [1] : Hovedaktør
     + beskrivelse [0..1] : CharacterString
@@ -129,6 +135,12 @@ package "Objekttyper" {
     + virksomhet [0..1] : CharacterStreng
   }
 
+  class Objektgruppe <<featureType>> {
+    + navn [1] : CharacterString
+    + typeObjekt [1] : TypeObject
+    + posisjon [1] : GM_Object
+  }
+
   class Observasjon <<featureType>> {
     + observasjonsmåte [1] : Observasjonsmåte
     + observasjonskvalitet [0..1] : Observasjonskvalitet
@@ -140,7 +152,7 @@ package "Objekttyper" {
   }
 
   abstract class Ressurs <<featureType>> {
-    + posisjon [1] : Punkt
+    + posisjon [1] : GM_Point
     + aktør [1] : Aktør
     + ressursID [1] : CharacterString
     + estimertAnkomsttid [0..1] : Date
@@ -172,8 +184,13 @@ package "Objekttyper" {
     + typeEkspert [0..1] : TypeEkspert
   }
 
+  class LokaltReferansesystem <<featureType>> {
+    + navn [1] : CharacterString
+    + typeReferansesystem [1] : TypeReferansesystem
+  }
+
   class Tiltakslokasjon <<featureType>> {
-    + posisjon [1] : CharacterString
+    + posisjon [1] : GM_Object
     + type [1] : TypeTiltakslokasjon
     + aktør [1] : Aktør
     + status [1] : Status
@@ -200,9 +217,6 @@ package "Objekttyper" {
     + prioritet [1] : PrioritetHendelse
     + kompleksitet [0..1] : Kompleksitet
   }
-
-  class X___TiltakOppgave {
-  }
 }
 
   VersjonertObjekt <|-- Fellesegenskaper
@@ -211,6 +225,7 @@ package "Objekttyper" {
   Hendelse <|-- Helsesamvirke
   Fellesegenskaper <|-- Hendelse
   Hendelse --> ops : ops [1]
+  Hendelse --> Objektgruppe : [0..*]
   Hendelse --> Objekt : objekt [1..*]
   Hendelse --> FramskrevetSkadested : utbredelse [0..*]
   Hendelse --> Tiltakslokasjon : tiltakslokasjon [0..*]
@@ -220,6 +235,7 @@ package "Objekttyper" {
   Hendelse --> Ressurs : tilordnetRessurs [0..*]
   Hendelse --> Kontekst : kontekst [0..*]
   Hendelse --> Innsatsomr_de : innsatsområde [0..*]
+  Hendelse --> LokaltReferansesystem : [0..*]
   Hendelse --> Observasjon : ____innmeldtObservasjon [1]
   Hendelse --> Observat_r : innmelder [1..*]
   Hendelse <|-- PlanlagtHendelse
@@ -242,6 +258,7 @@ package "Objekttyper" {
   Objekt --> Observasjon : observasjon [1..*]
   VersjonertObjekt <|-- Observat_r
   Fellesegenskaper <|-- Observat_r
+  Objektgruppe --> Objekt : [0..*]
   Fellesegenskaper <|-- Observasjon
   Observasjon --> Objekt : objekt [1..*]
   Observasjon --> Observat_r : observatør [1]
@@ -257,9 +274,9 @@ package "Objekttyper" {
   Ressurs <|-- Transportmiddel
   Ressurs <|-- Personell
   Personell --> Transportmiddel : transportmiddel [0..1]
+  Fellesegenskaper <|-- LokaltReferansesystem
   Fellesegenskaper <|-- Tiltakslokasjon
   Tiltakslokasjon --> Ressurs
-  Tiltakslokasjon --> X___TiltakOppgave
   Fellesegenskaper <|-- Kontekst
 
 @enduml

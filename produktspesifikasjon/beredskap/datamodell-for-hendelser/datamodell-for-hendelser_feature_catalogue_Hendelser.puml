@@ -1,0 +1,171 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Tilfluktsrom - Offentlige - Datamodell for hendelser - Hendelser
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Hendelser" {
+
+  class Helsesamvirke <<featureType>> {
+    + samvirkeType [1] : TypeHelsesamvirke
+  }
+
+  abstract class Hendelse <<featureType>> {
+    + punkt [1] : GM_Point
+    + betegnelse [0..1] : CharacterString
+    + opphavsaktør [1] : Hovedaktør
+    + beskrivelse [0..1] : CharacterString
+    + prioritet [1] : PrioritetHendelse
+    + kompleksitet [1] : Kompleksitet
+    + aktørPerspektiv [1..*] : AktørPerspektiv
+    + lokalitetstype [1] : Lokalitetstype
+    + øvelse [1] : Boolean
+  }
+
+  class PlanlagtHendelse <<featureType>> {
+    + planlagtHendelsesType [1] : TypePlanlagtHendelse
+  }
+
+  class FramskrevetSkadested <<featureType>> {
+    + sted [1] : GM_Object
+    + typeSkadested [0..1] : TypeSkadested
+    + beskrivelse [0..1] : CharacterString
+    + estimertTidspunkt [0..1] : Date
+  }
+
+  class SammensattHendelse <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class AnnenHendelse <<featureType>> {
+    ' Ingen attributter
+  }
+
+  class Sikkerhetshendelse <<featureType>> {
+    + sikkerhetshendelseType [1] : TypeSikkerhetshendelse
+  }
+
+  class "FramskrevetHendelsesområde" as FramskrevetHendelsesomr_de <<featureType>> {
+    + flate [1] : GM_Surface
+    + beskrivelse [0..1] : CharacterString
+    + estimertTidspunkt [0..1] : Date
+  }
+
+  class Naturhendelse <<featureType>> {
+    + naturhendelseType [1] : TypeNaturhendelse
+  }
+
+  class Ulykke <<featureType>> {
+    + ulykkeType [1] : TypeUlykke
+  }
+
+  class "Hendelsesområde" as Hendelsesomr_de <<featureType>> {
+    + flate [1] : GM_Surface
+    + beskrivelse [0..1] : CharacterString
+  }
+
+  class "FramskrevetInnsatsområde" as FramskrevetInnsatsomr_de <<featureType>> {
+    + flate [1] : GM_Surface
+    + beskrivelse [0..1] : CharacterString
+    + estimertTidspunkt [0..1] : Date
+  }
+
+  class "Innsatsområde" as Innsatsomr_de <<featureType>> {
+    + flate [1] : GM_Surface
+    + beskrivelse [0..1] : CharacterString
+  }
+
+  class Skadested <<featureType>> {
+    + sted [1] : GM_Object
+    + typeSkadested [0..1] : TypeSkadested
+    + beskrivelse [0..1] : CharacterString
+  }
+
+  class "AktørPerspektiv" as Akt_rPerspektiv <<dataType>> {
+    + aktør [1] : Hovedaktør
+    + prioritet [1] : PrioritetHendelse
+    + kompleksitet [0..1] : Kompleksitet
+  }
+}
+
+package "Eksterne referanser" <<Frame>> {
+  class Fellesegenskaper <<Geografiske hendelser>> {
+  }
+  class Kontekst <<Kontekst>> {
+  }
+  class LokaltReferansesystem <<Tiltak>> {
+  }
+  class Objekt <<Heldelsesrelatert>> {
+  }
+  class Objektgruppe <<Heldelsesrelatert>> {
+  }
+  class Observasjon <<Heldelsesrelatert>> {
+  }
+  class "Observatør" as Observat_r <<Heldelsesrelatert>> {
+  }
+  class Ressurs <<Ressurser>> {
+  }
+  class Tiltakslokasjon <<Tiltak>> {
+  }
+  class ops <<Geografiske hendelser>> {
+  }
+}
+
+Hendelse <|-- Helsesamvirke
+Fellesegenskaper <|-- Hendelse
+Hendelse --> ops : ops [1]
+Hendelse --> Objektgruppe : [0..*]
+Hendelse --> Objekt : objekt [1..*]
+Hendelse --> FramskrevetSkadested : utbredelse [0..*]
+Hendelse --> Tiltakslokasjon : tiltakslokasjon [0..*]
+Hendelse --> Skadested : skadested [0..*]
+Hendelse --> Hendelsesomr_de : hendelsesområde [0..*]
+Hendelse --> SammensattHendelse : sammensattHendelse [0..*]
+Hendelse --> Ressurs : tilordnetRessurs [0..*]
+Hendelse --> Kontekst : kontekst [0..*]
+Hendelse --> Innsatsomr_de : innsatsområde [0..*]
+Hendelse --> LokaltReferansesystem : [0..*]
+Hendelse --> Observasjon : ____innmeldtObservasjon [1]
+Hendelse --> Observat_r : innmelder [1..*]
+Hendelse <|-- PlanlagtHendelse
+Fellesegenskaper <|-- FramskrevetSkadested
+Fellesegenskaper <|-- SammensattHendelse
+SammensattHendelse --> Hendelse : hendelse [0..*]
+Hendelse <|-- AnnenHendelse
+Hendelse <|-- Sikkerhetshendelse
+Fellesegenskaper <|-- FramskrevetHendelsesomr_de
+Hendelse <|-- Naturhendelse
+Hendelse <|-- Ulykke
+Fellesegenskaper <|-- Hendelsesomr_de
+Hendelsesomr_de --> FramskrevetHendelsesomr_de : scenario [0..*]
+Fellesegenskaper <|-- FramskrevetInnsatsomr_de
+Fellesegenskaper <|-- Innsatsomr_de
+Innsatsomr_de --> FramskrevetInnsatsomr_de : scenario [0..*]
+Fellesegenskaper <|-- Skadested
+Skadested --> FramskrevetSkadested : framskriving [0..*]
+
+@enduml
