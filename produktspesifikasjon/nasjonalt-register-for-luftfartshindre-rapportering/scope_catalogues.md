@@ -6,4 +6,4 @@
 
 
 
-➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
+➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram per pakke og objektkatalog)](nedlastingstjeneste/objektkatalog.html)

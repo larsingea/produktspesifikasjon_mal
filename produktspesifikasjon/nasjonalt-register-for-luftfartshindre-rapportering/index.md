@@ -26,14 +26,14 @@ NB! Luftfartshinder under 15 meter med registreringsdato etter 3.7.2025 inngår 
 
 - **Tidsperiode**:
   - **Fra**: 2014-04-01
-  - **Til**: 2026-04-09
+  - **Til**: 2026-05-10
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2014-04-01<br>
-> **Endret dato:** 2026-04-09<br>
+> **Endret dato:** 2026-05-10<br>
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
@@ -100,7 +100,7 @@ Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Si
 
 
 
-➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
+➡️ [Se full datamodell for omfang "nedlastingstjeneste" (diagram per pakke og objektkatalog)](nedlastingstjeneste/objektkatalog.html)
 
 ## Referansesystem
 
@@ -164,7 +164,7 @@ Egnet til bruk i elektroniske kart- og varslingssystemer i fly og helikoptre. Si
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-04-10
+**Metadatadato**: 2026-05-11
 
 **språk**: nor
 
