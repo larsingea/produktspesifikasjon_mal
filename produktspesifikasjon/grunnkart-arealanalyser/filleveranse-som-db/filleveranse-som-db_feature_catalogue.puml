@@ -4,7 +4,7 @@
 ' default PlantUML 4096px size limit from cropping the diagram.
 scale max 4000*4000
 
-title Nasjonalt grunnkart for arealanalyse - Årsversjon 2025 - Filleveranse som DB - Objekttyper
+title Nasjonalt grunnkart for arealanalyse - Filleveranse som DB - Objekttyper
 
 skinparam backgroundColor #F5F5F5
 skinparam shadowing false

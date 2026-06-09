@@ -1,34 +1,20 @@
 ---
-title: "Nasjonalt grunnkart for arealanalyse - Årsversjon 2025"
+title: "Nasjonalt grunnkart for arealanalyse"
 updated: "2025-04-07"
 organization: "Statistisk sentralbyrå"
 logo: "https://register.geonorge.no/data/organizations/971526920_SSB_liten.png"
 ---
 
-# Produktspesifikasjon: Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
+# Produktspesifikasjon: Nasjonalt grunnkart for arealanalyse
 
-*Nasjonalt grunnkart for arealanalyse er tilgjengelig som **årsversjon 2025**. 
-Nå er GML, FGDB og Geopackage filer av årsversjon 2025 tilgjengelig for nedlasting. 
-
-**Dersom du ønsker å se på Årsversjon 2025 av Grunnkartet, er den nye WMS-tjenesten tilgjengelig.** Mer informasjon om WMS-tjenesten finner du på <https://kartkatalog.geonorge.no/Metadata/c7dc425b-60cd-42f7-a84e-202c7d7b912a>. 
-
-- - - 
-Velkommen til **webinar om årsversjon 2025 torsdag 23. april 2026 kl 09.00 - 10.30.** 
-Du får en orientering til Grunnkartet, samt en gjennomgang av nyhetene i årsversjonen. Det vil også vises nok eksempler på praktisk bruk av kartet. 
-
-Webinaret er åpent for alle og det vil være mulig å stille spørsmål. 
-Her kan du melde deg og følge webinaret: <https://events.teams.microsoft.com/event/cc7eafa1-dcdd-492c-bde3-c30fd9cbf62e@7f74c8a2-43ce-46b2-b0e8-b6306cba73a3>
-
-Webinaret blir ikke tatt opp. 
-- - -
-
-Grunnkartet er utviklet i samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet, og er ment som et felles datagrunnlag for ulike typer arealanalyser.
+*Grunnkartet er utviklet i samarbeid mellom NIBIO, SSB, Kartverket og Miljødirektoratet, og er ment som et felles datagrunnlag for ulike typer arealanalyser.
 
 Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK), som viser arealressurs- og arealbruksdata, og innebærer ingen nykartlegging.  Kildedata som er brukt i denne versjonen var oppdatert per 01.01.2025. I tillegg til arealressurs- og arealbruksdata er det lagt inn økosysteminformasjon i henhold til Eurostats klassifikasjonssystem. Grunnkartet kan kobles med andre datakilder, som for eksempel arealplaner, og benyttes som grunnlag for ulike typer arealanalyser og arealregnskap. Les mer om datainnhold og metode under Prosesshistorie.
 
 
 **Rapporter**
 
+Utviklingen av Grunnkartet er dokumentert i flere rapporter, som beskriver metode, tilbakemeldinger og gjennomførte endringer.
 
 * Alle endringer som er implementert i Årsversjon 2025 er samlet i rapporten [Nasjonalt grunnkart for arealanalyse - Årsversjon 2025](https://doi.org/10.21350/4m2k-7z04)
 
@@ -40,7 +26,7 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 
 * Les mer om metode og bruk av Grunnkartet i rapporten [Grunnkart for bruk i arealregnskap](https://hdl.handle.net/11250/3120510)*
 
-**Nøkkelord:** Grunnkart, Arealregnskap, Arealstatistikk, Økosystemtyper, Arealanalyse, Norges fastland for landsdekkende datasett, ØkologiskGrunnkart, Det offentlige kartgrunnlaget, geodataloven, arealplanerPBL, Plan
+**Nøkkelord:** Grunnkart, Arealregnskap, Arealstatistikk, Økosystemtyper, Arealanalyse, Arealdekke, Arealbruk, Norges fastland for landsdekkende datasett, Det offentlige kartgrunnlaget, geodataloven, arealplanerPBL, Plan
 
 **Emnekategorier:** 
 
@@ -66,7 +52,7 @@ Datasettet bygger på eksisterende data fra det offentlige kartgrunnlaget (DOK),
 > **Språk:** nor<br>
 > **Kontaktinformasjon:** Statistisk sentralbyrå, [GISressurssenter@ssb.no](mailto:GISressurssenter@ssb.no)
 
-## Om produktet Nasjonalt grunnkart for arealanalyse - Årsversjon 2025
+## Om produktet Nasjonalt grunnkart for arealanalyse
 
 
 > **Romlig representasjonstype:** Vektor<br>
@@ -150,14 +136,10 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 - **Kvalitetsmål**: Prosentvis oppfyllelse av FAIR-prinsipper
   **Målebeskrivelse**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
-  **Resultat**: 93
-
-- **Kvalitetsmål**: Prosentvis oppfyllelse av FAIR-prinsipper
-  **Målebeskrivelse**: Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)
-  **Resultat**: 93
+  **Resultat**: 95
 
 - **Kvalitetsmål**: FAIR
-  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 93%
+  **Resultat**: Prosentvis oppfyllelse av FAIR-prinsipper: 95%
 
 ## Datafangst og produksjon
 
@@ -224,7 +206,7 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-05-11
+**Metadatadato**: 2026-06-09
 
 **språk**: nor
 
