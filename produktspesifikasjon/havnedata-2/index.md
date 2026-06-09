@@ -28,14 +28,14 @@ Spesifikasjonen er laget med tanke p책 forvaltning i en sentral database bygd p�
 
 - **Tidsperiode**:
   - **Fra**: 2021-03-02
-  - **Til**: 2026-04-29
+  - **Til**: 2026-05-29
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
 > **Opprettet dato:** 2021-03-02<br>
-> **Endret dato:** 2026-04-29<br>
+> **Endret dato:** 2026-05-29<br>
 > **Spr책k:** nor<br>
 > **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
 
@@ -185,7 +185,7 @@ Eksempler p책 bruksomr책der for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-05-11
+**Metadatadato**: 2026-06-09
 
 **spr책k**: nor
 
