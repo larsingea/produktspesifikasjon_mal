@@ -3528,7 +3528,7 @@
         "description": "geotekniskborehullunders"
       },
       {
-        "name": "harPrøverseriedel",
+        "name": "harPrøveseriedel",
         "type": "Link",
         "cardinality": "0..1",
         "attributes": [
