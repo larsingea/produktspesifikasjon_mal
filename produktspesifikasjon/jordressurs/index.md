@@ -1,21 +1,19 @@
 ---
-title: "Havnedata"
+title: "Jordressurser"
 updated: "2026-06-09"
-organization: "Kartverket"
-logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png"
+organization: "Norsk institutt for bioøkonomi"
+logo: "https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg"
 ---
 
-# Produktspesifikasjon: Havnedata
+# Produktspesifikasjon: Jordressurser
 
-*Havnedata er detaljert geografisk informasjon om havner, kaier og tilhørende objekter som er en del av infrastrukturen på en kai eller i en havn. Tilhørende objekttyper som inngår i standarden er havneanlegg, kaifront, vannuttak, tilkoblingspunkt for strøm, beredskapsutstyr, sensorer, avfallspunkt, kraner, slipp, fender, fortøyningsinnretninger, tømmestasjon, gjerder m.fl. 
+*Kartet Jordressurser inndeler jordkartlagte arealer i fire klasser basert på jordas egenskaper, helling, hyppig forekommende fjell i dagen samt innhold av stein- og blokk. Jordkartlagte arealer er rangert på en skal fra de aller beste egenskapene til de mindre gode egenskapene for jordbruk. Datasettet er et kunnskapsgrunnlag for arealplanlegging på ulike nivåer innen forvaltningen. Klima er ikke hensyntatt i rangeringen. 
+Jordkartlagte arealer er inndelt inn i fire klasser: 1 = Svært gode jordressurser, 2 = Gode jordressurser, 3 = Middels gode jordressurser og 4 = Mindre gode jordressurser. Egenskap som skal brukes til å fremstille kartlaget heter jordressursklasser.
+Jordressurser er fremstilt i målestokk 1:5000 og er tilpasset bruk i målestokker fra 1:5000 til 1:20 000.*
 
-Reguleringer i form av lovverk, regler, restriksjoner eller annet som er relatert til havn og har en geografisk avgrensning som kan kartfestes, inngår også i standarden. 
+**Nøkkelord:** Jordsmonn, Jordressurser, Jordsmonkartlegging, arealplanlegging, plan- og bygningsloven (PBL), jord, egenskaper ved jord, jordkartlagte arealer, jordbruksareal
 
-Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd på NGIS-forvaltningsplattformen etter samme forvaltningskonsept som SFKB.*
-
-**Nøkkelord:** Havnedata, Havneområde, Havn, WMS, Kyst, Kai, transport, Norge, Transportnett, Kyst og fiskeri, Samferdsel, Kaifront, Beredskapspunkt, HavneområdeGrense, Fortøyningsinnretning, Kran, Havnegjerde, Avfallspunkt, Havnesensor, Lastbegrensningsområde, tillattFortøyningsvinkelGrunnriss, tillattFortøyningsvinkelOppriss, kainavn, portFaciilityNrIMO, kontaktinformasjonPFSO, kontakttype, drivstofftype, fendertype, avfallsplan, beholdertype, havneident, UNLOCODE, vektbegrensning, bruksklasse, kaidekke
-
-**Emnekategorier:** Kyst og sjø
+**Emnekategorier:** Landbruk og havbruk
 
 **Geografisk utstrekning**:
 
@@ -27,24 +25,24 @@ Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd p�
 **Tidsmessig utstrekning**:
 
 - **Tidsperiode**:
-  - **Fra**: 2021-03-02
-  - **Til**: 2026-05-29
+  - **Fra**: 2026-03-17
+  - **Til**: 2026-03-17
 
 ## Om spesifikasjonen
 
 
 > **Denne versjonen av produktspesifikasjonen:** <br>
-> **Opprettet dato:** 2021-03-02<br>
-> **Endret dato:** 2026-05-29<br>
+> **Opprettet dato:** 2026-03-17<br>
+> **Endret dato:** 2026-03-17<br>
 > **Språk:** nor<br>
-> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
+> **Kontaktinformasjon:** Norsk institutt for bioøkonomi, [siri.svendgard-stokke@nibio.no](mailto:siri.svendgard-stokke@nibio.no)
 
-## Om produktet Havnedata
+## Om produktet Jordressurser
 
 
 > **Romlig representasjonstype:** Vektor<br>
-> **Unik identifikator:** <https://data.geonorge.no/sosi/kyst/havnedata><br>
-> **Kontaktinformasjon:** Kartverket, [kundesenter@kartverket.no](mailto:kundesenter@kartverket.no)
+> **Unik identifikator:** 3690c283-a1f2-4e95-8cd4-2d6115eb28f7<br>
+> **Kontaktinformasjon:** Norsk institutt for bioøkonomi, [siri.svendgard-stokke@nibio.no](mailto:siri.svendgard-stokke@nibio.no)
 >
 > **Romlig oppløsning:**
 >
@@ -54,34 +52,29 @@ Spesifikasjonen er laget med tanke på forvaltning i en sentral database bygd p�
 >
 > **Juridiske begrensninger**:
 >
-> - **Tilgangsbegrensninger**: Norge digitalt begrenset
+> - **Tilgangsbegrensninger**: Åpne data
 > - **Bruksbegrensninger**: Lisens
-> - **Lisens**: Norge digitalt-lisens
-> - **Lisenslenke**: <https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens>
+> - **Lisens**: Norsk lisens for offentlige data (NLOD)
+> - **Lisenslenke**: <http://data.norge.no/nlod/no/1.0>
+>
+> **Sikkerhetsbegrensninger**:
+>
+> - **Klassifisering**: Ugradert
 
 ### Formål
 
-Havnedata-standarden er utviklet fordi det var et behov for å få tak i oppdatert, standardisert og tilgjengelig informasjon om havner og havnefasiliteter.
+I jordkartlegginga blir det lagt vekt på ni spesifikke egenskaper ved jordsmonnet, slik som tekstur, lagdeling og drenering. Dette er relativt stabile egenskaper ved jorda som lar seg bestemme ute i felt, in situ. En jordtype er en spesifikk, unik kombinasjon av disse ni egenskapene. Hver jordtype har et navn.
+
+I noen kartfigurer kan det være avvikende egenskaper enn dem som framkommer fra jordkartleggingen. I tillegg til jordtypene innenfor hver kartfigur, registreres også andre relevante egenskaper, slik som eventuell høy frekvens av fjellblotninger og innhold av stein og blokk i øverste 50 cm. Dominerende hellingsklasse i hver kartfigur tilordnes i etterkant av feltarbeidet.
+
+Klassene for innhold av stein og blokk påvirker klassetildelingen i Jordressurser. 
+
+Helling er tilordnet som heltall, i prosent, og det er kartfigurenes gjennomsnittlige helling som brukes i dette kartet. 
+Det er også ander tilleggsegenskaper om kartfiguren som påvirker klassetildelingen i Jordressurser.
 
 ### Bruksområde
 
-Aktører som har behov for tilgang til detaljert informasjon om havner:
-- Havnemyndigheter og andre brukere av havnen.
-- Ansatte i havn (personell som jobber med vedlikehold, oppsyn, trafikk- utbyggings- eller eiendomsavdeling, havneinspektør).
-- Maritim næring: navigatører, skipsredere, los, nødetater.
-- Kommune og fylkeskommune.
-- Offentlige etater: Kystverket, Miljødirektoratet, Sjøfartsdirektoratet, Forsvaret, Statsforvalteren m.fl.
-- Andre beslutningstakere
-
-Havnedata gir nøyaktig og detaljert geografisk informasjon om havner. Havnedata danner et kunnskapsgrunnlag for effektiv havnedrift og for å ta gode beslutninger. Datasettet kan også benyttes til beslutningssøtte, planlegging og forvaltning, som underlag for ulike temakart eller til forskning og analyse. 
-
-Eksempler på bruksområder for havnedata: 
-- Inngå som et element i digitale verktøy til planlegging og effektivisering av havners drift, f.eks. kaibestilling.
-- Fortøyningsplanlegging: kartskisse med kai-utforming, tilgjengelige ressurser på kai, og begrensninger for fartøyets størrelse. 
-- Forvaltningsmessig saksbehandling i kommuner og statlige etater.
-- Analyse og presentasjon i et integrert informasjonssystem (GIS-system).
-- Produksjon av kart og avledede produkter. 
-- Hente informasjon om: arealoversikt på land, planlegge bruk av tilgjengelige arealer, oversikt over hvilken type avfall som kan kastes hovr, lokalisering av havneanlegg, vektbegrensingsområder i havn, oversikt over fastbegrensninger eller andre områder som er underlagt reguleringer eller typer av forbud.
+Datasettet Jordressurser skal bidra til å løse kommunens oppgaver etter plan- og bygningsloven samt annen arealplanlegging som berører jordkartlagte arealer. Kartfigurer fra det nasjonale jordkartleggingsprogrammet utgjør enhetene i kartet.
 
 ## Omfang
 
@@ -111,57 +104,41 @@ Eksempler på bruksområder for havnedata:
 
 ➡️ [Se full datamodell for omfang "Filleveranser" (diagram per pakke og objektkatalog)](filleveranser/objektkatalog.html)
 
-## Referansesystem
-
-| EPSG-kode | Navn på referansesystem |
-| --- | --- |
-| [EPSG:5972](https://epsg.io/5972) | [EUREF89 UTM sone 32, 2d + NN2000](https://register.geonorge.no/epsg-koder) |
-| [EPSG:5973](https://epsg.io/5973) | [EUREF89 UTM sone 33, 2d + NN2000](https://register.geonorge.no/epsg-koder) |
-| [EPSG:5975](https://epsg.io/5975) | [EUREF89 UTM sone 35, 2d + NN2000](https://register.geonorge.no/epsg-koder) |
-
 ## Datakvalitet
 
 **Nivå**: dataset
 
-- **Kvalitetsmål**: SOSI produktspesifikasjon: Havnedata
-  **Målebeskrivelse**: Dataene er ikke vurdert iht produktspesifikasjonen
-  **Beskrivende resultat**: Dataene er ikke vurdert iht produktspesifikasjonen
+- **Kvalitetsmål**: Prosentvis dekning i forhold til datasettets utstrekning
+  **Målebeskrivelse**: Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning
+  **Resultat**: 100
 
-- **Kvalitetsmål**: Sosi applikasjonsskjema
-  **Målebeskrivelse**: SOSI-filer er ikke vurdert i henhold til applikasjonsskjema
-  **Beskrivende resultat**: SOSI-filer er ikke vurdert i henhold til applikasjonsskjema
+- **Kvalitetsmål**: Coverage
+  **Resultat**: Prosentvis dekning i forhold til datasettets utstrekning: 100%
 
-- **Kvalitetsmål**: Sosi applikasjonsskjema
-  **Målebeskrivelse**: GML-filer er ikke vurdert i henhold til applikasjonsskjema
-  **Beskrivende resultat**: GML-filer er ikke vurdert i henhold til applikasjonsskjema
+## Datafangst og produksjon
 
-- **Kvalitetsmål**: Produktspesifikasjon: Registreringsinstruks
-  **Målebeskrivelse**: Dataene er ikke vurdert iht produktspesifikasjonen
-  **Beskrivende resultat**: Dataene er ikke vurdert iht produktspesifikasjonen
+**Datainnsamling og prosessering**:
+
+- **Prosesstrinn**:
+  - **Beskrivelse**:
+    NIBIO Rapport 37/2025, «Det nasjonale programmet for jordkartlegging» (https://hdl.handle.net/11250/3185641) beskriver hvordan stedfesting og dokumentasjon av jordsmonnets egenskaper utføres (forarbeid, metodikk i felt og etterarbeid). Rapporten inneholder også informasjon om dataforvaltning og formidling av data fra programmet. 
+    Kartfigurenes helling hentes fra den nasjonale høydemodellen (hoydedata.no) og to av terrengmodellene derfra benyttes: en med 1 m oppløsning og en med 10 m oppløsning. Begge modellene endres over tid når nye og oppdaterte høydedataprosjekt er tilgjengelig. Det er kartfigurens gjennomsnittlige helling som benyttes i Jordressurser.
+    Informasjon om hvordan egenskaper ved jord, helling, hyppig forekommende fjell i dagen samt innhold av stein- og blokk påvirker klassetildeling i Jordressurser er publisert på produktsiden.
 
 ## Vedlikehold
 
-**Vedlikeholdsfrekvens**: Ukjent
+**Vedlikeholdsfrekvens**: Ikke planlagt
 
-**Status**: Kontinuerlig oppdatert
-
-## Presentasjon
-
-**navn**: Tegneregler
-
-**Lenke**:
-<https://register.geonorge.no/register/versjoner/tegneregler/kartverket/havnedata>
+**Status**: Fullført
 
 ## Leveranse
 
-| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
-| --- | --- | --- | --- | --- |
-| Geonorge nedlastning | [Lenke](https://nedlasting.geonorge.no/api/capabilities/) | GEONORGE:DOWNLOAD | FGDB, GML, PostGIS, SOSI | fylkesvis, kommunevis, landsfiler |
-| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedFGDB.xml) | W3C:AtomFeed | FGDB | fylkesvis, kommunevis, landsfiler |
-| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedGML.xml) | W3C:AtomFeed | GML | fylkesvis, kommunevis, landsfiler |
-| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedPostGIS.xml) | W3C:AtomFeed | PostGIS | fylkesvis, kommunevis, landsfiler |
-| Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/Havnedata_AtomFeedSOSI.xml) | W3C:AtomFeed | SOSI | fylkesvis, kommunevis, landsfiler |
-| Havnedata WMS | [Lenke](https://wms.geonorge.no/skwms1/wms.havnedata?service=wms&request=GetCapabilities) | WMS-tjeneste | WMS |  |
+- **Leveranse**:
+
+  - **Leveranseformat**:
+    - **Formatnavn**: GeoPackage
+
+    - **Formatnavn**: GML
 
 ## Metadata
 
@@ -169,21 +146,25 @@ Eksempler på bruksområder for havnedata:
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-06-09
+**Metadatadato**: 2026-05-19
 
 **språk**: nor
 
 **Kontakt**:
 
-- **Organisasjon**: Kartverket
-- **Logo**: <https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png>
-- **Epost**: kundesenter@kartverket.no
+- **Organisasjon**: Norsk institutt for bioøkonomi
+- **Kontaktperson**: Christina Sogge
+- **Logo**: <https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg>
+- **Epost**: gisdrift@nibio.no
 - **rolle**: pointOfContact
 
 **Metadataidentifikator**:
 
 - **Utsteder**: Geonorge
-- **kode**: e46767e4-c6d9-49a6-93e8-716da0922fd7
+- **kode**: 3690c283-a1f2-4e95-8cd4-2d6115eb28f7
 - **koderom**: <https://kartkatalog.geonorge.no/metadata/>
-- **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/e46767e4-c6d9-49a6-93e8-716da0922fd7>
+- **Metadatalenke**: <https://kartkatalog.geonorge.no/metadata/3690c283-a1f2-4e95-8cd4-2d6115eb28f7>
 
+## Tilleggsinformasjon
+
+Produktspesifikasjonen Jordressurser inneholder en beskrivelse av temakartet Jordressurser som er utviklet for arealplanlegging. Temakartet er blant annet tilgjengelige under fagområdet Jordsmonn og fagområde Arealinformasjon i NIBIOs karttjeneste Kilden. Andre temakart som har opphav i jorddata fra jordkartleggingsprogrammet, er beskrevet i produktspesifikasjonene Jordsmonn, Erosjonsrisiko og Dyrkingspotensial.
