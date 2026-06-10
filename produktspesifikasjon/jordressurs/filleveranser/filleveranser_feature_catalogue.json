@@ -1,0 +1,324 @@
+[
+  {
+    "name": "JordressursGrense",
+    "description": "avgrensing for en eller to arealressursflater\n-- Definition --\ndelimitation for one or two area resource surfaces",
+    "attributes": [
+      {
+        "name": "grense",
+        "type": "GM_Curve",
+        "description": "forløp som følger overgang mellom ulike fenomener\n-- Definition --\ncourse following the transition between different real world phenomena",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    },
+    "package": "Produktspesifikasjon Jordressurser - 20260320"
+  },
+  {
+    "name": "Jordressurser_Fellesgenskaper",
+    "description": "abstrakt objekttype som bærer sentrale egenskaper som er anbefalt for bruk i produktspesifikasjoner.\nMerknad: Disse egenskapene skal derfor ikke modelleres inn i fagområdemodeller.",
+    "attributes": [
+      {
+        "name": "identifikasjon",
+        "type": "Identifikasjon",
+        "description": "Unik identifikasjon av et objekt i et datasett, forvaltet av den ansvarlige produsent/forvalter, og kan benyttes av eksterne applikasjoner som stabil referanse til objektet.\nMerknad 1: Denne objektidentifikasjonen må ikke forveksles med en tematisk objektidentifikasjon, slik som f.eks bygningsnummer.\nMerknad 2: Denne unike identifikatoren vil ikke endres i løpet av objektets levetid, og ikke gjenbrukes i andre objekt.",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "CharacterString",
+            "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
+            "cardinality": "1"
+          },
+          {
+            "name": "navnerom",
+            "type": "CharacterString",
+            "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
+            "cardinality": "1"
+          },
+          {
+            "name": "versjonId",
+            "type": "CharacterString",
+            "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans)",
+            "cardinality": "0..1"
+          }
+        ]
+      },
+      {
+        "name": "kopidata",
+        "type": "Kopidata",
+        "description": "angivelse av at objektet er hentet fra en kopi av originaldata\nMerknad:\nKan benyttes dersom man gjør et uttak av en database som ikke inneholder originaldataene.",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "områdeId",
+            "type": "Integer",
+            "description": "identifikasjon av område som dataene dekker\n\nMerknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres nærmere.",
+            "cardinality": "1"
+          },
+          {
+            "name": "originalDatavert",
+            "type": "CharacterString",
+            "description": "ansvarlig etat for forvaltning av data",
+            "cardinality": "1"
+          },
+          {
+            "name": "kopidato",
+            "type": "DateTime",
+            "description": "dato når objektet ble kopiert fra originaldatasettet\n\nMerknad:\nEr en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase brukes til distribusjon.\nÅ kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato blir endret.\nEventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato, Datafangstdato og/eller Verifiseringsdato.",
+            "cardinality": "1"
+          }
+        ]
+      },
+      {
+        "name": "kvalitet",
+        "type": "Posisjonskvalitet",
+        "description": "beskrivelse av kvaliteten på stedfestingen\nMerknad: Denne er identisk med ..KVALITET i tidligere versjoner av SOSI.",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "målemetode",
+            "type": "Målemetode",
+            "description": "metode for måling i grunnriss (x,y), og høyde (z) når metoden er den samme som ved måling i grunnriss",
+            "cardinality": "1",
+            "valueDomain": {
+              "definition": "metode som ligger til grunn for registrering av posisjon\n-- Definition - -\nmethod on which registration of position is based",
+              "asDictionary": "true",
+              "codeList": "http://skjema.geonorge.no/SOSI/generelleKonsepter/generelleTyper/5.1/Målemetode"
+            }
+          }
+        ]
+      },
+      {
+        "name": "verifiseringsdato",
+        "type": "DateTime",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    },
+    "package": "Produktspesifikasjon Jordressurser - 20260320"
+  },
+  {
+    "name": "Jordressurser",
+    "description": "<b>Definisjon:</b> geografisk område med tilnærmet enhetlige egenskaper i de kriteriene som benyttes i rangering av jordkartlagte arealer for datasettet\n— Definition —\nGeographic area with approximately uniform characteristics in the dataset",
+    "attributes": [
+      {
+        "name": "område",
+        "type": "GM_Surface",
+        "description": "objektets utstrekning\n— Definition —\nArea over which an object extends",
+        "cardinality": "1"
+      },
+      {
+        "name": "jordressursklasse",
+        "type": "Jordressursklasser",
+        "description": "Viser arealets klassetilhørighet i Jordressurser\n— Definition —\nShows the Soil Resource Class for an area",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Svært gode jordressuser",
+              "label": "Jord og areal som er lettdrevet. I tilfelle to jordtyper er registrert, kan den mindre dominerende jordtypen ha andre egenskaper."
+            },
+            {
+              "value": "Gode jordressurser",
+              "label": "Jord og areal som er nokså lettdrevet men krever noe større innsats enn jord og areal i klasse 1. Hvis to jordtyper er registrert kan den mindre dominerende jordtypen ha andre egenskaper. Avhengig av jordegenskaper klassifiseres stein og blokkholdige arealer arealer med helling 25 prosent til under 33 prosent og arealer med tegn til forstyrrelser utover vanlig jordbearbeiding eller grøfting i denne klassen."
+            },
+            {
+              "value": "Middels gode jordressurser",
+              "label": "jord og areal som setter større krav til innsats enn jord og areal i klasse 2 og 3. I tilfelle to jordtyper er registrert kan den mindre dominerende jordtypen ha andre egenskaper. Avhengig av jordegenskaper klassifiseres stein og blokkholdige arealer samt hyppig forekommende fjell i dagen og arealer med helling 25 prosent til under 33 prosent i denne klassen."
+            },
+            {
+              "value": "Mindre gode jordressurser",
+              "label": "Jord og areal som har ugunstige egenskaper som det er vanskelig å få gjort noe med.\nI tilfelle jordtypene er registrert kan den mindre dominerende jordtypen ha andre egenskaper.\nAvhengig av jordeegenskaper klassifiseres stein og blokkholdige eller stein og blokkholdige arealer hyppig forekommende fjell i dagen og arealer med helling 33 prosent i denne klassen."
+            }
+          ],
+          "definition": "Viser arealets klassetilhørighet i Jordressurser\n— Definition —\nShows the Soil Resource Class for an area"
+        }
+      },
+      {
+        "name": "hellingGjsnitt",
+        "type": "HellingGjsnitt",
+        "description": "Viser gjennomsnittlige helling på arealet.\n-- Definition - -\nAverage inclination class of the soil figure",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "0 - 25 %",
+              "label": "Mindre enn 25 % gjennomsnittlig helling. Har ikke betydning for maskinvalg eller jordarbeiding\n-- Definition --\nLess than25 % inclination. Not significant for choice of machinery or tillage."
+            },
+            {
+              "value": "≥ 25 - 33 %",
+              "label": "Mellom 25 og opp til 33 % gjennomsnittlig helling, Maskinvalg og jordarbeiding begrenses noe\n-- Definition --\nBetween 25% and less than 33 %  average inclination. Choice of machinery and tillage is limited."
+            },
+            {
+              "value": "≥ 33 %",
+              "label": "33 % eller mer gjennomsnittlig helling. Maskinvalg og jordarbeiding begrenses sterkt.\n-- Definition --\n33 % or more  average inclination. Choice of machinery and tillage is strongly limited."
+            }
+          ],
+          "definition": "Viser gjennomsnittlige helling på arealet.\n-- Definition - -\nAverage inclination class of the soil figure"
+        }
+      },
+      {
+        "name": "steinblokk",
+        "type": "SteinBlokk",
+        "description": "Viser stein- og blokkinnhold (0–50 cm) på arealet på kartleggingstidspunktet — — Definition —\nShows the amount of stones and boulders for the soil figure in the upper 50 cm",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Ikke registrert",
+              "label": "Ikke registrert stein og blokk."
+            },
+            {
+              "value": "Ingen eller noe stein og blokk",
+              "label": "Lite eller ingen stein og blokk."
+            },
+            {
+              "value": "Stein og blokkholdig",
+              "label": "Inneholder stein og blokk."
+            },
+            {
+              "value": "Stein og blokkrik",
+              "label": "Inneholder mye stein og blokk."
+            }
+          ],
+          "definition": "Viser stein- og blokkinnhold (0–50 cm) på arealet på kartleggingstidspunktet\n— Definition —\nShows the amount of stones and boulders for the soil figure in the upper 50 cm"
+        }
+      },
+      {
+        "name": "årsakTilNedklassifisering",
+        "type": "ÅrsakTilNedklassifisering",
+        "description": "Viser årsak til at kartfiguren er nedklassifisert\n— Definition —\nReason for down-classification of Soil Resource Class",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Jordegenskaper",
+              "label": "Jorda har egenskaper som gjør at arealet krever større innsats i drift"
+            },
+            {
+              "value": "Helling",
+              "label": "Arealet har en gjennomsnittlig helling på enten 25 til under 33 prosent eller 33 prosent og over. Dette gir driftsutfordringer"
+            },
+            {
+              "value": "Jordegenskaper og helling",
+              "label": "Jorda har egenskaper som gjør at arealet krever større innsats i drift og arealet har en gjennomsnittlig helling på 25 prosent og over til under 33 prosent"
+            },
+            {
+              "value": "Hyppig forekommende fjell i dagen",
+              "label": "Arealet har mer enn 4 fjellblotninger / fjell i dagen per 10 daa og dette gir driftsutfordringer"
+            },
+            {
+              "value": "Innhold av stein og blokk",
+              "label": "Arealet er enten stein- og blokkholdig eller stein- og blokkrikt og dette gir driftsutfordringer"
+            },
+            {
+              "value": "Deler av arealet har organisk jord, har liten evne til å bli kvitt overflødig vann, er bakkeplanert eller forstyrret av graving eller påfylling",
+              "label": "Deler av arealet har egenskaper utover dem som er registrert som egenskaper ved jordtypene og disse gir driftsutfordringer"
+            },
+            {
+              "value": "Ingen nedklassifisering",
+              "label": "Arealet har ingen årsak til nedklassifisering"
+            }
+          ],
+          "definition": "Viser årsak til at kartfiguren er nedklassifisert\n— Definition —\nShows the reason for the map figure being downgraded"
+        }
+      },
+      {
+        "name": "tilleggsinformasjon",
+        "type": "Tilleggsinformasjon",
+        "description": "Viser tilleggsinformasjon om andre egenskaper ved arealet\n— Definition —\nSupplementary information",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Deler av arealet er bakkeplanert",
+              "label": "Deler av arealet er bakkeplanert"
+            },
+            {
+              "value": "Deler av arealet er forstyrret av graving eller fyllmateriale",
+              "label": "Deler av arealet er forstyrret av graving eller fyllmateriale."
+            },
+            {
+              "value": "Ingen",
+              "label": "Ingen forstyrrelser."
+            },
+            {
+              "value": "Deler av arealet er organisk jord",
+              "label": "Deler av arealet er organisk jord"
+            },
+            {
+              "value": "Deler av arealet er preget av vannmetning",
+              "label": "Deler av arealet er preget av vannmetning."
+            },
+            {
+              "value": "Deler av arealet er mineraljord",
+              "label": "Deler av arealet er mineraljord"
+            },
+            {
+              "value": "Hyppig forekommende fjell i dagen",
+              "label": "Hyppig forekommende fjell i dagen"
+            }
+          ],
+          "definition": "Viser tilleggsinformasjon om andre egenskaper ved arealet.\n— Definition —\nSupplementary information"
+        }
+      },
+      {
+        "name": "kartleggingsår",
+        "type": "Integer",
+        "description": "Viser hvilket år kartfiguren ble jordkartlagt\n— Definition —\nMapping year",
+        "cardinality": "1"
+      },
+      {
+        "name": "kartleggingsmetodikk",
+        "type": "Kartleggingsmetodikk",
+        "description": "Viser hvilken kartleggingsmetodikk som ble brukt da kartfiguren ble jordkartlagt\n— Definition —\nOriginal mapping method",
+        "cardinality": "1",
+        "valueDomain": {
+          "listedValues": [
+            {
+              "value": "Detaljert kartlegging",
+              "label": "Feltbasert kartlegging med avgrensning av jordtyper direkte inn på digitale flybilder i felt, basert på en kombinasjon av borstikk ned til en meters dybde, flybildetolking og GPS. I tillegg deles arealene inn på bakgrunn av terrengegenskaper som helling og stein- og blokkinnhold."
+            },
+            {
+              "value": "Forenklet kartlegging",
+              "label": "Feltbasert kartlegging med en grovere inndeling av jorda enn detaljert kartlegging, der en i tillegg slår sammen enkelte hellingsklasser og ser bort i fra andre egenskaper ved terrenget"
+            },
+            {
+              "value": "Harmonisert kartlegging",
+              "label": "Feltbasert kartlegging som kombinerer det beste fra de tidligere metodikkene (detaljert og forenklet)."
+            }
+          ],
+          "definition": "Viser hvilken opprinnelig kartleggingsmetodikk som er brukt under jordsmonnkartlegging.\n--Definition--\nDisplays the methodolgy used during field mapping."
+        }
+      },
+      {
+        "name": "opprinneligLokalId",
+        "type": "Integer",
+        "description": "Opprinnelig id i databasen\n— Definition —\nOriginal ID in the soil database",
+        "cardinality": "1"
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Jordressurser_Fellesgenskaper"
+      ],
+      "associations": [
+        {
+          "target": "JordressursGrense",
+          "role": "avgrensesAvJordressursgrense",
+          "cardinality": "0..*"
+        }
+      ]
+    },
+    "package": "Produktspesifikasjon Jordressurser - 20260320"
+  }
+]
