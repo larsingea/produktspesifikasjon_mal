@@ -190,7 +190,7 @@ Dyrkbar jord har lovmessige vern gjennom Jordlova.
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-06-09
+**Metadatadato**: 2026-06-10
 
 **språk**: nor
 
