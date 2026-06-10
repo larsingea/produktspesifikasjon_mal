@@ -4,7 +4,7 @@
 ' default PlantUML 4096px size limit from cropping the diagram.
 scale max 4000*4000
 
-title Havnedata - Filleveranser - Objekttyper
+title Jordressurser - Filleveranser - Objekttyper
 
 skinparam backgroundColor #F5F5F5
 skinparam shadowing false
