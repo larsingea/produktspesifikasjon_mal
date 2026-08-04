@@ -1,6 +1,6 @@
 ---
 title: "Dyrkbar jord"
-updated: "2026-06-07"
+updated: "2026-08-04"
 organization: "Geovekst"
 logo: "https://register.geonorge.no/data/organizations/_geovekst_liten.png"
 ---
