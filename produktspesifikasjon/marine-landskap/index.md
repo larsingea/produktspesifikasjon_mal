@@ -13,13 +13,6 @@ logo: "https://register.geonorge.no/data/organizations/970188290_NGU_hovedlogo_s
 
 **Emnekategorier:** Geovitenskapelig informasjon
 
-**Geografisk utstrekning**:
-
-- **Vest**: -6.7
-- **Øst**: 32.0
-- **Sør**: 57.0
-- **Nord**: 82.0
-
 **Tidsmessig utstrekning**:
 
 - **Tidsperiode**:
@@ -162,6 +155,13 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, s
 
 **Status**: Kontinuerlig oppdatert
 
+## Presentasjon
+
+**navn**: Tegneregler
+
+**Lenke**:
+<https://register.geonorge.no/tegneregler/marine-landformer>
+
 ## Leveranse
 
 | Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
@@ -177,7 +177,7 @@ Datasettet kan anvendes som underlag i overordnet areal- og miljøplanlegging, s
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-05-04
+**Metadatadato**: 2026-06-18
 
 **språk**: nor
 

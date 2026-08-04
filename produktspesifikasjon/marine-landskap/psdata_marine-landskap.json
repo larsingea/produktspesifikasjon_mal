@@ -113,12 +113,6 @@
     ],
     "maintenance": "Etter behov",
     "extent": {
-      "geographicElement": {
-        "westBoundLongitude": "-6.7",
-        "eastBoundLongitude": "32.0",
-        "southBoundLatitude": "57.0",
-        "northBoundLatitude": "82.0"
-      },
       "temporalElement": {
         "timePeriod": {
           "beginPosition": "2007-08-15",
@@ -240,6 +234,10 @@
       ]
     }
   },
+  "portrayal": {
+    "name": "Tegneregler",
+    "linkage": "https://register.geonorge.no/tegneregler/marine-landformer"
+  },
   "deliverySection": [
     {
       "delivery": {
@@ -353,7 +351,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-05-04",
+    "metadataDate": "2026-06-18",
     "language": "nor",
     "contact": {
       "organizationName": "Norges geologiske undersøkelse",
