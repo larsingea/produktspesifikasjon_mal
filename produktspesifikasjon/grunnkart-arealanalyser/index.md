@@ -206,7 +206,7 @@ Kommunal- og distriktsdepartementet (KDD) publiserte i 2023 en veileder for area
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-06-09
+**Metadatadato**: 2026-08-04
 
 **språk**: nor
 
