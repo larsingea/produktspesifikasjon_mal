@@ -1,6 +1,6 @@
 ---
 title: "Jordressurser"
-updated: "2026-06-09"
+updated: "2026-08-04"
 organization: "Norsk institutt for bioøkonomi"
 logo: "https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg"
 ---
@@ -88,7 +88,7 @@ Datasettet Jordressurser skal bidra til å løse kommunens oppgaver etter plan- 
 
 **Nivå**: dataset
 
-**Nivåbeskrivelse**: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
+**Nivåbeskrivelse**: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer og Filgeodatabaser.
 
 ## Datainnhold og struktur
 

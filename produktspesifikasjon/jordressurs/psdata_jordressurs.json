@@ -111,7 +111,7 @@
       "specificationScope": {
         "scopeIdentification": "Filleveranser",
         "level": "dataset",
-        "levelDescription": "Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser."
+        "levelDescription": "Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer og Filgeodatabaser."
       }
     }
   ],
