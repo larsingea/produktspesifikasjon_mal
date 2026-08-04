@@ -1,6 +1,6 @@
 ---
 title: "Havnedata"
-updated: "2025-05-04"
+updated: "2026-08-04"
 organization: "Kartverket"
 logo: "https://register.geonorge.no/data/organizations/971040238_Kartverket_liten.png"
 ---
@@ -95,7 +95,7 @@ Eksempler på bruksområder for havnedata:
 
 **Nivå**: dataset
 
-**Nivåbeskrivelse**: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
+**Nivåbeskrivelse**: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer og Filgeodatabaser.
 
 ### Innsynstjeneste (API)
 
