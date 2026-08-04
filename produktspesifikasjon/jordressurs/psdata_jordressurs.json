@@ -41,8 +41,10 @@
       "plan- og bygningsloven (PBL)",
       "jord",
       "egenskaper ved jord",
-      "jordkartlagte arealer",
-      "jordbruksareal"
+      "Jordkartlagte areal",
+      "jordbruksareal",
+      "jordloven",
+      "Norges fastland"
     ],
     "restriction": {
       "legalConstraints": {
@@ -113,6 +115,26 @@
       }
     }
   ],
+  "referenceSystemSection": {
+    "spatialReferenceSystem": [
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      }
+    ]
+  },
   "dataQualitySection": {
     "scope": {
       "level": "dataset"
@@ -145,6 +167,17 @@
   "deliverySection": [
     {
       "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "kommunevis, fylkesvis",
+          "deliveryMediumName": "Geonorge filnedlastning",
+          "deliveryService": {
+            "serviceEndpoint": "https://kartkatalog.geonorge.no/metadata/jordressurser/3690c283-a1f2-4e95-8cd4-2d6115eb28f7",
+            "serviceProperty": {
+              "type": "Geonorge filnedlastning",
+              "value": "GEONORGE:FILEDOWNLOAD"
+            }
+          }
+        },
         "deliveryFormat": [
           {
             "formatName": "GeoPackage"
@@ -154,12 +187,67 @@
           }
         ]
       }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "landsfiler",
+          "deliveryMediumName": "OGC API-Features",
+          "deliveryService": {
+            "serviceEndpoint": "https://ogcapi.nibio.no/felles/jordressurser",
+            "serviceProperty": {
+              "type": "OGC API-Features",
+              "value": "OGC:API-Features"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GeoJSON"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "landsfiler",
+          "deliveryMediumName": "WMS-tjeneste",
+          "deliveryService": {
+            "serviceEndpoint": "https://wms.nibio.no/cgi-bin/jordressurser?service=wms&request=getcapabilities",
+            "serviceProperty": {
+              "type": "WMS-tjeneste",
+              "value": "OGC:WMS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Jordressurser",
+          "deliveryService": {
+            "serviceEndpoint": "https://wms.nibio.no/cgi-bin/jordressurser?service=wms&request=getcapabilities",
+            "serviceProperty": {
+              "type": "Jordressurser",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "[{}]"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
     }
   ],
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-05-19",
+    "metadataDate": "2026-07-09",
     "language": "nor",
     "contact": {
       "organizationName": "Norsk institutt for bioøkonomi",

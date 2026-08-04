@@ -11,7 +11,7 @@ logo: "https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg
 Jordkartlagte arealer er inndelt inn i fire klasser: 1 = Svært gode jordressurser, 2 = Gode jordressurser, 3 = Middels gode jordressurser og 4 = Mindre gode jordressurser. Egenskap som skal brukes til å fremstille kartlaget heter jordressursklasser.
 Jordressurser er fremstilt i målestokk 1:5000 og er tilpasset bruk i målestokker fra 1:5000 til 1:20 000.*
 
-**Nøkkelord:** Jordsmonn, Jordressurser, Jordsmonkartlegging, arealplanlegging, plan- og bygningsloven (PBL), jord, egenskaper ved jord, jordkartlagte arealer, jordbruksareal
+**Nøkkelord:** Jordsmonn, Jordressurser, Jordsmonkartlegging, arealplanlegging, plan- og bygningsloven (PBL), jord, egenskaper ved jord, Jordkartlagte areal, jordbruksareal, jordloven, Norges fastland
 
 **Emnekategorier:** Landbruk og havbruk
 
@@ -104,6 +104,14 @@ Datasettet Jordressurser skal bidra til å løse kommunens oppgaver etter plan- 
 
 ➡️ [Se full datamodell for omfang "Filleveranser" (diagram per pakke og objektkatalog)](filleveranser/objektkatalog.html)
 
+## Referansesystem
+
+| EPSG-kode | Navn på referansesystem |
+| --- | --- |
+| [EPSG:25832](https://epsg.io/25832) | [EUREF89 UTM sone 32, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25833](https://epsg.io/25833) | [EUREF89 UTM sone 33, 2d](https://register.geonorge.no/epsg-koder) |
+| [EPSG:25835](https://epsg.io/25835) | [EUREF89 UTM sone 35, 2d](https://register.geonorge.no/epsg-koder) |
+
 ## Datakvalitet
 
 **Nivå**: dataset
@@ -133,12 +141,11 @@ Datasettet Jordressurser skal bidra til å løse kommunens oppgaver etter plan- 
 
 ## Leveranse
 
-- **Leveranse**:
-
-  - **Leveranseformat**:
-    - **Formatnavn**: GeoPackage
-
-    - **Formatnavn**: GML
+| Tjeneste | Endepunkt | Type | Format | Leveranseenheter |
+| --- | --- | --- | --- | --- |
+| Geonorge filnedlastning | [Lenke](https://kartkatalog.geonorge.no/metadata/jordressurser/3690c283-a1f2-4e95-8cd4-2d6115eb28f7) | GEONORGE:FILEDOWNLOAD | GeoPackage, GML | kommunevis, fylkesvis |
+| OGC API-Features | [Lenke](https://ogcapi.nibio.no/felles/jordressurser) | OGC:API-Features | GeoJSON | landsfiler |
+| WMS-tjeneste | [Lenke](https://wms.nibio.no/cgi-bin/jordressurser?service=wms&request=getcapabilities) | OGC:WMS | [{}] | landsfiler |
 
 ## Metadata
 
@@ -146,7 +153,7 @@ Datasettet Jordressurser skal bidra til å løse kommunens oppgaver etter plan- 
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-05-19
+**Metadatadato**: 2026-07-09
 
 **språk**: nor
 

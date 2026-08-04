@@ -290,7 +290,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- Kodeliste: <a href="http://skjema.geonorge.no/SOSI/generelleKonsepter/generelleTyper/5.1/Målemetode">http://skjema.geonorge.no/SOSI/generelleKonsepter/generelleTyper/5.1/Målemetode</a></td>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/m%C3%A5lemetodekode">https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/m%C3%A5lemetodekode</a></td>
     </tr>
   </tbody>
 </table>
@@ -609,7 +609,7 @@ Profilparametre i tagged values
     </tr>
     <tr>
       <th scope="row">codeList</th>
-      <td><a href="http://skjema.geonorge.no/SOSI/generelleKonsepter/generelleTyper/5.1/Målemetode">http://skjema.geonorge.no/SOSI/generelleKonsepter/generelleTyper/5.1/Målemetode</a></td>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/m%C3%A5lemetodekode">https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/m%C3%A5lemetodekode</a></td>
     </tr>
   </tbody>
 </table>
