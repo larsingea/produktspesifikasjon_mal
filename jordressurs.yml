@@ -12,7 +12,7 @@ scopes:
 - name: Filleveranser
   url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Skog og landskap/Produktspesifikasjon Jordressurser - 20260320.xml
   generator: xmi
-  description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer, Filgeodatabaser.
+  description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer og Filgeodatabaser.
 #- name: Innsynstjeneste (API)
 #  url: https://ogcapitest.kartverket.no/rest/services/havnedata3_0/collections
 #  generator: ogc_feature_api
