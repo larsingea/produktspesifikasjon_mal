@@ -87,7 +87,7 @@
             "valueDomain": {
               "definition": "metode som ligger til grunn for registrering av posisjon\n-- Definition - -\nmethod on which registration of position is based",
               "asDictionary": "true",
-              "codeList": "http://skjema.geonorge.no/SOSI/generelleKonsepter/generelleTyper/5.1/Målemetode"
+              "codeList": "https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/m%C3%A5lemetodekode"
             }
           }
         ]
