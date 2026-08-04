@@ -1,6 +1,6 @@
 ---
 title: "Marine landformer"
-updated: "2025-04-07"
+updated: "2026-08-04"
 organization: "Norges geologiske undersøkelse"
 logo: "https://register.geonorge.no/data/organizations/970188290_NGU_hovedlogo_svart.svg thumbnail.png"
 ---
