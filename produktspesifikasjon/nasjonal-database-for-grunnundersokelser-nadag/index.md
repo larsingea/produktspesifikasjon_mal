@@ -101,6 +101,12 @@ Fra og med 2025 er det lovfestet plikt for innmelding av geotekniske grunnunders
 
 **Nivåbeskrivelse**: OGC API-Features fra Norges geologiske undersøkelse
 
+### Ny datakilde
+
+**Nivå**: dataset
+
+**Nivåbeskrivelse**: Filbasert nedlastning som GML og SOSI
+
 ## Datainnhold og struktur
 
 
@@ -114,6 +120,16 @@ Fra og med 2025 er det lovfestet plikt for innmelding av geotekniske grunnunders
 
 
 ➡️ [Se full datamodell for omfang "Grunnundersokelser_utvidet" (diagram per pakke og objektkatalog)](grunnundersokelser-utvidet/objektkatalog.html)
+
+### Datamodell - Ny datakilde
+
+
+
+<a href="ny-datakilde/ny-datakilde_feature_catalogue_overview.png" title="Klikk for stor visning"><img src="ny-datakilde/ny-datakilde_feature_catalogue_overview.png" alt="Datamodell Ny datakilde" style="max-width: 100%; height: auto;" /></a>
+
+
+
+➡️ [Se full datamodell for omfang "Ny datakilde" (diagram per pakke og objektkatalog)](ny-datakilde/objektkatalog.html)
 
 ## Referansesystem
 
