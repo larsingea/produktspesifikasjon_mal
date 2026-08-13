@@ -110,6 +110,13 @@
         "level": "dataset",
         "levelDescription": "OGC API-Features fra Norges geologiske undersøkelse"
       }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Ny datakilde",
+        "level": "dataset",
+        "levelDescription": "Filbasert nedlastning som GML og SOSI"
+      }
     }
   ],
   "referenceSystemSection": {
