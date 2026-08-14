@@ -184,7 +184,7 @@ Datasettet kan blant annet anvendes som underlag i overordnet areal- og miljøpl
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-08-13
+**Metadatadato**: 2026-08-14
 
 **språk**: nor
 
