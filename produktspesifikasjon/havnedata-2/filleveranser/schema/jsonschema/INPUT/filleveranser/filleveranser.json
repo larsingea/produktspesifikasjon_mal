@@ -1,0 +1,1953 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/filleveranser/filleveranser/filleveranser.json",
+  "definitions": {
+    "Avfallspunkt": {
+      "$id": "#Avfallspunkt",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "avfallsplan": {
+                  "type": "string"
+                },
+                "avfallstype": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Avfallstype"
+                  },
+                  "uniqueItems": true
+                },
+                "beholdertype": {
+                  "$ref": "#Beholdertype"
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "mobilitet": {
+                  "type": "boolean"
+                },
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                },
+                "tilgangstype": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Tilgangstype"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "mobilitet",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Avfallstype": {
+      "$id": "#Avfallstype",
+      "type": "string"
+    },
+    "Avløpstype": {
+      "$id": "#Avløpstype",
+      "type": "string"
+    },
+    "Avsperringstype": {
+      "$id": "#Avsperringstype",
+      "type": "string"
+    },
+    "Beholdertype": {
+      "$id": "#Beholdertype",
+      "type": "string"
+    },
+    "Beredskapspunkt": {
+      "$id": "#Beredskapspunkt",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "beredskapstype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Beredskapstype"
+                  },
+                  "uniqueItems": true
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "posisjon": {},
+                "spesifikasjon": {
+                  "type": "string"
+                },
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "beredskapstype",
+                "høydereferanse",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Beredskapstype": {
+      "$id": "#Beredskapstype",
+      "type": "string"
+    },
+    "Bruksklassetype": {
+      "$id": "#Bruksklassetype",
+      "type": "string"
+    },
+    "Datafangstmetode": {
+      "$id": "#Datafangstmetode",
+      "type": "string"
+    },
+    "Drivstofftilkobling": {
+      "$id": "#Drivstofftilkobling",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "drivstofftype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Drivstofftype"
+                  },
+                  "uniqueItems": true
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "kapasitet": {
+                  "type": "integer"
+                },
+                "mobilitet": {
+                  "type": "boolean"
+                },
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                },
+                "tilgangstype": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Tilgangstype"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "drivstofftype",
+                "høydereferanse",
+                "mobilitet",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Drivstofftype": {
+      "$id": "#Drivstofftype",
+      "type": "string"
+    },
+    "ELanleggstype": {
+      "$id": "#ELanleggstype",
+      "type": "string"
+    },
+    "ELkobling": {
+      "$id": "#ELkobling",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "ELanleggstype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#ELanleggstype"
+                  },
+                  "uniqueItems": true
+                },
+                "ELkoblinger": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#ELkoblingEgenskaper"
+                  },
+                  "uniqueItems": true
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "posisjon": {},
+                "rekkeviddeLadeanlegg": {
+                  "type": "integer"
+                },
+                "status": {
+                  "$ref": "#Status"
+                },
+                "tilgangstype": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Tilgangstype"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "ELanleggstype",
+                "høydereferanse",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "ELkoblingEgenskaper": {
+      "$id": "#ELkoblingEgenskaper",
+      "type": "object",
+      "properties": {
+        "effekt": {
+          "type": "integer"
+        },
+        "faser": {
+          "type": "string"
+        },
+        "frekvens": {
+          "$ref": "#Frekvens"
+        },
+        "kontaktId": {
+          "type": "string"
+        },
+        "sikringstørrelse": {
+          "type": "integer"
+        },
+        "spenning": {
+          "$ref": "#Spenning"
+        }
+      }
+    },
+    "Eierskap": {
+      "$id": "#Eierskap",
+      "type": "string"
+    },
+    "Energikilde": {
+      "$id": "#Energikilde",
+      "type": "string"
+    },
+    "Fartsrestriksjoner": {
+      "$id": "#Fartsrestriksjoner",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperOpsjonell"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "fastsattAv": {
+                  "type": "string"
+                },
+                "forskriftLenke": {
+                  "type": "string"
+                },
+                "forskriftNavn": {
+                  "type": "string"
+                },
+                "gjelderFor": {
+                  "type": "string"
+                },
+                "gjelderForFartøytype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Fartøytype"
+                  },
+                  "uniqueItems": true
+                },
+                "hastighet": {
+                  "type": "integer"
+                },
+                "lovhjemmel": {
+                  "type": "string"
+                },
+                "område": {},
+                "periodeGyldigFra": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "periodeGyldigTil": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "posisjon": {},
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "forskriftNavn",
+                "gjelderForFartøytype",
+                "hastighet",
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "FartsrestriksjonerGrense": {
+      "$id": "#FartsrestriksjonerGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Fartøytype": {
+      "$id": "#Fartøytype",
+      "type": "string"
+    },
+    "FellesegenskaperOpsjonell": {
+      "$id": "#FellesegenskaperOpsjonell",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "informasjon": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "oppdateringsdato": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "FellesegenskaperPåkrevd": {
+      "$id": "#FellesegenskaperPåkrevd",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "properties": {
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "identifikasjon": {
+              "$ref": "#Identifikasjon"
+            },
+            "kvalitet": {
+              "$ref": "#Posisjonskvalitet"
+            }
+          },
+          "required": [
+            "datafangstdato",
+            "identifikasjon",
+            "kvalitet"
+          ]
+        }
+      },
+      "required": [
+        "properties"
+      ]
+    },
+    "Fender": {
+      "$id": "#Fender",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "antall": {
+                  "type": "integer"
+                },
+                "fendergruppering": {},
+                "fenderorientering": {
+                  "$ref": "#Fenderorientering"
+                },
+                "fenderspesifikasjon": {
+                  "type": "string"
+                },
+                "fendertype": {
+                  "$ref": "#Fendertype"
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "høydeSjøkartnull": {
+                  "type": "number"
+                },
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "fenderorientering",
+                "fendertype",
+                "høydeSjøkartnull",
+                "høydereferanse"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Fenderorientering": {
+      "$id": "#Fenderorientering",
+      "type": "string"
+    },
+    "Fendertype": {
+      "$id": "#Fendertype",
+      "type": "string"
+    },
+    "Flytedokk": {
+      "$id": "#Flytedokk",
+      "allOf": [
+        {
+          "$ref": "#HavneanleggId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "løftekapasitet": {
+                  "type": "integer"
+                },
+                "maksFartøyBredde": {
+                  "type": "number"
+                },
+                "maksFartøyDyptgående": {
+                  "type": "number"
+                },
+                "maksFartøyLengde": {
+                  "type": "integer"
+                },
+                "navn": {
+                  "type": "string"
+                },
+                "område": {},
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                },
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "FlytedokkGrense": {
+      "$id": "#FlytedokkGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Forbudsområde": {
+      "$id": "#Forbudsområde",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperOpsjonell"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "fastsattAv": {
+                  "type": "string"
+                },
+                "forbudstype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Forbudstype"
+                  },
+                  "uniqueItems": true
+                },
+                "forskriftLenke": {
+                  "type": "string"
+                },
+                "forskriftNavn": {
+                  "type": "string"
+                },
+                "gjelderFor": {
+                  "type": "string"
+                },
+                "gjelderForFartøytype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Fartøytype"
+                  },
+                  "uniqueItems": true
+                },
+                "lovhjemmel": {
+                  "type": "string"
+                },
+                "område": {},
+                "periodeGyldigFra": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "periodeGyldigTil": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "posisjon": {},
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "forbudstype",
+                "gjelderForFartøytype",
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "ForbudsområdeGrense": {
+      "$id": "#ForbudsområdeGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Forbudstype": {
+      "$id": "#Forbudstype",
+      "type": "string"
+    },
+    "Fortøyningsinnretning": {
+      "$id": "#Fortøyningsinnretning",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "fortøyningstype": {
+                  "$ref": "#Fortøyningstype"
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "høydeSjøkartnull": {
+                  "type": "number"
+                },
+                "maksbelastning": {
+                  "type": "integer"
+                },
+                "posisjon": {},
+                "sertifiseringsdato": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "spesifikasjon": {
+                  "type": "string"
+                },
+                "status": {
+                  "$ref": "#Status"
+                },
+                "tillattFortøyningsvinkelGrunnriss": {
+                  "type": "string"
+                },
+                "tillattFortøyningsvinkelOppriss": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "fortøyningstype",
+                "høydeSjøkartnull",
+                "høydereferanse",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Fortøyningstype": {
+      "$id": "#Fortøyningstype",
+      "type": "string"
+    },
+    "Forvaltningsområde": {
+      "$id": "#Forvaltningsområde",
+      "allOf": [
+        {
+          "$ref": "#HavnId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "forvaltesAv": {
+                  "type": "string"
+                },
+                "område": {},
+                "posisjon": {},
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "ForvaltningsområdeGrense": {
+      "$id": "#ForvaltningsområdeGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Frekvens": {
+      "$id": "#Frekvens",
+      "type": "string"
+    },
+    "HavnId": {
+      "$id": "#HavnId",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperOpsjonell"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "havn": {
+                  "type": "string"
+                },
+                "UNLOCODE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "UNLOCODE",
+                "havn"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Havneanlegg": {
+      "$id": "#Havneanlegg",
+      "allOf": [
+        {
+          "$ref": "#HavneanleggId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "eier": {
+                  "type": "string"
+                },
+                "eierskap": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Eierskap"
+                  },
+                  "uniqueItems": true
+                },
+                "forvaltesAv": {
+                  "type": "string"
+                },
+                "ISPSHavneanlegg": {
+                  "$ref": "#ISPSHavneanlegg"
+                },
+                "område": {},
+                "posisjon": {},
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "eierskap",
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HavneanleggGrense": {
+      "$id": "#HavneanleggGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HavneanleggId": {
+      "$id": "#HavneanleggId",
+      "allOf": [
+        {
+          "$ref": "#HavnId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "havneanleggId": {
+                  "type": "string"
+                },
+                "havneanleggNavn": {
+                  "type": "string"
+                },
+                "ISPS": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Havnegjerde": {
+      "$id": "#Havnegjerde",
+      "allOf": [
+        {
+          "$ref": "#HavneanleggId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "periode": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Periode"
+                  },
+                  "uniqueItems": true
+                },
+                "senterlinje": {},
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "senterlinje"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HavnegjerdeInngang": {
+      "$id": "#HavnegjerdeInngang",
+      "allOf": [
+        {
+          "$ref": "#HavneanleggId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "avsperringstype": {
+                  "$ref": "#Avsperringstype"
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "periode": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Periode"
+                  },
+                  "uniqueItems": true
+                },
+                "senterlinje": {},
+                "status": {
+                  "$ref": "#Status"
+                },
+                "åpningstype": {
+                  "$ref": "#Åpningstype"
+                }
+              },
+              "required": [
+                "avsperringstype",
+                "høydereferanse",
+                "senterlinje"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Havneområde": {
+      "$id": "#Havneområde",
+      "allOf": [
+        {
+          "$ref": "#HavnId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "forvaltesAv": {
+                  "type": "string"
+                },
+                "område": {},
+                "posisjon": {},
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "HavneområdeGrense": {
+      "$id": "#HavneområdeGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Havnesensor": {
+      "$id": "#Havnesensor",
+      "allOf": [
+        {
+          "$ref": "#HavnId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "objektLøpenummer": {
+                  "type": "string"
+                },
+                "posisjon": {},
+                "sensortype": {
+                  "$ref": "#Sensortype"
+                },
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Høydereferanse": {
+      "$id": "#Høydereferanse",
+      "type": "string"
+    },
+    "ISPSHavneanlegg": {
+      "$id": "#ISPSHavneanlegg",
+      "type": "object",
+      "properties": {
+        "kontaktinformasjonPFSO": {
+          "type": "string"
+        },
+        "portFacilityNrIMO": {
+          "type": "string"
+        },
+        "sikkerhetsbarriere": {
+          "type": "boolean"
+        },
+        "sikringstype": {
+          "$ref": "#Sikringstype"
+        },
+        "statusGodkjenning": {
+          "type": "string"
+        }
+      }
+    },
+    "Identifikasjon": {
+      "$id": "#Identifikasjon",
+      "type": "object",
+      "properties": {
+        "lokalId": {
+          "type": "string"
+        },
+        "navnerom": {
+          "type": "string"
+        },
+        "versjonId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "lokalId",
+        "navnerom"
+      ]
+    },
+    "KaiId": {
+      "$id": "#KaiId",
+      "allOf": [
+        {
+          "$ref": "#HavneanleggId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "kaiId": {
+                  "type": "string"
+                },
+                "kaiIdIntern": {
+                  "type": "string"
+                },
+                "kainavn": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kaiId"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Kaidekketype": {
+      "$id": "#Kaidekketype",
+      "type": "string"
+    },
+    "Kaifront": {
+      "$id": "#Kaifront",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "høydeSjøkartnull": {
+                  "type": "number"
+                },
+                "kaifronttype": {
+                  "$ref": "#Kaifronttype"
+                },
+                "kaitype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Kaitype"
+                  },
+                  "uniqueItems": true
+                },
+                "lengde": {
+                  "type": "number"
+                },
+                "senterlinje": {},
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "høydeSjøkartnull",
+                "høydereferanse",
+                "kaifronttype",
+                "kaitype",
+                "lengde",
+                "senterlinje"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Kaifronttype": {
+      "$id": "#Kaifronttype",
+      "type": "string"
+    },
+    "Kaiområde": {
+      "$id": "#Kaiområde",
+      "allOf": [
+        {
+          "$ref": "#KaiId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "kaidekketype": {
+                  "$ref": "#Kaidekketype"
+                },
+                "kaitype": {
+                  "$ref": "#Kaitype"
+                },
+                "område": {},
+                "posisjon": {},
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "KaiområdeGrense": {
+      "$id": "#KaiområdeGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Kaitype": {
+      "$id": "#Kaitype",
+      "type": "string"
+    },
+    "Kamera": {
+      "$id": "#Kamera",
+      "allOf": [
+        {
+          "$ref": "#HavnId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "objektLøpenummer": {
+                  "type": "string"
+                },
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Kran": {
+      "$id": "#Kran",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "energikilde": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Energikilde"
+                  },
+                  "uniqueItems": true
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "kranspesifikasjon": {
+                  "type": "string"
+                },
+                "krantype": {
+                  "$ref": "#Krantype"
+                },
+                "maksbelastning": {
+                  "type": "integer"
+                },
+                "maksbelastningRekkevidde": {
+                  "type": "integer"
+                },
+                "mobilitet": {
+                  "type": "boolean"
+                },
+                "posisjon": {},
+                "rekkevidde": {
+                  "type": "integer"
+                },
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "krantype",
+                "mobilitet",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Krantype": {
+      "$id": "#Krantype",
+      "type": "string"
+    },
+    "Lastbegrensningsområde": {
+      "$id": "#Lastbegrensningsområde",
+      "allOf": [
+        {
+          "$ref": "#KaiId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "akseltrykk": {
+                  "type": "number"
+                },
+                "bruksklassetype": {
+                  "$ref": "#Bruksklassetype"
+                },
+                "kaidekketype": {
+                  "$ref": "#Kaidekketype"
+                },
+                "lastId": {
+                  "type": "string"
+                },
+                "lastreferanse": {
+                  "type": "string"
+                },
+                "minsteAvstandPunktlast": {
+                  "type": "number"
+                },
+                "område": {},
+                "posisjon": {},
+                "punktlast": {
+                  "type": "number"
+                },
+                "vektbegrensning": {
+                  "type": "number"
+                },
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "LastbegrensningsområdeGrense": {
+      "$id": "#LastbegrensningsområdeGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Måned": {
+      "$id": "#Måned",
+      "type": "string"
+    },
+    "ObjektId": {
+      "$id": "#ObjektId",
+      "allOf": [
+        {
+          "$ref": "#KaiId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "objektLøpenummer": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "objektLøpenummer"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Periode": {
+      "$id": "#Periode",
+      "type": "object",
+      "properties": {
+        "mndFra": {
+          "$ref": "#Måned"
+        },
+        "mndTil": {
+          "$ref": "#Måned"
+        }
+      },
+      "required": [
+        "mndFra",
+        "mndTil"
+      ]
+    },
+    "Posisjonskvalitet": {
+      "$id": "#Posisjonskvalitet",
+      "type": "object",
+      "properties": {
+        "datafangstmetode": {
+          "$ref": "#Datafangstmetode"
+        },
+        "datafangstmetodeHøyde": {
+          "$ref": "#Datafangstmetode"
+        },
+        "nøyaktighet": {
+          "type": "integer"
+        },
+        "nøyaktighetHøyde": {
+          "type": "integer"
+        },
+        "synbarhet": {
+          "$ref": "#Synbarhet"
+        }
+      },
+      "required": [
+        "datafangstmetode",
+        "nøyaktighet"
+      ]
+    },
+    "Sensortype": {
+      "$id": "#Sensortype",
+      "type": "string"
+    },
+    "Sikringstype": {
+      "$id": "#Sikringstype",
+      "type": "string"
+    },
+    "Slipp": {
+      "$id": "#Slipp",
+      "allOf": [
+        {
+          "$ref": "#KaiId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "høydeSjøkartnull": {
+                  "type": "number"
+                },
+                "kaidekketype": {
+                  "$ref": "#Kaidekketype"
+                },
+                "kranKapasitet": {
+                  "type": "integer"
+                },
+                "maksBreddeFartøy": {
+                  "type": "number"
+                },
+                "maksDyptgåendeFartøy": {
+                  "type": "number"
+                },
+                "maksLengdeFartøy": {
+                  "type": "number"
+                },
+                "navn": {
+                  "type": "string"
+                },
+                "område": {},
+                "posisjon": {},
+                "slippKapasitet": {
+                  "type": "integer"
+                },
+                "spesifikasjon": {
+                  "type": "string"
+                },
+                "status": {
+                  "$ref": "#Status"
+                },
+                "tilgangstype": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Tilgangstype"
+                  },
+                  "uniqueItems": true
+                },
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "høydeSjøkartnull",
+                "høydereferanse",
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "SlippGrense": {
+      "$id": "#SlippGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Spenning": {
+      "$id": "#Spenning",
+      "type": "string"
+    },
+    "Status": {
+      "$id": "#Status",
+      "type": "string"
+    },
+    "Synbarhet": {
+      "$id": "#Synbarhet",
+      "type": "string"
+    },
+    "Tilgangstype": {
+      "$id": "#Tilgangstype",
+      "type": "string"
+    },
+    "Toalett": {
+      "$id": "#Toalett",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Tømmestasjon": {
+      "$id": "#Tømmestasjon",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "avløpstype": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#Avløpstype"
+                  },
+                  "uniqueItems": true
+                },
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "kapasitet": {
+                  "type": "integer"
+                },
+                "kumnummer": {
+                  "type": "integer"
+                },
+                "mobilitet": {
+                  "type": "boolean"
+                },
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                },
+                "tilgangstype": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Tilgangstype"
+                  },
+                  "uniqueItems": true
+                },
+                "tilkoblingsdimensjon": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "avløpstype",
+                "høydereferanse",
+                "mobilitet",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "Tørrdokk": {
+      "$id": "#Tørrdokk",
+      "allOf": [
+        {
+          "$ref": "#HavneanleggId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "løftekapasitet": {
+                  "type": "integer"
+                },
+                "maksFartøyBredde": {
+                  "type": "number"
+                },
+                "maksFartøyDyptgående": {
+                  "type": "number"
+                },
+                "maksFartøyLengde": {
+                  "type": "integer"
+                },
+                "navn": {
+                  "type": "string"
+                },
+                "område": {},
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                },
+                "avgrensning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "høydereferanse",
+                "område"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "TørrdokkGrense": {
+      "$id": "#TørrdokkGrense",
+      "allOf": [
+        {
+          "$ref": "#FellesegenskaperPåkrevd"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "grense": {}
+              },
+              "required": [
+                "grense"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "VAuttak": {
+      "$id": "#VAuttak",
+      "allOf": [
+        {
+          "$ref": "#ObjektId"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "høydereferanse": {
+                  "$ref": "#Høydereferanse"
+                },
+                "kapasitet": {
+                  "type": "integer"
+                },
+                "kumnummer": {
+                  "type": "integer"
+                },
+                "posisjon": {},
+                "status": {
+                  "$ref": "#Status"
+                },
+                "tilgangstype": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#Tilgangstype"
+                  },
+                  "uniqueItems": true
+                },
+                "tilkoblingsdimensjon": {
+                  "type": "string"
+                },
+                "VAuttakstype": {
+                  "$ref": "#VAuttakstype"
+                }
+              },
+              "required": [
+                "VAuttakstype",
+                "høydereferanse",
+                "posisjon"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        }
+      ]
+    },
+    "VAuttakstype": {
+      "$id": "#VAuttakstype",
+      "type": "string"
+    },
+    "Åpningstype": {
+      "$id": "#Åpningstype",
+      "type": "string"
+    }
+  }
+}

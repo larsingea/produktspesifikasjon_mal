@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?><ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result" xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result" config="/home/runner/work/produktspesifikasjon_mal/produktspesifikasjon_mal/produktspesifikasjon/havnedata-2/filleveranser/schema/shapechange-config.xml" end="Fri Aug 14 13:44:24 UTC 2026" resultCode="0" start="Fri Aug 14 13:44:18 UTC 2026" version="4.0.0">
+  <Messages>
+    <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: START ----------"/>
+    <Info message="Validating input parameters."/>
+    <Info message="Validation of input parameters completed."/>
+    <Info message="Validating log parameters."/>
+    <Info message="Validation of log parameters completed."/>
+    <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.shapechange.core.target.xmlschema.XmlSchema' and @inputs 'INPUT' ..."/>
+    <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.shapechange.core.target.json.JsonSchemaTarget' and @inputs 'INPUT' ..."/>
+    <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: COMPLETE ----------"/>
+    <Warning message="The type 'Punkt' of property 'Kran.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kran::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Avfallspunkt.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Avfallspunkt::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Kaiområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kaiområde::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Kaiområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kaiområde::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Fortøyningsinnretning.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Fortøyningsinnretning::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'Havnegjerde.senterlinje' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havnegjerde::senterlinje'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Tørrdokk.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Tørrdokk::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Tørrdokk.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Tørrdokk::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'KaiområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::KaiområdeGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'HavnegjerdeInngang.senterlinje' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::HavnegjerdeInngang::senterlinje'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'ForvaltningsområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::ForvaltningsområdeGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'SlippGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::SlippGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'TørrdokkGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::TørrdokkGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'HavneanleggGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::HavneanleggGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'HavneområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::HavneområdeGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Havneområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneområde::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Havneområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneområde::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Forvaltningsområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Forvaltningsområde::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Forvaltningsområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Forvaltningsområde::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Beredskapspunkt.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Beredskapspunkt::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'Kaifront.senterlinje' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kaifront::senterlinje'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Havnesensor.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havnesensor::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Slipp.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Slipp::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Slipp.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Slipp::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Lastbegrensningsområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Lastbegrensningsområde::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Lastbegrensningsområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Lastbegrensningsområde::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Kamera.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kamera::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Drivstofftilkobling.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Drivstofftilkobling::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'VAuttak.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::VAuttak::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Tømmestasjon.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Tømmestasjon::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'ELkobling.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::ELkobling::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Forbudsområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Forbudsområde::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Forbudsområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Forbudsområde::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Fartsrestriksjoner.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Fartsrestriksjoner::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Fartsrestriksjoner.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Fartsrestriksjoner::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Havneanlegg.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneanlegg::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Havneanlegg.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneanlegg::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'ForbudsområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::ForbudsområdeGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'FartsrestriksjonerGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::FartsrestriksjonerGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Flate' of property 'Flytedokk.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Flytedokk::område'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Flytedokk.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Flytedokk::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Toalett.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Toalett::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'FlytedokkGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::FlytedokkGrense::grense'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'Fender.fendergruppering' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Fender::fendergruppering'"/>
+    </Warning>
+    <Warning message="The type 'Punkt' of property 'Fender.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Fender::posisjon'"/>
+    </Warning>
+    <Warning message="The type 'Kurve' of property 'LastbegrensningsområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::LastbegrensningsområdeGrense::grense'"/>
+    </Warning>
+    <ProcessFlowInfo message="Application schema found, package name: 'filleveranser', target namespace: 'https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/filleveranser/1.0'"/>
+    <ProcessFlowInfo message="Now processing target 'XML Schema' for input 'INPUT'."/>
+    <Error message="The type 'Punkt' of property 'Avfallspunkt.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Avfallspunkt::posisjon'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Beredskapspunkt.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Beredskapspunkt::posisjon'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Drivstofftilkobling.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Drivstofftilkobling::posisjon'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'ELkobling.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::ELkobling::posisjon'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Fartsrestriksjoner.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Fartsrestriksjoner::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Fartsrestriksjoner.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Fartsrestriksjoner::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'FartsrestriksjonerGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::FartsrestriksjonerGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'Fender.fendergruppering' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Fender::fendergruppering'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Fender.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Fender::posisjon'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Flytedokk.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Flytedokk::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Flytedokk.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Flytedokk::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'FlytedokkGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::FlytedokkGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Forbudsområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Forbudsområde::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Forbudsområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::Forbudsområde::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'ForbudsområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Reguleringer::ForbudsområdeGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Fortøyningsinnretning.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Fortøyningsinnretning::posisjon'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Forvaltningsområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Forvaltningsområde::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Forvaltningsområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Forvaltningsområde::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'ForvaltningsområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::ForvaltningsområdeGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Havneanlegg.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneanlegg::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Havneanlegg.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneanlegg::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'HavneanleggGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::HavneanleggGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'Havnegjerde.senterlinje' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havnegjerde::senterlinje'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'HavnegjerdeInngang.senterlinje' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::HavnegjerdeInngang::senterlinje'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Havneområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneområde::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Havneområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havneområde::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'HavneområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::HavneområdeGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Havnesensor.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Havnesensor::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'Kaifront.senterlinje' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kaifront::senterlinje'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Kaiområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kaiområde::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Kaiområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kaiområde::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'KaiområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::KaiområdeGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Kamera.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kamera::posisjon'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Kran.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Kran::posisjon'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Lastbegrensningsområde.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Lastbegrensningsområde::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Lastbegrensningsområde.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Lastbegrensningsområde::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'LastbegrensningsområdeGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::LastbegrensningsområdeGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Slipp.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Slipp::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Slipp.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Slipp::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'SlippGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::SlippGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Toalett.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Toalett::posisjon'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Tømmestasjon.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Tømmestasjon::posisjon'"/>
+    </Error>
+    <Error message="The type 'Flate' of property 'Tørrdokk.område' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Tørrdokk::område'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'Tørrdokk.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::Tørrdokk::posisjon'"/>
+    </Error>
+    <Error message="The type 'Kurve' of property 'TørrdokkGrense.grense' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::TørrdokkGrense::grense'"/>
+    </Error>
+    <Error message="The type 'Punkt' of property 'VAuttak.posisjon' was not found.">
+      <Detail message="Context: Property 'filleveranser::Havnedata 2.0::VAuttak::posisjon'"/>
+    </Error>
+    <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.shapechange.core.target.xmlschema.XmlSchema' for input ID: 'INPUT'.&#10;-------------------------------------------------"/>
+    <ProcessFlowInfo message="Application schema found, package name: 'filleveranser', target namespace: 'https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/filleveranser/1.0'"/>
+    <ProcessFlowInfo message="Now processing target 'JSON Schema' for input 'INPUT'."/>
+    <Warning message="JSON Schema definition for type 'Punkt' could not be identified. No map entry is defined for the type, and the type was not found in the model. No type restriction is created for properties with this type as value type."/>
+    <Warning message="JSON Schema definition for type 'Flate' could not be identified. No map entry is defined for the type, and the type was not found in the model. No type restriction is created for properties with this type as value type."/>
+    <Warning message="JSON Schema definition for type 'Kurve' could not be identified. No map entry is defined for the type, and the type was not found in the model. No type restriction is created for properties with this type as value type."/>
+    <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.shapechange.core.target.json.JsonSchemaTarget' for input ID: 'INPUT'.&#10;-------------------------------------------------"/>
+  </Messages>
+  <Results>
+    <Result href="file:/home/runner/work/produktspesifikasjon_mal/produktspesifikasjon_mal/produktspesifikasjon/havnedata-2/filleveranser/schema/xsd/INPUT/filleveranser.xsd" scope="https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/filleveranser/1.0" target="XML Schema">filleveranser.xsd</Result>
+    <Result href="file:/home/runner/work/produktspesifikasjon_mal/produktspesifikasjon_mal/produktspesifikasjon/havnedata-2/filleveranser/schema/jsonschema/INPUT/filleveranser/filleveranser.json" target="JSON Schema">filleveranser.json</Result>
+  </Results>
+</ShapeChangeResult>

@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:filleveranser="https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/filleveranser/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/filleveranser/1.0" version="1.0">
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="Avfallspunkt" substitutionGroup="filleveranser:ObjektId" type="filleveranser:AvfallspunktType"/>
+  <complexType name="AvfallspunktType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element minOccurs="0" name="avfallsplan" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avfallstype" type="gml:CodeType"/>
+          <element minOccurs="0" name="beholdertype" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="mobilitet" type="boolean"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AvfallspunktPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Avfallspunkt"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Beredskapspunkt" substitutionGroup="filleveranser:ObjektId" type="filleveranser:BeredskapspunktType"/>
+  <complexType name="BeredskapspunktType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element maxOccurs="unbounded" name="beredskapstype" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="BeredskapspunktPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Beredskapspunkt"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Drivstofftilkobling" substitutionGroup="filleveranser:ObjektId" type="filleveranser:DrivstofftilkoblingType"/>
+  <complexType name="DrivstofftilkoblingType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element maxOccurs="unbounded" name="drivstofftype" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="kapasitet" type="integer"/>
+          <element name="mobilitet" type="boolean"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DrivstofftilkoblingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Drivstofftilkobling"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ELkobling" substitutionGroup="filleveranser:ObjektId" type="filleveranser:ELkoblingType"/>
+  <complexType name="ELkoblingType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element maxOccurs="unbounded" name="ELanleggstype" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="ELkoblinger" type="filleveranser:ELkoblingEgenskaperPropertyType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="rekkeviddeLadeanlegg" type="integer"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ELkoblingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:ELkobling"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ELkoblingEgenskaper" substitutionGroup="gml:AbstractObject" type="filleveranser:ELkoblingEgenskaperType"/>
+  <complexType name="ELkoblingEgenskaperType">
+    <sequence>
+      <element minOccurs="0" name="effekt" type="integer"/>
+      <element minOccurs="0" name="faser" type="string"/>
+      <element minOccurs="0" name="frekvens" type="gml:CodeType"/>
+      <element minOccurs="0" name="kontaktId" type="string"/>
+      <element minOccurs="0" name="sikringstørrelse" type="integer"/>
+      <element minOccurs="0" name="spenning" type="gml:CodeType"/>
+    </sequence>
+  </complexType>
+  <complexType name="ELkoblingEgenskaperPropertyType">
+    <sequence>
+      <element ref="filleveranser:ELkoblingEgenskaper"/>
+    </sequence>
+  </complexType>
+  <element name="Fartsrestriksjoner" substitutionGroup="filleveranser:FellesegenskaperOpsjonell" type="filleveranser:FartsrestriksjonerType"/>
+  <complexType name="FartsrestriksjonerType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperOpsjonellType">
+        <sequence>
+          <element minOccurs="0" name="fastsattAv" type="string"/>
+          <element minOccurs="0" name="forskriftLenke" type="string"/>
+          <element name="forskriftNavn" type="string"/>
+          <element minOccurs="0" name="gjelderFor" type="string"/>
+          <element maxOccurs="unbounded" name="gjelderForFartøytype" type="gml:CodeType"/>
+          <element name="hastighet" type="integer"/>
+          <element minOccurs="0" name="lovhjemmel" type="string"/>
+          <element name="område"/>
+          <element minOccurs="0" name="periodeGyldigFra" type="date"/>
+          <element minOccurs="0" name="periodeGyldigTil" type="date"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:FartsrestriksjonerGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FartsrestriksjonerPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Fartsrestriksjoner"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FartsrestriksjonerGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:FartsrestriksjonerGrenseType"/>
+  <complexType name="FartsrestriksjonerGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FartsrestriksjonerGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:FartsrestriksjonerGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="FellesegenskaperOpsjonell" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:FellesegenskaperOpsjonellType"/>
+  <complexType abstract="true" name="FellesegenskaperOpsjonellType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="date"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FellesegenskaperOpsjonellPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:FellesegenskaperOpsjonell"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="FellesegenskaperPåkrevd" substitutionGroup="gml:AbstractFeature" type="filleveranser:FellesegenskaperPåkrevdType"/>
+  <complexType abstract="true" name="FellesegenskaperPåkrevdType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="datafangstdato" type="date"/>
+          <element name="identifikasjon" type="filleveranser:IdentifikasjonPropertyType"/>
+          <element name="kvalitet" type="filleveranser:PosisjonskvalitetPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FellesegenskaperPåkrevdPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:FellesegenskaperPåkrevd"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Fender" substitutionGroup="filleveranser:ObjektId" type="filleveranser:FenderType"/>
+  <complexType name="FenderType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element minOccurs="0" name="antall" type="integer"/>
+          <element minOccurs="0" name="fendergruppering"/>
+          <element name="fenderorientering" type="gml:CodeType"/>
+          <element minOccurs="0" name="fenderspesifikasjon" type="string"/>
+          <element name="fendertype" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="høydeSjøkartnull" type="double"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FenderPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Fender"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Flytedokk" substitutionGroup="filleveranser:HavneanleggId" type="filleveranser:FlytedokkType"/>
+  <complexType name="FlytedokkType">
+    <complexContent>
+      <extension base="filleveranser:HavneanleggIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="løftekapasitet" type="integer"/>
+          <element minOccurs="0" name="maksFartøyBredde" type="double"/>
+          <element minOccurs="0" name="maksFartøyDyptgående" type="double"/>
+          <element minOccurs="0" name="maksFartøyLengde" type="integer"/>
+          <element minOccurs="0" name="navn" type="string"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:FlytedokkGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FlytedokkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Flytedokk"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FlytedokkGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:FlytedokkGrenseType"/>
+  <complexType name="FlytedokkGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FlytedokkGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:FlytedokkGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Forbudsområde" substitutionGroup="filleveranser:FellesegenskaperOpsjonell" type="filleveranser:ForbudsområdeType"/>
+  <complexType name="ForbudsområdeType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperOpsjonellType">
+        <sequence>
+          <element minOccurs="0" name="fastsattAv" type="string"/>
+          <element maxOccurs="unbounded" name="forbudstype" type="gml:CodeType"/>
+          <element minOccurs="0" name="forskriftLenke" type="string"/>
+          <element minOccurs="0" name="forskriftNavn" type="string"/>
+          <element minOccurs="0" name="gjelderFor" type="string"/>
+          <element maxOccurs="unbounded" name="gjelderForFartøytype" type="gml:CodeType"/>
+          <element minOccurs="0" name="lovhjemmel" type="string"/>
+          <element name="område"/>
+          <element minOccurs="0" name="periodeGyldigFra" type="date"/>
+          <element minOccurs="0" name="periodeGyldigTil" type="date"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:ForbudsområdeGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ForbudsområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Forbudsområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ForbudsområdeGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:ForbudsområdeGrenseType"/>
+  <complexType name="ForbudsområdeGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ForbudsområdeGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:ForbudsområdeGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Fortøyningsinnretning" substitutionGroup="filleveranser:ObjektId" type="filleveranser:FortøyningsinnretningType"/>
+  <complexType name="FortøyningsinnretningType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element name="fortøyningstype" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="høydeSjøkartnull" type="double"/>
+          <element minOccurs="0" name="maksbelastning" type="integer"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="sertifiseringsdato" type="date"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element minOccurs="0" name="tillattFortøyningsvinkelGrunnriss" type="string"/>
+          <element minOccurs="0" name="tillattFortøyningsvinkelOppriss" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FortøyningsinnretningPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Fortøyningsinnretning"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Forvaltningsområde" substitutionGroup="filleveranser:HavnId" type="filleveranser:ForvaltningsområdeType"/>
+  <complexType name="ForvaltningsområdeType">
+    <complexContent>
+      <extension base="filleveranser:HavnIdType">
+        <sequence>
+          <element minOccurs="0" name="forvaltesAv" type="string"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:ForvaltningsområdeGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ForvaltningsområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Forvaltningsområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ForvaltningsområdeGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:ForvaltningsområdeGrenseType"/>
+  <complexType name="ForvaltningsområdeGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ForvaltningsområdeGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:ForvaltningsområdeGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="HavnId" substitutionGroup="filleveranser:FellesegenskaperOpsjonell" type="filleveranser:HavnIdType"/>
+  <complexType abstract="true" name="HavnIdType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperOpsjonellType">
+        <sequence>
+          <element name="havn" type="string"/>
+          <element name="UNLOCODE" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavnIdPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:HavnId"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Havneanlegg" substitutionGroup="filleveranser:HavneanleggId" type="filleveranser:HavneanleggType"/>
+  <complexType name="HavneanleggType">
+    <complexContent>
+      <extension base="filleveranser:HavneanleggIdType">
+        <sequence>
+          <element minOccurs="0" name="eier" type="string"/>
+          <element maxOccurs="unbounded" name="eierskap" type="gml:CodeType"/>
+          <element minOccurs="0" name="forvaltesAv" type="string"/>
+          <element minOccurs="0" name="ISPSHavneanlegg" type="filleveranser:ISPSHavneanleggPropertyType"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:HavneanleggGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavneanleggPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Havneanlegg"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="HavneanleggGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:HavneanleggGrenseType"/>
+  <complexType name="HavneanleggGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavneanleggGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:HavneanleggGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="HavneanleggId" substitutionGroup="filleveranser:HavnId" type="filleveranser:HavneanleggIdType"/>
+  <complexType abstract="true" name="HavneanleggIdType">
+    <complexContent>
+      <extension base="filleveranser:HavnIdType">
+        <sequence>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavneanleggIdPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:HavneanleggId"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Havnegjerde" substitutionGroup="filleveranser:HavneanleggId" type="filleveranser:HavnegjerdeType"/>
+  <complexType name="HavnegjerdeType">
+    <complexContent>
+      <extension base="filleveranser:HavneanleggIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="periode" type="filleveranser:PeriodePropertyType"/>
+          <element name="senterlinje"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavnegjerdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Havnegjerde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="HavnegjerdeInngang" substitutionGroup="filleveranser:HavneanleggId" type="filleveranser:HavnegjerdeInngangType"/>
+  <complexType name="HavnegjerdeInngangType">
+    <complexContent>
+      <extension base="filleveranser:HavneanleggIdType">
+        <sequence>
+          <element name="avsperringstype" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="periode" type="filleveranser:PeriodePropertyType"/>
+          <element name="senterlinje"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element minOccurs="0" name="åpningstype" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavnegjerdeInngangPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:HavnegjerdeInngang"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Havneområde" substitutionGroup="filleveranser:HavnId" type="filleveranser:HavneområdeType"/>
+  <complexType name="HavneområdeType">
+    <complexContent>
+      <extension base="filleveranser:HavnIdType">
+        <sequence>
+          <element minOccurs="0" name="forvaltesAv" type="string"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:HavneområdeGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavneområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Havneområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="HavneområdeGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:HavneområdeGrenseType"/>
+  <complexType name="HavneområdeGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavneområdeGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:HavneområdeGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Havnesensor" substitutionGroup="filleveranser:HavnId" type="filleveranser:HavnesensorType"/>
+  <complexType name="HavnesensorType">
+    <complexContent>
+      <extension base="filleveranser:HavnIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="sensortype" type="gml:CodeType"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HavnesensorPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Havnesensor"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ISPSHavneanlegg" substitutionGroup="gml:AbstractObject" type="filleveranser:ISPSHavneanleggType"/>
+  <complexType name="ISPSHavneanleggType">
+    <sequence>
+      <element minOccurs="0" name="kontaktinformasjonPFSO" type="string"/>
+      <element minOccurs="0" name="portFacilityNrIMO" type="string"/>
+      <element minOccurs="0" name="sikkerhetsbarriere" type="boolean"/>
+      <element minOccurs="0" name="sikringstype" type="gml:CodeType"/>
+      <element minOccurs="0" name="statusGodkjenning" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="ISPSHavneanleggPropertyType">
+    <sequence>
+      <element ref="filleveranser:ISPSHavneanlegg"/>
+    </sequence>
+  </complexType>
+  <element name="Identifikasjon" substitutionGroup="gml:AbstractObject" type="filleveranser:IdentifikasjonType"/>
+  <complexType name="IdentifikasjonType">
+    <sequence>
+      <element name="lokalId" type="string"/>
+      <element name="navnerom" type="string"/>
+      <element minOccurs="0" name="versjonId" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="IdentifikasjonPropertyType">
+    <sequence>
+      <element ref="filleveranser:Identifikasjon"/>
+    </sequence>
+  </complexType>
+  <element abstract="true" name="KaiId" substitutionGroup="filleveranser:HavneanleggId" type="filleveranser:KaiIdType"/>
+  <complexType abstract="true" name="KaiIdType">
+    <complexContent>
+      <extension base="filleveranser:HavneanleggIdType">
+        <sequence>
+          <element name="kaiId" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KaiIdPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:KaiId"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Kaifront" substitutionGroup="filleveranser:ObjektId" type="filleveranser:KaifrontType"/>
+  <complexType name="KaifrontType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="høydeSjøkartnull" type="double"/>
+          <element name="kaifronttype" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" name="kaitype" type="gml:CodeType"/>
+          <element name="lengde" type="double"/>
+          <element name="senterlinje"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KaifrontPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Kaifront"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Kaiområde" substitutionGroup="filleveranser:KaiId" type="filleveranser:KaiområdeType"/>
+  <complexType name="KaiområdeType">
+    <complexContent>
+      <extension base="filleveranser:KaiIdType">
+        <sequence>
+          <element minOccurs="0" name="kaidekketype" type="gml:CodeType"/>
+          <element minOccurs="0" name="kaitype" type="gml:CodeType"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:KaiområdeGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KaiområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Kaiområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="KaiområdeGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:KaiområdeGrenseType"/>
+  <complexType name="KaiområdeGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KaiområdeGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:KaiområdeGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Kamera" substitutionGroup="filleveranser:HavnId" type="filleveranser:KameraType"/>
+  <complexType name="KameraType">
+    <complexContent>
+      <extension base="filleveranser:HavnIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KameraPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Kamera"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Kran" substitutionGroup="filleveranser:ObjektId" type="filleveranser:KranType"/>
+  <complexType name="KranType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="energikilde" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="kranspesifikasjon" type="string"/>
+          <element name="krantype" type="gml:CodeType"/>
+          <element minOccurs="0" name="maksbelastning" type="integer"/>
+          <element minOccurs="0" name="maksbelastningRekkevidde" type="integer"/>
+          <element name="mobilitet" type="boolean"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="rekkevidde" type="integer"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KranPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Kran"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Lastbegrensningsområde" substitutionGroup="filleveranser:KaiId" type="filleveranser:LastbegrensningsområdeType"/>
+  <complexType name="LastbegrensningsområdeType">
+    <complexContent>
+      <extension base="filleveranser:KaiIdType">
+        <sequence>
+          <element minOccurs="0" name="akseltrykk" type="double"/>
+          <element minOccurs="0" name="bruksklassetype" type="gml:CodeType"/>
+          <element minOccurs="0" name="kaidekketype" type="gml:CodeType"/>
+          <element minOccurs="0" name="lastId" type="string"/>
+          <element minOccurs="0" name="lastreferanse" type="string"/>
+          <element minOccurs="0" name="minsteAvstandPunktlast" type="double"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element minOccurs="0" name="punktlast" type="double"/>
+          <element minOccurs="0" name="vektbegrensning" type="double"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:LastbegrensningsområdeGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LastbegrensningsområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Lastbegrensningsområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="LastbegrensningsområdeGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:LastbegrensningsområdeGrenseType"/>
+  <complexType name="LastbegrensningsområdeGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LastbegrensningsområdeGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:LastbegrensningsområdeGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="ObjektId" substitutionGroup="filleveranser:KaiId" type="filleveranser:ObjektIdType"/>
+  <complexType abstract="true" name="ObjektIdType">
+    <complexContent>
+      <extension base="filleveranser:KaiIdType">
+        <sequence>
+          <element name="objektLøpenummer" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ObjektIdPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:ObjektId"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Periode" substitutionGroup="gml:AbstractObject" type="filleveranser:PeriodeType"/>
+  <complexType name="PeriodeType">
+    <sequence>
+      <element name="mndFra" type="gml:CodeType"/>
+      <element name="mndTil" type="gml:CodeType"/>
+    </sequence>
+  </complexType>
+  <complexType name="PeriodePropertyType">
+    <sequence>
+      <element ref="filleveranser:Periode"/>
+    </sequence>
+  </complexType>
+  <element name="Posisjonskvalitet" substitutionGroup="gml:AbstractObject" type="filleveranser:PosisjonskvalitetType"/>
+  <complexType name="PosisjonskvalitetType">
+    <sequence>
+      <element name="datafangstmetode" type="gml:CodeType"/>
+      <element minOccurs="0" name="datafangstmetodeHøyde" type="gml:CodeType"/>
+      <element name="nøyaktighet" type="integer"/>
+      <element minOccurs="0" name="nøyaktighetHøyde" type="integer"/>
+      <element minOccurs="0" name="synbarhet" type="gml:CodeType"/>
+    </sequence>
+  </complexType>
+  <complexType name="PosisjonskvalitetPropertyType">
+    <sequence>
+      <element ref="filleveranser:Posisjonskvalitet"/>
+    </sequence>
+  </complexType>
+  <element name="Slipp" substitutionGroup="filleveranser:KaiId" type="filleveranser:SlippType"/>
+  <complexType name="SlippType">
+    <complexContent>
+      <extension base="filleveranser:KaiIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="høydeSjøkartnull" type="double"/>
+          <element minOccurs="0" name="kaidekketype" type="gml:CodeType"/>
+          <element minOccurs="0" name="kranKapasitet" type="integer"/>
+          <element minOccurs="0" name="maksBreddeFartøy" type="double"/>
+          <element minOccurs="0" name="maksDyptgåendeFartøy" type="double"/>
+          <element minOccurs="0" name="maksLengdeFartøy" type="double"/>
+          <element minOccurs="0" name="navn" type="string"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element minOccurs="0" name="slippKapasitet" type="integer"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:SlippGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SlippPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Slipp"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SlippGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:SlippGrenseType"/>
+  <complexType name="SlippGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SlippGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:SlippGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Toalett" substitutionGroup="filleveranser:ObjektId" type="filleveranser:ToalettType"/>
+  <complexType name="ToalettType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ToalettPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Toalett"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Tømmestasjon" substitutionGroup="filleveranser:ObjektId" type="filleveranser:TømmestasjonType"/>
+  <complexType name="TømmestasjonType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element maxOccurs="unbounded" name="avløpstype" type="gml:CodeType"/>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="kapasitet" type="integer"/>
+          <element minOccurs="0" name="kumnummer" type="integer"/>
+          <element name="mobilitet" type="boolean"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype" type="gml:CodeType"/>
+          <element minOccurs="0" name="tilkoblingsdimensjon" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TømmestasjonPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Tømmestasjon"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Tørrdokk" substitutionGroup="filleveranser:HavneanleggId" type="filleveranser:TørrdokkType"/>
+  <complexType name="TørrdokkType">
+    <complexContent>
+      <extension base="filleveranser:HavneanleggIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="løftekapasitet" type="integer"/>
+          <element minOccurs="0" name="maksFartøyBredde" type="double"/>
+          <element minOccurs="0" name="maksFartøyDyptgående" type="double"/>
+          <element minOccurs="0" name="maksFartøyLengde" type="integer"/>
+          <element minOccurs="0" name="navn" type="string"/>
+          <element name="område"/>
+          <element minOccurs="0" name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranser:TørrdokkGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TørrdokkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:Tørrdokk"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TørrdokkGrense" substitutionGroup="filleveranser:FellesegenskaperPåkrevd" type="filleveranser:TørrdokkGrenseType"/>
+  <complexType name="TørrdokkGrenseType">
+    <complexContent>
+      <extension base="filleveranser:FellesegenskaperPåkrevdType">
+        <sequence>
+          <element name="grense"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TørrdokkGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:TørrdokkGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="VAuttak" substitutionGroup="filleveranser:ObjektId" type="filleveranser:VAuttakType"/>
+  <complexType name="VAuttakType">
+    <complexContent>
+      <extension base="filleveranser:ObjektIdType">
+        <sequence>
+          <element name="høydereferanse" type="gml:CodeType"/>
+          <element minOccurs="0" name="kapasitet" type="integer"/>
+          <element minOccurs="0" name="kumnummer" type="integer"/>
+          <element name="posisjon"/>
+          <element minOccurs="0" name="status" type="gml:CodeType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype" type="gml:CodeType"/>
+          <element minOccurs="0" name="tilkoblingsdimensjon" type="string"/>
+          <element name="VAuttakstype" type="gml:CodeType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="VAuttakPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranser:VAuttak"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

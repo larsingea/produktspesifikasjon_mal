@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:innsynstjenesteapi="https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/innsynstjeneste-api/1.0" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/innsynstjeneste-api/1.0" version="1.0">
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="ElKoblinger &gt; effekt" substitutionGroup="gml:AbstractObject" type="innsynstjenesteapi:ElKoblinger &gt; effektType"/>
+  <complexType name="ElKoblinger &gt; effektType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="effekt"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="frekvens"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="spenning"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="sikringstørrelse"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="kontaktId"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="faser"/>
+    </sequence>
+  </complexType>
+  <complexType name="ElKoblinger &gt; effektPropertyType">
+    <sequence>
+      <element ref="innsynstjenesteapi:ElKoblinger &gt; effekt"/>
+    </sequence>
+  </complexType>
+  <element name="administrativthavneområde" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:administrativthavneområdeType"/>
+  <complexType name="administrativthavneområdeType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="administreresAv" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="administrativthavneområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:administrativthavneområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="avfallspunkt" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:avfallspunktType"/>
+  <complexType name="avfallspunktType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avfallstype"/>
+          <element minOccurs="0" name="beholdertype" type="string"/>
+          <element minOccurs="0" name="datoTilgjengeligFra" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="leveringsprosedyre" type="string"/>
+          <element minOccurs="0" name="mobil" type="boolean"/>
+          <element minOccurs="0" name="datoTilgjengeligTil" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="avfallspunktPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:avfallspunkt"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="beredskapspunkt" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:beredskapspunktType"/>
+  <complexType name="beredskapspunktType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="beredskapstype"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="beredskapspunktPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:beredskapspunkt"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="drivstofftilkobling" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:drivstofftilkoblingType"/>
+  <complexType name="drivstofftilkoblingType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="datoTilgjengeligFra" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="drivstofftype"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="kapasitet" type="integer"/>
+          <element minOccurs="0" name="mobil" type="boolean"/>
+          <element minOccurs="0" name="datoTilgjengeligTil" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype"/>
+          <element minOccurs="0" name="bunkringsanleggtype" type="string"/>
+          <element minOccurs="0" name="kontaktnavn" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="drivstofftilkoblingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:drivstofftilkobling"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="elkobling" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:elkoblingType"/>
+  <complexType name="elkoblingType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="datoTilgjengeligFra" type="string"/>
+          <element minOccurs="0" name="datoTilgjengeligTil" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="ElAnleggstype"/>
+          <element minOccurs="0" name="ElKoblinger" type="innsynstjenesteapi:ElKoblinger &gt; effektPropertyType"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="høydeOverSjøkartnull" type="double"/>
+          <element minOccurs="0" name="rekkeviddeKabel" type="integer"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="elkoblingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:elkobling"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="fartsrestriksjoner" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:fartsrestriksjonerType"/>
+  <complexType name="fartsrestriksjonerType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="datoGyldigFra" type="string"/>
+          <element minOccurs="0" name="datoGyldigTil" type="string"/>
+          <element minOccurs="0" name="fastsattAv" type="string"/>
+          <element minOccurs="0" name="forskriftLenke" type="string"/>
+          <element minOccurs="0" name="gjelderFor" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="gjelderForFartøytype"/>
+          <element minOccurs="0" name="lovhjemmel" type="string"/>
+          <element minOccurs="0" name="forskriftNavn" type="string"/>
+          <element minOccurs="0" name="hastighet" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="fartsrestriksjonerPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:fartsrestriksjoner"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="fartsrestriksjonergrense" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:fartsrestriksjonergrenseType"/>
+  <complexType name="fartsrestriksjonergrenseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="fartsrestriksjonergrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:fartsrestriksjonergrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="fender" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:fenderType"/>
+  <complexType name="fenderType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="fendertype" type="string"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="høydeOverSjøkartnull" type="double"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="fenderorientering" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element minOccurs="0" name="antall" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="fenderPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:fender"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="flytedokk" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:flytedokkType"/>
+  <complexType name="flytedokkType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="integer"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="maksFartøyBredde" type="double"/>
+          <element minOccurs="0" name="maksFartøyLengde" type="integer"/>
+          <element minOccurs="0" name="maksFartøyDyptgående" type="double"/>
+          <element minOccurs="0" name="løftekapasitet" type="integer"/>
+          <element minOccurs="0" name="navn" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="flytedokkPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:flytedokk"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="forbudsområde" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:forbudsområdeType"/>
+  <complexType name="forbudsområdeType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="datoGyldigFra" type="string"/>
+          <element minOccurs="0" name="datoGyldigTil" type="string"/>
+          <element minOccurs="0" name="fastsattAv" type="string"/>
+          <element minOccurs="0" name="forskriftLenke" type="string"/>
+          <element minOccurs="0" name="gjelderFor" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="gjelderForFartøytype"/>
+          <element minOccurs="0" name="lovhjemmel" type="string"/>
+          <element minOccurs="0" name="forskriftNavn" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="forbudstype"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="forbudsområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:forbudsområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="forbudsområdegrense" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:forbudsområdegrenseType"/>
+  <complexType name="forbudsområdegrenseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="forbudsområdegrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:forbudsområdegrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="fortøyningsinnretning" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:fortøyningsinnretningType"/>
+  <complexType name="fortøyningsinnretningType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="fortøyningstype" type="string"/>
+          <element minOccurs="0" name="maksbelastning" type="integer"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element minOccurs="0" name="høydeOverSjøkartnull" type="double"/>
+          <element minOccurs="0" name="sertifiseringsdato" type="date"/>
+          <element minOccurs="0" name="tillattFortøyningsvinkelGrunnriss" type="string"/>
+          <element minOccurs="0" name="tillattFortøyningsvinkelOppriss" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="fortøyningsinnretningPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:fortøyningsinnretning"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="havneområde" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:havneområdeType"/>
+  <complexType name="havneområdeType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="forvaltesAv" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="havneområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:havneområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="havnesensor" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:havnesensorType"/>
+  <complexType name="havnesensorType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="sensortype" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="eier" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="havnesensorPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:havnesensor"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="identifikasjon &gt; identifikasjon.lokalId" substitutionGroup="gml:AbstractObject" type="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalIdType"/>
+  <complexType name="identifikasjon &gt; identifikasjon.lokalIdType">
+    <sequence>
+      <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalIdPropertyType"/>
+    </sequence>
+  </complexType>
+  <complexType name="identifikasjon &gt; identifikasjon.lokalIdPropertyType">
+    <sequence>
+      <element ref="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalId"/>
+    </sequence>
+  </complexType>
+  <element name="identifikasjon &gt; lokalId" substitutionGroup="gml:AbstractObject" type="innsynstjenesteapi:identifikasjon &gt; lokalIdType"/>
+  <complexType name="identifikasjon &gt; lokalIdType">
+    <sequence>
+      <element minOccurs="0" name="lokalId" type="string"/>
+      <element minOccurs="0" name="navnerom" type="string"/>
+      <element minOccurs="0" name="versjonId" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="identifikasjon &gt; lokalIdPropertyType">
+    <sequence>
+      <element ref="innsynstjenesteapi:identifikasjon &gt; lokalId"/>
+    </sequence>
+  </complexType>
+  <element name="kaifront" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:kaifrontType"/>
+  <complexType name="kaifrontType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="kaitype"/>
+          <element minOccurs="0" name="lengde" type="double"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="kaifronttype" type="string"/>
+          <element minOccurs="0" name="høydeOverSjøkartnull" type="double"/>
+          <element minOccurs="0" name="status" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="kaifrontPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:kaifront"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="kaiområde" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:kaiområdeType"/>
+  <complexType name="kaiområdeType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="kaitype" type="string"/>
+          <element minOccurs="0" name="kaidekketype" type="string"/>
+          <element minOccurs="0" name="bildeLink" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="kaiområdePropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:kaiområde"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="kaiområdegrense" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:kaiområdegrenseType"/>
+  <complexType name="kaiområdegrenseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="kaiområdegrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:kaiområdegrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="kran" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:kranType"/>
+  <complexType name="kranType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="krantype" type="string"/>
+          <element minOccurs="0" name="maksbelastning" type="integer"/>
+          <element minOccurs="0" name="rekkevidde" type="integer"/>
+          <element minOccurs="0" name="maksbelastningRekkevidde" type="integer"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element minOccurs="0" name="mobil" type="boolean"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="energikilde"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="kranPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:kran"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="kvalitet &gt; datafangstmetode" substitutionGroup="gml:AbstractObject" type="innsynstjenesteapi:kvalitet &gt; datafangstmetodeType"/>
+  <complexType name="kvalitet &gt; datafangstmetodeType">
+    <sequence>
+      <element minOccurs="0" name="datafangstmetode" type="string"/>
+      <element minOccurs="0" name="nøyaktighet" type="integer"/>
+      <element minOccurs="0" name="synbarhet" type="string"/>
+      <element minOccurs="0" name="datafangstmetodeHøyde" type="string"/>
+      <element minOccurs="0" name="nøyaktighetHøyde" type="integer"/>
+    </sequence>
+  </complexType>
+  <complexType name="kvalitet &gt; datafangstmetodePropertyType">
+    <sequence>
+      <element ref="innsynstjenesteapi:kvalitet &gt; datafangstmetode"/>
+    </sequence>
+  </complexType>
+  <element name="kvalitet &gt; kvalitet.datafangstmetode" substitutionGroup="gml:AbstractObject" type="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetodeType"/>
+  <complexType name="kvalitet &gt; kvalitet.datafangstmetodeType">
+    <sequence>
+      <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetodePropertyType"/>
+    </sequence>
+  </complexType>
+  <complexType name="kvalitet &gt; kvalitet.datafangstmetodePropertyType">
+    <sequence>
+      <element ref="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetode"/>
+    </sequence>
+  </complexType>
+  <element name="lastelosseutstyr" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:lastelosseutstyrType"/>
+  <complexType name="lastelosseutstyrType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="utstyrstype"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="bruksområde"/>
+          <element minOccurs="0" name="mobil" type="boolean"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="lastelosseutstyrPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:lastelosseutstyr"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="slipp" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:slippType"/>
+  <complexType name="slippType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="kaidekketype" type="string"/>
+          <element minOccurs="0" name="navn" type="string"/>
+          <element minOccurs="0" name="spesifikasjon" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="høydeOverSjøkartnull" type="double"/>
+          <element minOccurs="0" name="maksLengdeFartøy" type="double"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype"/>
+          <element minOccurs="0" name="slippKapasitet" type="integer"/>
+          <element minOccurs="0" name="maksBreddeFartøy" type="double"/>
+          <element minOccurs="0" name="maksDyptgåendeFartøy" type="double"/>
+          <element minOccurs="0" name="kranKapasitet" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="slippPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:slipp"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="toalett" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:toalettType"/>
+  <complexType name="toalettType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="datoTilgjengeligFra" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="datoTilgjengeligTil" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="toalettPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:toalett"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="vauttak" substitutionGroup="gml:AbstractFeature" type="innsynstjenesteapi:vauttakType"/>
+  <complexType name="vauttakType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="innsynstjenesteapi:identifikasjon &gt; identifikasjon.lokalIdPropertyType"/>
+          <element minOccurs="0" name="datafangstdato" type="date"/>
+          <element minOccurs="0" name="kvalitet" type="innsynstjenesteapi:kvalitet &gt; kvalitet.datafangstmetodePropertyType"/>
+          <element minOccurs="0" name="informasjon" type="string"/>
+          <element minOccurs="0" name="link" type="string"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element minOccurs="0" name="GLN" type="integer"/>
+          <element minOccurs="0" name="havnNavn" type="string"/>
+          <element minOccurs="0" name="MRN" type="string"/>
+          <element minOccurs="0" name="UNLOCODE" type="string"/>
+          <element minOccurs="0" name="ISPS" type="boolean"/>
+          <element minOccurs="0" name="havneanleggNavn" type="string"/>
+          <element minOccurs="0" name="havneanleggId" type="string"/>
+          <element minOccurs="0" name="kaiId" type="string"/>
+          <element minOccurs="0" name="kainavn" type="string"/>
+          <element minOccurs="0" name="kaiIdIntern" type="string"/>
+          <element minOccurs="0" name="objektIdIntern" type="string"/>
+          <element minOccurs="0" name="objektLøpenummer" type="string"/>
+          <element minOccurs="0" name="datoTilgjengeligFra" type="string"/>
+          <element minOccurs="0" name="høydereferanse" type="string"/>
+          <element minOccurs="0" name="kapasitet" type="integer"/>
+          <element minOccurs="0" name="kumnummer" type="integer"/>
+          <element minOccurs="0" name="datoTilgjengeligTil" type="string"/>
+          <element minOccurs="0" name="status" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="tilgangstype"/>
+          <element minOccurs="0" name="tilkoblingsdimensjon" type="string"/>
+          <element minOccurs="0" name="VAuttakstype" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="vauttakPropertyType">
+    <sequence minOccurs="0">
+      <element ref="innsynstjenesteapi:vauttak"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>
