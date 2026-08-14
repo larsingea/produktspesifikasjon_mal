@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result" xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result" config="/home/runner/work/produktspesifikasjon_mal/produktspesifikasjon_mal/produktspesifikasjon/havnedata-2/innsynstjeneste-api/schema/shapechange-config.xml" end="Fri Aug 14 13:44:33 UTC 2026" resultCode="0" start="Fri Aug 14 13:44:27 UTC 2026" version="4.0.0">
+  <Messages>
+    <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: START ----------"/>
+    <Info message="Validating input parameters."/>
+    <Info message="Validation of input parameters completed."/>
+    <Info message="Validating log parameters."/>
+    <Info message="Validation of log parameters completed."/>
+    <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.shapechange.core.target.xmlschema.XmlSchema' and @inputs 'INPUT' ..."/>
+    <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.shapechange.core.target.json.JsonSchemaTarget' and @inputs 'INPUT' ..."/>
+    <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: COMPLETE ----------"/>
+    <Warning message="The type 'Sequence' of property 'forbudsområde.gjelderForFartøytype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::forbudsområde::gjelderForFartøytype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'forbudsområde.forbudstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::forbudsområde::forbudstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'kaifront.kaitype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::kaifront::kaitype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'kran.energikilde' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::kran::energikilde'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'lastelosseutstyr.utstyrstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::lastelosseutstyr::utstyrstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'lastelosseutstyr.bruksområde' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::lastelosseutstyr::bruksområde'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'avfallspunkt.avfallstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::avfallspunkt::avfallstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'avfallspunkt.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::avfallspunkt::tilgangstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'slipp.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::slipp::tilgangstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'vauttak.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::vauttak::tilgangstype'"/>
+    </Warning>
+    <Error message="Name of 'class' 'identifikasjon &gt; lokalId' includes invalid characters.">
+      <Detail message="Context: Class 'innsynstjeneste-api::identifikasjon &gt; lokalId'"/>
+    </Error>
+    <Error message="Name of 'class' 'kvalitet &gt; datafangstmetode' includes invalid characters.">
+      <Detail message="Context: Class 'innsynstjeneste-api::kvalitet &gt; datafangstmetode'"/>
+    </Error>
+    <Error message="Name of 'class' 'ElKoblinger &gt; effekt' includes invalid characters.">
+      <Detail message="Context: Class 'innsynstjeneste-api::ElKoblinger &gt; effekt'"/>
+    </Error>
+    <Warning message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.effekt' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::effekt'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.frekvens' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::frekvens'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.spenning' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::spenning'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.sikringstørrelse' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::sikringstørrelse'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.kontaktId' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::kontaktId'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.faser' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::faser'"/>
+    </Warning>
+    <Error message="Name of 'class' 'identifikasjon &gt; identifikasjon.lokalId' includes invalid characters.">
+      <Detail message="Context: Class 'innsynstjeneste-api::identifikasjon &gt; identifikasjon.lokalId'"/>
+    </Error>
+    <Error message="Name of 'class' 'kvalitet &gt; kvalitet.datafangstmetode' includes invalid characters.">
+      <Detail message="Context: Class 'innsynstjeneste-api::kvalitet &gt; kvalitet.datafangstmetode'"/>
+    </Error>
+    <Warning message="The type 'Sequence' of property 'beredskapspunkt.beredskapstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::beredskapspunkt::beredskapstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'drivstofftilkobling.drivstofftype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::drivstofftilkobling::drivstofftype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'drivstofftilkobling.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::drivstofftilkobling::tilgangstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'elkobling.ElAnleggstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::elkobling::ElAnleggstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'elkobling.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::elkobling::tilgangstype'"/>
+    </Warning>
+    <Warning message="The type 'Sequence' of property 'fartsrestriksjoner.gjelderForFartøytype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::fartsrestriksjoner::gjelderForFartøytype'"/>
+    </Warning>
+    <ProcessFlowInfo message="Application schema found, package name: 'innsynstjeneste-api', target namespace: 'https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/innsynstjeneste-api/1.0'"/>
+    <ProcessFlowInfo message="Now processing target 'XML Schema' for input 'INPUT'."/>
+    <Error message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.effekt' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::effekt'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.frekvens' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::frekvens'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.spenning' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::spenning'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.sikringstørrelse' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::sikringstørrelse'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.kontaktId' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::kontaktId'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'ElKoblinger &gt; effekt.faser' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::ElKoblinger &gt; effekt::faser'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'avfallspunkt.avfallstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::avfallspunkt::avfallstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'avfallspunkt.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::avfallspunkt::tilgangstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'beredskapspunkt.beredskapstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::beredskapspunkt::beredskapstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'drivstofftilkobling.drivstofftype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::drivstofftilkobling::drivstofftype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'drivstofftilkobling.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::drivstofftilkobling::tilgangstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'elkobling.ElAnleggstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::elkobling::ElAnleggstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'elkobling.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::elkobling::tilgangstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'fartsrestriksjoner.gjelderForFartøytype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::fartsrestriksjoner::gjelderForFartøytype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'forbudsområde.gjelderForFartøytype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::forbudsområde::gjelderForFartøytype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'forbudsområde.forbudstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::forbudsområde::forbudstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'kaifront.kaitype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::kaifront::kaitype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'kran.energikilde' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::kran::energikilde'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'lastelosseutstyr.utstyrstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::lastelosseutstyr::utstyrstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'lastelosseutstyr.bruksområde' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::lastelosseutstyr::bruksområde'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'slipp.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::slipp::tilgangstype'"/>
+    </Error>
+    <Error message="The type 'Sequence' of property 'vauttak.tilgangstype' was not found.">
+      <Detail message="Context: Property 'innsynstjeneste-api::vauttak::tilgangstype'"/>
+    </Error>
+    <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.shapechange.core.target.xmlschema.XmlSchema' for input ID: 'INPUT'.&#10;-------------------------------------------------"/>
+    <ProcessFlowInfo message="Application schema found, package name: 'innsynstjeneste-api', target namespace: 'https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/innsynstjeneste-api/1.0'"/>
+    <ProcessFlowInfo message="Now processing target 'JSON Schema' for input 'INPUT'."/>
+    <Warning message="JSON Schema definition for type 'Sequence' could not be identified. No map entry is defined for the type, and the type was not found in the model. No type restriction is created for properties with this type as value type."/>
+    <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.shapechange.core.target.json.JsonSchemaTarget' for input ID: 'INPUT'.&#10;-------------------------------------------------"/>
+  </Messages>
+  <Results>
+    <Result href="file:/home/runner/work/produktspesifikasjon_mal/produktspesifikasjon_mal/produktspesifikasjon/havnedata-2/innsynstjeneste-api/schema/xsd/INPUT/innsynstjeneste-api.xsd" scope="https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/innsynstjeneste-api/1.0" target="XML Schema">innsynstjeneste-api.xsd</Result>
+    <Result href="file:/home/runner/work/produktspesifikasjon_mal/produktspesifikasjon_mal/produktspesifikasjon/havnedata-2/innsynstjeneste-api/schema/jsonschema/INPUT/innsynstjenesteapi/innsynstjeneste-api.json" target="JSON Schema">innsynstjeneste-api.json</Result>
+  </Results>
+</ShapeChangeResult>

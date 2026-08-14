@@ -1,0 +1,1792 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/havnedata-2/innsynstjeneste-api/innsynstjenesteapi/innsynstjeneste-api.json",
+  "definitions": {
+    "ElKoblinger \u003e effekt": {
+      "$id": "#ElKoblinger \u003e effekt",
+      "type": "object",
+      "properties": {
+        "effekt": {
+          "type": "array",
+          "uniqueItems": true
+        },
+        "frekvens": {
+          "type": "array",
+          "uniqueItems": true
+        },
+        "spenning": {
+          "type": "array",
+          "uniqueItems": true
+        },
+        "sikringstørrelse": {
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kontaktId": {
+          "type": "array",
+          "uniqueItems": true
+        },
+        "faser": {
+          "type": "array",
+          "uniqueItems": true
+        }
+      }
+    },
+    "administrativthavneområde": {
+      "$id": "#administrativthavneområde",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "administreresAv": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "avfallspunkt": {
+      "$id": "#avfallspunkt",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "avfallstype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "beholdertype": {
+              "type": "string"
+            },
+            "datoTilgjengeligFra": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "leveringsprosedyre": {
+              "type": "string"
+            },
+            "mobil": {
+              "type": "boolean"
+            },
+            "datoTilgjengeligTil": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "tilgangstype": {
+              "type": "array",
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
+    "beredskapspunkt": {
+      "$id": "#beredskapspunkt",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "beredskapstype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "spesifikasjon": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "drivstofftilkobling": {
+      "$id": "#drivstofftilkobling",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "datoTilgjengeligFra": {
+              "type": "string"
+            },
+            "drivstofftype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "kapasitet": {
+              "type": "integer"
+            },
+            "mobil": {
+              "type": "boolean"
+            },
+            "datoTilgjengeligTil": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "tilgangstype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "bunkringsanleggtype": {
+              "type": "string"
+            },
+            "kontaktnavn": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "elkobling": {
+      "$id": "#elkobling",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "datoTilgjengeligFra": {
+              "type": "string"
+            },
+            "datoTilgjengeligTil": {
+              "type": "string"
+            },
+            "ElAnleggstype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "ElKoblinger": {
+              "$ref": "#ElKoblinger \u003e effekt"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "høydeOverSjøkartnull": {
+              "type": "number"
+            },
+            "rekkeviddeKabel": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string"
+            },
+            "tilgangstype": {
+              "type": "array",
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
+    "fartsrestriksjoner": {
+      "$id": "#fartsrestriksjoner",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "datoGyldigFra": {
+              "type": "string"
+            },
+            "datoGyldigTil": {
+              "type": "string"
+            },
+            "fastsattAv": {
+              "type": "string"
+            },
+            "forskriftLenke": {
+              "type": "string"
+            },
+            "gjelderFor": {
+              "type": "string"
+            },
+            "gjelderForFartøytype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "lovhjemmel": {
+              "type": "string"
+            },
+            "forskriftNavn": {
+              "type": "string"
+            },
+            "hastighet": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "fartsrestriksjonergrense": {
+      "$id": "#fartsrestriksjonergrense",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            }
+          }
+        }
+      }
+    },
+    "fender": {
+      "$id": "#fender",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "fendertype": {
+              "type": "string"
+            },
+            "spesifikasjon": {
+              "type": "string"
+            },
+            "høydeOverSjøkartnull": {
+              "type": "number"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "fenderorientering": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "antall": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "flytedokk": {
+      "$id": "#flytedokk",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "integer"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "maksFartøyBredde": {
+              "type": "number"
+            },
+            "maksFartøyLengde": {
+              "type": "integer"
+            },
+            "maksFartøyDyptgående": {
+              "type": "number"
+            },
+            "løftekapasitet": {
+              "type": "integer"
+            },
+            "navn": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "forbudsområde": {
+      "$id": "#forbudsområde",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "datoGyldigFra": {
+              "type": "string"
+            },
+            "datoGyldigTil": {
+              "type": "string"
+            },
+            "fastsattAv": {
+              "type": "string"
+            },
+            "forskriftLenke": {
+              "type": "string"
+            },
+            "gjelderFor": {
+              "type": "string"
+            },
+            "gjelderForFartøytype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "lovhjemmel": {
+              "type": "string"
+            },
+            "forskriftNavn": {
+              "type": "string"
+            },
+            "forbudstype": {
+              "type": "array",
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
+    "forbudsområdegrense": {
+      "$id": "#forbudsområdegrense",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            }
+          }
+        }
+      }
+    },
+    "fortøyningsinnretning": {
+      "$id": "#fortøyningsinnretning",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "fortøyningstype": {
+              "type": "string"
+            },
+            "maksbelastning": {
+              "type": "integer"
+            },
+            "spesifikasjon": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "høydeOverSjøkartnull": {
+              "type": "number"
+            },
+            "sertifiseringsdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "tillattFortøyningsvinkelGrunnriss": {
+              "type": "string"
+            },
+            "tillattFortøyningsvinkelOppriss": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "havneområde": {
+      "$id": "#havneområde",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "forvaltesAv": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "havnesensor": {
+      "$id": "#havnesensor",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "sensortype": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "eier": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "identifikasjon \u003e identifikasjon.lokalId": {
+      "$id": "#identifikasjon \u003e identifikasjon.lokalId",
+      "type": "object",
+      "properties": {
+        "identifikasjon": {
+          "$ref": "#identifikasjon \u003e identifikasjon.lokalId"
+        }
+      }
+    },
+    "identifikasjon \u003e lokalId": {
+      "$id": "#identifikasjon \u003e lokalId",
+      "type": "object",
+      "properties": {
+        "lokalId": {
+          "type": "string"
+        },
+        "navnerom": {
+          "type": "string"
+        },
+        "versjonId": {
+          "type": "string"
+        }
+      }
+    },
+    "kaifront": {
+      "$id": "#kaifront",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "kaitype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "lengde": {
+              "type": "number"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "kaifronttype": {
+              "type": "string"
+            },
+            "høydeOverSjøkartnull": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "kaiområde": {
+      "$id": "#kaiområde",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "kaitype": {
+              "type": "string"
+            },
+            "kaidekketype": {
+              "type": "string"
+            },
+            "bildeLink": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "kaiområdegrense": {
+      "$id": "#kaiområdegrense",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e datafangstmetode"
+            }
+          }
+        }
+      }
+    },
+    "kran": {
+      "$id": "#kran",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e identifikasjon.lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e kvalitet.datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "krantype": {
+              "type": "string"
+            },
+            "maksbelastning": {
+              "type": "integer"
+            },
+            "rekkevidde": {
+              "type": "integer"
+            },
+            "maksbelastningRekkevidde": {
+              "type": "integer"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "spesifikasjon": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "mobil": {
+              "type": "boolean"
+            },
+            "energikilde": {
+              "type": "array",
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
+    "kvalitet \u003e datafangstmetode": {
+      "$id": "#kvalitet \u003e datafangstmetode",
+      "type": "object",
+      "properties": {
+        "datafangstmetode": {
+          "type": "string"
+        },
+        "nøyaktighet": {
+          "type": "integer"
+        },
+        "synbarhet": {
+          "type": "string"
+        },
+        "datafangstmetodeHøyde": {
+          "type": "string"
+        },
+        "nøyaktighetHøyde": {
+          "type": "integer"
+        }
+      }
+    },
+    "kvalitet \u003e kvalitet.datafangstmetode": {
+      "$id": "#kvalitet \u003e kvalitet.datafangstmetode",
+      "type": "object",
+      "properties": {
+        "kvalitet": {
+          "$ref": "#kvalitet \u003e kvalitet.datafangstmetode"
+        }
+      }
+    },
+    "lastelosseutstyr": {
+      "$id": "#lastelosseutstyr",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e identifikasjon.lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e kvalitet.datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "utstyrstype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "bruksområde": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "mobil": {
+              "type": "boolean"
+            },
+            "spesifikasjon": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "slipp": {
+      "$id": "#slipp",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e identifikasjon.lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e kvalitet.datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "kaidekketype": {
+              "type": "string"
+            },
+            "navn": {
+              "type": "string"
+            },
+            "spesifikasjon": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "høydeOverSjøkartnull": {
+              "type": "number"
+            },
+            "maksLengdeFartøy": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "tilgangstype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "slippKapasitet": {
+              "type": "integer"
+            },
+            "maksBreddeFartøy": {
+              "type": "number"
+            },
+            "maksDyptgåendeFartøy": {
+              "type": "number"
+            },
+            "kranKapasitet": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "toalett": {
+      "$id": "#toalett",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e identifikasjon.lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e kvalitet.datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "datoTilgjengeligFra": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "datoTilgjengeligTil": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "vauttak": {
+      "$id": "#vauttak",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Point.json"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "lokalid": {
+              "type": "string"
+            },
+            "identifikasjon": {
+              "$ref": "#identifikasjon \u003e identifikasjon.lokalId"
+            },
+            "datafangstdato": {
+              "type": "string",
+              "format": "date"
+            },
+            "kvalitet": {
+              "$ref": "#kvalitet \u003e kvalitet.datafangstmetode"
+            },
+            "informasjon": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "oppdateringsdato": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "GLN": {
+              "type": "integer"
+            },
+            "havnNavn": {
+              "type": "string"
+            },
+            "MRN": {
+              "type": "string"
+            },
+            "UNLOCODE": {
+              "type": "string"
+            },
+            "ISPS": {
+              "type": "boolean"
+            },
+            "havneanleggNavn": {
+              "type": "string"
+            },
+            "havneanleggId": {
+              "type": "string"
+            },
+            "kaiId": {
+              "type": "string"
+            },
+            "kainavn": {
+              "type": "string"
+            },
+            "kaiIdIntern": {
+              "type": "string"
+            },
+            "objektIdIntern": {
+              "type": "string"
+            },
+            "objektLøpenummer": {
+              "type": "string"
+            },
+            "datoTilgjengeligFra": {
+              "type": "string"
+            },
+            "høydereferanse": {
+              "type": "string"
+            },
+            "kapasitet": {
+              "type": "integer"
+            },
+            "kumnummer": {
+              "type": "integer"
+            },
+            "datoTilgjengeligTil": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "tilgangstype": {
+              "type": "array",
+              "uniqueItems": true
+            },
+            "tilkoblingsdimensjon": {
+              "type": "string"
+            },
+            "VAuttakstype": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
