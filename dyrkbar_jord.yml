@@ -2,6 +2,7 @@ metadataId: 8252baea-5bad-428b-8f18-fe236fa4ced6
 output_directory: produktspesifikasjon
 product_slug: dyrkbarjord
 updated: '2026-08-04'
+outputs: geopackage,xsd,jsonschema,odcs
 scopes:
 - name: Filleveranse
   url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Skog og landskap/Produktspesifikasjon DyrkbarJord-20250530 Utkast.xml
