@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:nydatakilde="https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/ny-datakilde/1.0" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/ny-datakilde/1.0" version="1.0">
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="arealressursflate" substitutionGroup="gml:AbstractFeature" type="nydatakilde:arealressursflateType"/>
+  <complexType name="arealressursflateType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="id" type="integer"/>
+          <element name="identifikasjon.lokalid" type="string"/>
+          <element name="identifikasjon.navnerom" type="string"/>
+          <element name="informasjon" type="string"/>
+          <element minOccurs="0" name="kopidata.kopidato" type="date"/>
+          <element minOccurs="0" name="kopidata.områdeid" type="integer"/>
+          <element minOccurs="0" name="kopidata.originaldatavert" type="string"/>
+          <element name="dyrkbarjord" type="string"/>
+          <element name="fulldyrka2008" type="string"/>
+          <element name="myrtorv" type="string"/>
+          <element name="planeringsjord" type="string"/>
+          <element name="verneform" type="string"/>
+          <element name="årsversjon" type="integer"/>
+          <element minOccurs="0" name="avgrensesavarealressursgrense_1" type="string"/>
+          <element minOccurs="0" name="avgrensesavarealressursgrense_2" type="string"/>
+          <element minOccurs="0" name="avgrensesavarealressursgrense_3" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="arealressursflatePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nydatakilde:arealressursflate"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="arealressursgrense" substitutionGroup="gml:AbstractFeature" type="nydatakilde:arealressursgrenseType"/>
+  <complexType name="arealressursgrenseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="id" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="arealressursgrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="nydatakilde:arealressursgrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

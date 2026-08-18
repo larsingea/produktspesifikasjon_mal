@@ -1,0 +1,98 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/ny-datakilde/nydatakilde/ny-datakilde.json",
+  "definitions": {
+    "arealressursflate": {
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "identifikasjon.lokalid": {
+          "type": "string"
+        },
+        "identifikasjon.navnerom": {
+          "type": "string"
+        },
+        "informasjon": {
+          "type": "string"
+        },
+        "kopidata.kopidato": {
+          "type": "string",
+          "format": "date"
+        },
+        "kopidata.områdeid": {
+          "type": "integer"
+        },
+        "kopidata.originaldatavert": {
+          "type": "string"
+        },
+        "dyrkbarjord": {
+          "type": "string"
+        },
+        "fulldyrka2008": {
+          "type": "string"
+        },
+        "myrtorv": {
+          "type": "string"
+        },
+        "planeringsjord": {
+          "type": "string"
+        },
+        "verneform": {
+          "type": "string"
+        },
+        "årsversjon": {
+          "type": "integer"
+        },
+        "avgrensesavarealressursgrense_1": {
+          "type": "string"
+        },
+        "avgrensesavarealressursgrense_2": {
+          "type": "string"
+        },
+        "avgrensesavarealressursgrense_3": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@type",
+        "dyrkbarjord",
+        "fulldyrka2008",
+        "id",
+        "identifikasjon.lokalid",
+        "identifikasjon.navnerom",
+        "informasjon",
+        "myrtorv",
+        "planeringsjord",
+        "verneform",
+        "årsversjon"
+      ]
+    },
+    "arealressursgrense": {
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "@type",
+        "id"
+      ]
+    }
+  }
+}

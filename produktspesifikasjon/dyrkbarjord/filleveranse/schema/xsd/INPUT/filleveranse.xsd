@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:filleveranse="https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/filleveranse/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/filleveranse/1.0" version="1.0">
+  <import namespace="http://www.interactive-instruments.de/ShapeChange/AppInfo" schemaLocation="https://shapechange.net/resources/schema/ShapeChangeAppinfo.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="ArealressursFlate" substitutionGroup="filleveranse:DyrkbarJord_Fellesegenskaper" type="filleveranse:ArealressursFlateType"/>
+  <complexType name="ArealressursFlateType">
+    <complexContent>
+      <extension base="filleveranse:DyrkbarJord_FellesegenskaperType">
+        <sequence>
+          <element name="dyrkbarJord" type="filleveranse:DyrkbarJordType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">ARDYRKING</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="fulldyrka2008" type="filleveranse:Fulldyrka2008Type">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">FULLDYRKA2008</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="myrTorv" type="filleveranse:MyrTorvType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">MYRTORV</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="område" type="gml:SurfacePropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">Flate</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="planeringsjord" type="filleveranse:PlaneringsjordType"/>
+          <element name="verneform" type="filleveranse:VerneformType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">VERNEFORM</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="årsversjon" type="integer">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">ÅRSVERSJON</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensesAvArealressursGrense" type="filleveranse:ArealressursGrensePropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ArealressursFlatePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranse:ArealressursFlate"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ArealressursGrense" substitutionGroup="gml:AbstractFeature" type="filleveranse:ArealressursGrenseType"/>
+  <complexType name="ArealressursGrenseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="grense" type="gml:CurvePropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">Kurve</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ArealressursGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranse:ArealressursGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="DyrkbarJordType">
+    <union memberTypes="filleveranse:DyrkbarJordEnumerationType filleveranse:DyrkbarJordOtherType"/>
+  </simpleType>
+  <simpleType name="DyrkbarJordEnumerationType">
+    <restriction base="string">
+      <enumeration value="Dyrkbar Jord"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="DyrkbarJordOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element abstract="true" name="DyrkbarJord_Fellesegenskaper" substitutionGroup="gml:AbstractFeature" type="filleveranse:DyrkbarJord_FellesegenskaperType"/>
+  <complexType abstract="true" name="DyrkbarJord_FellesegenskaperType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="identifikasjon" type="filleveranse:IdentifikasjonPropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">IDENT</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="informasjon" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">INFORMASJON</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="kopidata" type="filleveranse:KopidataPropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">KOPIDATA</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DyrkbarJord_FellesegenskaperPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranse:DyrkbarJord_Fellesegenskaper"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="Fulldyrka2008Type">
+    <union memberTypes="filleveranse:Fulldyrka2008EnumerationType filleveranse:Fulldyrka2008OtherType"/>
+  </simpleType>
+  <simpleType name="Fulldyrka2008EnumerationType">
+    <restriction base="string">
+      <enumeration value="Fulldyrka 2008"/>
+      <enumeration value="Ikke fulldyrka"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="Fulldyrka2008OtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="Identifikasjon" substitutionGroup="gml:AbstractObject" type="filleveranse:IdentifikasjonType"/>
+  <complexType name="IdentifikasjonType">
+    <sequence>
+      <element name="lokalId" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">LOKALID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="navnerom" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">NAVNEROM</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="IdentifikasjonPropertyType">
+    <sequence>
+      <element ref="filleveranse:Identifikasjon"/>
+    </sequence>
+  </complexType>
+  <element name="Kopidata" substitutionGroup="gml:AbstractObject" type="filleveranse:KopidataType"/>
+  <complexType name="KopidataType">
+    <sequence>
+      <element name="kopidato" type="date">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">KOPIDATO</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="områdeId" type="integer">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">OMRÅDEID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="originalDatavert" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">ORIGINALDATAVERT</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="KopidataPropertyType">
+    <sequence>
+      <element ref="filleveranse:Kopidata"/>
+    </sequence>
+  </complexType>
+  <simpleType name="MyrTorvType">
+    <union memberTypes="filleveranse:MyrTorvEnumerationType filleveranse:MyrTorvOtherType"/>
+  </simpleType>
+  <simpleType name="MyrTorvEnumerationType">
+    <restriction base="string">
+      <enumeration value="Mineraljord dyrkbar mineraljord"/>
+      <enumeration value="Myr dyrkbar myr"/>
+      <enumeration value="Torvmark dyrkbar torvmark"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="MyrTorvOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PlaneringsjordType">
+    <union memberTypes="filleveranse:PlaneringsjordEnumerationType filleveranse:PlaneringsjordOtherType"/>
+  </simpleType>
+  <simpleType name="PlaneringsjordEnumerationType">
+    <restriction base="string">
+      <enumeration value="Ikke planeringsjord"/>
+      <enumeration value="Kartlagt"/>
+      <enumeration value="Modellert"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PlaneringsjordOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="VerneformType">
+    <union memberTypes="filleveranse:VerneformEnumerationType filleveranse:VerneformOtherType"/>
+  </simpleType>
+  <simpleType name="VerneformEnumerationType">
+    <restriction base="string">
+      <enumeration value="Ikke relevant"/>
+      <enumeration value="Verneform nasjonalpark"/>
+      <enumeration value="Verneform naturreservat"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="VerneformOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+</schema>

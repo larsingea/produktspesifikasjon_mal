@@ -1,0 +1,206 @@
+# Open Data Contract Standard (ODCS) v3.1.0 — generert fra datamodellen.
+apiVersion: v3.1.0
+kind: DataContract
+id: urn:odcs:dyrkbar-jord-filleveranse:1.0.0
+version: 1.0.0
+status: active
+name: Dyrkbar jord - Filleveranse
+schema:
+- name: ArealressursFlate
+  physicalName: arealressursflate
+  logicalType: object
+  physicalType: table
+  description: 'et sammenhengende areal som er tilordnet de samme egenskapsverdiene
+    i henhold til et arealressursklassifikasjonssystem
+
+    -- Definition --
+
+    a continuous area which has been assigned the same attribute values in accordance
+    with an area resource classification system'
+  customProperties:
+  - property: sosiObjektType
+    value: ArealressursFlate
+  - property: inheritsFrom
+    value: DyrkbarJord_Fellesegenskaper
+  - property: associations
+    value:
+    - role: avgrensesAvArealressursGrense
+      target: ArealressursGrense
+      cardinality: 0..*
+  properties:
+  - name: identifikasjon
+    logicalType: object
+    properties:
+    - name: lokalId
+      logicalType: string
+      description: 'lokal identifikator av et objekt
+
+        Merknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren
+        er unik innenfor navnerommet.'
+      required: true
+    - name: navnerom
+      logicalType: string
+      description: 'navnerom som unikt identifiserer datakilden til et objekt, anbefales
+        å være en http-URI
+
+        Eksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0
+
+        Merknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar
+        for de unike identifikatorene og må være registrert i data.geonorge.no eller
+        data.norge.no'
+      required: true
+    description: unik identifikasjon av et objekt
+    required: true
+  - name: informasjon
+    logicalType: string
+    description: Informasjon om brukte datakilder
+    required: true
+  - name: kopidata
+    logicalType: object
+    properties:
+    - name: kopidato
+      logicalType: timestamp
+      description: 'dato når objektet ble kopiert fra originaldatasettet
+
+
+        Merknad:
+
+        Er en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase
+        brukes til distribusjon.
+
+        Å kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato
+        blir endret.
+
+        Eventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato,
+        Datafangstdato og/eller Verifiseringsdato.'
+      required: true
+    - name: områdeId
+      logicalType: integer
+      description: 'identifikasjon av område som dataene dekker
+
+
+        Merknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres
+        nærmere.'
+      required: true
+    - name: originalDatavert
+      logicalType: string
+      description: ansvarlig etat for forvaltning av data
+      required: true
+    description: 'angivelse av at objektet er hentet fra et kopidatasett og ikke fra
+      originaldatasettet
+
+      Merknad: Inneholder informasjon om når kopidatasettet ble kopiert fra originaldatasettet
+      og hvem som er originaldataansvarlig'
+  - name: dyrkbarJord
+    logicalType: string
+    logicalTypeOptions:
+      pattern: ^(Dyrkbar\ Jord)$
+    customProperties:
+    - property: allowedValues
+      value:
+      - value: Dyrkbar Jord
+        label: Areal som egner seg for oppdyrking til fulldyrka jord.
+    description: Dyrkbar jord er areal som per i dag ikke er fulldyrka, men som ved
+      oppdyrking kan settes i en slik stand at de holder kravene til fulldyrka jord,
+      ut fra agronomiske perspektiv kan dyrkes opp til fylldyrka jord, og som holder
+      kravene til klima og jordkvalitet for plantedyrking.  Informasjon om dyrkbar
+      jord på arealressurser av typen overflatedyrka jord, innmarksbeite, skogareal,
+      åpen fastmark og myr.
+    required: true
+  - name: fulldyrka2008
+    logicalType: string
+    logicalTypeOptions:
+      pattern: ^(Fulldyrka\ 2008|Ikke\ fulldyrka)$
+    customProperties:
+    - property: allowedValues
+      value:
+      - value: Fulldyrka 2008
+        label: Arealtilstand er endret etter 2008 som følge av ajourhold av AR5
+      - value: Ikke fulldyrka
+        label: Arealtilstand er ikke endret etter 2008 ved ajourhold av AR5.
+    description: Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka
+      lenger
+    required: true
+  - name: myrTorv
+    logicalType: string
+    logicalTypeOptions:
+      pattern: ^(Mineraljord\ dyrkbar\ mineraljord|Myr\ dyrkbar\ myr|Torvmark\ dyrkbar\
+        torvmark)$
+    customProperties:
+    - property: allowedValues
+      value:
+      - value: Mineraljord dyrkbar mineraljord
+        label: Dyrkbar jord på areal som hverken er registrert med grunnforhold organiske
+          jordlag eller myr i AR5
+      - value: Myr dyrkbar myr
+        label: Dyrkbar jord på areal som er registrert som myr i AR5
+      - value: Torvmark dyrkbar torvmark
+        label: Dyrkbar jord på areal med grunnforhold organiske jordlag i AR5 men
+          som ikke er registrert som myr i AR5
+    description: Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord.
+      Informasjon om grunnforhold er hentet fra AR5
+    required: true
+  - name: område
+    logicalType: object
+    physicalType: geometry(Surface)
+    required: true
+    customProperties:
+    - property: geometryType
+      value: Surface
+  - name: planeringsjord
+    logicalType: string
+    logicalTypeOptions:
+      pattern: ^(Ikke\ planeringsjord|Kartlagt|Modellert)$
+    customProperties:
+    - property: allowedValues
+      value:
+      - value: Ikke planeringsjord
+        label: Areal som ikke er ansett som planeringsjord
+      - value: Kartlagt
+        label: Dyrkbar jord på areal som historisk er kartlagt som planeringsjord
+          og som ligger i kartlagte ravineområder
+      - value: Modellert
+        label: Dyrkbar jord på areal som historisk er kartlagt som planeringsjord
+          og som ligger i modellerte ravineområder
+    description: Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte
+      ravineområder Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering
+    required: true
+  - name: verneform
+    logicalType: string
+    logicalTypeOptions:
+      pattern: ^(Ikke\ relevant|Verneform\ nasjonalpark|Verneform\ naturreservat)$
+    customProperties:
+    - property: allowedValues
+      value:
+      - value: Ikke relevant
+        label: Det er ikke kartlagt Nasjonalpark eller Naturreservat på lokaliteten.
+      - value: Verneform nasjonalpark
+        label: Dyrkbar jord i nasjonalpark
+      - value: Verneform naturreservat
+        label: Dyrkbar jord i naturreservat
+    description: Informasjon om arealet ligger i en nasjonalpark eller et naturreservat
+    required: true
+  - name: årsversjon
+    logicalType: integer
+    description: Årstall for årsversjon av Dyrkbar jord datasettet
+    required: true
+- name: ArealressursGrense
+  physicalName: arealressursgrense
+  logicalType: object
+  physicalType: table
+  description: 'avgrensing for en eller to arealressursflater
+
+    -- Definition --
+
+    delimitation for one or two area resource surfaces'
+  customProperties:
+  - property: sosiObjektType
+    value: ArealressursGrense
+  properties:
+  - name: grense
+    logicalType: object
+    physicalType: geometry(LineString)
+    required: true
+    customProperties:
+    - property: geometryType
+      value: LineString
