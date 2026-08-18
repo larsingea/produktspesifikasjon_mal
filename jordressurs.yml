@@ -1,0 +1,10 @@
+metadataId: 3690c283-a1f2-4e95-8cd4-2d6115eb28f7
+output_directory: produktspesifikasjon
+product_slug: jordressurs
+updated: '2026-08-04'
+outputs: geopackage,xsd,jsonschema,odcs
+scopes:
+- name: Filleveranser
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Skog og landskap/Produktspesifikasjon Jordressurser - 20260320.xml
+  generator: xmi
+  description: Datamodellen dokumenterer filleveranser i form av GML-filer, SOSI-filer og Filgeodatabaser.
