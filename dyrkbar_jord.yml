@@ -8,7 +8,7 @@ scopes:
   url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Skog og landskap/Produktspesifikasjon DyrkbarJord-20250530 Utkast.xml
   generator: xmi
   description: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
-- name: Ny datakilde
+- name: GeoPackage
   url: https://arnevik.net/test/dyrkbarjord_tom_25833.gpkg
   generator: geopackage
   description: Tom GPKG - mal for dyrkbar jord
