@@ -1,0 +1,153 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/filleveranse/filleveranse/filleveranse.json",
+  "definitions": {
+    "ArealressursFlate": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/DyrkbarJord_Fellesegenskaper"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "$ref": "https://geojson.org/schema/Polygon.json"
+            },
+            "dyrkbarJord": {
+              "$ref": "#/definitions/DyrkbarJord"
+            },
+            "fulldyrka2008": {
+              "$ref": "#/definitions/Fulldyrka2008"
+            },
+            "myrTorv": {
+              "$ref": "#/definitions/MyrTorv"
+            },
+            "planeringsjord": {
+              "$ref": "#/definitions/Planeringsjord"
+            },
+            "verneform": {
+              "$ref": "#/definitions/Verneform"
+            },
+            "årsversjon": {
+              "type": "integer"
+            },
+            "avgrensesAvArealressursGrense": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "dyrkbarJord",
+            "fulldyrka2008",
+            "myrTorv",
+            "planeringsjord",
+            "verneform",
+            "årsversjon"
+          ]
+        }
+      ]
+    },
+    "ArealressursGrense": {
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@type"
+      ]
+    },
+    "DyrkbarJord": {
+      "type": "string",
+      "format": "uri"
+    },
+    "DyrkbarJord_Fellesegenskaper": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifikasjon": {
+          "$ref": "#/definitions/Identifikasjon"
+        },
+        "informasjon": {
+          "type": "string"
+        },
+        "kopidata": {
+          "$ref": "#/definitions/Kopidata"
+        }
+      },
+      "required": [
+        "@type",
+        "identifikasjon",
+        "informasjon"
+      ]
+    },
+    "Fulldyrka2008": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Identifikasjon": {
+      "type": "object",
+      "properties": {
+        "lokalId": {
+          "type": "string"
+        },
+        "navnerom": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "lokalId",
+        "navnerom"
+      ]
+    },
+    "Kopidata": {
+      "type": "object",
+      "properties": {
+        "kopidato": {
+          "type": "string",
+          "format": "date"
+        },
+        "områdeId": {
+          "type": "integer"
+        },
+        "originalDatavert": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kopidato",
+        "områdeId",
+        "originalDatavert"
+      ]
+    },
+    "MyrTorv": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Planeringsjord": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Verneform": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
