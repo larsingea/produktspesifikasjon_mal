@@ -2,6 +2,7 @@ metadataId: 28c28e3a-d88f-4a34-8c60-5efe6d56a44d
 output_directory: produktspesifikasjon
 product_slug: grunnkart_arealanalyser
 updated: '2026-08-04'
+outputs: geopackage,xsd,jsonschema,odcs
 scopes:
 - name: Filleveranse som DB
   url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Statens kartverk/NasjonaltGrunnkartForArealanalyse-20260101.xml
