@@ -35,9 +35,11 @@ schema:
     primaryKey: true
   - name: identifikasjon.lokalid
     logicalType: string
+    description: Lokal ID i datasettet - men skal være UUID
     required: true
   - name: identifikasjon.navnerom
     logicalType: string
+    description: Navnerom til datasett. Skal være en oppslagsbar URI
     required: true
   - name: informasjon
     logicalType: string
@@ -53,12 +55,18 @@ schema:
     required: true
   - name: fulldyrka2008
     logicalType: string
+    description: Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka
+      lenger
     required: true
   - name: myrtorv
     logicalType: string
+    description: Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord.
+      Informasjon om grunnforhold er hentet fra AR5
     required: true
   - name: planeringsjord
     logicalType: string
+    description: Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte
+      ravineområder Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering
     required: true
   - name: verneform
     logicalType: string

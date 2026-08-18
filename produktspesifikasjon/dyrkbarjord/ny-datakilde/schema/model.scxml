@@ -73,6 +73,13 @@ a continuous area which has been assigned the same attribute values in accordanc
       <sc:Property>
        <sc:name>identifikasjon.lokalid</sc:name>
        <sc:id>C1_3</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>Lokal ID i datasettet - men skal være UUID</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
        <sc:cardinality>1</sc:cardinality>
        <sc:sequenceNumber>3</sc:sequenceNumber>
        <sc:typeName>CharacterString</sc:typeName>
@@ -80,6 +87,13 @@ a continuous area which has been assigned the same attribute values in accordanc
       <sc:Property>
        <sc:name>identifikasjon.navnerom</sc:name>
        <sc:id>C1_4</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>Navnerom til datasett. Skal være en oppslagsbar URI</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
        <sc:cardinality>1</sc:cardinality>
        <sc:sequenceNumber>4</sc:sequenceNumber>
        <sc:typeName>CharacterString</sc:typeName>
@@ -122,6 +136,13 @@ a continuous area which has been assigned the same attribute values in accordanc
       <sc:Property>
        <sc:name>fulldyrka2008</sc:name>
        <sc:id>C1_10</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
        <sc:cardinality>1</sc:cardinality>
        <sc:sequenceNumber>10</sc:sequenceNumber>
        <sc:typeName>CharacterString</sc:typeName>
@@ -129,6 +150,13 @@ a continuous area which has been assigned the same attribute values in accordanc
       <sc:Property>
        <sc:name>myrtorv</sc:name>
        <sc:id>C1_11</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
        <sc:cardinality>1</sc:cardinality>
        <sc:sequenceNumber>11</sc:sequenceNumber>
        <sc:typeName>CharacterString</sc:typeName>
@@ -136,6 +164,13 @@ a continuous area which has been assigned the same attribute values in accordanc
       <sc:Property>
        <sc:name>planeringsjord</sc:name>
        <sc:id>C1_12</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte ravineområder Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
        <sc:cardinality>1</sc:cardinality>
        <sc:sequenceNumber>12</sc:sequenceNumber>
        <sc:typeName>CharacterString</sc:typeName>
