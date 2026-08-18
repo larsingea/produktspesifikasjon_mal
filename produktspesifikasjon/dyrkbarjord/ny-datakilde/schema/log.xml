@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result" xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result" config="/home/runner/work/produktspesifikasjon_norge_digitalt/produktspesifikasjon_norge_digitalt/produktspesifikasjon/dyrkbarjord/ny-datakilde/schema/shapechange-config.xml" end="Tue Aug 18 08:16:01 UTC 2026" resultCode="0" start="Tue Aug 18 08:15:56 UTC 2026" version="4.0.0">
+<?xml version="1.0" encoding="UTF-8"?><ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result" xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result" config="/home/runner/work/produktspesifikasjon_norge_digitalt/produktspesifikasjon_norge_digitalt/produktspesifikasjon/dyrkbarjord/ny-datakilde/schema/shapechange-config.xml" end="Tue Aug 18 08:39:13 UTC 2026" resultCode="0" start="Tue Aug 18 08:39:06 UTC 2026" version="4.0.0">
   <Messages>
     <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: START ----------"/>
     <Info message="Validating input parameters."/>
