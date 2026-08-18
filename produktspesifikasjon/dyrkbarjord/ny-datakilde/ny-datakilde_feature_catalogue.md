@@ -67,6 +67,10 @@ Egenskaper
       <td><strong>identifikasjon.lokalid</strong></td>
     </tr>
     <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Lokal ID i datasettet - men skal være UUID</td>
+    </tr>
+    <tr>
       <th scope="row">Multiplisitet:</th>
       <td>1</td>
     </tr>
@@ -86,6 +90,10 @@ Egenskaper
     <tr>
       <th scope="row">Navn:</th>
       <td><strong>identifikasjon.navnerom</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Navnerom til datasett. Skal være en oppslagsbar URI</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>
@@ -214,6 +222,10 @@ Egenskaper
       <td><strong>fulldyrka2008</strong></td>
     </tr>
     <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger</td>
+    </tr>
+    <tr>
       <th scope="row">Multiplisitet:</th>
       <td>1</td>
     </tr>
@@ -235,6 +247,10 @@ Egenskaper
       <td><strong>myrtorv</strong></td>
     </tr>
     <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5</td>
+    </tr>
+    <tr>
       <th scope="row">Multiplisitet:</th>
       <td>1</td>
     </tr>
@@ -254,6 +270,10 @@ Egenskaper
     <tr>
       <th scope="row">Navn:</th>
       <td><strong>planeringsjord</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definisjon:</th>
+      <td>Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte ravineområder Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering</td>
     </tr>
     <tr>
       <th scope="row">Multiplisitet:</th>

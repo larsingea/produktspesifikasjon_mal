@@ -22,12 +22,14 @@
       {
         "name": "identifikasjon.lokalid",
         "type": "string",
-        "cardinality": "1"
+        "cardinality": "1",
+        "description": "Lokal ID i datasettet - men skal være UUID"
       },
       {
         "name": "identifikasjon.navnerom",
         "type": "string",
-        "cardinality": "1"
+        "cardinality": "1",
+        "description": "Navnerom til datasett. Skal være en oppslagsbar URI"
       },
       {
         "name": "informasjon",
@@ -57,17 +59,20 @@
       {
         "name": "fulldyrka2008",
         "type": "string",
-        "cardinality": "1"
+        "cardinality": "1",
+        "description": "Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger"
       },
       {
         "name": "myrtorv",
         "type": "string",
-        "cardinality": "1"
+        "cardinality": "1",
+        "description": "Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5"
       },
       {
         "name": "planeringsjord",
         "type": "string",
-        "cardinality": "1"
+        "cardinality": "1",
+        "description": "Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte ravineområder Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering"
       },
       {
         "name": "verneform",
