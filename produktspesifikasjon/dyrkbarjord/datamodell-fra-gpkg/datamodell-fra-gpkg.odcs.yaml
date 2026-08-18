@@ -1,0 +1,102 @@
+# Open Data Contract Standard (ODCS) v3.1.0 — generert fra datamodellen.
+apiVersion: v3.1.0
+kind: DataContract
+id: urn:odcs:dyrkbar-jord-datamodell-fra-gpkg:1.0.0
+version: 1.0.0
+status: active
+name: Dyrkbar jord - Datamodell fra GPKG
+schema:
+- name: ArealressursFlate
+  physicalName: arealressursflate
+  logicalType: object
+  physicalType: table
+  description: 'et sammenhengende areal som er tilordnet de samme egenskapsverdiene
+    i henhold til et arealressursklassifikasjonssystem
+
+    -- Definition --
+
+    a continuous area which has been assigned the same attribute values in accordance
+    with an area resource classification system'
+  customProperties:
+  - property: sosiObjektType
+    value: ArealressursFlate
+  - property: defaultCrs
+    value: EPSG:25833
+  properties:
+  - name: geometri
+    logicalType: object
+    physicalType: geometry(Polygon,25833)
+    required: true
+    customProperties:
+    - property: geometryType
+      value: Polygon
+    - property: crs
+      value: EPSG:25833
+  - name: fid
+    logicalType: integer
+    required: true
+    primaryKey: true
+  - name: identifikasjon_lokalId
+    logicalType: string
+    required: true
+  - name: identifikasjon_navnerom
+    logicalType: string
+    required: true
+  - name: informasjon
+    logicalType: string
+    required: true
+  - name: kopidata_kopidato
+    logicalType: timestamp
+    required: true
+  - name: kopidata_områdeId
+    logicalType: integer
+    required: true
+  - name: kopidata_originalDatavert
+    logicalType: string
+    required: true
+  - name: dyrkbarJord
+    logicalType: string
+    required: true
+  - name: fulldyrka2008
+    logicalType: string
+    required: true
+  - name: myrTorv
+    logicalType: string
+    required: true
+  - name: planeringsjord
+    logicalType: string
+    required: true
+  - name: verneform
+    logicalType: string
+    required: true
+  - name: årsversjon
+    logicalType: integer
+    required: true
+- name: ArealressursGrense
+  physicalName: arealressursgrense
+  logicalType: object
+  physicalType: table
+  description: 'avgrensing for en eller to arealressursflater
+
+    -- Definition --
+
+    delimitation for one or two area resource surfaces'
+  customProperties:
+  - property: sosiObjektType
+    value: ArealressursGrense
+  - property: defaultCrs
+    value: EPSG:25833
+  properties:
+  - name: geometri
+    logicalType: object
+    physicalType: geometry(LineString,25833)
+    required: true
+    customProperties:
+    - property: geometryType
+      value: LineString
+    - property: crs
+      value: EPSG:25833
+  - name: fid
+    logicalType: integer
+    required: true
+    primaryKey: true

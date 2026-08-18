@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:datamodellfragpkg="https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/datamodell-fra-gpkg/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/datamodell-fra-gpkg/1.0" version="1.0">
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="ArealressursFlate" substitutionGroup="gml:AbstractFeature" type="datamodellfragpkg:ArealressursFlateType"/>
+  <complexType name="ArealressursFlateType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="fid" type="integer"/>
+          <element name="identifikasjon_lokalId" type="string"/>
+          <element name="identifikasjon_navnerom" type="string"/>
+          <element name="informasjon" type="string"/>
+          <element name="kopidata_kopidato" type="date"/>
+          <element name="kopidata_områdeId" type="integer"/>
+          <element name="kopidata_originalDatavert" type="string"/>
+          <element name="dyrkbarJord" type="string"/>
+          <element name="fulldyrka2008" type="string"/>
+          <element name="myrTorv" type="string"/>
+          <element name="planeringsjord" type="string"/>
+          <element name="verneform" type="string"/>
+          <element name="årsversjon" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ArealressursFlatePropertyType">
+    <sequence minOccurs="0">
+      <element ref="datamodellfragpkg:ArealressursFlate"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ArealressursGrense" substitutionGroup="gml:AbstractFeature" type="datamodellfragpkg:ArealressursGrenseType"/>
+  <complexType name="ArealressursGrenseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="fid" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ArealressursGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="datamodellfragpkg:ArealressursGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

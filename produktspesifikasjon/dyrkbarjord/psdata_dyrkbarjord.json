@@ -137,7 +137,7 @@
     },
     {
       "specificationScope": {
-        "scopeIdentification": "Ny datakilde",
+        "scopeIdentification": "Datamodell fra GPKG",
         "level": "dataset",
         "levelDescription": "Tom GPKG - mal for dyrkbar jord"
       }
@@ -359,7 +359,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-08-17",
+    "metadataDate": "2026-08-18",
     "language": "nor",
     "contact": {
       "organizationName": "Geovekst",

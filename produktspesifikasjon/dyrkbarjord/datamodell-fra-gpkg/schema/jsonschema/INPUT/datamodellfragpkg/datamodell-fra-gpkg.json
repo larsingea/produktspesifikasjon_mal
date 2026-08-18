@@ -1,0 +1,98 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/dyrkbarjord/datamodell-fra-gpkg/datamodellfragpkg/datamodell-fra-gpkg.json",
+  "definitions": {
+    "ArealressursFlate": {
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "fid": {
+          "type": "integer"
+        },
+        "identifikasjon_lokalId": {
+          "type": "string"
+        },
+        "identifikasjon_navnerom": {
+          "type": "string"
+        },
+        "informasjon": {
+          "type": "string"
+        },
+        "kopidata_kopidato": {
+          "type": "string",
+          "format": "date"
+        },
+        "kopidata_områdeId": {
+          "type": "integer"
+        },
+        "kopidata_originalDatavert": {
+          "type": "string"
+        },
+        "dyrkbarJord": {
+          "type": "string"
+        },
+        "fulldyrka2008": {
+          "type": "string"
+        },
+        "myrTorv": {
+          "type": "string"
+        },
+        "planeringsjord": {
+          "type": "string"
+        },
+        "verneform": {
+          "type": "string"
+        },
+        "årsversjon": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "@type",
+        "dyrkbarJord",
+        "fid",
+        "fulldyrka2008",
+        "identifikasjon_lokalId",
+        "identifikasjon_navnerom",
+        "informasjon",
+        "kopidata_kopidato",
+        "kopidata_områdeId",
+        "kopidata_originalDatavert",
+        "myrTorv",
+        "planeringsjord",
+        "verneform",
+        "årsversjon"
+      ]
+    },
+    "ArealressursGrense": {
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "fid": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "@type",
+        "fid"
+      ]
+    }
+  }
+}
