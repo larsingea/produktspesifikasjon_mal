@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "featureTypes": {
+    "arealressursflate": {
+      "attributes": {
+        "identifikasjon.lokalid": {
+          "description": "Lokal ID i datasettet - men skal være UUID"
+        },
+        "identifikasjon.navnerom": {
+          "description": "Navnerom til datasett. Skal være en oppslagsbar URI"
+        },
+        "fulldyrka2008": {
+          "description": "Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger"
+        },
+        "myrtorv": {
+          "description": "Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5"
+        },
+        "planeringsjord": {
+          "description": "Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte ravineområder Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering"
+        }
+      }
+    }
+  }
+}
