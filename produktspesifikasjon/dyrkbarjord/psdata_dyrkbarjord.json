@@ -134,6 +134,13 @@
         "level": "dataset",
         "levelDescription": "Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed."
       }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "Ny datakilde",
+        "level": "dataset",
+        "levelDescription": "Tom GPKG - mal for dyrkbar jord"
+      }
     }
   ],
   "referenceSystemSection": {
@@ -352,7 +359,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-08-04",
+    "metadataDate": "2026-08-17",
     "language": "nor",
     "contact": {
       "organizationName": "Geovekst",
