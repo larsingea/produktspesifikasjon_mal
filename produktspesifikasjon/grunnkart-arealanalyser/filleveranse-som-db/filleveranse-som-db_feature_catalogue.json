@@ -7,13 +7,17 @@
         "name": "område",
         "type": "GM_Surface",
         "description": "den geografiske avgrensingen av Grunnkartflaten",
-        "cardinality": "1"
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "FLATE"
+        }
       },
       {
         "name": "arealdekkeNiva1",
         "type": "ArealdekkeNiva1",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Viser hovedklasser for arealressurser med vekt på produksjonsgrunnlaget for jord- og skogbruk, som jordbruksareal, skog, vann og bebygd areal",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1"
@@ -24,6 +28,7 @@
         "type": "ArealdekkeNiva2",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Gir en mer detaljert inndeling av arealressursene innenfor hovedklassene, for eksempel fulldyrka jord, myr eller åpen fastmark",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2"
@@ -34,6 +39,7 @@
         "type": "ArealdekkeKode",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Standardisert tallkode for arealdekke på begge nivåer",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode"
@@ -44,6 +50,7 @@
         "type": "Grunnforhold",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Grunnforhold gir informasjon om tjukkelse, type og utbredelse av jorddekket i alle områder under skoggrensen",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold"
@@ -54,6 +61,7 @@
         "type": "GrunnforholdKode",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Standardisert tallkode for grunnforhold",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode"
@@ -64,6 +72,7 @@
         "type": "Skogbonitet",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Et mål på arealets evne til å produsere trevirke, basert på trærnes høydevekst, alder, vegetasjonstype og forekomst av spesielle plantearter",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet"
@@ -74,6 +83,7 @@
         "type": "SkogbonitetKode",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Standardisert tallkode for skogbonitet",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode"
@@ -84,6 +94,7 @@
         "type": "ArealbrukLandHovedklasse",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et overordnet nivå.",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse"
@@ -94,6 +105,7 @@
         "type": "ArealbrukLandUnderklasse",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et detaljert nivå.",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse"
@@ -104,6 +116,7 @@
         "type": "ArealbrukLandKode",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Standardisert tallkode for arealbruk på land for begge nivåer.",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode"
@@ -114,6 +127,7 @@
         "type": "ArealbrukHav",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Klassifisering av stedbundet arealbruk i havområder.",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav"
@@ -124,6 +138,7 @@
         "type": "ArealbrukHavKode",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Standardisert tallkode for arealbruk i hav.",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode"
@@ -134,6 +149,7 @@
         "type": "OkosystemtypeNiva1",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Økosystemklasse nivå 1 har 12 klasser, og deler kartet inn i hovedøkosystemer etter europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1"
@@ -144,6 +160,7 @@
         "type": "OkosystemtypeNiva2",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Økosystemklasse nivå 2 gir en videre inndeling av de 12 klassene i nivå 1. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2"
@@ -154,6 +171,7 @@
         "type": "OkosystemtypeNiva3",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Økosystemklasse nivå 3 gir en videre inndeling av økosystemklasse 1 og 2. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3"
@@ -164,6 +182,7 @@
         "type": "OkosystemtypeKode",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Standardisert tallkode for økosystemtyper på alle tre nivåer",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode"
@@ -174,6 +193,7 @@
         "type": "GrunnkartKilde",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Spesifiserer kilden for avgrensningen av grunnkart-flaten",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde"
@@ -184,6 +204,7 @@
         "type": "ArealbrukKilde",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "Spesifiserer kilden for arealbruksinformasjonen.",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde"
@@ -194,6 +215,7 @@
         "type": "Kommunenummer",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "definition": "nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste\n\nMerknad: Det presiseres at kommune alltid skal ha 4 siffer, dvs. eventuelt med ledende null. Kommune benyttes for kopling mot en rekke andre registre som også benytter 4 siffer.",
           "asDictionary": "true",
           "codeList": "https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer"
@@ -204,24 +226,36 @@
         "type": "Identifikasjon",
         "description": "unik identifikasjon av et objekt",
         "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "IDENT"
+        },
         "attributes": [
           {
             "name": "lokalId",
             "type": "CharacterString",
             "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
-            "cardinality": "1"
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "LOKALID"
+            }
           },
           {
             "name": "navnerom",
             "type": "CharacterString",
             "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
-            "cardinality": "1"
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "NAVNEROM"
+            }
           },
           {
             "name": "versjonId",
             "type": "CharacterString",
             "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans)",
-            "cardinality": "0..1"
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "VERSJONID"
+            }
           }
         ]
       },
@@ -229,7 +263,10 @@
         "name": "oppdateringsdato",
         "type": "DateTime",
         "description": "tidspunkt for siste endring på objektet\n\nMerknad:\nOppdateringsdato kan være forskjellig fra datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).",
-        "cardinality": "0..1"
+        "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "OPPDATERINGSDATO"
+        }
       }
     ],
     "abstract": false,

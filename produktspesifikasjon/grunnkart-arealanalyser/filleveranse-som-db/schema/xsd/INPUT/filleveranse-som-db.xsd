@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:filleveransesomdb="https://skjema.geonorge.no/SOSI/produktspesifikasjon/grunnkart-arealanalyser/filleveranse-som-db/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/grunnkart-arealanalyser/filleveranse-som-db/1.0" version="1.0">
+  <import namespace="http://www.interactive-instruments.de/ShapeChange/AppInfo" schemaLocation="https://shapechange.net/resources/schema/ShapeChangeAppinfo.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="GrunnkartFlate" substitutionGroup="gml:AbstractFeature" type="filleveransesomdb:GrunnkartFlateType"/>
+  <complexType name="GrunnkartFlateType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="område" type="gml:SurfacePropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">FLATE</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealdekkeNiva1" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealdekkeNiva2" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealdekkeKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="grunnforhold" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="grunnforholdKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="skogbonitet" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="skogbonitetKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukLandHovedklasse" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukLandUnderklasse" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukLandKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukHav" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukHavKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="okosystemtypeNiva1" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="okosystemtypeNiva2" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="okosystemtypeNiva3" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="okosystemtypeKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="grunnkartKilde" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukKilde" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="kommunenummer" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="identifikasjon" type="filleveransesomdb:IdentifikasjonPropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">IDENT</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="oppdateringsdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">OPPDATERINGSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GrunnkartFlatePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveransesomdb:GrunnkartFlate"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Identifikasjon" substitutionGroup="gml:AbstractObject" type="filleveransesomdb:IdentifikasjonType"/>
+  <complexType name="IdentifikasjonType">
+    <sequence>
+      <element name="lokalId" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">LOKALID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="navnerom" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">NAVNEROM</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="versjonId" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">VERSJONID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="IdentifikasjonPropertyType">
+    <sequence>
+      <element ref="filleveransesomdb:Identifikasjon"/>
+    </sequence>
+  </complexType>
+</schema>
