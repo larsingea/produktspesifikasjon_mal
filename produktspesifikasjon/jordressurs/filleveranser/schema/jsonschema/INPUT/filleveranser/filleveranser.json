@@ -1,0 +1,188 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/jordressurs/filleveranser/filleveranser/filleveranser.json",
+  "definitions": {
+    "HellingGjsnitt": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Identifikasjon": {
+      "type": "object",
+      "properties": {
+        "lokalId": {
+          "type": "string"
+        },
+        "navnerom": {
+          "type": "string"
+        },
+        "versjonId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "lokalId",
+        "navnerom"
+      ]
+    },
+    "JordressursGrense": {
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/LineString.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@type"
+      ]
+    },
+    "Jordressurser": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Jordressurser_Fellesgenskaper"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "$ref": "https://geojson.org/schema/Polygon.json"
+            },
+            "jordressursklasse": {
+              "$ref": "#/definitions/Jordressursklasser"
+            },
+            "hellingGjsnitt": {
+              "$ref": "#/definitions/HellingGjsnitt"
+            },
+            "steinblokk": {
+              "$ref": "#/definitions/SteinBlokk"
+            },
+            "årsakTilNedklassifisering": {
+              "$ref": "#/definitions/ÅrsakTilNedklassifisering"
+            },
+            "tilleggsinformasjon": {
+              "$ref": "#/definitions/Tilleggsinformasjon"
+            },
+            "kartleggingsår": {
+              "type": "integer"
+            },
+            "kartleggingsmetodikk": {
+              "$ref": "#/definitions/Kartleggingsmetodikk"
+            },
+            "opprinneligLokalId": {
+              "type": "integer"
+            },
+            "avgrensesAvJordressursgrense": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "hellingGjsnitt",
+            "jordressursklasse",
+            "kartleggingsmetodikk",
+            "kartleggingsår",
+            "opprinneligLokalId",
+            "steinblokk",
+            "tilleggsinformasjon",
+            "årsakTilNedklassifisering"
+          ]
+        }
+      ]
+    },
+    "Jordressurser_Fellesgenskaper": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifikasjon": {
+          "$ref": "#/definitions/Identifikasjon"
+        },
+        "kopidata": {
+          "$ref": "#/definitions/Kopidata"
+        },
+        "kvalitet": {
+          "$ref": "#/definitions/Posisjonskvalitet"
+        },
+        "verifiseringsdato": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "@type",
+        "identifikasjon",
+        "kopidata",
+        "verifiseringsdato"
+      ]
+    },
+    "Jordressursklasser": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Kartleggingsmetodikk": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Kopidata": {
+      "type": "object",
+      "properties": {
+        "områdeId": {
+          "type": "integer"
+        },
+        "originalDatavert": {
+          "type": "string"
+        },
+        "kopidato": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "kopidato",
+        "områdeId",
+        "originalDatavert"
+      ]
+    },
+    "Målemetode": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Posisjonskvalitet": {
+      "type": "object",
+      "properties": {
+        "målemetode": {
+          "$ref": "#/definitions/Målemetode"
+        }
+      },
+      "required": [
+        "målemetode"
+      ]
+    },
+    "SteinBlokk": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Tilleggsinformasjon": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ÅrsakTilNedklassifisering": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
