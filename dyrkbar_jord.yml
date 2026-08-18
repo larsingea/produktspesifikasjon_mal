@@ -1,13 +1,13 @@
 metadataId: 8252baea-5bad-428b-8f18-fe236fa4ced6
 output_directory: produktspesifikasjon
 product_slug: dyrkbarjord
-updated: 2026-08-04
-scopes: 
-  - name: Filleveranse
-    url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Skog og landskap/Produktspesifikasjon DyrkbarJord-20250530 Utkast.xml
-    generator: xmi
-    description: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
-#  - name: Innsynstjeneste (API)
-#   url: https://ogcapi.nibio.no/felles/dyrkbarjord
-#    generator: ogc_feature_api
-#    description: Tjeneste for innsyn i planområder som er varslet for planlegging igangsatt.
+updated: '2026-08-04'
+scopes:
+- name: Filleveranse
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI Del 3/Skog og landskap/Produktspesifikasjon DyrkbarJord-20250530 Utkast.xml
+  generator: xmi
+  description: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
+- name: Ny datakilde
+  url: https://arnevik.net/test/dyrkbarjord_tom_25833.gpkg
+  generator: geopackage
+  description: Tom GPKG - mal for dyrkbar jord
