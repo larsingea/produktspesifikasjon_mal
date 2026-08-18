@@ -1,0 +1,202 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/grunnkart-arealanalyser/filleveranse-som-db/filleveransesomdb/filleveranse-som-db.json",
+  "definitions": {
+    "ArealbrukHav": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukHavKode": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukKilde": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukLandHovedklasse": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukLandKode": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukLandUnderklasse": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealdekkeKode": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealdekkeNiva1": {
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealdekkeNiva2": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Grunnforhold": {
+      "type": "string",
+      "format": "uri"
+    },
+    "GrunnforholdKode": {
+      "type": "string",
+      "format": "uri"
+    },
+    "GrunnkartFlate": {
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "arealdekkeNiva1": {
+          "$ref": "#/definitions/ArealdekkeNiva1"
+        },
+        "arealdekkeNiva2": {
+          "$ref": "#/definitions/ArealdekkeNiva2"
+        },
+        "arealdekkeKode": {
+          "$ref": "#/definitions/ArealdekkeKode"
+        },
+        "grunnforhold": {
+          "$ref": "#/definitions/Grunnforhold"
+        },
+        "grunnforholdKode": {
+          "$ref": "#/definitions/GrunnforholdKode"
+        },
+        "skogbonitet": {
+          "$ref": "#/definitions/Skogbonitet"
+        },
+        "skogbonitetKode": {
+          "$ref": "#/definitions/SkogbonitetKode"
+        },
+        "arealbrukLandHovedklasse": {
+          "$ref": "#/definitions/ArealbrukLandHovedklasse"
+        },
+        "arealbrukLandUnderklasse": {
+          "$ref": "#/definitions/ArealbrukLandUnderklasse"
+        },
+        "arealbrukLandKode": {
+          "$ref": "#/definitions/ArealbrukLandKode"
+        },
+        "arealbrukHav": {
+          "$ref": "#/definitions/ArealbrukHav"
+        },
+        "arealbrukHavKode": {
+          "$ref": "#/definitions/ArealbrukHavKode"
+        },
+        "okosystemtypeNiva1": {
+          "$ref": "#/definitions/OkosystemtypeNiva1"
+        },
+        "okosystemtypeNiva2": {
+          "$ref": "#/definitions/OkosystemtypeNiva2"
+        },
+        "okosystemtypeNiva3": {
+          "$ref": "#/definitions/OkosystemtypeNiva3"
+        },
+        "okosystemtypeKode": {
+          "$ref": "#/definitions/OkosystemtypeKode"
+        },
+        "grunnkartKilde": {
+          "$ref": "#/definitions/GrunnkartKilde"
+        },
+        "arealbrukKilde": {
+          "$ref": "#/definitions/ArealbrukKilde"
+        },
+        "kommunenummer": {
+          "$ref": "#/definitions/Kommunenummer"
+        },
+        "identifikasjon": {
+          "$ref": "#/definitions/Identifikasjon"
+        },
+        "oppdateringsdato": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "@type",
+        "arealbrukHav",
+        "arealbrukHavKode",
+        "arealbrukKilde",
+        "arealbrukLandHovedklasse",
+        "arealbrukLandKode",
+        "arealbrukLandUnderklasse",
+        "arealdekkeKode",
+        "arealdekkeNiva1",
+        "arealdekkeNiva2",
+        "grunnforhold",
+        "grunnforholdKode",
+        "grunnkartKilde",
+        "identifikasjon",
+        "kommunenummer",
+        "okosystemtypeKode",
+        "okosystemtypeNiva1",
+        "okosystemtypeNiva2",
+        "okosystemtypeNiva3",
+        "skogbonitet",
+        "skogbonitetKode"
+      ]
+    },
+    "GrunnkartKilde": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Identifikasjon": {
+      "type": "object",
+      "properties": {
+        "lokalId": {
+          "type": "string"
+        },
+        "navnerom": {
+          "type": "string"
+        },
+        "versjonId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "lokalId",
+        "navnerom"
+      ]
+    },
+    "Kommunenummer": {
+      "type": "string",
+      "format": "uri"
+    },
+    "OkosystemtypeKode": {
+      "type": "string",
+      "format": "uri"
+    },
+    "OkosystemtypeNiva1": {
+      "type": "string",
+      "format": "uri"
+    },
+    "OkosystemtypeNiva2": {
+      "type": "string",
+      "format": "uri"
+    },
+    "OkosystemtypeNiva3": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Skogbonitet": {
+      "type": "string",
+      "format": "uri"
+    },
+    "SkogbonitetKode": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
