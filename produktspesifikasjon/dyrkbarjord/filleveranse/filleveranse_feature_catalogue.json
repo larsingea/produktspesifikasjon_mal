@@ -8,18 +8,27 @@
         "type": "Identifikasjon",
         "description": "unik identifikasjon av et objekt",
         "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "IDENT"
+        },
         "attributes": [
           {
             "name": "lokalId",
             "type": "CharacterString",
             "description": "lokal identifikator av et objekt\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
-            "cardinality": "1"
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "LOKALID"
+            }
           },
           {
             "name": "navnerom",
             "type": "CharacterString",
             "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
-            "cardinality": "1"
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "NAVNEROM"
+            }
           }
         ]
       },
@@ -27,31 +36,46 @@
         "name": "informasjon",
         "type": "CharacterString",
         "description": "Informasjon om brukte datakilder",
-        "cardinality": "1"
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "INFORMASJON"
+        }
       },
       {
         "name": "kopidata",
         "type": "Kopidata",
         "description": "angivelse av at objektet er hentet fra et kopidatasett og ikke fra originaldatasettet\nMerknad: Inneholder informasjon om når kopidatasettet ble kopiert fra originaldatasettet og hvem som er originaldataansvarlig",
         "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "KOPIDATA"
+        },
         "attributes": [
           {
             "name": "kopidato",
             "type": "DateTime",
             "description": "dato når objektet ble kopiert fra originaldatasettet\n\nMerknad:\nEr en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase brukes til distribusjon.\nÅ kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato blir endret.\nEventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato, Datafangstdato og/eller Verifiseringsdato.",
-            "cardinality": "1"
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "KOPIDATO"
+            }
           },
           {
             "name": "områdeId",
             "type": "Integer",
             "description": "identifikasjon av område som dataene dekker\n\nMerknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres nærmere.",
-            "cardinality": "1"
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "OMRÅDEID"
+            }
           },
           {
             "name": "originalDatavert",
             "type": "CharacterString",
             "description": "ansvarlig etat for forvaltning av data",
-            "cardinality": "1"
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "ORIGINALDATAVERT"
+            }
           }
         ]
       }
@@ -73,6 +97,7 @@
         "description": "Dyrkbar jord er areal som per i dag ikke er fulldyrka, men som ved oppdyrking kan settes i en slik stand at de holder kravene til fulldyrka jord, ut fra agronomiske perspektiv kan dyrkes opp til fylldyrka jord, og som holder kravene til klima og jordkvalitet for plantedyrking.  Informasjon om dyrkbar jord på arealressurser av typen overflatedyrka jord, innmarksbeite, skogareal, åpen fastmark og myr.",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "listedValues": [
             {
               "value": "Dyrkbar Jord",
@@ -80,6 +105,9 @@
             }
           ],
           "definition": "Informasjon om dyrkbar jord på overflatedyrka jord, Innmarksbeite, Skog, Åpen fastmark og Myr\n-- Definition - -\nInformation concerning arable land on surface cultivated land, infield pasturelands, unforested land, and in marshes and forests"
+        },
+        "taggedValues": {
+          "SOSI_navn": "ARDYRKING"
         }
       },
       {
@@ -88,6 +116,7 @@
         "description": "Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "listedValues": [
             {
               "value": "Fulldyrka 2008",
@@ -99,6 +128,9 @@
             }
           ],
           "definition": "Arealer som var fulldyrka jord i DMK-basen i 2008, men ikke er fulldyrka lenger"
+        },
+        "taggedValues": {
+          "SOSI_navn": "FULLDYRKA2008"
         }
       },
       {
@@ -107,6 +139,7 @@
         "description": "Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "listedValues": [
             {
               "value": "Mineraljord dyrkbar mineraljord",
@@ -122,13 +155,19 @@
             }
           ],
           "definition": "Dyrkbar jord er delt i dyrkbar myr, dyrkbar torvmark og dyrkbar mineraljord. Informasjon om grunnforhold er hentet fra AR5"
+        },
+        "taggedValues": {
+          "SOSI_navn": "MYRTORV"
         }
       },
       {
         "name": "område",
         "type": "GM_Surface",
         "description": "objektets utstrekning\n-- Definition --\narea over which an object extends",
-        "cardinality": "1"
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "Flate"
+        }
       },
       {
         "name": "planeringsjord",
@@ -136,6 +175,7 @@
         "description": "Areal ansett som planeringsjord og som ligger i kartlagte eller modellerte ravineområder Areal som historisk er kartlagt som dyrkbar jord, forutsatt bakkeplanering",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "listedValues": [
             {
               "value": "Ikke planeringsjord",
@@ -159,6 +199,7 @@
         "description": "Informasjon om arealet ligger i en nasjonalpark eller et naturreservat",
         "cardinality": "1",
         "valueDomain": {
+          "kind": "codelist",
           "listedValues": [
             {
               "value": "Ikke relevant",
@@ -174,13 +215,19 @@
             }
           ],
           "definition": "Informasjon om arealet ligger i en nasjonalpark eller et naturreservat"
+        },
+        "taggedValues": {
+          "SOSI_navn": "VERNEFORM"
         }
       },
       {
         "name": "årsversjon",
         "type": "Integer",
         "description": "Årstall for årsversjon av Dyrkbar jord datasettet",
-        "cardinality": "1"
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "ÅRSVERSJON"
+        }
       }
     ],
     "abstract": false,
@@ -206,7 +253,10 @@
         "name": "grense",
         "type": "GM_Curve",
         "description": "forløp som følger overgang mellom ulike fenomener\n-- Definition --\ncourse follwing the transition between different real world phenomena",
-        "cardinality": "1"
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "Kurve"
+        }
       }
     ],
     "abstract": false,
