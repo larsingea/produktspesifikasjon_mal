@@ -95,7 +95,7 @@ Dyrkbar jord har lovmessige vern gjennom Jordlova.
 
 **Nivåbeskrivelse**: Filer levert som FGDB, SOSI og Shape, gjennom Geonorge kartkatalog og massiv-klient, samt Atom Feed.
 
-### Ny datakilde
+### Datamodell fra GPKG
 
 **Nivå**: dataset
 
@@ -115,15 +115,15 @@ Dyrkbar jord har lovmessige vern gjennom Jordlova.
 
 ➡️ [Se full datamodell for omfang "Filleveranse" (diagram per pakke og objektkatalog)](filleveranse/objektkatalog.html)
 
-### Datamodell - Ny datakilde
+### Datamodell - Datamodell fra GPKG
 
 
 
-<a href="ny-datakilde/ny-datakilde_feature_catalogue.png" title="Klikk for stor visning"><img src="ny-datakilde/ny-datakilde_feature_catalogue.png" alt="Datamodell Ny datakilde" style="max-width: 100%; height: auto;" /></a>
+<a href="datamodell-fra-gpkg/datamodell-fra-gpkg_feature_catalogue.png" title="Klikk for stor visning"><img src="datamodell-fra-gpkg/datamodell-fra-gpkg_feature_catalogue.png" alt="Datamodell Datamodell fra GPKG" style="max-width: 100%; height: auto;" /></a>
 
 
 
-➡️ [Se full datamodell for omfang "Ny datakilde" (diagram per pakke og objektkatalog)](ny-datakilde/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Datamodell fra GPKG" (diagram per pakke og objektkatalog)](datamodell-fra-gpkg/objektkatalog.html)
 
 ## Referansesystem
 
@@ -206,7 +206,7 @@ Dyrkbar jord har lovmessige vern gjennom Jordlova.
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-08-17
+**Metadatadato**: 2026-08-18
 
 **språk**: nor
 

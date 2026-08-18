@@ -1,0 +1,106 @@
+[
+  {
+    "name": "ArealressursFlate",
+    "description": "et sammenhengende areal som er tilordnet de samme egenskapsverdiene i henhold til et arealressursklassifikasjonssystem\n-- Definition --\na continuous area which has been assigned the same attribute values in accordance with an area resource classification system",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-polygon",
+      "format": "geometry-polygon",
+      "ogcRole": "primary-geometry",
+      "crs": [
+        "http://www.opengis.net/def/crs/EPSG/0/25833"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/25833"
+    },
+    "attributes": [
+      {
+        "name": "fid",
+        "type": "integer",
+        "cardinality": "1",
+        "ogcRole": "id"
+      },
+      {
+        "name": "identifikasjon_lokalId",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "identifikasjon_navnerom",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "informasjon",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "kopidata_kopidato",
+        "type": "dateTime",
+        "cardinality": "1"
+      },
+      {
+        "name": "kopidata_områdeId",
+        "type": "integer",
+        "cardinality": "1"
+      },
+      {
+        "name": "kopidata_originalDatavert",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "dyrkbarJord",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "fulldyrka2008",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "myrTorv",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "planeringsjord",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "verneform",
+        "type": "string",
+        "cardinality": "1"
+      },
+      {
+        "name": "årsversjon",
+        "type": "integer",
+        "cardinality": "1"
+      }
+    ]
+  },
+  {
+    "name": "ArealressursGrense",
+    "description": "avgrensing for en eller to arealressursflater\n-- Definition --\ndelimitation for one or two area resource surfaces",
+    "geometry": {
+      "itemType": "feature",
+      "type": "geometry-line",
+      "format": "geometry-line",
+      "ogcRole": "primary-geometry",
+      "crs": [
+        "http://www.opengis.net/def/crs/EPSG/0/25833"
+      ],
+      "storageCrs": "http://www.opengis.net/def/crs/EPSG/0/25833"
+    },
+    "attributes": [
+      {
+        "name": "fid",
+        "type": "integer",
+        "cardinality": "1",
+        "ogcRole": "id"
+      }
+    ]
+  }
+]
