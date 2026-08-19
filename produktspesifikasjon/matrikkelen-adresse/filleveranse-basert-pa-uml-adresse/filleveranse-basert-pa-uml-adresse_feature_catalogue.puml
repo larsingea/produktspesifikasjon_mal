@@ -1,0 +1,113 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Matrikkelen - Adresse - Filleveranse basert på UML adresse - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  abstract class "SOSI_Objekt-Adresse" as SOSI_Objekt_Adresse <<featureType>> {
+    + datauttaksdato [0..1] : Date
+    + identifikasjon [1] : Identifikasjon
+    + oppdateringsdato [1] : Date
+    + stedfestingVerifisert [1] : Boolean
+  }
+
+  abstract class Adresse <<featureType>> {
+    + adresseTekst [1] : CharacterString
+    + adresseTekstUtenAdressetilleggsnavn [1] : CharacterString
+    + adressetilleggsnavn [0..1] : CharacterString
+    + adressetilleggsnavnKilde [0..1] : AdressetilleggsnavnKildeKode
+    + bruksenhetsnummerTekst [0..*] : CharacterString
+    + grunnkrets [1] : GrunnkretsId
+    + kommunenavn [1] : CharacterString
+    + kommunenummer [1] : Kommunenummer
+    + matrikkelnummerAdresse [1] : Matrikkelnummer
+    + postnummerområde [1] : PostnummerområdeId
+    + representasjonspunkt [1] : Punkt
+    + sokn [1] : SokneId
+    + tettsted [0..1] : TettstedId
+    + valgkrets [1] : ValgkretsId
+  }
+
+  class Vegadresse <<featureType>> {
+    + adressekode [1] : Integer
+    + adressenavn [1] : CharacterString
+    + bokstav [0..1] : CharacterString
+    + nummer [1] : Integer
+  }
+
+  class Matrikkeladresse <<featureType>> {
+    + undernummer [0..1] : Integer
+  }
+
+  class Identifikasjon <<dataType>> {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+
+  class GrunnkretsId <<dataType>> {
+    + grunnkretsnavn [0..1] : CharacterString
+    + grunnkretsnummer [1] : CharacterString
+  }
+
+  class Matrikkelnummer <<dataType>> {
+    + bruksnummer [1] : Integer
+    + festenummer [0..1] : Integer
+    + gardsnummer [1] : Integer
+    + kommunenummer [1] : Kommunenummer
+    + seksjonsnummer [0..1] : Integer
+  }
+
+  class "PostnummerområdeId" as Postnummeromr_deId <<dataType>> {
+    + postnummer [1] : CharacterString
+    + poststed [0..1] : CharacterString
+  }
+
+  class SokneId <<dataType>> {
+    + organisasjonsnummer [1] : Integer
+    + soknenavn [0..1] : CharacterString
+    + soknenummer [0..1] : CharacterString
+  }
+
+  class TettstedId <<dataType>> {
+    + tettstednavn [0..1] : CharacterString
+    + tettstednummer [1] : CharacterString
+  }
+
+  class ValgkretsId <<dataType>> {
+    + valgkretsnavn [0..1] : CharacterString
+    + valgkretsnummer [1] : CharacterString
+  }
+}
+
+  SOSI_Objekt_Adresse <|-- Adresse
+  Adresse <|-- Vegadresse
+  Adresse <|-- Matrikkeladresse
+
+@enduml

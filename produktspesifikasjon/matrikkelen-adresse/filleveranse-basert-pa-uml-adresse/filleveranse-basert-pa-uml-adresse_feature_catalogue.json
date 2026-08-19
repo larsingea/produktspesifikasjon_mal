@@ -1,0 +1,4668 @@
+[
+  {
+    "name": "SOSI_Objekt-Adresse",
+    "description": "abstrakt objekt som bærer en rekke egenskaper som er fagområde-uavhengige og kan benyttes for alle objekttyper\n\nMerknad:\nSpesielt i produktspesifikasjonsarbeid vil en velge egenskaper og av grensningslinjer fra denne klassen.",
+    "attributes": [
+      {
+        "name": "datauttaksdato",
+        "type": "DateTime",
+        "description": "dato for uttak fra en database\n\nMerknad:\nSkiller seg fra Kopidato ved at en ikke skiller på om det er uttak fra en originaldatabase eller en kopidatabase.",
+        "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "DATAUTTAKSDATO"
+        }
+      },
+      {
+        "name": "identifikasjon",
+        "type": "Identifikasjon",
+        "description": "unik identifikasjon av et objekt",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "lokalId",
+            "type": "CharacterString",
+            "description": "lokal identifikator, tildelt av dataleverendør/dataforvalter. Den lokale identifikatoren er unik innenfor navnerommet, ingen andre objekter har samme identifikator.\n\nNOTE: Det er data leverendørens ansvar å sørge for at denne lokale identifikatoren er unik innenfor navnerommet.",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "LOKALID"
+            }
+          },
+          {
+            "name": "navnerom",
+            "type": "CharacterString",
+            "description": "navnerom som unikt identifiserer datakilden til objektet, starter med to bokstavs kode jfr ISO 3166. Benytter understreking  (\"_\") dersom data produsenten ikke er assosiert med bare et land.\n\nNOTE 1 : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og vil registreres i \"INSPIRE external  Object Identifier Namespaces Register\"\n\nEksempel: NO for Norge.",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "NAVNEROM"
+            }
+          },
+          {
+            "name": "versjonId",
+            "type": "CharacterString",
+            "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans), maksimum lengde på 25 karakterers. Dersom spesifikasjonen av et geografisk objekt med en identifikasjon inkludererer livsløpssyklusinformasjon, benyttes denne versjonId for å skille mellom ulike versjoner av samme objekt. versjonId er en unik  identifikasjon av versjonen.\n\nNOTE Maksimum lengde er valgt for å tillate tidsregistrering i henhold til  ISO 8601, slik som  \"2007-02-12T12:12:12+05:30\" som versjonId.",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "VERSJONID"
+            }
+          }
+        ]
+      },
+      {
+        "name": "oppdateringsdato",
+        "type": "DateTime",
+        "description": "dato for siste endring på objektetdataene\n\nMerknad:\nOppdateringsdato kan være forskjellig fra Datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).\n\n-Definition-\nDate and time at which this version of the spatial object was inserted or changed in the spatial data set.",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "OPPDATERINGSDATO"
+        }
+      },
+      {
+        "name": "stedfestingVerifisert",
+        "type": "Boolean",
+        "description": "angivelse om stedfestingen (koordinatene) er  kontrollert  og funnet i orden (verifisert)",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "STED_VERIF"
+        }
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [],
+      "associations": []
+    },
+    "package": "Matrikkelen-Adresse_20180501"
+  },
+  {
+    "name": "Adresse",
+    "description": "Matrikkelforskriften § 2d definerer den offisielle adressen som den fullstendige adressen for en\nbygning, bygningsendring, bruksenhet, eiendom eller annet objekt som er registrert med adresse i matrikkelen.\nI den offisielle adressen vil bruksenhetsnummer (for bolig eller annen bruksenhet) inngå når dette er nødvendig for å oppnå unik adresse.\n\nMerknad: Adresse realiseres enten som Vegadresse eller Matrikkeladresse",
+    "attributes": [
+      {
+        "name": "adresseTekst",
+        "type": "CharacterString",
+        "description": "<font color=\"#0f0f0f\">Del av offisiell adresse, men uten bruksenhetsnummer for adresser som ligger til bruksenheter/boliger</font>\n\nVegadresse:\n<ev adressetilleggsnavn>, <adressenavn> <nummer><ev bokstav>\nev= hvis fins. Hvis ikke skal formateringstegn utgå foran/bak.\n<font color=\"#0f0f0f\">\n</font><font color=\"#0f0f0f\">Matrikkeladresse:</font>\n<ev adressetilleggsnavn>, <gardsnummer>/<bruksnummer>/<ev festenummer>-<ev undernummer>\nev= hvis fins. Hvis ikke skal formateringstegn utgå foran/bak.\n<font color=\"#0f0f0f\">\n</font><font color=\"#0f0f0f\">Eksempel:  </font>\n<font color=\"#0f0f0f\">\"Storgata 2B\" eller \"123/4-2\"</font>\n<font color=\"#0f0f0f\">Der det i tillegg er adressetilleggsnavn:</font>\n<font color=\"#0f0f0f\">\"Haugen, Storgata 2B\" eller \"Midtgard, 123/4-2\"</font>\n<font color=\"#0f0f0f\">\n</font>Merknad:\nAdressene er unike innenfor en kommune.\n\nMerknad2: Adressetilleggsnavn av typen \"Matrikkeladressenavn\" kan inneholde andre ting enn adressetilleggsnavn",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "ADRESSETEKST"
+        }
+      },
+      {
+        "name": "adresseTekstUtenAdressetilleggsnavn",
+        "type": "CharacterString",
+        "description": "<font color=\"#0f0f0f\">Del av offisiell adresse, men uten bruksenhetsnummer for adresser som ligger til bruksenheter/boliger, - og uten eventuelle adressetilleggsnavn</font>\n<font color=\"#0f0f0f\">\n</font>Vegadresse:\n<adressenavn> <nummer><ev bokstav>\nev= hvis fins. Hvis ikke skal formateringstegn utgå foran/bak.\n<font color=\"#0f0f0f\">\n</font><font color=\"#0f0f0f\">Matrikkeladresse:</font>\n<gardsnummer>/<bruksnummer>/<ev festenummer>-<ev undernummer>\nev= hvis fins. Hvis ikke skal formateringstegn utgå foran/bak.\n<font color=\"#0f0f0f\">\n</font><font color=\"#0f0f0f\">Eksempel: </font>\n<font color=\"#0f0f0f\">\"Fjellvegen 2B\" eller \"12/4\"</font>\n<font color=\"#0f0f0f\">\"Storgata 3\" eller \"12/5/3-2\"</font>",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "ADRESSETEKST_UTENADRTILLEGGSNAVN"
+        }
+      },
+      {
+        "name": "adressetilleggsnavn",
+        "type": "CharacterString",
+        "description": "<font color=\"#0f0f0f\">Nedarvet bruksnavn, navn på en institusjon eller bygning eller grend brukt som del av den offisielle adressen</font>\n<font color=\"#0f0f0f\">\n</font><font color=\"#0f0f0f\">Merknad:</font>\nEier kan kreve og kommunen kan tildele adressetilleggsnavn til en offisiell adresse etter vilkår i matrikkelforskriften § 54  og § 55. Hvilken regel den er tildelt etter skal registreres i matrikkelen (adressetilleggsnavnkilde)",
+        "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "ADRESSETILLEGGSNAVN"
+        }
+      },
+      {
+        "name": "adressetilleggsnavnKilde",
+        "type": "AdressetilleggsnavnKildeKode",
+        "description": "opprinnelsen til adressetilleggsnavnet (§§ 54 og 55 i matrikkelforskriften)",
+        "cardinality": "0..1",
+        "valueDomain": {
+          "kind": "codelist",
+          "listedValues": [
+            {
+              "value": "anmodetAvHjemmelshaver",
+              "label": "<font color=\"#333333\">Når adressen gjelder en særlig kjent institusjon eller bygning og allmenne hensyn taler for det, kan kommunen på anmodning fra registrert eier fastsette at den offisielle adressen også skal omfatte et navn på institusjonen eller bygningen (</font>matrikkelforskriftens § 54 2. ledd)"
+            },
+            {
+              "value": "ikkeOppgitt",
+              "label": "\"Ikke oppgitt\" brukes på adresser uten adressetilleggsnavn."
+            },
+            {
+              "value": "krevdAvEier",
+              "label": "<font color=\"#333333\">Når adressen gjelder et gårdsbruk, kan den som har grunnbokshjemmel til eiendommen som eier, kreve at den offisielle adressen også skal omfatte gårdens bruksnavn, dersom navnet faller språklig og geografisk sammen med et nedarvet stedsnavn, jf. lov 18. mai 1990 nr. 11 om stadnamn (</font>matrikkelforskriftens § 54 1. ledd)"
+            },
+            {
+              "value": "matrikkeladressenavn",
+              "label": "<font color=\"#333333\">Adresser i område med matrikkeladresser som ikke har tildelt et adressetilleggsnavn etter reglene i § 54, kan tilordnes et matrikkeladressenavn etter </font>matrikkelforskriftens § 55 3. ledd. Hvis det tildeles adressetilleggsnavn etter § 54 strykes matrikkeladressenavnet"
+            },
+            {
+              "value": "tildeltAvKommunen",
+              "label": "<font color=\"#333333\">Kommunen kan tildele adresser innenfor mindre grender, bolig- eller hyttefelt eller andre avgrensede områder et felles adressetilleggsnavn (</font>Matrikkelforskriftens § 54 3. ledd, men tildeling etter 1. eller 2. ledd går foran 3. ledd)"
+            }
+          ],
+          "definition": "Kodeliste over opphav til adressetilleggsnavn, som også er årsaken til at de er registrert i matrikkelen.",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/legg_inn_riktig_url"
+        },
+        "taggedValues": {
+          "SOSI_navn": "ADRESSETILLEGGSNAVNKILDE"
+        }
+      },
+      {
+        "name": "bruksenhetsnummerTekst",
+        "type": "CharacterString",
+        "description": "Del av offisiell adresse (bruksenhetsnummer) til en bruksenhet, f.eks en leilighet i flerboligbygg.\n\nMerknad:\nBokstaven og de to første tallene angir hvilken etasje leiligheten ligger i, og de to siste angir leilighetens nummer i etasjen, regnet fra venstre mot høyre.\n<etasjeplan><etasjenummer><lopenummer>\nEksempel: \"H0102\", \"K0101\"",
+        "cardinality": "0..*",
+        "taggedValues": {
+          "SOSI_navn": "BRUKSENHETSNUMMERTEKST"
+        }
+      },
+      {
+        "name": "grunnkrets",
+        "type": "GrunnkretsId",
+        "description": "adressens knytning til grunnkrets. Grunnkrets er den minste geografiske enhet det blir beregnet statistikk på\n\nMerknad:\nEn kommune er delt inn i flere grunnkretser.",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "grunnkretsnavn",
+            "type": "CharacterString",
+            "description": "offisielt navn fra grunnkretskatalogen til SSB",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "GRUNNKRETSNAVN"
+            }
+          },
+          {
+            "name": "grunnkretsnummer",
+            "type": "CharacterString",
+            "description": "består av 8 siffer, hvor de fire første er kommunenummer, de to neste er delområdenummer og de to siste angir grunnkrets\n\nMerknad:\nDet skal benyttes ledende nuller.\n\nGrunnkretskatalogen utgis og ajourføres av SSB, og er den offisielle listen over grunnkretser.",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "GRUNNKRETSNUMMER"
+            }
+          }
+        ]
+      },
+      {
+        "name": "kommunenavn",
+        "type": "CharacterString",
+        "description": "navn (norsk) på en kommune",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "KOMMUNENAVN"
+        }
+      },
+      {
+        "name": "kommunenummer",
+        "type": "Kommunenummer",
+        "description": "nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste\n\nMerknad: Det presiseres at kommunenummer alltid skal ha 4 siffer, dvs. eventuelt med ledende null.",
+        "cardinality": "1",
+        "valueDomain": {
+          "kind": "codelist",
+          "listedValues": [
+            {
+              "value": "0101",
+              "label": "Halden"
+            },
+            {
+              "value": "0102",
+              "label": "Sarpsborg (utgått)"
+            },
+            {
+              "value": "0103",
+              "label": "Fredrikstad (utgått)"
+            },
+            {
+              "value": "0104",
+              "label": "Moss"
+            },
+            {
+              "value": "0105",
+              "label": "Sarpsborg"
+            },
+            {
+              "value": "0106",
+              "label": "Fredrikstad"
+            },
+            {
+              "value": "0111",
+              "label": "Hvaler"
+            },
+            {
+              "value": "0113",
+              "label": "Borge (utgått)"
+            },
+            {
+              "value": "0114",
+              "label": "Varteig (utgått)"
+            },
+            {
+              "value": "0115",
+              "label": "Skjeberg (utgått)"
+            },
+            {
+              "value": "0118",
+              "label": "Aremark"
+            },
+            {
+              "value": "0119",
+              "label": "Marker"
+            },
+            {
+              "value": "0121",
+              "label": "Rømskog"
+            },
+            {
+              "value": "0122",
+              "label": "Trøgstad"
+            },
+            {
+              "value": "0123",
+              "label": "Spydeberg"
+            },
+            {
+              "value": "0124",
+              "label": "Askim"
+            },
+            {
+              "value": "0125",
+              "label": "Eidsberg"
+            },
+            {
+              "value": "0127",
+              "label": "Skiptvet"
+            },
+            {
+              "value": "0128",
+              "label": "Rakkestad"
+            },
+            {
+              "value": "0130",
+              "label": "Tune (utgått)"
+            },
+            {
+              "value": "0131",
+              "label": "Rolvsøy (utgått)"
+            },
+            {
+              "value": "0133",
+              "label": "Kråkerøy (utgått)"
+            },
+            {
+              "value": "0134",
+              "label": "Onsøy (utgått)"
+            },
+            {
+              "value": "0135",
+              "label": "Råde"
+            },
+            {
+              "value": "0136",
+              "label": "Rygge"
+            },
+            {
+              "value": "0137",
+              "label": "Våler i Østfold"
+            },
+            {
+              "value": "0138",
+              "label": "Hobøl"
+            },
+            {
+              "value": "0211",
+              "label": "Vestby"
+            },
+            {
+              "value": "0213",
+              "label": "Ski"
+            },
+            {
+              "value": "0214",
+              "label": "Ås"
+            },
+            {
+              "value": "0215",
+              "label": "Frogn"
+            },
+            {
+              "value": "0216",
+              "label": "Nesodden"
+            },
+            {
+              "value": "0217",
+              "label": "Oppegård"
+            },
+            {
+              "value": "0219",
+              "label": "Bærum"
+            },
+            {
+              "value": "0220",
+              "label": "Asker"
+            },
+            {
+              "value": "0221",
+              "label": "Aurskog-Høland"
+            },
+            {
+              "value": "0226",
+              "label": "Sørum"
+            },
+            {
+              "value": "0227",
+              "label": "Fet"
+            },
+            {
+              "value": "0228",
+              "label": "Rælingen"
+            },
+            {
+              "value": "0229",
+              "label": "Enebakk"
+            },
+            {
+              "value": "0230",
+              "label": "Lørenskog"
+            },
+            {
+              "value": "0231",
+              "label": "Skedsmo"
+            },
+            {
+              "value": "0233",
+              "label": "Nittedal"
+            },
+            {
+              "value": "0234",
+              "label": "Gjerdrum"
+            },
+            {
+              "value": "0235",
+              "label": "Ullensaker"
+            },
+            {
+              "value": "0236",
+              "label": "Nes i Akershus"
+            },
+            {
+              "value": "0237",
+              "label": "Eidsvoll"
+            },
+            {
+              "value": "0238",
+              "label": "Nannestad"
+            },
+            {
+              "value": "0239",
+              "label": "Hurdal"
+            },
+            {
+              "value": "0301",
+              "label": "Oslo"
+            },
+            {
+              "value": "0401",
+              "label": "Hamar (utgått)"
+            },
+            {
+              "value": "0402",
+              "label": "Kongsvinger"
+            },
+            {
+              "value": "0403",
+              "label": "Hamar"
+            },
+            {
+              "value": "0412",
+              "label": "Ringsaker"
+            },
+            {
+              "value": "0414",
+              "label": "Vang (utgått)"
+            },
+            {
+              "value": "0415",
+              "label": "Løten"
+            },
+            {
+              "value": "0417",
+              "label": "Stange"
+            },
+            {
+              "value": "0418",
+              "label": "Nord-Odal"
+            },
+            {
+              "value": "0419",
+              "label": "Sør-Odal"
+            },
+            {
+              "value": "0420",
+              "label": "Eidskog"
+            },
+            {
+              "value": "0423",
+              "label": "Grue"
+            },
+            {
+              "value": "0425",
+              "label": "Åsnes"
+            },
+            {
+              "value": "0426",
+              "label": "Våler i Hedmark"
+            },
+            {
+              "value": "0427",
+              "label": "Elverum"
+            },
+            {
+              "value": "0428",
+              "label": "Trysil"
+            },
+            {
+              "value": "0429",
+              "label": "Åmot"
+            },
+            {
+              "value": "0430",
+              "label": "Stor-Elvdal"
+            },
+            {
+              "value": "0432",
+              "label": "Rendalen"
+            },
+            {
+              "value": "0434",
+              "label": "Engerdal"
+            },
+            {
+              "value": "0436",
+              "label": "Tolga"
+            },
+            {
+              "value": "0437",
+              "label": "Tynset"
+            },
+            {
+              "value": "0438",
+              "label": "Alvdal"
+            },
+            {
+              "value": "0439",
+              "label": "Folldal"
+            },
+            {
+              "value": "0441",
+              "label": "Os i Hedmark"
+            },
+            {
+              "value": "0501",
+              "label": "Lillehammer"
+            },
+            {
+              "value": "0502",
+              "label": "Gjøvik"
+            },
+            {
+              "value": "0511",
+              "label": "Dovre"
+            },
+            {
+              "value": "0512",
+              "label": "Lesja"
+            },
+            {
+              "value": "0513",
+              "label": "Skjåk"
+            },
+            {
+              "value": "0514",
+              "label": "Lom"
+            },
+            {
+              "value": "0515",
+              "label": "Vågå"
+            },
+            {
+              "value": "0516",
+              "label": "Nord-Fron"
+            },
+            {
+              "value": "0517",
+              "label": "Sel"
+            },
+            {
+              "value": "0519",
+              "label": "Sør-Fron"
+            },
+            {
+              "value": "0520",
+              "label": "Ringebu"
+            },
+            {
+              "value": "0521",
+              "label": "Øyer"
+            },
+            {
+              "value": "0522",
+              "label": "Gausdal"
+            },
+            {
+              "value": "0528",
+              "label": "Østre Toten"
+            },
+            {
+              "value": "0529",
+              "label": "Vestre Toten"
+            },
+            {
+              "value": "0532",
+              "label": "Jevnaker"
+            },
+            {
+              "value": "0533",
+              "label": "Lunner"
+            },
+            {
+              "value": "0534",
+              "label": "Gran"
+            },
+            {
+              "value": "0536",
+              "label": "Søndre Land"
+            },
+            {
+              "value": "0538",
+              "label": "Nordre Land"
+            },
+            {
+              "value": "0540",
+              "label": "Sør-Aurdal"
+            },
+            {
+              "value": "0541",
+              "label": "Etnedal"
+            },
+            {
+              "value": "0542",
+              "label": "Nord-Aurdal"
+            },
+            {
+              "value": "0543",
+              "label": "Vestre Slidre"
+            },
+            {
+              "value": "0544",
+              "label": "Øystre Slidre"
+            },
+            {
+              "value": "0545",
+              "label": "Vang"
+            },
+            {
+              "value": "0602",
+              "label": "Drammen"
+            },
+            {
+              "value": "0604",
+              "label": "Kongsberg"
+            },
+            {
+              "value": "0605",
+              "label": "Ringerike"
+            },
+            {
+              "value": "0612",
+              "label": "Hole"
+            },
+            {
+              "value": "0615",
+              "label": "Flå"
+            },
+            {
+              "value": "0616",
+              "label": "Nes i Buskerud"
+            },
+            {
+              "value": "0617",
+              "label": "Gol"
+            },
+            {
+              "value": "0618",
+              "label": "Hemsedal"
+            },
+            {
+              "value": "0619",
+              "label": "Ål"
+            },
+            {
+              "value": "0620",
+              "label": "Hol"
+            },
+            {
+              "value": "0621",
+              "label": "Sigdal"
+            },
+            {
+              "value": "0622",
+              "label": "Krødsherad"
+            },
+            {
+              "value": "0623",
+              "label": "Modum"
+            },
+            {
+              "value": "0624",
+              "label": "Øvre Eiker"
+            },
+            {
+              "value": "0625",
+              "label": "Nedre Eiker"
+            },
+            {
+              "value": "0626",
+              "label": "Lier"
+            },
+            {
+              "value": "0627",
+              "label": "Røyken"
+            },
+            {
+              "value": "0628",
+              "label": "Hurum"
+            },
+            {
+              "value": "0631",
+              "label": "Flesberg"
+            },
+            {
+              "value": "0632",
+              "label": "Rollag"
+            },
+            {
+              "value": "0633",
+              "label": "Nore og Uvdal"
+            },
+            {
+              "value": "0701",
+              "label": "Horten"
+            },
+            {
+              "value": "0702",
+              "label": "Holmestrand (utgått)"
+            },
+            {
+              "value": "0703",
+              "label": "Horten (utgått)"
+            },
+            {
+              "value": "0704",
+              "label": "Tønsberg"
+            },
+            {
+              "value": "0705",
+              "label": "Tønsberg (utgått)"
+            },
+            {
+              "value": "0706",
+              "label": "Sandefjord (utgått)"
+            },
+            {
+              "value": "0707",
+              "label": "Larvik (utgått)"
+            },
+            {
+              "value": "0708",
+              "label": "Stavern (utgått)"
+            },
+            {
+              "value": "0709",
+              "label": "Larvik (utgått)"
+            },
+            {
+              "value": "0710",
+              "label": "Sandefjord"
+            },
+            {
+              "value": "0711",
+              "label": "Svelvik"
+            },
+            {
+              "value": "0712",
+              "label": "Larvik"
+            },
+            {
+              "value": "0713",
+              "label": "Sande i Vestfold"
+            },
+            {
+              "value": "0714",
+              "label": "Hof (utgått)"
+            },
+            {
+              "value": "0715",
+              "label": "Holmestrand"
+            },
+            {
+              "value": "0716",
+              "label": "Re"
+            },
+            {
+              "value": "0717",
+              "label": "Borre (utgått)"
+            },
+            {
+              "value": "0718",
+              "label": "Ramnes (utgått)"
+            },
+            {
+              "value": "0719",
+              "label": "Andebu (utgått)"
+            },
+            {
+              "value": "0720",
+              "label": "Stokke (utgått)"
+            },
+            {
+              "value": "0721",
+              "label": "Sem (utgått)"
+            },
+            {
+              "value": "0722",
+              "label": "Nøtterøy (utgått)"
+            },
+            {
+              "value": "0723",
+              "label": "Tjøme (utgått)"
+            },
+            {
+              "value": "0725",
+              "label": "Tjølling (utgått)"
+            },
+            {
+              "value": "0726",
+              "label": "Brunlanes (utgått)"
+            },
+            {
+              "value": "0727",
+              "label": "Hedrum (utgått)"
+            },
+            {
+              "value": "0728",
+              "label": "Lardal (utgått)"
+            },
+            {
+              "value": "0729",
+              "label": "Færder"
+            },
+            {
+              "value": "0805",
+              "label": "Porsgrunn"
+            },
+            {
+              "value": "0806",
+              "label": "Skien"
+            },
+            {
+              "value": "0807",
+              "label": "Notodden"
+            },
+            {
+              "value": "0811",
+              "label": "Siljan"
+            },
+            {
+              "value": "0814",
+              "label": "Bamble"
+            },
+            {
+              "value": "0815",
+              "label": "Kragerø"
+            },
+            {
+              "value": "0817",
+              "label": "Drangedal"
+            },
+            {
+              "value": "0819",
+              "label": "Nome"
+            },
+            {
+              "value": "0821",
+              "label": "Bø i Telemark"
+            },
+            {
+              "value": "0822",
+              "label": "Sauherad"
+            },
+            {
+              "value": "0826",
+              "label": "Tinn"
+            },
+            {
+              "value": "0827",
+              "label": "Hjartdal"
+            },
+            {
+              "value": "0828",
+              "label": "Seljord"
+            },
+            {
+              "value": "0829",
+              "label": "Kviteseid"
+            },
+            {
+              "value": "0830",
+              "label": "Nissedal"
+            },
+            {
+              "value": "0831",
+              "label": "Fyresdal"
+            },
+            {
+              "value": "0833",
+              "label": "Tokke"
+            },
+            {
+              "value": "0834",
+              "label": "Vinje"
+            },
+            {
+              "value": "0901",
+              "label": "Risør"
+            },
+            {
+              "value": "0903",
+              "label": "Arendal (utgått)"
+            },
+            {
+              "value": "0904",
+              "label": "Grimstad"
+            },
+            {
+              "value": "0906",
+              "label": "Arendal"
+            },
+            {
+              "value": "0911",
+              "label": "Gjerstad"
+            },
+            {
+              "value": "0912",
+              "label": "Vegårshei"
+            },
+            {
+              "value": "0914",
+              "label": "Tvedestrand"
+            },
+            {
+              "value": "0918",
+              "label": "Moland (utgått)"
+            },
+            {
+              "value": "0919",
+              "label": "Froland"
+            },
+            {
+              "value": "0920",
+              "label": "Øyestad (utgått)"
+            },
+            {
+              "value": "0921",
+              "label": "Tromøy (utgått)"
+            },
+            {
+              "value": "0922",
+              "label": "Hisøy (utgått)"
+            },
+            {
+              "value": "0926",
+              "label": "Lillesand"
+            },
+            {
+              "value": "0928",
+              "label": "Birkenes"
+            },
+            {
+              "value": "0929",
+              "label": "Åmli"
+            },
+            {
+              "value": "0935",
+              "label": "Iveland"
+            },
+            {
+              "value": "0937",
+              "label": "Evje og Hornnes"
+            },
+            {
+              "value": "0938",
+              "label": "Bygland"
+            },
+            {
+              "value": "0940",
+              "label": "Valle"
+            },
+            {
+              "value": "0941",
+              "label": "Bykle"
+            },
+            {
+              "value": "1001",
+              "label": "Kristiansand"
+            },
+            {
+              "value": "1002",
+              "label": "Mandal"
+            },
+            {
+              "value": "1003",
+              "label": "Farsund"
+            },
+            {
+              "value": "1004",
+              "label": "Flekkefjord"
+            },
+            {
+              "value": "1014",
+              "label": "Vennesla"
+            },
+            {
+              "value": "1017",
+              "label": "Songdalen"
+            },
+            {
+              "value": "1018",
+              "label": "Søgne"
+            },
+            {
+              "value": "1021",
+              "label": "Marnardal"
+            },
+            {
+              "value": "1026",
+              "label": "Åseral"
+            },
+            {
+              "value": "1027",
+              "label": "Audnedal"
+            },
+            {
+              "value": "1029",
+              "label": "Lindesnes"
+            },
+            {
+              "value": "1032",
+              "label": "Lyngdal"
+            },
+            {
+              "value": "1034",
+              "label": "Hægebostad"
+            },
+            {
+              "value": "1037",
+              "label": "Kvinesdal"
+            },
+            {
+              "value": "1046",
+              "label": "Sirdal"
+            },
+            {
+              "value": "1101",
+              "label": "Eigersund"
+            },
+            {
+              "value": "1102",
+              "label": "Sandnes"
+            },
+            {
+              "value": "1103",
+              "label": "Stavanger"
+            },
+            {
+              "value": "1106",
+              "label": "Haugesund"
+            },
+            {
+              "value": "1111",
+              "label": "Sokndal"
+            },
+            {
+              "value": "1112",
+              "label": "Lund"
+            },
+            {
+              "value": "1114",
+              "label": "Bjerkreim"
+            },
+            {
+              "value": "1119",
+              "label": "Hå"
+            },
+            {
+              "value": "1120",
+              "label": "Klepp"
+            },
+            {
+              "value": "1121",
+              "label": "Time"
+            },
+            {
+              "value": "1122",
+              "label": "Gjesdal"
+            },
+            {
+              "value": "1124",
+              "label": "Sola"
+            },
+            {
+              "value": "1127",
+              "label": "Randaberg"
+            },
+            {
+              "value": "1129",
+              "label": "Forsand"
+            },
+            {
+              "value": "1130",
+              "label": "Strand"
+            },
+            {
+              "value": "1133",
+              "label": "Hjelmeland"
+            },
+            {
+              "value": "1134",
+              "label": "Suldal"
+            },
+            {
+              "value": "1135",
+              "label": "Sauda"
+            },
+            {
+              "value": "1141",
+              "label": "Finnøy"
+            },
+            {
+              "value": "1142",
+              "label": "Rennesøy"
+            },
+            {
+              "value": "1144",
+              "label": "Kvitsøy"
+            },
+            {
+              "value": "1145",
+              "label": "Bokn"
+            },
+            {
+              "value": "1146",
+              "label": "Tysvær"
+            },
+            {
+              "value": "1149",
+              "label": "Karmøy"
+            },
+            {
+              "value": "1151",
+              "label": "Utsira"
+            },
+            {
+              "value": "1154",
+              "label": "Vindafjord ((utgått)"
+            },
+            {
+              "value": "1159",
+              "label": "Ølen (utgått)"
+            },
+            {
+              "value": "1160",
+              "label": "Vindafjord"
+            },
+            {
+              "value": "1201",
+              "label": "Bergen"
+            },
+            {
+              "value": "1211",
+              "label": "Etne"
+            },
+            {
+              "value": "1214",
+              "label": "Ølen (utgått)"
+            },
+            {
+              "value": "1216",
+              "label": "Sveio"
+            },
+            {
+              "value": "1219",
+              "label": "Bømlo"
+            },
+            {
+              "value": "1221",
+              "label": "Stord"
+            },
+            {
+              "value": "1222",
+              "label": "Fitjar"
+            },
+            {
+              "value": "1223",
+              "label": "Tysnes"
+            },
+            {
+              "value": "1224",
+              "label": "Kvinnherad"
+            },
+            {
+              "value": "1227",
+              "label": "Jondal"
+            },
+            {
+              "value": "1228",
+              "label": "Odda"
+            },
+            {
+              "value": "1231",
+              "label": "Ullensvang"
+            },
+            {
+              "value": "1232",
+              "label": "Eidfjord"
+            },
+            {
+              "value": "1233",
+              "label": "Ulvik"
+            },
+            {
+              "value": "1234",
+              "label": "Granvin"
+            },
+            {
+              "value": "1235",
+              "label": "Voss"
+            },
+            {
+              "value": "1238",
+              "label": "Kvam"
+            },
+            {
+              "value": "1241",
+              "label": "Fusa"
+            },
+            {
+              "value": "1242",
+              "label": "Samnanger"
+            },
+            {
+              "value": "1243",
+              "label": "Os i Hordaland"
+            },
+            {
+              "value": "1244",
+              "label": "Austevoll"
+            },
+            {
+              "value": "1245",
+              "label": "Sund"
+            },
+            {
+              "value": "1246",
+              "label": "Fjell"
+            },
+            {
+              "value": "1247",
+              "label": "Askøy"
+            },
+            {
+              "value": "1251",
+              "label": "Vaksdal"
+            },
+            {
+              "value": "1252",
+              "label": "Modalen"
+            },
+            {
+              "value": "1253",
+              "label": "Osterøy"
+            },
+            {
+              "value": "1256",
+              "label": "Meland"
+            },
+            {
+              "value": "1259",
+              "label": "Øygarden"
+            },
+            {
+              "value": "1260",
+              "label": "Radøy"
+            },
+            {
+              "value": "1263",
+              "label": "Lindås"
+            },
+            {
+              "value": "1264",
+              "label": "Austrheim"
+            },
+            {
+              "value": "1265",
+              "label": "Fedje"
+            },
+            {
+              "value": "1266",
+              "label": "Masfjorden"
+            },
+            {
+              "value": "1401",
+              "label": "Flora"
+            },
+            {
+              "value": "1411",
+              "label": "Gulen"
+            },
+            {
+              "value": "1412",
+              "label": "Solund"
+            },
+            {
+              "value": "1413",
+              "label": "Hyllestad"
+            },
+            {
+              "value": "1416",
+              "label": "Høyanger"
+            },
+            {
+              "value": "1417",
+              "label": "Vik"
+            },
+            {
+              "value": "1418",
+              "label": "Balestrand"
+            },
+            {
+              "value": "1419",
+              "label": "Leikanger"
+            },
+            {
+              "value": "1420",
+              "label": "Sogndal"
+            },
+            {
+              "value": "1421",
+              "label": "Aurland"
+            },
+            {
+              "value": "1422",
+              "label": "Lærdal"
+            },
+            {
+              "value": "1424",
+              "label": "Årdal"
+            },
+            {
+              "value": "1426",
+              "label": "Luster"
+            },
+            {
+              "value": "1428",
+              "label": "Askvoll"
+            },
+            {
+              "value": "1429",
+              "label": "Fjaler"
+            },
+            {
+              "value": "1430",
+              "label": "Gaular"
+            },
+            {
+              "value": "1431",
+              "label": "Jølster"
+            },
+            {
+              "value": "1432",
+              "label": "Førde"
+            },
+            {
+              "value": "1433",
+              "label": "Naustdal"
+            },
+            {
+              "value": "1438",
+              "label": "Bremanger"
+            },
+            {
+              "value": "1439",
+              "label": "Vågsøy"
+            },
+            {
+              "value": "1441",
+              "label": "Selje"
+            },
+            {
+              "value": "1443",
+              "label": "Eid"
+            },
+            {
+              "value": "1444",
+              "label": "Hornindal"
+            },
+            {
+              "value": "1445",
+              "label": "Gloppen"
+            },
+            {
+              "value": "1449",
+              "label": "Stryn"
+            },
+            {
+              "value": "1502",
+              "label": "Molde"
+            },
+            {
+              "value": "1504",
+              "label": "Ålesund"
+            },
+            {
+              "value": "1505",
+              "label": "Kristiansund"
+            },
+            {
+              "value": "1511",
+              "label": "Vanylven"
+            },
+            {
+              "value": "1514",
+              "label": "Sande i Møre og Romsdal"
+            },
+            {
+              "value": "1515",
+              "label": "Herøy i Møre og Romsdal"
+            },
+            {
+              "value": "1516",
+              "label": "Ulstein"
+            },
+            {
+              "value": "1517",
+              "label": "Hareid"
+            },
+            {
+              "value": "1519",
+              "label": "Volda"
+            },
+            {
+              "value": "1520",
+              "label": "Ørsta"
+            },
+            {
+              "value": "1523",
+              "label": "Ørskog"
+            },
+            {
+              "value": "1524",
+              "label": "Norddal"
+            },
+            {
+              "value": "1525",
+              "label": "Stranda"
+            },
+            {
+              "value": "1526",
+              "label": "Stordal"
+            },
+            {
+              "value": "1528",
+              "label": "Sykkylven"
+            },
+            {
+              "value": "1529",
+              "label": "Skodje"
+            },
+            {
+              "value": "1531",
+              "label": "Sula"
+            },
+            {
+              "value": "1532",
+              "label": "Giske"
+            },
+            {
+              "value": "1534",
+              "label": "Haram"
+            },
+            {
+              "value": "1535",
+              "label": "Vestnes"
+            },
+            {
+              "value": "1539",
+              "label": "Rauma"
+            },
+            {
+              "value": "1543",
+              "label": "Nesset"
+            },
+            {
+              "value": "1545",
+              "label": "Midsund"
+            },
+            {
+              "value": "1546",
+              "label": "Sandøy"
+            },
+            {
+              "value": "1547",
+              "label": "Aukra"
+            },
+            {
+              "value": "1548",
+              "label": "Fræna"
+            },
+            {
+              "value": "1551",
+              "label": "Eide"
+            },
+            {
+              "value": "1554",
+              "label": "Averøy"
+            },
+            {
+              "value": "1557",
+              "label": "Gjemnes"
+            },
+            {
+              "value": "1560",
+              "label": "Tingvoll"
+            },
+            {
+              "value": "1563",
+              "label": "Sunndal"
+            },
+            {
+              "value": "1566",
+              "label": "Surnadal"
+            },
+            {
+              "value": "1567",
+              "label": "Rindal (utgått)"
+            },
+            {
+              "value": "1569",
+              "label": "Aure (utgått)"
+            },
+            {
+              "value": "1571",
+              "label": "Halsa"
+            },
+            {
+              "value": "1572",
+              "label": "Tustna (utgått)"
+            },
+            {
+              "value": "1573",
+              "label": "Smøla"
+            },
+            {
+              "value": "1576",
+              "label": "Aure"
+            },
+            {
+              "value": "1601",
+              "label": "Trondheim (utgått)"
+            },
+            {
+              "value": "1612",
+              "label": "Hemne (utgått)"
+            },
+            {
+              "value": "1613",
+              "label": "Snillfjord (utgått)"
+            },
+            {
+              "value": "1617",
+              "label": "Hitra (utgått)"
+            },
+            {
+              "value": "1620",
+              "label": "Frøya (utgått)"
+            },
+            {
+              "value": "1621",
+              "label": "Ørland (utgått)"
+            },
+            {
+              "value": "1622",
+              "label": "Agdenes (utgått)"
+            },
+            {
+              "value": "1624",
+              "label": "Rissa (utgått)"
+            },
+            {
+              "value": "1627",
+              "label": "Bjugn (utgått)"
+            },
+            {
+              "value": "1630",
+              "label": "Åfjord (utgått)"
+            },
+            {
+              "value": "1632",
+              "label": "Roan (utgått)"
+            },
+            {
+              "value": "1633",
+              "label": "Osen (utgått)"
+            },
+            {
+              "value": "1634",
+              "label": "Oppdal (utgått)"
+            },
+            {
+              "value": "1635",
+              "label": "Rennebu (utgått)"
+            },
+            {
+              "value": "1636",
+              "label": "Meldal (utgått)"
+            },
+            {
+              "value": "1638",
+              "label": "Orkdal (utgått)"
+            },
+            {
+              "value": "1640",
+              "label": "Røros (utgått)"
+            },
+            {
+              "value": "1644",
+              "label": "Holtålen (utgått)"
+            },
+            {
+              "value": "1648",
+              "label": "Midtre Gauldal (utgått)"
+            },
+            {
+              "value": "1653",
+              "label": "Melhus (utgått)"
+            },
+            {
+              "value": "1657",
+              "label": "Skaun (utgått)"
+            },
+            {
+              "value": "1662",
+              "label": "Klæbu (utgått)"
+            },
+            {
+              "value": "1663",
+              "label": "Malvik (utgått)"
+            },
+            {
+              "value": "1664",
+              "label": "Selbu (utgått)"
+            },
+            {
+              "value": "1665",
+              "label": "Tydal (utgått)"
+            },
+            {
+              "value": "1702",
+              "label": "Steinkjer (utgått)"
+            },
+            {
+              "value": "1703",
+              "label": "Namsos (utgått)"
+            },
+            {
+              "value": "1711",
+              "label": "Meråker (utgått)"
+            },
+            {
+              "value": "1714",
+              "label": "Stjørdal (utgått)"
+            },
+            {
+              "value": "1717",
+              "label": "Frosta (utgått)"
+            },
+            {
+              "value": "1718",
+              "label": "Leksvik (utgått)"
+            },
+            {
+              "value": "1719",
+              "label": "Levanger (utgått)"
+            },
+            {
+              "value": "1721",
+              "label": "Verdal (utgått)"
+            },
+            {
+              "value": "1723",
+              "label": "Mosvik (utgått)"
+            },
+            {
+              "value": "1724",
+              "label": "Verran (utgått)"
+            },
+            {
+              "value": "1725",
+              "label": "Namdalseid (utgått)"
+            },
+            {
+              "value": "1729",
+              "label": "Inderøy (utgått)"
+            },
+            {
+              "value": "1736",
+              "label": "Snåase – Snåsa (utgått)"
+            },
+            {
+              "value": "1738",
+              "label": "Lierne (utgått)"
+            },
+            {
+              "value": "1739",
+              "label": "Raarvihke – Røyrvik (utgått)"
+            },
+            {
+              "value": "1740",
+              "label": "Namsskogan (utgått)"
+            },
+            {
+              "value": "1742",
+              "label": "Grong (utgått)"
+            },
+            {
+              "value": "1743",
+              "label": "Høylandet (utgått)"
+            },
+            {
+              "value": "1744",
+              "label": "Overhalla (utgått)"
+            },
+            {
+              "value": "1748",
+              "label": "Fosnes (utgått)"
+            },
+            {
+              "value": "1749",
+              "label": "Flatanger (utgått)"
+            },
+            {
+              "value": "1750",
+              "label": "Vikna (utgått)"
+            },
+            {
+              "value": "1751",
+              "label": "Nærøy (utgått)"
+            },
+            {
+              "value": "1755",
+              "label": "Leka (utgått)"
+            },
+            {
+              "value": "1756",
+              "label": "Inderøy (utgått)"
+            },
+            {
+              "value": "1804",
+              "label": "Bodø"
+            },
+            {
+              "value": "1805",
+              "label": "Narvik"
+            },
+            {
+              "value": "1811",
+              "label": "Bindal"
+            },
+            {
+              "value": "1812",
+              "label": "Sømna"
+            },
+            {
+              "value": "1813",
+              "label": "Brønnøy"
+            },
+            {
+              "value": "1815",
+              "label": "Vega"
+            },
+            {
+              "value": "1816",
+              "label": "Vevelstad"
+            },
+            {
+              "value": "1818",
+              "label": "Herøy i Nordland"
+            },
+            {
+              "value": "1820",
+              "label": "Alstahaug"
+            },
+            {
+              "value": "1822",
+              "label": "Leirfjord"
+            },
+            {
+              "value": "1824",
+              "label": "Vefsn"
+            },
+            {
+              "value": "1825",
+              "label": "Grane"
+            },
+            {
+              "value": "1826",
+              "label": "Hattfjelldal"
+            },
+            {
+              "value": "1827",
+              "label": "Dønna"
+            },
+            {
+              "value": "1828",
+              "label": "Nesna"
+            },
+            {
+              "value": "1832",
+              "label": "Hemnes"
+            },
+            {
+              "value": "1833",
+              "label": "Rana"
+            },
+            {
+              "value": "1834",
+              "label": "Lurøy"
+            },
+            {
+              "value": "1835",
+              "label": "Træna"
+            },
+            {
+              "value": "1836",
+              "label": "Rødøy"
+            },
+            {
+              "value": "1837",
+              "label": "Meløy"
+            },
+            {
+              "value": "1838",
+              "label": "Gildeskål"
+            },
+            {
+              "value": "1839",
+              "label": "Beiarn"
+            },
+            {
+              "value": "1840",
+              "label": "Saltdal"
+            },
+            {
+              "value": "1841",
+              "label": "Fauske – Fuossko"
+            },
+            {
+              "value": "1842",
+              "label": "Skjerstad (utgått)"
+            },
+            {
+              "value": "1845",
+              "label": "Sørfold"
+            },
+            {
+              "value": "1848",
+              "label": "Steigen"
+            },
+            {
+              "value": "1849",
+              "label": "Hamarøy – Hábmer"
+            },
+            {
+              "value": "1850",
+              "label": "Divtasvuodna – Tysfjord"
+            },
+            {
+              "value": "1851",
+              "label": "Lødingen"
+            },
+            {
+              "value": "1852",
+              "label": "Tjeldsund"
+            },
+            {
+              "value": "1853",
+              "label": "Evenes"
+            },
+            {
+              "value": "1854",
+              "label": "Ballangen"
+            },
+            {
+              "value": "1856",
+              "label": "Røst"
+            },
+            {
+              "value": "1857",
+              "label": "Værøy"
+            },
+            {
+              "value": "1859",
+              "label": "Flakstad"
+            },
+            {
+              "value": "1860",
+              "label": "Vestvågøy"
+            },
+            {
+              "value": "1865",
+              "label": "Vågan"
+            },
+            {
+              "value": "1866",
+              "label": "Hadsel"
+            },
+            {
+              "value": "1867",
+              "label": "Bø i Nordland"
+            },
+            {
+              "value": "1868",
+              "label": "Øksnes"
+            },
+            {
+              "value": "1870",
+              "label": "Sortland – Suortá"
+            },
+            {
+              "value": "1871",
+              "label": "Andøy"
+            },
+            {
+              "value": "1874",
+              "label": "Moskenes"
+            },
+            {
+              "value": "1901",
+              "label": "Harstad (utgått)"
+            },
+            {
+              "value": "1902",
+              "label": "Tromsø"
+            },
+            {
+              "value": "1903",
+              "label": "Harstad – Hárstták"
+            },
+            {
+              "value": "1911",
+              "label": "Kvæfjord"
+            },
+            {
+              "value": "1913",
+              "label": "Skånland"
+            },
+            {
+              "value": "1915",
+              "label": "Bjarkøy (utgått)"
+            },
+            {
+              "value": "1917",
+              "label": "Ibestad"
+            },
+            {
+              "value": "1919",
+              "label": "Gratangen"
+            },
+            {
+              "value": "1920",
+              "label": "Loabák – Lavangen"
+            },
+            {
+              "value": "1922",
+              "label": "Bardu"
+            },
+            {
+              "value": "1923",
+              "label": "Salangen"
+            },
+            {
+              "value": "1924",
+              "label": "Målselv"
+            },
+            {
+              "value": "1925",
+              "label": "Sørreisa"
+            },
+            {
+              "value": "1926",
+              "label": "Dyrøy"
+            },
+            {
+              "value": "1927",
+              "label": "Tranøy"
+            },
+            {
+              "value": "1928",
+              "label": "Torsken"
+            },
+            {
+              "value": "1929",
+              "label": "Berg"
+            },
+            {
+              "value": "1931",
+              "label": "Lenvik"
+            },
+            {
+              "value": "1933",
+              "label": "Balsfjord"
+            },
+            {
+              "value": "1936",
+              "label": "Karlsøy"
+            },
+            {
+              "value": "1938",
+              "label": "Lyngen"
+            },
+            {
+              "value": "1939",
+              "label": "Storfjord – Omasvuotna – Omasvuono"
+            },
+            {
+              "value": "1940",
+              "label": "Gáivuotna – Kåfjord – Kaivuono"
+            },
+            {
+              "value": "1941",
+              "label": "Skjervøy"
+            },
+            {
+              "value": "1942",
+              "label": "Nordreisa – Ráisa – Raisi"
+            },
+            {
+              "value": "1943",
+              "label": "Kvænangen"
+            },
+            {
+              "value": "2001",
+              "label": "Hammerfest (utgått)"
+            },
+            {
+              "value": "2002",
+              "label": "Vardø"
+            },
+            {
+              "value": "2003",
+              "label": "Vadsø"
+            },
+            {
+              "value": "2004",
+              "label": "Hammerfest"
+            },
+            {
+              "value": "2011",
+              "label": "Guovdageaidnu – Kautokeino"
+            },
+            {
+              "value": "2012",
+              "label": "Alta"
+            },
+            {
+              "value": "2014",
+              "label": "Loppa"
+            },
+            {
+              "value": "2015",
+              "label": "Hasvik"
+            },
+            {
+              "value": "2016",
+              "label": "Sørøysund (utgått)"
+            },
+            {
+              "value": "2017",
+              "label": "Kvalsund"
+            },
+            {
+              "value": "2018",
+              "label": "Måsøy"
+            },
+            {
+              "value": "2019",
+              "label": "Nordkapp"
+            },
+            {
+              "value": "2020",
+              "label": "Porsanger – Porsáŋgu – Porsanki"
+            },
+            {
+              "value": "2021",
+              "label": "Kárášjohka – Karasjok"
+            },
+            {
+              "value": "2022",
+              "label": "Lebesby"
+            },
+            {
+              "value": "2023",
+              "label": "Gamvik"
+            },
+            {
+              "value": "2024",
+              "label": "Berlevåg"
+            },
+            {
+              "value": "2025",
+              "label": "Deatnu – Tana"
+            },
+            {
+              "value": "2027",
+              "label": "Unjárga – Nesseby"
+            },
+            {
+              "value": "2028",
+              "label": "Båtsfjord"
+            },
+            {
+              "value": "2030",
+              "label": "Sør-Varanger"
+            },
+            {
+              "value": "2100",
+              "label": "Svalbard"
+            },
+            {
+              "value": "2111",
+              "label": "Spitsbergen (utgått)"
+            },
+            {
+              "value": "2121",
+              "label": "Bjørnøya (utgått)"
+            },
+            {
+              "value": "2131",
+              "label": "Hopen (utgått)"
+            },
+            {
+              "value": "2211",
+              "label": "Jan Mayen"
+            },
+            {
+              "value": "2311",
+              "label": "Sokkelen sør for 62 grader Nord"
+            },
+            {
+              "value": "2321",
+              "label": "Sokkelen nord for 62 grader Nord"
+            },
+            {
+              "value": "5001",
+              "label": "Trondheim"
+            },
+            {
+              "value": "5004",
+              "label": "Steinkjer"
+            },
+            {
+              "value": "5005",
+              "label": "Namsos"
+            },
+            {
+              "value": "5011",
+              "label": "Hemne"
+            },
+            {
+              "value": "5012",
+              "label": "Snillfjord"
+            },
+            {
+              "value": "5013",
+              "label": "Hitra"
+            },
+            {
+              "value": "5014",
+              "label": "Frøya"
+            },
+            {
+              "value": "5015",
+              "label": "Ørland"
+            },
+            {
+              "value": "5016",
+              "label": "Agdenes"
+            },
+            {
+              "value": "5017",
+              "label": "Bjugn"
+            },
+            {
+              "value": "5018",
+              "label": "Åfjord"
+            },
+            {
+              "value": "5019",
+              "label": "Roan"
+            },
+            {
+              "value": "5020",
+              "label": "Osen"
+            },
+            {
+              "value": "5021",
+              "label": "Oppdal"
+            },
+            {
+              "value": "5022",
+              "label": "Rennebu"
+            },
+            {
+              "value": "5023",
+              "label": "Meldal"
+            },
+            {
+              "value": "5024",
+              "label": "Orkdal"
+            },
+            {
+              "value": "5025",
+              "label": "Røros"
+            },
+            {
+              "value": "5026",
+              "label": "Holtålen"
+            },
+            {
+              "value": "5027",
+              "label": "Midtre Gauldal"
+            },
+            {
+              "value": "5028",
+              "label": "Melhus"
+            },
+            {
+              "value": "5029",
+              "label": "Skaun"
+            },
+            {
+              "value": "5030",
+              "label": "Klæbu"
+            },
+            {
+              "value": "5031",
+              "label": "Malvik"
+            },
+            {
+              "value": "5032",
+              "label": "Selbu"
+            },
+            {
+              "value": "5033",
+              "label": "Tydal"
+            },
+            {
+              "value": "5034",
+              "label": "Meråker"
+            },
+            {
+              "value": "5035",
+              "label": "Stjørdal"
+            },
+            {
+              "value": "5036",
+              "label": "Frosta"
+            },
+            {
+              "value": "5037",
+              "label": "Levanger"
+            },
+            {
+              "value": "5038",
+              "label": "Verdal"
+            },
+            {
+              "value": "5039",
+              "label": "Verran"
+            },
+            {
+              "value": "5040",
+              "label": "Namdalseid"
+            },
+            {
+              "value": "5041",
+              "label": "Snåase – Snåsa"
+            },
+            {
+              "value": "5042",
+              "label": "Lierne"
+            },
+            {
+              "value": "5043",
+              "label": "Raarvihke – Røyrvik"
+            },
+            {
+              "value": "5044",
+              "label": "Namsskogan"
+            },
+            {
+              "value": "5045",
+              "label": "Grong"
+            },
+            {
+              "value": "5046",
+              "label": "Høylandet"
+            },
+            {
+              "value": "5047",
+              "label": "Overhalla"
+            },
+            {
+              "value": "5048",
+              "label": "Frosnes"
+            },
+            {
+              "value": "5049",
+              "label": "Flatanger"
+            },
+            {
+              "value": "5050",
+              "label": "Vikna"
+            },
+            {
+              "value": "5051",
+              "label": "Nærøy"
+            },
+            {
+              "value": "5052",
+              "label": "Leka"
+            },
+            {
+              "value": "5053",
+              "label": "Inderøy"
+            },
+            {
+              "value": "5054",
+              "label": "Indre Fosen"
+            },
+            {
+              "value": "5061",
+              "label": "Rindal"
+            }
+          ],
+          "definition": "nummerering av kommuner i henhold til Statistisk sentralbyrå sin offisielle liste samt et utvalg av utgåtte numre\n\nMerknad: Det presiseres at kommune alltid skal ha 4 sifre, dvs. eventuelt med ledende null. Kommune benyttes for kopling mot en rekke andre registre som også benytter 4 sifre.",
+          "asDictionary": "true",
+          "codeList": "http://skjema.geonorge.no/SOSI/kodeliste/AdmEnheter/2019/Kommunenummer"
+        }
+      },
+      {
+        "name": "matrikkelnummerAdresse",
+        "type": "Matrikkelnummer",
+        "description": "entydig identifisering av matrikkelenhet innen kommune, definert i matrikkelforskrift § 7e\n\nMerknad (teknisk): Hentes fra adresse (link til matrikkelenhet fra adresse i matrikkelen)",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "MATRIKKELNUMMER"
+        },
+        "attributes": [
+          {
+            "name": "bruksnummer",
+            "type": "Integer",
+            "description": "Hver gård er delt opp i et eller flere bruk. Neste ledige bruksnummer innen et gårdsnummer tildeles automatisk. Forkortelsen er bnr",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "BNR"
+            }
+          },
+          {
+            "name": "festenummer",
+            "type": "Integer",
+            "description": "Fortløpende nummerering av fester under gårdsnummer/bruksnummer. Forkortelsen er fnr",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "FNR"
+            }
+          },
+          {
+            "name": "gardsnummer",
+            "type": "Integer",
+            "description": "En kommune er delt inn i flere gårder, og alle matrikkelenheter ligger på en gårdsenhet. Gårdsnummer er nummeret på en gårdsenhet i matrikkelen og er unikt innenfor hver kommune. Forkortelsen er gnr",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "GNR"
+            }
+          },
+          {
+            "name": "kommunenummer",
+            "type": "Kommunenummer",
+            "description": "nummerering av kommuner i henhold til Statistisk sentralbyrå sin offisielle liste\n\nMerknad: Det presiseres at kommune alltid skal ha 4 siffer, dvs. eventuelt med ledende null. Kommune benyttes for kopling mot en rekke andre registre som også benytter 4 siffer.",
+            "cardinality": "1",
+            "valueDomain": {
+              "kind": "codelist",
+              "listedValues": [
+                {
+                  "value": "0101",
+                  "label": "Halden"
+                },
+                {
+                  "value": "0102",
+                  "label": "Sarpsborg (utgått)"
+                },
+                {
+                  "value": "0103",
+                  "label": "Fredrikstad (utgått)"
+                },
+                {
+                  "value": "0104",
+                  "label": "Moss"
+                },
+                {
+                  "value": "0105",
+                  "label": "Sarpsborg"
+                },
+                {
+                  "value": "0106",
+                  "label": "Fredrikstad"
+                },
+                {
+                  "value": "0111",
+                  "label": "Hvaler"
+                },
+                {
+                  "value": "0113",
+                  "label": "Borge (utgått)"
+                },
+                {
+                  "value": "0114",
+                  "label": "Varteig (utgått)"
+                },
+                {
+                  "value": "0115",
+                  "label": "Skjeberg (utgått)"
+                },
+                {
+                  "value": "0118",
+                  "label": "Aremark"
+                },
+                {
+                  "value": "0119",
+                  "label": "Marker"
+                },
+                {
+                  "value": "0121",
+                  "label": "Rømskog"
+                },
+                {
+                  "value": "0122",
+                  "label": "Trøgstad"
+                },
+                {
+                  "value": "0123",
+                  "label": "Spydeberg"
+                },
+                {
+                  "value": "0124",
+                  "label": "Askim"
+                },
+                {
+                  "value": "0125",
+                  "label": "Eidsberg"
+                },
+                {
+                  "value": "0127",
+                  "label": "Skiptvet"
+                },
+                {
+                  "value": "0128",
+                  "label": "Rakkestad"
+                },
+                {
+                  "value": "0130",
+                  "label": "Tune (utgått)"
+                },
+                {
+                  "value": "0131",
+                  "label": "Rolvsøy (utgått)"
+                },
+                {
+                  "value": "0133",
+                  "label": "Kråkerøy (utgått)"
+                },
+                {
+                  "value": "0134",
+                  "label": "Onsøy (utgått)"
+                },
+                {
+                  "value": "0135",
+                  "label": "Råde"
+                },
+                {
+                  "value": "0136",
+                  "label": "Rygge"
+                },
+                {
+                  "value": "0137",
+                  "label": "Våler i Østfold"
+                },
+                {
+                  "value": "0138",
+                  "label": "Hobøl"
+                },
+                {
+                  "value": "0211",
+                  "label": "Vestby"
+                },
+                {
+                  "value": "0213",
+                  "label": "Ski"
+                },
+                {
+                  "value": "0214",
+                  "label": "Ås"
+                },
+                {
+                  "value": "0215",
+                  "label": "Frogn"
+                },
+                {
+                  "value": "0216",
+                  "label": "Nesodden"
+                },
+                {
+                  "value": "0217",
+                  "label": "Oppegård"
+                },
+                {
+                  "value": "0219",
+                  "label": "Bærum"
+                },
+                {
+                  "value": "0220",
+                  "label": "Asker"
+                },
+                {
+                  "value": "0221",
+                  "label": "Aurskog-Høland"
+                },
+                {
+                  "value": "0226",
+                  "label": "Sørum"
+                },
+                {
+                  "value": "0227",
+                  "label": "Fet"
+                },
+                {
+                  "value": "0228",
+                  "label": "Rælingen"
+                },
+                {
+                  "value": "0229",
+                  "label": "Enebakk"
+                },
+                {
+                  "value": "0230",
+                  "label": "Lørenskog"
+                },
+                {
+                  "value": "0231",
+                  "label": "Skedsmo"
+                },
+                {
+                  "value": "0233",
+                  "label": "Nittedal"
+                },
+                {
+                  "value": "0234",
+                  "label": "Gjerdrum"
+                },
+                {
+                  "value": "0235",
+                  "label": "Ullensaker"
+                },
+                {
+                  "value": "0236",
+                  "label": "Nes i Akershus"
+                },
+                {
+                  "value": "0237",
+                  "label": "Eidsvoll"
+                },
+                {
+                  "value": "0238",
+                  "label": "Nannestad"
+                },
+                {
+                  "value": "0239",
+                  "label": "Hurdal"
+                },
+                {
+                  "value": "0301",
+                  "label": "Oslo"
+                },
+                {
+                  "value": "0401",
+                  "label": "Hamar (utgått)"
+                },
+                {
+                  "value": "0402",
+                  "label": "Kongsvinger"
+                },
+                {
+                  "value": "0403",
+                  "label": "Hamar"
+                },
+                {
+                  "value": "0412",
+                  "label": "Ringsaker"
+                },
+                {
+                  "value": "0414",
+                  "label": "Vang (utgått)"
+                },
+                {
+                  "value": "0415",
+                  "label": "Løten"
+                },
+                {
+                  "value": "0417",
+                  "label": "Stange"
+                },
+                {
+                  "value": "0418",
+                  "label": "Nord-Odal"
+                },
+                {
+                  "value": "0419",
+                  "label": "Sør-Odal"
+                },
+                {
+                  "value": "0420",
+                  "label": "Eidskog"
+                },
+                {
+                  "value": "0423",
+                  "label": "Grue"
+                },
+                {
+                  "value": "0425",
+                  "label": "Åsnes"
+                },
+                {
+                  "value": "0426",
+                  "label": "Våler i Hedmark"
+                },
+                {
+                  "value": "0427",
+                  "label": "Elverum"
+                },
+                {
+                  "value": "0428",
+                  "label": "Trysil"
+                },
+                {
+                  "value": "0429",
+                  "label": "Åmot"
+                },
+                {
+                  "value": "0430",
+                  "label": "Stor-Elvdal"
+                },
+                {
+                  "value": "0432",
+                  "label": "Rendalen"
+                },
+                {
+                  "value": "0434",
+                  "label": "Engerdal"
+                },
+                {
+                  "value": "0436",
+                  "label": "Tolga"
+                },
+                {
+                  "value": "0437",
+                  "label": "Tynset"
+                },
+                {
+                  "value": "0438",
+                  "label": "Alvdal"
+                },
+                {
+                  "value": "0439",
+                  "label": "Folldal"
+                },
+                {
+                  "value": "0441",
+                  "label": "Os i Hedmark"
+                },
+                {
+                  "value": "0501",
+                  "label": "Lillehammer"
+                },
+                {
+                  "value": "0502",
+                  "label": "Gjøvik"
+                },
+                {
+                  "value": "0511",
+                  "label": "Dovre"
+                },
+                {
+                  "value": "0512",
+                  "label": "Lesja"
+                },
+                {
+                  "value": "0513",
+                  "label": "Skjåk"
+                },
+                {
+                  "value": "0514",
+                  "label": "Lom"
+                },
+                {
+                  "value": "0515",
+                  "label": "Vågå"
+                },
+                {
+                  "value": "0516",
+                  "label": "Nord-Fron"
+                },
+                {
+                  "value": "0517",
+                  "label": "Sel"
+                },
+                {
+                  "value": "0519",
+                  "label": "Sør-Fron"
+                },
+                {
+                  "value": "0520",
+                  "label": "Ringebu"
+                },
+                {
+                  "value": "0521",
+                  "label": "Øyer"
+                },
+                {
+                  "value": "0522",
+                  "label": "Gausdal"
+                },
+                {
+                  "value": "0528",
+                  "label": "Østre Toten"
+                },
+                {
+                  "value": "0529",
+                  "label": "Vestre Toten"
+                },
+                {
+                  "value": "0532",
+                  "label": "Jevnaker"
+                },
+                {
+                  "value": "0533",
+                  "label": "Lunner"
+                },
+                {
+                  "value": "0534",
+                  "label": "Gran"
+                },
+                {
+                  "value": "0536",
+                  "label": "Søndre Land"
+                },
+                {
+                  "value": "0538",
+                  "label": "Nordre Land"
+                },
+                {
+                  "value": "0540",
+                  "label": "Sør-Aurdal"
+                },
+                {
+                  "value": "0541",
+                  "label": "Etnedal"
+                },
+                {
+                  "value": "0542",
+                  "label": "Nord-Aurdal"
+                },
+                {
+                  "value": "0543",
+                  "label": "Vestre Slidre"
+                },
+                {
+                  "value": "0544",
+                  "label": "Øystre Slidre"
+                },
+                {
+                  "value": "0545",
+                  "label": "Vang"
+                },
+                {
+                  "value": "0602",
+                  "label": "Drammen"
+                },
+                {
+                  "value": "0604",
+                  "label": "Kongsberg"
+                },
+                {
+                  "value": "0605",
+                  "label": "Ringerike"
+                },
+                {
+                  "value": "0612",
+                  "label": "Hole"
+                },
+                {
+                  "value": "0615",
+                  "label": "Flå"
+                },
+                {
+                  "value": "0616",
+                  "label": "Nes i Buskerud"
+                },
+                {
+                  "value": "0617",
+                  "label": "Gol"
+                },
+                {
+                  "value": "0618",
+                  "label": "Hemsedal"
+                },
+                {
+                  "value": "0619",
+                  "label": "Ål"
+                },
+                {
+                  "value": "0620",
+                  "label": "Hol"
+                },
+                {
+                  "value": "0621",
+                  "label": "Sigdal"
+                },
+                {
+                  "value": "0622",
+                  "label": "Krødsherad"
+                },
+                {
+                  "value": "0623",
+                  "label": "Modum"
+                },
+                {
+                  "value": "0624",
+                  "label": "Øvre Eiker"
+                },
+                {
+                  "value": "0625",
+                  "label": "Nedre Eiker"
+                },
+                {
+                  "value": "0626",
+                  "label": "Lier"
+                },
+                {
+                  "value": "0627",
+                  "label": "Røyken"
+                },
+                {
+                  "value": "0628",
+                  "label": "Hurum"
+                },
+                {
+                  "value": "0631",
+                  "label": "Flesberg"
+                },
+                {
+                  "value": "0632",
+                  "label": "Rollag"
+                },
+                {
+                  "value": "0633",
+                  "label": "Nore og Uvdal"
+                },
+                {
+                  "value": "0701",
+                  "label": "Horten"
+                },
+                {
+                  "value": "0702",
+                  "label": "Holmestrand (utgått)"
+                },
+                {
+                  "value": "0703",
+                  "label": "Horten (utgått)"
+                },
+                {
+                  "value": "0704",
+                  "label": "Tønsberg"
+                },
+                {
+                  "value": "0705",
+                  "label": "Tønsberg (utgått)"
+                },
+                {
+                  "value": "0706",
+                  "label": "Sandefjord (utgått)"
+                },
+                {
+                  "value": "0707",
+                  "label": "Larvik (utgått)"
+                },
+                {
+                  "value": "0708",
+                  "label": "Stavern (utgått)"
+                },
+                {
+                  "value": "0709",
+                  "label": "Larvik (utgått)"
+                },
+                {
+                  "value": "0710",
+                  "label": "Sandefjord"
+                },
+                {
+                  "value": "0711",
+                  "label": "Svelvik"
+                },
+                {
+                  "value": "0712",
+                  "label": "Larvik"
+                },
+                {
+                  "value": "0713",
+                  "label": "Sande i Vestfold"
+                },
+                {
+                  "value": "0714",
+                  "label": "Hof (utgått)"
+                },
+                {
+                  "value": "0715",
+                  "label": "Holmestrand"
+                },
+                {
+                  "value": "0716",
+                  "label": "Re"
+                },
+                {
+                  "value": "0717",
+                  "label": "Borre (utgått)"
+                },
+                {
+                  "value": "0718",
+                  "label": "Ramnes (utgått)"
+                },
+                {
+                  "value": "0719",
+                  "label": "Andebu (utgått)"
+                },
+                {
+                  "value": "0720",
+                  "label": "Stokke (utgått)"
+                },
+                {
+                  "value": "0721",
+                  "label": "Sem (utgått)"
+                },
+                {
+                  "value": "0722",
+                  "label": "Nøtterøy (utgått)"
+                },
+                {
+                  "value": "0723",
+                  "label": "Tjøme (utgått)"
+                },
+                {
+                  "value": "0725",
+                  "label": "Tjølling (utgått)"
+                },
+                {
+                  "value": "0726",
+                  "label": "Brunlanes (utgått)"
+                },
+                {
+                  "value": "0727",
+                  "label": "Hedrum (utgått)"
+                },
+                {
+                  "value": "0728",
+                  "label": "Lardal (utgått)"
+                },
+                {
+                  "value": "0729",
+                  "label": "Færder"
+                },
+                {
+                  "value": "0805",
+                  "label": "Porsgrunn"
+                },
+                {
+                  "value": "0806",
+                  "label": "Skien"
+                },
+                {
+                  "value": "0807",
+                  "label": "Notodden"
+                },
+                {
+                  "value": "0811",
+                  "label": "Siljan"
+                },
+                {
+                  "value": "0814",
+                  "label": "Bamble"
+                },
+                {
+                  "value": "0815",
+                  "label": "Kragerø"
+                },
+                {
+                  "value": "0817",
+                  "label": "Drangedal"
+                },
+                {
+                  "value": "0819",
+                  "label": "Nome"
+                },
+                {
+                  "value": "0821",
+                  "label": "Bø i Telemark"
+                },
+                {
+                  "value": "0822",
+                  "label": "Sauherad"
+                },
+                {
+                  "value": "0826",
+                  "label": "Tinn"
+                },
+                {
+                  "value": "0827",
+                  "label": "Hjartdal"
+                },
+                {
+                  "value": "0828",
+                  "label": "Seljord"
+                },
+                {
+                  "value": "0829",
+                  "label": "Kviteseid"
+                },
+                {
+                  "value": "0830",
+                  "label": "Nissedal"
+                },
+                {
+                  "value": "0831",
+                  "label": "Fyresdal"
+                },
+                {
+                  "value": "0833",
+                  "label": "Tokke"
+                },
+                {
+                  "value": "0834",
+                  "label": "Vinje"
+                },
+                {
+                  "value": "0901",
+                  "label": "Risør"
+                },
+                {
+                  "value": "0903",
+                  "label": "Arendal (utgått)"
+                },
+                {
+                  "value": "0904",
+                  "label": "Grimstad"
+                },
+                {
+                  "value": "0906",
+                  "label": "Arendal"
+                },
+                {
+                  "value": "0911",
+                  "label": "Gjerstad"
+                },
+                {
+                  "value": "0912",
+                  "label": "Vegårshei"
+                },
+                {
+                  "value": "0914",
+                  "label": "Tvedestrand"
+                },
+                {
+                  "value": "0918",
+                  "label": "Moland (utgått)"
+                },
+                {
+                  "value": "0919",
+                  "label": "Froland"
+                },
+                {
+                  "value": "0920",
+                  "label": "Øyestad (utgått)"
+                },
+                {
+                  "value": "0921",
+                  "label": "Tromøy (utgått)"
+                },
+                {
+                  "value": "0922",
+                  "label": "Hisøy (utgått)"
+                },
+                {
+                  "value": "0926",
+                  "label": "Lillesand"
+                },
+                {
+                  "value": "0928",
+                  "label": "Birkenes"
+                },
+                {
+                  "value": "0929",
+                  "label": "Åmli"
+                },
+                {
+                  "value": "0935",
+                  "label": "Iveland"
+                },
+                {
+                  "value": "0937",
+                  "label": "Evje og Hornnes"
+                },
+                {
+                  "value": "0938",
+                  "label": "Bygland"
+                },
+                {
+                  "value": "0940",
+                  "label": "Valle"
+                },
+                {
+                  "value": "0941",
+                  "label": "Bykle"
+                },
+                {
+                  "value": "1001",
+                  "label": "Kristiansand"
+                },
+                {
+                  "value": "1002",
+                  "label": "Mandal"
+                },
+                {
+                  "value": "1003",
+                  "label": "Farsund"
+                },
+                {
+                  "value": "1004",
+                  "label": "Flekkefjord"
+                },
+                {
+                  "value": "1014",
+                  "label": "Vennesla"
+                },
+                {
+                  "value": "1017",
+                  "label": "Songdalen"
+                },
+                {
+                  "value": "1018",
+                  "label": "Søgne"
+                },
+                {
+                  "value": "1021",
+                  "label": "Marnardal"
+                },
+                {
+                  "value": "1026",
+                  "label": "Åseral"
+                },
+                {
+                  "value": "1027",
+                  "label": "Audnedal"
+                },
+                {
+                  "value": "1029",
+                  "label": "Lindesnes"
+                },
+                {
+                  "value": "1032",
+                  "label": "Lyngdal"
+                },
+                {
+                  "value": "1034",
+                  "label": "Hægebostad"
+                },
+                {
+                  "value": "1037",
+                  "label": "Kvinesdal"
+                },
+                {
+                  "value": "1046",
+                  "label": "Sirdal"
+                },
+                {
+                  "value": "1101",
+                  "label": "Eigersund"
+                },
+                {
+                  "value": "1102",
+                  "label": "Sandnes"
+                },
+                {
+                  "value": "1103",
+                  "label": "Stavanger"
+                },
+                {
+                  "value": "1106",
+                  "label": "Haugesund"
+                },
+                {
+                  "value": "1111",
+                  "label": "Sokndal"
+                },
+                {
+                  "value": "1112",
+                  "label": "Lund"
+                },
+                {
+                  "value": "1114",
+                  "label": "Bjerkreim"
+                },
+                {
+                  "value": "1119",
+                  "label": "Hå"
+                },
+                {
+                  "value": "1120",
+                  "label": "Klepp"
+                },
+                {
+                  "value": "1121",
+                  "label": "Time"
+                },
+                {
+                  "value": "1122",
+                  "label": "Gjesdal"
+                },
+                {
+                  "value": "1124",
+                  "label": "Sola"
+                },
+                {
+                  "value": "1127",
+                  "label": "Randaberg"
+                },
+                {
+                  "value": "1129",
+                  "label": "Forsand"
+                },
+                {
+                  "value": "1130",
+                  "label": "Strand"
+                },
+                {
+                  "value": "1133",
+                  "label": "Hjelmeland"
+                },
+                {
+                  "value": "1134",
+                  "label": "Suldal"
+                },
+                {
+                  "value": "1135",
+                  "label": "Sauda"
+                },
+                {
+                  "value": "1141",
+                  "label": "Finnøy"
+                },
+                {
+                  "value": "1142",
+                  "label": "Rennesøy"
+                },
+                {
+                  "value": "1144",
+                  "label": "Kvitsøy"
+                },
+                {
+                  "value": "1145",
+                  "label": "Bokn"
+                },
+                {
+                  "value": "1146",
+                  "label": "Tysvær"
+                },
+                {
+                  "value": "1149",
+                  "label": "Karmøy"
+                },
+                {
+                  "value": "1151",
+                  "label": "Utsira"
+                },
+                {
+                  "value": "1154",
+                  "label": "Vindafjord ((utgått)"
+                },
+                {
+                  "value": "1159",
+                  "label": "Ølen (utgått)"
+                },
+                {
+                  "value": "1160",
+                  "label": "Vindafjord"
+                },
+                {
+                  "value": "1201",
+                  "label": "Bergen"
+                },
+                {
+                  "value": "1211",
+                  "label": "Etne"
+                },
+                {
+                  "value": "1214",
+                  "label": "Ølen (utgått)"
+                },
+                {
+                  "value": "1216",
+                  "label": "Sveio"
+                },
+                {
+                  "value": "1219",
+                  "label": "Bømlo"
+                },
+                {
+                  "value": "1221",
+                  "label": "Stord"
+                },
+                {
+                  "value": "1222",
+                  "label": "Fitjar"
+                },
+                {
+                  "value": "1223",
+                  "label": "Tysnes"
+                },
+                {
+                  "value": "1224",
+                  "label": "Kvinnherad"
+                },
+                {
+                  "value": "1227",
+                  "label": "Jondal"
+                },
+                {
+                  "value": "1228",
+                  "label": "Odda"
+                },
+                {
+                  "value": "1231",
+                  "label": "Ullensvang"
+                },
+                {
+                  "value": "1232",
+                  "label": "Eidfjord"
+                },
+                {
+                  "value": "1233",
+                  "label": "Ulvik"
+                },
+                {
+                  "value": "1234",
+                  "label": "Granvin"
+                },
+                {
+                  "value": "1235",
+                  "label": "Voss"
+                },
+                {
+                  "value": "1238",
+                  "label": "Kvam"
+                },
+                {
+                  "value": "1241",
+                  "label": "Fusa"
+                },
+                {
+                  "value": "1242",
+                  "label": "Samnanger"
+                },
+                {
+                  "value": "1243",
+                  "label": "Os i Hordaland"
+                },
+                {
+                  "value": "1244",
+                  "label": "Austevoll"
+                },
+                {
+                  "value": "1245",
+                  "label": "Sund"
+                },
+                {
+                  "value": "1246",
+                  "label": "Fjell"
+                },
+                {
+                  "value": "1247",
+                  "label": "Askøy"
+                },
+                {
+                  "value": "1251",
+                  "label": "Vaksdal"
+                },
+                {
+                  "value": "1252",
+                  "label": "Modalen"
+                },
+                {
+                  "value": "1253",
+                  "label": "Osterøy"
+                },
+                {
+                  "value": "1256",
+                  "label": "Meland"
+                },
+                {
+                  "value": "1259",
+                  "label": "Øygarden"
+                },
+                {
+                  "value": "1260",
+                  "label": "Radøy"
+                },
+                {
+                  "value": "1263",
+                  "label": "Lindås"
+                },
+                {
+                  "value": "1264",
+                  "label": "Austrheim"
+                },
+                {
+                  "value": "1265",
+                  "label": "Fedje"
+                },
+                {
+                  "value": "1266",
+                  "label": "Masfjorden"
+                },
+                {
+                  "value": "1401",
+                  "label": "Flora"
+                },
+                {
+                  "value": "1411",
+                  "label": "Gulen"
+                },
+                {
+                  "value": "1412",
+                  "label": "Solund"
+                },
+                {
+                  "value": "1413",
+                  "label": "Hyllestad"
+                },
+                {
+                  "value": "1416",
+                  "label": "Høyanger"
+                },
+                {
+                  "value": "1417",
+                  "label": "Vik"
+                },
+                {
+                  "value": "1418",
+                  "label": "Balestrand"
+                },
+                {
+                  "value": "1419",
+                  "label": "Leikanger"
+                },
+                {
+                  "value": "1420",
+                  "label": "Sogndal"
+                },
+                {
+                  "value": "1421",
+                  "label": "Aurland"
+                },
+                {
+                  "value": "1422",
+                  "label": "Lærdal"
+                },
+                {
+                  "value": "1424",
+                  "label": "Årdal"
+                },
+                {
+                  "value": "1426",
+                  "label": "Luster"
+                },
+                {
+                  "value": "1428",
+                  "label": "Askvoll"
+                },
+                {
+                  "value": "1429",
+                  "label": "Fjaler"
+                },
+                {
+                  "value": "1430",
+                  "label": "Gaular"
+                },
+                {
+                  "value": "1431",
+                  "label": "Jølster"
+                },
+                {
+                  "value": "1432",
+                  "label": "Førde"
+                },
+                {
+                  "value": "1433",
+                  "label": "Naustdal"
+                },
+                {
+                  "value": "1438",
+                  "label": "Bremanger"
+                },
+                {
+                  "value": "1439",
+                  "label": "Vågsøy"
+                },
+                {
+                  "value": "1441",
+                  "label": "Selje"
+                },
+                {
+                  "value": "1443",
+                  "label": "Eid"
+                },
+                {
+                  "value": "1444",
+                  "label": "Hornindal"
+                },
+                {
+                  "value": "1445",
+                  "label": "Gloppen"
+                },
+                {
+                  "value": "1449",
+                  "label": "Stryn"
+                },
+                {
+                  "value": "1502",
+                  "label": "Molde"
+                },
+                {
+                  "value": "1504",
+                  "label": "Ålesund"
+                },
+                {
+                  "value": "1505",
+                  "label": "Kristiansund"
+                },
+                {
+                  "value": "1511",
+                  "label": "Vanylven"
+                },
+                {
+                  "value": "1514",
+                  "label": "Sande i Møre og Romsdal"
+                },
+                {
+                  "value": "1515",
+                  "label": "Herøy i Møre og Romsdal"
+                },
+                {
+                  "value": "1516",
+                  "label": "Ulstein"
+                },
+                {
+                  "value": "1517",
+                  "label": "Hareid"
+                },
+                {
+                  "value": "1519",
+                  "label": "Volda"
+                },
+                {
+                  "value": "1520",
+                  "label": "Ørsta"
+                },
+                {
+                  "value": "1523",
+                  "label": "Ørskog"
+                },
+                {
+                  "value": "1524",
+                  "label": "Norddal"
+                },
+                {
+                  "value": "1525",
+                  "label": "Stranda"
+                },
+                {
+                  "value": "1526",
+                  "label": "Stordal"
+                },
+                {
+                  "value": "1528",
+                  "label": "Sykkylven"
+                },
+                {
+                  "value": "1529",
+                  "label": "Skodje"
+                },
+                {
+                  "value": "1531",
+                  "label": "Sula"
+                },
+                {
+                  "value": "1532",
+                  "label": "Giske"
+                },
+                {
+                  "value": "1534",
+                  "label": "Haram"
+                },
+                {
+                  "value": "1535",
+                  "label": "Vestnes"
+                },
+                {
+                  "value": "1539",
+                  "label": "Rauma"
+                },
+                {
+                  "value": "1543",
+                  "label": "Nesset"
+                },
+                {
+                  "value": "1545",
+                  "label": "Midsund"
+                },
+                {
+                  "value": "1546",
+                  "label": "Sandøy"
+                },
+                {
+                  "value": "1547",
+                  "label": "Aukra"
+                },
+                {
+                  "value": "1548",
+                  "label": "Fræna"
+                },
+                {
+                  "value": "1551",
+                  "label": "Eide"
+                },
+                {
+                  "value": "1554",
+                  "label": "Averøy"
+                },
+                {
+                  "value": "1557",
+                  "label": "Gjemnes"
+                },
+                {
+                  "value": "1560",
+                  "label": "Tingvoll"
+                },
+                {
+                  "value": "1563",
+                  "label": "Sunndal"
+                },
+                {
+                  "value": "1566",
+                  "label": "Surnadal"
+                },
+                {
+                  "value": "1567",
+                  "label": "Rindal (utgått)"
+                },
+                {
+                  "value": "1569",
+                  "label": "Aure (utgått)"
+                },
+                {
+                  "value": "1571",
+                  "label": "Halsa"
+                },
+                {
+                  "value": "1572",
+                  "label": "Tustna (utgått)"
+                },
+                {
+                  "value": "1573",
+                  "label": "Smøla"
+                },
+                {
+                  "value": "1576",
+                  "label": "Aure"
+                },
+                {
+                  "value": "1601",
+                  "label": "Trondheim (utgått)"
+                },
+                {
+                  "value": "1612",
+                  "label": "Hemne (utgått)"
+                },
+                {
+                  "value": "1613",
+                  "label": "Snillfjord (utgått)"
+                },
+                {
+                  "value": "1617",
+                  "label": "Hitra (utgått)"
+                },
+                {
+                  "value": "1620",
+                  "label": "Frøya (utgått)"
+                },
+                {
+                  "value": "1621",
+                  "label": "Ørland (utgått)"
+                },
+                {
+                  "value": "1622",
+                  "label": "Agdenes (utgått)"
+                },
+                {
+                  "value": "1624",
+                  "label": "Rissa (utgått)"
+                },
+                {
+                  "value": "1627",
+                  "label": "Bjugn (utgått)"
+                },
+                {
+                  "value": "1630",
+                  "label": "Åfjord (utgått)"
+                },
+                {
+                  "value": "1632",
+                  "label": "Roan (utgått)"
+                },
+                {
+                  "value": "1633",
+                  "label": "Osen (utgått)"
+                },
+                {
+                  "value": "1634",
+                  "label": "Oppdal (utgått)"
+                },
+                {
+                  "value": "1635",
+                  "label": "Rennebu (utgått)"
+                },
+                {
+                  "value": "1636",
+                  "label": "Meldal (utgått)"
+                },
+                {
+                  "value": "1638",
+                  "label": "Orkdal (utgått)"
+                },
+                {
+                  "value": "1640",
+                  "label": "Røros (utgått)"
+                },
+                {
+                  "value": "1644",
+                  "label": "Holtålen (utgått)"
+                },
+                {
+                  "value": "1648",
+                  "label": "Midtre Gauldal (utgått)"
+                },
+                {
+                  "value": "1653",
+                  "label": "Melhus (utgått)"
+                },
+                {
+                  "value": "1657",
+                  "label": "Skaun (utgått)"
+                },
+                {
+                  "value": "1662",
+                  "label": "Klæbu (utgått)"
+                },
+                {
+                  "value": "1663",
+                  "label": "Malvik (utgått)"
+                },
+                {
+                  "value": "1664",
+                  "label": "Selbu (utgått)"
+                },
+                {
+                  "value": "1665",
+                  "label": "Tydal (utgått)"
+                },
+                {
+                  "value": "1702",
+                  "label": "Steinkjer (utgått)"
+                },
+                {
+                  "value": "1703",
+                  "label": "Namsos (utgått)"
+                },
+                {
+                  "value": "1711",
+                  "label": "Meråker (utgått)"
+                },
+                {
+                  "value": "1714",
+                  "label": "Stjørdal (utgått)"
+                },
+                {
+                  "value": "1717",
+                  "label": "Frosta (utgått)"
+                },
+                {
+                  "value": "1718",
+                  "label": "Leksvik (utgått)"
+                },
+                {
+                  "value": "1719",
+                  "label": "Levanger (utgått)"
+                },
+                {
+                  "value": "1721",
+                  "label": "Verdal (utgått)"
+                },
+                {
+                  "value": "1723",
+                  "label": "Mosvik (utgått)"
+                },
+                {
+                  "value": "1724",
+                  "label": "Verran (utgått)"
+                },
+                {
+                  "value": "1725",
+                  "label": "Namdalseid (utgått)"
+                },
+                {
+                  "value": "1729",
+                  "label": "Inderøy (utgått)"
+                },
+                {
+                  "value": "1736",
+                  "label": "Snåase – Snåsa (utgått)"
+                },
+                {
+                  "value": "1738",
+                  "label": "Lierne (utgått)"
+                },
+                {
+                  "value": "1739",
+                  "label": "Raarvihke – Røyrvik (utgått)"
+                },
+                {
+                  "value": "1740",
+                  "label": "Namsskogan (utgått)"
+                },
+                {
+                  "value": "1742",
+                  "label": "Grong (utgått)"
+                },
+                {
+                  "value": "1743",
+                  "label": "Høylandet (utgått)"
+                },
+                {
+                  "value": "1744",
+                  "label": "Overhalla (utgått)"
+                },
+                {
+                  "value": "1748",
+                  "label": "Fosnes (utgått)"
+                },
+                {
+                  "value": "1749",
+                  "label": "Flatanger (utgått)"
+                },
+                {
+                  "value": "1750",
+                  "label": "Vikna (utgått)"
+                },
+                {
+                  "value": "1751",
+                  "label": "Nærøy (utgått)"
+                },
+                {
+                  "value": "1755",
+                  "label": "Leka (utgått)"
+                },
+                {
+                  "value": "1756",
+                  "label": "Inderøy (utgått)"
+                },
+                {
+                  "value": "1804",
+                  "label": "Bodø"
+                },
+                {
+                  "value": "1805",
+                  "label": "Narvik"
+                },
+                {
+                  "value": "1811",
+                  "label": "Bindal"
+                },
+                {
+                  "value": "1812",
+                  "label": "Sømna"
+                },
+                {
+                  "value": "1813",
+                  "label": "Brønnøy"
+                },
+                {
+                  "value": "1815",
+                  "label": "Vega"
+                },
+                {
+                  "value": "1816",
+                  "label": "Vevelstad"
+                },
+                {
+                  "value": "1818",
+                  "label": "Herøy i Nordland"
+                },
+                {
+                  "value": "1820",
+                  "label": "Alstahaug"
+                },
+                {
+                  "value": "1822",
+                  "label": "Leirfjord"
+                },
+                {
+                  "value": "1824",
+                  "label": "Vefsn"
+                },
+                {
+                  "value": "1825",
+                  "label": "Grane"
+                },
+                {
+                  "value": "1826",
+                  "label": "Hattfjelldal"
+                },
+                {
+                  "value": "1827",
+                  "label": "Dønna"
+                },
+                {
+                  "value": "1828",
+                  "label": "Nesna"
+                },
+                {
+                  "value": "1832",
+                  "label": "Hemnes"
+                },
+                {
+                  "value": "1833",
+                  "label": "Rana"
+                },
+                {
+                  "value": "1834",
+                  "label": "Lurøy"
+                },
+                {
+                  "value": "1835",
+                  "label": "Træna"
+                },
+                {
+                  "value": "1836",
+                  "label": "Rødøy"
+                },
+                {
+                  "value": "1837",
+                  "label": "Meløy"
+                },
+                {
+                  "value": "1838",
+                  "label": "Gildeskål"
+                },
+                {
+                  "value": "1839",
+                  "label": "Beiarn"
+                },
+                {
+                  "value": "1840",
+                  "label": "Saltdal"
+                },
+                {
+                  "value": "1841",
+                  "label": "Fauske – Fuossko"
+                },
+                {
+                  "value": "1842",
+                  "label": "Skjerstad (utgått)"
+                },
+                {
+                  "value": "1845",
+                  "label": "Sørfold"
+                },
+                {
+                  "value": "1848",
+                  "label": "Steigen"
+                },
+                {
+                  "value": "1849",
+                  "label": "Hamarøy – Hábmer"
+                },
+                {
+                  "value": "1850",
+                  "label": "Divtasvuodna – Tysfjord"
+                },
+                {
+                  "value": "1851",
+                  "label": "Lødingen"
+                },
+                {
+                  "value": "1852",
+                  "label": "Tjeldsund"
+                },
+                {
+                  "value": "1853",
+                  "label": "Evenes"
+                },
+                {
+                  "value": "1854",
+                  "label": "Ballangen"
+                },
+                {
+                  "value": "1856",
+                  "label": "Røst"
+                },
+                {
+                  "value": "1857",
+                  "label": "Værøy"
+                },
+                {
+                  "value": "1859",
+                  "label": "Flakstad"
+                },
+                {
+                  "value": "1860",
+                  "label": "Vestvågøy"
+                },
+                {
+                  "value": "1865",
+                  "label": "Vågan"
+                },
+                {
+                  "value": "1866",
+                  "label": "Hadsel"
+                },
+                {
+                  "value": "1867",
+                  "label": "Bø i Nordland"
+                },
+                {
+                  "value": "1868",
+                  "label": "Øksnes"
+                },
+                {
+                  "value": "1870",
+                  "label": "Sortland – Suortá"
+                },
+                {
+                  "value": "1871",
+                  "label": "Andøy"
+                },
+                {
+                  "value": "1874",
+                  "label": "Moskenes"
+                },
+                {
+                  "value": "1901",
+                  "label": "Harstad (utgått)"
+                },
+                {
+                  "value": "1902",
+                  "label": "Tromsø"
+                },
+                {
+                  "value": "1903",
+                  "label": "Harstad – Hárstták"
+                },
+                {
+                  "value": "1911",
+                  "label": "Kvæfjord"
+                },
+                {
+                  "value": "1913",
+                  "label": "Skånland"
+                },
+                {
+                  "value": "1915",
+                  "label": "Bjarkøy (utgått)"
+                },
+                {
+                  "value": "1917",
+                  "label": "Ibestad"
+                },
+                {
+                  "value": "1919",
+                  "label": "Gratangen"
+                },
+                {
+                  "value": "1920",
+                  "label": "Loabák – Lavangen"
+                },
+                {
+                  "value": "1922",
+                  "label": "Bardu"
+                },
+                {
+                  "value": "1923",
+                  "label": "Salangen"
+                },
+                {
+                  "value": "1924",
+                  "label": "Målselv"
+                },
+                {
+                  "value": "1925",
+                  "label": "Sørreisa"
+                },
+                {
+                  "value": "1926",
+                  "label": "Dyrøy"
+                },
+                {
+                  "value": "1927",
+                  "label": "Tranøy"
+                },
+                {
+                  "value": "1928",
+                  "label": "Torsken"
+                },
+                {
+                  "value": "1929",
+                  "label": "Berg"
+                },
+                {
+                  "value": "1931",
+                  "label": "Lenvik"
+                },
+                {
+                  "value": "1933",
+                  "label": "Balsfjord"
+                },
+                {
+                  "value": "1936",
+                  "label": "Karlsøy"
+                },
+                {
+                  "value": "1938",
+                  "label": "Lyngen"
+                },
+                {
+                  "value": "1939",
+                  "label": "Storfjord – Omasvuotna – Omasvuono"
+                },
+                {
+                  "value": "1940",
+                  "label": "Gáivuotna – Kåfjord – Kaivuono"
+                },
+                {
+                  "value": "1941",
+                  "label": "Skjervøy"
+                },
+                {
+                  "value": "1942",
+                  "label": "Nordreisa – Ráisa – Raisi"
+                },
+                {
+                  "value": "1943",
+                  "label": "Kvænangen"
+                },
+                {
+                  "value": "2001",
+                  "label": "Hammerfest (utgått)"
+                },
+                {
+                  "value": "2002",
+                  "label": "Vardø"
+                },
+                {
+                  "value": "2003",
+                  "label": "Vadsø"
+                },
+                {
+                  "value": "2004",
+                  "label": "Hammerfest"
+                },
+                {
+                  "value": "2011",
+                  "label": "Guovdageaidnu – Kautokeino"
+                },
+                {
+                  "value": "2012",
+                  "label": "Alta"
+                },
+                {
+                  "value": "2014",
+                  "label": "Loppa"
+                },
+                {
+                  "value": "2015",
+                  "label": "Hasvik"
+                },
+                {
+                  "value": "2016",
+                  "label": "Sørøysund (utgått)"
+                },
+                {
+                  "value": "2017",
+                  "label": "Kvalsund"
+                },
+                {
+                  "value": "2018",
+                  "label": "Måsøy"
+                },
+                {
+                  "value": "2019",
+                  "label": "Nordkapp"
+                },
+                {
+                  "value": "2020",
+                  "label": "Porsanger – Porsáŋgu – Porsanki"
+                },
+                {
+                  "value": "2021",
+                  "label": "Kárášjohka – Karasjok"
+                },
+                {
+                  "value": "2022",
+                  "label": "Lebesby"
+                },
+                {
+                  "value": "2023",
+                  "label": "Gamvik"
+                },
+                {
+                  "value": "2024",
+                  "label": "Berlevåg"
+                },
+                {
+                  "value": "2025",
+                  "label": "Deatnu – Tana"
+                },
+                {
+                  "value": "2027",
+                  "label": "Unjárga – Nesseby"
+                },
+                {
+                  "value": "2028",
+                  "label": "Båtsfjord"
+                },
+                {
+                  "value": "2030",
+                  "label": "Sør-Varanger"
+                },
+                {
+                  "value": "2100",
+                  "label": "Svalbard"
+                },
+                {
+                  "value": "2111",
+                  "label": "Spitsbergen (utgått)"
+                },
+                {
+                  "value": "2121",
+                  "label": "Bjørnøya (utgått)"
+                },
+                {
+                  "value": "2131",
+                  "label": "Hopen (utgått)"
+                },
+                {
+                  "value": "2211",
+                  "label": "Jan Mayen"
+                },
+                {
+                  "value": "2311",
+                  "label": "Sokkelen sør for 62 grader Nord"
+                },
+                {
+                  "value": "2321",
+                  "label": "Sokkelen nord for 62 grader Nord"
+                },
+                {
+                  "value": "5001",
+                  "label": "Trondheim"
+                },
+                {
+                  "value": "5004",
+                  "label": "Steinkjer"
+                },
+                {
+                  "value": "5005",
+                  "label": "Namsos"
+                },
+                {
+                  "value": "5011",
+                  "label": "Hemne"
+                },
+                {
+                  "value": "5012",
+                  "label": "Snillfjord"
+                },
+                {
+                  "value": "5013",
+                  "label": "Hitra"
+                },
+                {
+                  "value": "5014",
+                  "label": "Frøya"
+                },
+                {
+                  "value": "5015",
+                  "label": "Ørland"
+                },
+                {
+                  "value": "5016",
+                  "label": "Agdenes"
+                },
+                {
+                  "value": "5017",
+                  "label": "Bjugn"
+                },
+                {
+                  "value": "5018",
+                  "label": "Åfjord"
+                },
+                {
+                  "value": "5019",
+                  "label": "Roan"
+                },
+                {
+                  "value": "5020",
+                  "label": "Osen"
+                },
+                {
+                  "value": "5021",
+                  "label": "Oppdal"
+                },
+                {
+                  "value": "5022",
+                  "label": "Rennebu"
+                },
+                {
+                  "value": "5023",
+                  "label": "Meldal"
+                },
+                {
+                  "value": "5024",
+                  "label": "Orkdal"
+                },
+                {
+                  "value": "5025",
+                  "label": "Røros"
+                },
+                {
+                  "value": "5026",
+                  "label": "Holtålen"
+                },
+                {
+                  "value": "5027",
+                  "label": "Midtre Gauldal"
+                },
+                {
+                  "value": "5028",
+                  "label": "Melhus"
+                },
+                {
+                  "value": "5029",
+                  "label": "Skaun"
+                },
+                {
+                  "value": "5030",
+                  "label": "Klæbu"
+                },
+                {
+                  "value": "5031",
+                  "label": "Malvik"
+                },
+                {
+                  "value": "5032",
+                  "label": "Selbu"
+                },
+                {
+                  "value": "5033",
+                  "label": "Tydal"
+                },
+                {
+                  "value": "5034",
+                  "label": "Meråker"
+                },
+                {
+                  "value": "5035",
+                  "label": "Stjørdal"
+                },
+                {
+                  "value": "5036",
+                  "label": "Frosta"
+                },
+                {
+                  "value": "5037",
+                  "label": "Levanger"
+                },
+                {
+                  "value": "5038",
+                  "label": "Verdal"
+                },
+                {
+                  "value": "5039",
+                  "label": "Verran"
+                },
+                {
+                  "value": "5040",
+                  "label": "Namdalseid"
+                },
+                {
+                  "value": "5041",
+                  "label": "Snåase – Snåsa"
+                },
+                {
+                  "value": "5042",
+                  "label": "Lierne"
+                },
+                {
+                  "value": "5043",
+                  "label": "Raarvihke – Røyrvik"
+                },
+                {
+                  "value": "5044",
+                  "label": "Namsskogan"
+                },
+                {
+                  "value": "5045",
+                  "label": "Grong"
+                },
+                {
+                  "value": "5046",
+                  "label": "Høylandet"
+                },
+                {
+                  "value": "5047",
+                  "label": "Overhalla"
+                },
+                {
+                  "value": "5048",
+                  "label": "Frosnes"
+                },
+                {
+                  "value": "5049",
+                  "label": "Flatanger"
+                },
+                {
+                  "value": "5050",
+                  "label": "Vikna"
+                },
+                {
+                  "value": "5051",
+                  "label": "Nærøy"
+                },
+                {
+                  "value": "5052",
+                  "label": "Leka"
+                },
+                {
+                  "value": "5053",
+                  "label": "Inderøy"
+                },
+                {
+                  "value": "5054",
+                  "label": "Indre Fosen"
+                },
+                {
+                  "value": "5061",
+                  "label": "Rindal"
+                }
+              ],
+              "definition": "nummerering av kommuner i henhold til Statistisk sentralbyrå sin offisielle liste samt et utvalg av utgåtte numre\n\nMerknad: Det presiseres at kommune alltid skal ha 4 sifre, dvs. eventuelt med ledende null. Kommune benyttes for kopling mot en rekke andre registre som også benytter 4 sifre.",
+              "asDictionary": "true",
+              "codeList": "http://skjema.geonorge.no/SOSI/kodeliste/AdmEnheter/2019/Kommunenummer"
+            },
+            "taggedValues": {
+              "SOSI_navn": "KOMMUNENUMMER"
+            }
+          },
+          {
+            "name": "seksjonsnummer",
+            "type": "Integer",
+            "description": "Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer.",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "SNR"
+            }
+          }
+        ]
+      },
+      {
+        "name": "postnummerområde",
+        "type": "PostnummerområdeId",
+        "description": "adressens knytning til postnummerområde, geografisk område med felles postnummer, og en underinndeling av postområde",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "postnummer",
+            "type": "CharacterString",
+            "description": "firesifret kode som identifiserer et postnummerområde\n\nMerknad: Det første sifferet angir postsone, de to første sifrene angir postregion, de tre første sifrene angir postområde og alle fire sifrene angir postnummerområde/poststed.",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "POSTNUMMER"
+            }
+          },
+          {
+            "name": "poststed",
+            "type": "CharacterString",
+            "description": "navn på poststed i henhold til Postens egne lister",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "POSTSTED"
+            }
+          }
+        ]
+      },
+      {
+        "name": "representasjonspunkt",
+        "type": "Punkt",
+        "description": "Representasjonspunkt for adressen. Angir normalt atkomsten til en bygning, bolig eller andre objekter og steder.\n\nMerknad:\nDersom en adresse kun gjelder en bygning med en adresse, plasseres punktet innenfor bygningens omriss like ved inngang /atkomst.\nDet samme gjelder dersom det er knyttet flere adresser til flere innganger/atkomster til en bygning. Adressepunktene plasseres like ved de respektive innganger/atkomster innenfor bygningens omriss. For bygg med altangang eller svalgang med atkomst til den enkelte bolig via utvendig atkomsttrapp, plasseres adressepunktet i trapp nærmest terrengnivå\n\nFor ubebygde eiendommer verifiseres det at punktet er innenfor teigen og ved atkomst.",
+        "cardinality": "1"
+      },
+      {
+        "name": "sokn",
+        "type": "SokneId",
+        "description": "adressens kobling til sokn, den minste geistlige enheten og bestyres av en sokneprest\n\nMerknad:\nFolket som er medlem i Den norske kirke og bosatt innenfor et sokn betegnes som menighet.",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "organisasjonsnummer",
+            "type": "Integer",
+            "description": "entydig identifisering av foretak i Brønnøysundregisteret",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "ORGANSISASJONSNUMMER"
+            }
+          },
+          {
+            "name": "soknenavn",
+            "type": "CharacterString",
+            "description": "navn på soknet",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "SOKNENAVN"
+            }
+          },
+          {
+            "name": "soknenummer",
+            "type": "CharacterString",
+            "description": "unik identifikasjon av et sokn i form av 8-sifre\n\nMerknad:\nDe to første siffer står for bispedømme, to neste for prosti, to neste for prestegjeld (utgått, men inngår i nummerering) og to siste for sokn.",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "SOKNENUMMER"
+            }
+          }
+        ]
+      },
+      {
+        "name": "tettsted",
+        "type": "TettstedId",
+        "description": "adressens tilknytning til tettsted, område hvor det bor minst 200 personer, og avstanden mellom husene normalt ikke overstiger 50 meter (SSB)\n\nMerknad:\nHussamlinger som naturlig  hører med til tettstedet, tas med inntil en avstand på 400 meter fra tettstedskjernen.",
+        "cardinality": "0..1",
+        "attributes": [
+          {
+            "name": "tettstednavn",
+            "type": "CharacterString",
+            "description": "navn på tettsted bestemt av SSB",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "TETTSTEDNAVN"
+            }
+          },
+          {
+            "name": "tettstednummer",
+            "type": "CharacterString",
+            "description": "består av en 4-sifret kode\n\nMerknad: Det skal benyttes ledende nuller.",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "TETTSTEDNUMMER"
+            }
+          }
+        ]
+      },
+      {
+        "name": "valgkrets",
+        "type": "ValgkretsId",
+        "description": "adressens knytning til valgkrets, valgkretsene har som formål å være en hensiktsmessig inndeling av kommuner ved valg, bl.a. for at velgerne ikke skal få for stor avstand til valglokalet\n\nMerknad: Inndelingen skal ivareta administrative formål, men har også i en viss grad blitt nyttet til å samle inn statistikk for planleggingsformål.",
+        "cardinality": "1",
+        "attributes": [
+          {
+            "name": "valgkretsnavn",
+            "type": "CharacterString",
+            "description": "navn til valgkrets",
+            "cardinality": "0..1",
+            "taggedValues": {
+              "SOSI_navn": "VALGKRETSNAVN"
+            }
+          },
+          {
+            "name": "valgkretsnummer",
+            "type": "CharacterString",
+            "description": "løpenummer innenfor valgkretsens kommune",
+            "cardinality": "1",
+            "taggedValues": {
+              "SOSI_navn": "VALGKRETSNUMMER"
+            }
+          }
+        ]
+      }
+    ],
+    "abstract": true,
+    "relationships": {
+      "inheritance": [
+        "SOSI_Objekt-Adresse"
+      ],
+      "associations": []
+    },
+    "package": "Matrikkelen-Adresse_20180501"
+  },
+  {
+    "name": "Vegadresse",
+    "description": "Offisiell adresse i form av et adressenavn og et adressenummer (matrikkelforskriften § 2i).\n\nMerknad:\nVegadresser er enkeltadresser innen en \"veg\" (adresseområde) i en kommune. Vegadresse identifiseres innen kommunen ved adressekode, husnummer (nummer) og eventuelt bokstav\n\nMerknad2: Eventuelle bruksenhetsnummer som del av offisiell adresse kan ligge som egenskaper til Vegadressen",
+    "attributes": [
+      {
+        "name": "adressekode",
+        "type": "Integer",
+        "description": "Et nummer som entydig identifiserer adresserbare gater, veger, stier, plasser og områder som er ført i matrikkelen. For hvert adressenavn skal det således foreligge en adressekode, jf. matrikkelforskriften § 51.2.\nMerknad: Adressekode er unik innenfor kommunen\n\nMerknad (teknisk): Avledet fra Veg-objektet",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "ADRESSEKODE"
+        }
+      },
+      {
+        "name": "adressenavn",
+        "type": "CharacterString",
+        "description": "Navn på gate, veg, sti, plass eller område som er ført i matrikkelen. (matrikkelforskriften § 2e)\n\nMerknad (teknisk): Avledet fra Veg-objektet",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "ADRESSENAVN"
+        }
+      },
+      {
+        "name": "bokstav",
+        "type": "CharacterString",
+        "description": "del av adressenummer (jfr Matrikkelforskrift § 2f).\n\nVed behov kan det i tillegg til tallet brukes en etterfølgende bokstav. Bokstav skal bare brukes for å unngå omnummerering i tidligere tildelte adresser. Bokstav skal gis i alfabetisk rekkefølge. (matrikkelforskrift § 52 tredje ledd).\n\nMerknad: Høyst en bokstav",
+        "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "BOKSTAV"
+        }
+      },
+      {
+        "name": "nummer",
+        "type": "Integer",
+        "description": "Del av adressenummer som er definert slik i matrikkelforskrift:\n\net nummer og en eventuell bokstav (husnummer) som entydig identifiserer eiendommer, anlegg, bygninger eller innganger til bygninger innenfor en adresserbar gate, veg, sti, plass eller område (Forskrift § 2f).",
+        "cardinality": "1",
+        "taggedValues": {
+          "SOSI_navn": "NUMMER"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Adresse"
+      ],
+      "associations": []
+    },
+    "package": "Matrikkelen-Adresse_20180501"
+  },
+  {
+    "name": "Matrikkeladresse",
+    "description": "offisiell adresse i form av et gårds- og bruksnummer og eventuelt et festenummer, eventuelt også et undernummer (Matrikkelforskriften § 2j)\n\nMerknad:\nMatrikkeladresse er adresseidentifikasjon i et område der det ikke er tildelt vegadresse.\n\nMerknad2: Eventuelle bruksenhetsnummer som del av offisiell adresse kan ligge som egenskaper til matrikkeladressen\n\nMerknad3: Seksjonsnummer er ikke en del av den logiske identen for matrikkeladresse, - se egenskapen adressetekst.",
+    "attributes": [
+      {
+        "name": "undernummer",
+        "type": "Integer",
+        "description": "Fortløpende nummerering av matrikkeladresser med samme gårds-, bruks- og festenummer.",
+        "cardinality": "0..1",
+        "taggedValues": {
+          "SOSI_navn": "UNR"
+        }
+      }
+    ],
+    "abstract": false,
+    "relationships": {
+      "inheritance": [
+        "Adresse"
+      ],
+      "associations": []
+    },
+    "package": "Matrikkelen-Adresse_20180501"
+  }
+]

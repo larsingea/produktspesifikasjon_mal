@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:filleveransebasertpaumladresse="https://skjema.geonorge.no/SOSI/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/1.0" version="1.0">
+  <import namespace="http://www.interactive-instruments.de/ShapeChange/AppInfo" schemaLocation="https://shapechange.net/resources/schema/ShapeChangeAppinfo.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element abstract="true" name="Adresse" substitutionGroup="filleveransebasertpaumladresse:SOSI_Objekt-Adresse" type="filleveransebasertpaumladresse:AdresseType"/>
+  <complexType abstract="true" name="AdresseType">
+    <complexContent>
+      <extension base="filleveransebasertpaumladresse:SOSI_Objekt-AdresseType">
+        <sequence>
+          <element name="adresseTekst" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">ADRESSETEKST</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="adresseTekstUtenAdressetilleggsnavn" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">ADRESSETEKST_UTENADRTILLEGGSNAVN</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="adressetilleggsnavn" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">ADRESSETILLEGGSNAVN</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="adressetilleggsnavnKilde" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>http://skjema.geonorge.no/legg_inn_riktig_url</sc:targetCodeListURI>
+                <sc:taggedValue tag="SOSI_navn">ADRESSETILLEGGSNAVNKILDE</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="bruksenhetsnummerTekst" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">BRUKSENHETSNUMMERTEKST</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="grunnkrets" type="filleveransebasertpaumladresse:GrunnkretsIdPropertyType"/>
+          <element name="kommunenavn" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">KOMMUNENAVN</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="kommunenummer" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>http://skjema.geonorge.no/SOSI/kodeliste/AdmEnheter/2019/Kommunenummer</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="matrikkelnummerAdresse" type="filleveransebasertpaumladresse:MatrikkelnummerPropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">MATRIKKELNUMMER</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="postnummerområde" type="filleveransebasertpaumladresse:PostnummerområdeIdPropertyType"/>
+          <element name="representasjonspunkt" type="gml:PointPropertyType"/>
+          <element name="sokn" type="filleveransebasertpaumladresse:SokneIdPropertyType"/>
+          <element minOccurs="0" name="tettsted" type="filleveransebasertpaumladresse:TettstedIdPropertyType"/>
+          <element name="valgkrets" type="filleveransebasertpaumladresse:ValgkretsIdPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AdressePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveransebasertpaumladresse:Adresse"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GrunnkretsId" substitutionGroup="gml:AbstractObject" type="filleveransebasertpaumladresse:GrunnkretsIdType"/>
+  <complexType name="GrunnkretsIdType">
+    <sequence>
+      <element minOccurs="0" name="grunnkretsnavn" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">GRUNNKRETSNAVN</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="grunnkretsnummer" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">GRUNNKRETSNUMMER</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="GrunnkretsIdPropertyType">
+    <sequence>
+      <element ref="filleveransebasertpaumladresse:GrunnkretsId"/>
+    </sequence>
+  </complexType>
+  <element name="Identifikasjon" substitutionGroup="gml:AbstractObject" type="filleveransebasertpaumladresse:IdentifikasjonType"/>
+  <complexType name="IdentifikasjonType">
+    <sequence>
+      <element name="lokalId" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">LOKALID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="navnerom" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">NAVNEROM</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="versjonId" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">VERSJONID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="IdentifikasjonPropertyType">
+    <sequence>
+      <element ref="filleveransebasertpaumladresse:Identifikasjon"/>
+    </sequence>
+  </complexType>
+  <element name="Matrikkeladresse" substitutionGroup="filleveransebasertpaumladresse:Adresse" type="filleveransebasertpaumladresse:MatrikkeladresseType"/>
+  <complexType name="MatrikkeladresseType">
+    <complexContent>
+      <extension base="filleveransebasertpaumladresse:AdresseType">
+        <sequence>
+          <element minOccurs="0" name="undernummer" type="integer">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">UNR</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MatrikkeladressePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveransebasertpaumladresse:Matrikkeladresse"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Matrikkelnummer" substitutionGroup="gml:AbstractObject" type="filleveransebasertpaumladresse:MatrikkelnummerType"/>
+  <complexType name="MatrikkelnummerType">
+    <sequence>
+      <element name="bruksnummer" type="integer">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">BNR</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="festenummer" type="integer">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">FNR</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="gardsnummer" type="integer">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">GNR</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="kommunenummer" type="gml:CodeType">
+        <annotation>
+          <appinfo>
+            <sc:targetCodeListURI>http://skjema.geonorge.no/SOSI/kodeliste/AdmEnheter/2019/Kommunenummer</sc:targetCodeListURI>
+            <sc:taggedValue tag="SOSI_navn">KOMMUNENUMMER</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="seksjonsnummer" type="integer">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">SNR</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="MatrikkelnummerPropertyType">
+    <sequence>
+      <element ref="filleveransebasertpaumladresse:Matrikkelnummer"/>
+    </sequence>
+  </complexType>
+  <element name="PostnummerområdeId" substitutionGroup="gml:AbstractObject" type="filleveransebasertpaumladresse:PostnummerområdeIdType"/>
+  <complexType name="PostnummerområdeIdType">
+    <sequence>
+      <element name="postnummer" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">POSTNUMMER</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="poststed" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">POSTSTED</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="PostnummerområdeIdPropertyType">
+    <sequence>
+      <element ref="filleveransebasertpaumladresse:PostnummerområdeId"/>
+    </sequence>
+  </complexType>
+  <element abstract="true" name="SOSI_Objekt-Adresse" substitutionGroup="gml:AbstractFeature" type="filleveransebasertpaumladresse:SOSI_Objekt-AdresseType"/>
+  <complexType abstract="true" name="SOSI_Objekt-AdresseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element minOccurs="0" name="datauttaksdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">DATAUTTAKSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="identifikasjon" type="filleveransebasertpaumladresse:IdentifikasjonPropertyType"/>
+          <element name="oppdateringsdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">OPPDATERINGSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="stedfestingVerifisert" type="boolean">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">STED_VERIF</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SOSI_Objekt-AdressePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveransebasertpaumladresse:SOSI_Objekt-Adresse"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SokneId" substitutionGroup="gml:AbstractObject" type="filleveransebasertpaumladresse:SokneIdType"/>
+  <complexType name="SokneIdType">
+    <sequence>
+      <element name="organisasjonsnummer" type="integer">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">ORGANSISASJONSNUMMER</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="soknenavn" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">SOKNENAVN</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="soknenummer" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">SOKNENUMMER</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="SokneIdPropertyType">
+    <sequence>
+      <element ref="filleveransebasertpaumladresse:SokneId"/>
+    </sequence>
+  </complexType>
+  <element name="TettstedId" substitutionGroup="gml:AbstractObject" type="filleveransebasertpaumladresse:TettstedIdType"/>
+  <complexType name="TettstedIdType">
+    <sequence>
+      <element minOccurs="0" name="tettstednavn" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">TETTSTEDNAVN</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="tettstednummer" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">TETTSTEDNUMMER</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="TettstedIdPropertyType">
+    <sequence>
+      <element ref="filleveransebasertpaumladresse:TettstedId"/>
+    </sequence>
+  </complexType>
+  <element name="ValgkretsId" substitutionGroup="gml:AbstractObject" type="filleveransebasertpaumladresse:ValgkretsIdType"/>
+  <complexType name="ValgkretsIdType">
+    <sequence>
+      <element minOccurs="0" name="valgkretsnavn" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">VALGKRETSNAVN</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="valgkretsnummer" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">VALGKRETSNUMMER</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="ValgkretsIdPropertyType">
+    <sequence>
+      <element ref="filleveransebasertpaumladresse:ValgkretsId"/>
+    </sequence>
+  </complexType>
+  <element name="Vegadresse" substitutionGroup="filleveransebasertpaumladresse:Adresse" type="filleveransebasertpaumladresse:VegadresseType"/>
+  <complexType name="VegadresseType">
+    <complexContent>
+      <extension base="filleveransebasertpaumladresse:AdresseType">
+        <sequence>
+          <element name="adressekode" type="integer">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">ADRESSEKODE</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="adressenavn" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">ADRESSENAVN</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="bokstav" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">BOKSTAV</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="nummer" type="integer">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">NUMMER</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="VegadressePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveransebasertpaumladresse:Vegadresse"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>
