@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result" xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result" config="/home/runner/work/ps_norge_digitalt/ps_norge_digitalt/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/schema/shapechange-config.xml" end="Wed Aug 19 10:32:23 UTC 2026" resultCode="0" start="Wed Aug 19 10:32:16 UTC 2026" version="4.0.0">
+  <Messages>
+    <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: START ----------"/>
+    <Info message="Validating input parameters."/>
+    <Info message="Validation of input parameters completed."/>
+    <Info message="Validating log parameters."/>
+    <Info message="Validation of log parameters completed."/>
+    <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.shapechange.core.target.xmlschema.XmlSchema' and @inputs 'INPUT' ..."/>
+    <ProcessFlowInfo message="--- Validating target with @class 'de.interactive_instruments.shapechange.core.target.json.JsonSchemaTarget' and @inputs 'INPUT' ..."/>
+    <ProcessFlowInfo message="---------- Semantic validation of ShapeChange configuration: COMPLETE ----------"/>
+    <ProcessFlowInfo message="Application schema found, package name: 'filleveranse-basert-pa-uml-adresse', target namespace: 'https://skjema.geonorge.no/SOSI/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/1.0'"/>
+    <ProcessFlowInfo message="Now processing target 'XML Schema' for input 'INPUT'."/>
+    <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.shapechange.core.target.xmlschema.XmlSchema' for input ID: 'INPUT'.&#10;-------------------------------------------------"/>
+    <ProcessFlowInfo message="Application schema found, package name: 'filleveranse-basert-pa-uml-adresse', target namespace: 'https://skjema.geonorge.no/SOSI/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/1.0'"/>
+    <ProcessFlowInfo message="Now processing target 'JSON Schema' for input 'INPUT'."/>
+    <Warning message="Value type 'Punkt' of primary geometry property 'representasjonspunkt' is not one of the GeoJSON compatible geometry types defined via target parameter geoJsonCompatibleGeometryTypes. No restriction will be encoded for the &quot;geometry&quot; member.">
+      <Detail message="Context: property 'filleveranse-basert-pa-uml-adresse::Matrikkelen-Adresse_20180501::Adresse::representasjonspunkt'"/>
+    </Warning>
+    <ProcessFlowInfo message="Executed target class 'de.interactive_instruments.shapechange.core.target.json.JsonSchemaTarget' for input ID: 'INPUT'.&#10;-------------------------------------------------"/>
+  </Messages>
+  <Results>
+    <Result href="file:/home/runner/work/ps_norge_digitalt/ps_norge_digitalt/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/schema/xsd/INPUT/filleveranse-basert-pa-uml-adresse.xsd" scope="https://skjema.geonorge.no/SOSI/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/1.0" target="XML Schema">filleveranse-basert-pa-uml-adresse.xsd</Result>
+    <Result href="file:/home/runner/work/ps_norge_digitalt/ps_norge_digitalt/produktspesifikasjon/matrikkelen-adresse/filleveranse-basert-pa-uml-adresse/schema/jsonschema/INPUT/filleveransebasertpaumladresse/filleveranse-basert-pa-uml-adresse.json" target="JSON Schema">filleveranse-basert-pa-uml-adresse.json</Result>
+  </Results>
+</ShapeChangeResult>
