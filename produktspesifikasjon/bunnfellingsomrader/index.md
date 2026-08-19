@@ -1,6 +1,6 @@
 ---
 title: "Bunnfellingsområder"
-updated: "2026-08-14"
+updated: "2026-08-19"
 organization: "Norges geologiske undersøkelse"
 logo: "https://register.geonorge.no/data/organizations/970188290_NGU_hovedlogo_svart.svg thumbnail.png"
 ---
@@ -81,11 +81,11 @@ Datasettet kan blant annet anvendes som underlag i overordnet areal- og miljøpl
 
 **Nivåbeskrivelse**: OGC API-Features fra Norges geologiske undersøkelse
 
-### Ny datakilde
+### Filleveranser vasert på UML-modell
 
 **Nivå**: dataset
 
-**Nivåbeskrivelse**: Filbasert leveranse som GML og SOSI
+**Nivåbeskrivelse**: Filleveranser vasert på UML-modell
 
 ## Datainnhold og struktur
 
@@ -101,15 +101,15 @@ Datasettet kan blant annet anvendes som underlag i overordnet areal- og miljøpl
 
 ➡️ [Se full datamodell for omfang "Bunnfellingsomrader" (diagram per pakke og objektkatalog)](bunnfellingsomrader/objektkatalog.html)
 
-### Datamodell - Ny datakilde
+### Datamodell - Filleveranser vasert på UML-modell
 
 
 
-<a href="ny-datakilde/ny-datakilde_feature_catalogue.png" title="Klikk for stor visning"><img src="ny-datakilde/ny-datakilde_feature_catalogue.png" alt="Datamodell Ny datakilde" style="max-width: 100%; height: auto;" /></a>
+<a href="filleveranser-vasert-pa-uml-modell/filleveranser-vasert-pa-uml-modell_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranser-vasert-pa-uml-modell/filleveranser-vasert-pa-uml-modell_feature_catalogue.png" alt="Datamodell Filleveranser vasert på UML-modell" style="max-width: 100%; height: auto;" /></a>
 
 
 
-➡️ [Se full datamodell for omfang "Ny datakilde" (diagram per pakke og objektkatalog)](ny-datakilde/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Filleveranser vasert på UML-modell" (diagram per pakke og objektkatalog)](filleveranser-vasert-pa-uml-modell/objektkatalog.html)
 
 ## Referansesystem
 
@@ -184,7 +184,7 @@ Datasettet kan blant annet anvendes som underlag i overordnet areal- og miljøpl
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-08-14
+**Metadatadato**: 2026-08-19
 
 **språk**: nor
 

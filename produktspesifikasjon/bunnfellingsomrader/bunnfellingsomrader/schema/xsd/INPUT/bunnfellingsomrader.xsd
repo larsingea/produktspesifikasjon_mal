@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:bunnfellingsomrader="https://skjema.geonorge.no/SOSI/produktspesifikasjon/bunnfellingsomrader/bunnfellingsomrader/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/bunnfellingsomrader/bunnfellingsomrader/1.0" version="1.0">
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="BunnfellingOmr" substitutionGroup="gml:AbstractFeature" type="bunnfellingsomrader:BunnfellingOmrType"/>
+  <complexType name="BunnfellingOmrType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element name="identifikasjon" type="bunnfellingsomrader:IdentifikasjonPropertyType"/>
+          <element name="datauttaksdato" type="dateTime"/>
+          <element minOccurs="0" name="førsteDigitaliseringsdato" type="dateTime"/>
+          <element name="sedKornstørrelse" type="string"/>
+          <element name="sedKornstørrelseNavn" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="BunnfellingOmrPropertyType">
+    <sequence minOccurs="0">
+      <element ref="bunnfellingsomrader:BunnfellingOmr"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Dataavgrensning" substitutionGroup="gml:AbstractFeature" type="bunnfellingsomrader:DataavgrensningType"/>
+  <complexType name="DataavgrensningType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element name="datauttaksdato" type="dateTime"/>
+          <element minOccurs="0" name="førsteDigitaliseringsdato" type="dateTime"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element name="kvalitet" type="bunnfellingsomrader:PosisjonskvalitetPropertyType"/>
+          <element name="medium" type="string"/>
+          <element name="opphav" type="string"/>
+          <element minOccurs="0" name="geolPavisningstype" type="string"/>
+          <element minOccurs="0" name="geolPavisningstypeNavn" type="string"/>
+          <element minOccurs="0" name="temakvalitet" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="bunnfellingsomrader:IdentifikasjonPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DataavgrensningPropertyType">
+    <sequence minOccurs="0">
+      <element ref="bunnfellingsomrader:Dataavgrensning"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GeolAvgrLinje" substitutionGroup="gml:AbstractFeature" type="bunnfellingsomrader:GeolAvgrLinjeType"/>
+  <complexType name="GeolAvgrLinjeType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element minOccurs="0" name="lokalid" type="string"/>
+          <element name="datauttaksdato" type="dateTime"/>
+          <element minOccurs="0" name="førsteDigitaliseringsdato" type="dateTime"/>
+          <element minOccurs="0" name="oppdateringsdato" type="dateTime"/>
+          <element name="kvalitet" type="bunnfellingsomrader:PosisjonskvalitetPropertyType"/>
+          <element name="medium" type="string"/>
+          <element name="opphav" type="string"/>
+          <element minOccurs="0" name="geolPavisningstype" type="string"/>
+          <element minOccurs="0" name="geolPavisningstypeNavn" type="string"/>
+          <element minOccurs="0" name="temakvalitet" type="string"/>
+          <element minOccurs="0" name="identifikasjon" type="bunnfellingsomrader:IdentifikasjonPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GeolAvgrLinjePropertyType">
+    <sequence minOccurs="0">
+      <element ref="bunnfellingsomrader:GeolAvgrLinje"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Identifikasjon" substitutionGroup="gml:AbstractObject" type="bunnfellingsomrader:IdentifikasjonType"/>
+  <complexType name="IdentifikasjonType">
+    <sequence>
+      <element minOccurs="0" name="lokalId" type="string"/>
+      <element minOccurs="0" name="navnerom" type="string"/>
+      <element minOccurs="0" name="versjonId" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="IdentifikasjonPropertyType">
+    <sequence>
+      <element ref="bunnfellingsomrader:Identifikasjon"/>
+    </sequence>
+  </complexType>
+  <element name="Posisjonskvalitet" substitutionGroup="gml:AbstractObject" type="bunnfellingsomrader:PosisjonskvalitetType"/>
+  <complexType name="PosisjonskvalitetType">
+    <sequence>
+      <element minOccurs="0" name="målemetode" type="string"/>
+      <element minOccurs="0" name="målemetodeNavn" type="string"/>
+      <element minOccurs="0" name="nøyaktighet" type="integer"/>
+    </sequence>
+  </complexType>
+  <complexType name="PosisjonskvalitetPropertyType">
+    <sequence>
+      <element ref="bunnfellingsomrader:Posisjonskvalitet"/>
+    </sequence>
+  </complexType>
+  <simpleType name="stringType">
+    <restriction base="string">
+      <enumeration value="0"/>
+      <enumeration value="1"/>
+      <enumeration value="10"/>
+      <enumeration value="100"/>
+      <enumeration value="105"/>
+      <enumeration value="110"/>
+      <enumeration value="115"/>
+      <enumeration value="120"/>
+      <enumeration value="130"/>
+      <enumeration value="140"/>
+      <enumeration value="15"/>
+      <enumeration value="150"/>
+      <enumeration value="160"/>
+      <enumeration value="170"/>
+      <enumeration value="174"/>
+      <enumeration value="175"/>
+      <enumeration value="180"/>
+      <enumeration value="185"/>
+      <enumeration value="190"/>
+      <enumeration value="20"/>
+      <enumeration value="205"/>
+      <enumeration value="206"/>
+      <enumeration value="21"/>
+      <enumeration value="210"/>
+      <enumeration value="215"/>
+      <enumeration value="30"/>
+      <enumeration value="300"/>
+      <enumeration value="40"/>
+      <enumeration value="5"/>
+      <enumeration value="50"/>
+      <enumeration value="500"/>
+      <enumeration value="60"/>
+      <enumeration value="600"/>
+      <enumeration value="70"/>
+      <enumeration value="80"/>
+      <enumeration value="90"/>
+      <enumeration value="95"/>
+      <enumeration value="11"/>
+      <enumeration value="12"/>
+      <enumeration value="13"/>
+      <enumeration value="14"/>
+      <enumeration value="18"/>
+      <enumeration value="19"/>
+      <enumeration value="22"/>
+      <enumeration value="23"/>
+      <enumeration value="24"/>
+      <enumeration value="31"/>
+      <enumeration value="32"/>
+      <enumeration value="33"/>
+      <enumeration value="34"/>
+      <enumeration value="35"/>
+      <enumeration value="36"/>
+      <enumeration value="37"/>
+      <enumeration value="38"/>
+      <enumeration value="41"/>
+      <enumeration value="42"/>
+      <enumeration value="43"/>
+      <enumeration value="44"/>
+      <enumeration value="45"/>
+      <enumeration value="46"/>
+      <enumeration value="47"/>
+      <enumeration value="48"/>
+      <enumeration value="49"/>
+      <enumeration value="51"/>
+      <enumeration value="52"/>
+      <enumeration value="53"/>
+      <enumeration value="54"/>
+      <enumeration value="55"/>
+      <enumeration value="56"/>
+      <enumeration value="61"/>
+      <enumeration value="62"/>
+      <enumeration value="63"/>
+      <enumeration value="64"/>
+      <enumeration value="65"/>
+      <enumeration value="66"/>
+      <enumeration value="67"/>
+      <enumeration value="68"/>
+      <enumeration value="69"/>
+      <enumeration value="71"/>
+      <enumeration value="72"/>
+      <enumeration value="73"/>
+      <enumeration value="74"/>
+      <enumeration value="77"/>
+      <enumeration value="78"/>
+      <enumeration value="79"/>
+      <enumeration value="81"/>
+      <enumeration value="82"/>
+      <enumeration value="91"/>
+      <enumeration value="92"/>
+      <enumeration value="93"/>
+      <enumeration value="94"/>
+      <enumeration value="96"/>
+      <enumeration value="97"/>
+      <enumeration value="99"/>
+      <enumeration value="B"/>
+      <enumeration value="D"/>
+      <enumeration value="I"/>
+      <enumeration value="J"/>
+      <enumeration value="L"/>
+      <enumeration value="O"/>
+      <enumeration value="S"/>
+      <enumeration value="T"/>
+      <enumeration value="U"/>
+      <enumeration value="V"/>
+      <enumeration value="W"/>
+      <enumeration value="X"/>
+      <enumeration value="2"/>
+      <enumeration value="25"/>
+      <enumeration value="26"/>
+      <enumeration value="27"/>
+      <enumeration value="28"/>
+      <enumeration value="29"/>
+      <enumeration value="3"/>
+      <enumeration value="4"/>
+      <enumeration value="6"/>
+      <enumeration value="7"/>
+      <enumeration value="8"/>
+      <enumeration value="9"/>
+      <enumeration value="dårlig"/>
+      <enumeration value="god"/>
+      <enumeration value="megetGod"/>
+      <enumeration value="noeDårlig"/>
+      <enumeration value="noksåGod"/>
+      <enumeration value="særdelesGod"/>
+    </restriction>
+  </simpleType>
+</schema>

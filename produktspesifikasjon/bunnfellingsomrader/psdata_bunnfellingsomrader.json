@@ -149,9 +149,9 @@
     },
     {
       "specificationScope": {
-        "scopeIdentification": "Ny datakilde",
+        "scopeIdentification": "Filleveranser vasert på UML-modell",
         "level": "dataset",
-        "levelDescription": "Filbasert leveranse som GML og SOSI"
+        "levelDescription": "Filleveranser vasert på UML-modell"
       }
     }
   ],
@@ -369,7 +369,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-08-14",
+    "metadataDate": "2026-08-19",
     "language": "nor",
     "contact": {
       "organizationName": "Norges geologiske undersøkelse",

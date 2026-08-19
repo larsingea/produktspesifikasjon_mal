@@ -8,12 +8,12 @@
 
 ➡️ [Se full datamodell for omfang "Bunnfellingsomrader" (diagram per pakke og objektkatalog)](bunnfellingsomrader/objektkatalog.html)
 
-### Datamodell - Ny datakilde
+### Datamodell - Filleveranser vasert på UML-modell
 
 
 
-<a href="ny-datakilde/ny-datakilde_feature_catalogue.png" title="Klikk for stor visning"><img src="ny-datakilde/ny-datakilde_feature_catalogue.png" alt="Datamodell Ny datakilde" style="max-width: 100%; height: auto;" /></a>
+<a href="filleveranser-vasert-pa-uml-modell/filleveranser-vasert-pa-uml-modell_feature_catalogue.png" title="Klikk for stor visning"><img src="filleveranser-vasert-pa-uml-modell/filleveranser-vasert-pa-uml-modell_feature_catalogue.png" alt="Datamodell Filleveranser vasert på UML-modell" style="max-width: 100%; height: auto;" /></a>
 
 
 
-➡️ [Se full datamodell for omfang "Ny datakilde" (diagram per pakke og objektkatalog)](ny-datakilde/objektkatalog.html)
+➡️ [Se full datamodell for omfang "Filleveranser vasert på UML-modell" (diagram per pakke og objektkatalog)](filleveranser-vasert-pa-uml-modell/objektkatalog.html)
