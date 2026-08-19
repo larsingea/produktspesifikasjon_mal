@@ -1,0 +1,1 @@
+**Beskriv** kort hva produktet inneholder, hvem som forvalter det og hvordan det er strukturert.
