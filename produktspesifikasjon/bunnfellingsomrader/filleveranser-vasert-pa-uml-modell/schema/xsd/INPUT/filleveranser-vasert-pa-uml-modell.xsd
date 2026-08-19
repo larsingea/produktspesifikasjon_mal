@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:filleveranservasertpaumlmodell="https://skjema.geonorge.no/SOSI/produktspesifikasjon/bunnfellingsomrader/filleveranser-vasert-pa-uml-modell/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/bunnfellingsomrader/filleveranser-vasert-pa-uml-modell/1.0" version="1.0">
+  <import namespace="http://www.interactive-instruments.de/ShapeChange/AppInfo" schemaLocation="https://shapechange.net/resources/schema/ShapeChangeAppinfo.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="BunnfellingOmr" substitutionGroup="filleveranservasertpaumlmodell:GenrelleEgenskaperBunnfellingOmr" type="filleveranservasertpaumlmodell:BunnfellingOmrType"/>
+  <complexType name="BunnfellingOmrType">
+    <complexContent>
+      <extension base="filleveranservasertpaumlmodell:GenrelleEgenskaperBunnfellingOmrType">
+        <sequence>
+          <element name="område" type="gml:SurfacePropertyType"/>
+          <element name="sedKornstørrelse" type="filleveranservasertpaumlmodell:SedKornstorrelseType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">SEDKORNSTR</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="sedKornstørrelseNavn" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">SEDKORNSTØRRELSENAVN</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranservasertpaumlmodell:GeolAvgrLinjePropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="avgrensning" type="filleveranservasertpaumlmodell:DataavgrensningPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="BunnfellingOmrPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranservasertpaumlmodell:BunnfellingOmr"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Dataavgrensning" substitutionGroup="filleveranservasertpaumlmodell:LosmasseGrense" type="filleveranservasertpaumlmodell:DataavgrensningType"/>
+  <complexType name="DataavgrensningType">
+    <complexContent>
+      <extension base="filleveranservasertpaumlmodell:LosmasseGrenseType">
+        <sequence>
+          <element name="grense" type="gml:CurvePropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">KURVE</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="identifikasjon" type="filleveranservasertpaumlmodell:IdentifikasjonPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DataavgrensningPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranservasertpaumlmodell:Dataavgrensning"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="FellesegenskaperLosmasse" substitutionGroup="gml:AbstractFeature" type="filleveranservasertpaumlmodell:FellesegenskaperLosmasseType"/>
+  <complexType abstract="true" name="FellesegenskaperLosmasseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="datauttaksdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">DATAUTTAKSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="førsteDigitaliseringsdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">FØRSTEDIGITALISERINGSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="oppdateringsdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">OPPDATERINGSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="kvalitet" type="filleveranservasertpaumlmodell:PosisjonskvalitetPropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">KVALITET</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="medium" type="filleveranservasertpaumlmodell:MediumType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">MEDIUM</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="opphav" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">OPPHAV</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FellesegenskaperLosmassePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranservasertpaumlmodell:FellesegenskaperLosmasse"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="GenrelleEgenskaperBunnfellingOmr" substitutionGroup="gml:AbstractFeature" type="filleveranservasertpaumlmodell:GenrelleEgenskaperBunnfellingOmrType"/>
+  <complexType abstract="true" name="GenrelleEgenskaperBunnfellingOmrType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="identifikasjon" type="filleveranservasertpaumlmodell:IdentifikasjonPropertyType"/>
+          <element name="datauttaksdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">DATAUTTAKSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="førsteDigitaliseringsdato" type="date">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">FØRSTEDIGITALISERINGSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GenrelleEgenskaperBunnfellingOmrPropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranservasertpaumlmodell:GenrelleEgenskaperBunnfellingOmr"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GeolAvgrLinje" substitutionGroup="filleveranservasertpaumlmodell:LosmasseGrense" type="filleveranservasertpaumlmodell:GeolAvgrLinjeType"/>
+  <complexType name="GeolAvgrLinjeType">
+    <complexContent>
+      <extension base="filleveranservasertpaumlmodell:LosmasseGrenseType">
+        <sequence>
+          <element name="grense" type="gml:CurvePropertyType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">KURVE</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="identifikasjon" type="filleveranservasertpaumlmodell:IdentifikasjonPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GeolAvgrLinjePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranservasertpaumlmodell:GeolAvgrLinje"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="GeolPavisningstypeType">
+    <union memberTypes="filleveranservasertpaumlmodell:GeolPavisningstypeEnumerationType filleveranservasertpaumlmodell:GeolPavisningstypeOtherType"/>
+  </simpleType>
+  <simpleType name="GeolPavisningstypeEnumerationType">
+    <restriction base="string">
+      <enumeration value="Ikke spesifisert"/>
+      <enumeration value="Sikker påvisning/observasjon"/>
+      <enumeration value="Usikker påvisning/observasjon"/>
+      <enumeration value="Konstruert avgrensning"/>
+      <enumeration value="Geofysisk tolket grense"/>
+      <enumeration value="Dårlig synlig avgrensning i terrenget"/>
+      <enumeration value="Overgangsmessig grense"/>
+      <enumeration value="Tolket avgrensning/registrering"/>
+      <enumeration value="Flyfototolket objekt eller delobjekt"/>
+      <enumeration value="Observasjon med usikker geografisk beliggenhet"/>
+      <enumeration value="Avgrensning ikke basert på geologi"/>
+      <enumeration value="Avgrensning basert på geofysiske data/metoder verifisert ved prøvetaking"/>
+      <enumeration value="Avgrensning basert på tolkning av tilgjengelige geologiske/geofysiske data (varierende oppløsning), litteratur og kart"/>
+      <enumeration value="Avgrensning basert på geologisk observasjon i felt, prøvetaking og analyser"/>
+      <enumeration value="Tolket avgrensning basert på tilgjengelig geologisk kartlegging"/>
+      <enumeration value="Avgrensning basert på prøvetaking"/>
+      <enumeration value="Avgrensning basert på seismikk"/>
+      <enumeration value="Avgrensning basert på detaljerte dybdedata"/>
+      <enumeration value="Avgrensning basert på backscatter data/sidescan.sonar"/>
+      <enumeration value="Avgrensning basert på prøvetaking og akustiske data/metoder"/>
+      <enumeration value="Avgrensning basert på akustiske data/metoder"/>
+      <enumeration value="Avgrensning basert på flere metoder/datatyper"/>
+      <enumeration value="Avgrensning basert på undervannsfoto og/eller -video"/>
+      <enumeration value="Aavgrensning basert på akustiske data/metoder verifisert ved prøvetaking, foto o.l."/>
+      <enumeration value="Avgrensningen er foretatt ut fra tolkning basert på tilgjengelige batymetriske data (varierende oppløsning), litteratur og kart"/>
+      <enumeration value="Avgrensning basert på Lidardata, flyfoto og/eller multi-/hyperspektrale bilder og eksisterende geologisk informasjon"/>
+      <enumeration value="Avgrensning basert på romlig modellering med utgangspunkt i detaljerte dybdedata"/>
+      <enumeration value="Avgrensning basert på romlig modellering med utgangspunkt i detaljerte dybdedata, prøvetaking samt fysiske datasett som strøm, bølger, eksponering og lysforhold"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="GeolPavisningstypeOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="Identifikasjon" substitutionGroup="gml:AbstractObject" type="filleveranservasertpaumlmodell:IdentifikasjonType"/>
+  <complexType name="IdentifikasjonType">
+    <sequence>
+      <element name="lokalId" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">LOKALID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="navnerom" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">NAVNEROM</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="versjonId" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">VERSJONID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="IdentifikasjonPropertyType">
+    <sequence>
+      <element ref="filleveranservasertpaumlmodell:Identifikasjon"/>
+    </sequence>
+  </complexType>
+  <element abstract="true" name="LosmasseGrense" substitutionGroup="filleveranservasertpaumlmodell:FellesegenskaperLosmasse" type="filleveranservasertpaumlmodell:LosmasseGrenseType"/>
+  <complexType abstract="true" name="LosmasseGrenseType">
+    <complexContent>
+      <extension base="filleveranservasertpaumlmodell:FellesegenskaperLosmasseType">
+        <sequence>
+          <element minOccurs="0" name="geolPavisningstype" type="filleveranservasertpaumlmodell:GeolPavisningstypeType">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">GEOPÅVISNINGTYPE</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="geolPavisningstypeNavn" type="string">
+            <annotation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">GEOPÅVISNINGTYPENAVN</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="temakvalitet" type="filleveranservasertpaumlmodell:TemaKvalitetType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>http://skjema.geonorge.no/SOSI/produktspesifikasjon/MarineBunnsedimenterKornstørrelse-20201201/TemaKvalitet</sc:targetCodeListURI>
+                <sc:taggedValue tag="SOSI_navn">TEMAKVAL</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="LosmasseGrensePropertyType">
+    <sequence minOccurs="0">
+      <element ref="filleveranservasertpaumlmodell:LosmasseGrense"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="MediumType">
+    <union memberTypes="filleveranservasertpaumlmodell:MediumEnumerationType filleveranservasertpaumlmodell:MediumOtherType"/>
+  </simpleType>
+  <simpleType name="MediumEnumerationType">
+    <restriction base="string">
+      <enumeration value="Alltid i vann"/>
+      <enumeration value="I bygning/bygningsmessig anlegg"/>
+      <enumeration value="I luft"/>
+      <enumeration value="På isbre"/>
+      <enumeration value="På sjøbunnen"/>
+      <enumeration value="På terrenget/på bakkenivå"/>
+      <enumeration value="På vannoverflaten"/>
+      <enumeration value="Tidvis under vann"/>
+      <enumeration value="Under isbre"/>
+      <enumeration value="Under sjøbunnen"/>
+      <enumeration value="Under terrenget"/>
+      <enumeration value="Ukjent"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="MediumOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="MålemetodeType">
+    <union memberTypes="filleveranservasertpaumlmodell:MålemetodeEnumerationType filleveranservasertpaumlmodell:MålemetodeOtherType"/>
+  </simpleType>
+  <simpleType name="MålemetodeEnumerationType">
+    <restriction base="string">
+      <enumeration value="Terrengmålt: Uspesifisert måleinstrument"/>
+      <enumeration value="Terrengmålt: Totalstasjon"/>
+      <enumeration value="Terrengmålt: Teodolitt og el avstandsmåler"/>
+      <enumeration value="Terrengmålt: Teodolitt og målebånd"/>
+      <enumeration value="Terrengmålt: Ortogonalmetoden"/>
+      <enumeration value="Utmål"/>
+      <enumeration value="Tatt fra plan"/>
+      <enumeration value="Annet  (denne har ingen mening, bør fjernes?)"/>
+      <enumeration value="Stereoinstrument"/>
+      <enumeration value="Aerotriangulert"/>
+      <enumeration value="Stereoinstrument: Analytisk plotter"/>
+      <enumeration value="Stereoinstrument: Autograf"/>
+      <enumeration value="Stereoinstrument: Digitalt"/>
+      <enumeration value="Scannet fra kart"/>
+      <enumeration value="Skannet fra kart: Blyantoriginal"/>
+      <enumeration value="Skannet fra kart: Rissefolie"/>
+      <enumeration value="Skannet fra kart: Transparent folie, god kvalitet"/>
+      <enumeration value="Skannet fra kart: Transparent folie, mindre god kvalitet"/>
+      <enumeration value="Skannet fra kart: Papirkopi"/>
+      <enumeration value="Flybåren laserscanner"/>
+      <enumeration value="Bilbåren laser"/>
+      <enumeration value="Lineær referanse"/>
+      <enumeration value="Digitaliseringbord: Ortofoto eller flybilde"/>
+      <enumeration value="Digitaliseringbord: Ortofoto, film"/>
+      <enumeration value="Digitaliseringbord: Ortofoto, fotokopi"/>
+      <enumeration value="Digitaliseringbord: Flybilde, film"/>
+      <enumeration value="Digitaliseringbord: Flybilde, fotokopi"/>
+      <enumeration value="Digitalisert på skjerm fra ortofoto"/>
+      <enumeration value="Digitalisert på skjerm fra satellittbilde"/>
+      <enumeration value="Digitalisert på skjerm fra andre digitale rasterdata"/>
+      <enumeration value="Digitalisert på skjerm fra tolkning av seismikk"/>
+      <enumeration value="Vektorisering av laserdata"/>
+      <enumeration value="Digitaliseringsbord: Kart"/>
+      <enumeration value="Digitaliseringsbord: Kart, blyantoriginal"/>
+      <enumeration value="Digitaliseringsbord: Kart, rissefoile"/>
+      <enumeration value="Digitaliseringsbord: Kart, transparent foile, god kvalitet"/>
+      <enumeration value="Digitaliseringsbord: Kart, transparent foile, mindre god kvalitet"/>
+      <enumeration value="Digitaliseringsbord: Kart, papirkopi"/>
+      <enumeration value="Digitalisert på skjerm fra skannet kart"/>
+      <enumeration value="Genererte data (interpolasjon)"/>
+      <enumeration value="Genererte data (interpolasjon): Terrengmodell"/>
+      <enumeration value="Genererte data (interpolasjon): Vektet middel"/>
+      <enumeration value="Genererte data: Fra annen geometri"/>
+      <enumeration value="Genererte data: Generalisering"/>
+      <enumeration value="Genererte data: Sentralpunkt"/>
+      <enumeration value="Genererte data: Sammenknytningspunkt, randpunkt"/>
+      <enumeration value="Koordinater hentet fra GAB"/>
+      <enumeration value="Koordinater hentet fra JREG"/>
+      <enumeration value="Beregnet"/>
+      <enumeration value="Spesielle metoder"/>
+      <enumeration value="Spesielle metoder: Målt med stikkstang"/>
+      <enumeration value="Spesielle metoder: Målt med waterstang"/>
+      <enumeration value="Spesielle metoder: Målt med målehjul"/>
+      <enumeration value="Spesielle metoder: Målt med stigningsmåler"/>
+      <enumeration value="Fastsatt punkt"/>
+      <enumeration value="Fastsatt ved dom eller kongelig resolusjon"/>
+      <enumeration value="Annet (spesifiseres i filhode) ( bør vel fjernes, blir borte ved overføring mellom systemer)"/>
+      <enumeration value="Frihåndstegning"/>
+      <enumeration value="Frihåndstegning på kart"/>
+      <enumeration value="Frihåndstegning på skjerm"/>
+      <enumeration value="Treghetsstedfesting"/>
+      <enumeration value="GNSS: Kodemåling, relative målinger"/>
+      <enumeration value="GNSS: Kodemåling, enkle målinger"/>
+      <enumeration value="GNSS: Fasemåling, statisk måling"/>
+      <enumeration value="GNSS: Fasemåling, andre metoder"/>
+      <enumeration value="Kombinasjon av GNSS/Treghet"/>
+      <enumeration value="GNSS: Fasemåling RTK"/>
+      <enumeration value="GNSS: Fasemåling , float-løsning"/>
+      <enumeration value="Ukjent målemetode"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="MålemetodeOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="Posisjonskvalitet" substitutionGroup="gml:AbstractObject" type="filleveranservasertpaumlmodell:PosisjonskvalitetType"/>
+  <complexType name="PosisjonskvalitetType">
+    <sequence>
+      <element name="målemetode" type="filleveranservasertpaumlmodell:MålemetodeType"/>
+      <element name="målemetodeNavn" type="string">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">MÅLEMETODENAVN</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="nøyaktighet" type="integer">
+        <annotation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">NØYAKTIGHET</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="PosisjonskvalitetPropertyType">
+    <sequence>
+      <element ref="filleveranservasertpaumlmodell:Posisjonskvalitet"/>
+    </sequence>
+  </complexType>
+  <simpleType name="SedKornstorrelseType">
+    <union memberTypes="filleveranservasertpaumlmodell:SedKornstorrelseEnumerationType filleveranservasertpaumlmodell:SedKornstorrelseOtherType"/>
+  </simpleType>
+  <simpleType name="SedKornstorrelseEnumerationType">
+    <restriction base="string">
+      <enumeration value="Uspesifisert"/>
+      <enumeration value="Tynt eller usammenhengende sedimentdekke over berggrunn"/>
+      <enumeration value="Bart fjell"/>
+      <enumeration value="Leire"/>
+      <enumeration value="Organisk slam"/>
+      <enumeration value="Slam"/>
+      <enumeration value="Slam med blokker av sedimenter"/>
+      <enumeration value="Sandholdig leire"/>
+      <enumeration value="Sandholdig slam"/>
+      <enumeration value="Silt"/>
+      <enumeration value="Sandholdig silt"/>
+      <enumeration value="Leirholdig sand"/>
+      <enumeration value="Slamholdig sand"/>
+      <enumeration value="Siltholdig sand"/>
+      <enumeration value="Fin sand"/>
+      <enumeration value="Sand"/>
+      <enumeration value="Grov sand"/>
+      <enumeration value="Grusholdig slam"/>
+      <enumeration value="Grusholdig sandholdig slam"/>
+      <enumeration value="Grusholdig slamholdig sand"/>
+      <enumeration value="Grusholdig sand"/>
+      <enumeration value="Slamholdig grus"/>
+      <enumeration value="Slamholdig sandholdig grus"/>
+      <enumeration value="Sandholdig grus"/>
+      <enumeration value="Grus"/>
+      <enumeration value="Grus og stein"/>
+      <enumeration value="Grus, stein og blokk"/>
+      <enumeration value="Stein og blokk"/>
+      <enumeration value="Sand, grus og stein"/>
+      <enumeration value="Sand og blokk"/>
+      <enumeration value="Slam/sand og stein/blokk"/>
+      <enumeration value="Slam og sand med grus, stein og blokk"/>
+      <enumeration value="Stein/blokk med slam-/sanddekke"/>
+      <enumeration value="Sand, grus, stein og blokk"/>
+      <enumeration value="Harde sedimenter eller sedimentære bergarter"/>
+      <enumeration value="Biogent materiale"/>
+      <enumeration value="Antropogent materiale"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="SedKornstorrelseOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="TemaKvalitetType">
+    <union memberTypes="filleveranservasertpaumlmodell:TemaKvalitetEnumerationType filleveranservasertpaumlmodell:TemaKvalitetOtherType"/>
+  </simpleType>
+  <simpleType name="TemaKvalitetEnumerationType">
+    <restriction base="string">
+      <enumeration value="Høyest mulig posisjonell og tematisk nøyaktighet"/>
+      <enumeration value="Høy posisjonell- og tematisk nøyaktighet, høy oppløsning, lite generalisering"/>
+      <enumeration value="God posisjonell- og tematisk nøyaktighet, god oppløsning, noe generalisert"/>
+      <enumeration value="Lav posisjonell- og tematisk nøyaktighet, lav oppløsning, med generalisering"/>
+      <enumeration value="Meget lav posisjonell- og tematisk nøyaktighet, meget lav oppløsning, stor grad generalisert"/>
+      <enumeration value="Meget lav posisjonell- og tematisk nøyaktighet, sterkt generalisert"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="TemaKvalitetOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+</schema>

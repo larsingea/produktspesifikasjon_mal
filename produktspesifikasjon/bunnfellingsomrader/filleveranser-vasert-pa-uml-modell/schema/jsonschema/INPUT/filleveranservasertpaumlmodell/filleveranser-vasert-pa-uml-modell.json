@@ -1,0 +1,210 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/bunnfellingsomrader/filleveranser-vasert-pa-uml-modell/filleveranservasertpaumlmodell/filleveranser-vasert-pa-uml-modell.json",
+  "definitions": {
+    "BunnfellingOmr": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/GenrelleEgenskaperBunnfellingOmr"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "sedKornstørrelse": {
+              "$ref": "#/definitions/SedKornstorrelse"
+            },
+            "sedKornstørrelseNavn": {
+              "type": "string"
+            },
+            "avgrensning": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "sedKornstørrelse",
+            "sedKornstørrelseNavn"
+          ]
+        }
+      ]
+    },
+    "Dataavgrensning": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/LosmasseGrense"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "identifikasjon": {
+              "$ref": "#/definitions/Identifikasjon"
+            }
+          }
+        }
+      ]
+    },
+    "FellesegenskaperLosmasse": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "datauttaksdato": {
+          "type": "string",
+          "format": "date"
+        },
+        "førsteDigitaliseringsdato": {
+          "type": "string",
+          "format": "date"
+        },
+        "oppdateringsdato": {
+          "type": "string",
+          "format": "date"
+        },
+        "kvalitet": {
+          "$ref": "#/definitions/Posisjonskvalitet"
+        },
+        "medium": {
+          "$ref": "#/definitions/Medium"
+        },
+        "opphav": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@type",
+        "datauttaksdato",
+        "kvalitet",
+        "medium",
+        "opphav"
+      ]
+    },
+    "GenrelleEgenskaperBunnfellingOmr": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifikasjon": {
+          "$ref": "#/definitions/Identifikasjon"
+        },
+        "datauttaksdato": {
+          "type": "string",
+          "format": "date"
+        },
+        "førsteDigitaliseringsdato": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "@type",
+        "datauttaksdato",
+        "identifikasjon"
+      ]
+    },
+    "GeolAvgrLinje": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/LosmasseGrense"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "identifikasjon": {
+              "$ref": "#/definitions/Identifikasjon"
+            }
+          }
+        }
+      ]
+    },
+    "GeolPavisningstype": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Identifikasjon": {
+      "type": "object",
+      "properties": {
+        "lokalId": {
+          "type": "string"
+        },
+        "navnerom": {
+          "type": "string"
+        },
+        "versjonId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "lokalId",
+        "navnerom"
+      ]
+    },
+    "LosmasseGrense": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/FellesegenskaperLosmasse"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "geolPavisningstype": {
+              "$ref": "#/definitions/GeolPavisningstype"
+            },
+            "geolPavisningstypeNavn": {
+              "type": "string"
+            },
+            "temakvalitet": {
+              "$ref": "#/definitions/TemaKvalitet"
+            }
+          }
+        }
+      ]
+    },
+    "Medium": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Målemetode": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Posisjonskvalitet": {
+      "type": "object",
+      "properties": {
+        "målemetode": {
+          "$ref": "#/definitions/Målemetode"
+        },
+        "målemetodeNavn": {
+          "type": "string"
+        },
+        "nøyaktighet": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "målemetode",
+        "målemetodeNavn"
+      ]
+    },
+    "SedKornstorrelse": {
+      "type": "string",
+      "format": "uri"
+    },
+    "TemaKvalitet": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
